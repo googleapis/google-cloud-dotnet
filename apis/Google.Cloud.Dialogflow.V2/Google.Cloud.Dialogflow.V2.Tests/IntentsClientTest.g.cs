@@ -14,683 +14,1611 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Dialogflow.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedIntentsClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedIntentsClientTest
     {
-        [Fact]
-        public void GetIntent()
+        [xunit::FactAttribute]
+        public void GetIntentRequestObject()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIntentRequest expectedRequest = new GetIntentRequest
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-            };
-            Intent expectedResponse = new Intent
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
-                ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
-            };
-            mockGrpcClient.Setup(x => x.GetIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            Intent response = client.GetIntent(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetIntentAsync()
-        {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIntentRequest expectedRequest = new GetIntentRequest
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-            };
-            Intent expectedResponse = new Intent
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
-                ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
-            };
-            mockGrpcClient.Setup(x => x.GetIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
-            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            Intent response = await client.GetIntentAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetIntent2()
-        {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIntentRequest expectedRequest = new GetIntentRequest
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                LanguageCode = "languageCode-412800396",
-            };
-            Intent expectedResponse = new Intent
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
-                ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
-            };
-            mockGrpcClient.Setup(x => x.GetIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            string languageCode = "languageCode-412800396";
-            Intent response = client.GetIntent(name, languageCode);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetIntentAsync2()
-        {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIntentRequest expectedRequest = new GetIntentRequest
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                LanguageCode = "languageCode-412800396",
-            };
-            Intent expectedResponse = new Intent
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
-                ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
-            };
-            mockGrpcClient.Setup(x => x.GetIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
-            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            string languageCode = "languageCode-412800396";
-            Intent response = await client.GetIntentAsync(name, languageCode);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetIntent3()
-        {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "language_code2f6c7160",
+                IntentView = IntentView.Unspecified,
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.GetIntent(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
             Intent response = client.GetIntent(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIntentAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task GetIntentRequestObjectAsync()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIntentRequest request = new GetIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "language_code2f6c7160",
+                IntentView = IntentView.Unspecified,
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.GetIntentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent response = await client.GetIntentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Intent responseCallSettings = await client.GetIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.GetIntentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateIntent()
+        [xunit::FactAttribute]
+        public void GetIntent1()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateIntentRequest expectedRequest = new CreateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intent = new Intent(),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            Intent intent = new Intent();
-            Intent response = client.CreateIntent(parent, intent);
-            Assert.Same(expectedResponse, response);
+            Intent response = client.GetIntent(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateIntentAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetIntent1Async()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateIntentRequest expectedRequest = new CreateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intent = new Intent(),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            Intent intent = new Intent();
-            Intent response = await client.CreateIntentAsync(parent, intent);
-            Assert.Same(expectedResponse, response);
+            Intent responseCallSettings = await client.GetIntentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.GetIntentAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateIntent2()
+        [xunit::FactAttribute]
+        public void GetIntent1_ResourceNames()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateIntentRequest expectedRequest = new CreateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            Intent intent = new Intent();
-            string languageCode = "languageCode-412800396";
-            Intent response = client.CreateIntent(parent, intent, languageCode);
-            Assert.Same(expectedResponse, response);
+            Intent response = client.GetIntent(request.IntentName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateIntentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIntent1Async_ResourceNames()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateIntentRequest expectedRequest = new CreateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            Intent intent = new Intent();
-            string languageCode = "languageCode-412800396";
-            Intent response = await client.CreateIntentAsync(parent, intent, languageCode);
-            Assert.Same(expectedResponse, response);
+            Intent responseCallSettings = await client.GetIntentAsync(request.IntentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.GetIntentAsync(request.IntentName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateIntent3()
+        [xunit::FactAttribute]
+        public void GetIntent2()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent response = client.GetIntent(request.Name, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIntent2Async()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.GetIntentAsync(request.Name, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.GetIntentAsync(request.Name, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIntent2_ResourceNames()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent response = client.GetIntent(request.IntentName, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIntent2Async_ResourceNames()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetIntentRequest request = new GetIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.GetIntentAsync(request.IntentName, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.GetIntentAsync(request.IntentName, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateIntentRequestObject()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+                IntentView = IntentView.Unspecified,
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateIntent(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
             Intent response = client.CreateIntent(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateIntentAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task CreateIntentRequestObjectAsync()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateIntentRequest request = new CreateIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+                IntentView = IntentView.Unspecified,
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.CreateIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.CreateIntentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateIntent1()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 Intent = new Intent(),
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateIntentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent response = await client.CreateIntentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Intent response = client.CreateIntent(request.Parent, request.Intent);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateIntent()
+        [xunit::FactAttribute]
+        public async stt::Task CreateIntent1Async()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateIntentRequest expectedRequest = new UpdateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent intent = new Intent();
-            string languageCode = "languageCode-412800396";
-            Intent response = client.UpdateIntent(intent, languageCode);
-            Assert.Same(expectedResponse, response);
+            Intent responseCallSettings = await client.CreateIntentAsync(request.Parent, request.Intent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.CreateIntentAsync(request.Parent, request.Intent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateIntentAsync()
+        [xunit::FactAttribute]
+        public void CreateIntent1_ResourceNames()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateIntentRequest expectedRequest = new UpdateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent intent = new Intent();
-            string languageCode = "languageCode-412800396";
-            Intent response = await client.UpdateIntentAsync(intent, languageCode);
-            Assert.Same(expectedResponse, response);
+            Intent response = client.CreateIntent(request.ParentAsAgentName, request.Intent);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateIntent2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateIntent1Async_ResourceNames()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateIntentRequest expectedRequest = new UpdateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
-                UpdateMask = new FieldMask(),
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent intent = new Intent();
-            string languageCode = "languageCode-412800396";
-            FieldMask updateMask = new FieldMask();
-            Intent response = client.UpdateIntent(intent, languageCode, updateMask);
-            Assert.Same(expectedResponse, response);
+            Intent responseCallSettings = await client.CreateIntentAsync(request.ParentAsAgentName, request.Intent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.CreateIntentAsync(request.ParentAsAgentName, request.Intent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateIntentAsync2()
+        [xunit::FactAttribute]
+        public void CreateIntent2()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateIntentRequest expectedRequest = new UpdateIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
-                UpdateMask = new FieldMask(),
+                LanguageCode = "language_code2f6c7160",
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent intent = new Intent();
-            string languageCode = "languageCode-412800396";
-            FieldMask updateMask = new FieldMask();
-            Intent response = await client.UpdateIntentAsync(intent, languageCode, updateMask);
-            Assert.Same(expectedResponse, response);
+            Intent response = client.CreateIntent(request.Parent, request.Intent, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateIntent3()
+        [xunit::FactAttribute]
+        public async stt::Task CreateIntent2Async()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.CreateIntentAsync(request.Parent, request.Intent, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.CreateIntentAsync(request.Parent, request.Intent, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateIntent2_ResourceNames()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent response = client.CreateIntent(request.ParentAsAgentName, request.Intent, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateIntent2Async_ResourceNames()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateIntentRequest request = new CreateIntentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.CreateIntentAsync(request.ParentAsAgentName, request.Intent, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.CreateIntentAsync(request.ParentAsAgentName, request.Intent, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateIntentRequestObject()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
+                LanguageCode = "language_code2f6c7160",
+                UpdateMask = new wkt::FieldMask(),
+                IntentView = IntentView.Unspecified,
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateIntent(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
             Intent response = client.UpdateIntent(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateIntentAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIntentRequestObjectAsync()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
+                LanguageCode = "language_code2f6c7160",
+                UpdateMask = new wkt::FieldMask(),
+                IntentView = IntentView.Unspecified,
             };
             Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-                DisplayName = "displayName1615086568",
-                Priority = 1165461084,
-                IsFallback = false,
-                MlDisabled = true,
-                Action = "action-1422950858",
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
                 ResetContexts = true,
-                RootFollowupIntentName = "rootFollowupIntentName402253784",
-                ParentFollowupIntentName = "parentFollowupIntentName-1131901680",
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Intent>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            Intent response = await client.UpdateIntentAsync(request);
-            Assert.Same(expectedResponse, response);
+            Intent responseCallSettings = await client.UpdateIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.UpdateIntentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteIntent()
+        [xunit::FactAttribute]
+        public void UpdateIntent1()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteIntentRequest expectedRequest = new DeleteIntentRequest
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIntentRequest request = new UpdateIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            client.DeleteIntent(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteIntentAsync()
-        {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteIntentRequest expectedRequest = new DeleteIntentRequest
+            Intent expectedResponse = new Intent
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            await client.DeleteIntentAsync(name);
+            Intent response = client.UpdateIntent(request.Intent, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteIntent2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIntent1Async()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIntentRequest request = new UpdateIntentRequest
+            {
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.UpdateIntentAsync(request.Intent, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.UpdateIntentAsync(request.Intent, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateIntent2()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIntentRequest request = new UpdateIntentRequest
+            {
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent response = client.UpdateIntent(request.Intent, request.LanguageCode, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIntent2Async()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIntentRequest request = new UpdateIntentRequest
+            {
+                Intent = new Intent(),
+                LanguageCode = "language_code2f6c7160",
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Intent expectedResponse = new Intent
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                DisplayName = "display_name137f65c2",
+                Priority = 1546225849,
+                IsFallback = true,
+                WebhookState = Intent.Types.WebhookState.Enabled,
+                InputContextNames =
+                {
+                    "input_context_names366dbc09",
+                },
+                Events = { "events068b9016", },
+                TrainingPhrases =
+                {
+                    new Intent.Types.TrainingPhrase(),
+                },
+                Action = "action09558c41",
+                OutputContexts = { new Context(), },
+                ResetContexts = true,
+                Parameters =
+                {
+                    new Intent.Types.Parameter(),
+                },
+                Messages =
+                {
+                    new Intent.Types.Message(),
+                },
+                DefaultResponsePlatforms =
+                {
+                    Intent.Types.Message.Types.Platform.Telegram,
+                },
+                RootFollowupIntentName = "root_followup_intent_namecebbe1b5",
+                ParentFollowupIntentName = "parent_followup_intent_namee3186654",
+                FollowupIntentInfo =
+                {
+                    new Intent.Types.FollowupIntentInfo(),
+                },
+                MlDisabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            Intent responseCallSettings = await client.UpdateIntentAsync(request.Intent, request.LanguageCode, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Intent responseCancellationToken = await client.UpdateIntentAsync(request.Intent, request.LanguageCode, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteIntentRequestObject()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIntent(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
             client.DeleteIntent(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteIntentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteIntentRequestObjectAsync()
         {
-            Mock<Intents.IntentsClient> mockGrpcClient = new Mock<Intents.IntentsClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteIntentRequest request = new DeleteIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteIntentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteIntentAsync(request);
+            await client.DeleteIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteIntentAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteIntent()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIntentRequest request = new DeleteIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteIntent(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteIntentAsync()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIntentRequest request = new DeleteIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteIntentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteIntentAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteIntent_ResourceNames()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIntentRequest request = new DeleteIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteIntent(request.IntentName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteIntentAsync_ResourceNames()
+        {
+            moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteIntentRequest request = new DeleteIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteIntentAsync(request.IntentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteIntentAsync(request.IntentName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

@@ -17,34 +17,81 @@
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedIntentsClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedIntentsClientSnippets
     {
-        /// <summary>Snippet for ListIntentsAsync</summary>
-        public async Task ListIntentsAsync1()
+        /// <summary>Snippet for ListIntents</summary>
+        public void ListIntents_RequestObject()
         {
-            // Snippet: ListIntentsAsync(ProjectAgentName,string,int?,CallSettings)
+            // Snippet: ListIntents(ListIntentsRequest, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            ListIntentsRequest request = new ListIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                LanguageCode = "",
+                IntentView = IntentView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Intent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIntentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Intent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Intent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Intent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntents</summary>
+        public async Task ListIntentsAsync_RequestObject()
+        {
+            // Snippet: ListIntentsAsync(ListIntentsRequest, CallSettings)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            ListIntentsRequest request = new ListIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                LanguageCode = "",
+                IntentView = IntentView.Unspecified,
+            };
             // Make the request
-            PagedAsyncEnumerable<ListIntentsResponse, Intent> response =
-                intentsClient.ListIntentsAsync(parent);
+            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Intent item) =>
@@ -60,6 +107,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Intent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -71,6 +119,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Intent item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -81,14 +130,13 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for ListIntents</summary>
         public void ListIntents1()
         {
-            // Snippet: ListIntents(ProjectAgentName,string,int?,CallSettings)
+            // Snippet: ListIntents(string, string, int?, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedEnumerable<ListIntentsResponse, Intent> response =
-                intentsClient.ListIntents(parent);
+            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Intent item in response)
@@ -104,6 +152,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Intent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -115,6 +164,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Intent item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -122,18 +172,16 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIntentsAsync</summary>
-        public async Task ListIntentsAsync2()
+        /// <summary>Snippet for ListIntents</summary>
+        public async Task ListIntents1Async()
         {
-            // Snippet: ListIntentsAsync(ProjectAgentName,string,string,int?,CallSettings)
+            // Snippet: ListIntentsAsync(string, string, int?, CallSettings)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            string languageCode = "";
+            string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedAsyncEnumerable<ListIntentsResponse, Intent> response =
-                intentsClient.ListIntentsAsync(parent: parent, languageCode: languageCode);
+            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Intent item) =>
@@ -149,6 +197,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Intent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -160,6 +209,97 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Intent item in singlePage)
             {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntents</summary>
+        public void ListIntents1_ResourceNames()
+        {
+            // Snippet: ListIntents(AgentName, string, int?, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Intent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIntentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Intent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Intent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Intent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntents</summary>
+        public async Task ListIntents1Async_ResourceNames()
+        {
+            // Snippet: ListIntentsAsync(AgentName, string, int?, CallSettings)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Intent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIntentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Intent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Intent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Intent item in singlePage)
+            {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -170,15 +310,14 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for ListIntents</summary>
         public void ListIntents2()
         {
-            // Snippet: ListIntents(ProjectAgentName,string,string,int?,CallSettings)
+            // Snippet: ListIntents(string, string, string, int?, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             string languageCode = "";
             // Make the request
-            PagedEnumerable<ListIntentsResponse, Intent> response =
-                intentsClient.ListIntents(parent: parent, languageCode: languageCode);
+            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Intent item in response)
@@ -194,6 +333,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Intent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -205,6 +345,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Intent item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -212,20 +353,17 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIntentsAsync</summary>
-        public async Task ListIntentsAsync_RequestObject()
+        /// <summary>Snippet for ListIntents</summary>
+        public async Task ListIntents2Async()
         {
-            // Snippet: ListIntentsAsync(ListIntentsRequest,CallSettings)
+            // Snippet: ListIntentsAsync(string, string, string, int?, CallSettings)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            ListIntentsRequest request = new ListIntentsRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-            };
+            string parent = "projects/[PROJECT]/agent";
+            string languageCode = "";
             // Make the request
-            PagedAsyncEnumerable<ListIntentsResponse, Intent> response =
-                intentsClient.ListIntentsAsync(request);
+            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Intent item) =>
@@ -241,6 +379,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Intent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -252,6 +391,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Intent item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -260,19 +400,16 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListIntents</summary>
-        public void ListIntents_RequestObject()
+        public void ListIntents2_ResourceNames()
         {
-            // Snippet: ListIntents(ListIntentsRequest,CallSettings)
+            // Snippet: ListIntents(AgentName, string, string, int?, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            ListIntentsRequest request = new ListIntentsRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-            };
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            string languageCode = "";
             // Make the request
-            PagedEnumerable<ListIntentsResponse, Intent> response =
-                intentsClient.ListIntents(request);
+            PagedEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntents(parent, languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Intent item in response)
@@ -288,6 +425,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Intent item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -299,6 +437,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Intent item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -306,73 +445,83 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetIntentAsync</summary>
-        public async Task GetIntentAsync1()
+        /// <summary>Snippet for ListIntents</summary>
+        public async Task ListIntents2Async_ResourceNames()
         {
-            // Snippet: GetIntentAsync(IntentName,CallSettings)
-            // Additional: GetIntentAsync(IntentName,CancellationToken)
+            // Snippet: ListIntentsAsync(AgentName, string, string, int?, CallSettings)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            string languageCode = "";
             // Make the request
-            Intent response = await intentsClient.GetIntentAsync(name);
+            PagedAsyncEnumerable<ListIntentsResponse, Intent> response = intentsClient.ListIntentsAsync(parent, languageCode);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Intent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIntentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Intent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Intent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Intent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetIntent</summary>
-        public void GetIntent1()
+        public void GetIntent_RequestObject()
         {
-            // Snippet: GetIntent(IntentName,CallSettings)
+            // Snippet: GetIntent(GetIntentRequest, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
+            GetIntentRequest request = new GetIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "",
+                IntentView = IntentView.Unspecified,
+            };
             // Make the request
-            Intent response = intentsClient.GetIntent(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIntentAsync</summary>
-        public async Task GetIntentAsync2()
-        {
-            // Snippet: GetIntentAsync(IntentName,string,CallSettings)
-            // Additional: GetIntentAsync(IntentName,string,CancellationToken)
-            // Create client
-            IntentsClient intentsClient = await IntentsClient.CreateAsync();
-            // Initialize request argument(s)
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            string languageCode = "";
-            // Make the request
-            Intent response = await intentsClient.GetIntentAsync(name, languageCode);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIntent</summary>
-        public void GetIntent2()
-        {
-            // Snippet: GetIntent(IntentName,string,CallSettings)
-            // Create client
-            IntentsClient intentsClient = IntentsClient.Create();
-            // Initialize request argument(s)
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            string languageCode = "";
-            // Make the request
-            Intent response = intentsClient.GetIntent(name, languageCode);
+            Intent response = intentsClient.GetIntent(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetIntentAsync</summary>
         public async Task GetIntentAsync_RequestObject()
         {
-            // Snippet: GetIntentAsync(GetIntentRequest,CallSettings)
-            // Additional: GetIntentAsync(GetIntentRequest,CancellationToken)
+            // Snippet: GetIntentAsync(GetIntentRequest, CallSettings)
+            // Additional: GetIntentAsync(GetIntentRequest, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
             GetIntentRequest request = new GetIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+                LanguageCode = "",
+                IntentView = IntentView.Unspecified,
             };
             // Make the request
             Intent response = await intentsClient.GetIntentAsync(request);
@@ -380,44 +529,164 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntent</summary>
-        public void GetIntent_RequestObject()
+        public void GetIntent1()
         {
-            // Snippet: GetIntent(GetIntentRequest,CallSettings)
+            // Snippet: GetIntent(string, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            GetIntentRequest request = new GetIntentRequest
+            string name = "projects/[PROJECT]/agent/intents/[INTENT]";
+            // Make the request
+            Intent response = intentsClient.GetIntent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntentAsync</summary>
+        public async Task GetIntent1Async()
+        {
+            // Snippet: GetIntentAsync(string, CallSettings)
+            // Additional: GetIntentAsync(string, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/agent/intents/[INTENT]";
+            // Make the request
+            Intent response = await intentsClient.GetIntentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntent</summary>
+        public void GetIntent1_ResourceNames()
+        {
+            // Snippet: GetIntent(IntentName, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            IntentName name = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]");
+            // Make the request
+            Intent response = intentsClient.GetIntent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntentAsync</summary>
+        public async Task GetIntent1Async_ResourceNames()
+        {
+            // Snippet: GetIntentAsync(IntentName, CallSettings)
+            // Additional: GetIntentAsync(IntentName, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            IntentName name = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]");
+            // Make the request
+            Intent response = await intentsClient.GetIntentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntent</summary>
+        public void GetIntent2()
+        {
+            // Snippet: GetIntent(string, string, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/agent/intents/[INTENT]";
+            string languageCode = "";
+            // Make the request
+            Intent response = intentsClient.GetIntent(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntentAsync</summary>
+        public async Task GetIntent2Async()
+        {
+            // Snippet: GetIntentAsync(string, string, CallSettings)
+            // Additional: GetIntentAsync(string, string, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/agent/intents/[INTENT]";
+            string languageCode = "";
+            // Make the request
+            Intent response = await intentsClient.GetIntentAsync(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntent</summary>
+        public void GetIntent2_ResourceNames()
+        {
+            // Snippet: GetIntent(IntentName, string, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            IntentName name = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]");
+            string languageCode = "";
+            // Make the request
+            Intent response = intentsClient.GetIntent(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntentAsync</summary>
+        public async Task GetIntent2Async_ResourceNames()
+        {
+            // Snippet: GetIntentAsync(IntentName, string, CallSettings)
+            // Additional: GetIntentAsync(IntentName, string, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            IntentName name = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]");
+            string languageCode = "";
+            // Make the request
+            Intent response = await intentsClient.GetIntentAsync(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIntent</summary>
+        public void CreateIntent_RequestObject()
+        {
+            // Snippet: CreateIntent(CreateIntentRequest, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            CreateIntentRequest request = new CreateIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intent = new Intent(),
+                LanguageCode = "",
+                IntentView = IntentView.Unspecified,
             };
             // Make the request
-            Intent response = intentsClient.GetIntent(request);
+            Intent response = intentsClient.CreateIntent(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIntentAsync</summary>
-        public async Task CreateIntentAsync1()
+        public async Task CreateIntentAsync_RequestObject()
         {
-            // Snippet: CreateIntentAsync(ProjectAgentName,Intent,CallSettings)
-            // Additional: CreateIntentAsync(ProjectAgentName,Intent,CancellationToken)
+            // Snippet: CreateIntentAsync(CreateIntentRequest, CallSettings)
+            // Additional: CreateIntentAsync(CreateIntentRequest, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            Intent intent = new Intent();
+            CreateIntentRequest request = new CreateIntentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intent = new Intent(),
+                LanguageCode = "",
+                IntentView = IntentView.Unspecified,
+            };
             // Make the request
-            Intent response = await intentsClient.CreateIntentAsync(parent, intent);
+            Intent response = await intentsClient.CreateIntentAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIntent</summary>
         public void CreateIntent1()
         {
-            // Snippet: CreateIntent(ProjectAgentName,Intent,CallSettings)
+            // Snippet: CreateIntent(string, Intent, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             Intent intent = new Intent();
             // Make the request
             Intent response = intentsClient.CreateIntent(parent, intent);
@@ -425,29 +694,57 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntentAsync</summary>
-        public async Task CreateIntentAsync2()
+        public async Task CreateIntent1Async()
         {
-            // Snippet: CreateIntentAsync(ProjectAgentName,Intent,string,CallSettings)
-            // Additional: CreateIntentAsync(ProjectAgentName,Intent,string,CancellationToken)
+            // Snippet: CreateIntentAsync(string, Intent, CallSettings)
+            // Additional: CreateIntentAsync(string, Intent, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             Intent intent = new Intent();
-            string languageCode = "";
             // Make the request
-            Intent response = await intentsClient.CreateIntentAsync(parent, intent, languageCode);
+            Intent response = await intentsClient.CreateIntentAsync(parent, intent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIntent</summary>
+        public void CreateIntent1_ResourceNames()
+        {
+            // Snippet: CreateIntent(AgentName, Intent, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            Intent intent = new Intent();
+            // Make the request
+            Intent response = intentsClient.CreateIntent(parent, intent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIntentAsync</summary>
+        public async Task CreateIntent1Async_ResourceNames()
+        {
+            // Snippet: CreateIntentAsync(AgentName, Intent, CallSettings)
+            // Additional: CreateIntentAsync(AgentName, Intent, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            Intent intent = new Intent();
+            // Make the request
+            Intent response = await intentsClient.CreateIntentAsync(parent, intent);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIntent</summary>
         public void CreateIntent2()
         {
-            // Snippet: CreateIntent(ProjectAgentName,Intent,string,CallSettings)
+            // Snippet: CreateIntent(string, Intent, string, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
+            string parent = "projects/[PROJECT]/agent";
             Intent intent = new Intent();
             string languageCode = "";
             // Make the request
@@ -456,59 +753,95 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntentAsync</summary>
-        public async Task CreateIntentAsync_RequestObject()
+        public async Task CreateIntent2Async()
         {
-            // Snippet: CreateIntentAsync(CreateIntentRequest,CallSettings)
-            // Additional: CreateIntentAsync(CreateIntentRequest,CancellationToken)
+            // Snippet: CreateIntentAsync(string, Intent, string, CallSettings)
+            // Additional: CreateIntentAsync(string, Intent, string, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            CreateIntentRequest request = new CreateIntentRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intent = new Intent(),
-            };
+            string parent = "projects/[PROJECT]/agent";
+            Intent intent = new Intent();
+            string languageCode = "";
             // Make the request
-            Intent response = await intentsClient.CreateIntentAsync(request);
+            Intent response = await intentsClient.CreateIntentAsync(parent, intent, languageCode);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIntent</summary>
-        public void CreateIntent_RequestObject()
+        public void CreateIntent2_ResourceNames()
         {
-            // Snippet: CreateIntent(CreateIntentRequest,CallSettings)
+            // Snippet: CreateIntent(AgentName, Intent, string, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            CreateIntentRequest request = new CreateIntentRequest
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            Intent intent = new Intent();
+            string languageCode = "";
+            // Make the request
+            Intent response = intentsClient.CreateIntent(parent, intent, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIntentAsync</summary>
+        public async Task CreateIntent2Async_ResourceNames()
+        {
+            // Snippet: CreateIntentAsync(AgentName, Intent, string, CallSettings)
+            // Additional: CreateIntentAsync(AgentName, Intent, string, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            Intent intent = new Intent();
+            string languageCode = "";
+            // Make the request
+            Intent response = await intentsClient.CreateIntentAsync(parent, intent, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIntent</summary>
+        public void UpdateIntent_RequestObject()
+        {
+            // Snippet: UpdateIntent(UpdateIntentRequest, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            UpdateIntentRequest request = new UpdateIntentRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
                 Intent = new Intent(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
+                IntentView = IntentView.Unspecified,
             };
             // Make the request
-            Intent response = intentsClient.CreateIntent(request);
+            Intent response = intentsClient.UpdateIntent(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateIntentAsync</summary>
-        public async Task UpdateIntentAsync1()
+        public async Task UpdateIntentAsync_RequestObject()
         {
-            // Snippet: UpdateIntentAsync(Intent,string,CallSettings)
-            // Additional: UpdateIntentAsync(Intent,string,CancellationToken)
+            // Snippet: UpdateIntentAsync(UpdateIntentRequest, CallSettings)
+            // Additional: UpdateIntentAsync(UpdateIntentRequest, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            Intent intent = new Intent();
-            string languageCode = "";
+            UpdateIntentRequest request = new UpdateIntentRequest
+            {
+                Intent = new Intent(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
+                IntentView = IntentView.Unspecified,
+            };
             // Make the request
-            Intent response = await intentsClient.UpdateIntentAsync(intent, languageCode);
+            Intent response = await intentsClient.UpdateIntentAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateIntent</summary>
         public void UpdateIntent1()
         {
-            // Snippet: UpdateIntent(Intent,string,CallSettings)
+            // Snippet: UpdateIntent(Intent, string, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
@@ -520,25 +853,24 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateIntentAsync</summary>
-        public async Task UpdateIntentAsync2()
+        public async Task UpdateIntent1Async()
         {
-            // Snippet: UpdateIntentAsync(Intent,string,FieldMask,CallSettings)
-            // Additional: UpdateIntentAsync(Intent,string,FieldMask,CancellationToken)
+            // Snippet: UpdateIntentAsync(Intent, string, CallSettings)
+            // Additional: UpdateIntentAsync(Intent, string, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
             Intent intent = new Intent();
             string languageCode = "";
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Intent response = await intentsClient.UpdateIntentAsync(intent, languageCode, updateMask);
+            Intent response = await intentsClient.UpdateIntentAsync(intent, languageCode);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateIntent</summary>
         public void UpdateIntent2()
         {
-            // Snippet: UpdateIntent(Intent,string,FieldMask,CallSettings)
+            // Snippet: UpdateIntent(Intent, string, FieldMask, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
@@ -551,78 +883,48 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateIntentAsync</summary>
-        public async Task UpdateIntentAsync_RequestObject()
+        public async Task UpdateIntent2Async()
         {
-            // Snippet: UpdateIntentAsync(UpdateIntentRequest,CallSettings)
-            // Additional: UpdateIntentAsync(UpdateIntentRequest,CancellationToken)
+            // Snippet: UpdateIntentAsync(Intent, string, FieldMask, CallSettings)
+            // Additional: UpdateIntentAsync(Intent, string, FieldMask, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateIntentRequest request = new UpdateIntentRequest
-            {
-                Intent = new Intent(),
-                LanguageCode = "",
-            };
+            Intent intent = new Intent();
+            string languageCode = "";
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Intent response = await intentsClient.UpdateIntentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateIntent</summary>
-        public void UpdateIntent_RequestObject()
-        {
-            // Snippet: UpdateIntent(UpdateIntentRequest,CallSettings)
-            // Create client
-            IntentsClient intentsClient = IntentsClient.Create();
-            // Initialize request argument(s)
-            UpdateIntentRequest request = new UpdateIntentRequest
-            {
-                Intent = new Intent(),
-                LanguageCode = "",
-            };
-            // Make the request
-            Intent response = intentsClient.UpdateIntent(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteIntentAsync</summary>
-        public async Task DeleteIntentAsync()
-        {
-            // Snippet: DeleteIntentAsync(IntentName,CallSettings)
-            // Additional: DeleteIntentAsync(IntentName,CancellationToken)
-            // Create client
-            IntentsClient intentsClient = await IntentsClient.CreateAsync();
-            // Initialize request argument(s)
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
-            // Make the request
-            await intentsClient.DeleteIntentAsync(name);
+            Intent response = await intentsClient.UpdateIntentAsync(intent, languageCode, updateMask);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteIntent</summary>
-        public void DeleteIntent()
+        public void DeleteIntent_RequestObject()
         {
-            // Snippet: DeleteIntent(IntentName,CallSettings)
+            // Snippet: DeleteIntent(DeleteIntentRequest, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            IntentName name = new IntentName("[PROJECT]", "[INTENT]");
+            DeleteIntentRequest request = new DeleteIntentRequest
+            {
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
+            };
             // Make the request
-            intentsClient.DeleteIntent(name);
+            intentsClient.DeleteIntent(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteIntentAsync</summary>
         public async Task DeleteIntentAsync_RequestObject()
         {
-            // Snippet: DeleteIntentAsync(DeleteIntentRequest,CallSettings)
-            // Additional: DeleteIntentAsync(DeleteIntentRequest,CancellationToken)
+            // Snippet: DeleteIntentAsync(DeleteIntentRequest, CallSettings)
+            // Additional: DeleteIntentAsync(DeleteIntentRequest, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
             DeleteIntentRequest request = new DeleteIntentRequest
             {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
+                IntentName = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]"),
             };
             // Make the request
             await intentsClient.DeleteIntentAsync(request);
@@ -630,84 +932,87 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteIntent</summary>
-        public void DeleteIntent_RequestObject()
+        public void DeleteIntent()
         {
-            // Snippet: DeleteIntent(DeleteIntentRequest,CallSettings)
+            // Snippet: DeleteIntent(string, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
-            DeleteIntentRequest request = new DeleteIntentRequest
-            {
-                IntentName = new IntentName("[PROJECT]", "[INTENT]"),
-            };
+            string name = "projects/[PROJECT]/agent/intents/[INTENT]";
             // Make the request
-            intentsClient.DeleteIntent(request);
+            intentsClient.DeleteIntent(name);
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
-        public async Task BatchUpdateIntentsAsync_RequestObject()
+        /// <summary>Snippet for DeleteIntentAsync</summary>
+        public async Task DeleteIntentAsync()
         {
-            // Snippet: BatchUpdateIntentsAsync(BatchUpdateIntentsRequest,CallSettings)
+            // Snippet: DeleteIntentAsync(string, CallSettings)
+            // Additional: DeleteIntentAsync(string, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                LanguageCode = "",
-            };
+            string name = "projects/[PROJECT]/agent/intents/[INTENT]";
             // Make the request
-            Operation<BatchUpdateIntentsResponse, Struct> response =
-                await intentsClient.BatchUpdateIntentsAsync(request);
+            await intentsClient.DeleteIntentAsync(name);
+            // End snippet
+        }
 
-            // Poll until the returned long-running operation is complete
-            Operation<BatchUpdateIntentsResponse, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            BatchUpdateIntentsResponse result = completedResponse.Result;
+        /// <summary>Snippet for DeleteIntent</summary>
+        public void DeleteIntent_ResourceNames()
+        {
+            // Snippet: DeleteIntent(IntentName, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            IntentName name = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]");
+            // Make the request
+            intentsClient.DeleteIntent(name);
+            // End snippet
+        }
 
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse =
-                await intentsClient.PollOnceBatchUpdateIntentsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
-            }
+        /// <summary>Snippet for DeleteIntentAsync</summary>
+        public async Task DeleteIntentAsync_ResourceNames()
+        {
+            // Snippet: DeleteIntentAsync(IntentName, CallSettings)
+            // Additional: DeleteIntentAsync(IntentName, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            IntentName name = IntentName.FromProjectIntent("[PROJECT]", "[INTENT]");
+            // Make the request
+            await intentsClient.DeleteIntentAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for BatchUpdateIntents</summary>
         public void BatchUpdateIntents_RequestObject()
         {
-            // Snippet: BatchUpdateIntents(BatchUpdateIntentsRequest,CallSettings)
+            // Snippet: BatchUpdateIntents(BatchUpdateIntentsRequest, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
             BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                IntentBatchUri = "",
+                IntentBatchInline = new IntentBatch(),
                 LanguageCode = "",
+                UpdateMask = new FieldMask(),
+                IntentView = IntentView.Unspecified,
             };
             // Make the request
-            Operation<BatchUpdateIntentsResponse, Struct> response =
-                intentsClient.BatchUpdateIntents(request);
+            Operation<BatchUpdateIntentsResponse, Struct> response = intentsClient.BatchUpdateIntents(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<BatchUpdateIntentsResponse, Struct> completedResponse =
-                response.PollUntilCompleted();
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             BatchUpdateIntentsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse =
-                intentsClient.PollOnceBatchUpdateIntents(operationName);
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = intentsClient.PollOnceBatchUpdateIntents(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -717,99 +1022,40 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
-        public async Task BatchDeleteIntentsAsync()
+        /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
+        public async Task BatchUpdateIntentsAsync_RequestObject()
         {
-            // Snippet: BatchDeleteIntentsAsync(ProjectAgentName,IEnumerable<Intent>,CallSettings)
-            // Additional: BatchDeleteIntentsAsync(ProjectAgentName,IEnumerable<Intent>,CancellationToken)
+            // Snippet: BatchUpdateIntentsAsync(BatchUpdateIntentsRequest, CallSettings)
+            // Additional: BatchUpdateIntentsAsync(BatchUpdateIntentsRequest, CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            IEnumerable<Intent> intents = new List<Intent>();
-            // Make the request
-            Operation<Empty, Struct> response =
-                await intentsClient.BatchDeleteIntentsAsync(parent, intents);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await intentsClient.PollOnceBatchDeleteIntentsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
+            BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
             {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteIntents</summary>
-        public void BatchDeleteIntents()
-        {
-            // Snippet: BatchDeleteIntents(ProjectAgentName,IEnumerable<Intent>,CallSettings)
-            // Create client
-            IntentsClient intentsClient = IntentsClient.Create();
-            // Initialize request argument(s)
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            IEnumerable<Intent> intents = new List<Intent>();
-            // Make the request
-            Operation<Empty, Struct> response =
-                intentsClient.BatchDeleteIntents(parent, intents);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                intentsClient.PollOnceBatchDeleteIntents(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // The long-running operation is now complete.
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
-        public async Task BatchDeleteIntentsAsync_RequestObject()
-        {
-            // Snippet: BatchDeleteIntentsAsync(BatchDeleteIntentsRequest,CallSettings)
-            // Create client
-            IntentsClient intentsClient = await IntentsClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchDeleteIntentsRequest request = new BatchDeleteIntentsRequest
-            {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intents = { },
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                IntentBatchUri = "",
+                IntentBatchInline = new IntentBatch(),
+                LanguageCode = "",
+                UpdateMask = new FieldMask(),
+                IntentView = IntentView.Unspecified,
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                await intentsClient.BatchDeleteIntentsAsync(request);
+            Operation<BatchUpdateIntentsResponse, Struct> response = await intentsClient.BatchUpdateIntentsAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                await intentsClient.PollOnceBatchDeleteIntentsAsync(operationName);
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = await intentsClient.PollOnceBatchUpdateIntentsAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -817,36 +1063,190 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for BatchDeleteIntents</summary>
         public void BatchDeleteIntents_RequestObject()
         {
-            // Snippet: BatchDeleteIntents(BatchDeleteIntentsRequest,CallSettings)
+            // Snippet: BatchDeleteIntents(BatchDeleteIntentsRequest, CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
             BatchDeleteIntentsRequest request = new BatchDeleteIntentsRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                Intents = { },
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intents = { new Intent(), },
             };
             // Make the request
-            Operation<Empty, Struct> response =
-                intentsClient.BatchDeleteIntents(request);
+            Operation<Empty, Struct> response = intentsClient.BatchDeleteIntents(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Struct> completedResponse =
-                response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Struct> retrievedResponse =
-                intentsClient.PollOnceBatchDeleteIntents(operationName);
+            Operation<Empty, Struct> retrievedResponse = intentsClient.PollOnceBatchDeleteIntents(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
+        /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
+        public async Task BatchDeleteIntentsAsync_RequestObject()
+        {
+            // Snippet: BatchDeleteIntentsAsync(BatchDeleteIntentsRequest, CallSettings)
+            // Additional: BatchDeleteIntentsAsync(BatchDeleteIntentsRequest, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeleteIntentsRequest request = new BatchDeleteIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Intents = { new Intent(), },
+            };
+            // Make the request
+            Operation<Empty, Struct> response = await intentsClient.BatchDeleteIntentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await intentsClient.PollOnceBatchDeleteIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteIntents</summary>
+        public void BatchDeleteIntents()
+        {
+            // Snippet: BatchDeleteIntents(string, IEnumerable<Intent>, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            IEnumerable<Intent> intents = new Intent[] { new Intent(), };
+            // Make the request
+            Operation<Empty, Struct> response = intentsClient.BatchDeleteIntents(parent, intents);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = intentsClient.PollOnceBatchDeleteIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
+        public async Task BatchDeleteIntentsAsync()
+        {
+            // Snippet: BatchDeleteIntentsAsync(string, IEnumerable<Intent>, CallSettings)
+            // Additional: BatchDeleteIntentsAsync(string, IEnumerable<Intent>, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            IEnumerable<Intent> intents = new Intent[] { new Intent(), };
+            // Make the request
+            Operation<Empty, Struct> response = await intentsClient.BatchDeleteIntentsAsync(parent, intents);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await intentsClient.PollOnceBatchDeleteIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteIntents</summary>
+        public void BatchDeleteIntents_ResourceNames()
+        {
+            // Snippet: BatchDeleteIntents(AgentName, IEnumerable<Intent>, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            IEnumerable<Intent> intents = new Intent[] { new Intent(), };
+            // Make the request
+            Operation<Empty, Struct> response = intentsClient.BatchDeleteIntents(parent, intents);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = intentsClient.PollOnceBatchDeleteIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
+        public async Task BatchDeleteIntentsAsync_ResourceNames()
+        {
+            // Snippet: BatchDeleteIntentsAsync(AgentName, IEnumerable<Intent>, CallSettings)
+            // Additional: BatchDeleteIntentsAsync(AgentName, IEnumerable<Intent>, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            IEnumerable<Intent> intents = new Intent[] { new Intent(), };
+            // Make the request
+            Operation<Empty, Struct> response = await intentsClient.BatchDeleteIntentsAsync(parent, intents);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await intentsClient.PollOnceBatchDeleteIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
