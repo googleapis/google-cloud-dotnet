@@ -14,342 +14,366 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Dialogflow.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedSessionEntityTypesClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedSessionEntityTypesClientTest
     {
-        [Fact]
-        public void GetSessionEntityType()
+        [xunit::FactAttribute]
+        public void GetSessionEntityTypeRequestObject()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            GetSessionEntityTypeRequest expectedRequest = new GetSessionEntityTypeRequest
-            {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
-            };
-            SessionEntityType expectedResponse = new SessionEntityType
-            {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
-            };
-            mockGrpcClient.Setup(x => x.GetSessionEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityTypeName name = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
-            SessionEntityType response = client.GetSessionEntityType(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetSessionEntityTypeAsync()
-        {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            GetSessionEntityTypeRequest expectedRequest = new GetSessionEntityTypeRequest
-            {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
-            };
-            SessionEntityType expectedResponse = new SessionEntityType
-            {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
-            };
-            mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SessionEntityType>(Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityTypeName name = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
-            SessionEntityType response = await client.GetSessionEntityTypeAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetSessionEntityType2()
-        {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetSessionEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
             SessionEntityType response = client.GetSessionEntityType(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetSessionEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetSessionEntityTypeRequestObjectAsync()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SessionEntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType response = await client.GetSessionEntityTypeAsync(request);
-            Assert.Same(expectedResponse, response);
+            SessionEntityType responseCallSettings = await client.GetSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.GetSessionEntityTypeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateSessionEntityType()
+        [xunit::FactAttribute]
+        public void CreateSessionEntityTypeRequestObject()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            CreateSessionEntityTypeRequest expectedRequest = new CreateSessionEntityTypeRequest
-            {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-                SessionEntityType = new SessionEntityType(),
-            };
-            SessionEntityType expectedResponse = new SessionEntityType
-            {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
-            };
-            mockGrpcClient.Setup(x => x.CreateSessionEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
-            SessionEntityType sessionEntityType = new SessionEntityType();
-            SessionEntityType response = client.CreateSessionEntityType(parent, sessionEntityType);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateSessionEntityTypeAsync()
-        {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            CreateSessionEntityTypeRequest expectedRequest = new CreateSessionEntityTypeRequest
-            {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-                SessionEntityType = new SessionEntityType(),
-            };
-            SessionEntityType expectedResponse = new SessionEntityType
-            {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
-            };
-            mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SessionEntityType>(Task.FromResult(expectedResponse), null, null, null, null));
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionName parent = new SessionName("[PROJECT]", "[SESSION]");
-            SessionEntityType sessionEntityType = new SessionEntityType();
-            SessionEntityType response = await client.CreateSessionEntityTypeAsync(parent, sessionEntityType);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateSessionEntityType2()
-        {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                Parent = "parent7858e4d0",
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
             SessionEntityType response = client.CreateSessionEntityType(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateSessionEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSessionEntityTypeRequestObjectAsync()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
-                ParentAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                Parent = "parent7858e4d0",
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SessionEntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType response = await client.CreateSessionEntityTypeAsync(request);
-            Assert.Same(expectedResponse, response);
+            SessionEntityType responseCallSettings = await client.CreateSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.CreateSessionEntityTypeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateSessionEntityType()
+        [xunit::FactAttribute]
+        public void CreateSessionEntityType()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            UpdateSessionEntityTypeRequest expectedRequest = new UpdateSessionEntityTypeRequest
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
+                Parent = "parent7858e4d0",
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateSessionEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType sessionEntityType = new SessionEntityType();
-            SessionEntityType response = client.UpdateSessionEntityType(sessionEntityType);
-            Assert.Same(expectedResponse, response);
+            SessionEntityType response = client.CreateSessionEntityType(request.Parent, request.SessionEntityType);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateSessionEntityTypeAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSessionEntityTypeAsync()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            UpdateSessionEntityTypeRequest expectedRequest = new UpdateSessionEntityTypeRequest
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
+                Parent = "parent7858e4d0",
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SessionEntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType sessionEntityType = new SessionEntityType();
-            SessionEntityType response = await client.UpdateSessionEntityTypeAsync(sessionEntityType);
-            Assert.Same(expectedResponse, response);
+            SessionEntityType responseCallSettings = await client.CreateSessionEntityTypeAsync(request.Parent, request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.CreateSessionEntityTypeAsync(request.Parent, request.SessionEntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateSessionEntityType2()
+        [xunit::FactAttribute]
+        public void UpdateSessionEntityTypeRequestObject()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
             {
                 SessionEntityType = new SessionEntityType(),
+                UpdateMask = new wkt::FieldMask(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
             SessionEntityType response = client.UpdateSessionEntityType(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateSessionEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSessionEntityTypeRequestObjectAsync()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
+            {
+                SessionEntityType = new SessionEntityType(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSessionEntityType()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
             {
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<SessionEntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType response = await client.UpdateSessionEntityTypeAsync(request);
-            Assert.Same(expectedResponse, response);
+            SessionEntityType response = client.UpdateSessionEntityType(request.SessionEntityType);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSessionEntityType()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSessionEntityTypeAsync()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            DeleteSessionEntityTypeRequest expectedRequest = new DeleteSessionEntityTypeRequest
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityType = new SessionEntityType(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSessionEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityTypeName name = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
-            client.DeleteSessionEntityType(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteSessionEntityTypeAsync()
-        {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
-            DeleteSessionEntityTypeRequest expectedRequest = new DeleteSessionEntityTypeRequest
+            SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityTypeName name = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
-            await client.DeleteSessionEntityTypeAsync(name);
+            SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSessionEntityType2()
+        [xunit::FactAttribute]
+        public void DeleteSessionEntityTypeRequestObject()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
             client.DeleteSessionEntityType(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteSessionEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSessionEntityTypeRequestObjectAsync()
         {
-            Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new Mock<SessionEntityTypes.SessionEntityTypesClient>(MockBehavior.Strict);
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                SessionEntityTypeName = new SessionEntityTypeName("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteSessionEntityTypeAsync(request);
+            await client.DeleteSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionEntityTypeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteSessionEntityType()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSessionEntityType(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSessionEntityTypeAsync()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSessionEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionEntityTypeAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteSessionEntityType_ResourceNames()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSessionEntityType(request.ContextName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSessionEntityTypeAsync_ResourceNames()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSessionEntityTypeAsync(request.ContextName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionEntityTypeAsync(request.ContextName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
