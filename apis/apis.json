@@ -528,9 +528,8 @@
   },
   {
     "id": "Google.Cloud.Kms.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/kms/v1",
-    "serviceYaml": "cloudkms_v1.yaml",
     "productName": "Google Cloud Key Management Service",
     "productUrl": "https://cloud.google.com/kms/",
     "version": "2.0.0-alpha00",
