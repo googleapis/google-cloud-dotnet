@@ -14,496 +14,684 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Asset.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.Asset.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedAssetServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedAssetServiceClientTest
     {
-        [Fact]
-        public void BatchGetAssetsHistory()
+        [xunit::FactAttribute]
+        public void BatchGetAssetsHistoryRequestObject()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                ContentType = ContentType.Unspecified,
+                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                ContentType = ContentType.IamPolicy,
                 ReadTimeWindow = new TimeWindow(),
             };
-            BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse();
-            mockGrpcClient.Setup(x => x.BatchGetAssetsHistory(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse
+            {
+                Assets =
+                {
+                    new TemporalAsset(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchGetAssetsHistory(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
             BatchGetAssetsHistoryResponse response = client.BatchGetAssetsHistory(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task BatchGetAssetsHistoryAsync()
+        [xunit::FactAttribute]
+        public async stt::Task BatchGetAssetsHistoryRequestObjectAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                ContentType = ContentType.Unspecified,
+                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                ContentType = ContentType.IamPolicy,
                 ReadTimeWindow = new TimeWindow(),
             };
-            BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse();
-            mockGrpcClient.Setup(x => x.BatchGetAssetsHistoryAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<BatchGetAssetsHistoryResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse
+            {
+                Assets =
+                {
+                    new TemporalAsset(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.BatchGetAssetsHistoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchGetAssetsHistoryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            BatchGetAssetsHistoryResponse response = await client.BatchGetAssetsHistoryAsync(request);
-            Assert.Same(expectedResponse, response);
+            BatchGetAssetsHistoryResponse responseCallSettings = await client.BatchGetAssetsHistoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchGetAssetsHistoryResponse responseCancellationToken = await client.BatchGetAssetsHistoryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateFeed()
+        [xunit::FactAttribute]
+        public void CreateFeedRequestObject()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateFeedRequest expectedRequest = new CreateFeedRequest
-            {
-                Parent = "parent-995424086",
-            };
-            Feed expectedResponse = new Feed
-            {
-                Name = "name3373707",
-            };
-            mockGrpcClient.Setup(x => x.CreateFeed(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string parent = "parent-995424086";
-            Feed response = client.CreateFeed(parent);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateFeedAsync()
-        {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateFeedRequest expectedRequest = new CreateFeedRequest
-            {
-                Parent = "parent-995424086",
-            };
-            Feed expectedResponse = new Feed
-            {
-                Name = "name3373707",
-            };
-            mockGrpcClient.Setup(x => x.CreateFeedAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Feed>(Task.FromResult(expectedResponse), null, null, null, null));
-            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string parent = "parent-995424086";
-            Feed response = await client.CreateFeedAsync(parent);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateFeed2()
-        {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFeedRequest request = new CreateFeedRequest
             {
-                Parent = "parent-995424086",
-                FeedId = "feedId-976011428",
+                Parent = "parent7858e4d0",
+                FeedId = "feed_id938e5ac9",
                 Feed = new Feed(),
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name3373707",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.CreateFeed(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
             Feed response = client.CreateFeed(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateFeedAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateFeedRequestObjectAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFeedRequest request = new CreateFeedRequest
             {
-                Parent = "parent-995424086",
-                FeedId = "feedId-976011428",
+                Parent = "parent7858e4d0",
+                FeedId = "feed_id938e5ac9",
                 Feed = new Feed(),
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name3373707",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.CreateFeedAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Feed>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            Feed response = await client.CreateFeedAsync(request);
-            Assert.Same(expectedResponse, response);
+            Feed responseCallSettings = await client.CreateFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.CreateFeedAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetFeed()
+        [xunit::FactAttribute]
+        public void CreateFeed()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetFeedRequest expectedRequest = new GetFeedRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateFeedRequest request = new CreateFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                Parent = "parent7858e4d0",
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name2-1052831874",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.GetFeed(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
-            Feed response = client.GetFeed(formattedName);
-            Assert.Same(expectedResponse, response);
+            Feed response = client.CreateFeed(request.Parent);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetFeedAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateFeedAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetFeedRequest expectedRequest = new GetFeedRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateFeedRequest request = new CreateFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                Parent = "parent7858e4d0",
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name2-1052831874",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.GetFeedAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Feed>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
-            Feed response = await client.GetFeedAsync(formattedName);
-            Assert.Same(expectedResponse, response);
+            Feed responseCallSettings = await client.CreateFeedAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.CreateFeedAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetFeed2()
+        [xunit::FactAttribute]
+        public void GetFeedRequestObject()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFeedRequest request = new GetFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name2-1052831874",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.GetFeed(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
             Feed response = client.GetFeed(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetFeedAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetFeedRequestObjectAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFeedRequest request = new GetFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name2-1052831874",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.GetFeedAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Feed>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            Feed response = await client.GetFeedAsync(request);
-            Assert.Same(expectedResponse, response);
+            Feed responseCallSettings = await client.GetFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.GetFeedAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListFeeds()
+        [xunit::FactAttribute]
+        public void GetFeed()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            ListFeedsRequest expectedRequest = new ListFeedsRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFeedRequest request = new GetFeedRequest
             {
-                Parent = "parent-995424086",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
-            ListFeedsResponse expectedResponse = new ListFeedsResponse();
-            mockGrpcClient.Setup(x => x.ListFeeds(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string parent = "parent-995424086";
-            ListFeedsResponse response = client.ListFeeds(parent);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ListFeedsAsync()
-        {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            ListFeedsRequest expectedRequest = new ListFeedsRequest
+            Feed expectedResponse = new Feed
             {
-                Parent = "parent-995424086",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            ListFeedsResponse expectedResponse = new ListFeedsResponse();
-            mockGrpcClient.Setup(x => x.ListFeedsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListFeedsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string parent = "parent-995424086";
-            ListFeedsResponse response = await client.ListFeedsAsync(parent);
-            Assert.Same(expectedResponse, response);
+            Feed response = client.GetFeed(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListFeeds2()
+        [xunit::FactAttribute]
+        public async stt::Task GetFeedAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFeedRequest request = new GetFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            Feed expectedResponse = new Feed
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            Feed responseCallSettings = await client.GetFeedAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.GetFeedAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetFeed_ResourceNames()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFeedRequest request = new GetFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            Feed expectedResponse = new Feed
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            Feed response = client.GetFeed(request.FeedName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetFeedAsync_ResourceNames()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFeedRequest request = new GetFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            Feed expectedResponse = new Feed
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            Feed responseCallSettings = await client.GetFeedAsync(request.FeedName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.GetFeedAsync(request.FeedName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListFeedsRequestObject()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListFeedsRequest request = new ListFeedsRequest
             {
-                Parent = "parent-995424086",
+                Parent = "parent7858e4d0",
             };
-            ListFeedsResponse expectedResponse = new ListFeedsResponse();
-            mockGrpcClient.Setup(x => x.ListFeeds(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ListFeedsResponse expectedResponse = new ListFeedsResponse { Feeds = { new Feed(), }, };
+            mockGrpcClient.Setup(x => x.ListFeeds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
             ListFeedsResponse response = client.ListFeeds(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListFeedsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ListFeedsRequestObjectAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListFeedsRequest request = new ListFeedsRequest
             {
-                Parent = "parent-995424086",
+                Parent = "parent7858e4d0",
             };
-            ListFeedsResponse expectedResponse = new ListFeedsResponse();
-            mockGrpcClient.Setup(x => x.ListFeedsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListFeedsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ListFeedsResponse expectedResponse = new ListFeedsResponse { Feeds = { new Feed(), }, };
+            mockGrpcClient.Setup(x => x.ListFeedsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFeedsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            ListFeedsResponse response = await client.ListFeedsAsync(request);
-            Assert.Same(expectedResponse, response);
+            ListFeedsResponse responseCallSettings = await client.ListFeedsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListFeedsResponse responseCancellationToken = await client.ListFeedsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateFeed()
+        [xunit::FactAttribute]
+        public void ListFeeds()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateFeedRequest expectedRequest = new UpdateFeedRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListFeedsRequest request = new ListFeedsRequest
             {
-                Feed = new Feed(),
+                Parent = "parent7858e4d0",
             };
-            Feed expectedResponse = new Feed
-            {
-                Name = "name3373707",
-            };
-            mockGrpcClient.Setup(x => x.UpdateFeed(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ListFeedsResponse expectedResponse = new ListFeedsResponse { Feeds = { new Feed(), }, };
+            mockGrpcClient.Setup(x => x.ListFeeds(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            Feed feed = new Feed();
-            Feed response = client.UpdateFeed(feed);
-            Assert.Same(expectedResponse, response);
+            ListFeedsResponse response = client.ListFeeds(request.Parent);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateFeedAsync()
+        [xunit::FactAttribute]
+        public async stt::Task ListFeedsAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateFeedRequest expectedRequest = new UpdateFeedRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListFeedsRequest request = new ListFeedsRequest
             {
-                Feed = new Feed(),
+                Parent = "parent7858e4d0",
             };
-            Feed expectedResponse = new Feed
-            {
-                Name = "name3373707",
-            };
-            mockGrpcClient.Setup(x => x.UpdateFeedAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Feed>(Task.FromResult(expectedResponse), null, null, null, null));
+            ListFeedsResponse expectedResponse = new ListFeedsResponse { Feeds = { new Feed(), }, };
+            mockGrpcClient.Setup(x => x.ListFeedsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFeedsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            Feed feed = new Feed();
-            Feed response = await client.UpdateFeedAsync(feed);
-            Assert.Same(expectedResponse, response);
+            ListFeedsResponse responseCallSettings = await client.ListFeedsAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListFeedsResponse responseCancellationToken = await client.ListFeedsAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateFeed2()
+        [xunit::FactAttribute]
+        public void UpdateFeedRequestObject()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateFeedRequest request = new UpdateFeedRequest
             {
                 Feed = new Feed(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name3373707",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.UpdateFeed(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
             Feed response = client.UpdateFeed(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateFeedAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateFeedRequestObjectAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateFeedRequest request = new UpdateFeedRequest
             {
                 Feed = new Feed(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Feed expectedResponse = new Feed
             {
-                Name = "name3373707",
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Feed>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            Feed response = await client.UpdateFeedAsync(request);
-            Assert.Same(expectedResponse, response);
+            Feed responseCallSettings = await client.UpdateFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.UpdateFeedAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteFeed()
+        [xunit::FactAttribute]
+        public void UpdateFeed()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteFeedRequest expectedRequest = new DeleteFeedRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateFeedRequest request = new UpdateFeedRequest { Feed = new Feed(), };
+            Feed expectedResponse = new Feed
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteFeed(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
-            client.DeleteFeed(formattedName);
+            Feed response = client.UpdateFeed(request.Feed);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteFeedAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateFeedAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteFeedRequest expectedRequest = new DeleteFeedRequest
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateFeedRequest request = new UpdateFeedRequest { Feed = new Feed(), };
+            Feed expectedResponse = new Feed
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+                AssetNames =
+                {
+                    "asset_namese42cd316",
+                },
+                AssetTypes =
+                {
+                    "asset_types44c0f429",
+                },
+                ContentType = ContentType.IamPolicy,
+                FeedOutputConfig = new FeedOutputConfig(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteFeedAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
-            await client.DeleteFeedAsync(formattedName);
+            Feed responseCallSettings = await client.UpdateFeedAsync(request.Feed, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feed responseCancellationToken = await client.UpdateFeedAsync(request.Feed, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteFeed2()
+        [xunit::FactAttribute]
+        public void DeleteFeedRequestObject()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteFeedRequest request = new DeleteFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteFeed(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteFeed(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteFeedAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteFeedRequestObjectAsync()
         {
-            Mock<AssetService.AssetServiceClient> mockGrpcClient = new Mock<AssetService.AssetServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteFeedRequest request = new DeleteFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteFeedAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteFeedAsync(request);
+            await client.DeleteFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteFeedAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteFeed()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteFeed(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteFeedAsync()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteFeedAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteFeedAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteFeed_ResourceNames()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteFeed(request.FeedName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteFeedAsync_ResourceNames()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteFeedAsync(request.FeedName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteFeedAsync(request.FeedName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
