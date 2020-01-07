@@ -35,6 +35,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Null(request.PageToken);
             Assert.Null(request.MinCreationTime);
             Assert.Null(request.MaxCreationTime);
+            Assert.Null(request.ParentJobId);
         }
 
         [Fact]
@@ -50,6 +51,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 MinCreationTime = new DateTimeOffset(1970, 1, 1, 0, 0, 1, TimeSpan.Zero),
                 // Negative offset means this UTC is ahead of local time - so this is 1970-01-01T00:01:01Z.
                 MaxCreationTime = new DateTimeOffset(1970, 1, 1, 0, 0, 1, TimeSpan.FromMinutes(-1)),
+                ParentJobId = "dummy_parent_id"
             };
             ListRequest request = new ListRequest(new BigqueryService(), "project");
             options.ModifyRequest(request);
@@ -60,6 +62,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("nextpage", request.PageToken);
             Assert.Equal(1000UL, request.MinCreationTime);
             Assert.Equal(61000UL, request.MaxCreationTime);
+            Assert.Equal("dummy_parent_id", request.ParentJobId);
         }
 
         [Fact]
