@@ -17,87 +17,40 @@
 namespace Google.Cloud.Asset.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.Asset.V1;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedAssetServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedAssetServiceClientSnippets
     {
-        /// <summary>Snippet for ExportAssetsAsync</summary>
-        public async Task ExportAssetsAsync_RequestObject()
-        {
-            // Snippet: ExportAssetsAsync(ExportAssetsRequest,CallSettings)
-            // Create client
-            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ExportAssetsRequest request = new ExportAssetsRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                OutputConfig = new OutputConfig(),
-            };
-            // Make the request
-            Operation<ExportAssetsResponse, ExportAssetsRequest> response =
-                await assetServiceClient.ExportAssetsAsync(request);
-
-            // Poll until the returned long-running operation is complete
-            Operation<ExportAssetsResponse, ExportAssetsRequest> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            ExportAssetsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ExportAssetsResponse, ExportAssetsRequest> retrievedResponse =
-                await assetServiceClient.PollOnceExportAssetsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                ExportAssetsResponse retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
         /// <summary>Snippet for ExportAssets</summary>
         public void ExportAssets_RequestObject()
         {
-            // Snippet: ExportAssets(ExportAssetsRequest,CallSettings)
+            // Snippet: ExportAssets(ExportAssetsRequest, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ReadTime = new Timestamp(),
+                AssetTypes = { "", },
+                ContentType = ContentType.Unspecified,
                 OutputConfig = new OutputConfig(),
             };
             // Make the request
-            Operation<ExportAssetsResponse, ExportAssetsRequest> response =
-                assetServiceClient.ExportAssets(request);
+            Operation<ExportAssetsResponse, ExportAssetsRequest> response = assetServiceClient.ExportAssets(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ExportAssetsResponse, ExportAssetsRequest> completedResponse =
-                response.PollUntilCompleted();
+            Operation<ExportAssetsResponse, ExportAssetsRequest> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             ExportAssetsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ExportAssetsResponse, ExportAssetsRequest> retrievedResponse =
-                assetServiceClient.PollOnceExportAssets(operationName);
+            Operation<ExportAssetsResponse, ExportAssetsRequest> retrievedResponse = assetServiceClient.PollOnceExportAssets(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -107,35 +60,54 @@ namespace Google.Cloud.Asset.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for BatchGetAssetsHistoryAsync</summary>
-        public async Task BatchGetAssetsHistoryAsync_RequestObject()
+        /// <summary>Snippet for ExportAssetsAsync</summary>
+        public async Task ExportAssetsAsync_RequestObject()
         {
-            // Snippet: BatchGetAssetsHistoryAsync(BatchGetAssetsHistoryRequest,CallSettings)
-            // Additional: BatchGetAssetsHistoryAsync(BatchGetAssetsHistoryRequest,CancellationToken)
+            // Snippet: ExportAssetsAsync(ExportAssetsRequest, CallSettings)
+            // Additional: ExportAssetsAsync(ExportAssetsRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
+            ExportAssetsRequest request = new ExportAssetsRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ReadTime = new Timestamp(),
+                AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
-                ReadTimeWindow = new TimeWindow(),
+                OutputConfig = new OutputConfig(),
             };
             // Make the request
-            BatchGetAssetsHistoryResponse response = await assetServiceClient.BatchGetAssetsHistoryAsync(request);
+            Operation<ExportAssetsResponse, ExportAssetsRequest> response = await assetServiceClient.ExportAssetsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportAssetsResponse, ExportAssetsRequest> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportAssetsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportAssetsResponse, ExportAssetsRequest> retrievedResponse = await assetServiceClient.PollOnceExportAssetsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportAssetsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
         /// <summary>Snippet for BatchGetAssetsHistory</summary>
         public void BatchGetAssetsHistory_RequestObject()
         {
-            // Snippet: BatchGetAssetsHistory(BatchGetAssetsHistoryRequest,CallSettings)
+            // Snippet: BatchGetAssetsHistory(BatchGetAssetsHistoryRequest, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
             };
@@ -144,38 +116,49 @@ namespace Google.Cloud.Asset.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateFeedAsync</summary>
-        public async Task CreateFeedAsync()
+        /// <summary>Snippet for BatchGetAssetsHistoryAsync</summary>
+        public async Task BatchGetAssetsHistoryAsync_RequestObject()
         {
-            // Snippet: CreateFeedAsync(string,CallSettings)
-            // Additional: CreateFeedAsync(string,CancellationToken)
+            // Snippet: BatchGetAssetsHistoryAsync(BatchGetAssetsHistoryRequest, CallSettings)
+            // Additional: BatchGetAssetsHistoryAsync(BatchGetAssetsHistoryRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
+            {
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                AssetNames = { "", },
+                ContentType = ContentType.Unspecified,
+                ReadTimeWindow = new TimeWindow(),
+            };
             // Make the request
-            Feed response = await assetServiceClient.CreateFeedAsync(parent);
+            BatchGetAssetsHistoryResponse response = await assetServiceClient.BatchGetAssetsHistoryAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateFeed</summary>
-        public void CreateFeed()
+        public void CreateFeed_RequestObject()
         {
-            // Snippet: CreateFeed(string,CallSettings)
+            // Snippet: CreateFeed(CreateFeedRequest, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            CreateFeedRequest request = new CreateFeedRequest
+            {
+                Parent = "",
+                FeedId = "",
+                Feed = new Feed(),
+            };
             // Make the request
-            Feed response = assetServiceClient.CreateFeed(parent);
+            Feed response = assetServiceClient.CreateFeed(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateFeedAsync</summary>
         public async Task CreateFeedAsync_RequestObject()
         {
-            // Snippet: CreateFeedAsync(CreateFeedRequest,CallSettings)
-            // Additional: CreateFeedAsync(CreateFeedRequest,CancellationToken)
+            // Snippet: CreateFeedAsync(CreateFeedRequest, CallSettings)
+            // Additional: CreateFeedAsync(CreateFeedRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -191,61 +174,59 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeed</summary>
-        public void CreateFeed_RequestObject()
+        public void CreateFeed()
         {
-            // Snippet: CreateFeed(CreateFeedRequest,CallSettings)
+            // Snippet: CreateFeed(string, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            CreateFeedRequest request = new CreateFeedRequest
-            {
-                Parent = "",
-                FeedId = "",
-                Feed = new Feed(),
-            };
+            string parent = "";
             // Make the request
-            Feed response = assetServiceClient.CreateFeed(request);
+            Feed response = assetServiceClient.CreateFeed(parent);
             // End snippet
         }
 
-        /// <summary>Snippet for GetFeedAsync</summary>
-        public async Task GetFeedAsync()
+        /// <summary>Snippet for CreateFeedAsync</summary>
+        public async Task CreateFeedAsync()
         {
-            // Snippet: GetFeedAsync(string,CallSettings)
-            // Additional: GetFeedAsync(string,CancellationToken)
+            // Snippet: CreateFeedAsync(string, CallSettings)
+            // Additional: CreateFeedAsync(string, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            string parent = "";
             // Make the request
-            Feed response = await assetServiceClient.GetFeedAsync(formattedName);
+            Feed response = await assetServiceClient.CreateFeedAsync(parent);
             // End snippet
         }
 
         /// <summary>Snippet for GetFeed</summary>
-        public void GetFeed()
+        public void GetFeed_RequestObject()
         {
-            // Snippet: GetFeed(string,CallSettings)
+            // Snippet: GetFeed(GetFeedRequest, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            GetFeedRequest request = new GetFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
             // Make the request
-            Feed response = assetServiceClient.GetFeed(formattedName);
+            Feed response = assetServiceClient.GetFeed(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetFeedAsync</summary>
         public async Task GetFeedAsync_RequestObject()
         {
-            // Snippet: GetFeedAsync(GetFeedRequest,CallSettings)
-            // Additional: GetFeedAsync(GetFeedRequest,CancellationToken)
+            // Snippet: GetFeedAsync(GetFeedRequest, CallSettings)
+            // Additional: GetFeedAsync(GetFeedRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetFeedRequest request = new GetFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
             // Make the request
             Feed response = await assetServiceClient.GetFeedAsync(request);
@@ -253,39 +234,90 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for GetFeed</summary>
-        public void GetFeed_RequestObject()
+        public void GetFeed()
         {
-            // Snippet: GetFeed(GetFeedRequest,CallSettings)
+            // Snippet: GetFeed(string, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            GetFeedRequest request = new GetFeedRequest
-            {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
-            };
+            string name = "projects/[PROJECT]/feeds/[FEED]";
             // Make the request
-            Feed response = assetServiceClient.GetFeed(request);
+            Feed response = assetServiceClient.GetFeed(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedAsync</summary>
+        public async Task GetFeedAsync()
+        {
+            // Snippet: GetFeedAsync(string, CallSettings)
+            // Additional: GetFeedAsync(string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/feeds/[FEED]";
+            // Make the request
+            Feed response = await assetServiceClient.GetFeedAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeed</summary>
+        public void GetFeed_ResourceNames()
+        {
+            // Snippet: GetFeed(FeedName, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            FeedName name = FeedName.FromProjectFeed("[PROJECT]", "[FEED]");
+            // Make the request
+            Feed response = assetServiceClient.GetFeed(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedAsync</summary>
+        public async Task GetFeedAsync_ResourceNames()
+        {
+            // Snippet: GetFeedAsync(FeedName, CallSettings)
+            // Additional: GetFeedAsync(FeedName, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeedName name = FeedName.FromProjectFeed("[PROJECT]", "[FEED]");
+            // Make the request
+            Feed response = await assetServiceClient.GetFeedAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeeds</summary>
+        public void ListFeeds_RequestObject()
+        {
+            // Snippet: ListFeeds(ListFeedsRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            ListFeedsRequest request = new ListFeedsRequest { Parent = "", };
+            // Make the request
+            ListFeedsResponse response = assetServiceClient.ListFeeds(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListFeedsAsync</summary>
-        public async Task ListFeedsAsync()
+        public async Task ListFeedsAsync_RequestObject()
         {
-            // Snippet: ListFeedsAsync(string,CallSettings)
-            // Additional: ListFeedsAsync(string,CancellationToken)
+            // Snippet: ListFeedsAsync(ListFeedsRequest, CallSettings)
+            // Additional: ListFeedsAsync(ListFeedsRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            ListFeedsRequest request = new ListFeedsRequest { Parent = "", };
             // Make the request
-            ListFeedsResponse response = await assetServiceClient.ListFeedsAsync(parent);
+            ListFeedsResponse response = await assetServiceClient.ListFeedsAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListFeeds</summary>
         public void ListFeeds()
         {
-            // Snippet: ListFeeds(string,CallSettings)
+            // Snippet: ListFeeds(string, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
@@ -296,70 +328,41 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for ListFeedsAsync</summary>
-        public async Task ListFeedsAsync_RequestObject()
+        public async Task ListFeedsAsync()
         {
-            // Snippet: ListFeedsAsync(ListFeedsRequest,CallSettings)
-            // Additional: ListFeedsAsync(ListFeedsRequest,CancellationToken)
+            // Snippet: ListFeedsAsync(string, CallSettings)
+            // Additional: ListFeedsAsync(string, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListFeedsRequest request = new ListFeedsRequest
-            {
-                Parent = "",
-            };
+            string parent = "";
             // Make the request
-            ListFeedsResponse response = await assetServiceClient.ListFeedsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListFeeds</summary>
-        public void ListFeeds_RequestObject()
-        {
-            // Snippet: ListFeeds(ListFeedsRequest,CallSettings)
-            // Create client
-            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
-            // Initialize request argument(s)
-            ListFeedsRequest request = new ListFeedsRequest
-            {
-                Parent = "",
-            };
-            // Make the request
-            ListFeedsResponse response = assetServiceClient.ListFeeds(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateFeedAsync</summary>
-        public async Task UpdateFeedAsync()
-        {
-            // Snippet: UpdateFeedAsync(Feed,CallSettings)
-            // Additional: UpdateFeedAsync(Feed,CancellationToken)
-            // Create client
-            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            Feed feed = new Feed();
-            // Make the request
-            Feed response = await assetServiceClient.UpdateFeedAsync(feed);
+            ListFeedsResponse response = await assetServiceClient.ListFeedsAsync(parent);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateFeed</summary>
-        public void UpdateFeed()
+        public void UpdateFeed_RequestObject()
         {
-            // Snippet: UpdateFeed(Feed,CallSettings)
+            // Snippet: UpdateFeed(UpdateFeedRequest, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            Feed feed = new Feed();
+            UpdateFeedRequest request = new UpdateFeedRequest
+            {
+                Feed = new Feed(),
+                UpdateMask = new FieldMask(),
+            };
             // Make the request
-            Feed response = assetServiceClient.UpdateFeed(feed);
+            Feed response = assetServiceClient.UpdateFeed(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateFeedAsync</summary>
         public async Task UpdateFeedAsync_RequestObject()
         {
-            // Snippet: UpdateFeedAsync(UpdateFeedRequest,CallSettings)
-            // Additional: UpdateFeedAsync(UpdateFeedRequest,CancellationToken)
+            // Snippet: UpdateFeedAsync(UpdateFeedRequest, CallSettings)
+            // Additional: UpdateFeedAsync(UpdateFeedRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -374,60 +377,59 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateFeed</summary>
-        public void UpdateFeed_RequestObject()
+        public void UpdateFeed()
         {
-            // Snippet: UpdateFeed(UpdateFeedRequest,CallSettings)
+            // Snippet: UpdateFeed(Feed, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            UpdateFeedRequest request = new UpdateFeedRequest
-            {
-                Feed = new Feed(),
-                UpdateMask = new FieldMask(),
-            };
+            Feed feed = new Feed();
             // Make the request
-            Feed response = assetServiceClient.UpdateFeed(request);
+            Feed response = assetServiceClient.UpdateFeed(feed);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteFeedAsync</summary>
-        public async Task DeleteFeedAsync()
+        /// <summary>Snippet for UpdateFeedAsync</summary>
+        public async Task UpdateFeedAsync()
         {
-            // Snippet: DeleteFeedAsync(string,CallSettings)
-            // Additional: DeleteFeedAsync(string,CancellationToken)
+            // Snippet: UpdateFeedAsync(Feed, CallSettings)
+            // Additional: UpdateFeedAsync(Feed, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            Feed feed = new Feed();
             // Make the request
-            await assetServiceClient.DeleteFeedAsync(formattedName);
+            Feed response = await assetServiceClient.UpdateFeedAsync(feed);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteFeed</summary>
-        public void DeleteFeed()
+        public void DeleteFeed_RequestObject()
         {
-            // Snippet: DeleteFeed(string,CallSettings)
+            // Snippet: DeleteFeed(DeleteFeedRequest, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new FeedName("[PROJECT]", "[FEED]").ToString();
+            DeleteFeedRequest request = new DeleteFeedRequest
+            {
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
+            };
             // Make the request
-            assetServiceClient.DeleteFeed(formattedName);
+            assetServiceClient.DeleteFeed(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteFeedAsync</summary>
         public async Task DeleteFeedAsync_RequestObject()
         {
-            // Snippet: DeleteFeedAsync(DeleteFeedRequest,CallSettings)
-            // Additional: DeleteFeedAsync(DeleteFeedRequest,CancellationToken)
+            // Snippet: DeleteFeedAsync(DeleteFeedRequest, CallSettings)
+            // Additional: DeleteFeedAsync(DeleteFeedRequest, CancellationToken)
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteFeedRequest request = new DeleteFeedRequest
             {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
+                FeedName = FeedName.FromProjectFeed("[PROJECT]", "[FEED]"),
             };
             // Make the request
             await assetServiceClient.DeleteFeedAsync(request);
@@ -435,20 +437,57 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteFeed</summary>
-        public void DeleteFeed_RequestObject()
+        public void DeleteFeed()
         {
-            // Snippet: DeleteFeed(DeleteFeedRequest,CallSettings)
+            // Snippet: DeleteFeed(string, CallSettings)
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            DeleteFeedRequest request = new DeleteFeedRequest
-            {
-                Name = new FeedName("[PROJECT]", "[FEED]").ToString(),
-            };
+            string name = "projects/[PROJECT]/feeds/[FEED]";
             // Make the request
-            assetServiceClient.DeleteFeed(request);
+            assetServiceClient.DeleteFeed(name);
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteFeedAsync</summary>
+        public async Task DeleteFeedAsync()
+        {
+            // Snippet: DeleteFeedAsync(string, CallSettings)
+            // Additional: DeleteFeedAsync(string, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/feeds/[FEED]";
+            // Make the request
+            await assetServiceClient.DeleteFeedAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeed</summary>
+        public void DeleteFeed_ResourceNames()
+        {
+            // Snippet: DeleteFeed(FeedName, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            FeedName name = FeedName.FromProjectFeed("[PROJECT]", "[FEED]");
+            // Make the request
+            assetServiceClient.DeleteFeed(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedAsync</summary>
+        public async Task DeleteFeedAsync_ResourceNames()
+        {
+            // Snippet: DeleteFeedAsync(FeedName, CallSettings)
+            // Additional: DeleteFeedAsync(FeedName, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeedName name = FeedName.FromProjectFeed("[PROJECT]", "[FEED]");
+            // Make the request
+            await assetServiceClient.DeleteFeedAsync(name);
+            // End snippet
+        }
     }
 }
