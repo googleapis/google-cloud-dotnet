@@ -35,7 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Note: deliberately not a snippet just yet, but written so that it's ready to be
             // if we think that would be better than the generated one.
             EntityTypesClient client = EntityTypesClient.Create();
-            PagedEnumerable<ListEntityTypesResponse, EntityType> response = client.ListEntityTypes(new ProjectAgentName(projectId));
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = client.ListEntityTypes(AgentName.FromProject(projectId));
 
             foreach (EntityType entityType in response)
             {
