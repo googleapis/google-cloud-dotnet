@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,117 +14,124 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Dialogflow.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedSessionsClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedSessionsClientTest
     {
-        [Fact]
-        public void DetectIntent()
+        [xunit::FactAttribute]
+        public void DetectIntentRequestObject()
         {
-            Mock<Sessions.SessionsClient> mockGrpcClient = new Mock<Sessions.SessionsClient>(MockBehavior.Strict);
-            DetectIntentRequest expectedRequest = new DetectIntentRequest
-            {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-                QueryInput = new QueryInput(),
-            };
-            DetectIntentResponse expectedResponse = new DetectIntentResponse
-            {
-                ResponseId = "responseId1847552473",
-                OutputAudio = ByteString.CopyFromUtf8("24"),
-            };
-            mockGrpcClient.Setup(x => x.DetectIntent(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[SESSION]");
-            QueryInput queryInput = new QueryInput();
-            DetectIntentResponse response = client.DetectIntent(session, queryInput);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DetectIntentAsync()
-        {
-            Mock<Sessions.SessionsClient> mockGrpcClient = new Mock<Sessions.SessionsClient>(MockBehavior.Strict);
-            DetectIntentRequest expectedRequest = new DetectIntentRequest
-            {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-                QueryInput = new QueryInput(),
-            };
-            DetectIntentResponse expectedResponse = new DetectIntentResponse
-            {
-                ResponseId = "responseId1847552473",
-                OutputAudio = ByteString.CopyFromUtf8("24"),
-            };
-            mockGrpcClient.Setup(x => x.DetectIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<DetectIntentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[SESSION]");
-            QueryInput queryInput = new QueryInput();
-            DetectIntentResponse response = await client.DetectIntentAsync(session, queryInput);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DetectIntent2()
-        {
-            Mock<Sessions.SessionsClient> mockGrpcClient = new Mock<Sessions.SessionsClient>(MockBehavior.Strict);
+            moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                Session = "session0cf4d621",
+                QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
+                OutputAudioConfig = new OutputAudioConfig(),
+                InputAudio = proto::ByteString.CopyFromUtf8("input_audio0acdfb28"),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
-                ResponseId = "responseId1847552473",
-                OutputAudio = ByteString.CopyFromUtf8("24"),
+                ResponseId = "response_id17f822e1",
+                QueryResult = new QueryResult(),
+                WebhookStatus = new gr::Status(),
+                OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
+                OutputAudioConfig = new OutputAudioConfig(),
             };
-            mockGrpcClient.Setup(x => x.DetectIntent(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DetectIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
             DetectIntentResponse response = client.DetectIntent(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DetectIntentAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DetectIntentRequestObjectAsync()
         {
-            Mock<Sessions.SessionsClient> mockGrpcClient = new Mock<Sessions.SessionsClient>(MockBehavior.Strict);
+            moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                Session = "session0cf4d621",
+                QueryParams = new QueryParameters(),
+                QueryInput = new QueryInput(),
+                OutputAudioConfig = new OutputAudioConfig(),
+                InputAudio = proto::ByteString.CopyFromUtf8("input_audio0acdfb28"),
+            };
+            DetectIntentResponse expectedResponse = new DetectIntentResponse
+            {
+                ResponseId = "response_id17f822e1",
+                QueryResult = new QueryResult(),
+                WebhookStatus = new gr::Status(),
+                OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
+                OutputAudioConfig = new OutputAudioConfig(),
+            };
+            mockGrpcClient.Setup(x => x.DetectIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            DetectIntentResponse responseCallSettings = await client.DetectIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DetectIntentResponse responseCancellationToken = await client.DetectIntentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DetectIntent()
+        {
+            moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                Session = "session0cf4d621",
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
-                ResponseId = "responseId1847552473",
-                OutputAudio = ByteString.CopyFromUtf8("24"),
+                ResponseId = "response_id17f822e1",
+                QueryResult = new QueryResult(),
+                WebhookStatus = new gr::Status(),
+                OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
+                OutputAudioConfig = new OutputAudioConfig(),
             };
-            mockGrpcClient.Setup(x => x.DetectIntentAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<DetectIntentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.DetectIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
-            DetectIntentResponse response = await client.DetectIntentAsync(request);
-            Assert.Same(expectedResponse, response);
+            DetectIntentResponse response = client.DetectIntent(request.Session, request.QueryInput);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public async stt::Task DetectIntentAsync()
+        {
+            moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                Session = "session0cf4d621",
+                QueryInput = new QueryInput(),
+            };
+            DetectIntentResponse expectedResponse = new DetectIntentResponse
+            {
+                ResponseId = "response_id17f822e1",
+                QueryResult = new QueryResult(),
+                WebhookStatus = new gr::Status(),
+                OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
+                OutputAudioConfig = new OutputAudioConfig(),
+            };
+            mockGrpcClient.Setup(x => x.DetectIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            DetectIntentResponse responseCallSettings = await client.DetectIntentAsync(request.Session, request.QueryInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DetectIntentResponse responseCancellationToken = await client.DetectIntentAsync(request.Session, request.QueryInput, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

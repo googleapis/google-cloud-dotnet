@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,565 +14,899 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Dialogflow.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedEntityTypesClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedEntityTypesClientTest
     {
-        [Fact]
-        public void GetEntityType()
+        [xunit::FactAttribute]
+        public void GetEntityTypeRequestObject()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetEntityTypeRequest expectedRequest = new GetEntityTypeRequest
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-            };
-            EntityType expectedResponse = new EntityType
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
-            };
-            mockGrpcClient.Setup(x => x.GetEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            EntityType response = client.GetEntityType(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetEntityTypeAsync()
-        {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetEntityTypeRequest expectedRequest = new GetEntityTypeRequest
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-            };
-            EntityType expectedResponse = new EntityType
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
-            };
-            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            EntityType response = await client.GetEntityTypeAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetEntityType2()
-        {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetEntityTypeRequest expectedRequest = new GetEntityTypeRequest
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                LanguageCode = "languageCode-412800396",
-            };
-            EntityType expectedResponse = new EntityType
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
-            };
-            mockGrpcClient.Setup(x => x.GetEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            string languageCode = "languageCode-412800396";
-            EntityType response = client.GetEntityType(name, languageCode);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetEntityTypeAsync2()
-        {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetEntityTypeRequest expectedRequest = new GetEntityTypeRequest
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                LanguageCode = "languageCode-412800396",
-            };
-            EntityType expectedResponse = new EntityType
-            {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
-            };
-            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            string languageCode = "languageCode-412800396";
-            EntityType response = await client.GetEntityTypeAsync(name, languageCode);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetEntityType3()
-        {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "language_code2f6c7160",
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.GetEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
             EntityType response = client.GetEntityType(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetEntityTypeAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task GetEntityTypeRequestObjectAsync()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "language_code2f6c7160",
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType response = await client.GetEntityTypeAsync(request);
-            Assert.Same(expectedResponse, response);
+            EntityType responseCallSettings = await client.GetEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.GetEntityTypeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateEntityType()
+        [xunit::FactAttribute]
+        public void GetEntityType1()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateEntityTypeRequest expectedRequest = new CreateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityType = new EntityType(),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.CreateEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            EntityType entityType = new EntityType();
-            EntityType response = client.CreateEntityType(parent, entityType);
-            Assert.Same(expectedResponse, response);
+            EntityType response = client.GetEntityType(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateEntityTypeAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetEntityType1Async()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateEntityTypeRequest expectedRequest = new CreateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityType = new EntityType(),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            EntityType entityType = new EntityType();
-            EntityType response = await client.CreateEntityTypeAsync(parent, entityType);
-            Assert.Same(expectedResponse, response);
+            EntityType responseCallSettings = await client.GetEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateEntityType2()
+        [xunit::FactAttribute]
+        public void GetEntityType1_ResourceNames()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateEntityTypeRequest expectedRequest = new CreateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityType = new EntityType(),
-                LanguageCode = "languageCode-412800396",
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.CreateEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            EntityType entityType = new EntityType();
-            string languageCode = "languageCode-412800396";
-            EntityType response = client.CreateEntityType(parent, entityType, languageCode);
-            Assert.Same(expectedResponse, response);
+            EntityType response = client.GetEntityType(request.EntityTypeName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetEntityType1Async_ResourceNames()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateEntityTypeRequest expectedRequest = new CreateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                EntityType = new EntityType(),
-                LanguageCode = "languageCode-412800396",
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            ProjectAgentName parent = new ProjectAgentName("[PROJECT]");
-            EntityType entityType = new EntityType();
-            string languageCode = "languageCode-412800396";
-            EntityType response = await client.CreateEntityTypeAsync(parent, entityType, languageCode);
-            Assert.Same(expectedResponse, response);
+            EntityType responseCallSettings = await client.GetEntityTypeAsync(request.EntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.EntityTypeName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateEntityType3()
+        [xunit::FactAttribute]
+        public void GetEntityType2()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType response = client.GetEntityType(request.Name, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEntityType2Async()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.GetEntityTypeAsync(request.Name, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.Name, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetEntityType2_ResourceNames()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType response = client.GetEntityType(request.EntityTypeName, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEntityType2Async_ResourceNames()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetEntityTypeRequest request = new GetEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.GetEntityTypeAsync(request.EntityTypeName, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.GetEntityTypeAsync(request.EntityTypeName, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateEntityTypeRequestObject()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.CreateEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
             EntityType response = client.CreateEntityType(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateEntityTypeAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task CreateEntityTypeRequestObjectAsync()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
-                ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.CreateEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateEntityType1()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityType = new EntityType(),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType response = await client.CreateEntityTypeAsync(request);
-            Assert.Same(expectedResponse, response);
+            EntityType response = client.CreateEntityType(request.Parent, request.EntityType);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateEntityType()
+        [xunit::FactAttribute]
+        public async stt::Task CreateEntityType1Async()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateEntityTypeRequest expectedRequest = new UpdateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityType = new EntityType(),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType entityType = new EntityType();
-            EntityType response = client.UpdateEntityType(entityType);
-            Assert.Same(expectedResponse, response);
+            EntityType responseCallSettings = await client.CreateEntityTypeAsync(request.Parent, request.EntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request.Parent, request.EntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateEntityTypeAsync()
+        [xunit::FactAttribute]
+        public void CreateEntityType1_ResourceNames()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateEntityTypeRequest expectedRequest = new UpdateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityType = new EntityType(),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType entityType = new EntityType();
-            EntityType response = await client.UpdateEntityTypeAsync(entityType);
-            Assert.Same(expectedResponse, response);
+            EntityType response = client.CreateEntityType(request.ParentAsAgentName, request.EntityType);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateEntityType2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateEntityType1Async_ResourceNames()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateEntityTypeRequest expectedRequest = new UpdateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityType = new EntityType(),
-                LanguageCode = "languageCode-412800396",
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType entityType = new EntityType();
-            string languageCode = "languageCode-412800396";
-            EntityType response = client.UpdateEntityType(entityType, languageCode);
-            Assert.Same(expectedResponse, response);
+            EntityType responseCallSettings = await client.CreateEntityTypeAsync(request.ParentAsAgentName, request.EntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request.ParentAsAgentName, request.EntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public void CreateEntityType2()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateEntityTypeRequest expectedRequest = new UpdateEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
             {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityType = new EntityType(),
-                LanguageCode = "languageCode-412800396",
+                LanguageCode = "language_code2f6c7160",
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType entityType = new EntityType();
-            string languageCode = "languageCode-412800396";
-            EntityType response = await client.UpdateEntityTypeAsync(entityType, languageCode);
-            Assert.Same(expectedResponse, response);
+            EntityType response = client.CreateEntityType(request.Parent, request.EntityType, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateEntityType3()
+        [xunit::FactAttribute]
+        public async stt::Task CreateEntityType2Async()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.CreateEntityTypeAsync(request.Parent, request.EntityType, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request.Parent, request.EntityType, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateEntityType2_ResourceNames()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType response = client.CreateEntityType(request.ParentAsAgentName, request.EntityType, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateEntityType2Async_ResourceNames()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateEntityTypeRequest request = new CreateEntityTypeRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.CreateEntityTypeAsync(request.ParentAsAgentName, request.EntityType, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.CreateEntityTypeAsync(request.ParentAsAgentName, request.EntityType, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateEntityTypeRequestObject()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+                UpdateMask = new wkt::FieldMask(),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
             EntityType response = client.UpdateEntityType(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateEntityTypeAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateEntityTypeRequestObjectAsync()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
+            {
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+                UpdateMask = new wkt::FieldMask(),
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateEntityType1()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
             };
             EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
-                DisplayName = "displayName1615086568",
-                EnableFuzzyExtraction = true,
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityType response = await client.UpdateEntityTypeAsync(request);
-            Assert.Same(expectedResponse, response);
+            EntityType response = client.UpdateEntityType(request.EntityType);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteEntityType()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateEntityType1Async()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteEntityTypeRequest expectedRequest = new DeleteEntityTypeRequest
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityType = new EntityType(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteEntityType(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            client.DeleteEntityType(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteEntityTypeAsync()
-        {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteEntityTypeRequest expectedRequest = new DeleteEntityTypeRequest
+            EntityType expectedResponse = new EntityType
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            EntityTypeName name = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]");
-            await client.DeleteEntityTypeAsync(name);
+            EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request.EntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request.EntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteEntityType2()
+        [xunit::FactAttribute]
+        public void UpdateEntityType2()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
+            {
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType response = client.UpdateEntityType(request.EntityType, request.LanguageCode);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateEntityType2Async()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateEntityTypeRequest request = new UpdateEntityTypeRequest
+            {
+                EntityType = new EntityType(),
+                LanguageCode = "language_code2f6c7160",
+            };
+            EntityType expectedResponse = new EntityType
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+                DisplayName = "display_name137f65c2",
+                Kind = EntityType.Types.Kind.Regexp,
+                AutoExpansionMode = EntityType.Types.AutoExpansionMode.Default,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+                EnableFuzzyExtraction = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            EntityType responseCallSettings = await client.UpdateEntityTypeAsync(request.EntityType, request.LanguageCode, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntityType responseCancellationToken = await client.UpdateEntityTypeAsync(request.EntityType, request.LanguageCode, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteEntityTypeRequestObject()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteEntityType(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
             client.DeleteEntityType(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteEntityTypeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteEntityTypeRequestObjectAsync()
         {
-            Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new Mock<EntityTypes.EntityTypesClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
             {
-                EntityTypeName = new EntityTypeName("[PROJECT]", "[ENTITY_TYPE]"),
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteEntityTypeAsync(request);
+            await client.DeleteEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteEntityTypeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteEntityType()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            client.DeleteEntityType(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteEntityTypeAsync()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteEntityTypeAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteEntityType_ResourceNames()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            client.DeleteEntityType(request.EntityTypeName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteEntityTypeAsync_ResourceNames()
+        {
+            moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteEntityTypeRequest request = new DeleteEntityTypeRequest
+            {
+                EntityTypeName = EntityTypeName.FromProjectEntityType("[PROJECT]", "[ENTITY_TYPE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteEntityTypeAsync(request.EntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteEntityTypeAsync(request.EntityTypeName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
