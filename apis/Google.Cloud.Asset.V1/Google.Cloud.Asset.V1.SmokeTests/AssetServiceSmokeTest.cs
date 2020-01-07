@@ -14,20 +14,12 @@
 
 // Note: this is not currently generated, but is intended to take
 // the same form as regular generated smoke tests.
-    
+
 namespace Google.Cloud.Asset.V1.SmokeTests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
 
     public class AssetServiceSmokeTest
     {
@@ -48,7 +40,7 @@ namespace Google.Cloud.Asset.V1.SmokeTests
             // Initialize request argument(s)
             var request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsProjectName = new ProjectName(projectId),
+                ParentAsResourceName = new ProjectName(projectId),
                 ContentType = ContentType.Resource,
                 ReadTimeWindow = new TimeWindow { StartTime = DateTime.UtcNow.AddDays(-1).ToTimestamp() },
             };
