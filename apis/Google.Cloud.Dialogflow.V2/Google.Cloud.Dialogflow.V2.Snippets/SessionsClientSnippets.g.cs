@@ -16,64 +16,48 @@
 
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
-    using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Dialogflow.V2;
     using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedSessionsClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedSessionsClientSnippets
     {
-        /// <summary>Snippet for DetectIntentAsync</summary>
-        public async Task DetectIntentAsync()
-        {
-            // Snippet: DetectIntentAsync(SessionName,QueryInput,CallSettings)
-            // Additional: DetectIntentAsync(SessionName,QueryInput,CancellationToken)
-            // Create client
-            SessionsClient sessionsClient = await SessionsClient.CreateAsync();
-            // Initialize request argument(s)
-            SessionName session = new SessionName("[PROJECT]", "[SESSION]");
-            QueryInput queryInput = new QueryInput();
-            // Make the request
-            DetectIntentResponse response = await sessionsClient.DetectIntentAsync(session, queryInput);
-            // End snippet
-        }
-
         /// <summary>Snippet for DetectIntent</summary>
-        public void DetectIntent()
+        public void DetectIntent_RequestObject()
         {
-            // Snippet: DetectIntent(SessionName,QueryInput,CallSettings)
+            // Snippet: DetectIntent(DetectIntentRequest, CallSettings)
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize request argument(s)
-            SessionName session = new SessionName("[PROJECT]", "[SESSION]");
-            QueryInput queryInput = new QueryInput();
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                Session = "",
+                QueryParams = new QueryParameters(),
+                QueryInput = new QueryInput(),
+                OutputAudioConfig = new OutputAudioConfig(),
+                InputAudio = ByteString.Empty,
+            };
             // Make the request
-            DetectIntentResponse response = sessionsClient.DetectIntent(session, queryInput);
+            DetectIntentResponse response = sessionsClient.DetectIntent(request);
             // End snippet
         }
 
         /// <summary>Snippet for DetectIntentAsync</summary>
         public async Task DetectIntentAsync_RequestObject()
         {
-            // Snippet: DetectIntentAsync(DetectIntentRequest,CallSettings)
-            // Additional: DetectIntentAsync(DetectIntentRequest,CancellationToken)
+            // Snippet: DetectIntentAsync(DetectIntentRequest, CallSettings)
+            // Additional: DetectIntentAsync(DetectIntentRequest, CancellationToken)
             // Create client
             SessionsClient sessionsClient = await SessionsClient.CreateAsync();
             // Initialize request argument(s)
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
+                Session = "",
+                QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
+                OutputAudioConfig = new OutputAudioConfig(),
+                InputAudio = ByteString.Empty,
             };
             // Make the request
             DetectIntentResponse response = await sessionsClient.DetectIntentAsync(request);
@@ -81,41 +65,54 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DetectIntent</summary>
-        public void DetectIntent_RequestObject()
+        public void DetectIntent()
         {
-            // Snippet: DetectIntent(DetectIntentRequest,CallSettings)
+            // Snippet: DetectIntent(string, QueryInput, CallSettings)
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize request argument(s)
-            DetectIntentRequest request = new DetectIntentRequest
-            {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[SESSION]"),
-                QueryInput = new QueryInput(),
-            };
+            string session = "";
+            QueryInput queryInput = new QueryInput();
             // Make the request
-            DetectIntentResponse response = sessionsClient.DetectIntent(request);
+            DetectIntentResponse response = sessionsClient.DetectIntent(session, queryInput);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DetectIntentAsync</summary>
+        public async Task DetectIntentAsync()
+        {
+            // Snippet: DetectIntentAsync(string, QueryInput, CallSettings)
+            // Additional: DetectIntentAsync(string, QueryInput, CancellationToken)
+            // Create client
+            SessionsClient sessionsClient = await SessionsClient.CreateAsync();
+            // Initialize request argument(s)
+            string session = "";
+            QueryInput queryInput = new QueryInput();
+            // Make the request
+            DetectIntentResponse response = await sessionsClient.DetectIntentAsync(session, queryInput);
             // End snippet
         }
 
         /// <summary>Snippet for StreamingDetectIntent</summary>
         public async Task StreamingDetectIntent()
         {
-            // Snippet: StreamingDetectIntent(CallSettings,BidirectionalStreamingSettings)
+            // Snippet: StreamingDetectIntent(CallSettings, BidirectionalStreamingSettings)
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SessionsClient.StreamingDetectIntentStream duplexStream = sessionsClient.StreamingDetectIntent();
+            SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
 
-            // Sending requests and retrieving responses can be arbitrarily interleaved.
-            // Exact sequence will depend on client/server behavior.
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
 
             // Create task to do something with responses from server
             Task responseHandlerTask = Task.Run(async () =>
             {
-                IAsyncEnumerator<StreamingDetectIntentResponse> responseStream = duplexStream.ResponseStream;
-                while (await responseStream.MoveNext())
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<StreamingDetectIntentResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
                 {
-                    StreamingDetectIntentResponse response = responseStream.Current;
+                    StreamingDetectIntentResponse responseItem = responseStream.Current;
                     // Do something with streamed response
                 }
                 // The response stream has completed
@@ -129,20 +126,22 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 StreamingDetectIntentRequest request = new StreamingDetectIntentRequest
                 {
                     Session = "",
+                    QueryParams = new QueryParameters(),
                     QueryInput = new QueryInput(),
+                    OutputAudioConfig = new OutputAudioConfig(),
+                    InputAudio = ByteString.Empty,
                 };
                 // Stream a request to the server
-                await duplexStream.WriteAsync(request);
-
+                await response.WriteAsync(request);
                 // Set "done" to true when sending requests is complete
             }
+
             // Complete writing requests to the stream
-            await duplexStream.WriteCompleteAsync();
-            // Await the response handler.
-            // This will complete once all server responses have been processed.
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
             await responseHandlerTask;
             // End snippet
         }
-
     }
 }
