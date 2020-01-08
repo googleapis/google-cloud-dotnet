@@ -727,19 +727,40 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 SelectedFields = "age,gender,children.gender,children.age"
             };
+
+            // Obtain the table's partial schema.
             var table = client.GetTable(datasetId, tableId, options);
-            // Making sure we grab a row of a person with children.
-            var row = client.ListRows(datasetId, tableId, table.Schema).First(row => ((Dictionary<string, object>[])row["children"]).Length > 0);
+            // Use the partial schema to obtain partial rows.
+            var rows = client.ListRows(datasetId, tableId, table.Schema);
+            // Make sure we grab a row of a person with children for testing fields that should be present.
+            var row = rows.First(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
+
             // These should be present
             Assert.NotNull(row["age"]);
             Assert.NotNull(row["gender"]);
-            var children = (Dictionary<string, object>[])row["children"];
+            var children = row["children"] as Dictionary<string, object>[];
             Assert.NotNull(children);
             Assert.NotNull(children[0]["gender"]);
             Assert.NotNull(children[0]["age"]);
             // These shouldn't
             Assert.Throws<KeyNotFoundException>(() => row["fullName"]);
             Assert.Throws<KeyNotFoundException>(() => children[0]["name"]);
+        }
+
+        [Fact]
+        public void ListRows_EmptySchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.PeopleTableId;
+
+            // Use an empty schema to obtain the rows.
+            // We should get full rows.
+            var rows = client.ListRows(datasetId, tableId, new TableSchema()).ToList();
+
+            // The People table has 7 top level fields. We should have all fields.
+            object dummy;
+            Assert.All(rows, row => dummy = row[6]);
         }
 
         private class TitleComparer : IEqualityComparer<BigQueryRow>
