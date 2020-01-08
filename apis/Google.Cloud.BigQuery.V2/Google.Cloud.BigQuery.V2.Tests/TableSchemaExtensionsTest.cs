@@ -43,14 +43,21 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void SelectedFields_EmptySchema()
+        public void BuildSelectedFields_NullSchema()
+        {
+            TableSchema schema = null;
+            Assert.Null(schema.BuildSelectedFields());
+        }
+
+        [Fact]
+        public void BuildSelectedFields_EmptySchema()
         {
             var schema = new TableSchema();
             Assert.Equal(string.Empty, schema.BuildSelectedFields());
         }
 
         [Fact]
-        public void SelectedFields_OneField()
+        public void BuildSelectedFields_OneField()
         {
             var schema = new TableSchema
             {
@@ -64,7 +71,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void SelectedFields_OneLevel()
+        public void BuildSelectedFields_OneLevel()
         {
             var schema = new TableSchema
             {
@@ -79,7 +86,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void SelectedFields_Nested()
+        public void BuildSelectedFields_Nested()
         {
             var schema = new TableSchema
             {
