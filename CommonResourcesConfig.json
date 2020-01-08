@@ -29,6 +29,24 @@
       "csharp_package_name": "Google.Api.Gax",
       "csharp_namespace": "Google.Api.Gax.ResourceNames",
       "csharp_class_name":  "LocationName"
-    }
+    },
+    {
+      "type": "bigtable.googleapis.com/Table",
+      "csharp_package_name": "Google.Cloud.Bigtable.Common.V2",
+      "csharp_namespace": "Google.Cloud.Bigtable.Common.V2",
+      "csharp_class_name":  "TableName"
+    },
+    {
+      "type": "spanner.googleapis.com/Database",
+      "csharp_package_name": "Google.Cloud.Spanner.Common.V1",
+      "csharp_namespace": "Google.Cloud.Spanner.Common.V1",
+      "csharp_class_name":  "DatabaseName"
+    },
+    {
+      "type": "spanner.googleapis.com/Instance",
+      "csharp_package_name": "Google.Cloud.Spanner.Common.V1",
+      "csharp_namespace": "Google.Cloud.Spanner.Common.V1",
+      "csharp_class_name":  "InstanceName"
+    }    
   ]
 }
