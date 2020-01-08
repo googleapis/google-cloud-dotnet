@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -186,7 +187,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
@@ -211,7 +212,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
@@ -238,7 +239,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
@@ -263,7 +264,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
@@ -290,7 +291,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
@@ -315,7 +316,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue

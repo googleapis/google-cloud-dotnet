@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using gagr = Google.Api.Gax.ResourceNames;
 using gcsv = Google.Cloud.Scheduler.V1;
 
 namespace Google.Cloud.Scheduler.V1
@@ -21,11 +22,11 @@ namespace Google.Cloud.Scheduler.V1
     public partial class ListJobsRequest
     {
         /// <summary>
-        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public LocationName ParentAsLocationName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -45,11 +46,11 @@ namespace Google.Cloud.Scheduler.V1
     public partial class CreateJobRequest
     {
         /// <summary>
-        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public LocationName ParentAsLocationName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
