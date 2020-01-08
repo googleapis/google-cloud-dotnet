@@ -308,5 +308,86 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(totalCount - 2, remainder.Count);
         }
 
+        [Fact]
+        public void GetTable()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.HighScoreExtendedTableId;
+
+            var table = client.GetTable(datasetId, tableId);
+
+            Assert.Equal(4, table.Schema.Fields.Count);
+            Assert.Equal("player", table.Schema.Fields[0].Name);
+            Assert.Equal("gameStarted", table.Schema.Fields[1].Name);
+            Assert.Equal("score", table.Schema.Fields[2].Name);
+            Assert.Equal("gameFinished", table.Schema.Fields[3].Name);
+        }
+
+        [Fact]
+        public void GetTable_PartialSchema_SimpleTypes()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.HighScoreExtendedTableId;
+            var options = new GetTableOptions
+            {
+                SelectedFields = "player,score"
+            };
+            var table = client.GetTable(datasetId, tableId, options);
+
+            Assert.Equal(2, table.Schema.Fields.Count);
+            Assert.Equal("player", table.Schema.Fields[0].Name);
+            Assert.Equal("score", table.Schema.Fields[1].Name);
+        }
+
+        [Fact]
+        public void GetTable_PartialSchema_SimpleTypes_Ordered()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.HighScoreExtendedTableId;
+            var options = new GetTableOptions
+            {
+                // Specify selected fields in a different order
+                // to the one they were created in.
+                SelectedFields = "score,player"
+            };
+            var table = client.GetTable(datasetId, tableId, options);
+
+            Assert.Equal(2, table.Schema.Fields.Count);
+            // The schema still contains the fields in the same order
+            // as the one they were created in.
+            Assert.Equal("player", table.Schema.Fields[0].Name);
+            Assert.Equal("score", table.Schema.Fields[1].Name);
+        }
+
+        [Fact]
+        public void GetTable_PartialSchema_ComplexTypes()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.PeopleTableId;
+            var options = new GetTableOptions
+            {
+                SelectedFields = "age,gender,phoneNumber,children.gender,children.age"
+            };
+            var table = client.GetTable(datasetId, tableId, options);
+
+            Assert.Equal(4, table.Schema.Fields.Count);
+
+            Assert.Equal("age", table.Schema.Fields[0].Name);
+            Assert.Equal("gender", table.Schema.Fields[1].Name);
+
+            Assert.Equal("phoneNumber", table.Schema.Fields[2].Name);
+            Assert.Equal(2, table.Schema.Fields[2].Fields.Count);
+            Assert.Equal("areaCode", table.Schema.Fields[2].Fields[0].Name);
+            Assert.Equal("number", table.Schema.Fields[2].Fields[1].Name);
+
+            Assert.Equal("children", table.Schema.Fields[3].Name);
+            Assert.Equal(2, table.Schema.Fields[3].Fields.Count);
+            Assert.Equal("gender", table.Schema.Fields[3].Fields[0].Name);
+            Assert.Equal("age", table.Schema.Fields[3].Fields[1].Name);
+        }
     }
 }
