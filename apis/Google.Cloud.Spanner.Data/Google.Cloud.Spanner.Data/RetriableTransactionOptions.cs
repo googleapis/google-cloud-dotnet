@@ -20,10 +20,12 @@ namespace Google.Cloud.Spanner.Data
 {
     internal sealed class RetriableTransactionOptions
     {
-        private static readonly BackoffSettings s_defaultBackoff = new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(250),
-            maxDelay: TimeSpan.FromSeconds(32),
-            delayMultiplier: 2);
+        private static readonly RetrySettings s_defaultBackoff = RetrySettings.FromExponentialBackoff(
+            maxAttempts: int.MaxValue,
+            initialBackoff: TimeSpan.FromMilliseconds(250),
+            maxBackoff: TimeSpan.FromSeconds(32),
+            backoffMultiplier: 2,
+            retryFilter: _ => false); // Ignored
         private static readonly Expiration s_defaultOverallExpiry = Expiration.FromTimeout(TimeSpan.FromHours(1));
 
         internal readonly Func<TimeSpan, TimeSpan> _jitter;
@@ -35,13 +37,13 @@ namespace Google.Cloud.Spanner.Data
 
         internal static RetriableTransactionOptions CreateWithNoJitter() => new RetriableTransactionOptions(delay => delay);
 
-        internal TimeSpan InitialDelay => s_defaultBackoff.Delay;
+        internal TimeSpan InitialDelay => s_defaultBackoff.InitialBackoff;
 
         internal DateTime? CalculateDeadline(IClock clock) => s_defaultOverallExpiry.CalculateDeadline(clock);
 
         internal TimeSpan Jitter(TimeSpan delay) => _jitter(delay);
 
-        internal TimeSpan NextDelay(TimeSpan currentDelay) => s_defaultBackoff.NextDelay(currentDelay);
+        internal TimeSpan NextDelay(TimeSpan currentDelay) => s_defaultBackoff.NextBackoff(currentDelay);
 
         // See http://stackoverflow.com/questions/36376888 for why we don't have a thread-local RNG.
         // We might create multiple instances of MinimumBoundJitter so this is static to make sure
