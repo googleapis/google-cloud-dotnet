@@ -40,5 +40,38 @@ namespace Google.Cloud.BigQuery.V2
             }
             return ret;
         }
+
+        internal static string BuildSelectedFields(this TableSchema schema)
+        {
+            if (!(schema?.Fields?.Count > 0))
+            {
+                return string.Empty;
+            }
+
+            var built = new List<string>();
+            var currentField = new List<string>();
+            BuildSelectedFields(schema.Fields, currentField, built);
+            return string.Join(",", built);
+        }
+
+        private static void BuildSelectedFields(IList<TableFieldSchema> fieldSchemas, IList<string> currentField, IList<string> built)
+        {
+            // Whatever we have in currentField is terminal.
+            // Build that an we are done.
+            if (!(fieldSchemas?.Count > 0))
+            {
+                built.Add(string.Join(".", currentField));
+            }
+            else
+            {
+                int removeAtIndex = currentField.Count;
+                foreach(var field in fieldSchemas)
+                {
+                    currentField.Add(field.Name);
+                    BuildSelectedFields(field.Fields, currentField, built);
+                    currentField.RemoveAt(removeAtIndex);
+                }
+            }
+        }
     }
 }
