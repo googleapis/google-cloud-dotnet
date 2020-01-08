@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Storage.V1;
 using Newtonsoft.Json;
 using System;
@@ -44,7 +45,7 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
             string bucketName = $"{projectId}_product_search_test";
             string bucketUri= $"gs://{bucketName}";
             string productSetId = $"{projectId}_product_search_test";
-            var location = new LocationName(projectId, locationId);
+            var location = LocationName.FromProjectLocation(projectId, locationId);
 
             var storageClient = StorageClient.Create();
             var productSearchClient = ProductSearchClient.Create();

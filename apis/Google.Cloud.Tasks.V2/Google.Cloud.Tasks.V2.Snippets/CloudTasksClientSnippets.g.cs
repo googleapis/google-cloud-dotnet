@@ -17,6 +17,7 @@
 namespace Google.Cloud.Tasks.V2.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
