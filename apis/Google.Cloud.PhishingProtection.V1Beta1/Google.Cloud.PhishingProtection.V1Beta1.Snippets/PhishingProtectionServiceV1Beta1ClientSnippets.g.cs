@@ -31,7 +31,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
             // Initialize request argument(s)
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Uri = "",
             };
             // Make the request
@@ -49,7 +49,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
             // Initialize request argument(s)
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Uri = "",
             };
             // Make the request
@@ -93,7 +93,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = PhishingProtectionServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string uri = "";
             // Make the request
             ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(parent, uri);
@@ -108,7 +108,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = await PhishingProtectionServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string uri = "";
             // Make the request
             ReportPhishingResponse response = await phishingProtectionServiceV1Beta1Client.ReportPhishingAsync(parent, uri);

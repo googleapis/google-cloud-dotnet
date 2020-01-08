@@ -36,11 +36,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -60,11 +60,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -86,11 +86,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -110,11 +110,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -136,11 +136,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -160,11 +160,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -186,12 +186,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -211,12 +211,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -238,12 +238,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -263,12 +263,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -290,12 +290,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -315,12 +315,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Queue = new Queue(),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -347,7 +347,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -372,7 +372,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -399,7 +399,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -424,7 +424,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -446,7 +446,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -461,7 +461,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -477,7 +477,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -492,7 +492,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -508,7 +508,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -523,7 +523,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -539,11 +539,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -563,11 +563,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -589,11 +589,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -613,11 +613,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -639,11 +639,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -663,11 +663,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -689,11 +689,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -713,11 +713,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -739,11 +739,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -763,11 +763,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -789,11 +789,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -813,11 +813,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -839,11 +839,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -863,11 +863,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -889,11 +889,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -913,11 +913,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -939,11 +939,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -963,11 +963,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             Queue expectedResponse = new Queue
             {
-                QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 AppEngineRoutingOverride = new AppEngineRouting(),
                 RateLimits = new RateLimits(),
                 RetryConfig = new RetryConfig(),
@@ -989,7 +989,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1014,7 +1014,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1065,7 +1065,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1091,7 +1091,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1166,7 +1166,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1245,7 +1245,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1297,7 +1297,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1323,7 +1323,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1351,7 +1351,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1377,7 +1377,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1431,7 +1431,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1459,12 +1459,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1489,12 +1489,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1521,11 +1521,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1550,11 +1550,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1581,11 +1581,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1610,11 +1610,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1641,13 +1641,13 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new Task(),
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1672,13 +1672,13 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new Task(),
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1705,12 +1705,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new Task(),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1735,12 +1735,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new Task(),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1767,12 +1767,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new Task(),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1797,12 +1797,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
             {
-                ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new Task(),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1829,7 +1829,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1844,7 +1844,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1860,7 +1860,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1875,7 +1875,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1891,7 +1891,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1906,7 +1906,7 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1922,12 +1922,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1952,12 +1952,12 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -1984,11 +1984,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -2013,11 +2013,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -2044,11 +2044,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),
@@ -2073,11 +2073,11 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             Task expectedResponse = new Task
             {
-                TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 AppEngineHttpRequest = new AppEngineHttpRequest(),
                 HttpRequest = new HttpRequest(),
                 ScheduleTime = new wkt::Timestamp(),

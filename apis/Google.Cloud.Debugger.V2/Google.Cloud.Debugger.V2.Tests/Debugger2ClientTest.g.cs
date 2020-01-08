@@ -14,9 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-// Do not warn when using obsolete members
-#pragma warning disable CS0612
-
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -286,7 +283,6 @@ namespace Google.Cloud.Debugger.V2.Tests
                 IncludeAllUsers = false,
                 IncludeInactive = true,
                 Action = new ListBreakpointsRequest.Types.BreakpointActionValue(),
-                StripResults = false,
                 WaitToken = "wait_tokencb600154",
                 ClientVersion = "client_version92be8ead",
             };
@@ -312,7 +308,6 @@ namespace Google.Cloud.Debugger.V2.Tests
                 IncludeAllUsers = false,
                 IncludeInactive = true,
                 Action = new ListBreakpointsRequest.Types.BreakpointActionValue(),
-                StripResults = false,
                 WaitToken = "wait_tokencb600154",
                 ClientVersion = "client_version92be8ead",
             };
