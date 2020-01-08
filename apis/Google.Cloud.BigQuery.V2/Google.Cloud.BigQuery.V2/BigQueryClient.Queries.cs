@@ -226,7 +226,9 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
+        /// <param name="schema">The schema to use when interpreting results. If this is a partial schema, then partial rows
+        /// will be fetched. See <see cref="GetTableOptions.SelectedFields"/> for how to obtain a table's partial schema.
+        /// This may be null or empty (i.e. <see cref="TableSchema.Fields"/> null or empty), in which case it will be fetched from
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
@@ -243,7 +245,9 @@ namespace Google.Cloud.BigQuery.V2
         /// or service failures can cause exceptions even after the first results have been returned.
         /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
+        /// <param name="schema">The schema to use when interpreting results. If this is a partial schema, then partial rows
+        /// will be fetched. See <see cref="GetTableOptions.SelectedFields"/> for how to obtain a table's partial schema.
+        /// This may be null or empty (i.e. <see cref="TableSchema.Fields"/> null or empty), in which case it will be fetched from
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
