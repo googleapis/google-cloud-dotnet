@@ -35,7 +35,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -73,7 +73,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -113,7 +113,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -151,7 +151,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -191,7 +191,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -217,7 +217,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate response = client.CreateWorkflowTemplate(request.ParentAsWorkflowTemplateName, request.Template);
+            WorkflowTemplate response = client.CreateWorkflowTemplate(request.ParentAsRegionOrLocationName, request.Template);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -229,7 +229,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -255,9 +255,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.ParentAsWorkflowTemplateName, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.ParentAsRegionOrLocationName, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.ParentAsWorkflowTemplateName, request.Template, st::CancellationToken.None);
+            WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.ParentAsRegionOrLocationName, request.Template, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

@@ -36,7 +36,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             ListInstancesRequest request = new ListInstancesRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListInstancesResponse, Instance> response = cloudRedisClient.ListInstances(request);
@@ -84,7 +84,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             ListInstancesRequest request = new ListInstancesRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = cloudRedisClient.ListInstancesAsync(request);
@@ -220,7 +220,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListInstancesResponse, Instance> response = cloudRedisClient.ListInstances(parent);
 
@@ -265,7 +265,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = cloudRedisClient.ListInstancesAsync(parent);
 
@@ -312,7 +312,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             Instance response = cloudRedisClient.GetInstance(request);
@@ -329,7 +329,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             Instance response = await cloudRedisClient.GetInstanceAsync(request);
@@ -370,7 +370,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
             Instance response = cloudRedisClient.GetInstance(name);
             // End snippet
@@ -384,7 +384,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
             Instance response = await cloudRedisClient.GetInstanceAsync(name);
             // End snippet
@@ -399,7 +399,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateInstanceRequest request = new CreateInstanceRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 InstanceId = "",
                 Instance = new Instance(),
             };
@@ -434,7 +434,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateInstanceRequest request = new CreateInstanceRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 InstanceId = "",
                 Instance = new Instance(),
             };
@@ -529,7 +529,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string instanceId = "";
             Instance instance = new Instance();
             // Make the request
@@ -561,7 +561,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string instanceId = "";
             Instance instance = new Instance();
             // Make the request
@@ -978,7 +978,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             FailoverInstanceRequest request = new FailoverInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified,
             };
             // Make the request
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             FailoverInstanceRequest request = new FailoverInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified,
             };
             // Make the request
@@ -1104,7 +1104,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
             // Make the request
             Operation<Instance, Any> response = cloudRedisClient.FailoverInstance(name, dataProtectionMode);
@@ -1135,7 +1135,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
             // Make the request
             Operation<Instance, Any> response = await cloudRedisClient.FailoverInstanceAsync(name, dataProtectionMode);
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             Operation<Empty, Any> response = cloudRedisClient.DeleteInstance(request);
@@ -1200,7 +1200,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             Operation<Empty, Any> response = await cloudRedisClient.DeleteInstanceAsync(request);
@@ -1289,7 +1289,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
             Operation<Empty, Any> response = cloudRedisClient.DeleteInstance(name);
 
@@ -1319,7 +1319,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
             Operation<Empty, Any> response = await cloudRedisClient.DeleteInstanceAsync(name);
 

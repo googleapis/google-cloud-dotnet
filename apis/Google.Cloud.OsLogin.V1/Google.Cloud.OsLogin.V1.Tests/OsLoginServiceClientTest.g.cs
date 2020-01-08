@@ -34,7 +34,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+                PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -49,7 +49,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+                PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -65,7 +65,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+                PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -80,7 +80,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+                PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -96,7 +96,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+                PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -111,7 +111,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
             {
-                PosixAccountName = new gcoc::PosixAccountName("[USER]", "[PROJECT]"),
+                PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeletePosixAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -127,7 +127,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -142,7 +142,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -158,7 +158,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -173,7 +173,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -189,7 +189,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -204,7 +204,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -220,7 +220,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new gcoc::UserName("[USER]"),
+                UserName = gcoc::UserName.FromUser("[USER]"),
                 ProjectId = "project_id43ad98b0",
                 SystemId = "system_id43548ac1",
             };
@@ -252,7 +252,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new gcoc::UserName("[USER]"),
+                UserName = gcoc::UserName.FromUser("[USER]"),
                 ProjectId = "project_id43ad98b0",
                 SystemId = "system_id43548ac1",
             };
@@ -286,7 +286,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new gcoc::UserName("[USER]"),
+                UserName = gcoc::UserName.FromUser("[USER]"),
             };
             LoginProfile expectedResponse = new LoginProfile
             {
@@ -316,7 +316,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new gcoc::UserName("[USER]"),
+                UserName = gcoc::UserName.FromUser("[USER]"),
             };
             LoginProfile expectedResponse = new LoginProfile
             {
@@ -348,7 +348,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new gcoc::UserName("[USER]"),
+                UserName = gcoc::UserName.FromUser("[USER]"),
             };
             LoginProfile expectedResponse = new LoginProfile
             {
@@ -378,7 +378,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
             {
-                UserName = new gcoc::UserName("[USER]"),
+                UserName = gcoc::UserName.FromUser("[USER]"),
             };
             LoginProfile expectedResponse = new LoginProfile
             {
@@ -410,14 +410,14 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -432,14 +432,14 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -456,14 +456,14 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -478,14 +478,14 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -502,14 +502,14 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -524,14 +524,14 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.GetSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -548,7 +548,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 ProjectId = "project_id43ad98b0",
             };
@@ -569,7 +569,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 ProjectId = "project_id43ad98b0",
             };
@@ -592,7 +592,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
@@ -612,7 +612,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
@@ -634,7 +634,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
@@ -654,7 +654,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
@@ -676,7 +676,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 ProjectId = "project_id43ad98b0",
             };
@@ -697,7 +697,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 ProjectId = "project_id43ad98b0",
             };
@@ -720,7 +720,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 ProjectId = "project_id43ad98b0",
             };
@@ -741,7 +741,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
-                ParentAsUserName = new gcoc::UserName("[USER]"),
+                ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 ProjectId = "project_id43ad98b0",
             };
@@ -764,7 +764,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 UpdateMask = new wkt::FieldMask(),
             };
@@ -773,7 +773,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -788,7 +788,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 UpdateMask = new wkt::FieldMask(),
             };
@@ -797,7 +797,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -814,7 +814,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
@@ -822,7 +822,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -837,7 +837,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
@@ -845,7 +845,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -862,7 +862,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
@@ -870,7 +870,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -885,7 +885,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
@@ -893,7 +893,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -910,7 +910,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 UpdateMask = new wkt::FieldMask(),
             };
@@ -919,7 +919,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -934,7 +934,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 UpdateMask = new wkt::FieldMask(),
             };
@@ -943,7 +943,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -960,7 +960,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 UpdateMask = new wkt::FieldMask(),
             };
@@ -969,7 +969,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -984,7 +984,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
                 SshPublicKey = new gcoc::SshPublicKey(),
                 UpdateMask = new wkt::FieldMask(),
             };
@@ -993,7 +993,7 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Key = "key8a0b6e3c",
                 ExpirationTimeUsec = -3860803259883837145L,
                 Fingerprint = "fingerprint009e6052",
-                SshPublicKeyName = new gcoc::SshPublicKeyName("[USER]", "[FINGERPRINT]"),
+                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
             };
             mockGrpcClient.Setup(x => x.UpdateSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gcoc::SshPublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);

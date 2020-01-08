@@ -278,7 +278,7 @@ namespace Google.Cloud.Dataproc.V1
         public ResourceNameType Type { get; }
 
         /// <summary>
-        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c>if this instance contains an
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
@@ -546,7 +546,7 @@ namespace Google.Cloud.Dataproc.V1
         public ResourceNameType Type { get; }
 
         /// <summary>
-        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c>if this instance contains an
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
@@ -612,11 +612,11 @@ namespace Google.Cloud.Dataproc.V1
     public partial class CreateAutoscalingPolicyRequest
     {
         /// <summary>
-        /// <see cref="AutoscalingPolicyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public AutoscalingPolicyName ParentAsAutoscalingPolicyName
+        public RegionOrLocationName ParentAsRegionOrLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AutoscalingPolicyName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -648,11 +648,11 @@ namespace Google.Cloud.Dataproc.V1
     public partial class ListAutoscalingPoliciesRequest
     {
         /// <summary>
-        /// <see cref="AutoscalingPolicyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public AutoscalingPolicyName ParentAsAutoscalingPolicyName
+        public RegionOrLocationName ParentAsRegionOrLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AutoscalingPolicyName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }

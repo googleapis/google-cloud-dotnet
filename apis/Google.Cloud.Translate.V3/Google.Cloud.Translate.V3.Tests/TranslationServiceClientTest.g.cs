@@ -45,7 +45,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels =
                 {
                     {
@@ -82,7 +82,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels =
                 {
                     {
@@ -117,7 +117,7 @@ namespace Google.Cloud.Translate.V3.Tests
                     "contents8c7dbf98",
                 },
                 TargetLanguageCode = "target_language_code6ec12c87",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -143,7 +143,7 @@ namespace Google.Cloud.Translate.V3.Tests
                     "contents8c7dbf98",
                 },
                 TargetLanguageCode = "target_language_code6ec12c87",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -171,7 +171,7 @@ namespace Google.Cloud.Translate.V3.Tests
                     "contents8c7dbf98",
                 },
                 TargetLanguageCode = "target_language_code6ec12c87",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -197,7 +197,7 @@ namespace Google.Cloud.Translate.V3.Tests
                     "contents8c7dbf98",
                 },
                 TargetLanguageCode = "target_language_code6ec12c87",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -228,7 +228,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 SourceLanguageCode = "source_language_code14998292",
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -257,7 +257,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 SourceLanguageCode = "source_language_code14998292",
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -288,7 +288,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 SourceLanguageCode = "source_language_code14998292",
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -317,7 +317,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 SourceLanguageCode = "source_language_code14998292",
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
@@ -343,7 +343,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 Content = "contentb964039a",
                 MimeType = "mime_type606a0ffc",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels =
                 {
                     {
@@ -376,7 +376,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 Content = "contentb964039a",
                 MimeType = "mime_type606a0ffc",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels =
                 {
                     {
@@ -411,7 +411,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 Content = "contentb964039a",
                 MimeType = "mime_type606a0ffc",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             DetectLanguageResponse expectedResponse = new DetectLanguageResponse
             {
@@ -437,7 +437,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 Content = "contentb964039a",
                 MimeType = "mime_type606a0ffc",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             DetectLanguageResponse expectedResponse = new DetectLanguageResponse
             {
@@ -465,7 +465,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 Content = "contentb964039a",
                 MimeType = "mime_type606a0ffc",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             DetectLanguageResponse expectedResponse = new DetectLanguageResponse
             {
@@ -491,7 +491,7 @@ namespace Google.Cloud.Translate.V3.Tests
                 Content = "contentb964039a",
                 MimeType = "mime_type606a0ffc",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             DetectLanguageResponse expectedResponse = new DetectLanguageResponse
             {
@@ -518,7 +518,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 DisplayLanguageCode = "display_language_code67946a7b",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages
             {
@@ -543,7 +543,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 DisplayLanguageCode = "display_language_code67946a7b",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages
             {
@@ -570,7 +570,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 DisplayLanguageCode = "display_language_code67946a7b",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages
             {
@@ -595,7 +595,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 DisplayLanguageCode = "display_language_code67946a7b",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages
             {
@@ -622,7 +622,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 DisplayLanguageCode = "display_language_code67946a7b",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages
             {
@@ -647,7 +647,7 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 DisplayLanguageCode = "display_language_code67946a7b",
                 Model = "model635ef320",
-                ParentAsLocationName = new gagr::LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             SupportedLanguages expectedResponse = new SupportedLanguages
             {
@@ -672,11 +672,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 LanguagePair = new Glossary.Types.LanguageCodePair(),
                 LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
                 InputConfig = new GlossaryInputConfig(),
@@ -698,11 +698,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 LanguagePair = new Glossary.Types.LanguageCodePair(),
                 LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
                 InputConfig = new GlossaryInputConfig(),
@@ -726,11 +726,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 LanguagePair = new Glossary.Types.LanguageCodePair(),
                 LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
                 InputConfig = new GlossaryInputConfig(),
@@ -752,11 +752,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 LanguagePair = new Glossary.Types.LanguageCodePair(),
                 LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
                 InputConfig = new GlossaryInputConfig(),
@@ -780,11 +780,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 LanguagePair = new Glossary.Types.LanguageCodePair(),
                 LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
                 InputConfig = new GlossaryInputConfig(),
@@ -806,11 +806,11 @@ namespace Google.Cloud.Translate.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             Glossary expectedResponse = new Glossary
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
                 LanguagePair = new Glossary.Types.LanguageCodePair(),
                 LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
                 InputConfig = new GlossaryInputConfig(),

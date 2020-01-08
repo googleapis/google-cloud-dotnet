@@ -36,7 +36,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             // Make the request
@@ -54,7 +54,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             // Make the request
@@ -69,7 +69,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/regions/[REGION]/workflowTemplates/[WORKFLOW_TEMPLATE]";
+            string parent = "projects/[PROJECT]/regions/[REGION]";
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             WorkflowTemplate response = workflowTemplateServiceClient.CreateWorkflowTemplate(parent, template);
@@ -84,7 +84,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/regions/[REGION]/workflowTemplates/[WORKFLOW_TEMPLATE]";
+            string parent = "projects/[PROJECT]/regions/[REGION]";
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             WorkflowTemplate response = await workflowTemplateServiceClient.CreateWorkflowTemplateAsync(parent, template);
@@ -94,11 +94,11 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for CreateWorkflowTemplate</summary>
         public void CreateWorkflowTemplate_ResourceNames()
         {
-            // Snippet: CreateWorkflowTemplate(WorkflowTemplateName, WorkflowTemplate, CallSettings)
+            // Snippet: CreateWorkflowTemplate(RegionOrLocationName, WorkflowTemplate, CallSettings)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            WorkflowTemplateName parent = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
+            RegionOrLocationName parent = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]");
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             WorkflowTemplate response = workflowTemplateServiceClient.CreateWorkflowTemplate(parent, template);
@@ -108,12 +108,12 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for CreateWorkflowTemplateAsync</summary>
         public async Task CreateWorkflowTemplateAsync_ResourceNames()
         {
-            // Snippet: CreateWorkflowTemplateAsync(WorkflowTemplateName, WorkflowTemplate, CallSettings)
-            // Additional: CreateWorkflowTemplateAsync(WorkflowTemplateName, WorkflowTemplate, CancellationToken)
+            // Snippet: CreateWorkflowTemplateAsync(RegionOrLocationName, WorkflowTemplate, CallSettings)
+            // Additional: CreateWorkflowTemplateAsync(RegionOrLocationName, WorkflowTemplate, CancellationToken)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowTemplateName parent = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
+            RegionOrLocationName parent = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]");
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             WorkflowTemplate response = await workflowTemplateServiceClient.CreateWorkflowTemplateAsync(parent, template);
@@ -529,7 +529,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             InstantiateInlineWorkflowTemplateRequest request = new InstantiateInlineWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
                 RequestId = "",
             };
@@ -564,7 +564,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             InstantiateInlineWorkflowTemplateRequest request = new InstantiateInlineWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
                 RequestId = "",
             };
@@ -596,7 +596,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/regions/[REGION]/workflowTemplates/[WORKFLOW_TEMPLATE]";
+            string parent = "projects/[PROJECT]/regions/[REGION]";
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             Operation<Empty, WorkflowMetadata> response = workflowTemplateServiceClient.InstantiateInlineWorkflowTemplate(parent, template);
@@ -627,7 +627,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/regions/[REGION]/workflowTemplates/[WORKFLOW_TEMPLATE]";
+            string parent = "projects/[PROJECT]/regions/[REGION]";
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             Operation<Empty, WorkflowMetadata> response = await workflowTemplateServiceClient.InstantiateInlineWorkflowTemplateAsync(parent, template);
@@ -653,11 +653,11 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for InstantiateInlineWorkflowTemplate</summary>
         public void InstantiateInlineWorkflowTemplate_ResourceNames()
         {
-            // Snippet: InstantiateInlineWorkflowTemplate(WorkflowTemplateName, WorkflowTemplate, CallSettings)
+            // Snippet: InstantiateInlineWorkflowTemplate(RegionOrLocationName, WorkflowTemplate, CallSettings)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            WorkflowTemplateName parent = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
+            RegionOrLocationName parent = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]");
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             Operation<Empty, WorkflowMetadata> response = workflowTemplateServiceClient.InstantiateInlineWorkflowTemplate(parent, template);
@@ -683,12 +683,12 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for InstantiateInlineWorkflowTemplateAsync</summary>
         public async Task InstantiateInlineWorkflowTemplateAsync_ResourceNames()
         {
-            // Snippet: InstantiateInlineWorkflowTemplateAsync(WorkflowTemplateName, WorkflowTemplate, CallSettings)
-            // Additional: InstantiateInlineWorkflowTemplateAsync(WorkflowTemplateName, WorkflowTemplate, CancellationToken)
+            // Snippet: InstantiateInlineWorkflowTemplateAsync(RegionOrLocationName, WorkflowTemplate, CallSettings)
+            // Additional: InstantiateInlineWorkflowTemplateAsync(RegionOrLocationName, WorkflowTemplate, CancellationToken)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowTemplateName parent = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
+            RegionOrLocationName parent = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]");
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             Operation<Empty, WorkflowMetadata> response = await workflowTemplateServiceClient.InstantiateInlineWorkflowTemplateAsync(parent, template);
@@ -780,7 +780,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
             };
             // Make the request
             PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> response = workflowTemplateServiceClient.ListWorkflowTemplates(request);
@@ -828,7 +828,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
-                ParentAsWorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> response = workflowTemplateServiceClient.ListWorkflowTemplatesAsync(request);
@@ -874,7 +874,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/regions/[REGION]/workflowTemplates/[WORKFLOW_TEMPLATE]";
+            string parent = "projects/[PROJECT]/regions/[REGION]";
             // Make the request
             PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> response = workflowTemplateServiceClient.ListWorkflowTemplates(parent);
 
@@ -919,7 +919,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/regions/[REGION]/workflowTemplates/[WORKFLOW_TEMPLATE]";
+            string parent = "projects/[PROJECT]/regions/[REGION]";
             // Make the request
             PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> response = workflowTemplateServiceClient.ListWorkflowTemplatesAsync(parent);
 
@@ -960,11 +960,11 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for ListWorkflowTemplates</summary>
         public void ListWorkflowTemplates_ResourceNames()
         {
-            // Snippet: ListWorkflowTemplates(WorkflowTemplateName, string, int?, CallSettings)
+            // Snippet: ListWorkflowTemplates(RegionOrLocationName, string, int?, CallSettings)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            WorkflowTemplateName parent = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
+            RegionOrLocationName parent = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]");
             // Make the request
             PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> response = workflowTemplateServiceClient.ListWorkflowTemplates(parent);
 
@@ -1005,11 +1005,11 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for ListWorkflowTemplates</summary>
         public async Task ListWorkflowTemplatesAsync_ResourceNames()
         {
-            // Snippet: ListWorkflowTemplatesAsync(WorkflowTemplateName, string, int?, CallSettings)
+            // Snippet: ListWorkflowTemplatesAsync(RegionOrLocationName, string, int?, CallSettings)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowTemplateName parent = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
+            RegionOrLocationName parent = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]");
             // Make the request
             PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> response = workflowTemplateServiceClient.ListWorkflowTemplatesAsync(parent);
 

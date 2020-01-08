@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             ListDatabasesRequest request = new ListDatabasesRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             PagedEnumerable<ListDatabasesResponse, Database> response = databaseAdminClient.ListDatabases(request);
@@ -86,7 +86,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             ListDatabasesRequest request = new ListDatabasesRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListDatabasesResponse, Database> response = databaseAdminClient.ListDatabasesAsync(request);
@@ -222,7 +222,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
             PagedEnumerable<ListDatabasesResponse, Database> response = databaseAdminClient.ListDatabases(parent);
 
@@ -267,7 +267,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
             PagedAsyncEnumerable<ListDatabasesResponse, Database> response = databaseAdminClient.ListDatabasesAsync(parent);
 
@@ -314,7 +314,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             CreateDatabaseRequest request = new CreateDatabaseRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 CreateStatement = "",
                 ExtraStatements = { "", },
             };
@@ -349,7 +349,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             CreateDatabaseRequest request = new CreateDatabaseRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 CreateStatement = "",
                 ExtraStatements = { "", },
             };
@@ -442,7 +442,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             string createStatement = "";
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = databaseAdminClient.CreateDatabase(parent, createStatement);
@@ -473,7 +473,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             string createStatement = "";
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = await databaseAdminClient.CreateDatabaseAsync(parent, createStatement);
@@ -505,7 +505,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseRequest request = new GetDatabaseRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             Database response = databaseAdminClient.GetDatabase(request);
@@ -522,7 +522,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseRequest request = new GetDatabaseRequest
             {
-                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             Database response = await databaseAdminClient.GetDatabaseAsync(request);
@@ -563,7 +563,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName name = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             Database response = databaseAdminClient.GetDatabase(name);
             // End snippet
@@ -577,7 +577,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName name = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             Database response = await databaseAdminClient.GetDatabaseAsync(name);
             // End snippet
@@ -592,7 +592,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             UpdateDatabaseDdlRequest request = new UpdateDatabaseDdlRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
             };
@@ -627,7 +627,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             UpdateDatabaseDdlRequest request = new UpdateDatabaseDdlRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
             };
@@ -720,7 +720,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> statements = new string[] { "", };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = databaseAdminClient.UpdateDatabaseDdl(database, statements);
@@ -751,7 +751,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> statements = new string[] { "", };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = await databaseAdminClient.UpdateDatabaseDdlAsync(database, statements);
@@ -783,7 +783,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             DropDatabaseRequest request = new DropDatabaseRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             databaseAdminClient.DropDatabase(request);
@@ -800,7 +800,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             DropDatabaseRequest request = new DropDatabaseRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             await databaseAdminClient.DropDatabaseAsync(request);
@@ -841,7 +841,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             databaseAdminClient.DropDatabase(database);
             // End snippet
@@ -855,7 +855,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             await databaseAdminClient.DropDatabaseAsync(database);
             // End snippet
@@ -870,7 +870,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(request);
@@ -887,7 +887,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
             {
-                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(request);
@@ -928,7 +928,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(database);
             // End snippet
@@ -942,7 +942,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
             GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(database);
             // End snippet
@@ -957,7 +957,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -975,7 +975,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1019,7 +1019,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = databaseAdminClient.SetIamPolicy(resource, policy);
@@ -1034,7 +1034,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = await databaseAdminClient.SetIamPolicyAsync(resource, policy);
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -1068,7 +1068,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = databaseAdminClient.GetIamPolicy(resource);
             // End snippet
@@ -1124,7 +1124,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await databaseAdminClient.GetIamPolicyAsync(resource);
             // End snippet
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -1201,7 +1201,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = databaseAdminClient.TestIamPermissions(resource, permissions);
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await databaseAdminClient.TestIamPermissionsAsync(resource, permissions);
