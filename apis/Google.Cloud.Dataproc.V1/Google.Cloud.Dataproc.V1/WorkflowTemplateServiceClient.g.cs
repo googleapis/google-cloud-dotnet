@@ -25,7 +25,6 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -530,10 +529,10 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual WorkflowTemplate CreateWorkflowTemplate(WorkflowTemplateName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual WorkflowTemplate CreateWorkflowTemplate(RegionOrLocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
             CreateWorkflowTemplate(new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsRegionOrLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
             }, callSettings);
 
@@ -557,10 +556,10 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(WorkflowTemplateName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(RegionOrLocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
             CreateWorkflowTemplateAsync(new CreateWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsRegionOrLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
             }, callSettings);
 
@@ -584,7 +583,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(WorkflowTemplateName parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(RegionOrLocationName parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
             CreateWorkflowTemplateAsync(parent, template, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1728,10 +1727,10 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, WorkflowMetadata> InstantiateInlineWorkflowTemplate(WorkflowTemplateName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, WorkflowMetadata> InstantiateInlineWorkflowTemplate(RegionOrLocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
             InstantiateInlineWorkflowTemplate(new InstantiateInlineWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsRegionOrLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
             }, callSettings);
 
@@ -1778,10 +1777,10 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(WorkflowTemplateName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(RegionOrLocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
             InstantiateInlineWorkflowTemplateAsync(new InstantiateInlineWorkflowTemplateRequest
             {
-                ParentAsWorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsRegionOrLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
             }, callSettings);
 
@@ -1828,7 +1827,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(WorkflowTemplateName parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(RegionOrLocationName parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
             InstantiateInlineWorkflowTemplateAsync(parent, template, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2018,10 +2017,10 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(WorkflowTemplateName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(RegionOrLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListWorkflowTemplates(new ListWorkflowTemplatesRequest
             {
-                ParentAsWorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsRegionOrLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2051,10 +2050,10 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(WorkflowTemplateName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(RegionOrLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListWorkflowTemplatesAsync(new ListWorkflowTemplatesRequest
             {
-                ParentAsWorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsRegionOrLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2251,25 +2250,25 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             InstantiateWorkflowTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InstantiateWorkflowTemplateOperationsSettings);
             InstantiateInlineWorkflowTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InstantiateInlineWorkflowTemplateOperationsSettings);
-            _callCreateWorkflowTemplate = clientHelper.BuildApiCall<CreateWorkflowTemplateRequest, WorkflowTemplate>(grpcClient.CreateWorkflowTemplateAsync, grpcClient.CreateWorkflowTemplate, effectiveSettings.CreateWorkflowTemplateSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={(sysnet::WebUtility.UrlEncode(request.Parent))}"));
+            _callCreateWorkflowTemplate = clientHelper.BuildApiCall<CreateWorkflowTemplateRequest, WorkflowTemplate>(grpcClient.CreateWorkflowTemplateAsync, grpcClient.CreateWorkflowTemplate, effectiveSettings.CreateWorkflowTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkflowTemplate);
             Modify_CreateWorkflowTemplateApiCall(ref _callCreateWorkflowTemplate);
-            _callGetWorkflowTemplate = clientHelper.BuildApiCall<GetWorkflowTemplateRequest, WorkflowTemplate>(grpcClient.GetWorkflowTemplateAsync, grpcClient.GetWorkflowTemplate, effectiveSettings.GetWorkflowTemplateSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callGetWorkflowTemplate = clientHelper.BuildApiCall<GetWorkflowTemplateRequest, WorkflowTemplate>(grpcClient.GetWorkflowTemplateAsync, grpcClient.GetWorkflowTemplate, effectiveSettings.GetWorkflowTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkflowTemplate);
             Modify_GetWorkflowTemplateApiCall(ref _callGetWorkflowTemplate);
-            _callInstantiateWorkflowTemplate = clientHelper.BuildApiCall<InstantiateWorkflowTemplateRequest, lro::Operation>(grpcClient.InstantiateWorkflowTemplateAsync, grpcClient.InstantiateWorkflowTemplate, effectiveSettings.InstantiateWorkflowTemplateSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callInstantiateWorkflowTemplate = clientHelper.BuildApiCall<InstantiateWorkflowTemplateRequest, lro::Operation>(grpcClient.InstantiateWorkflowTemplateAsync, grpcClient.InstantiateWorkflowTemplate, effectiveSettings.InstantiateWorkflowTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callInstantiateWorkflowTemplate);
             Modify_InstantiateWorkflowTemplateApiCall(ref _callInstantiateWorkflowTemplate);
-            _callInstantiateInlineWorkflowTemplate = clientHelper.BuildApiCall<InstantiateInlineWorkflowTemplateRequest, lro::Operation>(grpcClient.InstantiateInlineWorkflowTemplateAsync, grpcClient.InstantiateInlineWorkflowTemplate, effectiveSettings.InstantiateInlineWorkflowTemplateSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={(sysnet::WebUtility.UrlEncode(request.Parent))}"));
+            _callInstantiateInlineWorkflowTemplate = clientHelper.BuildApiCall<InstantiateInlineWorkflowTemplateRequest, lro::Operation>(grpcClient.InstantiateInlineWorkflowTemplateAsync, grpcClient.InstantiateInlineWorkflowTemplate, effectiveSettings.InstantiateInlineWorkflowTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInstantiateInlineWorkflowTemplate);
             Modify_InstantiateInlineWorkflowTemplateApiCall(ref _callInstantiateInlineWorkflowTemplate);
-            _callUpdateWorkflowTemplate = clientHelper.BuildApiCall<UpdateWorkflowTemplateRequest, WorkflowTemplate>(grpcClient.UpdateWorkflowTemplateAsync, grpcClient.UpdateWorkflowTemplate, effectiveSettings.UpdateWorkflowTemplateSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"template.name={(sysnet::WebUtility.UrlEncode(request.Template.Name))}"));
+            _callUpdateWorkflowTemplate = clientHelper.BuildApiCall<UpdateWorkflowTemplateRequest, WorkflowTemplate>(grpcClient.UpdateWorkflowTemplateAsync, grpcClient.UpdateWorkflowTemplate, effectiveSettings.UpdateWorkflowTemplateSettings).WithGoogleRequestParam("template.name", request => request.Template?.Name);
             Modify_ApiCall(ref _callUpdateWorkflowTemplate);
             Modify_UpdateWorkflowTemplateApiCall(ref _callUpdateWorkflowTemplate);
-            _callListWorkflowTemplates = clientHelper.BuildApiCall<ListWorkflowTemplatesRequest, ListWorkflowTemplatesResponse>(grpcClient.ListWorkflowTemplatesAsync, grpcClient.ListWorkflowTemplates, effectiveSettings.ListWorkflowTemplatesSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={(sysnet::WebUtility.UrlEncode(request.Parent))}"));
+            _callListWorkflowTemplates = clientHelper.BuildApiCall<ListWorkflowTemplatesRequest, ListWorkflowTemplatesResponse>(grpcClient.ListWorkflowTemplatesAsync, grpcClient.ListWorkflowTemplates, effectiveSettings.ListWorkflowTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkflowTemplates);
             Modify_ListWorkflowTemplatesApiCall(ref _callListWorkflowTemplates);
-            _callDeleteWorkflowTemplate = clientHelper.BuildApiCall<DeleteWorkflowTemplateRequest, wkt::Empty>(grpcClient.DeleteWorkflowTemplateAsync, grpcClient.DeleteWorkflowTemplate, effectiveSettings.DeleteWorkflowTemplateSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callDeleteWorkflowTemplate = clientHelper.BuildApiCall<DeleteWorkflowTemplateRequest, wkt::Empty>(grpcClient.DeleteWorkflowTemplateAsync, grpcClient.DeleteWorkflowTemplate, effectiveSettings.DeleteWorkflowTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkflowTemplate);
             Modify_DeleteWorkflowTemplateApiCall(ref _callDeleteWorkflowTemplate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

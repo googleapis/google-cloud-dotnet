@@ -37,12 +37,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            ListClustersRequest request = new ListClustersRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Parent = "",
-            };
+            ListClustersRequest request = new ListClustersRequest { Parent = "", };
             // Make the request
             ListClustersResponse response = clusterManagerClient.ListClusters(request);
             // End snippet
@@ -56,12 +51,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            ListClustersRequest request = new ListClustersRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Parent = "",
-            };
+            ListClustersRequest request = new ListClustersRequest { Parent = "", };
             // Make the request
             ListClustersResponse response = await clusterManagerClient.ListClustersAsync(request);
             // End snippet
@@ -103,13 +93,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Name = "",
-            };
+            GetClusterRequest request = new GetClusterRequest { Name = "", };
             // Make the request
             Cluster response = clusterManagerClient.GetCluster(request);
             // End snippet
@@ -123,13 +107,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Name = "",
-            };
+            GetClusterRequest request = new GetClusterRequest { Name = "", };
             // Make the request
             Cluster response = await clusterManagerClient.GetClusterAsync(request);
             // End snippet
@@ -175,8 +153,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             CreateClusterRequest request = new CreateClusterRequest
             {
-                ProjectId = "",
-                Zone = "",
                 Cluster = new Cluster(),
                 Parent = "",
             };
@@ -195,8 +171,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             CreateClusterRequest request = new CreateClusterRequest
             {
-                ProjectId = "",
-                Zone = "",
                 Cluster = new Cluster(),
                 Parent = "",
             };
@@ -245,9 +219,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             UpdateClusterRequest request = new UpdateClusterRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Update = new ClusterUpdate(),
                 Name = "",
             };
@@ -266,9 +237,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             UpdateClusterRequest request = new UpdateClusterRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Update = new ClusterUpdate(),
                 Name = "",
             };
@@ -319,10 +287,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             UpdateNodePoolRequest request = new UpdateNodePoolRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 NodeVersion = "",
                 ImageType = "",
                 Name = "",
@@ -342,10 +306,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             UpdateNodePoolRequest request = new UpdateNodePoolRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 NodeVersion = "",
                 ImageType = "",
                 Name = "",
@@ -364,10 +324,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 Autoscaling = new NodePoolAutoscaling(),
                 Name = "",
             };
@@ -386,10 +342,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 Autoscaling = new NodePoolAutoscaling(),
                 Name = "",
             };
@@ -407,9 +359,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLoggingServiceRequest request = new SetLoggingServiceRequest
             {
-                ProjectId = "",
                 Zone = "",
-                ClusterId = "",
                 LoggingService = "",
                 Name = "",
             };
@@ -428,9 +378,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLoggingServiceRequest request = new SetLoggingServiceRequest
             {
-                ProjectId = "",
                 Zone = "",
-                ClusterId = "",
                 LoggingService = "",
                 Name = "",
             };
@@ -481,9 +429,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 MonitoringService = "",
                 Name = "",
             };
@@ -502,9 +447,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetMonitoringServiceRequest request = new SetMonitoringServiceRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 MonitoringService = "",
                 Name = "",
             };
@@ -555,9 +497,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetAddonsConfigRequest request = new SetAddonsConfigRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 AddonsConfig = new AddonsConfig(),
                 Name = "",
             };
@@ -576,9 +515,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetAddonsConfigRequest request = new SetAddonsConfigRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 AddonsConfig = new AddonsConfig(),
                 Name = "",
             };
@@ -629,9 +565,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLocationsRequest request = new SetLocationsRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Locations = { "", },
                 Name = "",
             };
@@ -650,9 +583,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLocationsRequest request = new SetLocationsRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Locations = { "", },
                 Name = "",
             };
@@ -703,9 +633,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             UpdateMasterRequest request = new UpdateMasterRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 MasterVersion = "",
                 Name = "",
             };
@@ -724,9 +651,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             UpdateMasterRequest request = new UpdateMasterRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 MasterVersion = "",
                 Name = "",
             };
@@ -777,9 +701,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetMasterAuthRequest request = new SetMasterAuthRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Action = SetMasterAuthRequest.Types.Action.Unknown,
                 Update = new MasterAuth(),
                 Name = "",
@@ -799,9 +720,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetMasterAuthRequest request = new SetMasterAuthRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Action = SetMasterAuthRequest.Types.Action.Unknown,
                 Update = new MasterAuth(),
                 Name = "",
@@ -818,13 +736,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            DeleteClusterRequest request = new DeleteClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Name = "",
-            };
+            DeleteClusterRequest request = new DeleteClusterRequest { Name = "", };
             // Make the request
             Operation response = clusterManagerClient.DeleteCluster(request);
             // End snippet
@@ -838,13 +750,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteClusterRequest request = new DeleteClusterRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Name = "",
-            };
+            DeleteClusterRequest request = new DeleteClusterRequest { Name = "", };
             // Make the request
             Operation response = await clusterManagerClient.DeleteClusterAsync(request);
             // End snippet
@@ -888,12 +794,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Parent = "",
-            };
+            ListOperationsRequest request = new ListOperationsRequest { Parent = "", };
             // Make the request
             ListOperationsResponse response = clusterManagerClient.ListOperations(request);
             // End snippet
@@ -907,12 +808,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Parent = "",
-            };
+            ListOperationsRequest request = new ListOperationsRequest { Parent = "", };
             // Make the request
             ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(request);
             // End snippet
@@ -954,13 +850,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            GetOperationRequest request = new GetOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-                Name = "",
-            };
+            GetOperationRequest request = new GetOperationRequest { Name = "", };
             // Make the request
             Operation response = clusterManagerClient.GetOperation(request);
             // End snippet
@@ -974,13 +864,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            GetOperationRequest request = new GetOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-                Name = "",
-            };
+            GetOperationRequest request = new GetOperationRequest { Name = "", };
             // Make the request
             Operation response = await clusterManagerClient.GetOperationAsync(request);
             // End snippet
@@ -1024,13 +908,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            CancelOperationRequest request = new CancelOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-                Name = "",
-            };
+            CancelOperationRequest request = new CancelOperationRequest { Name = "", };
             // Make the request
             clusterManagerClient.CancelOperation(request);
             // End snippet
@@ -1044,13 +922,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            CancelOperationRequest request = new CancelOperationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                OperationId = "",
-                Name = "",
-            };
+            CancelOperationRequest request = new CancelOperationRequest { Name = "", };
             // Make the request
             await clusterManagerClient.CancelOperationAsync(request);
             // End snippet
@@ -1094,12 +966,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            GetServerConfigRequest request = new GetServerConfigRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Name = "",
-            };
+            GetServerConfigRequest request = new GetServerConfigRequest { Name = "", };
             // Make the request
             ServerConfig response = clusterManagerClient.GetServerConfig(request);
             // End snippet
@@ -1113,12 +980,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            GetServerConfigRequest request = new GetServerConfigRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                Name = "",
-            };
+            GetServerConfigRequest request = new GetServerConfigRequest { Name = "", };
             // Make the request
             ServerConfig response = await clusterManagerClient.GetServerConfigAsync(request);
             // End snippet
@@ -1160,13 +1022,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            ListNodePoolsRequest request = new ListNodePoolsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Parent = "",
-            };
+            ListNodePoolsRequest request = new ListNodePoolsRequest { Parent = "", };
             // Make the request
             ListNodePoolsResponse response = clusterManagerClient.ListNodePools(request);
             // End snippet
@@ -1180,13 +1036,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            ListNodePoolsRequest request = new ListNodePoolsRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Parent = "",
-            };
+            ListNodePoolsRequest request = new ListNodePoolsRequest { Parent = "", };
             // Make the request
             ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(request);
             // End snippet
@@ -1230,14 +1080,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            GetNodePoolRequest request = new GetNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-                Name = "",
-            };
+            GetNodePoolRequest request = new GetNodePoolRequest { Name = "", };
             // Make the request
             NodePool response = clusterManagerClient.GetNodePool(request);
             // End snippet
@@ -1251,14 +1094,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            GetNodePoolRequest request = new GetNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-                Name = "",
-            };
+            GetNodePoolRequest request = new GetNodePoolRequest { Name = "", };
             // Make the request
             NodePool response = await clusterManagerClient.GetNodePoolAsync(request);
             // End snippet
@@ -1306,9 +1142,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             CreateNodePoolRequest request = new CreateNodePoolRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 NodePool = new NodePool(),
                 Parent = "",
             };
@@ -1327,9 +1160,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             CreateNodePoolRequest request = new CreateNodePoolRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 NodePool = new NodePool(),
                 Parent = "",
             };
@@ -1378,14 +1208,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            DeleteNodePoolRequest request = new DeleteNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-                Name = "",
-            };
+            DeleteNodePoolRequest request = new DeleteNodePoolRequest { Name = "", };
             // Make the request
             Operation response = clusterManagerClient.DeleteNodePool(request);
             // End snippet
@@ -1399,14 +1222,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteNodePoolRequest request = new DeleteNodePoolRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-                Name = "",
-            };
+            DeleteNodePoolRequest request = new DeleteNodePoolRequest { Name = "", };
             // Make the request
             Operation response = await clusterManagerClient.DeleteNodePoolAsync(request);
             // End snippet
@@ -1452,14 +1268,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-                Name = "",
-            };
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest { Name = "", };
             // Make the request
             Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
             // End snippet
@@ -1473,14 +1282,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
-                Name = "",
-            };
+            RollbackNodePoolUpgradeRequest request = new RollbackNodePoolUpgradeRequest { Name = "", };
             // Make the request
             Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(request);
             // End snippet
@@ -1528,10 +1330,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 Management = new NodeManagement(),
                 Name = "",
             };
@@ -1550,10 +1348,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 Management = new NodeManagement(),
                 Name = "",
             };
@@ -1571,9 +1365,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLabelsRequest request = new SetLabelsRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 ResourceLabels = { { "", "" }, },
                 LabelFingerprint = "",
                 Name = "",
@@ -1593,9 +1384,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLabelsRequest request = new SetLabelsRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 ResourceLabels = { { "", "" }, },
                 LabelFingerprint = "",
                 Name = "",
@@ -1614,9 +1402,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLegacyAbacRequest request = new SetLegacyAbacRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Enabled = false,
                 Name = "",
             };
@@ -1635,9 +1420,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLegacyAbacRequest request = new SetLegacyAbacRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Enabled = false,
                 Name = "",
             };
@@ -1688,9 +1470,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             StartIPRotationRequest request = new StartIPRotationRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Name = "",
                 RotateCredentials = false,
             };
@@ -1709,9 +1488,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             StartIPRotationRequest request = new StartIPRotationRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 Name = "",
                 RotateCredentials = false,
             };
@@ -1758,13 +1534,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            CompleteIPRotationRequest request = new CompleteIPRotationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Name = "",
-            };
+            CompleteIPRotationRequest request = new CompleteIPRotationRequest { Name = "", };
             // Make the request
             Operation response = clusterManagerClient.CompleteIPRotation(request);
             // End snippet
@@ -1778,13 +1548,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            CompleteIPRotationRequest request = new CompleteIPRotationRequest
-            {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                Name = "",
-            };
+            CompleteIPRotationRequest request = new CompleteIPRotationRequest { Name = "", };
             // Make the request
             Operation response = await clusterManagerClient.CompleteIPRotationAsync(request);
             // End snippet
@@ -1830,10 +1594,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 NodeCount = 0,
                 Name = "",
             };
@@ -1852,10 +1612,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
-                NodePoolId = "",
                 NodeCount = 0,
                 Name = "",
             };
@@ -1873,9 +1629,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 NetworkPolicy = new NetworkPolicy(),
                 Name = "",
             };
@@ -1894,9 +1647,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetNetworkPolicyRequest request = new SetNetworkPolicyRequest
             {
-                ProjectId = "",
-                Zone = "",
-                ClusterId = "",
                 NetworkPolicy = new NetworkPolicy(),
                 Name = "",
             };

@@ -36,7 +36,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             ListSecretsRequest request = new ListSecretsRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecrets(request);
@@ -84,7 +84,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             ListSecretsRequest request = new ListSecretsRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecretsAsync(request);
@@ -220,7 +220,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
             PagedEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecrets(parent);
 
@@ -265,7 +265,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
             PagedAsyncEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecretsAsync(parent);
 
@@ -312,7 +312,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateSecretRequest request = new CreateSecretRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 SecretId = "",
                 Secret = new Secret(),
             };
@@ -331,7 +331,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateSecretRequest request = new CreateSecretRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 SecretId = "",
                 Secret = new Secret(),
             };
@@ -378,7 +378,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string secretId = "";
             Secret secret = new Secret();
             // Make the request
@@ -394,7 +394,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string secretId = "";
             Secret secret = new Secret();
             // Make the request
@@ -411,7 +411,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
-                ParentAsSecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
                 Payload = new SecretPayload(),
             };
             // Make the request
@@ -429,7 +429,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
-                ParentAsSecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
                 Payload = new SecretPayload(),
             };
             // Make the request
@@ -473,7 +473,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretName parent = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             SecretPayload payload = new SecretPayload();
             // Make the request
             SecretVersion response = secretManagerServiceClient.AddSecretVersion(parent, payload);
@@ -488,7 +488,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretName parent = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             SecretPayload payload = new SecretPayload();
             // Make the request
             SecretVersion response = await secretManagerServiceClient.AddSecretVersionAsync(parent, payload);
@@ -504,7 +504,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             GetSecretRequest request = new GetSecretRequest
             {
-                SecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
             };
             // Make the request
             Secret response = secretManagerServiceClient.GetSecret(request);
@@ -521,7 +521,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             GetSecretRequest request = new GetSecretRequest
             {
-                SecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
             };
             // Make the request
             Secret response = await secretManagerServiceClient.GetSecretAsync(request);
@@ -562,7 +562,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretName name = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName name = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             // Make the request
             Secret response = secretManagerServiceClient.GetSecret(name);
             // End snippet
@@ -576,7 +576,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretName name = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName name = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             // Make the request
             Secret response = await secretManagerServiceClient.GetSecretAsync(name);
             // End snippet
@@ -655,7 +655,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteSecretRequest request = new DeleteSecretRequest
             {
-                SecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
             };
             // Make the request
             secretManagerServiceClient.DeleteSecret(request);
@@ -672,7 +672,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteSecretRequest request = new DeleteSecretRequest
             {
-                SecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
             };
             // Make the request
             await secretManagerServiceClient.DeleteSecretAsync(request);
@@ -713,7 +713,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretName name = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName name = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             // Make the request
             secretManagerServiceClient.DeleteSecret(name);
             // End snippet
@@ -727,7 +727,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretName name = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName name = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             // Make the request
             await secretManagerServiceClient.DeleteSecretAsync(name);
             // End snippet
@@ -742,7 +742,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
-                ParentAsSecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
             };
             // Make the request
             PagedEnumerable<ListSecretVersionsResponse, SecretVersion> response = secretManagerServiceClient.ListSecretVersions(request);
@@ -790,7 +790,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
-                ParentAsSecretName = new SecretName("[PROJECT]", "[SECRET]"),
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> response = secretManagerServiceClient.ListSecretVersionsAsync(request);
@@ -926,7 +926,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretName parent = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             // Make the request
             PagedEnumerable<ListSecretVersionsResponse, SecretVersion> response = secretManagerServiceClient.ListSecretVersions(parent);
 
@@ -971,7 +971,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretName parent = new SecretName("[PROJECT]", "[SECRET]");
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
             // Make the request
             PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> response = secretManagerServiceClient.ListSecretVersionsAsync(parent);
 
@@ -1018,7 +1018,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             GetSecretVersionRequest request = new GetSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.GetSecretVersion(request);
@@ -1035,7 +1035,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             GetSecretVersionRequest request = new GetSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.GetSecretVersionAsync(request);
@@ -1076,7 +1076,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = secretManagerServiceClient.GetSecretVersion(name);
             // End snippet
@@ -1090,7 +1090,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = await secretManagerServiceClient.GetSecretVersionAsync(name);
             // End snippet
@@ -1105,7 +1105,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             AccessSecretVersionRequest request = new AccessSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             AccessSecretVersionResponse response = secretManagerServiceClient.AccessSecretVersion(request);
@@ -1122,7 +1122,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             AccessSecretVersionRequest request = new AccessSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             AccessSecretVersionResponse response = await secretManagerServiceClient.AccessSecretVersionAsync(request);
@@ -1163,7 +1163,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             AccessSecretVersionResponse response = secretManagerServiceClient.AccessSecretVersion(name);
             // End snippet
@@ -1177,7 +1177,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             AccessSecretVersionResponse response = await secretManagerServiceClient.AccessSecretVersionAsync(name);
             // End snippet
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             DisableSecretVersionRequest request = new DisableSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.DisableSecretVersion(request);
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             DisableSecretVersionRequest request = new DisableSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.DisableSecretVersionAsync(request);
@@ -1250,7 +1250,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = secretManagerServiceClient.DisableSecretVersion(name);
             // End snippet
@@ -1264,7 +1264,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = await secretManagerServiceClient.DisableSecretVersionAsync(name);
             // End snippet
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             EnableSecretVersionRequest request = new EnableSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableSecretVersion(request);
@@ -1296,7 +1296,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             EnableSecretVersionRequest request = new EnableSecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableSecretVersionAsync(request);
@@ -1337,7 +1337,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableSecretVersion(name);
             // End snippet
@@ -1351,7 +1351,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableSecretVersionAsync(name);
             // End snippet
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             DestroySecretVersionRequest request = new DestroySecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.DestroySecretVersion(request);
@@ -1383,7 +1383,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             DestroySecretVersionRequest request = new DestroySecretVersionRequest
             {
-                SecretVersionName = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.DestroySecretVersionAsync(request);
@@ -1424,7 +1424,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = secretManagerServiceClient.DestroySecretVersion(name);
             // End snippet
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SecretVersionName name = new SecretVersionName("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
+            SecretVersionName name = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]");
             // Make the request
             SecretVersion response = await secretManagerServiceClient.DestroySecretVersionAsync(name);
             // End snippet
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1471,7 +1471,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1488,7 +1488,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -1506,7 +1506,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -1523,7 +1523,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -1541,7 +1541,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request

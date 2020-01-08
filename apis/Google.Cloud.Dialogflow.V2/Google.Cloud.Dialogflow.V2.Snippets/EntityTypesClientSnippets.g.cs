@@ -407,7 +407,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentName parent = AgentName.FromProject("[PROJECT]");
             string languageCode = "";
             // Make the request
-            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(parent: parent, languageCode: languageCode);
+            PagedEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypes(parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntityType item in response)
@@ -453,7 +453,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentName parent = AgentName.FromProject("[PROJECT]");
             string languageCode = "";
             // Make the request
-            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(parent: parent, languageCode: languageCode);
+            PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> response = entityTypesClient.ListEntityTypesAsync(parent, languageCode: languageCode);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntityType item) =>
