@@ -14,16 +14,8 @@
 
 namespace Google.Cloud.Tasks.V2.SmokeTests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
+    using Google.Api.Gax.ResourceNames;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
 
     public class CloudTasksClientSmokeTest
     {
@@ -44,7 +36,7 @@ namespace Google.Cloud.Tasks.V2.SmokeTests
                 return 1;
             }
 
-            LocationName locationName = new LocationName(args[0], location);
+            LocationName locationName = LocationName.FromProjectLocation(args[0], location);
 
             // Create client
             CloudTasksClient client = CloudTasksClient.Create();

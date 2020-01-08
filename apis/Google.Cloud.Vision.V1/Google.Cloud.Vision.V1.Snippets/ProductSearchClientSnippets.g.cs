@@ -17,6 +17,7 @@
 namespace Google.Cloud.Vision.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
