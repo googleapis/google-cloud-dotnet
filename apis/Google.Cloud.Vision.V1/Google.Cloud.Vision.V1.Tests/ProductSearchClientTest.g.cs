@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
@@ -36,7 +37,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "product_set_idc0ec7b3e",
             };
@@ -61,7 +62,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "product_set_idc0ec7b3e",
             };
@@ -88,7 +89,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "product_set_idc0ec7b3e",
             };
@@ -113,7 +114,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "product_set_idc0ec7b3e",
             };
@@ -140,7 +141,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "product_set_idc0ec7b3e",
             };
@@ -165,7 +166,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "product_set_idc0ec7b3e",
             };
@@ -535,7 +536,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "product_idde82ea9b",
             };
@@ -564,7 +565,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "product_idde82ea9b",
             };
@@ -595,7 +596,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "product_idde82ea9b",
             };
@@ -624,7 +625,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "product_idde82ea9b",
             };
@@ -655,7 +656,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "product_idde82ea9b",
             };
@@ -684,7 +685,7 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "product_idde82ea9b",
             };
