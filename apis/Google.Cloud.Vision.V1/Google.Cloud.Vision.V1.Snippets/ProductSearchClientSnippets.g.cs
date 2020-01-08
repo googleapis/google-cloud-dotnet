@@ -35,7 +35,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "",
             };
@@ -54,7 +54,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "",
             };
@@ -101,7 +101,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ProductSet productSet = new ProductSet();
             string productSetId = "";
             // Make the request
@@ -117,7 +117,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ProductSet productSet = new ProductSet();
             string productSetId = "";
             // Make the request
@@ -134,7 +134,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListProductSetsRequest request = new ListProductSetsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSets(request);
@@ -182,7 +182,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListProductSetsRequest request = new ListProductSetsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSetsAsync(request);
@@ -318,7 +318,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSets(parent);
 
@@ -363,7 +363,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSetsAsync(parent);
 
@@ -410,7 +410,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             GetProductSetRequest request = new GetProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             // Make the request
             ProductSet response = productSearchClient.GetProductSet(request);
@@ -427,7 +427,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             GetProductSetRequest request = new GetProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             // Make the request
             ProductSet response = await productSearchClient.GetProductSetAsync(request);
@@ -468,7 +468,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
             // Make the request
             ProductSet response = productSearchClient.GetProductSet(name);
             // End snippet
@@ -482,7 +482,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
             // Make the request
             ProductSet response = await productSearchClient.GetProductSetAsync(name);
             // End snippet
@@ -561,7 +561,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             DeleteProductSetRequest request = new DeleteProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             // Make the request
             productSearchClient.DeleteProductSet(request);
@@ -578,7 +578,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             DeleteProductSetRequest request = new DeleteProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             // Make the request
             await productSearchClient.DeleteProductSetAsync(request);
@@ -619,7 +619,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
             // Make the request
             productSearchClient.DeleteProductSet(name);
             // End snippet
@@ -633,7 +633,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
             // Make the request
             await productSearchClient.DeleteProductSetAsync(name);
             // End snippet
@@ -648,7 +648,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "",
             };
@@ -667,7 +667,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             CreateProductRequest request = new CreateProductRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "",
             };
@@ -714,7 +714,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Product product = new Product();
             string productId = "";
             // Make the request
@@ -730,7 +730,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Product product = new Product();
             string productId = "";
             // Make the request
@@ -747,7 +747,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListProductsRequest request = new ListProductsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProducts(request);
@@ -795,7 +795,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListProductsRequest request = new ListProductsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProductsAsync(request);
@@ -931,7 +931,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProducts(parent);
 
@@ -976,7 +976,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProductsAsync(parent);
 
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             GetProductRequest request = new GetProductRequest
             {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             Product response = productSearchClient.GetProduct(request);
@@ -1040,7 +1040,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             GetProductRequest request = new GetProductRequest
             {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             Product response = await productSearchClient.GetProductAsync(request);
@@ -1081,7 +1081,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName name = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             Product response = productSearchClient.GetProduct(name);
             // End snippet
@@ -1095,7 +1095,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName name = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             Product response = await productSearchClient.GetProductAsync(name);
             // End snippet
@@ -1174,7 +1174,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             DeleteProductRequest request = new DeleteProductRequest
             {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             productSearchClient.DeleteProduct(request);
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             DeleteProductRequest request = new DeleteProductRequest
             {
-                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             await productSearchClient.DeleteProductAsync(request);
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName name = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             productSearchClient.DeleteProduct(name);
             // End snippet
@@ -1246,7 +1246,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName name = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             await productSearchClient.DeleteProductAsync(name);
             // End snippet
@@ -1261,7 +1261,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
                 ReferenceImageId = "",
             };
@@ -1280,7 +1280,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
                 ReferenceImageId = "",
             };
@@ -1327,7 +1327,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName parent = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             ReferenceImage referenceImage = new ReferenceImage();
             string referenceImageId = "";
             // Make the request
@@ -1343,7 +1343,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName parent = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             ReferenceImage referenceImage = new ReferenceImage();
             string referenceImageId = "";
             // Make the request
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             // Make the request
             productSearchClient.DeleteReferenceImage(request);
@@ -1377,7 +1377,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             // Make the request
             await productSearchClient.DeleteReferenceImageAsync(request);
@@ -1418,7 +1418,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImageName name = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
             // Make the request
             productSearchClient.DeleteReferenceImage(name);
             // End snippet
@@ -1432,7 +1432,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImageName name = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
             // Make the request
             await productSearchClient.DeleteReferenceImageAsync(name);
             // End snippet
@@ -1447,7 +1447,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImages(request);
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImagesAsync(request);
@@ -1631,7 +1631,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName parent = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImages(parent);
 
@@ -1676,7 +1676,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductName parent = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImagesAsync(parent);
 
@@ -1723,7 +1723,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             GetReferenceImageRequest request = new GetReferenceImageRequest
             {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             // Make the request
             ReferenceImage response = productSearchClient.GetReferenceImage(request);
@@ -1740,7 +1740,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             GetReferenceImageRequest request = new GetReferenceImageRequest
             {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             // Make the request
             ReferenceImage response = await productSearchClient.GetReferenceImageAsync(request);
@@ -1781,7 +1781,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImageName name = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
             // Make the request
             ReferenceImage response = productSearchClient.GetReferenceImage(name);
             // End snippet
@@ -1795,7 +1795,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImageName name = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
             // Make the request
             ReferenceImage response = await productSearchClient.GetReferenceImageAsync(name);
             // End snippet
@@ -1810,8 +1810,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             productSearchClient.AddProductToProductSet(request);
@@ -1828,8 +1828,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             await productSearchClient.AddProductToProductSetAsync(request);
@@ -1872,8 +1872,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             productSearchClient.AddProductToProductSet(name, product);
             // End snippet
@@ -1887,8 +1887,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             await productSearchClient.AddProductToProductSetAsync(name, product);
             // End snippet
@@ -1903,8 +1903,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             productSearchClient.RemoveProductFromProductSet(request);
@@ -1921,8 +1921,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             // Make the request
             await productSearchClient.RemoveProductFromProductSetAsync(request);
@@ -1965,8 +1965,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             productSearchClient.RemoveProductFromProductSet(name, product);
             // End snippet
@@ -1980,8 +1980,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             // Make the request
             await productSearchClient.RemoveProductFromProductSetAsync(name, product);
             // End snippet
@@ -1996,7 +1996,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             // Make the request
             PagedEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSet(request);
@@ -2044,7 +2044,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSetAsync(request);
@@ -2180,7 +2180,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
             // Make the request
             PagedEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSet(name);
 
@@ -2225,7 +2225,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSetName name = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
             // Make the request
             PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSetAsync(name);
 
@@ -2272,7 +2272,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ImportProductSetsRequest request = new ImportProductSetsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 InputConfig = new ImportProductSetsInputConfig(),
             };
             // Make the request
@@ -2306,7 +2306,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             ImportProductSetsRequest request = new ImportProductSetsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 InputConfig = new ImportProductSetsInputConfig(),
             };
             // Make the request
@@ -2398,7 +2398,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ImportProductSetsInputConfig inputConfig = new ImportProductSetsInputConfig();
             // Make the request
             Operation<ImportProductSetsResponse, BatchOperationMetadata> response = productSearchClient.ImportProductSets(parent, inputConfig);
@@ -2429,7 +2429,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ImportProductSetsInputConfig inputConfig = new ImportProductSetsInputConfig();
             // Make the request
             Operation<ImportProductSetsResponse, BatchOperationMetadata> response = await productSearchClient.ImportProductSetsAsync(parent, inputConfig);
@@ -2461,7 +2461,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             PurgeProductsRequest request = new PurgeProductsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSetPurgeConfig = new ProductSetPurgeConfig(),
                 DeleteOrphanProducts = false,
                 Force = false,
@@ -2497,7 +2497,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Initialize request argument(s)
             PurgeProductsRequest request = new PurgeProductsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSetPurgeConfig = new ProductSetPurgeConfig(),
                 DeleteOrphanProducts = false,
                 Force = false,
@@ -2589,7 +2589,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = ProductSearchClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Operation<Empty, BatchOperationMetadata> response = productSearchClient.PurgeProducts(parent);
 
@@ -2619,7 +2619,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Create client
             ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Operation<Empty, BatchOperationMetadata> response = await productSearchClient.PurgeProductsAsync(parent);
 

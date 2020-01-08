@@ -102,16 +102,8 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpeechClient.StreamingRecognize</c> and <c>SpeechClient.StreamingRecognizeAsync</c>.
         /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 5000 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings StreamingRecognizeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        /// <remarks>Timeout: 5000 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamingRecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to <c>SpeechClient.StreamingRecognize</c>

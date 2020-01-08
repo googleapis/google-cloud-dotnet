@@ -33,7 +33,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Policy = new AutoscalingPolicy(),
             };
             // Make the request
@@ -51,7 +51,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Policy = new AutoscalingPolicy(),
             };
             // Make the request
@@ -134,7 +134,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
-                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
             };
             // Make the request
             PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response = autoscalingPolicyServiceClient.ListAutoscalingPolicies(request);
@@ -182,7 +182,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
-                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response = autoscalingPolicyServiceClient.ListAutoscalingPoliciesAsync(request);

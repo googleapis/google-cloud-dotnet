@@ -23,76 +23,200 @@ namespace Google.Cloud.SecretManager.V1Beta1
     /// <summary>Resource name for the <c>Secret</c> resource.</summary>
     public sealed partial class SecretName : gax::IResourceName, sys::IEquatable<SecretName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/secrets/{secret}");
-
-        /// <summary>
-        /// Parses the given <c>Secret</c> resource name in string form into a new <see cref="SecretName"/> instance.
-        /// </summary>
-        /// <param name="secretName">The <c>Secret</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="SecretName"/> if successful.</returns>
-        public static SecretName Parse(string secretName)
+        /// <summary>The possible contents of <see cref="SecretName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(secretName, nameof(secretName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(secretName);
-            return new SecretName(resourceName[0], resourceName[1]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/secrets/{secret}</c>.</summary>
+            ProjectSecret = 1
         }
 
+        private static gax::PathTemplate s_projectSecret = new gax::PathTemplate("projects/{project}/secrets/{secret}");
+
+        /// <summary>Creates a <see cref="SecretName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SecretName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SecretName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SecretName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="SecretName"/> instance.
+        /// Creates a <see cref="SecretName"/> with the pattern <c>projects/{project}/secrets/{secret}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecretName"/> constructed from the provided ids.</returns>
+        public static SecretName FromProjectSecret(string projectId, string secretId) =>
+            new SecretName(ResourceNameType.ProjectSecret, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecretName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecretName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}</c>.
+        /// </returns>
+        public static string Format(string projectId, string secretId) => FormatProjectSecret(projectId, secretId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecretName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecretName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}</c>.
+        /// </returns>
+        public static string FormatProjectSecret(string projectId, string secretId) =>
+            s_projectSecret.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="SecretName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="secretName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SecretName"/> if successful.</returns>
+        public static SecretName Parse(string secretName) => Parse(secretName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SecretName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="secretName"/> is
-        /// <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="secretName">The <c>Secret</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="SecretName"/>, or <c>null</c> if parsing fails.
+        /// <param name="secretName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string secretName, out SecretName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(secretName, nameof(secretName));
-            if (s_template.TryParseName(secretName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new SecretName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="SecretName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="SecretName"/>.</returns>
-        public static string Format(string projectId, string secretId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(secretId, nameof(secretId)));
+        /// <returns>The parsed <see cref="SecretName"/> if successful.</returns>
+        public static SecretName Parse(string secretName, bool allowUnparsed) =>
+            TryParse(secretName, allowUnparsed, out SecretName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="SecretName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="SecretName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c>.</param>
-        public SecretName(string projectId, string secretId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="secretName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SecretName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string secretName, out SecretName result) => TryParse(secretName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SecretName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="secretName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SecretName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string secretName, bool allowUnparsed, out SecretName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            SecretId = gax::GaxPreconditions.CheckNotNull(secretId, nameof(secretId));
+            gax::GaxPreconditions.CheckNotNull(secretName, nameof(secretName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectSecret.TryParseName(secretName, out resourceName))
+            {
+                result = FromProjectSecret(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(secretName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
+        private SecretName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string secretId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+            SecretId = secretId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SecretName"/> class from the component parts of pattern
+        /// <c>projects/{project}/secrets/{secret}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        public SecretName(string projectId, string secretId) : this(ResourceNameType.ProjectSecret, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string ProjectId { get; }
 
-        /// <summary>The <c>Secret</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Secret</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string SecretId { get; }
 
         /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, SecretId);
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectSecret: return s_projectSecret.Expand(ProjectId, SecretId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();
@@ -113,89 +237,227 @@ namespace Google.Cloud.SecretManager.V1Beta1
     /// <summary>Resource name for the <c>SecretVersion</c> resource.</summary>
     public sealed partial class SecretVersionName : gax::IResourceName, sys::IEquatable<SecretVersionName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/secrets/{secret}/versions/{secret_version}");
-
-        /// <summary>
-        /// Parses the given <c>SecretVersion</c> resource name in string form into a new
-        /// <see cref="SecretVersionName"/> instance.
-        /// </summary>
-        /// <param name="secretVersionName">
-        /// The <c>SecretVersion</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <returns>The parsed <see cref="SecretVersionName"/> if successful.</returns>
-        public static SecretVersionName Parse(string secretVersionName)
+        /// <summary>The possible contents of <see cref="SecretVersionName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(secretVersionName, nameof(secretVersionName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(secretVersionName);
-            return new SecretVersionName(resourceName[0], resourceName[1], resourceName[2]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
+            /// </summary>
+            ProjectSecretSecretVersion = 1
         }
 
+        private static gax::PathTemplate s_projectSecretSecretVersion = new gax::PathTemplate("projects/{project}/secrets/{secret}/versions/{secret_version}");
+
+        /// <summary>Creates a <see cref="SecretVersionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SecretVersionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SecretVersionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SecretVersionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="SecretVersionName"/>
-        /// instance.
+        /// Creates a <see cref="SecretVersionName"/> with the pattern
+        /// <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecretVersionName"/> constructed from the provided ids.</returns>
+        public static SecretVersionName FromProjectSecretSecretVersion(string projectId, string secretId, string secretVersionId) =>
+            new SecretVersionName(ResourceNameType.ProjectSecretSecretVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), secretVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecretVersionName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecretVersionName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </returns>
+        public static string Format(string projectId, string secretId, string secretVersionId) =>
+            FormatProjectSecretSecretVersion(projectId, secretId, secretVersionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecretVersionName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecretVersionName"/> with pattern
+        /// <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </returns>
+        public static string FormatProjectSecretSecretVersion(string projectId, string secretId, string secretVersionId) =>
+            s_projectSecretSecretVersion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SecretVersionName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="secretVersionName"/> is
-        /// <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// </list>
         /// </remarks>
-        /// <param name="secretVersionName">
-        /// The <c>SecretVersion</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="SecretVersionName"/>, or <c>null</c> if parsing fails.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string secretVersionName, out SecretVersionName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(secretVersionName, nameof(secretVersionName));
-            if (s_template.TryParseName(secretVersionName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new SecretVersionName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="SecretVersionName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="SecretVersionName"/>.</returns>
-        public static string Format(string projectId, string secretId, string secretVersionId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(secretId, nameof(secretId)), gax::GaxPreconditions.CheckNotNull(secretVersionId, nameof(secretVersionId)));
+        /// <param name="secretVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SecretVersionName"/> if successful.</returns>
+        public static SecretVersionName Parse(string secretVersionName) => Parse(secretVersionName, false);
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="SecretVersionName"/> resource name class from its component
-        /// parts.
+        /// Parses the given resource name string into a new <see cref="SecretVersionName"/> instance; optionally
+        /// allowing an unparseable resource name.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c>.</param>
-        public SecretVersionName(string projectId, string secretId, string secretVersionId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="secretVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SecretVersionName"/> if successful.</returns>
+        public static SecretVersionName Parse(string secretVersionName, bool allowUnparsed) =>
+            TryParse(secretVersionName, allowUnparsed, out SecretVersionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SecretVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="secretVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SecretVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string secretVersionName, out SecretVersionName result) =>
+            TryParse(secretVersionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SecretVersionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="secretVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SecretVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string secretVersionName, bool allowUnparsed, out SecretVersionName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            SecretId = gax::GaxPreconditions.CheckNotNull(secretId, nameof(secretId));
-            SecretVersionId = gax::GaxPreconditions.CheckNotNull(secretVersionId, nameof(secretVersionId));
+            gax::GaxPreconditions.CheckNotNull(secretVersionName, nameof(secretVersionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectSecretSecretVersion.TryParseName(secretVersionName, out resourceName))
+            {
+                result = FromProjectSecretSecretVersion(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(secretVersionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
+        private SecretVersionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string secretId = null, string secretVersionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+            SecretId = secretId;
+            SecretVersionId = secretVersionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SecretVersionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        public SecretVersionName(string projectId, string secretId, string secretVersionId) : this(ResourceNameType.ProjectSecretSecretVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), secretVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string ProjectId { get; }
 
-        /// <summary>The <c>Secret</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Secret</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string SecretId { get; }
 
-        /// <summary>The <c>SecretVersion</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>SecretVersion</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
         public string SecretVersionId { get; }
 
         /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, SecretId, SecretVersionId);
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectSecretSecretVersion: return s_projectSecretSecretVersion.Expand(ProjectId, SecretId, SecretVersionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();

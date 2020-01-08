@@ -35,7 +35,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             ListGroupStatsRequest request = new ListGroupStatsRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 GroupId = { "", },
                 ServiceFilter = new ServiceContextFilter(),
                 TimeRange = new QueryTimeRange(),
@@ -90,7 +90,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             ListGroupStatsRequest request = new ListGroupStatsRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 GroupId = { "", },
                 ServiceFilter = new ServiceContextFilter(),
                 TimeRange = new QueryTimeRange(),
@@ -235,7 +235,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
             PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStats(projectName, timeRange);
@@ -281,7 +281,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
             PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response = errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
@@ -329,7 +329,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             ListEventsRequest request = new ListEventsRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 GroupId = "",
                 ServiceFilter = new ServiceContextFilter(),
                 TimeRange = new QueryTimeRange(),
@@ -380,7 +380,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             ListEventsRequest request = new ListEventsRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 GroupId = "",
                 ServiceFilter = new ServiceContextFilter(),
                 TimeRange = new QueryTimeRange(),
@@ -521,7 +521,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             string groupId = "";
             // Make the request
             PagedEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEvents(projectName, groupId);
@@ -567,7 +567,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             string groupId = "";
             // Make the request
             PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response = errorStatsServiceClient.ListEventsAsync(projectName, groupId);
@@ -615,7 +615,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(request);
@@ -632,7 +632,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteEventsRequest request = new DeleteEventsRequest
             {
-                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(request);
@@ -673,7 +673,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             // Make the request
             DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(projectName);
             // End snippet
@@ -687,7 +687,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName("[PROJECT]");
+            ProjectName projectName = ProjectName.FromProject("[PROJECT]");
             // Make the request
             DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(projectName);
             // End snippet
