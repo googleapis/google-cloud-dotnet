@@ -24,82 +24,202 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
     /// <summary>Resource name for the <c>Assessment</c> resource.</summary>
     public sealed partial class AssessmentName : gax::IResourceName, sys::IEquatable<AssessmentName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/assessments/{assessment}");
-
-        /// <summary>
-        /// Parses the given <c>Assessment</c> resource name in string form into a new <see cref="AssessmentName"/>
-        /// instance.
-        /// </summary>
-        /// <param name="assessmentName">
-        /// The <c>Assessment</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <returns>The parsed <see cref="AssessmentName"/> if successful.</returns>
-        public static AssessmentName Parse(string assessmentName)
+        /// <summary>The possible contents of <see cref="AssessmentName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(assessmentName, nameof(assessmentName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(assessmentName);
-            return new AssessmentName(resourceName[0], resourceName[1]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/assessments/{assessment}</c>.</summary>
+            ProjectAssessment = 1
         }
 
+        private static gax::PathTemplate s_projectAssessment = new gax::PathTemplate("projects/{project}/assessments/{assessment}");
+
+        /// <summary>Creates a <see cref="AssessmentName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AssessmentName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AssessmentName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AssessmentName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="AssessmentName"/>
-        /// instance.
+        /// Creates a <see cref="AssessmentName"/> with the pattern <c>projects/{project}/assessments/{assessment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assessmentId">The <c>Assessment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AssessmentName"/> constructed from the provided ids.</returns>
+        public static AssessmentName FromProjectAssessment(string projectId, string assessmentId) =>
+            new AssessmentName(ResourceNameType.ProjectAssessment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), assessmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(assessmentId, nameof(assessmentId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AssessmentName"/> with pattern
+        /// <c>projects/{project}/assessments/{assessment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assessmentId">The <c>Assessment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AssessmentName"/> with pattern
+        /// <c>projects/{project}/assessments/{assessment}</c>.
+        /// </returns>
+        public static string Format(string projectId, string assessmentId) => FormatProjectAssessment(projectId, assessmentId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AssessmentName"/> with pattern
+        /// <c>projects/{project}/assessments/{assessment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assessmentId">The <c>Assessment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AssessmentName"/> with pattern
+        /// <c>projects/{project}/assessments/{assessment}</c>.
+        /// </returns>
+        public static string FormatProjectAssessment(string projectId, string assessmentId) =>
+            s_projectAssessment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(assessmentId, nameof(assessmentId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="AssessmentName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/assessments/{assessment}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="assessmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AssessmentName"/> if successful.</returns>
+        public static AssessmentName Parse(string assessmentName) => Parse(assessmentName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AssessmentName"/> instance; optionally allowing
+        /// an unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="assessmentName"/> is
-        /// <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/assessments/{assessment}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="assessmentName">
-        /// The <c>Assessment</c> resource name in string form. Must not be <c>null</c>.
+        /// <param name="assessmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="AssessmentName"/>, or <c>null</c> if parsing fails.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string assessmentName, out AssessmentName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(assessmentName, nameof(assessmentName));
-            if (s_template.TryParseName(assessmentName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new AssessmentName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="AssessmentName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="assessmentId">The <c>Assessment</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="AssessmentName"/>.</returns>
-        public static string Format(string projectId, string assessmentId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(assessmentId, nameof(assessmentId)));
+        /// <returns>The parsed <see cref="AssessmentName"/> if successful.</returns>
+        public static AssessmentName Parse(string assessmentName, bool allowUnparsed) =>
+            TryParse(assessmentName, allowUnparsed, out AssessmentName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="AssessmentName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="AssessmentName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="assessmentId">The <c>Assessment</c> ID. Must not be <c>null</c>.</param>
-        public AssessmentName(string projectId, string assessmentId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/assessments/{assessment}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="assessmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AssessmentName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string assessmentName, out AssessmentName result) =>
+            TryParse(assessmentName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AssessmentName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/assessments/{assessment}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="assessmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AssessmentName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string assessmentName, bool allowUnparsed, out AssessmentName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            AssessmentId = gax::GaxPreconditions.CheckNotNull(assessmentId, nameof(assessmentId));
+            gax::GaxPreconditions.CheckNotNull(assessmentName, nameof(assessmentName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectAssessment.TryParseName(assessmentName, out resourceName))
+            {
+                result = FromProjectAssessment(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(assessmentName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private AssessmentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string assessmentId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AssessmentId = assessmentId;
+            ProjectId = projectId;
+        }
 
-        /// <summary>The <c>Assessment</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AssessmentName"/> class from the component parts of pattern
+        /// <c>projects/{project}/assessments/{assessment}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assessmentId">The <c>Assessment</c> ID. Must not be <c>null</c> or empty.</param>
+        public AssessmentName(string projectId, string assessmentId) : this(ResourceNameType.ProjectAssessment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), assessmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(assessmentId, nameof(assessmentId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Assessment</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string AssessmentId { get; }
 
-        /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, AssessmentId);
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectAssessment: return s_projectAssessment.Expand(ProjectId, AssessmentId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();
@@ -120,76 +240,186 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
     /// <summary>Resource name for the <c>Key</c> resource.</summary>
     public sealed partial class KeyName : gax::IResourceName, sys::IEquatable<KeyName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/keys/{key}");
-
-        /// <summary>
-        /// Parses the given <c>Key</c> resource name in string form into a new <see cref="KeyName"/> instance.
-        /// </summary>
-        /// <param name="keyName">The <c>Key</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="KeyName"/> if successful.</returns>
-        public static KeyName Parse(string keyName)
+        /// <summary>The possible contents of <see cref="KeyName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(keyName, nameof(keyName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(keyName);
-            return new KeyName(resourceName[0], resourceName[1]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/keys/{key}</c>.</summary>
+            ProjectKey = 1
         }
 
+        private static gax::PathTemplate s_projectKey = new gax::PathTemplate("projects/{project}/keys/{key}");
+
+        /// <summary>Creates a <see cref="KeyName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="KeyName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static KeyName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new KeyName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>Creates a <see cref="KeyName"/> with the pattern <c>projects/{project}/keys/{key}</c>.</summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyId">The <c>Key</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="KeyName"/> constructed from the provided ids.</returns>
+        public static KeyName FromProjectKey(string projectId, string keyId) =>
+            new KeyName(ResourceNameType.ProjectKey, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), keyId: gax::GaxPreconditions.CheckNotNullOrEmpty(keyId, nameof(keyId)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="KeyName"/> instance.
+        /// Formats the IDs into the string representation of this <see cref="KeyName"/> with pattern
+        /// <c>projects/{project}/keys/{key}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyId">The <c>Key</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="KeyName"/> with pattern <c>projects/{project}/keys/{key}</c>.
+        /// </returns>
+        public static string Format(string projectId, string keyId) => FormatProjectKey(projectId, keyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="KeyName"/> with pattern
+        /// <c>projects/{project}/keys/{key}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyId">The <c>Key</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="KeyName"/> with pattern <c>projects/{project}/keys/{key}</c>.
+        /// </returns>
+        public static string FormatProjectKey(string projectId, string keyId) =>
+            s_projectKey.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(keyId, nameof(keyId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="KeyName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/keys/{key}</c></description></item></list>
+        /// </remarks>
+        /// <param name="keyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="KeyName"/> if successful.</returns>
+        public static KeyName Parse(string keyName) => Parse(keyName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="KeyName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="keyName"/> is <c>null</c>
-        /// , as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/keys/{key}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="keyName">The <c>Key</c> resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="keyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="KeyName"/> if successful.</returns>
+        public static KeyName Parse(string keyName, bool allowUnparsed) =>
+            TryParse(keyName, allowUnparsed, out KeyName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>Tries to parse the given resource name string into a new <see cref="KeyName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/keys/{key}</c></description></item></list>
+        /// </remarks>
+        /// <param name="keyName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="KeyName"/>, or <c>null</c> if parsing fails.
+        /// When this method returns, the parsed <see cref="KeyName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string keyName, out KeyName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(keyName, nameof(keyName));
-            if (s_template.TryParseName(keyName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new KeyName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="KeyName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="keyId">The <c>Key</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="KeyName"/>.</returns>
-        public static string Format(string projectId, string keyId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(keyId, nameof(keyId)));
+        public static bool TryParse(string keyName, out KeyName result) => TryParse(keyName, false, out result);
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="KeyName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="KeyName"/> instance; optionally allowing
+        /// an unparseable resource name.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="keyId">The <c>Key</c> ID. Must not be <c>null</c>.</param>
-        public KeyName(string projectId, string keyId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/keys/{key}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="keyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="KeyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string keyName, bool allowUnparsed, out KeyName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            KeyId = gax::GaxPreconditions.CheckNotNull(keyId, nameof(keyId));
+            gax::GaxPreconditions.CheckNotNull(keyName, nameof(keyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectKey.TryParseName(keyName, out resourceName))
+            {
+                result = FromProjectKey(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(keyName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private KeyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string keyId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            KeyId = keyId;
+            ProjectId = projectId;
+        }
 
-        /// <summary>The <c>Key</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="KeyName"/> class from the component parts of pattern
+        /// <c>projects/{project}/keys/{key}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyId">The <c>Key</c> ID. Must not be <c>null</c> or empty.</param>
+        public KeyName(string projectId, string keyId) : this(ResourceNameType.ProjectKey, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), keyId: gax::GaxPreconditions.CheckNotNullOrEmpty(keyId, nameof(keyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Key</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string KeyId { get; }
 
-        /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, KeyId);
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectKey: return s_projectKey.Expand(ProjectId, KeyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();

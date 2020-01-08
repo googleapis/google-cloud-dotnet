@@ -34,7 +34,7 @@ namespace Google.Cloud.Trace.V2.Snippets
             // Initialize request argument(s)
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
                 Spans = { new Span(), },
             };
             // Make the request
@@ -52,7 +52,7 @@ namespace Google.Cloud.Trace.V2.Snippets
             // Initialize request argument(s)
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
                 Spans = { new Span(), },
             };
             // Make the request
@@ -96,7 +96,7 @@ namespace Google.Cloud.Trace.V2.Snippets
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Span> spans = new Span[] { new Span(), };
             // Make the request
             traceServiceClient.BatchWriteSpans(name, spans);
@@ -111,7 +111,7 @@ namespace Google.Cloud.Trace.V2.Snippets
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Span> spans = new Span[] { new Span(), };
             // Make the request
             await traceServiceClient.BatchWriteSpansAsync(name, spans);
@@ -127,7 +127,7 @@ namespace Google.Cloud.Trace.V2.Snippets
             // Initialize request argument(s)
             Span request = new Span
             {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "",
                 ParentSpanId = "",
                 DisplayName = new TruncatableString(),
@@ -156,7 +156,7 @@ namespace Google.Cloud.Trace.V2.Snippets
             // Initialize request argument(s)
             Span request = new Span
             {
-                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "",
                 ParentSpanId = "",
                 DisplayName = new TruncatableString(),

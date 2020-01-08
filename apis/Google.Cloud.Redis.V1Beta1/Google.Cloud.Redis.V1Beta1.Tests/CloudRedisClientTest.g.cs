@@ -35,11 +35,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 Labels =
                 {
@@ -85,11 +85,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 Labels =
                 {
@@ -137,11 +137,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 Labels =
                 {
@@ -187,11 +187,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 Labels =
                 {
@@ -239,11 +239,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 Labels =
                 {
@@ -289,11 +289,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DisplayName = "display_name137f65c2",
                 Labels =
                 {
