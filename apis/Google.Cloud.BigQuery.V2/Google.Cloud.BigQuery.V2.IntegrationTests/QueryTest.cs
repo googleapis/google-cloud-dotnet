@@ -717,6 +717,31 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(DateTime.MinValue, (DateTime) row["x"]);
         }
 
+        [Fact]
+        public void ListRows_PartialSchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.PeopleTableId;
+            var options = new GetTableOptions
+            {
+                SelectedFields = "age,gender,children.gender,children.age"
+            };
+            var table = client.GetTable(datasetId, tableId, options);
+            // Making sure we grab a row of a person with children.
+            var row = client.ListRows(datasetId, tableId, table.Schema).First(row => ((Dictionary<string, object>[])row["children"]).Length > 0);
+            // These should be present
+            Assert.NotNull(row["age"]);
+            Assert.NotNull(row["gender"]);
+            var children = (Dictionary<string, object>[])row["children"];
+            Assert.NotNull(children);
+            Assert.NotNull(children[0]["gender"]);
+            Assert.NotNull(children[0]["age"]);
+            // These shouldn't
+            Assert.Throws<KeyNotFoundException>(() => row["fullName"]);
+            Assert.Throws<KeyNotFoundException>(() => children[0]["name"]);
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];
