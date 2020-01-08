@@ -33,7 +33,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Uri = "uri3db70593",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
@@ -50,7 +50,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Uri = "uri3db70593",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
@@ -69,7 +69,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Uri = "uri3db70593",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
@@ -86,7 +86,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Uri = "uri3db70593",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
@@ -105,7 +105,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Uri = "uri3db70593",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };
@@ -122,7 +122,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Uri = "uri3db70593",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse { };

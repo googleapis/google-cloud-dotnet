@@ -33,7 +33,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
@@ -50,7 +50,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
@@ -69,7 +69,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
@@ -86,7 +86,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
@@ -105,7 +105,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
@@ -122,7 +122,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
-                ProjectNameAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Event = new ReportedErrorEvent(),
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };

@@ -42,7 +42,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                 TargetLanguageCode = "",
                 Model = "",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
             };
             // Make the request
@@ -66,7 +66,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                 TargetLanguageCode = "",
                 Model = "",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
             };
             // Make the request
@@ -112,7 +112,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string targetLanguageCode = "";
             IEnumerable<string> contents = new string[] { "", };
             // Make the request
@@ -128,7 +128,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string targetLanguageCode = "";
             IEnumerable<string> contents = new string[] { "", };
             // Make the request
@@ -180,7 +180,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string model = "";
             string mimeType = "";
             string sourceLanguageCode = "";
@@ -199,7 +199,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string model = "";
             string mimeType = "";
             string sourceLanguageCode = "";
@@ -222,7 +222,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                 Content = "",
                 MimeType = "",
                 Model = "",
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
             };
             // Make the request
@@ -243,7 +243,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                 Content = "",
                 MimeType = "",
                 Model = "",
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
             };
             // Make the request
@@ -291,7 +291,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string model = "";
             string mimeType = "";
             string content = "";
@@ -308,7 +308,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string model = "";
             string mimeType = "";
             string content = "";
@@ -328,7 +328,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             {
                 DisplayLanguageCode = "",
                 Model = "",
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             SupportedLanguages response = translationServiceClient.GetSupportedLanguages(request);
@@ -347,7 +347,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             {
                 DisplayLanguageCode = "",
                 Model = "",
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             SupportedLanguages response = await translationServiceClient.GetSupportedLanguagesAsync(request);
@@ -392,7 +392,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string model = "";
             string displayLanguageCode = "";
             // Make the request
@@ -408,7 +408,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string model = "";
             string displayLanguageCode = "";
             // Make the request
@@ -425,7 +425,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             BatchTranslateTextRequest request = new BatchTranslateTextRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SourceLanguageCode = "",
                 TargetLanguageCodes = { "", },
                 Models = { { "", "" }, },
@@ -471,7 +471,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             BatchTranslateTextRequest request = new BatchTranslateTextRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SourceLanguageCode = "",
                 TargetLanguageCodes = { "", },
                 Models = { { "", "" }, },
@@ -516,7 +516,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             CreateGlossaryRequest request = new CreateGlossaryRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Glossary = new Glossary(),
             };
             // Make the request
@@ -550,7 +550,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             CreateGlossaryRequest request = new CreateGlossaryRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Glossary = new Glossary(),
             };
             // Make the request
@@ -642,7 +642,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Glossary glossary = new Glossary();
             // Make the request
             Operation<Glossary, CreateGlossaryMetadata> response = translationServiceClient.CreateGlossary(parent, glossary);
@@ -673,7 +673,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Glossary glossary = new Glossary();
             // Make the request
             Operation<Glossary, CreateGlossaryMetadata> response = await translationServiceClient.CreateGlossaryAsync(parent, glossary);
@@ -705,7 +705,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             ListGlossariesRequest request = new ListGlossariesRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
@@ -754,7 +754,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             ListGlossariesRequest request = new ListGlossariesRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
@@ -891,7 +891,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListGlossariesResponse, Glossary> response = translationServiceClient.ListGlossaries(parent);
 
@@ -936,7 +936,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListGlossariesResponse, Glossary> response = translationServiceClient.ListGlossariesAsync(parent);
 
@@ -983,7 +983,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             // Make the request
             Glossary response = translationServiceClient.GetGlossary(request);
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             GetGlossaryRequest request = new GetGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             // Make the request
             Glossary response = await translationServiceClient.GetGlossaryAsync(request);
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            GlossaryName name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            GlossaryName name = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
             // Make the request
             Glossary response = translationServiceClient.GetGlossary(name);
             // End snippet
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GlossaryName name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            GlossaryName name = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
             // Make the request
             Glossary response = await translationServiceClient.GetGlossaryAsync(name);
             // End snippet
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             DeleteGlossaryRequest request = new DeleteGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             // Make the request
             Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata> response = translationServiceClient.DeleteGlossary(request);
@@ -1103,7 +1103,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Initialize request argument(s)
             DeleteGlossaryRequest request = new DeleteGlossaryRequest
             {
-                GlossaryName = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
             };
             // Make the request
             Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata> response = await translationServiceClient.DeleteGlossaryAsync(request);
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
             // Initialize request argument(s)
-            GlossaryName name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            GlossaryName name = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
             // Make the request
             Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata> response = translationServiceClient.DeleteGlossary(name);
 
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.Translate.V3.Snippets
             // Create client
             TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GlossaryName name = new GlossaryName("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            GlossaryName name = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
             // Make the request
             Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata> response = await translationServiceClient.DeleteGlossaryAsync(name);
 

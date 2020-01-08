@@ -33,7 +33,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Policy = new AutoscalingPolicy(),
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
@@ -57,7 +57,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsAutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
                 Policy = new AutoscalingPolicy(),
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy

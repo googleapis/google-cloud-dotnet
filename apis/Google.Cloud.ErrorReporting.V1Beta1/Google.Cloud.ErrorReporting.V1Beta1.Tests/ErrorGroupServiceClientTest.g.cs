@@ -32,11 +32,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -56,11 +56,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -82,11 +82,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -106,11 +106,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -132,11 +132,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -156,11 +156,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -186,7 +186,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -210,7 +210,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -236,7 +236,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
@@ -260,7 +260,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
-                ErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {

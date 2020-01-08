@@ -34,7 +34,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
                 AppProfileId = "app_profile_id57fb0442",
@@ -53,7 +53,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
                 AppProfileId = "app_profile_id57fb0442",
@@ -74,7 +74,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
             };
@@ -92,7 +92,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
             };
@@ -112,7 +112,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
             };
@@ -130,7 +130,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
             };
@@ -150,7 +150,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
                 AppProfileId = "app_profile_id57fb0442",
@@ -169,7 +169,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
                 AppProfileId = "app_profile_id57fb0442",
@@ -190,7 +190,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
                 AppProfileId = "app_profile_id57fb0442",
@@ -209,7 +209,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Mutations = { new Mutation(), },
                 AppProfileId = "app_profile_id57fb0442",
@@ -230,7 +230,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -254,7 +254,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -280,7 +280,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -303,7 +303,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -328,7 +328,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -351,7 +351,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -376,7 +376,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -400,7 +400,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -426,7 +426,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -450,7 +450,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 TrueMutations = { new Mutation(), },
                 FalseMutations = { new Mutation(), },
@@ -476,7 +476,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -498,7 +498,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -522,7 +522,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -543,7 +543,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -566,7 +566,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -587,7 +587,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -610,7 +610,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -632,7 +632,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -656,7 +656,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
@@ -678,7 +678,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = new gcbcv::TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableNameAsTableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = proto::ByteString.CopyFromUtf8("row_key7adfb7cb"),
                 Rules =
                 {
