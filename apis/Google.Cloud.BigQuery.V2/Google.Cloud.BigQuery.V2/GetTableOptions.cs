@@ -17,15 +17,14 @@ using static Google.Apis.Bigquery.v2.TablesResource;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// Options for <c>GetTable</c> operations. Currently no options are
-    /// available, but this class exists to provide consistency and extensibility.
+    /// Options for <c>GetTable</c> operations.
     /// </summary>
     public sealed class GetTableOptions
     {
         /// <summary>
         /// Comma separated list of schema fields to return.
         /// When set allows to obtain a partial table schema.
-        /// If not set, all fields, that is, the full table schema, will be returned.
+        /// When this property is null or empty the full table schema is returned.
         /// </summary>
         public string SelectedFields { get; set; }
 
