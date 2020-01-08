@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
@@ -30,7 +31,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
 
             // Sample: CreateJob
             CloudSchedulerClient client = CloudSchedulerClient.Create();
-            LocationName parent = new LocationName(projectId, locationId);
+            LocationName parent = LocationName.FromProjectLocation(projectId, locationId);
             Job job = new Job
             {
                 Description = "Sample job",
@@ -58,7 +59,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
 
             // Sample: ListJobs
             CloudSchedulerClient client = CloudSchedulerClient.Create();
-            LocationName parent = new LocationName(projectId, locationId);
+            LocationName parent = LocationName.FromProjectLocation(projectId, locationId);
             PagedEnumerable<ListJobsResponse, Job> jobs = client.ListJobs(parent);
             foreach (Job job in jobs)
             {
