@@ -35,7 +35,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -60,7 +60,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -87,7 +87,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -112,7 +112,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -139,7 +139,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -164,7 +164,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -191,7 +191,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -216,7 +216,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -243,7 +243,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -267,7 +267,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -293,7 +293,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -317,7 +317,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -343,7 +343,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -369,7 +369,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -397,7 +397,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -423,7 +423,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -451,7 +451,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -477,7 +477,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
