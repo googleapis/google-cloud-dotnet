@@ -34,7 +34,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -52,7 +52,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -96,7 +96,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Create client
             ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = containerAnalysisClient.SetIamPolicy(resource, policy);
@@ -111,7 +111,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Create client
             ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = await containerAnalysisClient.SetIamPolicyAsync(resource, policy);
@@ -127,7 +127,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -145,7 +145,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -187,7 +187,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Create client
             ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = containerAnalysisClient.GetIamPolicy(resource);
             // End snippet
@@ -201,7 +201,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Create client
             ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await containerAnalysisClient.GetIamPolicyAsync(resource);
             // End snippet
@@ -216,7 +216,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -234,7 +234,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -278,7 +278,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Create client
             ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = containerAnalysisClient.TestIamPermissions(resource, permissions);
@@ -293,7 +293,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             // Create client
             ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await containerAnalysisClient.TestIamPermissionsAsync(resource, permissions);
