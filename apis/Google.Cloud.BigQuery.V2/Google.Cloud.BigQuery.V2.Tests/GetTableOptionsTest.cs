@@ -19,13 +19,27 @@ namespace Google.Cloud.BigQuery.V2.Tests
 {
     public class GetTableOptionsTest
     {
-        // The test doesn't do anything yet... but neither does the code.
         [Fact]
         public void ModifyRequest_NoOp()
         {
             var request = new GetRequest(null, "project", "dataset", "table");
             var options = new GetTableOptions();
             options.ModifyRequest(request);
+
+            Assert.Null(request.SelectedFields);
+        }
+
+        [Fact]
+        public void ModifyRequest()
+        {
+            var request = new GetRequest(null, "project", "dataset", "table");
+            var options = new GetTableOptions
+            { 
+                SelectedFields = "a,b,c"
+            };
+            options.ModifyRequest(request);
+
+            Assert.Equal("a,b,c", request.SelectedFields);
         }
     }
 }
