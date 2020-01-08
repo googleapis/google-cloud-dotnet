@@ -36,12 +36,12 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Session = new Session(),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -65,12 +65,12 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Session = new Session(),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -96,11 +96,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -124,11 +124,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -154,11 +154,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -182,11 +182,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -212,7 +212,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 SessionTemplate = new Session(),
                 SessionCount = 418101156,
             };
@@ -233,7 +233,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 SessionTemplate = new Session(),
                 SessionCount = 418101156,
             };
@@ -256,7 +256,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 SessionCount = 418101156,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
@@ -276,7 +276,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 SessionCount = 418101156,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
@@ -298,7 +298,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 SessionCount = 418101156,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
@@ -318,7 +318,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
             {
-                DatabaseAsDatabaseName = new gcscv::DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 SessionCount = 418101156,
             };
             BatchCreateSessionsResponse expectedResponse = new BatchCreateSessionsResponse
@@ -340,11 +340,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -368,11 +368,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -398,11 +398,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -426,11 +426,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -456,11 +456,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -484,11 +484,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             Session expectedResponse = new Session
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Labels =
                 {
                     {
@@ -514,7 +514,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -529,7 +529,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -545,7 +545,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -560,7 +560,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -576,7 +576,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -591,7 +591,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -607,7 +607,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteSqlRequest request = new ExecuteSqlRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Sql = "sqlb6745cac",
                 Params = new wkt::Struct(),
@@ -645,7 +645,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteSqlRequest request = new ExecuteSqlRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Sql = "sqlb6745cac",
                 Params = new wkt::Struct(),
@@ -685,7 +685,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Statements =
                 {
@@ -711,7 +711,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Statements =
                 {
@@ -739,7 +739,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ReadRequest request = new ReadRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Table = "tabledee1b9aa",
                 Index = "index552d996a",
@@ -771,7 +771,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             ReadRequest request = new ReadRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Table = "tabledee1b9aa",
                 Index = "index552d996a",
@@ -805,7 +805,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
             };
             Transaction expectedResponse = new Transaction
@@ -826,7 +826,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
             };
             Transaction expectedResponse = new Transaction
@@ -849,7 +849,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
             };
             Transaction expectedResponse = new Transaction
@@ -870,7 +870,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
             };
             Transaction expectedResponse = new Transaction
@@ -893,7 +893,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
             };
             Transaction expectedResponse = new Transaction
@@ -914,7 +914,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
             };
             Transaction expectedResponse = new Transaction
@@ -937,7 +937,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
@@ -959,7 +959,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
@@ -983,7 +983,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
                 Mutations = { new Mutation(), },
             };
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
                 Mutations = { new Mutation(), },
             };
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
                 Mutations = { new Mutation(), },
             };
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
                 Mutations = { new Mutation(), },
             };
@@ -1071,7 +1071,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
             };
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
             };
@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
             };
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
             };
@@ -1159,7 +1159,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1175,7 +1175,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1208,7 +1208,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1225,7 +1225,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1241,7 +1241,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = proto::ByteString.CopyFromUtf8("transaction_id52de47f8"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1258,7 +1258,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionQueryRequest request = new PartitionQueryRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Sql = "sqlb6745cac",
                 Params = new wkt::Struct(),
@@ -1289,7 +1289,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionQueryRequest request = new PartitionQueryRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Sql = "sqlb6745cac",
                 Params = new wkt::Struct(),
@@ -1322,7 +1322,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionReadRequest request = new PartitionReadRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Table = "tabledee1b9aa",
                 Index = "index552d996a",
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             PartitionReadRequest request = new PartitionReadRequest
             {
-                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Transaction = new TransactionSelector(),
                 Table = "tabledee1b9aa",
                 Index = "index552d996a",

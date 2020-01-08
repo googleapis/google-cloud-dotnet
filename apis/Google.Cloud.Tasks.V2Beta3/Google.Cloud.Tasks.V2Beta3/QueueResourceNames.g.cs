@@ -23,82 +23,214 @@ namespace Google.Cloud.Tasks.V2Beta3
     /// <summary>Resource name for the <c>Queue</c> resource.</summary>
     public sealed partial class QueueName : gax::IResourceName, sys::IEquatable<QueueName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/queues/{queue}");
-
-        /// <summary>
-        /// Parses the given <c>Queue</c> resource name in string form into a new <see cref="QueueName"/> instance.
-        /// </summary>
-        /// <param name="queueName">The <c>Queue</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="QueueName"/> if successful.</returns>
-        public static QueueName Parse(string queueName)
+        /// <summary>The possible contents of <see cref="QueueName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(queueName, nameof(queueName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(queueName);
-            return new QueueName(resourceName[0], resourceName[1], resourceName[2]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/queues/{queue}</c>.
+            /// </summary>
+            ProjectLocationQueue = 1
         }
 
+        private static gax::PathTemplate s_projectLocationQueue = new gax::PathTemplate("projects/{project}/locations/{location}/queues/{queue}");
+
+        /// <summary>Creates a <see cref="QueueName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="QueueName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static QueueName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new QueueName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="QueueName"/> instance.
+        /// Creates a <see cref="QueueName"/> with the pattern <c>projects/{project}/locations/{location}/queues/{queue}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queueId">The <c>Queue</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="QueueName"/> constructed from the provided ids.</returns>
+        public static QueueName FromProjectLocationQueue(string projectId, string locationId, string queueId) =>
+            new QueueName(ResourceNameType.ProjectLocationQueue, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), queueId: gax::GaxPreconditions.CheckNotNullOrEmpty(queueId, nameof(queueId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="QueueName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/queues/{queue}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queueId">The <c>Queue</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="QueueName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/queues/{queue}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string queueId) =>
+            FormatProjectLocationQueue(projectId, locationId, queueId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="QueueName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/queues/{queue}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queueId">The <c>Queue</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="QueueName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/queues/{queue}</c>.
+        /// </returns>
+        public static string FormatProjectLocationQueue(string projectId, string locationId, string queueId) =>
+            s_projectLocationQueue.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(queueId, nameof(queueId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="QueueName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/queues/{queue}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="queueName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="QueueName"/> if successful.</returns>
+        public static QueueName Parse(string queueName) => Parse(queueName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="QueueName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="queueName"/> is <c>null</c>
-        /// , as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/queues/{queue}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="queueName">The <c>Queue</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="QueueName"/>, or <c>null</c> if parsing fails.
+        /// <param name="queueName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string queueName, out QueueName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(queueName, nameof(queueName));
-            if (s_template.TryParseName(queueName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new QueueName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="QueueName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="queueId">The <c>Queue</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="QueueName"/>.</returns>
-        public static string Format(string projectId, string locationId, string queueId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(queueId, nameof(queueId)));
+        /// <returns>The parsed <see cref="QueueName"/> if successful.</returns>
+        public static QueueName Parse(string queueName, bool allowUnparsed) =>
+            TryParse(queueName, allowUnparsed, out QueueName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="QueueName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="QueueName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="queueId">The <c>Queue</c> ID. Must not be <c>null</c>.</param>
-        public QueueName(string projectId, string locationId, string queueId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/queues/{queue}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="queueName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="QueueName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string queueName, out QueueName result) => TryParse(queueName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="QueueName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/queues/{queue}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="queueName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="QueueName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string queueName, bool allowUnparsed, out QueueName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-            QueueId = gax::GaxPreconditions.CheckNotNull(queueId, nameof(queueId));
+            gax::GaxPreconditions.CheckNotNull(queueName, nameof(queueName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationQueue.TryParseName(queueName, out resourceName))
+            {
+                result = FromProjectLocationQueue(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(queueName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private QueueName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string queueId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            QueueId = queueId;
+        }
 
-        /// <summary>The <c>Location</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="QueueName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/queues/{queue}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queueId">The <c>Queue</c> ID. Must not be <c>null</c> or empty.</param>
+        public QueueName(string projectId, string locationId, string queueId) : this(ResourceNameType.ProjectLocationQueue, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), queueId: gax::GaxPreconditions.CheckNotNullOrEmpty(queueId, nameof(queueId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string LocationId { get; }
 
-        /// <summary>The <c>Queue</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Queue</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string QueueId { get; }
 
         /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, QueueId);
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationQueue: return s_projectLocationQueue.Expand(ProjectId, LocationId, QueueId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();

@@ -35,7 +35,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             // Make the request
@@ -53,7 +53,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             // Make the request
@@ -97,7 +97,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             Assessment assessment = new Assessment();
             // Make the request
             Assessment response = recaptchaEnterpriseServiceV1Beta1Client.CreateAssessment(parent, assessment);
@@ -112,7 +112,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             Assessment assessment = new Assessment();
             // Make the request
             Assessment response = await recaptchaEnterpriseServiceV1Beta1Client.CreateAssessmentAsync(parent, assessment);
@@ -128,7 +128,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
             {
-                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
             };
             // Make the request
@@ -146,7 +146,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
             {
-                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
+                AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
             };
             // Make the request
@@ -190,7 +190,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = RecaptchaEnterpriseServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
+            AssessmentName name = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]");
             AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
             // Make the request
             AnnotateAssessmentResponse response = recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessment(name, annotation);
@@ -205,7 +205,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Create client
             RecaptchaEnterpriseServiceV1Beta1Client recaptchaEnterpriseServiceV1Beta1Client = await RecaptchaEnterpriseServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
+            AssessmentName name = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]");
             AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
             // Make the request
             AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessmentAsync(name, annotation);
@@ -221,7 +221,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateKeyRequest request = new CreateKeyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Key = new Key(),
             };
             // Make the request
@@ -239,7 +239,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateKeyRequest request = new CreateKeyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Key = new Key(),
             };
             // Make the request
@@ -256,7 +256,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             ListKeysRequest request = new ListKeysRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListKeysResponse, Key> response = recaptchaEnterpriseServiceV1Beta1Client.ListKeys(request);
@@ -304,7 +304,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             ListKeysRequest request = new ListKeysRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListKeysResponse, Key> response = recaptchaEnterpriseServiceV1Beta1Client.ListKeysAsync(request);
@@ -352,7 +352,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             GetKeyRequest request = new GetKeyRequest
             {
-                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             // Make the request
             Key response = recaptchaEnterpriseServiceV1Beta1Client.GetKey(request);
@@ -369,7 +369,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             GetKeyRequest request = new GetKeyRequest
             {
-                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             // Make the request
             Key response = await recaptchaEnterpriseServiceV1Beta1Client.GetKeyAsync(request);
@@ -420,7 +420,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteKeyRequest request = new DeleteKeyRequest
             {
-                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             // Make the request
             recaptchaEnterpriseServiceV1Beta1Client.DeleteKey(request);
@@ -437,7 +437,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteKeyRequest request = new DeleteKeyRequest
             {
-                KeyName = new KeyName("[PROJECT]", "[KEY]"),
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
             };
             // Make the request
             await recaptchaEnterpriseServiceV1Beta1Client.DeleteKeyAsync(request);

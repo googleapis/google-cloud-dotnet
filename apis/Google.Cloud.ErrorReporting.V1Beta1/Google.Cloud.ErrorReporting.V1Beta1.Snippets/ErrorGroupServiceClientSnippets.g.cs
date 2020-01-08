@@ -30,7 +30,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             ErrorGroup response = errorGroupServiceClient.GetGroup(request);
@@ -47,7 +47,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupNameAsErrorGroupName = new ErrorGroupName("[PROJECT]", "[GROUP]"),
+                GroupNameAsErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(request);
@@ -88,7 +88,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
+            ErrorGroupName groupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]");
             // Make the request
             ErrorGroup response = errorGroupServiceClient.GetGroup(groupName);
             // End snippet
@@ -102,7 +102,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ErrorGroupName groupName = new ErrorGroupName("[PROJECT]", "[GROUP]");
+            ErrorGroupName groupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]");
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(groupName);
             // End snippet
