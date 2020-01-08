@@ -22,8 +22,19 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     public sealed class GetTableOptions
     {
+        /// <summary>
+        /// Comma separated list of schema fields to return.
+        /// When set allows to obtain a partial table schema.
+        /// If not set, all fields, that is, the full table schema, will be returned.
+        /// </summary>
+        public string SelectedFields { get; set; }
+
         internal void ModifyRequest(GetRequest request)
         {
+            if (SelectedFields != null)
+            {
+                request.SelectedFields = SelectedFields;
+            }
         }
     }
 }
