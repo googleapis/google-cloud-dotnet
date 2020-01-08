@@ -251,9 +251,8 @@
   },
   {
     "id": "Google.Cloud.DevTools.ContainerAnalysis.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/devtools/containeranalysis/v1",
-    "serviceYaml": "containeranalysis_v1.yaml",
     "productName": "Google Container Analysis",
     "productUrl": "https://cloud.google.com/container-registry/docs/container-analysis/",
     "version": "2.0.0-alpha00",
