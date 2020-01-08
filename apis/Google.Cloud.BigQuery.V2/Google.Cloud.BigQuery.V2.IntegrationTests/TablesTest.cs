@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -308,14 +309,26 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(totalCount - 2, remainder.Count);
         }
 
-        [Fact]
-        public void GetTable()
+        public static IEnumerable<object[]> FullSchemaOptions
+        {
+            get
+            {
+                yield return new object[] { null };
+                // Null or empty SelectedFields return the whole schema.
+                yield return new object[] { new GetTableOptions { SelectedFields = null } };
+                yield return new object[] { new GetTableOptions { SelectedFields = string.Empty } };
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(FullSchemaOptions))]
+        public void GetTable_FullSchema(GetTableOptions options)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             string datasetId = _fixture.DatasetId;
             string tableId = _fixture.HighScoreExtendedTableId;
 
-            var table = client.GetTable(datasetId, tableId);
+            var table = client.GetTable(datasetId, tableId, options);
 
             Assert.Equal(4, table.Schema.Fields.Count);
             Assert.Equal("player", table.Schema.Fields[0].Name);
@@ -374,6 +387,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
             var table = client.GetTable(datasetId, tableId, options);
 
+            // We still have 4 top level fields because nesting is preserved
+            // when requesting a partial table schema.
             Assert.Equal(4, table.Schema.Fields.Count);
 
             Assert.Equal("age", table.Schema.Fields[0].Name);
