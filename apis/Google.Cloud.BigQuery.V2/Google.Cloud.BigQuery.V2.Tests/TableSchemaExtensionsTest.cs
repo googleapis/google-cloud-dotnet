@@ -41,5 +41,82 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchema();
             Assert.Empty(schema.IndexFieldNames());
         }
+
+        [Fact]
+        public void SelectedFields_EmptySchema()
+        {
+            var schema = new TableSchema();
+            Assert.Equal(string.Empty, schema.BuildSelectedFields());
+        }
+
+        [Fact]
+        public void SelectedFields_OneField()
+        {
+            var schema = new TableSchema
+            {
+                Fields = new List<TableFieldSchema>
+                {
+                    new TableFieldSchema { Name = "foo" },
+                }
+            };
+
+            Assert.Equal("foo", schema.BuildSelectedFields());
+        }
+
+        [Fact]
+        public void SelectedFields_OneLevel()
+        {
+            var schema = new TableSchema
+            {
+                Fields = new List<TableFieldSchema>
+                {
+                    new TableFieldSchema { Name = "foo" },
+                    new TableFieldSchema { Name = "bar" },
+                }
+            };
+
+            Assert.Equal("foo,bar", schema.BuildSelectedFields());
+        }
+
+        [Fact]
+        public void SelectedFields_Nested()
+        {
+            var schema = new TableSchema
+            {
+                Fields = new List<TableFieldSchema>
+                {
+                    new TableFieldSchema
+                    {
+                        Name = "l0_f0",
+                        Fields = new List<TableFieldSchema>
+                        {
+                            new TableFieldSchema { Name = "l1_f0"},
+                            new TableFieldSchema
+                            {
+                                Name = "l1_f1",
+                                Fields = new List<TableFieldSchema>
+                                {
+                                    new TableFieldSchema { Name = "l2_f0" },
+                                    new TableFieldSchema { Name = "l2_f1" }
+                                }
+                            }
+                        }
+                    },
+                    new TableFieldSchema { Name = "l0_f1" },
+                    new TableFieldSchema
+                    {
+                        Name = "l0_f2",
+                        Fields = new List<TableFieldSchema>
+                        {
+                            new TableFieldSchema { Name = "l1_f2"},
+                            new TableFieldSchema { Name = "l1_f3"}
+                        }
+                    },
+
+                }
+            };
+
+            Assert.Equal("l0_f0.l1_f0,l0_f0.l1_f1.l2_f0,l0_f0.l1_f1.l2_f1,l0_f1,l0_f2.l1_f2,l0_f2.l1_f3", schema.BuildSelectedFields());
+        }
     }
 }
