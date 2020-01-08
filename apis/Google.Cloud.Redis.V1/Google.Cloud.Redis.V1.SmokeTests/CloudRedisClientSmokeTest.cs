@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using System;
 
 namespace Google.Cloud.Redis.V1.SmokeTests
@@ -21,7 +22,7 @@ namespace Google.Cloud.Redis.V1.SmokeTests
         public static int Main(string[] args)
         {
             var client = CloudRedisClient.Create();
-            var locationName = new LocationName(args[0], "-");
+            var locationName = LocationName.FromProjectLocation(args[0], "-");
             var instances = client.ListInstances(locationName);
             foreach (var instance in instances)
             {

@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -582,7 +583,7 @@ namespace Google.Cloud.Redis.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstances(new ListInstancesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -615,7 +616,7 @@ namespace Google.Cloud.Redis.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstancesAsync(new ListInstancesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -981,7 +982,7 @@ namespace Google.Cloud.Redis.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Instance, OperationMetadata> CreateInstance(LocationName parent, string instanceId, Instance instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Instance, OperationMetadata> CreateInstance(gagr::LocationName parent, string instanceId, Instance instance, gaxgrpc::CallSettings callSettings = null) =>
             CreateInstance(new CreateInstanceRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1023,7 +1024,7 @@ namespace Google.Cloud.Redis.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(LocationName parent, string instanceId, Instance instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(gagr::LocationName parent, string instanceId, Instance instance, gaxgrpc::CallSettings callSettings = null) =>
             CreateInstanceAsync(new CreateInstanceRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1065,7 +1066,7 @@ namespace Google.Cloud.Redis.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(LocationName parent, string instanceId, Instance instance, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(gagr::LocationName parent, string instanceId, Instance instance, st::CancellationToken cancellationToken) =>
             CreateInstanceAsync(parent, instanceId, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

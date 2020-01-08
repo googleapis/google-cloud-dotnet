@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -568,7 +569,7 @@ namespace Google.Cloud.Tasks.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Queue"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListQueuesResponse, Queue> ListQueues(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListQueuesResponse, Queue> ListQueues(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListQueues(new ListQueuesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -595,7 +596,7 @@ namespace Google.Cloud.Tasks.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Queue"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListQueuesResponse, Queue> ListQueuesAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListQueuesResponse, Queue> ListQueuesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListQueuesAsync(new ListQueuesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -907,7 +908,7 @@ namespace Google.Cloud.Tasks.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Queue CreateQueue(LocationName parent, Queue queue, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Queue CreateQueue(gagr::LocationName parent, Queue queue, gaxgrpc::CallSettings callSettings = null) =>
             CreateQueue(new CreateQueueRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -943,7 +944,7 @@ namespace Google.Cloud.Tasks.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Queue> CreateQueueAsync(LocationName parent, Queue queue, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Queue> CreateQueueAsync(gagr::LocationName parent, Queue queue, gaxgrpc::CallSettings callSettings = null) =>
             CreateQueueAsync(new CreateQueueRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -979,7 +980,7 @@ namespace Google.Cloud.Tasks.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Queue> CreateQueueAsync(LocationName parent, Queue queue, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Queue> CreateQueueAsync(gagr::LocationName parent, Queue queue, st::CancellationToken cancellationToken) =>
             CreateQueueAsync(parent, queue, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
