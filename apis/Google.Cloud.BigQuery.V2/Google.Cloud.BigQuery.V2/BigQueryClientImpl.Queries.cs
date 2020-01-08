@@ -128,7 +128,9 @@ namespace Google.Cloud.BigQuery.V2
         public override PagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            var resultSchema = schema ?? GetSchema(tableReference);
+            // There's no way to specify fetching rows with no fields (that looks more like a dry run anyways).
+            // So, if the schema is empty, the whole rows will be fetch, so we need to get the whole schema.
+            var resultSchema = schema?.Fields?.Count > 0 ? schema : GetSchema(tableReference);
 
             var pageManager = new TableRowPageManager(resultSchema);
             return new RestPagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
@@ -143,7 +145,9 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             // TODO: This is a synchronous call. We can't easily make this part asynchronous - we don't have a cancellation token, and we're returning
             // a non-task value. We could defer until the first MoveNext call, but that's tricky.
-            var resultSchema = schema ?? GetSchema(tableReference);
+            // There's no way to specify fetching rows with no fields (that looks more like a dry run anyways).
+            // So, if the schema is empty, the whole rows will be fetch, so we need to get the whole schema.
+            var resultSchema = schema?.Fields?.Count > 0 ? schema : GetSchema(tableReference);
 
             var pageManager = new TableRowPageManager(schema);
             return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
@@ -188,10 +192,9 @@ namespace Google.Cloud.BigQuery.V2
         {
             var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
-            if (schema != null)
-            {
-                request.SelectedFields = schema.BuildSelectedFields();
-            }
+            // null and empty schemas are handled by BuildSelectedFields,
+            // but both values mean the same, and that is to return whole rows.
+            request.SelectedFields = schema.BuildSelectedFields();
             RetryHandler.MarkAsRetriable(request);
             return request;
         }
