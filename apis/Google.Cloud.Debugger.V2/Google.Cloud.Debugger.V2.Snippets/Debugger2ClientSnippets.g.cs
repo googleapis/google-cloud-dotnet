@@ -14,9 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-// Do not warn when using obsolete members
-#pragma warning disable CS0612
-
 namespace Google.Cloud.Debugger.V2.Snippets
 {
     using System.Threading.Tasks;
@@ -241,7 +238,6 @@ namespace Google.Cloud.Debugger.V2.Snippets
                 IncludeAllUsers = false,
                 IncludeInactive = false,
                 Action = new ListBreakpointsRequest.Types.BreakpointActionValue(),
-                StripResults = false,
                 WaitToken = "",
                 ClientVersion = "",
             };
@@ -264,7 +260,6 @@ namespace Google.Cloud.Debugger.V2.Snippets
                 IncludeAllUsers = false,
                 IncludeInactive = false,
                 Action = new ListBreakpointsRequest.Types.BreakpointActionValue(),
-                StripResults = false,
                 WaitToken = "",
                 ClientVersion = "",
             };

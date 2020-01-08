@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@ using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -744,16 +743,16 @@ namespace Google.LongRunning
             GrpcClient = grpcClient;
             OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(grpcClient.ListOperationsAsync, grpcClient.ListOperations, effectiveSettings.ListOperationsSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(grpcClient.ListOperationsAsync, grpcClient.ListOperations, effectiveSettings.ListOperationsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListOperations);
             Modify_ListOperationsApiCall(ref _callListOperations);
-            _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(grpcClient.GetOperationAsync, grpcClient.GetOperation, effectiveSettings.GetOperationSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(grpcClient.GetOperationAsync, grpcClient.GetOperation, effectiveSettings.GetOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOperation);
             Modify_GetOperationApiCall(ref _callGetOperation);
-            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, wkt::Empty>(grpcClient.DeleteOperationAsync, grpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, wkt::Empty>(grpcClient.DeleteOperationAsync, grpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOperation);
             Modify_DeleteOperationApiCall(ref _callDeleteOperation);
-            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, wkt::Empty>(grpcClient.CancelOperationAsync, grpcClient.CancelOperation, effectiveSettings.CancelOperationSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, wkt::Empty>(grpcClient.CancelOperationAsync, grpcClient.CancelOperation, effectiveSettings.CancelOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelOperation);
             Modify_CancelOperationApiCall(ref _callCancelOperation);
             _callWaitOperation = clientHelper.BuildApiCall<WaitOperationRequest, Operation>(grpcClient.WaitOperationAsync, grpcClient.WaitOperation, effectiveSettings.WaitOperationSettings);

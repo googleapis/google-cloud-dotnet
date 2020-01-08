@@ -22,7 +22,6 @@ using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -440,7 +439,7 @@ namespace Google.Cloud.Dialogflow.V2
             GrpcClient = grpcClient;
             SessionsSettings effectiveSettings = settings ?? SessionsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>(grpcClient.DetectIntentAsync, grpcClient.DetectIntent, effectiveSettings.DetectIntentSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session={(sysnet::WebUtility.UrlEncode(request.Session))}"));
+            _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>(grpcClient.DetectIntentAsync, grpcClient.DetectIntent, effectiveSettings.DetectIntentSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callDetectIntent);
             Modify_DetectIntentApiCall(ref _callDetectIntent);
             _callStreamingDetectIntent = clientHelper.BuildApiCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse>(grpcClient.StreamingDetectIntent, effectiveSettings.StreamingDetectIntentSettings, effectiveSettings.StreamingDetectIntentStreamingSettings);

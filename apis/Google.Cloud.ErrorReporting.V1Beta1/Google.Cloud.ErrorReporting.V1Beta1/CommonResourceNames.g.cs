@@ -23,82 +23,194 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// <summary>Resource name for the <c>ErrorGroup</c> resource.</summary>
     public sealed partial class ErrorGroupName : gax::IResourceName, sys::IEquatable<ErrorGroupName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/groups/{group}");
-
-        /// <summary>
-        /// Parses the given <c>ErrorGroup</c> resource name in string form into a new <see cref="ErrorGroupName"/>
-        /// instance.
-        /// </summary>
-        /// <param name="errorGroupName">
-        /// The <c>ErrorGroup</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <returns>The parsed <see cref="ErrorGroupName"/> if successful.</returns>
-        public static ErrorGroupName Parse(string errorGroupName)
+        /// <summary>The possible contents of <see cref="ErrorGroupName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(errorGroupName, nameof(errorGroupName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(errorGroupName);
-            return new ErrorGroupName(resourceName[0], resourceName[1]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/groups/{group}</c>.</summary>
+            ProjectGroup = 1
         }
 
+        private static gax::PathTemplate s_projectGroup = new gax::PathTemplate("projects/{project}/groups/{group}");
+
+        /// <summary>Creates a <see cref="ErrorGroupName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ErrorGroupName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ErrorGroupName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ErrorGroupName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="ErrorGroupName"/>
-        /// instance.
+        /// Creates a <see cref="ErrorGroupName"/> with the pattern <c>projects/{project}/groups/{group}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="groupId">The <c>Group</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ErrorGroupName"/> constructed from the provided ids.</returns>
+        public static ErrorGroupName FromProjectGroup(string projectId, string groupId) =>
+            new ErrorGroupName(ResourceNameType.ProjectGroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), groupId: gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ErrorGroupName"/> with pattern
+        /// <c>projects/{project}/groups/{group}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="groupId">The <c>Group</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ErrorGroupName"/> with pattern
+        /// <c>projects/{project}/groups/{group}</c>.
+        /// </returns>
+        public static string Format(string projectId, string groupId) => FormatProjectGroup(projectId, groupId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ErrorGroupName"/> with pattern
+        /// <c>projects/{project}/groups/{group}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="groupId">The <c>Group</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ErrorGroupName"/> with pattern
+        /// <c>projects/{project}/groups/{group}</c>.
+        /// </returns>
+        public static string FormatProjectGroup(string projectId, string groupId) =>
+            s_projectGroup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="ErrorGroupName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/groups/{group}</c></description></item></list>
+        /// </remarks>
+        /// <param name="errorGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ErrorGroupName"/> if successful.</returns>
+        public static ErrorGroupName Parse(string errorGroupName) => Parse(errorGroupName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ErrorGroupName"/> instance; optionally allowing
+        /// an unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="errorGroupName"/> is
-        /// <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/groups/{group}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="errorGroupName">
-        /// The <c>ErrorGroup</c> resource name in string form. Must not be <c>null</c>.
+        /// <param name="errorGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="ErrorGroupName"/>, or <c>null</c> if parsing fails.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string errorGroupName, out ErrorGroupName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(errorGroupName, nameof(errorGroupName));
-            if (s_template.TryParseName(errorGroupName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new ErrorGroupName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="ErrorGroupName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="groupId">The <c>Group</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="ErrorGroupName"/>.</returns>
-        public static string Format(string projectId, string groupId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(groupId, nameof(groupId)));
+        /// <returns>The parsed <see cref="ErrorGroupName"/> if successful.</returns>
+        public static ErrorGroupName Parse(string errorGroupName, bool allowUnparsed) =>
+            TryParse(errorGroupName, allowUnparsed, out ErrorGroupName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="ErrorGroupName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="ErrorGroupName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="groupId">The <c>Group</c> ID. Must not be <c>null</c>.</param>
-        public ErrorGroupName(string projectId, string groupId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/groups/{group}</c></description></item></list>
+        /// </remarks>
+        /// <param name="errorGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ErrorGroupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string errorGroupName, out ErrorGroupName result) =>
+            TryParse(errorGroupName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ErrorGroupName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/groups/{group}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="errorGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ErrorGroupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string errorGroupName, bool allowUnparsed, out ErrorGroupName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GroupId = gax::GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
+            gax::GaxPreconditions.CheckNotNull(errorGroupName, nameof(errorGroupName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectGroup.TryParseName(errorGroupName, out resourceName))
+            {
+                result = FromProjectGroup(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(errorGroupName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private ErrorGroupName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string groupId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            GroupId = groupId;
+            ProjectId = projectId;
+        }
 
-        /// <summary>The <c>Group</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ErrorGroupName"/> class from the component parts of pattern
+        /// <c>projects/{project}/groups/{group}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="groupId">The <c>Group</c> ID. Must not be <c>null</c> or empty.</param>
+        public ErrorGroupName(string projectId, string groupId) : this(ResourceNameType.ProjectGroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), groupId: gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Group</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string GroupId { get; }
 
-        /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, GroupId);
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectGroup: return s_projectGroup.Expand(ProjectId, GroupId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();
