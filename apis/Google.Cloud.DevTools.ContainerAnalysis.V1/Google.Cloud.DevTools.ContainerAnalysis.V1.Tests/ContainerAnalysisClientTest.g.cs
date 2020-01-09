@@ -14,281 +14,489 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using proto = Google.Protobuf;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.DevTools.ContainerAnalysis.V1;
-    using Google.Cloud.Iam.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grafeas.V1;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedContainerAnalysisClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedContainerAnalysisClientTest
     {
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetIamPolicyRequestObject()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.SetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetIamPolicy()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            IamResourceNameOneof resource = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]"));
-            Policy policy = new Policy();
-            Policy response = client.SetIamPolicy(resource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            IamResourceNameOneof resource = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]"));
-            Policy policy = new Policy();
-            Policy response = await client.SetIamPolicyAsync(resource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetIamPolicy2()
+        [xunit::FactAttribute]
+        public void SetIamPolicy_ResourceNames()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.SetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync_ResourceNames()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.SetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetIamPolicyRequestObject()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.GetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicy()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            IamResourceNameOneof resource = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]"));
-            Policy response = client.GetIamPolicy(resource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.Resource);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            IamResourceNameOneof resource = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]"));
-            Policy response = await client.GetIamPolicyAsync(resource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetIamPolicy2()
+        [xunit::FactAttribute]
+        public void GetIamPolicy_ResourceNames()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.GetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync_ResourceNames()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("21"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.GetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void TestIamPermissionsRequestObject()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsRequestObjectAsync()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void TestIamPermissions()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            IamResourceNameOneof resource = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]"));
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = client.TestIamPermissions(resource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            IamResourceNameOneof resource = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]"));
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(resource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void TestIamPermissions2()
+        [xunit::FactAttribute]
+        public void TestIamPermissions_ResourceNames()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = client.TestIamPermissions(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync_ResourceNames()
         {
-            Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new Mock<ContainerAnalysis.ContainerAnalysisClient>(MockBehavior.Strict);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = IamResourceNameOneof.From(new NoteName("[PROJECT]", "[NOTE]")),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }
