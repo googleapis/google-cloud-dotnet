@@ -32,33 +32,18 @@ namespace Grafeas.V1.FixGeneratedCode
         {
             var layout = DirectoryLayout.ForApi("Grafeas.V1");
 
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "GrafeasClient.cs"))
+            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "GrafeasClient.g.cs"))
                 .RemoveProperty("GrafeasClient", "DefaultEndpoint")
                 .RemoveProperty("GrafeasClient", "DefaultScopes")
                 .RemoveProperty("GrafeasClient", "ChannelPool")
-                .RemoveField("GrafeasClient", "s_channelPool")
                 .RemoveMethod("GrafeasClient", "CreateAsync", "ServiceEndpoint", "GrafeasSettings")
                 .RemoveMethod("GrafeasClient", "Create", "ServiceEndpoint", "GrafeasSettings")
                 .RemoveMethod("GrafeasClient", "ShutdownDefaultChannelsAsync")
                 .RemoveType("GrafeasClientBuilder")
                 .Save();
 
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "ResourceNames.cs"))
-                .RewriteTypeName("Grafeas.V1.ProjectName", "global::Grafeas.V1.ProjectName")
-                .RewriteTypeName("Grafeas.V1.NoteName", "global::Grafeas.V1.NoteName")
-                .RewriteTypeName("Grafeas.V1.OccurrenceName", "global::Grafeas.V1.OccurrenceName")
-                .RewriteMemberAccess("Grafeas.V1.ProjectName.Parse", "global::Grafeas.V1.ProjectName.Parse")
-                .RewriteMemberAccess("Grafeas.V1.NoteName.Parse", "global::Grafeas.V1.NoteName.Parse")
-                .RewriteMemberAccess("Grafeas.V1.OccurrenceName.Parse", "global::Grafeas.V1.OccurrenceName.Parse")
-                .Save();
-
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1.Snippets", "GrafeasClientSnippets.g.cs"))
                 .Rewrite(new SnippetRewriter())
-                .RewriteAlias("apis", "global::Grafeas.V1")
-                .Save();
-
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1.Tests", "GrafeasClientTest.g.cs"))
-                .RewriteAlias("apis", "global::Grafeas.V1")
                 .Save();
         }
 
@@ -74,7 +59,7 @@ namespace Grafeas.V1.FixGeneratedCode
 
             public SnippetRewriter() : base(false)
             {
-                _channelDeclaration = SyntaxFactory.ParseStatement("Channel channel = null;")
+                _channelDeclaration = SyntaxFactory.ParseStatement("global::Grpc.Core.Channel channel = null;")
                     // TODO: Potentially format the node automatically instead of hard-coding whitespace.
                     .WithLeadingTrivia(SyntaxFactory.Whitespace("            "))
                     // By using the native linebreak format, we avoid generating whitespace-only git changes.
