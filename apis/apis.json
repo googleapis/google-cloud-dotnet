@@ -21,27 +21,6 @@
     ]
   },
   {
-    "id": "Google.Cloud.Asset.V1Beta1",
-    "generator": "gapic",
-    "protoPath": "google/cloud/asset/v1beta1",
-    "serviceYaml": "asset_v1beta1.yaml",
-    "productName": "Google Cloud Asset Inventory",
-    "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
-    "version": "2.0.0-alpha00",
-    "releaseLevelOverride": "beta",
-    "type": "grpc",
-    "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1beta1).",
-    "dependencies": {
-      "Google.LongRunning": "project",
-      "Google.Cloud.Iam.V1": "project"
-    },
-    "tags": [
-      "asset",
-      "inventory",
-      "assets"
-    ]
-  },
-  {
     "id": "Google.Cloud.AutoML.V1",
     "generator": "gapic",
     "protoPath": "google/cloud/automl/v1",
