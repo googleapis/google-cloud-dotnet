@@ -15,6 +15,7 @@
 namespace Grafeas.V1.SmokeTests
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Apis.Auth.OAuth2;
     using Grpc.Auth;
     using Grpc.Core;
@@ -42,7 +43,7 @@ namespace Grafeas.V1.SmokeTests
             GrafeasClient client = GrafeasClient.Create(channel);
 
             // Call API method
-            ProjectName projectName = new ProjectName(projectId);
+            ProjectName projectName = ProjectName.FromProject(projectId);
             PagedEnumerable<ListNotesResponse, Note> notes = client.ListNotes(projectName, "");
 
             // Show the result
