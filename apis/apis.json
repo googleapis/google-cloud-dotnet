@@ -1222,9 +1222,8 @@
   },
   {
     "id": "Grafeas.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "grafeas/v1",
-    "serviceYaml": "grafeas_v1.yaml",
     "productName": "Grafeas",
     "productUrl": "https://grafeas.io/",
     "version": "2.0.0-alpha00",
