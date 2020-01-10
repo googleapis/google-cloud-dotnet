@@ -15,7 +15,6 @@
 namespace Grafeas.V1.SmokeTests
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Apis.Auth.OAuth2;
     using Grpc.Auth;
     using Grpc.Core;
