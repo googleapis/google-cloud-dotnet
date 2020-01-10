@@ -154,7 +154,6 @@ generate_gapicgenerator() {
   # Include extra protos, when they're present, even if they're not needed.
   extra_protos=()
   if [[ -d $GOOGLEAPIS/google/iam/v1 ]]; then extra_protos+=($GOOGLEAPIS/google/iam/v1/*.proto); fi
-  if [[ -d $GOOGLEAPIS/grafeas/v1 ]]; then extra_protos+=($GOOGLEAPIS/grafeas/v1/*.proto); fi
   if [[ -f $GOOGLEAPIS/google/cloud/common_resources.proto ]]; then extra_protos+=($GOOGLEAPIS/google/cloud/common_resources.proto); fi
   
   # Generate the descriptor set for this API.
