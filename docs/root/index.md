@@ -81,3 +81,5 @@ Beta:
 Alpha:
 
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
+- [Google.Cloud.EntityFrameworkCore.Spanner](Google.Cloud.EntityFrameworkCore.Spanner/index.html)
+

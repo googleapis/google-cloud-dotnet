@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-alpha12</Version>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <Deterministic>true</Deterministic>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Description>Google EntityFrameworkCore Provider for Google Cloud Spanner.</Description>
+    <PackageTags>Spanner;ADO;EntityFramework;Google;Cloud</PackageTags>
+    <Copyright>Copyright 2019 Google LLC</Copyright>
+    <Authors>Google Inc.</Authors>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj" />
+    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.1" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
