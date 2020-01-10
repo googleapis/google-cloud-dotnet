@@ -17,7 +17,6 @@
 namespace Grafeas.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
