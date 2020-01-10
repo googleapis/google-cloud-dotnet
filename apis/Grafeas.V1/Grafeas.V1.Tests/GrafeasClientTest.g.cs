@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -331,7 +330,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrence = new Occurrence(),
             };
             Occurrence expectedResponse = new Occurrence
@@ -365,7 +364,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrence = new Occurrence(),
             };
             Occurrence expectedResponse = new Occurrence
@@ -401,7 +400,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrence = new Occurrence(),
             };
             Occurrence expectedResponse = new Occurrence
@@ -435,7 +434,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrence = new Occurrence(),
             };
             Occurrence expectedResponse = new Occurrence
@@ -471,7 +470,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrence = new Occurrence(),
             };
             Occurrence expectedResponse = new Occurrence
@@ -505,7 +504,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrence = new Occurrence(),
             };
             Occurrence expectedResponse = new Occurrence
@@ -541,7 +540,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrences = { new Occurrence(), },
             };
             BatchCreateOccurrencesResponse expectedResponse = new BatchCreateOccurrencesResponse
@@ -561,7 +560,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrences = { new Occurrence(), },
             };
             BatchCreateOccurrencesResponse expectedResponse = new BatchCreateOccurrencesResponse
@@ -583,7 +582,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrences = { new Occurrence(), },
             };
             BatchCreateOccurrencesResponse expectedResponse = new BatchCreateOccurrencesResponse
@@ -603,7 +602,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrences = { new Occurrence(), },
             };
             BatchCreateOccurrencesResponse expectedResponse = new BatchCreateOccurrencesResponse
@@ -625,7 +624,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrences = { new Occurrence(), },
             };
             BatchCreateOccurrencesResponse expectedResponse = new BatchCreateOccurrencesResponse
@@ -645,7 +644,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Occurrences = { new Occurrence(), },
             };
             BatchCreateOccurrencesResponse expectedResponse = new BatchCreateOccurrencesResponse
@@ -1444,7 +1443,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 NoteId = "note_id3b811521",
                 Note = new Note(),
             };
@@ -1484,7 +1483,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 NoteId = "note_id3b811521",
                 Note = new Note(),
             };
@@ -1526,7 +1525,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 NoteId = "note_id3b811521",
                 Note = new Note(),
             };
@@ -1566,7 +1565,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 NoteId = "note_id3b811521",
                 Note = new Note(),
             };
@@ -1608,7 +1607,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 NoteId = "note_id3b811521",
                 Note = new Note(),
             };
@@ -1648,7 +1647,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 NoteId = "note_id3b811521",
                 Note = new Note(),
             };
@@ -1690,7 +1689,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Notes =
                 {
                     {
@@ -1713,7 +1712,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Notes =
                 {
                     {
@@ -1738,7 +1737,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Notes =
                 {
                     {
@@ -1761,7 +1760,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Notes =
                 {
                     {
@@ -1786,7 +1785,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Notes =
                 {
                     {
@@ -1809,7 +1808,7 @@ namespace Grafeas.V1.Tests
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Notes =
                 {
                     {

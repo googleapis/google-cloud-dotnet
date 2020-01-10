@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using gagr = Google.Api.Gax.ResourceNames;
 using gv = Grafeas.V1;
 using sys = System;
 
@@ -476,11 +475,11 @@ namespace Grafeas.V1
     public partial class ListOccurrencesRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::ProjectName ParentAsProjectName
+        public ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProjectName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -500,11 +499,11 @@ namespace Grafeas.V1
     public partial class CreateOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::ProjectName ParentAsProjectName
+        public ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProjectName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -546,11 +545,11 @@ namespace Grafeas.V1
     public partial class ListNotesRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::ProjectName ParentAsProjectName
+        public ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProjectName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -568,11 +567,11 @@ namespace Grafeas.V1
     public partial class CreateNoteRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::ProjectName ParentAsProjectName
+        public ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProjectName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -600,11 +599,11 @@ namespace Grafeas.V1
     public partial class BatchCreateNotesRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::ProjectName ParentAsProjectName
+        public ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProjectName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -612,11 +611,11 @@ namespace Grafeas.V1
     public partial class BatchCreateOccurrencesRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::ProjectName ParentAsProjectName
+        public ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProjectName.Parse(Parent);
             set => Parent = value?.ToString() ?? "";
         }
     }
