@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -507,7 +506,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(gagr::ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListOccurrences(new ListOccurrencesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -536,7 +535,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(gagr::ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListOccurrencesAsync(new ListOccurrencesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -766,7 +765,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Occurrence CreateOccurrence(gagr::ProjectName parent, Occurrence occurrence, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Occurrence CreateOccurrence(ProjectName parent, Occurrence occurrence, gaxgrpc::CallSettings callSettings = null) =>
             CreateOccurrence(new CreateOccurrenceRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -785,7 +784,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Occurrence> CreateOccurrenceAsync(gagr::ProjectName parent, Occurrence occurrence, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Occurrence> CreateOccurrenceAsync(ProjectName parent, Occurrence occurrence, gaxgrpc::CallSettings callSettings = null) =>
             CreateOccurrenceAsync(new CreateOccurrenceRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -804,7 +803,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Occurrence> CreateOccurrenceAsync(gagr::ProjectName parent, Occurrence occurrence, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Occurrence> CreateOccurrenceAsync(ProjectName parent, Occurrence occurrence, st::CancellationToken cancellationToken) =>
             CreateOccurrenceAsync(parent, occurrence, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -905,7 +904,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual BatchCreateOccurrencesResponse BatchCreateOccurrences(gagr::ProjectName parent, scg::IEnumerable<Occurrence> occurrences, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual BatchCreateOccurrencesResponse BatchCreateOccurrences(ProjectName parent, scg::IEnumerable<Occurrence> occurrences, gaxgrpc::CallSettings callSettings = null) =>
             BatchCreateOccurrences(new BatchCreateOccurrencesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -927,7 +926,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateOccurrencesResponse> BatchCreateOccurrencesAsync(gagr::ProjectName parent, scg::IEnumerable<Occurrence> occurrences, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<BatchCreateOccurrencesResponse> BatchCreateOccurrencesAsync(ProjectName parent, scg::IEnumerable<Occurrence> occurrences, gaxgrpc::CallSettings callSettings = null) =>
             BatchCreateOccurrencesAsync(new BatchCreateOccurrencesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -949,7 +948,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateOccurrencesResponse> BatchCreateOccurrencesAsync(gagr::ProjectName parent, scg::IEnumerable<Occurrence> occurrences, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<BatchCreateOccurrencesResponse> BatchCreateOccurrencesAsync(ProjectName parent, scg::IEnumerable<Occurrence> occurrences, st::CancellationToken cancellationToken) =>
             BatchCreateOccurrencesAsync(parent, occurrences, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1434,7 +1433,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Note"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(gagr::ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListNotes(new ListNotesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1463,7 +1462,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Note"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(gagr::ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListNotesAsync(new ListNotesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1689,7 +1688,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Note CreateNote(gagr::ProjectName parent, string noteId, Note note, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Note CreateNote(ProjectName parent, string noteId, Note note, gaxgrpc::CallSettings callSettings = null) =>
             CreateNote(new CreateNoteRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1712,7 +1711,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Note> CreateNoteAsync(gagr::ProjectName parent, string noteId, Note note, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Note> CreateNoteAsync(ProjectName parent, string noteId, Note note, gaxgrpc::CallSettings callSettings = null) =>
             CreateNoteAsync(new CreateNoteRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1735,7 +1734,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Note> CreateNoteAsync(gagr::ProjectName parent, string noteId, Note note, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Note> CreateNoteAsync(ProjectName parent, string noteId, Note note, st::CancellationToken cancellationToken) =>
             CreateNoteAsync(parent, noteId, note, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1836,7 +1835,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual BatchCreateNotesResponse BatchCreateNotes(gagr::ProjectName parent, scg::IDictionary<string, Note> notes, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual BatchCreateNotesResponse BatchCreateNotes(ProjectName parent, scg::IDictionary<string, Note> notes, gaxgrpc::CallSettings callSettings = null) =>
             BatchCreateNotes(new BatchCreateNotesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1858,7 +1857,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateNotesResponse> BatchCreateNotesAsync(gagr::ProjectName parent, scg::IDictionary<string, Note> notes, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<BatchCreateNotesResponse> BatchCreateNotesAsync(ProjectName parent, scg::IDictionary<string, Note> notes, gaxgrpc::CallSettings callSettings = null) =>
             BatchCreateNotesAsync(new BatchCreateNotesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1880,7 +1879,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateNotesResponse> BatchCreateNotesAsync(gagr::ProjectName parent, scg::IDictionary<string, Note> notes, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<BatchCreateNotesResponse> BatchCreateNotesAsync(ProjectName parent, scg::IDictionary<string, Note> notes, st::CancellationToken cancellationToken) =>
             BatchCreateNotesAsync(parent, notes, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
