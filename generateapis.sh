@@ -52,10 +52,11 @@ fetch_github_repos() {
 }
 
 generate_microgenerator() {
-  API_TMP_DIR=$OUTDIR/$1
-  PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$1
+  PACKAGE_ID=$1
+  API_TMP_DIR=$OUTDIR/$PACKAGE_ID
+  PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$PACKAGE_ID
   API_OUT_DIR=apis
-  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID protoPath)
 
   # If there's exactly one service config file, pass it in. Otherwise, omit it.
   GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*.json)
@@ -67,11 +68,18 @@ generate_microgenerator() {
 
   # Defalt to "all resources are common" but allow a per-API config file too.
   COMMON_RESOURCES_CONFIG=CommonResourcesConfig.json
-  if [[ -f "$API_OUT_DIR/$1/CommonResourcesConfig.json" ]]
+  if [[ -f "$API_OUT_DIR/$PACKAGE_ID/CommonResourcesConfig.json" ]]
   then
-    COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$1/CommonResourcesConfig.json
+    COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$PACKAGE_ID/CommonResourcesConfig.json
   fi
   COMMON_RESOURCES_OPTION=--gapic_opt=common-resources-config=$COMMON_RESOURCES_CONFIG
+  
+  # Only specify common resource protos for GCP APIs
+  COMMON_RESOURCES_PROTO=
+  if [[ $PACKAGE_ID == Google.Cloud.* ]]
+  then
+    COMMON_RESOURCES_PROTO=$GOOGLEAPIS/google/cloud/common_resources.proto
+  fi
   
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
@@ -95,6 +103,7 @@ generate_microgenerator() {
     (cd $API_OUT_DIR/$1; ./midmicrogeneration.sh)
   fi
 
+
   # Client generation. This needs the common resources proto as a reference,
   # but it won't generate anything for it.
   $PROTOC \
@@ -105,7 +114,7 @@ generate_microgenerator() {
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $API_SRC_DIR/*.proto \
-    $GOOGLEAPIS/google/cloud/common_resources.proto \
+    $COMMON_RESOURCES_PROTO \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
   # The microgenerator currently creates Google.Cloud directories due to being given
