@@ -24,17 +24,18 @@ namespace Grafeas.V1 {
     static CommonReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdncmFmZWFzL3YxL2NvbW1vbi5wcm90bxIKZ3JhZmVhcy52MSIoCgpSZWxh",
-            "dGVkVXJsEgsKA3VybBgBIAEoCRINCgVsYWJlbBgCIAEoCSI1CglTaWduYXR1",
-            "cmUSEQoJc2lnbmF0dXJlGAEgASgMEhUKDXB1YmxpY19rZXlfaWQYAiABKAkq",
-            "mAEKCE5vdGVLaW5kEhkKFU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEKDVZV",
-            "TE5FUkFCSUxJVFkQARIJCgVCVUlMRBACEgkKBUlNQUdFEAMSCwoHUEFDS0FH",
-            "RRAEEg4KCkRFUExPWU1FTlQQBRINCglESVNDT1ZFUlkQBhIPCgtBVFRFU1RB",
-            "VElPThAHEgsKB1VQR1JBREUQCEJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtn",
-            "cmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "ChdncmFmZWFzL3YxL2NvbW1vbi5wcm90bxIKZ3JhZmVhcy52MRoZZ29vZ2xl",
+            "L2FwaS9yZXNvdXJjZS5wcm90byIoCgpSZWxhdGVkVXJsEgsKA3VybBgBIAEo",
+            "CRINCgVsYWJlbBgCIAEoCSI1CglTaWduYXR1cmUSEQoJc2lnbmF0dXJlGAEg",
+            "ASgMEhUKDXB1YmxpY19rZXlfaWQYAiABKAkqmAEKCE5vdGVLaW5kEhkKFU5P",
+            "VEVfS0lORF9VTlNQRUNJRklFRBAAEhEKDVZVTE5FUkFCSUxJVFkQARIJCgVC",
+            "VUlMRBACEgkKBUlNQUdFEAMSCwoHUEFDS0FHRRAEEg4KCkRFUExPWU1FTlQQ",
+            "BRINCglESVNDT1ZFUlkQBhIPCgtBVFRFU1RBVElPThAHEgsKB1VQR1JBREUQ",
+            "CEJ8Cg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JB6kEoChJn",
+            "cmFmZWFzLmlvL1Byb2plY3QSEnByb2plY3RzL3twcm9qZWN0fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.NoteKind), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.RelatedUrl), global::Grafeas.V1.RelatedUrl.Parser, new[]{ "Url", "Label" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Signature), global::Grafeas.V1.Signature.Parser, new[]{ "Signature_", "PublicKeyId" }, null, null, null)
