@@ -15,7 +15,6 @@
 namespace Google.Cloud.DevTools.ContainerAnalysis.V1.SmokeTests
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Grafeas.V1;
     using System;
 
