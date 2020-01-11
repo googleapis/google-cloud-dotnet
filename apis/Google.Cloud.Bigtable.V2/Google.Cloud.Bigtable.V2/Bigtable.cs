@@ -645,9 +645,6 @@ namespace Google.Cloud.Bigtable.V2 {
         /// this CellChunk is a continuation of the same row as the previous
         /// CellChunk in the response stream, even if that CellChunk was in a
         /// previous ReadRowsResponse message.
-        ///
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pb::ByteString RowKey {
@@ -1259,9 +1256,6 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Note that row keys in this list may not have ever been written to or read
     /// from, and users should therefore not make any assumptions about the row key
     /// structure that are specific to their use case.
-    ///
-    /// Classified as IDENTIFYING_ID to provide context around data accesses for
-    /// auditing systems.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString RowKey {
@@ -1464,9 +1458,6 @@ namespace Google.Cloud.Bigtable.V2 {
     private pb::ByteString rowKey_ = pb::ByteString.Empty;
     /// <summary>
     /// Required. The key of the row to which the mutation should be applied.
-    ///
-    /// Classified as IDENTIFYING_ID to provide context around data accesses for
-    /// auditing systems.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString RowKey {
@@ -1959,9 +1950,6 @@ namespace Google.Cloud.Bigtable.V2 {
         private pb::ByteString rowKey_ = pb::ByteString.Empty;
         /// <summary>
         /// The key of the row to which the `mutations` should be applied.
-        ///
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pb::ByteString RowKey {
@@ -2474,9 +2462,6 @@ namespace Google.Cloud.Bigtable.V2 {
     private pb::ByteString rowKey_ = pb::ByteString.Empty;
     /// <summary>
     /// Required. The key of the row to which the conditional mutation should be applied.
-    ///
-    /// Classified as IDENTIFYING_ID to provide context around data accesses for
-    /// auditing systems.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString RowKey {
@@ -2906,9 +2891,6 @@ namespace Google.Cloud.Bigtable.V2 {
     private pb::ByteString rowKey_ = pb::ByteString.Empty;
     /// <summary>
     /// Required. The key of the row to which the read/modify/write rules should be applied.
-    ///
-    /// Classified as IDENTIFYING_ID to provide context around data accesses for
-    /// auditing systems.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString RowKey {
