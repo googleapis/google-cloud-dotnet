@@ -691,6 +691,22 @@
   },
 
   {
+    "id": "Google.Cloud.Recommender.V1",
+    "generator": "micro",
+    "protoPath": "google/cloud/recommender/v1",
+    "productName": "Google Cloud Recommender",
+    "productUrl": "https://cloud.google.com/recommender/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library for the Recommender API, which provides usage recommendations for Cloud products and services.",
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Grpc.Core": "1.22.1"
+    },
+    "tags": [ "Recommender" ]
+  },
+
+  {
     "id": "Google.Cloud.Redis.V1",
     "generator": "micro",
     "protoPath": "google/cloud/redis/v1",
