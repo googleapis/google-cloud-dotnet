@@ -405,7 +405,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             RecommenderName parent = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
             string filter = "";
             // Make the request
-            PagedEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendations(parent, filter);
+            PagedEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendations(parent, filter: filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Recommendation item in response)
@@ -451,7 +451,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             RecommenderName parent = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
             string filter = "";
             // Make the request
-            PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendationsAsync(parent, filter);
+            PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendationsAsync(parent, filter: filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Recommendation item) =>
