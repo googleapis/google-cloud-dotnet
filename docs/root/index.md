@@ -71,6 +71,7 @@ GA:
 Beta:
 
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
+- [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.OsLogin.V1Beta](Google.Cloud.OsLogin.V1Beta/index.html)
 - [Google.Cloud.Recommender.V1](Google.Cloud.Recommender.V1/index.html)
