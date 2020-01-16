@@ -3583,7 +3583,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3615,7 +3615,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3644,7 +3644,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3676,7 +3676,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3708,7 +3708,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3737,7 +3737,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3769,7 +3769,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3811,7 +3811,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3850,7 +3850,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3892,7 +3892,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3934,7 +3934,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>
@@ -3973,7 +3973,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity Type ID&gt;`.
         /// </param>
         /// <param name="entityValues">
-        /// Required. The canonical `values` of the entities to delete. Note that
+        /// Required. The reference `values` of the entities to delete. Note that
         /// these are not fully-qualified names, i.e. they don't start with
         /// `projects/&lt;Project ID&gt;`.
         /// </param>

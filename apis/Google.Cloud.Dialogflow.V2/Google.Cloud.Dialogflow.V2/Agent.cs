@@ -641,7 +641,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         [pbr::OriginalName("MATCH_MODE_HYBRID")] Hybrid = 1,
         /// <summary>
         /// Can be used for agents with a large number of examples in intents,
-        /// especially the ones using @sys.any or very large developer entities.
+        /// especially the ones using @sys.any or very large custom entities.
         /// </summary>
         [pbr::OriginalName("MATCH_MODE_ML_ONLY")] MlOnly = 2,
       }
