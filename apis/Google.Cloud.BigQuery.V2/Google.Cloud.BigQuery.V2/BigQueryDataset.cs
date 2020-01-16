@@ -209,6 +209,38 @@ namespace Google.Cloud.BigQuery.V2
         public TableReference GetTableReference(string tableId) => _client.GetTableReference(Reference.ProjectId, Reference.DatasetId, tableId);
 
         /// <summary>
+        /// Lists the models within this dataset.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.ListModels(DatasetReference, ListModelsOptions)"/>.
+        /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A sequence of models within this dataset.</returns>
+        public PagedEnumerable<ListModelsResponse, BigQueryModel> ListModels(ListModelsOptions options = null) => 
+            _client.ListModels(Reference, options);
+
+        /// <summary>
+        /// Retrieves a model within this dataset.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="BigQueryClient.GetModel(ModelReference, GetModelOptions)"/>.
+        /// </summary>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The requested model.</returns>
+        public BigQueryModel GetModel(string modelId, GetModelOptions options = null) =>
+            _client.GetModel(GetModelReference(modelId), options);
+
+        /// <summary>
+        /// Creates a <see cref="ModelReference"/> for a model within this dataset.
+        /// </summary>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <returns>A <see cref="ModelReference"/> representing the requested model.</returns>
+        public ModelReference GetModelReference(string modelId) => _client.GetModelReference(Reference.ProjectId, Reference.DatasetId, modelId);
+
+        /// <summary>
         /// Deletes this dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.DeleteDataset(DatasetReference, DeleteDatasetOptions)"/>.
         /// </summary>
@@ -393,6 +425,32 @@ namespace Google.Cloud.BigQuery.V2
         /// the existing or new table.</returns>
         public Task<BigQueryTable> GetOrCreateTableAsync(string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
             _client.GetOrCreateTableAsync(GetTableReference(tableId), schema, getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously lists the models within this dataset.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.ListModelsAsync(DatasetReference, ListModelsOptions)"/>.
+        /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of models within this dataset.</returns>
+        public PagedAsyncEnumerable<ListModelsResponse, BigQueryModel> ListModelsAsync(ListModelsOptions options = null) =>
+            _client.ListModelsAsync(Reference, options);
+
+        /// <summary>
+        /// Asynchronously retrieves a model within this dataset.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="BigQueryClient.GetModel(ModelReference, GetModelOptions)"/>.
+        /// </summary>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public Task<BigQueryModel> GetModelAsync(string modelId, GetModelOptions options = null) =>
+            _client.GetModelAsync(GetModelReference(modelId), options);
 
         /// <summary>
         /// Deletes this dataset.

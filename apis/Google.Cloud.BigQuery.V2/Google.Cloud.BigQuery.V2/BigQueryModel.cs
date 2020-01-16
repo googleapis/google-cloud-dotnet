@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -61,5 +63,64 @@ namespace Google.Cloud.BigQuery.V2
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             Resource = GaxPreconditions.CheckNotNull(resource, nameof(resource));
         }
+
+        /// <summary>
+        /// Patches this model with fields in the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.PatchModel(ModelReference, Model, PatchModelOptions)"/>.
+        /// </remarks>
+        /// <param name="resource">The resource to patch with. Must not be null.</param>
+        /// <param name="matchETag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated model.</returns>
+        public BigQueryModel Patch(Model resource, bool matchETag, PatchModelOptions options = null)
+        {
+            if (matchETag)
+            {
+                resource.ETag = Resource.ETag;
+            }
+            return _client.PatchModel(Reference, resource, options);
+        }
+
+        /// <summary>
+        /// Deletes this model.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="BigQueryClient.DeleteModel(ModelReference, DeleteModelOptions)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Delete(DeleteModelOptions options = null) => _client.DeleteModel(Reference, options);
+
+        /// <summary>
+        /// Asynchronously patches this model with fields in the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.PatchModelAsync(ModelReference, Model, PatchModelOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="resource">The resource to patch with. Must not be null.</param>
+        /// <param name="matchETag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated model.</returns>
+        public Task<BigQueryModel> PatchAsync(Model resource, bool matchETag, PatchModelOptions options = null, CancellationToken cancellationToken = default)
+        {
+            if (matchETag)
+            {
+                resource.ETag = Resource.ETag;
+            }
+            return _client.PatchModelAsync(Reference, resource, options, cancellationToken);
+        }
+
+        /// <summary>
+        /// Asynchronously deletes this model.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="BigQueryClient.DeleteModelAsync(ModelReference, DeleteModelOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public Task DeleteAsync(DeleteModelOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.DeleteModelAsync(Reference, options, cancellationToken);
     }
 }
