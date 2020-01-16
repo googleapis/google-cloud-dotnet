@@ -34,7 +34,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             ListRecommendationsRequest request = new ListRecommendationsRequest
             {
-                ParentAsRecommenderName = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                ParentAsRecommenderName = RecommenderName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
                 Filter = "",
             };
             // Make the request
@@ -83,7 +83,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             ListRecommendationsRequest request = new ListRecommendationsRequest
             {
-                ParentAsRecommenderName = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
+                ParentAsRecommenderName = RecommenderName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]"),
                 Filter = "",
             };
             // Make the request
@@ -220,7 +220,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = RecommenderClient.Create();
             // Initialize request argument(s)
-            RecommenderName parent = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
+            RecommenderName parent = RecommenderName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
             // Make the request
             PagedEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendations(parent);
 
@@ -265,7 +265,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
             // Initialize request argument(s)
-            RecommenderName parent = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
+            RecommenderName parent = RecommenderName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
             // Make the request
             PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendationsAsync(parent);
 
@@ -402,7 +402,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = RecommenderClient.Create();
             // Initialize request argument(s)
-            RecommenderName parent = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
+            RecommenderName parent = RecommenderName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
             string filter = "";
             // Make the request
             PagedEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendations(parent, filter: filter);
@@ -448,7 +448,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
             // Initialize request argument(s)
-            RecommenderName parent = new RecommenderName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
+            RecommenderName parent = RecommenderName.FromProjectLocationRecommender("[PROJECT]", "[LOCATION]", "[RECOMMENDER]");
             string filter = "";
             // Make the request
             PagedAsyncEnumerable<ListRecommendationsResponse, Recommendation> response = recommenderClient.ListRecommendationsAsync(parent, filter: filter);
@@ -496,7 +496,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             // Make the request
             Recommendation response = recommenderClient.GetRecommendation(request);
@@ -513,7 +513,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             // Make the request
             Recommendation response = await recommenderClient.GetRecommendationAsync(request);
@@ -554,7 +554,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = RecommenderClient.Create();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             // Make the request
             Recommendation response = recommenderClient.GetRecommendation(name);
             // End snippet
@@ -568,7 +568,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             // Make the request
             Recommendation response = await recommenderClient.GetRecommendationAsync(name);
             // End snippet
@@ -583,7 +583,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata = { { "", "" }, },
                 Etag = "",
             };
@@ -602,7 +602,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata = { { "", "" }, },
                 Etag = "",
             };
@@ -649,7 +649,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = RecommenderClient.Create();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
             string etag = "";
             // Make the request
@@ -665,7 +665,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
             string etag = "";
             // Make the request
@@ -682,7 +682,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata = { { "", "" }, },
                 Etag = "",
             };
@@ -701,7 +701,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata = { { "", "" }, },
                 Etag = "",
             };
@@ -748,7 +748,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = RecommenderClient.Create();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
             string etag = "";
             // Make the request
@@ -764,7 +764,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
             string etag = "";
             // Make the request
@@ -781,7 +781,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata = { { "", "" }, },
                 Etag = "",
             };
@@ -800,7 +800,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Initialize request argument(s)
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata = { { "", "" }, },
                 Etag = "",
             };
@@ -847,7 +847,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = RecommenderClient.Create();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
             string etag = "";
             // Make the request
@@ -863,7 +863,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // Create client
             RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
             // Initialize request argument(s)
-            RecommendationName name = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
+            RecommendationName name = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]");
             IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
             string etag = "";
             // Make the request
