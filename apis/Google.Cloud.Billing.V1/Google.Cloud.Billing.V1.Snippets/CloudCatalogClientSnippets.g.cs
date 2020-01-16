@@ -115,6 +115,92 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListServices</summary>
+        public void ListServices()
+        {
+            // Snippet: ListServices(string, int?, CallSettings)
+            // Create client
+            CloudCatalogClient cloudCatalogClient = CloudCatalogClient.Create();
+            // Make the request
+            PagedEnumerable<ListServicesResponse, Service> response = cloudCatalogClient.ListServices();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Service item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListServicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Service item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Service> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Service item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServices</summary>
+        public async Task ListServicesAsync()
+        {
+            // Snippet: ListServicesAsync(string, int?, CallSettings)
+            // Create client
+            CloudCatalogClient cloudCatalogClient = await CloudCatalogClient.CreateAsync();
+            // Make the request
+            PagedAsyncEnumerable<ListServicesResponse, Service> response = cloudCatalogClient.ListServicesAsync();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Service item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListServicesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Service item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Service> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Service item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSkus</summary>
         public void ListSkus_RequestObject()
         {
