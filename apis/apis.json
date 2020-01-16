@@ -158,17 +158,18 @@
     "protoPath": "google/cloud/billing/v1",
     "productName": "Google Cloud Billing API",
     "productUrl": "https://cloud.google.com/billing/docs/",
-    "version": "1.0.0",
+    "version": "2.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Billing API, which allows you to define a budget plan and the rules to execute as spend is tracked against that plan.",
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Google.Cloud.Iam.V1": "1.3.0",
-      "Grpc.Core": "1.22.1"
+      "Google.Api.Gax.Grpc": "3.0.0-alpha00",
+      "Google.Cloud.Iam.V1": "project",
+      "Grpc.Core": "2.25.0"
     },
-    "tags": [ "Billing" ]
+    "tags": [
+      "Billing"
+    ]
   },
-
   {
     "id": "Google.Cloud.Container.V1",
     "generator": "micro",
@@ -834,16 +835,14 @@
     "protoPath": "google/cloud/recommender/v1",
     "productName": "Google Cloud Recommender",
     "productUrl": "https://cloud.google.com/recommender/",
-    "version": "1.0.0",
+    "version": "2.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library for the Recommender API, which provides usage recommendations for Cloud products and services.",
-    "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Grpc.Core": "1.22.1"
-    },
-    "tags": [ "Recommender" ]
+    "dependencies": {},
+    "tags": [
+      "Recommender"
+    ]
   },
-
   {
     "id": "Google.Cloud.Redis.V1",
     "generator": "micro",
