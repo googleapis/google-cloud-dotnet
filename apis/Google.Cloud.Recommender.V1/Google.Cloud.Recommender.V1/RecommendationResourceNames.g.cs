@@ -23,95 +23,247 @@ namespace Google.Cloud.Recommender.V1
     /// <summary>Resource name for the <c>Recommendation</c> resource.</summary>
     public sealed partial class RecommendationName : gax::IResourceName, sys::IEquatable<RecommendationName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}");
-
-        /// <summary>
-        /// Parses the given <c>Recommendation</c> resource name in string form into a new
-        /// <see cref="RecommendationName"/> instance.
-        /// </summary>
-        /// <param name="recommendationName">
-        /// The <c>Recommendation</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <returns>The parsed <see cref="RecommendationName"/> if successful.</returns>
-        public static RecommendationName Parse(string recommendationName)
+        /// <summary>The possible contents of <see cref="RecommendationName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(recommendationName, nameof(recommendationName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(recommendationName);
-            return new RecommendationName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
+            /// .
+            /// </summary>
+            ProjectLocationRecommenderRecommendation = 1
         }
 
+        private static gax::PathTemplate s_projectLocationRecommenderRecommendation = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}");
+
+        /// <summary>Creates a <see cref="RecommendationName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RecommendationName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RecommendationName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RecommendationName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="RecommendationName"/>
-        /// instance.
+        /// Creates a <see cref="RecommendationName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommendationId">The <c>Recommendation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RecommendationName"/> constructed from the provided ids.</returns>
+        public static RecommendationName FromProjectLocationRecommenderRecommendation(string projectId, string locationId, string recommenderId, string recommendationId) =>
+            new RecommendationName(ResourceNameType.ProjectLocationRecommenderRecommendation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)), recommendationId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommendationId, nameof(recommendationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecommendationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommendationId">The <c>Recommendation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecommendationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string recommenderId, string recommendationId) =>
+            FormatProjectLocationRecommenderRecommendation(projectId, locationId, recommenderId, recommendationId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecommendationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommendationId">The <c>Recommendation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecommendationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>.
+        /// </returns>
+        public static string FormatProjectLocationRecommenderRecommendation(string projectId, string locationId, string recommenderId, string recommendationId) =>
+            s_projectLocationRecommenderRecommendation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recommendationId, nameof(recommendationId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RecommendationName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="recommendationName"/>
-        /// is <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
         /// </remarks>
-        /// <param name="recommendationName">
-        /// The <c>Recommendation</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="RecommendationName"/>, or <c>null</c> if parsing fails.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string recommendationName, out RecommendationName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(recommendationName, nameof(recommendationName));
-            if (s_template.TryParseName(recommendationName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new RecommendationName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="RecommendationName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="recommendationId">The <c>Recommendation</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="RecommendationName"/>.</returns>
-        public static string Format(string projectId, string locationId, string recommenderId, string recommendationId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(recommenderId, nameof(recommenderId)), gax::GaxPreconditions.CheckNotNull(recommendationId, nameof(recommendationId)));
+        /// <param name="recommendationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RecommendationName"/> if successful.</returns>
+        public static RecommendationName Parse(string recommendationName) => Parse(recommendationName, false);
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="RecommendationName"/> resource name class from its component
-        /// parts.
+        /// Parses the given resource name string into a new <see cref="RecommendationName"/> instance; optionally
+        /// allowing an unparseable resource name.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="recommendationId">The <c>Recommendation</c> ID. Must not be <c>null</c>.</param>
-        public RecommendationName(string projectId, string locationId, string recommenderId, string recommendationId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="recommendationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RecommendationName"/> if successful.</returns>
+        public static RecommendationName Parse(string recommendationName, bool allowUnparsed) =>
+            TryParse(recommendationName, allowUnparsed, out RecommendationName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RecommendationName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="recommendationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RecommendationName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string recommendationName, out RecommendationName result) =>
+            TryParse(recommendationName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RecommendationName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="recommendationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RecommendationName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string recommendationName, bool allowUnparsed, out RecommendationName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-            RecommenderId = gax::GaxPreconditions.CheckNotNull(recommenderId, nameof(recommenderId));
-            RecommendationId = gax::GaxPreconditions.CheckNotNull(recommendationId, nameof(recommendationId));
+            gax::GaxPreconditions.CheckNotNull(recommendationName, nameof(recommendationName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRecommenderRecommendation.TryParseName(recommendationName, out resourceName))
+            {
+                result = FromProjectLocationRecommenderRecommendation(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(recommendationName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private RecommendationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string recommendationId = null, string recommenderId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RecommendationId = recommendationId;
+            RecommenderId = recommenderId;
+        }
 
-        /// <summary>The <c>Location</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RecommendationName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommendationId">The <c>Recommendation</c> ID. Must not be <c>null</c> or empty.</param>
+        public RecommendationName(string projectId, string locationId, string recommenderId, string recommendationId) : this(ResourceNameType.ProjectLocationRecommenderRecommendation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)), recommendationId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommendationId, nameof(recommendationId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string LocationId { get; }
 
-        /// <summary>The <c>Recommender</c> ID. Never <c>null</c>.</summary>
-        public string RecommenderId { get; }
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
 
-        /// <summary>The <c>Recommendation</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Recommendation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
         public string RecommendationId { get; }
 
-        /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        /// <summary>
+        /// The <c>Recommender</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RecommenderId { get; }
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, RecommenderId, RecommendationId);
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRecommenderRecommendation: return s_projectLocationRecommenderRecommendation.Expand(ProjectId, LocationId, RecommenderId, RecommendationId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();
@@ -132,88 +284,224 @@ namespace Google.Cloud.Recommender.V1
     /// <summary>Resource name for the <c>Recommender</c> resource.</summary>
     public sealed partial class RecommenderName : gax::IResourceName, sys::IEquatable<RecommenderName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}");
-
-        /// <summary>
-        /// Parses the given <c>Recommender</c> resource name in string form into a new <see cref="RecommenderName"/>
-        /// instance.
-        /// </summary>
-        /// <param name="recommenderName">
-        /// The <c>Recommender</c> resource name in string form. Must not be <c>null</c>.
-        /// </param>
-        /// <returns>The parsed <see cref="RecommenderName"/> if successful.</returns>
-        public static RecommenderName Parse(string recommenderName)
+        /// <summary>The possible contents of <see cref="RecommenderName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(recommenderName, nameof(recommenderName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(recommenderName);
-            return new RecommenderName(resourceName[0], resourceName[1], resourceName[2]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
+            /// </summary>
+            ProjectLocationRecommender = 1
         }
 
+        private static gax::PathTemplate s_projectLocationRecommender = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}");
+
+        /// <summary>Creates a <see cref="RecommenderName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RecommenderName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RecommenderName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RecommenderName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="RecommenderName"/>
-        /// instance.
+        /// Creates a <see cref="RecommenderName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RecommenderName"/> constructed from the provided ids.</returns>
+        public static RecommenderName FromProjectLocationRecommender(string projectId, string locationId, string recommenderId) =>
+            new RecommenderName(ResourceNameType.ProjectLocationRecommender, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecommenderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecommenderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string recommenderId) =>
+            FormatProjectLocationRecommender(projectId, locationId, recommenderId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecommenderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecommenderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
+        /// </returns>
+        public static string FormatProjectLocationRecommender(string projectId, string locationId, string recommenderId) =>
+            s_projectLocationRecommender.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="RecommenderName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recommenders/{recommender}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="recommenderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RecommenderName"/> if successful.</returns>
+        public static RecommenderName Parse(string recommenderName) => Parse(recommenderName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RecommenderName"/> instance; optionally allowing
+        /// an unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="recommenderName"/> is
-        /// <c>null</c>, as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recommenders/{recommender}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="recommenderName">
-        /// The <c>Recommender</c> resource name in string form. Must not be <c>null</c>.
+        /// <param name="recommenderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="RecommenderName"/>, or <c>null</c> if parsing fails.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string recommenderName, out RecommenderName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(recommenderName, nameof(recommenderName));
-            if (s_template.TryParseName(recommenderName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new RecommenderName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="RecommenderName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="RecommenderName"/>.</returns>
-        public static string Format(string projectId, string locationId, string recommenderId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNull(recommenderId, nameof(recommenderId)));
+        /// <returns>The parsed <see cref="RecommenderName"/> if successful.</returns>
+        public static RecommenderName Parse(string recommenderName, bool allowUnparsed) =>
+            TryParse(recommenderName, allowUnparsed, out RecommenderName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="RecommenderName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="RecommenderName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c>.</param>
-        public RecommenderName(string projectId, string locationId, string recommenderId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recommenders/{recommender}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="recommenderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RecommenderName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string recommenderName, out RecommenderName result) =>
+            TryParse(recommenderName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RecommenderName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recommenders/{recommender}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="recommenderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RecommenderName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string recommenderName, bool allowUnparsed, out RecommenderName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-            RecommenderId = gax::GaxPreconditions.CheckNotNull(recommenderId, nameof(recommenderId));
+            gax::GaxPreconditions.CheckNotNull(recommenderName, nameof(recommenderName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRecommender.TryParseName(recommenderName, out resourceName))
+            {
+                result = FromProjectLocationRecommender(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(recommenderName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private RecommenderName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string recommenderId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RecommenderId = recommenderId;
+        }
 
-        /// <summary>The <c>Location</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RecommenderName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        public RecommenderName(string projectId, string locationId, string recommenderId) : this(ResourceNameType.ProjectLocationRecommender, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string LocationId { get; }
 
-        /// <summary>The <c>Recommender</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Recommender</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string RecommenderId { get; }
 
         /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, RecommenderId);
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRecommender: return s_projectLocationRecommender.Expand(ProjectId, LocationId, RecommenderId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();
