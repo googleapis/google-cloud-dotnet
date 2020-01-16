@@ -37,7 +37,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             // Make the request
             BillingAccount response = cloudBillingClient.GetBillingAccount(request);
@@ -54,7 +54,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             // Make the request
             BillingAccount response = await cloudBillingClient.GetBillingAccountAsync(request);
@@ -95,7 +95,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            BillingAccountName name = new BillingAccountName("[BILLING_ACCOUNT]");
+            BillingAccountName name = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]");
             // Make the request
             BillingAccount response = cloudBillingClient.GetBillingAccount(name);
             // End snippet
@@ -109,7 +109,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            BillingAccountName name = new BillingAccountName("[BILLING_ACCOUNT]");
+            BillingAccountName name = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]");
             // Make the request
             BillingAccount response = await cloudBillingClient.GetBillingAccountAsync(name);
             // End snippet
@@ -300,7 +300,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
                 UpdateMask = new FieldMask(),
             };
@@ -319,7 +319,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
                 UpdateMask = new FieldMask(),
             };
@@ -364,7 +364,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            BillingAccountName name = new BillingAccountName("[BILLING_ACCOUNT]");
+            BillingAccountName name = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]");
             BillingAccount account = new BillingAccount();
             // Make the request
             BillingAccount response = cloudBillingClient.UpdateBillingAccount(name, account);
@@ -379,7 +379,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            BillingAccountName name = new BillingAccountName("[BILLING_ACCOUNT]");
+            BillingAccountName name = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]");
             BillingAccount account = new BillingAccount();
             // Make the request
             BillingAccount response = await cloudBillingClient.UpdateBillingAccountAsync(name, account);
@@ -455,7 +455,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             ListProjectBillingInfoRequest request = new ListProjectBillingInfoRequest
             {
-                BillingAccountName = new BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             // Make the request
             PagedEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> response = cloudBillingClient.ListProjectBillingInfo(request);
@@ -503,7 +503,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             ListProjectBillingInfoRequest request = new ListProjectBillingInfoRequest
             {
-                BillingAccountName = new BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> response = cloudBillingClient.ListProjectBillingInfoAsync(request);
@@ -639,7 +639,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            BillingAccountName name = new BillingAccountName("[BILLING_ACCOUNT]");
+            BillingAccountName name = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]");
             // Make the request
             PagedEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> response = cloudBillingClient.ListProjectBillingInfo(name);
 
@@ -684,7 +684,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            BillingAccountName name = new BillingAccountName("[BILLING_ACCOUNT]");
+            BillingAccountName name = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]");
             // Make the request
             PagedAsyncEnumerable<ListProjectBillingInfoResponse, ProjectBillingInfo> response = cloudBillingClient.ListProjectBillingInfoAsync(name);
 
@@ -849,7 +849,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -867,7 +867,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -909,7 +909,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = cloudBillingClient.GetIamPolicy(resource);
             // End snippet
@@ -923,7 +923,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await cloudBillingClient.GetIamPolicyAsync(resource);
             // End snippet
@@ -938,7 +938,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -956,7 +956,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = cloudBillingClient.SetIamPolicy(resource, policy);
@@ -1015,7 +1015,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = await cloudBillingClient.SetIamPolicyAsync(resource, policy);
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -1049,7 +1049,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = cloudBillingClient.TestIamPermissions(resource, permissions);
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await cloudBillingClient.TestIamPermissionsAsync(resource, permissions);

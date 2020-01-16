@@ -210,7 +210,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             ListSkusRequest request = new ListSkusRequest
             {
-                ParentAsServiceName = new ServiceName("[SERVICE]"),
+                ParentAsServiceName = ServiceName.FromService("[SERVICE]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
                 CurrencyCode = "",
@@ -261,7 +261,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Initialize request argument(s)
             ListSkusRequest request = new ListSkusRequest
             {
-                ParentAsServiceName = new ServiceName("[SERVICE]"),
+                ParentAsServiceName = ServiceName.FromService("[SERVICE]"),
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
                 CurrencyCode = "",
@@ -400,7 +400,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudCatalogClient cloudCatalogClient = CloudCatalogClient.Create();
             // Initialize request argument(s)
-            ServiceName parent = new ServiceName("[SERVICE]");
+            ServiceName parent = ServiceName.FromService("[SERVICE]");
             // Make the request
             PagedEnumerable<ListSkusResponse, Sku> response = cloudCatalogClient.ListSkus(parent);
 
@@ -445,7 +445,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // Create client
             CloudCatalogClient cloudCatalogClient = await CloudCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            ServiceName parent = new ServiceName("[SERVICE]");
+            ServiceName parent = ServiceName.FromService("[SERVICE]");
             // Make the request
             PagedAsyncEnumerable<ListSkusResponse, Sku> response = cloudCatalogClient.ListSkusAsync(parent);
 
