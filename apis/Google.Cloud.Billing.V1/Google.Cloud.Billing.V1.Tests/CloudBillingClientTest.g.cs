@@ -37,11 +37,11 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -59,11 +59,11 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -83,11 +83,11 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -105,11 +105,11 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -129,11 +129,11 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -151,11 +151,11 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -175,13 +175,13 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
                 UpdateMask = new wkt::FieldMask(),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -199,13 +199,13 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
                 UpdateMask = new wkt::FieldMask(),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -225,12 +225,12 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -248,12 +248,12 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -273,12 +273,12 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -296,12 +296,12 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Account = new BillingAccount(),
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -325,7 +325,7 @@ namespace Google.Cloud.Billing.V1.Tests
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -347,7 +347,7 @@ namespace Google.Cloud.Billing.V1.Tests
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -371,7 +371,7 @@ namespace Google.Cloud.Billing.V1.Tests
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -393,7 +393,7 @@ namespace Google.Cloud.Billing.V1.Tests
             };
             BillingAccount expectedResponse = new BillingAccount
             {
-                BillingAccountName = new gagr::BillingAccountName("[BILLING_ACCOUNT]"),
+                BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
                 Open = true,
                 DisplayName = "display_name137f65c2",
                 MasterBillingAccount = "master_billing_account42bd6a27",
@@ -601,7 +601,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -626,7 +626,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -653,7 +653,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -677,7 +677,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -703,7 +703,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -727,7 +727,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -753,7 +753,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -778,7 +778,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -805,7 +805,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -830,7 +830,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -857,7 +857,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -882,7 +882,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -909,7 +909,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -935,7 +935,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -963,7 +963,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -989,7 +989,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
