@@ -234,6 +234,31 @@ namespace Google.Cloud.BigQuery.V2
             };
 
         /// <summary>
+        /// Creates a <see cref="ModelReference"/> from the given dataset ID and model ID,
+        /// using this client's project ID.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <returns>A <see cref="ModelReference"/> representing the requested model.</returns>
+        public ModelReference GetModelReference(string datasetId, string modelId) =>
+            GetModelReference(ProjectId, datasetId, modelId);
+
+        /// <summary>
+        /// Creates a <see cref="ModelReference"/> from the given project ID, dataset ID and model ID.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <returns>A <see cref="ModelReference"/> representing the requested model.</returns>
+        public ModelReference GetModelReference(string projectId, string datasetId, string modelId) =>
+            new ModelReference
+            {
+                ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                DatasetId = GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
+                ModelId = GaxPreconditions.CheckNotNull(modelId, nameof(modelId)),
+            };
+
+        /// <summary>
         /// Creates a set of <see cref="JsonSerializerSettings"/> suitable for specifying in
         /// <see cref="BigqueryService"/> construction. The settings have Json.NET date parsing
         /// detection disabled.
