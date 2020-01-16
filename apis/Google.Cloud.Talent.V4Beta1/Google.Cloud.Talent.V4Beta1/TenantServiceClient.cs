@@ -143,13 +143,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 300000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateTenantSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -173,13 +173,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 300000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings GetTenantSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -202,13 +202,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 300000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings UpdateTenantSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -232,13 +232,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 300000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteTenantSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -262,13 +262,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 300000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ListTenantsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
