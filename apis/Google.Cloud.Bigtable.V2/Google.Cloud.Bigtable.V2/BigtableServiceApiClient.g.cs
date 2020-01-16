@@ -25,7 +25,6 @@ using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using linq = System.Linq;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -568,9 +567,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -601,9 +597,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -634,9 +627,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -659,9 +649,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -692,9 +679,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -725,9 +709,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -750,9 +731,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -788,9 +766,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -826,9 +801,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -855,9 +827,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -893,9 +862,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -931,9 +897,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="mutations">
         /// Required. Changes to be atomically applied to the specified row. Entries are applied
@@ -1123,9 +1086,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1176,9 +1136,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1229,9 +1186,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1269,9 +1223,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1322,9 +1273,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1375,9 +1323,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1415,9 +1360,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1473,9 +1415,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1531,9 +1470,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1575,9 +1511,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1633,9 +1566,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1691,9 +1621,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the conditional mutation should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1778,9 +1705,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -1815,9 +1739,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -1852,9 +1773,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -1881,9 +1799,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -1918,9 +1833,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -1955,9 +1867,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -1984,9 +1893,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -2026,9 +1932,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -2068,9 +1971,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -2101,9 +2001,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -2143,9 +2040,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -2185,9 +2079,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the read/modify/write rules should be applied.
-        /// 
-        /// Classified as IDENTIFYING_ID to provide context around data accesses for
-        /// auditing systems.
         /// </param>
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be transformed
@@ -2235,16 +2126,16 @@ namespace Google.Cloud.Bigtable.V2
             _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>(grpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings);
             Modify_ApiCall(ref _callSampleRowKeys);
             Modify_SampleRowKeysApiCall(ref _callSampleRowKeys);
-            _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>(grpcClient.MutateRowAsync, grpcClient.MutateRow, effectiveSettings.MutateRowSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={(sysnet::WebUtility.UrlEncode(request.TableName))}"));
+            _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>(grpcClient.MutateRowAsync, grpcClient.MutateRow, effectiveSettings.MutateRowSettings).WithGoogleRequestParam("table_name", request => request.TableName);
             Modify_ApiCall(ref _callMutateRow);
             Modify_MutateRowApiCall(ref _callMutateRow);
             _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>(grpcClient.MutateRows, effectiveSettings.MutateRowsSettings);
             Modify_ApiCall(ref _callMutateRows);
             Modify_MutateRowsApiCall(ref _callMutateRows);
-            _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={(sysnet::WebUtility.UrlEncode(request.TableName))}"));
+            _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithGoogleRequestParam("table_name", request => request.TableName);
             Modify_ApiCall(ref _callCheckAndMutateRow);
             Modify_CheckAndMutateRowApiCall(ref _callCheckAndMutateRow);
-            _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"table_name={(sysnet::WebUtility.UrlEncode(request.TableName))}"));
+            _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithGoogleRequestParam("table_name", request => request.TableName);
             Modify_ApiCall(ref _callReadModifyWriteRow);
             Modify_ReadModifyWriteRowApiCall(ref _callReadModifyWriteRow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

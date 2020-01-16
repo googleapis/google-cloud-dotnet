@@ -24,7 +24,6 @@ using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -474,10 +473,10 @@ namespace Google.Cloud.Trace.V2
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callBatchWriteSpans = clientHelper.BuildApiCall<BatchWriteSpansRequest, wkt::Empty>(grpcClient.BatchWriteSpansAsync, grpcClient.BatchWriteSpans, effectiveSettings.BatchWriteSpansSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callBatchWriteSpans = clientHelper.BuildApiCall<BatchWriteSpansRequest, wkt::Empty>(grpcClient.BatchWriteSpansAsync, grpcClient.BatchWriteSpans, effectiveSettings.BatchWriteSpansSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callBatchWriteSpans);
             Modify_BatchWriteSpansApiCall(ref _callBatchWriteSpans);
-            _callCreateSpan = clientHelper.BuildApiCall<Span, Span>(grpcClient.CreateSpanAsync, grpcClient.CreateSpan, effectiveSettings.CreateSpanSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={(sysnet::WebUtility.UrlEncode(request.Name))}"));
+            _callCreateSpan = clientHelper.BuildApiCall<Span, Span>(grpcClient.CreateSpanAsync, grpcClient.CreateSpan, effectiveSettings.CreateSpanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateSpan);
             Modify_CreateSpanApiCall(ref _callCreateSpan);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

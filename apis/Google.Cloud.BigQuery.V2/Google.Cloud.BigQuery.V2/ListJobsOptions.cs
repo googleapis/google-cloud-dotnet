@@ -65,6 +65,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public DateTimeOffset? MaxCreationTime { get; set; }
 
+        /// <summary>
+        /// If set, return only child jobs of the specified parent.
+        /// Otherwise, show all top-level jobs.
+        /// </summary>
+        public string ParentJobId { get; set; }
+
         internal void ModifyRequest(ListRequest request)
         {
             if (StateFilter != null)
@@ -103,6 +109,11 @@ namespace Google.Cloud.BigQuery.V2
             if (MinCreationTime > MaxCreationTime)
             {
                 throw new ArgumentException($"{nameof(MinCreationTime)} cannot be later than {nameof(MaxCreationTime)}", "value");
+            }
+
+            if(ParentJobId != null)
+            {
+                request.ParentJobId = ParentJobId;
             }
         }
 

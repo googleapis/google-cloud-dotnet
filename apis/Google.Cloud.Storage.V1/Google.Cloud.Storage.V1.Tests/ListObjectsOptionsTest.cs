@@ -48,6 +48,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 Versions = true,
                 UserProject = "proj",
                 PageToken = "nextpage",
+                Fields = "items(name),nextPageToken"
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
@@ -57,6 +58,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.True(request.Versions);
             Assert.Equal("proj", request.UserProject);
             Assert.Equal("nextpage", request.PageToken);
+            Assert.Equal("items(name),nextPageToken", request.Fields);
         }
     }
 }

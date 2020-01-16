@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using Xunit;
@@ -147,6 +148,28 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") }));
+        }
+
+        // Parameterized test to make it easy to add more test cases.
+        // It looks like we didn't have a problem with pre-1970 dates anyway.
+        // See https://github.com/googleapis/google-cloud-dotnet/issues/4031 for background.
+        [Theory]
+        [InlineData("2004-07-26T15:25:28.173333Z")] // Value is "1.090855528173333E9"
+        public void TimestampRounding(string timestamp)
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var parsedLocally = DateTime.ParseExact(timestamp, "yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'",
+                CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal | DateTimeStyles.AssumeUniversal);
+            // Note: we're deliberately passing the parameter as a string so the conversion happens on the server.
+            // This means we can't use AssertParameterRoundTrip.
+            var parameter = new BigQueryParameter(BigQueryDbType.String, timestamp);
+            var results = client.ExecuteQuery(
+                "SELECT CAST(? AS TIMESTAMP) AS value",
+                new[] { parameter },
+                new QueryOptions { ParameterMode = BigQueryParameterMode.Positional }).ToList();
+            Assert.Equal(1, results.Count);
+            var returned = Assert.IsType<DateTime>(results[0]["value"]);
+            AssertDateTimeEqual(parsedLocally, returned);
         }
 
         private void AssertParameterRoundTrip(BigQueryClient client, BigQueryParameter parameter)

@@ -41,13 +41,15 @@ namespace Google.Cloud.Storage.V1.Tests
                 PageSize = 10,
                 Prefix = "prefix",
                 Projection = Projection.Full,
-                PageToken = "nextpage"
+                PageToken = "nextpage",
+                Fields = "items(name),nextPageToken"
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
             Assert.Equal("prefix", request.Prefix);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.Equal("nextpage", request.PageToken);
+            Assert.Equal("items(name),nextPageToken", request.Fields);
         }
     }
 }

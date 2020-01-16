@@ -22,7 +22,6 @@ using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using sysnet = System.Net;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -697,10 +696,10 @@ namespace Google.Cloud.Debugger.V2
             _callRegisterDebuggee = clientHelper.BuildApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse>(grpcClient.RegisterDebuggeeAsync, grpcClient.RegisterDebuggee, effectiveSettings.RegisterDebuggeeSettings);
             Modify_ApiCall(ref _callRegisterDebuggee);
             Modify_RegisterDebuggeeApiCall(ref _callRegisterDebuggee);
-            _callListActiveBreakpoints = clientHelper.BuildApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse>(grpcClient.ListActiveBreakpointsAsync, grpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={(sysnet::WebUtility.UrlEncode(request.DebuggeeId))}"));
+            _callListActiveBreakpoints = clientHelper.BuildApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse>(grpcClient.ListActiveBreakpointsAsync, grpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId);
             Modify_ApiCall(ref _callListActiveBreakpoints);
             Modify_ListActiveBreakpointsApiCall(ref _callListActiveBreakpoints);
-            _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>(grpcClient.UpdateActiveBreakpointAsync, grpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings).WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={(sysnet::WebUtility.UrlEncode(request.DebuggeeId))}&breakpoint.id={(sysnet::WebUtility.UrlEncode(request.Breakpoint.Id))}"));
+            _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>(grpcClient.UpdateActiveBreakpointAsync, grpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings).WithGoogleRequestParam("debuggee_id", request => request.DebuggeeId).WithGoogleRequestParam("breakpoint.id", request => request.Breakpoint?.Id);
             Modify_ApiCall(ref _callUpdateActiveBreakpoint);
             Modify_UpdateActiveBreakpointApiCall(ref _callUpdateActiveBreakpoint);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

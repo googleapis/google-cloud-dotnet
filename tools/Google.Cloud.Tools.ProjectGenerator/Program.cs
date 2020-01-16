@@ -237,6 +237,18 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 Processes.RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
             }
+            else
+            {
+                // Optimization: don't run "dotnet sln add" if we can find project entries for all the relevant project
+                // references already. This is crude, but speeds up the overall process significantly.
+                var projectLines = File.ReadAllLines(fullFile).Where(line => line.StartsWith("Project(")).ToList();
+                if (projects.Select(p => $"\"{p.Replace("/", "\\")}\"")
+                            .All(expectedProject => projectLines.Any(pl => pl.Contains(expectedProject))))
+                {
+                    return;
+                }
+            }
+
             // It's much faster to run a single process than to run it once per project.
             Processes.RunDotnet(apiRoot, new[] { "sln", solutionFileName, "add" }.Concat(projects).ToArray());
 

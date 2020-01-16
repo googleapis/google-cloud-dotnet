@@ -27,12 +27,12 @@ namespace Grafeas.V1 {
             "ChdncmFmZWFzL3YxL2NvbW1vbi5wcm90bxIKZ3JhZmVhcy52MSIoCgpSZWxh",
             "dGVkVXJsEgsKA3VybBgBIAEoCRINCgVsYWJlbBgCIAEoCSI1CglTaWduYXR1",
             "cmUSEQoJc2lnbmF0dXJlGAEgASgMEhUKDXB1YmxpY19rZXlfaWQYAiABKAkq",
-            "iwEKCE5vdGVLaW5kEhkKFU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEKDVZV",
+            "mAEKCE5vdGVLaW5kEhkKFU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEKDVZV",
             "TE5FUkFCSUxJVFkQARIJCgVCVUlMRBACEgkKBUlNQUdFEAMSCwoHUEFDS0FH",
             "RRAEEg4KCkRFUExPWU1FTlQQBRINCglESVNDT1ZFUlkQBhIPCgtBVFRFU1RB",
-            "VElPThAHQlEKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFi",
-            "BnByb3RvMw=="));
+            "VElPThAHEgsKB1VQR1JBREUQCEJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtn",
+            "cmFmZWFzogIDR1JBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.NoteKind), }, new pbr::GeneratedClrTypeInfo[] {
@@ -80,6 +80,10 @@ namespace Grafeas.V1 {
     /// This represents a logical "role" that can attest to artifacts.
     /// </summary>
     [pbr::OriginalName("ATTESTATION")] Attestation = 7,
+    /// <summary>
+    /// This represents an available package upgrade.
+    /// </summary>
+    [pbr::OriginalName("UPGRADE")] Upgrade = 8,
   }
 
   #endregion

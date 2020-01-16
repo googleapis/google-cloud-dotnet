@@ -173,6 +173,25 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Throws<InvalidOperationException>(() => row["struct"]);
         }
 
+        [Fact]
+        public void TimestampRounding()
+        {
+            var schema = new TableSchemaBuilder
+            {
+                { "timestamp", BigQueryDbType.Timestamp },
+            }.Build();
+            var rawRow = new TableRow
+            {
+                F = new[]
+                {
+                    new TableCell { V = "1.090855528173333E9" },
+                }
+            };
+            var row = new BigQueryRow(rawRow, schema);
+            var expected = new DateTime(2004, 7, 26, 15, 25, 28, DateTimeKind.Utc).AddTicks(1733330);
+            Assert.Equal(expected, (DateTime) row["timestamp"]);
+        }
+
         private JArray CreateArray(params string[] values) => new JArray(values.Select(CreateObject));
 
         private JObject CreateObject(string value) => new JObject { ["v"] = value };
