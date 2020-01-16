@@ -33,11 +33,11 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -60,11 +60,11 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -89,11 +89,11 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -116,11 +116,11 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -145,11 +145,11 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -172,11 +172,11 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -201,7 +201,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -213,7 +213,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -236,7 +236,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -248,7 +248,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -273,7 +273,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -285,7 +285,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -308,7 +308,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -320,7 +320,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -345,7 +345,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -357,7 +357,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -380,7 +380,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -392,7 +392,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -417,7 +417,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -429,7 +429,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -452,7 +452,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -464,7 +464,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -489,7 +489,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -501,7 +501,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -524,7 +524,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -536,7 +536,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -561,7 +561,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -573,7 +573,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -596,7 +596,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -608,7 +608,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -633,7 +633,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -645,7 +645,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -668,7 +668,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -680,7 +680,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -705,7 +705,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -717,7 +717,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -740,7 +740,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -752,7 +752,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -777,7 +777,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -789,7 +789,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
@@ -812,7 +812,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 StateMetadata =
                 {
                     {
@@ -824,7 +824,7 @@ namespace Google.Cloud.Recommender.V1.Tests
             };
             Recommendation expectedResponse = new Recommendation
             {
-                RecommendationName = new RecommendationName("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
                 Description = "description2cf9da67",
                 LastRefreshTime = new wkt::Timestamp(),
                 PrimaryImpact = new Impact(),
