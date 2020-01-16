@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
 using Moq;
@@ -127,6 +126,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var reference = new DerivedBigQueryClient().GetTableReference("p", "datasetid", "tableid");
             Assert.Equal("datasetid", reference.DatasetId);
             Assert.Equal("tableid", reference.TableId);
+            Assert.Equal("p", reference.ProjectId);
+        }
+
+        [Fact]
+        public void GetModelReference_ImplicitProject()
+        {
+            var reference = new DerivedBigQueryClient().GetModelReference("datasetid", "modelid");
+            Assert.Equal("datasetid", reference.DatasetId);
+            Assert.Equal("modelid", reference.ModelId);
+            Assert.Equal(ProjectId, reference.ProjectId);
+        }
+
+        [Fact]
+        public void GetModelReference_ExplicitProject()
+        {
+            var reference = new DerivedBigQueryClient().GetModelReference("p", "datasetid", "modelid");
+            Assert.Equal("datasetid", reference.DatasetId);
+            Assert.Equal("modelid", reference.ModelId);
             Assert.Equal("p", reference.ProjectId);
         }
 
@@ -395,6 +412,62 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.PatchTable(datasetId, tableId, resource, options),
                 client => client.PatchTable(ProjectId, datasetId, tableId, resource, options),
                 client => new BigQueryTable(client, GetTable(reference)).Patch(resource, false, options));
+        }
+
+        [Fact]
+        public void DeleteModelEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var reference = GetModelReference(datasetId, modelId);
+            var options = new DeleteModelOptions();
+            VerifyEquivalent(
+                client => client.DeleteModel(MatchesWhenSerialized(reference), options),
+                client => client.DeleteModel(datasetId, modelId, options),
+                client => client.DeleteModel(ProjectId, datasetId, modelId, options),
+                client => new BigQueryModel(client, new Model { ModelReference = reference }).Delete(options));
+        }
+
+        [Fact]
+        public void GetModelEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var reference = GetModelReference(datasetId, modelId);
+            var options = new GetModelOptions();
+            VerifyEquivalent(new BigQueryModel(new DerivedBigQueryClient(), GetModel(reference)),
+                client => client.GetModel(MatchesWhenSerialized(reference), options),
+                client => client.GetModel(datasetId, modelId, options),
+                client => client.GetModel(ProjectId, datasetId, modelId, options),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).GetModel(modelId, options));
+        }
+
+        [Fact]
+        public void ListModelsEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ListModelsOptions();
+            VerifyEquivalent(new UnimplementedPagedEnumerable<ListModelsResponse, BigQueryModel>(),
+                client => client.ListModels(MatchesWhenSerialized(reference), options),
+                client => client.ListModels(datasetId, options),
+                client => client.ListModels(ProjectId, datasetId, options),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).ListModels(options));
+        }
+
+        [Fact]
+        public void PatchModelEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var reference = GetModelReference(datasetId, modelId);
+            var resource = new Model();
+            var options = new PatchModelOptions();
+            VerifyEquivalent(new BigQueryModel(new DerivedBigQueryClient(), resource),
+                client => client.PatchModel(MatchesWhenSerialized(reference), resource, options),
+                client => client.PatchModel(datasetId, modelId, resource, options),
+                client => client.PatchModel(ProjectId, datasetId, modelId, resource, options),
+                client => new BigQueryModel(client, GetModel(reference)).Patch(resource, false, options));
         }
 
         [Fact]
@@ -1301,6 +1374,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         private static TableReference GetTableReference(string datasetId, string tableId) =>
             new TableReference { ProjectId = ProjectId, DatasetId = datasetId, TableId = tableId };
+
+        private static Model GetModel(string datasetId, string modelId) =>
+            GetModel(GetModelReference(datasetId, modelId));
+
+        private static Model GetModel(ModelReference reference) =>
+            new Model { ModelReference = reference };
+
+        private static ModelReference GetModelReference(string datasetId, string modelId) =>
+            new ModelReference { ProjectId = ProjectId, DatasetId = datasetId, ModelId = modelId };
 
         private static Dataset GetDataset(string datasetId) => GetDataset(GetDatasetReference(datasetId));
 
