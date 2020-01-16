@@ -474,6 +474,50 @@ namespace Google.Cloud.Billing.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists the billing accounts that the current authenticated user has
+        /// permission to
+        /// [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BillingAccount"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccounts(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBillingAccounts(new ListBillingAccountsRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the billing accounts that the current authenticated user has
+        /// permission to
+        /// [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BillingAccount"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccountsAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBillingAccountsAsync(new ListBillingAccountsRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Updates a billing account's fields.
         /// Currently the only field that can be edited is `display_name`.
         /// The current authenticated user must have the `billing.accounts.update`

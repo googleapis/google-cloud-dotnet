@@ -274,6 +274,46 @@ namespace Google.Cloud.Billing.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists all public cloud services.
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListServices(new ListServicesRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all public cloud services.
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListServicesAsync(new ListServicesRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Lists all publicly available SKUs for a given cloud service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
