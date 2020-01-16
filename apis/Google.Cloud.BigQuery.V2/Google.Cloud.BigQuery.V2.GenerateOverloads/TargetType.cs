@@ -24,6 +24,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         Dataset,
         Table,
         Job,
-        Project
+        Project,
+        Model
     }
 }

@@ -1,0 +1,39 @@
+﻿<File>
+  <Method Name="GetModel"
+          TargetType="Model"
+          ReturnType="BigQueryModel">
+    <Comments>
+      <summary>
+        Retrieves {target}.
+      </summary>
+      <returns>The requested model.</returns>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="DeleteModel"
+    TargetType="Model"
+    ReturnType="void">
+    <Comments>
+      <summary>
+        Deletes {target}.
+      </summary>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="PatchModel"
+    TargetType="Model"
+    ReturnType="BigQueryModel">
+    <AdditionalParameters>
+      <Parameter Name="resource" Type="Model" Comment="The model resource representation to use for the patch. Only fields present in the resource will be updated." />
+    </AdditionalParameters>
+    <Comments>
+      <summary>
+        Patches {target} with fields in the given resource.
+      </summary>
+      <remarks>
+        If the resource contains an ETag, it is used for optimistic concurrency validation.
+      </remarks>
+      <returns>The updated model.</returns>
+    </Comments>
+  </Method>
+</File>
