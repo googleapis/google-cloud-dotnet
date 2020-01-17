@@ -25,26 +25,29 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGFueS5wcm90bxIb",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
-            "Gihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvIvgD",
-            "CgdDb21wYW55EgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJ",
-            "QgPgQQISGAoLZXh0ZXJuYWxfaWQYAyABKAlCA+BBAhI2CgRzaXplGAQgASgO",
-            "MiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBhbnlTaXplEhwK",
-            "FGhlYWRxdWFydGVyc19hZGRyZXNzGAUgASgJEhUKDWhpcmluZ19hZ2VuY3kY",
-            "BiABKAgSEAoIZWVvX3RleHQYByABKAkSEwoLd2Vic2l0ZV91cmkYCCABKAkS",
-            "FwoPY2FyZWVyX3NpdGVfdXJpGAkgASgJEhEKCWltYWdlX3VyaRgKIAEoCRIw",
-            "CihrZXl3b3JkX3NlYXJjaGFibGVfam9iX2N1c3RvbV9hdHRyaWJ1dGVzGAsg",
-            "AygJEksKDGRlcml2ZWRfaW5mbxgMIAEoCzIwLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5Db21wYW55LkRlcml2ZWRJbmZvQgPgQQMSFgoJc3VzcGVu",
-            "ZGVkGA0gASgIQgPgQQMaUwoLRGVyaXZlZEluZm8SRAoVaGVhZHF1YXJ0ZXJz",
-            "X2xvY2F0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LkxvY2F0aW9uQoIBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "QhRDb21wYW55UmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
-            "dKICA0NUU2IGcHJvdG8z"));
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGh9nb29nbGUvYXBpL2ZpZWxk",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGihn",
+            "b29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvGhxnb29n",
+            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIvwECgdDb21wYW55EgwKBG5hbWUY",
+            "ASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZXh0ZXJuYWxf",
+            "aWQYAyABKAlCA+BBAhI2CgRzaXplGAQgASgOMiguZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkNvbXBhbnlTaXplEhwKFGhlYWRxdWFydGVyc19hZGRy",
+            "ZXNzGAUgASgJEhUKDWhpcmluZ19hZ2VuY3kYBiABKAgSEAoIZWVvX3RleHQY",
+            "ByABKAkSEwoLd2Vic2l0ZV91cmkYCCABKAkSFwoPY2FyZWVyX3NpdGVfdXJp",
+            "GAkgASgJEhEKCWltYWdlX3VyaRgKIAEoCRIwCihrZXl3b3JkX3NlYXJjaGFi",
+            "bGVfam9iX2N1c3RvbV9hdHRyaWJ1dGVzGAsgAygJEksKDGRlcml2ZWRfaW5m",
+            "bxgMIAEoCzIwLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wYW55",
+            "LkRlcml2ZWRJbmZvQgPgQQMSFgoJc3VzcGVuZGVkGA0gASgIQgPgQQMaUwoL",
+            "RGVyaXZlZEluZm8SRAoVaGVhZHF1YXJ0ZXJzX2xvY2F0aW9uGAEgASgLMiUu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uOoEB6kF+Chtq",
+            "b2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkSJnByb2plY3RzL3twcm9qZWN0",
+            "fS9jb21wYW5pZXMve2NvbXBhbnl9Ejdwcm9qZWN0cy97cHJvamVjdH0vdGVu",
+            "YW50cy97dGVuYW50fS9jb21wYW5pZXMve2NvbXBhbnl9QoIBCh9jb20uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQhRDb21wYW55UmVzb3VyY2VQcm90",
+            "b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null)})
           }));
@@ -180,8 +183,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The street address of the company's main headquarters, which may be
     /// different from the job location. The service attempts
     /// to geolocate the provided address, and populates a more specific
-    /// location wherever possible in
-    /// [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
+    /// location wherever possible in [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HeadquartersAddress {
@@ -278,9 +280,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> keywordSearchableJobCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of keys of filterable
-    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes],
-    /// whose corresponding `string_values` are used in keyword searches. Jobs with
+    /// A list of keys of filterable [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes], whose
+    /// corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any
     /// of the values match the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols are not searchable as-is,
@@ -640,8 +641,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         private global::Google.Cloud.Talent.V4Beta1.Location headquartersLocation_;
         /// <summary>
         /// A structured headquarters location of the company, resolved from
-        /// [Company.headquarters_address][google.cloud.talent.v4beta1.Company.headquarters_address]
-        /// if provided.
+        /// [Company.headquarters_address][google.cloud.talent.v4beta1.Company.headquarters_address] if provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.Location HeadquartersLocation {

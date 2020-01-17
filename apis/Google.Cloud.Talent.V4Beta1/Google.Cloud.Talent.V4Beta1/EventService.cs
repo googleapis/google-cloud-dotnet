@@ -27,24 +27,26 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Ci9nb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZXZlbnRfc2VydmljZS5w",
             "cm90bxIbZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBp",
             "L2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxof",
-            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxonZ29vZ2xlL2Nsb3Vk",
-            "L3RhbGVudC92NGJldGExL2V2ZW50LnByb3RvInQKGENyZWF0ZUNsaWVudEV2",
-            "ZW50UmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJDCgxjbGllbnRfZXZl",
-            "bnQYAiABKAsyKC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ2xpZW50",
-            "RXZlbnRCA+BBAjLjAgoMRXZlbnRTZXJ2aWNlEuQBChFDcmVhdGVDbGllbnRF",
-            "dmVudBI1Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DcmVhdGVDbGll",
-            "bnRFdmVudFJlcXVlc3QaKC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "Q2xpZW50RXZlbnQiboLT5JMCaCIzL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL3RlbmFudHMvKn0vY2xpZW50RXZlbnRzOgEqWi4iKS92NGJldGExL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKn0vY2xpZW50RXZlbnRzOgEqGmzKQRNqb2JzLmdv",
-            "b2dsZWFwaXMuY29t0kFTaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2pvYnNCfwofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIR",
-            "RXZlbnRTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgND",
-            "VFNiBnByb3RvMw=="));
+            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
+            "ZXNvdXJjZS5wcm90bxonZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2V2",
+            "ZW50LnByb3RvIpwBChhDcmVhdGVDbGllbnRFdmVudFJlcXVlc3QSOwoGcGFy",
+            "ZW50GAEgASgJQivgQQL6QSUKI2pvYnMuZ29vZ2xlYXBpcy5jb20vVGVuYW50",
+            "T3JQcm9qZWN0EkMKDGNsaWVudF9ldmVudBgCIAEoCzIoLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5DbGllbnRFdmVudEID4EECMvoCCgxFdmVudFNl",
+            "cnZpY2US+wEKEUNyZWF0ZUNsaWVudEV2ZW50EjUuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkNyZWF0ZUNsaWVudEV2ZW50UmVxdWVzdBooLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DbGllbnRFdmVudCKEAYLT5JMCaCIz",
+            "L3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vY2xpZW50",
+            "RXZlbnRzOgEqWi4iKS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vY2xp",
+            "ZW50RXZlbnRzOgEq2kETcGFyZW50LGNsaWVudF9ldmVudBpsykETam9icy5n",
+            "b29nbGVhcGlzLmNvbdJBU2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9qb2JzQn8KH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFC",
+            "EUV2ZW50U2VydmljZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogID",
+            "Q1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest), global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest.Parser, new[]{ "Parent", "ClientEvent" }, null, null, null)
           }));
@@ -113,8 +115,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ClientEventFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.ClientEvent clientEvent_;
     /// <summary>
-    /// Required. Events issued when end user interacts with customer's application
-    /// that uses Cloud Talent Solution.
+    /// Required. Events issued when end user interacts with customer's application that
+    /// uses Cloud Talent Solution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ClientEvent ClientEvent {
