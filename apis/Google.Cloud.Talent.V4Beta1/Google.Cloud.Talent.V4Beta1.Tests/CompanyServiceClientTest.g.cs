@@ -14,450 +14,678 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Talent.V4Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedCompanyServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedCompanyServiceClientTest
     {
-        [Fact]
-        public void CreateCompany()
+        [xunit::FactAttribute]
+        public void CreateCompanyRequestObject()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            CreateCompanyRequest expectedRequest = new CreateCompanyRequest
-            {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
-                Company = new Company(),
-            };
-            Company expectedResponse = new Company
-            {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
-            };
-            mockGrpcClient.Setup(x => x.CreateCompany(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
-            Company company = new Company();
-            Company response = client.CreateCompany(parent, company);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateCompanyAsync()
-        {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            CreateCompanyRequest expectedRequest = new CreateCompanyRequest
-            {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
-                Company = new Company(),
-            };
-            Company expectedResponse = new Company
-            {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
-            };
-            mockGrpcClient.Setup(x => x.CreateCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
-            Company company = new Company();
-            Company response = await client.CreateCompanyAsync(parent, company);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateCompany2()
-        {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.CreateCompany(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
             Company response = client.CreateCompany(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateCompanyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateCompanyRequestObjectAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company response = await client.CreateCompanyAsync(request);
-            Assert.Same(expectedResponse, response);
+            Company responseCallSettings = await client.CreateCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.CreateCompanyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetCompany()
+        [xunit::FactAttribute]
+        public void CreateCompany()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            GetCompanyRequest expectedRequest = new GetCompanyRequest
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            CreateCompanyRequest request = new CreateCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.GetCompany(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
-            Company response = client.GetCompany(name);
-            Assert.Same(expectedResponse, response);
+            Company response = client.CreateCompany(request.Parent, request.Company);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetCompanyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateCompanyAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            GetCompanyRequest expectedRequest = new GetCompanyRequest
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            CreateCompanyRequest request = new CreateCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.GetCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
-            Company response = await client.GetCompanyAsync(name);
-            Assert.Same(expectedResponse, response);
+            Company responseCallSettings = await client.CreateCompanyAsync(request.Parent, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.CreateCompanyAsync(request.Parent, request.Company, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetCompany2()
+        [xunit::FactAttribute]
+        public void CreateCompany_ResourceNames()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            CreateCompanyRequest request = new CreateCompanyRequest
+            {
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Company = new Company(),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company response = client.CreateCompany(request.ParentAsTenantOrProjectName, request.Company);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCompanyAsync_ResourceNames()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            CreateCompanyRequest request = new CreateCompanyRequest
+            {
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Company = new Company(),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company responseCallSettings = await client.CreateCompanyAsync(request.ParentAsTenantOrProjectName, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.CreateCompanyAsync(request.ParentAsTenantOrProjectName, request.Company, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCompanyRequestObject()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.GetCompany(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
             Company response = client.GetCompany(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetCompanyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetCompanyRequestObjectAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.GetCompanyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company response = await client.GetCompanyAsync(request);
-            Assert.Same(expectedResponse, response);
+            Company responseCallSettings = await client.GetCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.GetCompanyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateCompany()
+        [xunit::FactAttribute]
+        public void GetCompany()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            UpdateCompanyRequest expectedRequest = new UpdateCompanyRequest
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            GetCompanyRequest request = new GetCompanyRequest
             {
-                Company = new Company(),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateCompany(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company company = new Company();
-            Company response = client.UpdateCompany(company);
-            Assert.Same(expectedResponse, response);
+            Company response = client.GetCompany(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateCompanyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetCompanyAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            UpdateCompanyRequest expectedRequest = new UpdateCompanyRequest
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            GetCompanyRequest request = new GetCompanyRequest
             {
-                Company = new Company(),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company company = new Company();
-            Company response = await client.UpdateCompanyAsync(company);
-            Assert.Same(expectedResponse, response);
+            Company responseCallSettings = await client.GetCompanyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.GetCompanyAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateCompany2()
+        [xunit::FactAttribute]
+        public void GetCompany_ResourceNames()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            GetCompanyRequest request = new GetCompanyRequest
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company response = client.GetCompany(request.CompanyName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCompanyAsync_ResourceNames()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            GetCompanyRequest request = new GetCompanyRequest
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company responseCallSettings = await client.GetCompanyAsync(request.CompanyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.GetCompanyAsync(request.CompanyName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCompanyRequestObject()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             UpdateCompanyRequest request = new UpdateCompanyRequest
             {
                 Company = new Company(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateCompany(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
             Company response = client.UpdateCompany(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateCompanyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCompanyRequestObjectAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            UpdateCompanyRequest request = new UpdateCompanyRequest
+            {
+                Company = new Company(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company responseCallSettings = await client.UpdateCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.UpdateCompanyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCompany()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             UpdateCompanyRequest request = new UpdateCompanyRequest
             {
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
-                DisplayName = "displayName1615086568",
-                ExternalId = "externalId-1153075697",
-                HeadquartersAddress = "headquartersAddress-1879520036",
-                HiringAgency = false,
-                EeoText = "eeoText-1652097123",
-                WebsiteUri = "websiteUri-2118185016",
-                CareerSiteUri = "careerSiteUri1223331861",
-                ImageUri = "imageUri-877823864",
-                Suspended = false,
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company response = await client.UpdateCompanyAsync(request);
-            Assert.Same(expectedResponse, response);
+            Company response = client.UpdateCompany(request.Company);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteCompany()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCompanyAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            DeleteCompanyRequest expectedRequest = new DeleteCompanyRequest
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            UpdateCompanyRequest request = new UpdateCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                Company = new Company(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteCompany(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
-            client.DeleteCompany(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteCompanyAsync()
-        {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
-            DeleteCompanyRequest expectedRequest = new DeleteCompanyRequest
+            Company expectedResponse = new Company
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
-            await client.DeleteCompanyAsync(name);
+            Company responseCallSettings = await client.UpdateCompanyAsync(request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.UpdateCompanyAsync(request.Company, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteCompany2()
+        [xunit::FactAttribute]
+        public void DeleteCompanyRequestObject()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteCompany(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteCompany(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteCompanyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteCompanyRequestObjectAsync()
         {
-            Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteCompanyAsync(request);
+            await client.DeleteCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteCompanyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteCompany()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            DeleteCompanyRequest request = new DeleteCompanyRequest
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteCompany(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteCompanyAsync()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            DeleteCompanyRequest request = new DeleteCompanyRequest
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteCompanyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteCompanyAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteCompany_ResourceNames()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            DeleteCompanyRequest request = new DeleteCompanyRequest
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteCompany(request.CompanyName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteCompanyAsync_ResourceNames()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            DeleteCompanyRequest request = new DeleteCompanyRequest
+            {
+                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteCompanyAsync(request.CompanyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteCompanyAsync(request.CompanyName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
