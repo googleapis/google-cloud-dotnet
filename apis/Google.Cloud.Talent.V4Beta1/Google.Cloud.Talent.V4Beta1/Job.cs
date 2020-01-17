@@ -25,58 +25,61 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvam9iLnByb3RvEhtnb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aKGdv",
-            "b2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24ucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3Rh",
-            "bF9hZGRyZXNzLnByb3RvItMOCgNKb2ISDAoEbmFtZRgBIAEoCRIUCgdjb21w",
-            "YW55GAIgASgJQgPgQQISGwoOcmVxdWlzaXRpb25faWQYAyABKAlCA+BBAhIS",
-            "CgV0aXRsZRgEIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAUgASgJQgPgQQIS",
-            "EQoJYWRkcmVzc2VzGAYgAygJEkoKEGFwcGxpY2F0aW9uX2luZm8YByABKAsy",
-            "MC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iLkFwcGxpY2F0aW9u",
-            "SW5mbxI9Cgxqb2JfYmVuZWZpdHMYCCADKA4yJy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuSm9iQmVuZWZpdBJIChFjb21wZW5zYXRpb25faW5mbxgJ",
-            "IAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5zYXRp",
-            "b25JbmZvElEKEWN1c3RvbV9hdHRyaWJ1dGVzGAogAygLMjYuZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLkpvYi5DdXN0b21BdHRyaWJ1dGVzRW50cnkS",
-            "PQoMZGVncmVlX3R5cGVzGAsgAygOMicuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLkRlZ3JlZVR5cGUSEgoKZGVwYXJ0bWVudBgMIAEoCRJFChBlbXBs",
-            "b3ltZW50X3R5cGVzGA0gAygOMisuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLkVtcGxveW1lbnRUeXBlEhIKCmluY2VudGl2ZXMYDiABKAkSFQoNbGFu",
-            "Z3VhZ2VfY29kZRgPIAEoCRI4Cglqb2JfbGV2ZWwYECABKA4yJS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuSm9iTGV2ZWwSFwoPcHJvbW90aW9uX3Zh",
-            "bHVlGBEgASgFEhYKDnF1YWxpZmljYXRpb25zGBIgASgJEhgKEHJlc3BvbnNp",
-            "YmlsaXRpZXMYEyABKAkSQgoOcG9zdGluZ19yZWdpb24YFCABKA4yKi5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUG9zdGluZ1JlZ2lvbhI/Cgp2aXNp",
-            "YmlsaXR5GBUgASgOMicuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlZp",
-            "c2liaWxpdHlCAhgBEjIKDmpvYl9zdGFydF90aW1lGBYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIwCgxqb2JfZW5kX3RpbWUYFyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEjgKFHBvc3RpbmdfcHVibGlzaF90",
-            "aW1lGBggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3ChNwb3N0",
-            "aW5nX2V4cGlyZV90aW1lGBkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBI8ChNwb3N0aW5nX2NyZWF0ZV90aW1lGBogASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjwKE3Bvc3RpbmdfdXBkYXRlX3RpbWUY",
-            "GyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSIQoUY29t",
-            "cGFueV9kaXNwbGF5X25hbWUYHCABKAlCA+BBAxJHCgxkZXJpdmVkX2luZm8Y",
-            "HSABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iLkRlcml2",
-            "ZWRJbmZvQgPgQQMSTgoScHJvY2Vzc2luZ19vcHRpb25zGB4gASgLMjIuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYi5Qcm9jZXNzaW5nT3B0aW9u",
-            "cxpECg9BcHBsaWNhdGlvbkluZm8SDgoGZW1haWxzGAEgAygJEhMKC2luc3Ry",
-            "dWN0aW9uGAIgASgJEgwKBHVyaXMYAyADKAkaiQEKC0Rlcml2ZWRJbmZvEjgK",
-            "CWxvY2F0aW9ucxgBIAMoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Mb2NhdGlvbhJACg5qb2JfY2F0ZWdvcmllcxgDIAMoDjIoLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5Kb2JDYXRlZ29yeRqIAQoRUHJvY2Vzc2lu",
-            "Z09wdGlvbnMSKQohZGlzYWJsZV9zdHJlZXRfYWRkcmVzc19yZXNvbHV0aW9u",
-            "GAEgASgIEkgKEWh0bWxfc2FuaXRpemF0aW9uGAIgASgOMi0uZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLkh0bWxTYW5pdGl6YXRpb24aZQoVQ3VzdG9t",
-            "QXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRI7CgV2YWx1ZRgCIAEoCzIs",
-            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DdXN0b21BdHRyaWJ1dGU6",
-            "AjgBQn4KH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCEEpvYlJl",
-            "c291cmNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnBy",
-            "b3RvMw=="));
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
+            "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKGdvb2ds",
+            "ZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24ucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9h",
+            "ZGRyZXNzLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIswP",
+            "CgNKb2ISDAoEbmFtZRgBIAEoCRIgCgdjb21wYW55GAIgASgJQg/gQQL6QQkK",
+            "B0NvbXBhbnkSGwoOcmVxdWlzaXRpb25faWQYAyABKAlCA+BBAhISCgV0aXRs",
+            "ZRgEIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAUgASgJQgPgQQISEQoJYWRk",
+            "cmVzc2VzGAYgAygJEkoKEGFwcGxpY2F0aW9uX2luZm8YByABKAsyMC5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iLkFwcGxpY2F0aW9uSW5mbxI9",
+            "Cgxqb2JfYmVuZWZpdHMYCCADKA4yJy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuSm9iQmVuZWZpdBJIChFjb21wZW5zYXRpb25faW5mbxgJIAEoCzIt",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZv",
+            "ElEKEWN1c3RvbV9hdHRyaWJ1dGVzGAogAygLMjYuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkpvYi5DdXN0b21BdHRyaWJ1dGVzRW50cnkSPQoMZGVn",
+            "cmVlX3R5cGVzGAsgAygOMicuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkRlZ3JlZVR5cGUSEgoKZGVwYXJ0bWVudBgMIAEoCRJFChBlbXBsb3ltZW50",
+            "X3R5cGVzGA0gAygOMisuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkVt",
+            "cGxveW1lbnRUeXBlEhIKCmluY2VudGl2ZXMYDiABKAkSFQoNbGFuZ3VhZ2Vf",
+            "Y29kZRgPIAEoCRI4Cglqb2JfbGV2ZWwYECABKA4yJS5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuSm9iTGV2ZWwSFwoPcHJvbW90aW9uX3ZhbHVlGBEg",
+            "ASgFEhYKDnF1YWxpZmljYXRpb25zGBIgASgJEhgKEHJlc3BvbnNpYmlsaXRp",
+            "ZXMYEyABKAkSQgoOcG9zdGluZ19yZWdpb24YFCABKA4yKi5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuUG9zdGluZ1JlZ2lvbhI/Cgp2aXNpYmlsaXR5",
+            "GBUgASgOMicuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlZpc2liaWxp",
+            "dHlCAhgBEjIKDmpvYl9zdGFydF90aW1lGBYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIwCgxqb2JfZW5kX3RpbWUYFyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEjgKFHBvc3RpbmdfcHVibGlzaF90aW1lGBgg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3ChNwb3N0aW5nX2V4",
+            "cGlyZV90aW1lGBkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8",
+            "ChNwb3N0aW5nX2NyZWF0ZV90aW1lGBogASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEjwKE3Bvc3RpbmdfdXBkYXRlX3RpbWUYGyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSIQoUY29tcGFueV9k",
+            "aXNwbGF5X25hbWUYHCABKAlCA+BBAxJHCgxkZXJpdmVkX2luZm8YHSABKAsy",
+            "LC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iLkRlcml2ZWRJbmZv",
+            "QgPgQQMSTgoScHJvY2Vzc2luZ19vcHRpb25zGB4gASgLMjIuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLkpvYi5Qcm9jZXNzaW5nT3B0aW9ucxpECg9B",
+            "cHBsaWNhdGlvbkluZm8SDgoGZW1haWxzGAEgAygJEhMKC2luc3RydWN0aW9u",
+            "GAIgASgJEgwKBHVyaXMYAyADKAkaiQEKC0Rlcml2ZWRJbmZvEjgKCWxvY2F0",
+            "aW9ucxgBIAMoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Mb2Nh",
+            "dGlvbhJACg5qb2JfY2F0ZWdvcmllcxgDIAMoDjIoLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Kb2JDYXRlZ29yeRqIAQoRUHJvY2Vzc2luZ09wdGlv",
+            "bnMSKQohZGlzYWJsZV9zdHJlZXRfYWRkcmVzc19yZXNvbHV0aW9uGAEgASgI",
+            "EkgKEWh0bWxfc2FuaXRpemF0aW9uGAIgASgOMi0uZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkh0bWxTYW5pdGl6YXRpb24aZQoVQ3VzdG9tQXR0cmli",
+            "dXRlc0VudHJ5EgsKA2tleRgBIAEoCRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DdXN0b21BdHRyaWJ1dGU6AjgBOmvq",
+            "QWgKF2pvYnMuZ29vZ2xlYXBpcy5jb20vSm9iEh1wcm9qZWN0cy97cHJvamVj",
+            "dH0vam9icy97am9ifRIucHJvamVjdHMve3Byb2plY3R9L3RlbmFudHMve3Rl",
+            "bmFudH0vam9icy97am9ifUJ+Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExQhBKb2JSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFs",
+            "ZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job), global::Google.Cloud.Talent.V4Beta1.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "JobCategories" }, null, null, null),
@@ -90,9 +93,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   #region Messages
   /// <summary>
   /// A Job resource represents a job posting (also referred to as a "job listing"
-  /// or "job requisition"). A job belongs to a
-  /// [Company][google.cloud.talent.v4beta1.Company], which is the hiring entity
-  /// responsible for the job.
+  /// or "job requisition"). A job belongs to a [Company][google.cloud.talent.v4beta1.Company], which is the hiring
+  /// entity responsible for the job.
   /// </summary>
   public sealed partial class Job : pb::IMessage<Job> {
     private static readonly pb::MessageParser<Job> _parser = new pb::MessageParser<Job>(() => new Job());
@@ -174,8 +176,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// example, "projects/foo/jobs/bar".
     ///
     /// Use of this field in job queries and API calls is preferred over the use of
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] since this
-    /// value is unique.
+    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] since this value is unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -210,13 +211,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequisitionIdFieldNumber = 3;
     private string requisitionId_ = "";
     /// <summary>
-    /// Required. The requisition ID, also referred to as the posting ID, is
-    /// assigned by the client to identify a job. This field is intended to be used
-    /// by clients for client identification and tracking of postings. A job isn't
-    /// allowed to be created if there is another job with the same
-    /// [company][google.cloud.talent.v4beta1.Job.name],
-    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
+    /// Required. The requisition ID, also referred to as the posting ID, is assigned by the
+    /// client to identify a job. This field is intended to be used by clients
+    /// for client identification and tracking of postings. A job isn't allowed
+    /// to be created if there is another job with the same [company][google.cloud.talent.v4beta1.Job.name],
+    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -248,12 +247,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Required. The description of the job, which typically includes a
-    /// multi-paragraph description of the company and related information.
-    /// Separate fields are provided on the job object for
-    /// [responsibilities][google.cloud.talent.v4beta1.Job.responsibilities],
-    /// [qualifications][google.cloud.talent.v4beta1.Job.qualifications], and other
-    /// job characteristics. Use of these separate job fields is recommended.
+    /// Required. The description of the job, which typically includes a multi-paragraph
+    /// description of the company and related information. Separate fields are
+    /// provided on the job object for [responsibilities][google.cloud.talent.v4beta1.Job.responsibilities],
+    /// [qualifications][google.cloud.talent.v4beta1.Job.qualifications], and other job characteristics. Use of
+    /// these separate job fields is recommended.
     ///
     /// This field accepts and sanitizes HTML input, and also accepts
     /// bold, italic, ordered list, and unordered list markup tags.
@@ -283,16 +281,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// At most 50 locations are allowed for best search performance. If a job has
     /// more locations, it is suggested to split it into multiple jobs with unique
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id]s (e.g.
-    /// 'ReqA' becomes 'ReqA-1', 'ReqA-2', and so on.) as multiple jobs with the
-    /// same [company][google.cloud.talent.v4beta1.Job.company],
-    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] are not
-    /// allowed. If the original
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] must be
-    /// preserved, a custom field should be used for storage. It is also suggested
-    /// to group the locations that close to each other in the same job for better
-    /// search experience.
+    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id]s (e.g. 'ReqA' becomes 'ReqA-1', 'ReqA-2', and so on.) as
+    /// multiple jobs with the same [company][google.cloud.talent.v4beta1.Job.company], [language_code][google.cloud.talent.v4beta1.Job.language_code] and
+    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] are not allowed. If the original [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] must
+    /// be preserved, a custom field should be used for storage. It is also
+    /// suggested to group the locations that close to each other in the same job
+    /// for better search experience.
     ///
     /// The maximum number of allowed characters is 500.
     /// </summary>
@@ -441,11 +435,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){:
     /// class="external" target="_blank" }.
     ///
-    /// If this field is unspecified and
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description] is present,
-    /// detected language code based on
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description] is assigned,
-    /// otherwise defaults to 'en_US'.
+    /// If this field is unspecified and [Job.description][google.cloud.talent.v4beta1.Job.description] is present, detected
+    /// language code based on [Job.description][google.cloud.talent.v4beta1.Job.description] is assigned, otherwise
+    /// defaults to 'en_US'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -495,8 +487,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// A description of the qualifications required to perform the
     /// job. The use of this field is recommended
-    /// as an alternative to using the more general
-    /// [description][google.cloud.talent.v4beta1.Job.description] field.
+    /// as an alternative to using the more general [description][google.cloud.talent.v4beta1.Job.description] field.
     ///
     /// This field accepts and sanitizes HTML input, and also accepts
     /// bold, italic, ordered list, and unordered list markup tags.
@@ -516,8 +507,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string responsibilities_ = "";
     /// <summary>
     /// A description of job responsibilities. The use of this field is
-    /// recommended as an alternative to using the more general
-    /// [description][google.cloud.talent.v4beta1.Job.description] field.
+    /// recommended as an alternative to using the more general [description][google.cloud.talent.v4beta1.Job.description]
+    /// field.
     ///
     /// This field accepts and sanitizes HTML input, and also accepts
     /// bold, italic, ordered list, and unordered list markup tags.
@@ -536,16 +527,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PostingRegionFieldNumber = 20;
     private global::Google.Cloud.Talent.V4Beta1.PostingRegion postingRegion_ = 0;
     /// <summary>
-    /// The job [PostingRegion][google.cloud.talent.v4beta1.PostingRegion] (for
-    /// example, state, country) throughout which the job is available. If this
-    /// field is set, a
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in a search
-    /// query within the job region finds this job posting if an exact location
-    /// match isn't specified. If this field is set to
-    /// [PostingRegion.NATION][google.cloud.talent.v4beta1.PostingRegion.NATION] or
-    /// [PostingRegion.ADMINISTRATIVE_AREA][google.cloud.talent.v4beta1.PostingRegion.ADMINISTRATIVE_AREA],
-    /// setting job [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] to
-    /// the same location level as this field is strongly recommended.
+    /// The job [PostingRegion][google.cloud.talent.v4beta1.PostingRegion] (for example, state, country) throughout
+    /// which the job is available. If this field is set, a [LocationFilter][google.cloud.talent.v4beta1.LocationFilter]
+    /// in a search query within the job region finds this job posting if an
+    /// exact location match isn't specified. If this field is set to
+    /// [PostingRegion.NATION][google.cloud.talent.v4beta1.PostingRegion.NATION] or [PostingRegion.ADMINISTRATIVE_AREA][google.cloud.talent.v4beta1.PostingRegion.ADMINISTRATIVE_AREA],
+    /// setting job [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] to the same location level as this field
+    /// is strongly recommended.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.PostingRegion PostingRegion {
@@ -563,9 +551,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The visibility of the job.
     ///
-    /// Defaults to
-    /// [Visibility.ACCOUNT_ONLY][google.cloud.talent.v4beta1.Visibility.ACCOUNT_ONLY]
-    /// if not specified.
+    /// Defaults to [Visibility.ACCOUNT_ONLY][google.cloud.talent.v4beta1.Visibility.ACCOUNT_ONLY] if not specified.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -630,18 +616,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The expiration timestamp of the job. After this timestamp, the
     /// job is marked as expired, and it no longer appears in search results. The
-    /// expired job can't be listed by the
-    /// [ListJobs][google.cloud.talent.v4beta1.JobService.ListJobs] API, but it can
-    /// be retrieved with the
-    /// [GetJob][google.cloud.talent.v4beta1.JobService.GetJob] API or updated with
-    /// the [UpdateJob][google.cloud.talent.v4beta1.JobService.UpdateJob] API or
-    /// deleted with the
-    /// [DeleteJob][google.cloud.talent.v4beta1.JobService.DeleteJob] API. An
-    /// expired job can be updated and opened again by using a future expiration
-    /// timestamp. Updating an expired job fails if there is another existing open
-    /// job with same [company][google.cloud.talent.v4beta1.Job.company],
-    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
+    /// expired job can't be listed by the [ListJobs][google.cloud.talent.v4beta1.JobService.ListJobs] API,
+    /// but it can be retrieved with the [GetJob][google.cloud.talent.v4beta1.JobService.GetJob] API or
+    /// updated with the [UpdateJob][google.cloud.talent.v4beta1.JobService.UpdateJob] API or deleted with
+    /// the [DeleteJob][google.cloud.talent.v4beta1.JobService.DeleteJob] API. An expired job can
+    /// be updated and opened again by using a future expiration timestamp.
+    /// Updating an expired job fails if there is another existing open job with
+    /// same [company][google.cloud.talent.v4beta1.Job.company], [language_code][google.cloud.talent.v4beta1.Job.language_code] and [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
     ///
     /// The expired jobs are retained in our system for 90 days. However, the
     /// overall expired job count cannot exceed 3 times the maximum number of
@@ -655,13 +636,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If the timestamp is before the instant request is made, the job
     /// is treated as expired immediately on creation. This kind of job can
     /// not be updated. And when creating a job with past timestamp, the
-    /// [posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
-    /// must be set before
-    /// [posting_expire_time][google.cloud.talent.v4beta1.Job.posting_expire_time].
-    /// The purpose of this feature is to allow other objects, such as
-    /// [Application][google.cloud.talent.v4beta1.Application], to refer a job that
-    /// didn't exist in the system prior to becoming expired. If you want to modify
-    /// a job that was expired on creation, delete it and create a new one.
+    /// [posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time] must be set before
+    /// [posting_expire_time][google.cloud.talent.v4beta1.Job.posting_expire_time]. The purpose of this feature is
+    /// to allow other objects, such as [Application][google.cloud.talent.v4beta1.Application], to refer a job
+    /// that didn't exist in the system prior to becoming expired. If you
+    /// want to modify a job that was expired on creation,
+    /// delete it and create a new one.
     ///
     /// If this value isn't provided at the time of job creation or is invalid,
     /// the job posting expires after 30 days from the job's creation time. For
@@ -669,13 +649,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC.
     ///
     /// If this value isn't provided on job update, it depends on the field masks
-    /// set by
-    /// [UpdateJobRequest.update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask].
-    /// If the field masks include
-    /// [job_end_time][google.cloud.talent.v4beta1.Job.job_end_time], or the masks
-    /// are empty meaning that every field is updated, the job posting expires
-    /// after 30 days from the job's last update time. Otherwise the expiration
-    /// date isn't updated.
+    /// set by [UpdateJobRequest.update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask]. If the field masks include
+    /// [job_end_time][google.cloud.talent.v4beta1.Job.job_end_time], or the masks are empty meaning that every field is
+    /// updated, the job posting expires after 30 days from the job's last
+    /// update time. Otherwise the expiration date isn't updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PostingExpireTime {
@@ -1570,12 +1547,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.Location.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location> locations_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location>();
         /// <summary>
-        /// Structured locations of the job, resolved from
-        /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses].
+        /// Structured locations of the job, resolved from [Job.addresses][google.cloud.talent.v4beta1.Job.addresses].
         ///
-        /// [locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations] are
-        /// exactly matched to
-        /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] in the same
+        /// [locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations] are exactly matched to [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] in the same
         /// order.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1589,9 +1563,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.Talent.V4Beta1.JobCategory) x);
         private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> jobCategories_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory>();
         /// <summary>
-        /// Job categories derived from
-        /// [Job.title][google.cloud.talent.v4beta1.Job.title] and
-        /// [Job.description][google.cloud.talent.v4beta1.Job.description].
+        /// Job categories derived from [Job.title][google.cloud.talent.v4beta1.Job.title] and [Job.description][google.cloud.talent.v4beta1.Job.description].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> JobCategories {
@@ -1753,8 +1725,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// HTML tags in these fields may be stripped if sanitiazation isn't
         /// disabled.
         ///
-        /// Defaults to
-        /// [HtmlSanitization.SIMPLE_FORMATTING_ONLY][google.cloud.talent.v4beta1.HtmlSanitization.SIMPLE_FORMATTING_ONLY].
+        /// Defaults to [HtmlSanitization.SIMPLE_FORMATTING_ONLY][google.cloud.talent.v4beta1.HtmlSanitization.SIMPLE_FORMATTING_ONLY].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.HtmlSanitization HtmlSanitization {
