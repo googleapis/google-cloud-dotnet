@@ -14,355 +14,535 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Talent.V4Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedTenantServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedTenantServiceClientTest
     {
-        [Fact]
-        public void CreateTenant()
+        [xunit::FactAttribute]
+        public void CreateTenantRequestObject()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            CreateTenantRequest expectedRequest = new CreateTenantRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Tenant = new Tenant(),
-            };
-            Tenant expectedResponse = new Tenant
-            {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
-            };
-            mockGrpcClient.Setup(x => x.CreateTenant(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Tenant tenant = new Tenant();
-            Tenant response = client.CreateTenant(parent, tenant);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateTenantAsync()
-        {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            CreateTenantRequest expectedRequest = new CreateTenantRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Tenant = new Tenant(),
-            };
-            Tenant expectedResponse = new Tenant
-            {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
-            };
-            mockGrpcClient.Setup(x => x.CreateTenantAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Tenant>(Task.FromResult(expectedResponse), null, null, null, null));
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Tenant tenant = new Tenant();
-            Tenant response = await client.CreateTenantAsync(parent, tenant);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateTenant2()
-        {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             CreateTenantRequest request = new CreateTenantRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Tenant = new Tenant(),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateTenant(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
             Tenant response = client.CreateTenant(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTenantAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTenantRequestObjectAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             CreateTenantRequest request = new CreateTenantRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Tenant = new Tenant(),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateTenantAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Tenant>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            Tenant response = await client.CreateTenantAsync(request);
-            Assert.Same(expectedResponse, response);
+            Tenant responseCallSettings = await client.CreateTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.CreateTenantAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTenant()
+        [xunit::FactAttribute]
+        public void CreateTenant()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            GetTenantRequest expectedRequest = new GetTenantRequest
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            CreateTenantRequest request = new CreateTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Tenant = new Tenant(),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetTenant(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            TenantName name = new TenantName("[PROJECT]", "[TENANT]");
-            Tenant response = client.GetTenant(name);
-            Assert.Same(expectedResponse, response);
+            Tenant response = client.CreateTenant(request.Parent, request.Tenant);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTenantAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTenantAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            GetTenantRequest expectedRequest = new GetTenantRequest
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            CreateTenantRequest request = new CreateTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Tenant = new Tenant(),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetTenantAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Tenant>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            TenantName name = new TenantName("[PROJECT]", "[TENANT]");
-            Tenant response = await client.GetTenantAsync(name);
-            Assert.Same(expectedResponse, response);
+            Tenant responseCallSettings = await client.CreateTenantAsync(request.Parent, request.Tenant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.CreateTenantAsync(request.Parent, request.Tenant, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTenant2()
+        [xunit::FactAttribute]
+        public void CreateTenant_ResourceNames()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            CreateTenantRequest request = new CreateTenantRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Tenant = new Tenant(),
+            };
+            Tenant expectedResponse = new Tenant
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            Tenant response = client.CreateTenant(request.ParentAsProjectName, request.Tenant);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTenantAsync_ResourceNames()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            CreateTenantRequest request = new CreateTenantRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Tenant = new Tenant(),
+            };
+            Tenant expectedResponse = new Tenant
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            Tenant responseCallSettings = await client.CreateTenantAsync(request.ParentAsProjectName, request.Tenant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.CreateTenantAsync(request.ParentAsProjectName, request.Tenant, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTenantRequestObject()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             GetTenantRequest request = new GetTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetTenant(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
             Tenant response = client.GetTenant(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTenantAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTenantRequestObjectAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             GetTenantRequest request = new GetTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetTenantAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Tenant>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            Tenant response = await client.GetTenantAsync(request);
-            Assert.Same(expectedResponse, response);
+            Tenant responseCallSettings = await client.GetTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.GetTenantAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateTenant()
+        [xunit::FactAttribute]
+        public void GetTenant()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            UpdateTenantRequest expectedRequest = new UpdateTenantRequest
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            GetTenantRequest request = new GetTenantRequest
             {
-                Tenant = new Tenant(),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateTenant(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            Tenant tenant = new Tenant();
-            Tenant response = client.UpdateTenant(tenant);
-            Assert.Same(expectedResponse, response);
+            Tenant response = client.GetTenant(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateTenantAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetTenantAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            UpdateTenantRequest expectedRequest = new UpdateTenantRequest
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            GetTenantRequest request = new GetTenantRequest
             {
-                Tenant = new Tenant(),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateTenantAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Tenant>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            Tenant tenant = new Tenant();
-            Tenant response = await client.UpdateTenantAsync(tenant);
-            Assert.Same(expectedResponse, response);
+            Tenant responseCallSettings = await client.GetTenantAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.GetTenantAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateTenant2()
+        [xunit::FactAttribute]
+        public void GetTenant_ResourceNames()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            GetTenantRequest request = new GetTenantRequest
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+            };
+            Tenant expectedResponse = new Tenant
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            Tenant response = client.GetTenant(request.TenantName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTenantAsync_ResourceNames()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            GetTenantRequest request = new GetTenantRequest
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+            };
+            Tenant expectedResponse = new Tenant
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            Tenant responseCallSettings = await client.GetTenantAsync(request.TenantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.GetTenantAsync(request.TenantName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateTenantRequestObject()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             UpdateTenantRequest request = new UpdateTenantRequest
             {
                 Tenant = new Tenant(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateTenant(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
             Tenant response = client.UpdateTenant(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateTenantAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTenantRequestObjectAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            UpdateTenantRequest request = new UpdateTenantRequest
+            {
+                Tenant = new Tenant(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Tenant expectedResponse = new Tenant
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            Tenant responseCallSettings = await client.UpdateTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.UpdateTenantAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateTenant()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             UpdateTenantRequest request = new UpdateTenantRequest
             {
                 Tenant = new Tenant(),
             };
             Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                ExternalId = "externalId-1153075697",
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateTenantAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Tenant>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            Tenant response = await client.UpdateTenantAsync(request);
-            Assert.Same(expectedResponse, response);
+            Tenant response = client.UpdateTenant(request.Tenant);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTenant()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTenantAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            DeleteTenantRequest expectedRequest = new DeleteTenantRequest
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            UpdateTenantRequest request = new UpdateTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                Tenant = new Tenant(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTenant(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            TenantName name = new TenantName("[PROJECT]", "[TENANT]");
-            client.DeleteTenant(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteTenantAsync()
-        {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
-            DeleteTenantRequest expectedRequest = new DeleteTenantRequest
+            Tenant expectedResponse = new Tenant
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ExternalId = "external_id9442680e",
+                UsageType = Tenant.Types.DataUsageType.Unspecified,
+                KeywordSearchableProfileCustomAttributes =
+                {
+                    "keyword_searchable_profile_custom_attributes9dbf9d03",
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTenantAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Tenant>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            TenantName name = new TenantName("[PROJECT]", "[TENANT]");
-            await client.DeleteTenantAsync(name);
+            Tenant responseCallSettings = await client.UpdateTenantAsync(request.Tenant, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Tenant responseCancellationToken = await client.UpdateTenantAsync(request.Tenant, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTenant2()
+        [xunit::FactAttribute]
+        public void DeleteTenantRequestObject()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             DeleteTenantRequest request = new DeleteTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTenant(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteTenant(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteTenantAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTenantRequestObjectAsync()
         {
-            Mock<TenantService.TenantServiceClient> mockGrpcClient = new Mock<TenantService.TenantServiceClient>(MockBehavior.Strict);
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             DeleteTenantRequest request = new DeleteTenantRequest
             {
-                TenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteTenantAsync(request);
+            await client.DeleteTenantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTenantAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteTenant()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            DeleteTenantRequest request = new DeleteTenantRequest
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTenant(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTenantAsync()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            DeleteTenantRequest request = new DeleteTenantRequest
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTenantAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTenantAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTenant_ResourceNames()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            DeleteTenantRequest request = new DeleteTenantRequest
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTenant(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTenant(request.TenantName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTenantAsync_ResourceNames()
+        {
+            moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
+            DeleteTenantRequest request = new DeleteTenantRequest
+            {
+                TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTenantAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TenantServiceClient client = new TenantServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTenantAsync(request.TenantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTenantAsync(request.TenantName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
