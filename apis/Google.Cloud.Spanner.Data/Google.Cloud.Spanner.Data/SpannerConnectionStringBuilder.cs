@@ -173,11 +173,7 @@ namespace Google.Cloud.Spanner.Data
                     return (string)this[nameof(Host)];
                 }
                 string host = InstanceHostManager.GetHost(Project, SpannerInstance);
-                if (host != null)
-                {
-                    return host;
-                }
-                return SpannerClient.DefaultEndpoint.Host;
+                return host ?? SpannerClient.DefaultEndpoint.Host;
             }
             set => this[nameof(Host)] = value;
         }
@@ -393,7 +389,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return parsed >= minValue && parsed <= maxValue ? parsed : defaultValue;
             }
-            return defaultValue;            
+            return defaultValue;
         }
 
         private void SetInt32WithValidation(string key, int minValue, int maxValue, int value)

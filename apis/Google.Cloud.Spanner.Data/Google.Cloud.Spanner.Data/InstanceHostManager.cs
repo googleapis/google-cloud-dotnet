@@ -70,8 +70,6 @@ namespace Google.Cloud.Spanner.Data
             return null;
         }
 
-
-
         private async Task<RepeatedField<string>> GetInstanceEndpointUriAsync(string projectId, string instanceId)
         {
             InstanceAdminClient instanceAdminClient =
