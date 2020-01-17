@@ -39,8 +39,7 @@ namespace Google.Cloud.Talent.V4Beta1.SmokeTests
             CompanyServiceClient client = CompanyServiceClient.Create();
 
             // Initialize request argument(s)
-            ProjectName projectName = new ProjectName(projectId);
-            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(projectName);
+            TenantOrProjectName parent = TenantOrProjectName.FromProject(projectId);
 
             // Call API method
             PagedEnumerable<ListCompaniesResponse, Company> pagedResponse = client.ListCompanies(parent);

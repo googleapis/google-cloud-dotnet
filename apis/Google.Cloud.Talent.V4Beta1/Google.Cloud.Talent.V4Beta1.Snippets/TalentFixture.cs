@@ -21,9 +21,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     [CollectionDefinition(nameof(TalentFixture))]
     public class TalentFixture : CloudProjectFixtureBase, ICollectionFixture<TalentFixture>
     {
-        public ProjectName ProjectName => new ProjectName(ProjectId);
-
-        public CompanyNameOneof CreatedCompanyName { get; }
+        public CompanyName CreatedCompanyName { get; }
 
         private readonly string _companyExternalIdPrefix = IdGenerator.FromGuid(prefix: "test-", suffix: "-");
 
@@ -34,7 +32,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 
         public string GenerateCompanyExternalId() => IdGenerator.FromGuid(prefix: _companyExternalIdPrefix);
 
-        private CompanyNameOneof CreateSampleCompany()
+        private CompanyName CreateSampleCompany()
         {
             CompanyServiceClient client = CompanyServiceClient.Create();
             Company company = new Company
@@ -43,8 +41,8 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ExternalId = GenerateCompanyExternalId(),
                 Size = CompanySize.Giant
             };
-            Company created = client.CreateCompany(TenantOrProjectNameOneof.From(ProjectName), company);
-            return created.CompanyNameOneof;
+            Company created = client.CreateCompany(TenantOrProjectName.FromProject(ProjectId), company);
+            return created.CompanyName;
         }
 
         // No clean-up: we can't do the full job here as there's a delay between the deletion of the last job for a company

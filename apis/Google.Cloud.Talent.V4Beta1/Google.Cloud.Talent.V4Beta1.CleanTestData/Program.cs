@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.ResourceNames;
 using Grpc.Core;
 using System;
 using System.Linq;
@@ -28,14 +27,14 @@ namespace Google.Cloud.Talent.V4Beta1.CleanTestData
                 Console.Error.WriteLine("Specify the project ID as the only command line argument");
                 return 1;
             }
-            ProjectName projectName = new ProjectName(args[0]);
+            string projectId = args[0];
             var companyClient = CompanyServiceClient.Create();
             var jobClient = JobServiceClient.Create();
-            var parentName = TenantOrProjectNameOneof.From(projectName);
+            var parentName = TenantOrProjectName.FromProject(projectId);
 
             var testCompanies = companyClient.ListCompanies(parentName)
                 .Where(cn => cn.ExternalId.StartsWith("test-"))
-                .Select(c => c.CompanyNameOneof)
+                .Select(c => c.CompanyName)
                 .ToList();
             Console.WriteLine($"Companies to delete: {testCompanies.Count}");
 
@@ -47,7 +46,7 @@ namespace Google.Cloud.Talent.V4Beta1.CleanTestData
                 {
                     try
                     {
-                        jobClient.DeleteJob(job.JobNameOneof);
+                        jobClient.DeleteJob(job.JobName);
                     }
                     catch (RpcException e)
                     {
