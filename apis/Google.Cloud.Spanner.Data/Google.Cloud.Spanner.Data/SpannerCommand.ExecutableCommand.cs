@@ -178,8 +178,6 @@ namespace Google.Cloud.Spanner.Data
                 return await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
             }
 
-            
-
             private void ValidateConnectionAndCommandTextBuilder()
             {
                 GaxPreconditions.CheckState(Connection != null, "SpannerCommand can only be executed when a connection is assigned.");

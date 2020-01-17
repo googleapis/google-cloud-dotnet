@@ -278,7 +278,7 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-
+            
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -874,6 +874,5 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
-
     }
 }

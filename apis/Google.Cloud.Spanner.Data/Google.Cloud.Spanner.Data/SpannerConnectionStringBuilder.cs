@@ -393,7 +393,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return parsed >= minValue && parsed <= maxValue ? parsed : defaultValue;
             }
-            return defaultValue;
+            return defaultValue;            
         }
 
         private void SetInt32WithValidation(string key, int minValue, int maxValue, int value)
