@@ -31,7 +31,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         [Fact]
         public void CreateCompany()
         {
-            ProjectName projectName = _fixture.ProjectName;
+            string projectId = _fixture.ProjectId;
             string externalId = _fixture.GenerateCompanyExternalId();
 
             // Sample: CreateCompany
@@ -42,7 +42,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ExternalId = externalId,
                 Size = CompanySize.Medium
             };
-            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(projectName);
+            TenantOrProjectName parent = TenantOrProjectName.FromProject(projectId);
             Company created = client.CreateCompany(parent, company);
             Console.WriteLine($"Created company with resource name {created.Name}");
             // End sample
@@ -51,8 +51,8 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         [Fact]
         public void CreateJob()
         {
-            ProjectName projectName = _fixture.ProjectName;
-            CompanyNameOneof companyName = _fixture.CreatedCompanyName;
+            string projectId = _fixture.ProjectId;
+            CompanyName companyName = _fixture.CreatedCompanyName;
             string requisitionId = IdGenerator.FromGuid();
 
             // Sample: CreateJob
@@ -63,12 +63,12 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 {
                     Instruction = "See company web site"
                 },
-                CompanyAsCompanyNameOneof = companyName,
+                CompanyAsCompanyName = companyName,
                 Description = "Company CEO, responsible for everything in the company.",
                 RequisitionId = requisitionId,
                 Title = "CEO"
             };
-            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(projectName);
+            TenantOrProjectName parent = TenantOrProjectName.FromProject(projectId);
             Job created = client.CreateJob(parent, job);
             Console.WriteLine($"Created job with resource name {created.Name}");
             // End sample
