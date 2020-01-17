@@ -14,414 +14,1350 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Talent.V4Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedProfileServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedProfileServiceClientTest
     {
-        [Fact]
-        public void CreateProfile()
+        [xunit::FactAttribute]
+        public void CreateProfileRequestObject()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            CreateProfileRequest expectedRequest = new CreateProfileRequest
-            {
-                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                Profile = new Profile(),
-            };
-            Profile expectedResponse = new Profile
-            {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
-                Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
-            };
-            mockGrpcClient.Setup(x => x.CreateProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            TenantName parent = new TenantName("[PROJECT]", "[TENANT]");
-            Profile profile = new Profile();
-            Profile response = client.CreateProfile(parent, profile);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateProfileAsync()
-        {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            CreateProfileRequest expectedRequest = new CreateProfileRequest
-            {
-                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
-                Profile = new Profile(),
-            };
-            Profile expectedResponse = new Profile
-            {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
-                Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
-            };
-            mockGrpcClient.Setup(x => x.CreateProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            TenantName parent = new TenantName("[PROJECT]", "[TENANT]");
-            Profile profile = new Profile();
-            Profile response = await client.CreateProfileAsync(parent, profile);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateProfile2()
-        {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
             {
-                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
             Profile response = client.CreateProfile(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateProfileAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateProfileRequestObjectAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
             {
-                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            Profile response = await client.CreateProfileAsync(request);
-            Assert.Same(expectedResponse, response);
+            Profile responseCallSettings = await client.CreateProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.CreateProfileAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetProfile()
+        [xunit::FactAttribute]
+        public void CreateProfile()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            GetProfileRequest expectedRequest = new GetProfileRequest
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            CreateProfileRequest request = new CreateProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            Profile response = client.GetProfile(name);
-            Assert.Same(expectedResponse, response);
+            Profile response = client.CreateProfile(request.Parent, request.Profile);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetProfileAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateProfileAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            GetProfileRequest expectedRequest = new GetProfileRequest
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            CreateProfileRequest request = new CreateProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            Profile response = await client.GetProfileAsync(name);
-            Assert.Same(expectedResponse, response);
+            Profile responseCallSettings = await client.CreateProfileAsync(request.Parent, request.Profile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.CreateProfileAsync(request.Parent, request.Profile, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetProfile2()
+        [xunit::FactAttribute]
+        public void CreateProfile_ResourceNames()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            CreateProfileRequest request = new CreateProfileRequest
+            {
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Profile = new Profile(),
+            };
+            Profile expectedResponse = new Profile
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                Processed = true,
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            Profile response = client.CreateProfile(request.ParentAsTenantName, request.Profile);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateProfileAsync_ResourceNames()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            CreateProfileRequest request = new CreateProfileRequest
+            {
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Profile = new Profile(),
+            };
+            Profile expectedResponse = new Profile
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                Processed = true,
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            Profile responseCallSettings = await client.CreateProfileAsync(request.ParentAsTenantName, request.Profile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.CreateProfileAsync(request.ParentAsTenantName, request.Profile, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetProfileRequestObject()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             GetProfileRequest request = new GetProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
             Profile response = client.GetProfile(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetProfileAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetProfileRequestObjectAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             GetProfileRequest request = new GetProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            Profile response = await client.GetProfileAsync(request);
-            Assert.Same(expectedResponse, response);
+            Profile responseCallSettings = await client.GetProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.GetProfileAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateProfile()
+        [xunit::FactAttribute]
+        public void GetProfile()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            UpdateProfileRequest expectedRequest = new UpdateProfileRequest
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            GetProfileRequest request = new GetProfileRequest
             {
-                Profile = new Profile(),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            Profile profile = new Profile();
-            Profile response = client.UpdateProfile(profile);
-            Assert.Same(expectedResponse, response);
+            Profile response = client.GetProfile(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateProfileAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetProfileAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            UpdateProfileRequest expectedRequest = new UpdateProfileRequest
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            GetProfileRequest request = new GetProfileRequest
             {
-                Profile = new Profile(),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            Profile profile = new Profile();
-            Profile response = await client.UpdateProfileAsync(profile);
-            Assert.Same(expectedResponse, response);
+            Profile responseCallSettings = await client.GetProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.GetProfileAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateProfile2()
+        [xunit::FactAttribute]
+        public void GetProfile_ResourceNames()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            GetProfileRequest request = new GetProfileRequest
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            Profile expectedResponse = new Profile
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                Processed = true,
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            Profile response = client.GetProfile(request.ProfileName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetProfileAsync_ResourceNames()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            GetProfileRequest request = new GetProfileRequest
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            Profile expectedResponse = new Profile
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                Processed = true,
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            Profile responseCallSettings = await client.GetProfileAsync(request.ProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.GetProfileAsync(request.ProfileName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateProfileRequestObject()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             UpdateProfileRequest request = new UpdateProfileRequest
             {
                 Profile = new Profile(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
             Profile response = client.UpdateProfile(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateProfileAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateProfileRequestObjectAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            UpdateProfileRequest request = new UpdateProfileRequest
+            {
+                Profile = new Profile(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Profile expectedResponse = new Profile
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                Processed = true,
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            Profile responseCallSettings = await client.UpdateProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.UpdateProfileAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateProfile()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             UpdateProfileRequest request = new UpdateProfileRequest
             {
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                ExternalId = "externalId-1153075697",
-                Source = "source-896505829",
-                Uri = "uri116076",
-                GroupId = "groupId506361563",
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
                 Processed = true,
-                KeywordSnippet = "keywordSnippet1325317319",
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            Profile response = await client.UpdateProfileAsync(request);
-            Assert.Same(expectedResponse, response);
+            Profile response = client.UpdateProfile(request.Profile);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteProfile()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateProfileAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            DeleteProfileRequest expectedRequest = new DeleteProfileRequest
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            UpdateProfileRequest request = new UpdateProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                Profile = new Profile(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            client.DeleteProfile(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteProfileAsync()
-        {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
-            DeleteProfileRequest expectedRequest = new DeleteProfileRequest
+            Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ExternalId = "external_id9442680e",
+                Source = "sourcef438cd36",
+                Uri = "uri3db70593",
+                GroupId = "group_id4f9a930e",
+                IsHirable = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PersonNames = { new PersonName(), },
+                Addresses = { new Address(), },
+                EmailAddresses = { new Email(), },
+                PhoneNumbers = { new Phone(), },
+                PersonalUris = { new PersonalUri(), },
+                AdditionalContactInfo =
+                {
+                    new AdditionalContactInfo(),
+                },
+                EmploymentRecords =
+                {
+                    new EmploymentRecord(),
+                },
+                EducationRecords =
+                {
+                    new EducationRecord(),
+                },
+                Skills = { new Skill(), },
+                Activities = { new Activity(), },
+                Publications = { new Publication(), },
+                Patents = { new Patent(), },
+                Certifications =
+                {
+                    new Certification(),
+                },
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                Processed = true,
+                KeywordSnippet = "keyword_snippet7289f6ef",
+                Applications =
+                {
+                    "applicationsffa9fbb5",
+                },
+                Assignments =
+                {
+                    "assignments2923b317",
+                },
+                Resume = new Resume(),
+                DerivedAddresses = { new Location(), },
+                CandidateUpdateTime = new wkt::Timestamp(),
+                ResumeUpdateTime = new wkt::Timestamp(),
+                AvailabilitySignals =
+                {
+                    new AvailabilitySignal(),
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Profile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            await client.DeleteProfileAsync(name);
+            Profile responseCallSettings = await client.UpdateProfileAsync(request.Profile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Profile responseCancellationToken = await client.UpdateProfileAsync(request.Profile, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteProfile2()
+        [xunit::FactAttribute]
+        public void DeleteProfileRequestObject()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             DeleteProfileRequest request = new DeleteProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteProfile(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteProfileAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProfileRequestObjectAsync()
         {
-            Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             DeleteProfileRequest request = new DeleteProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteProfileAsync(request);
+            await client.DeleteProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProfileAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteProfile()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            DeleteProfileRequest request = new DeleteProfileRequest
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteProfile(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProfileAsync()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            DeleteProfileRequest request = new DeleteProfileRequest
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProfileAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteProfile_ResourceNames()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            DeleteProfileRequest request = new DeleteProfileRequest
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteProfile(request.ProfileName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteProfileAsync_ResourceNames()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            DeleteProfileRequest request = new DeleteProfileRequest
+            {
+                ProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteProfileAsync(request.ProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteProfileAsync(request.ProfileName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

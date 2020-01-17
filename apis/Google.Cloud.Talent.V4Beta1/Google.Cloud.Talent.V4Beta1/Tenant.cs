@@ -25,20 +25,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/QEKBlRlbmFudBIM",
-            "CgRuYW1lGAEgASgJEhgKC2V4dGVybmFsX2lkGAIgASgJQgPgQQISRQoKdXNh",
-            "Z2VfdHlwZRgDIAEoDjIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5U",
-            "ZW5hbnQuRGF0YVVzYWdlVHlwZRI0CixrZXl3b3JkX3NlYXJjaGFibGVfcHJv",
-            "ZmlsZV9jdXN0b21fYXR0cmlidXRlcxgEIAMoCSJOCg1EYXRhVXNhZ2VUeXBl",
-            "Eh8KG0RBVEFfVVNBR0VfVFlQRV9VTlNQRUNJRklFRBAAEg4KCkFHR1JFR0FU",
-            "RUQQARIMCghJU09MQVRFRBACQoEBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExQhNUZW5hbnRSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0",
-            "YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dv",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
+            "b3RhdGlvbnMucHJvdG8iwwIKBlRlbmFudBIMCgRuYW1lGAEgASgJEhgKC2V4",
+            "dGVybmFsX2lkGAIgASgJQgPgQQISRQoKdXNhZ2VfdHlwZRgDIAEoDjIxLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5UZW5hbnQuRGF0YVVzYWdlVHlw",
+            "ZRI0CixrZXl3b3JkX3NlYXJjaGFibGVfcHJvZmlsZV9jdXN0b21fYXR0cmli",
+            "dXRlcxgEIAMoCSJOCg1EYXRhVXNhZ2VUeXBlEh8KG0RBVEFfVVNBR0VfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEg4KCkFHR1JFR0FURUQQARIMCghJU09MQVRFRBAC",
+            "OkTqQUEKGmpvYnMuZ29vZ2xlYXBpcy5jb20vVGVuYW50EiNwcm9qZWN0cy97",
+            "cHJvamVjdH0vdGVuYW50cy97dGVuYW50fULiAQofY29tLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
+            "dC92NGJldGExO3RhbGVudKICA0NUU+pBXgojam9icy5nb29nbGVhcGlzLmNv",
+            "bS9UZW5hbnRPclByb2plY3QSI3Byb2plY3RzL3twcm9qZWN0fS90ZW5hbnRz",
+            "L3t0ZW5hbnR9EhJwcm9qZWN0cy97cHJvamVjdH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
@@ -114,8 +118,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Required. Client side tenant identifier, used to uniquely identify the
-    /// tenant.
+    /// Required. Client side tenant identifier, used to uniquely identify the tenant.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -134,9 +137,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Indicates whether data owned by this tenant may be used to provide product
     /// improvements across other tenants.
     ///
-    /// Defaults behavior is
-    /// [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED]
-    /// if it's unset.
+    /// Defaults behavior is [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED] if it's unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType UsageType {
@@ -152,10 +153,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> keywordSearchableProfileCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of keys of filterable
-    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes],
-    /// whose corresponding `string_values` are used in keyword searches. Profiles
-    /// with `string_values` under these specified field keys are returned if any
+    /// A list of keys of filterable [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes], whose
+    /// corresponding `string_values` are used in keyword searches. Profiles with
+    /// `string_values` under these specified field keys are returned if any
     /// of the values match the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols are not searchable as-is,
     /// and must be surrounded by quotes.

@@ -90,11 +90,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// An expression specifies a histogram request against matching resources
     /// (for example, jobs, profiles) for searches.
     ///
-    /// See
-    /// [SearchJobsRequest.histogram_queries][google.cloud.talent.v4beta1.SearchJobsRequest.histogram_queries]
-    /// and
-    /// [SearchProfilesRequest.histogram_queries][google.cloud.talent.v4beta1.SearchProfilesRequest.histogram_queries]
-    /// for details about syntax.
+    /// See [SearchJobsRequest.histogram_queries][google.cloud.talent.v4beta1.SearchJobsRequest.histogram_queries] and
+    /// [SearchProfilesRequest.histogram_queries][google.cloud.talent.v4beta1.SearchProfilesRequest.histogram_queries] for details about syntax.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HistogramQuery_ {
@@ -189,9 +186,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Histogram result that matches
-  /// [HistogramQuery][google.cloud.talent.v4beta1.HistogramQuery] specified in
-  /// searches.
+  /// Histogram result that matches [HistogramQuery][google.cloud.talent.v4beta1.HistogramQuery] specified in searches.
   /// </summary>
   public sealed partial class HistogramQueryResult : pb::IMessage<HistogramQueryResult> {
     private static readonly pb::MessageParser<HistogramQueryResult> _parser = new pb::MessageParser<HistogramQueryResult>(() => new HistogramQueryResult());
