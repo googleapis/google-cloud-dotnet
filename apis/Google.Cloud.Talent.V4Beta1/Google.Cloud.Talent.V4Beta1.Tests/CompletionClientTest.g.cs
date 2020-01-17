@@ -14,62 +14,82 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Talent.V4Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedCompletionClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedCompletionClientTest
     {
-        [Fact]
-        public void CompleteQuery()
+        [xunit::FactAttribute]
+        public void CompleteQueryRequestObject()
         {
-            Mock<Completion.CompletionClient> mockGrpcClient = new Mock<Completion.CompletionClient>(MockBehavior.Strict);
+            moq::Mock<Completion.CompletionClient> mockGrpcClient = new moq::Mock<Completion.CompletionClient>(moq::MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
-                Query = "query107944136",
-                PageSize = 883849137,
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Query = "queryf0c71c1b",
+                LanguageCodes =
+                {
+                    "language_codes1de1a181",
+                },
+                PageSize = -226905851,
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
+                Type = CompleteQueryRequest.Types.CompletionType.Combined,
             };
-            CompleteQueryResponse expectedResponse = new CompleteQueryResponse();
-            mockGrpcClient.Setup(x => x.CompleteQuery(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            CompleteQueryResponse expectedResponse = new CompleteQueryResponse
+            {
+                CompletionResults =
+                {
+                    new CompleteQueryResponse.Types.CompletionResult(),
+                },
+                Metadata = new ResponseMetadata(),
+            };
+            mockGrpcClient.Setup(x => x.CompleteQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompletionClient client = new CompletionClientImpl(mockGrpcClient.Object, null);
             CompleteQueryResponse response = client.CompleteQuery(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CompleteQueryAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CompleteQueryRequestObjectAsync()
         {
-            Mock<Completion.CompletionClient> mockGrpcClient = new Mock<Completion.CompletionClient>(MockBehavior.Strict);
+            moq::Mock<Completion.CompletionClient> mockGrpcClient = new moq::Mock<Completion.CompletionClient>(moq::MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
-                Query = "query107944136",
-                PageSize = 883849137,
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Query = "queryf0c71c1b",
+                LanguageCodes =
+                {
+                    "language_codes1de1a181",
+                },
+                PageSize = -226905851,
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
+                Type = CompleteQueryRequest.Types.CompletionType.Combined,
             };
-            CompleteQueryResponse expectedResponse = new CompleteQueryResponse();
-            mockGrpcClient.Setup(x => x.CompleteQueryAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<CompleteQueryResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            CompleteQueryResponse expectedResponse = new CompleteQueryResponse
+            {
+                CompletionResults =
+                {
+                    new CompleteQueryResponse.Types.CompletionResult(),
+                },
+                Metadata = new ResponseMetadata(),
+            };
+            mockGrpcClient.Setup(x => x.CompleteQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompleteQueryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompletionClient client = new CompletionClientImpl(mockGrpcClient.Object, null);
-            CompleteQueryResponse response = await client.CompleteQueryAsync(request);
-            Assert.Same(expectedResponse, response);
+            CompleteQueryResponse responseCallSettings = await client.CompleteQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompleteQueryResponse responseCancellationToken = await client.CompleteQueryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }

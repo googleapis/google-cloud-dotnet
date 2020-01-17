@@ -17,62 +17,42 @@
 namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedApplicationServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedApplicationServiceClientSnippets
     {
-        /// <summary>Snippet for CreateApplicationAsync</summary>
-        public async Task CreateApplicationAsync()
-        {
-            // Snippet: CreateApplicationAsync(ProfileName,Application,CallSettings)
-            // Additional: CreateApplicationAsync(ProfileName,Application,CancellationToken)
-            // Create client
-            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProfileName parent = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            Application application = new Application();
-            // Make the request
-            Application response = await applicationServiceClient.CreateApplicationAsync(parent, application);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateApplication</summary>
-        public void CreateApplication()
+        public void CreateApplication_RequestObject()
         {
-            // Snippet: CreateApplication(ProfileName,Application,CallSettings)
+            // Snippet: CreateApplication(CreateApplicationRequest, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            ProfileName parent = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            Application application = new Application();
+            CreateApplicationRequest request = new CreateApplicationRequest
+            {
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                Application = new Application(),
+            };
             // Make the request
-            Application response = applicationServiceClient.CreateApplication(parent, application);
+            Application response = applicationServiceClient.CreateApplication(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateApplicationAsync</summary>
         public async Task CreateApplicationAsync_RequestObject()
         {
-            // Snippet: CreateApplicationAsync(CreateApplicationRequest,CallSettings)
-            // Additional: CreateApplicationAsync(CreateApplicationRequest,CancellationToken)
+            // Snippet: CreateApplicationAsync(CreateApplicationRequest, CallSettings)
+            // Additional: CreateApplicationAsync(CreateApplicationRequest, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateApplicationRequest request = new CreateApplicationRequest
             {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 Application = new Application(),
             };
             // Make the request
@@ -81,60 +61,90 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateApplication</summary>
-        public void CreateApplication_RequestObject()
+        public void CreateApplication()
         {
-            // Snippet: CreateApplication(CreateApplicationRequest,CallSettings)
+            // Snippet: CreateApplication(string, Application, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            CreateApplicationRequest request = new CreateApplicationRequest
-            {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
-            };
+            string parent = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]";
+            Application application = new Application();
             // Make the request
-            Application response = applicationServiceClient.CreateApplication(request);
+            Application response = applicationServiceClient.CreateApplication(parent, application);
             // End snippet
         }
 
-        /// <summary>Snippet for GetApplicationAsync</summary>
-        public async Task GetApplicationAsync()
+        /// <summary>Snippet for CreateApplicationAsync</summary>
+        public async Task CreateApplicationAsync()
         {
-            // Snippet: GetApplicationAsync(ApplicationName,CallSettings)
-            // Additional: GetApplicationAsync(ApplicationName,CancellationToken)
+            // Snippet: CreateApplicationAsync(string, Application, CallSettings)
+            // Additional: CreateApplicationAsync(string, Application, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            string parent = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]";
+            Application application = new Application();
             // Make the request
-            Application response = await applicationServiceClient.GetApplicationAsync(name);
+            Application response = await applicationServiceClient.CreateApplicationAsync(parent, application);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApplication</summary>
+        public void CreateApplication_ResourceNames()
+        {
+            // Snippet: CreateApplication(ProfileName, Application, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
+            // Initialize request argument(s)
+            ProfileName parent = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]");
+            Application application = new Application();
+            // Make the request
+            Application response = applicationServiceClient.CreateApplication(parent, application);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApplicationAsync</summary>
+        public async Task CreateApplicationAsync_ResourceNames()
+        {
+            // Snippet: CreateApplicationAsync(ProfileName, Application, CallSettings)
+            // Additional: CreateApplicationAsync(ProfileName, Application, CancellationToken)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProfileName parent = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]");
+            Application application = new Application();
+            // Make the request
+            Application response = await applicationServiceClient.CreateApplicationAsync(parent, application);
             // End snippet
         }
 
         /// <summary>Snippet for GetApplication</summary>
-        public void GetApplication()
+        public void GetApplication_RequestObject()
         {
-            // Snippet: GetApplication(ApplicationName,CallSettings)
+            // Snippet: GetApplication(GetApplicationRequest, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            GetApplicationRequest request = new GetApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
             // Make the request
-            Application response = applicationServiceClient.GetApplication(name);
+            Application response = applicationServiceClient.GetApplication(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetApplicationAsync</summary>
         public async Task GetApplicationAsync_RequestObject()
         {
-            // Snippet: GetApplicationAsync(GetApplicationRequest,CallSettings)
-            // Additional: GetApplicationAsync(GetApplicationRequest,CancellationToken)
+            // Snippet: GetApplicationAsync(GetApplicationRequest, CallSettings)
+            // Additional: GetApplicationAsync(GetApplicationRequest, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetApplicationRequest request = new GetApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
             // Make the request
             Application response = await applicationServiceClient.GetApplicationAsync(request);
@@ -142,39 +152,98 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetApplication</summary>
-        public void GetApplication_RequestObject()
+        public void GetApplication()
         {
-            // Snippet: GetApplication(GetApplicationRequest,CallSettings)
+            // Snippet: GetApplication(string, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            GetApplicationRequest request = new GetApplicationRequest
+            string name = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]/applications/[APPLICATION]";
+            // Make the request
+            Application response = applicationServiceClient.GetApplication(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetApplicationAsync</summary>
+        public async Task GetApplicationAsync()
+        {
+            // Snippet: GetApplicationAsync(string, CallSettings)
+            // Additional: GetApplicationAsync(string, CancellationToken)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]/applications/[APPLICATION]";
+            // Make the request
+            Application response = await applicationServiceClient.GetApplicationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetApplication</summary>
+        public void GetApplication_ResourceNames()
+        {
+            // Snippet: GetApplication(ApplicationName, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
+            // Initialize request argument(s)
+            ApplicationName name = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            // Make the request
+            Application response = applicationServiceClient.GetApplication(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetApplicationAsync</summary>
+        public async Task GetApplicationAsync_ResourceNames()
+        {
+            // Snippet: GetApplicationAsync(ApplicationName, CallSettings)
+            // Additional: GetApplicationAsync(ApplicationName, CancellationToken)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ApplicationName name = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            // Make the request
+            Application response = await applicationServiceClient.GetApplicationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApplication</summary>
+        public void UpdateApplication_RequestObject()
+        {
+            // Snippet: UpdateApplication(UpdateApplicationRequest, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateApplicationRequest request = new UpdateApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Application = new Application(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            Application response = applicationServiceClient.GetApplication(request);
+            Application response = applicationServiceClient.UpdateApplication(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateApplicationAsync</summary>
-        public async Task UpdateApplicationAsync()
+        public async Task UpdateApplicationAsync_RequestObject()
         {
-            // Snippet: UpdateApplicationAsync(Application,CallSettings)
-            // Additional: UpdateApplicationAsync(Application,CancellationToken)
+            // Snippet: UpdateApplicationAsync(UpdateApplicationRequest, CallSettings)
+            // Additional: UpdateApplicationAsync(UpdateApplicationRequest, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Application application = new Application();
+            UpdateApplicationRequest request = new UpdateApplicationRequest
+            {
+                Application = new Application(),
+                UpdateMask = new FieldMask(),
+            };
             // Make the request
-            Application response = await applicationServiceClient.UpdateApplicationAsync(application);
+            Application response = await applicationServiceClient.UpdateApplicationAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateApplication</summary>
         public void UpdateApplication()
         {
-            // Snippet: UpdateApplication(Application,CallSettings)
+            // Snippet: UpdateApplication(Application, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
@@ -185,76 +254,46 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateApplicationAsync</summary>
-        public async Task UpdateApplicationAsync_RequestObject()
+        public async Task UpdateApplicationAsync()
         {
-            // Snippet: UpdateApplicationAsync(UpdateApplicationRequest,CallSettings)
-            // Additional: UpdateApplicationAsync(UpdateApplicationRequest,CancellationToken)
+            // Snippet: UpdateApplicationAsync(Application, CallSettings)
+            // Additional: UpdateApplicationAsync(Application, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateApplicationRequest request = new UpdateApplicationRequest
-            {
-                Application = new Application(),
-            };
+            Application application = new Application();
             // Make the request
-            Application response = await applicationServiceClient.UpdateApplicationAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateApplication</summary>
-        public void UpdateApplication_RequestObject()
-        {
-            // Snippet: UpdateApplication(UpdateApplicationRequest,CallSettings)
-            // Create client
-            ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateApplicationRequest request = new UpdateApplicationRequest
-            {
-                Application = new Application(),
-            };
-            // Make the request
-            Application response = applicationServiceClient.UpdateApplication(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteApplicationAsync</summary>
-        public async Task DeleteApplicationAsync()
-        {
-            // Snippet: DeleteApplicationAsync(ApplicationName,CallSettings)
-            // Additional: DeleteApplicationAsync(ApplicationName,CancellationToken)
-            // Create client
-            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
-            // Make the request
-            await applicationServiceClient.DeleteApplicationAsync(name);
+            Application response = await applicationServiceClient.UpdateApplicationAsync(application);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteApplication</summary>
-        public void DeleteApplication()
+        public void DeleteApplication_RequestObject()
         {
-            // Snippet: DeleteApplication(ApplicationName,CallSettings)
+            // Snippet: DeleteApplication(DeleteApplicationRequest, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            DeleteApplicationRequest request = new DeleteApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
             // Make the request
-            applicationServiceClient.DeleteApplication(name);
+            applicationServiceClient.DeleteApplication(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteApplicationAsync</summary>
         public async Task DeleteApplicationAsync_RequestObject()
         {
-            // Snippet: DeleteApplicationAsync(DeleteApplicationRequest,CallSettings)
-            // Additional: DeleteApplicationAsync(DeleteApplicationRequest,CancellationToken)
+            // Snippet: DeleteApplicationAsync(DeleteApplicationRequest, CallSettings)
+            // Additional: DeleteApplicationAsync(DeleteApplicationRequest, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteApplicationRequest request = new DeleteApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
             // Make the request
             await applicationServiceClient.DeleteApplicationAsync(request);
@@ -262,32 +301,120 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteApplication</summary>
-        public void DeleteApplication_RequestObject()
+        public void DeleteApplication()
         {
-            // Snippet: DeleteApplication(DeleteApplicationRequest,CallSettings)
+            // Snippet: DeleteApplication(string, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            DeleteApplicationRequest request = new DeleteApplicationRequest
-            {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-            };
+            string name = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]/applications/[APPLICATION]";
             // Make the request
-            applicationServiceClient.DeleteApplication(request);
+            applicationServiceClient.DeleteApplication(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListApplicationsAsync</summary>
-        public async Task ListApplicationsAsync()
+        /// <summary>Snippet for DeleteApplicationAsync</summary>
+        public async Task DeleteApplicationAsync()
         {
-            // Snippet: ListApplicationsAsync(ProfileName,string,int?,CallSettings)
+            // Snippet: DeleteApplicationAsync(string, CallSettings)
+            // Additional: DeleteApplicationAsync(string, CancellationToken)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProfileName parent = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
+            string name = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]/applications/[APPLICATION]";
             // Make the request
-            PagedAsyncEnumerable<ListApplicationsResponse, Application> response =
-                applicationServiceClient.ListApplicationsAsync(parent);
+            await applicationServiceClient.DeleteApplicationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApplication</summary>
+        public void DeleteApplication_ResourceNames()
+        {
+            // Snippet: DeleteApplication(ApplicationName, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
+            // Initialize request argument(s)
+            ApplicationName name = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            // Make the request
+            applicationServiceClient.DeleteApplication(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApplicationAsync</summary>
+        public async Task DeleteApplicationAsync_ResourceNames()
+        {
+            // Snippet: DeleteApplicationAsync(ApplicationName, CallSettings)
+            // Additional: DeleteApplicationAsync(ApplicationName, CancellationToken)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ApplicationName name = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
+            // Make the request
+            await applicationServiceClient.DeleteApplicationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApplications</summary>
+        public void ListApplications_RequestObject()
+        {
+            // Snippet: ListApplications(ListApplicationsRequest, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
+            // Initialize request argument(s)
+            ListApplicationsRequest request = new ListApplicationsRequest
+            {
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListApplicationsResponse, Application> response = applicationServiceClient.ListApplications(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Application item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListApplicationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Application item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Application> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Application item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListApplications</summary>
+        public async Task ListApplicationsAsync_RequestObject()
+        {
+            // Snippet: ListApplicationsAsync(ListApplicationsRequest, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListApplicationsRequest request = new ListApplicationsRequest
+            {
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListApplicationsResponse, Application> response = applicationServiceClient.ListApplicationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Application item) =>
@@ -303,6 +430,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Application item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -314,6 +442,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Application item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -324,14 +453,13 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListApplications</summary>
         public void ListApplications()
         {
-            // Snippet: ListApplications(ProfileName,string,int?,CallSettings)
+            // Snippet: ListApplications(string, string, int?, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            ProfileName parent = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
+            string parent = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]";
             // Make the request
-            PagedEnumerable<ListApplicationsResponse, Application> response =
-                applicationServiceClient.ListApplications(parent);
+            PagedEnumerable<ListApplicationsResponse, Application> response = applicationServiceClient.ListApplications(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Application item in response)
@@ -347,6 +475,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Application item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -358,6 +487,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Application item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -365,20 +495,16 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApplicationsAsync</summary>
-        public async Task ListApplicationsAsync_RequestObject()
+        /// <summary>Snippet for ListApplications</summary>
+        public async Task ListApplicationsAsync()
         {
-            // Snippet: ListApplicationsAsync(ListApplicationsRequest,CallSettings)
+            // Snippet: ListApplicationsAsync(string, string, int?, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListApplicationsRequest request = new ListApplicationsRequest
-            {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-            };
+            string parent = "projects/[PROJECT]/tenants/[TENANT]/profiles/[PROFILE]";
             // Make the request
-            PagedAsyncEnumerable<ListApplicationsResponse, Application> response =
-                applicationServiceClient.ListApplicationsAsync(request);
+            PagedAsyncEnumerable<ListApplicationsResponse, Application> response = applicationServiceClient.ListApplicationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Application item) =>
@@ -394,6 +520,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Application item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -405,6 +532,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Application item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -413,19 +541,15 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListApplications</summary>
-        public void ListApplications_RequestObject()
+        public void ListApplications_ResourceNames()
         {
-            // Snippet: ListApplications(ListApplicationsRequest,CallSettings)
+            // Snippet: ListApplications(ProfileName, string, int?, CallSettings)
             // Create client
             ApplicationServiceClient applicationServiceClient = ApplicationServiceClient.Create();
             // Initialize request argument(s)
-            ListApplicationsRequest request = new ListApplicationsRequest
-            {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-            };
+            ProfileName parent = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]");
             // Make the request
-            PagedEnumerable<ListApplicationsResponse, Application> response =
-                applicationServiceClient.ListApplications(request);
+            PagedEnumerable<ListApplicationsResponse, Application> response = applicationServiceClient.ListApplications(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Application item in response)
@@ -441,6 +565,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Application item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -452,6 +577,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Application item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -459,5 +585,49 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListApplications</summary>
+        public async Task ListApplicationsAsync_ResourceNames()
+        {
+            // Snippet: ListApplicationsAsync(ProfileName, string, int?, CallSettings)
+            // Create client
+            ApplicationServiceClient applicationServiceClient = await ApplicationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProfileName parent = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]");
+            // Make the request
+            PagedAsyncEnumerable<ListApplicationsResponse, Application> response = applicationServiceClient.ListApplicationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Application item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListApplicationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Application item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Application> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Application item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

@@ -27,79 +27,84 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "CjFnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvcHJvZmlsZV9zZXJ2aWNl",
             "LnByb3RvEhtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9h",
             "cGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3Rv",
-            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGihnb29nbGUvY2xv",
-            "dWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvGilnb29nbGUvY2xvdWQv",
-            "dGFsZW50L3Y0YmV0YTEvZmlsdGVycy5wcm90bxorZ29vZ2xlL2Nsb3VkL3Rh",
-            "bGVudC92NGJldGExL2hpc3RvZ3JhbS5wcm90bxopZ29vZ2xlL2Nsb3VkL3Rh",
-            "bGVudC92NGJldGExL3Byb2ZpbGUucHJvdG8aI2dvb2dsZS9sb25ncnVubmlu",
-            "Zy9vcGVyYXRpb25zLnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3Rv",
-            "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1",
-            "Zi9maWVsZF9tYXNrLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKQ",
-            "AQoTTGlzdFByb2ZpbGVzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIO",
-            "CgZmaWx0ZXIYBSABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3Np",
-            "emUYAyABKAUSLQoJcmVhZF9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFzayJnChRMaXN0UHJvZmlsZXNSZXNwb25zZRI2Cghwcm9maWxl",
-            "cxgBIAMoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxl",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJnChRDcmVhdGVQcm9maWxlUmVx",
-            "dWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhI6Cgdwcm9maWxlGAIgASgLMiQu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGVCA+BBAiImChFH",
-            "ZXRQcm9maWxlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIigwEKFFVwZGF0",
-            "ZVByb2ZpbGVSZXF1ZXN0EjoKB3Byb2ZpbGUYASABKAsyJC5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZUID4EECEi8KC3VwZGF0ZV9tYXNr",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIpChREZWxldGVQ",
-            "cm9maWxlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIivQMKFVNlYXJjaFBy",
-            "b2ZpbGVzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJLChByZXF1ZXN0",
-            "X21ldGFkYXRhGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LlJlcXVlc3RNZXRhZGF0YUID4EECEkAKDXByb2ZpbGVfcXVlcnkYAyABKAsy",
-            "KS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZVF1ZXJ5EhEK",
-            "CXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJEg4KBm9mZnNl",
-            "dBgGIAEoBRIbChNkaXNhYmxlX3NwZWxsX2NoZWNrGAcgASgIEhAKCG9yZGVy",
-            "X2J5GAggASgJEhsKE2Nhc2Vfc2Vuc2l0aXZlX3NvcnQYCSABKAgSRgoRaGlz",
-            "dG9ncmFtX3F1ZXJpZXMYCiADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuSGlzdG9ncmFtUXVlcnkSFQoNcmVzdWx0X3NldF9pZBgMIAEoCRIe",
-            "ChZzdHJpY3Rfa2V5d29yZHNfc2VhcmNoGA0gASgIIpMDChZTZWFyY2hQcm9m",
-            "aWxlc1Jlc3BvbnNlEhwKFGVzdGltYXRlZF90b3RhbF9zaXplGAEgASgDEkkK",
-            "EHNwZWxsX2NvcnJlY3Rpb24YAiABKAsyLy5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuU3BlbGxpbmdDb3JyZWN0aW9uEj8KCG1ldGFkYXRhGAMgASgL",
-            "Mi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlc3BvbnNlTWV0YWRh",
-            "dGESFwoPbmV4dF9wYWdlX3Rva2VuGAQgASgJElIKF2hpc3RvZ3JhbV9xdWVy",
-            "eV9yZXN1bHRzGAUgAygLMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "Lkhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EksKE3N1bW1hcml6ZWRfcHJvZmlsZXMY",
-            "BiADKAsyLi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU3VtbWFyaXpl",
-            "ZFByb2ZpbGUSFQoNcmVzdWx0X3NldF9pZBgHIAEoCSKCAQoRU3VtbWFyaXpl",
-            "ZFByb2ZpbGUSNgoIcHJvZmlsZXMYASADKAsyJC5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuUHJvZmlsZRI1CgdzdW1tYXJ5GAIgASgLMiQuZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUy7QgKDlByb2ZpbGVTZXJ2",
-            "aWNlEqwBCgxMaXN0UHJvZmlsZXMSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuTGlzdFByb2ZpbGVzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5MaXN0UHJvZmlsZXNSZXNwb25zZSI3gtPkkwIxEi8vdjRi",
-            "ZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9wcm9maWxlcxKk",
-            "AQoNQ3JlYXRlUHJvZmlsZRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5DcmVhdGVQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5Qcm9maWxlIjqC0+STAjQiLy92NGJldGExL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi90ZW5hbnRzLyp9L3Byb2ZpbGVzOgEqEpsBCgpHZXRQcm9maWxl",
+            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
+            "L3Jlc291cmNlLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEv",
+            "Y29tbW9uLnByb3RvGilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZmls",
+            "dGVycy5wcm90bxorZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2hpc3Rv",
+            "Z3JhbS5wcm90bxopZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL3Byb2Zp",
+            "bGUucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3Rv",
+            "Ghlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGhtnb29nbGUvcHJvdG9idWYv",
+            "ZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
+            "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKQAQoTTGlzdFByb2ZpbGVzUmVx",
+            "dWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIOCgZmaWx0ZXIYBSABKAkSEgoK",
+            "cGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSLQoJcmVhZF9t",
+            "YXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJnChRMaXN0",
+            "UHJvZmlsZXNSZXNwb25zZRI2Cghwcm9maWxlcxgBIAMoCzIkLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlEhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCSKGAQoUQ3JlYXRlUHJvZmlsZVJlcXVlc3QSMgoGcGFyZW50GAEg",
+            "ASgJQiLgQQL6QRwKGmpvYnMuZ29vZ2xlYXBpcy5jb20vVGVuYW50EjoKB3By",
+            "b2ZpbGUYAiABKAsyJC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJv",
+            "ZmlsZUID4EECIkYKEUdldFByb2ZpbGVSZXF1ZXN0EjEKBG5hbWUYASABKAlC",
+            "I+BBAvpBHQobam9icy5nb29nbGVhcGlzLmNvbS9Qcm9maWxlIoMBChRVcGRh",
+            "dGVQcm9maWxlUmVxdWVzdBI6Cgdwcm9maWxlGAEgASgLMiQuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLlByb2ZpbGVCA+BBAhIvCgt1cGRhdGVfbWFz",
+            "axgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSQoURGVsZXRl",
+            "UHJvZmlsZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChtqb2JzLmdv",
+            "b2dsZWFwaXMuY29tL1Byb2ZpbGUi3AMKFVNlYXJjaFByb2ZpbGVzUmVxdWVz",
+            "dBIyCgZwYXJlbnQYASABKAlCIuBBAvpBHAoaam9icy5nb29nbGVhcGlzLmNv",
+            "bS9UZW5hbnQSSwoQcmVxdWVzdF9tZXRhZGF0YRgCIAEoCzIsLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5SZXF1ZXN0TWV0YWRhdGFCA+BBAhJACg1w",
+            "cm9maWxlX3F1ZXJ5GAMgASgLMikuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlByb2ZpbGVRdWVyeRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90",
+            "b2tlbhgFIAEoCRIOCgZvZmZzZXQYBiABKAUSGwoTZGlzYWJsZV9zcGVsbF9j",
+            "aGVjaxgHIAEoCBIQCghvcmRlcl9ieRgIIAEoCRIbChNjYXNlX3NlbnNpdGl2",
+            "ZV9zb3J0GAkgASgIEkYKEWhpc3RvZ3JhbV9xdWVyaWVzGAogAygLMisuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkhpc3RvZ3JhbVF1ZXJ5EhUKDXJl",
+            "c3VsdF9zZXRfaWQYDCABKAkSHgoWc3RyaWN0X2tleXdvcmRzX3NlYXJjaBgN",
+            "IAEoCCKTAwoWU2VhcmNoUHJvZmlsZXNSZXNwb25zZRIcChRlc3RpbWF0ZWRf",
+            "dG90YWxfc2l6ZRgBIAEoAxJJChBzcGVsbF9jb3JyZWN0aW9uGAIgASgLMi8u",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNwZWxsaW5nQ29ycmVjdGlv",
+            "bhI/CghtZXRhZGF0YRgDIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5SZXNwb25zZU1ldGFkYXRhEhcKD25leHRfcGFnZV90b2tlbhgEIAEo",
+            "CRJSChdoaXN0b2dyYW1fcXVlcnlfcmVzdWx0cxgFIAMoCzIxLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeVJlc3VsdBJLChNz",
+            "dW1tYXJpemVkX3Byb2ZpbGVzGAYgAygLMi4uZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLlN1bW1hcml6ZWRQcm9maWxlEhUKDXJlc3VsdF9zZXRfaWQY",
+            "ByABKAkiggEKEVN1bW1hcml6ZWRQcm9maWxlEjYKCHByb2ZpbGVzGAEgAygL",
+            "MiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUSNQoHc3Vt",
+            "bWFyeRgCIAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9m",
+            "aWxlMp8JCg5Qcm9maWxlU2VydmljZRK1AQoMTGlzdFByb2ZpbGVzEjAuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxpc3RQcm9maWxlc1JlcXVlc3Qa",
+            "MS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdFByb2ZpbGVzUmVz",
+            "cG9uc2UiQILT5JMCMRIvL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3Rl",
+            "bmFudHMvKn0vcHJvZmlsZXPaQQZwYXJlbnQStQEKDUNyZWF0ZVByb2ZpbGUS",
+            "MS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ3JlYXRlUHJvZmlsZVJl",
+            "cXVlc3QaJC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSJL",
+            "gtPkkwI0Ii8vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8q",
+            "fS9wcm9maWxlczoBKtpBDnBhcmVudCxwcm9maWxlEqIBCgpHZXRQcm9maWxl",
             "Ei4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkdldFByb2ZpbGVSZXF1",
-            "ZXN0GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiN4LT",
+            "ZXN0GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiPoLT",
             "5JMCMRIvL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJv",
-            "ZmlsZXMvKn0SrAEKDVVwZGF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuVXBkYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSJCgtPkkwI8MjcvdjRiZXRhMS97",
-            "cHJvZmlsZS5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL3Byb2ZpbGVzLyp9",
-            "OgEqEpMBCg1EZWxldGVQcm9maWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLkRlbGV0ZVByb2ZpbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IjeC0+STAjEqLy92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVu",
-            "YW50cy8qL3Byb2ZpbGVzLyp9ErMBCg5TZWFyY2hQcm9maWxlcxIyLmdvb2ds",
-            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hQcm9maWxlc1JlcXVlc3Qa",
-            "My5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJvZmlsZXNS",
-            "ZXNwb25zZSI4gtPkkwIyIi0vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyov",
-            "dGVuYW50cy8qfTpzZWFyY2g6ASoabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23S",
-            "QVNodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9ic0KBAQof",
-            "Y29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUITUHJvZmlsZVNlcnZp",
-            "Y2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "ZmlsZXMvKn3aQQRuYW1lErYBCg1VcGRhdGVQcm9maWxlEjEuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLlVwZGF0ZVByb2ZpbGVSZXF1ZXN0GiQuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiTILT5JMCPDI3L3Y0",
+            "YmV0YTEve3Byb2ZpbGUubmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9wcm9m",
+            "aWxlcy8qfToBKtpBB3Byb2ZpbGUSmgEKDURlbGV0ZVByb2ZpbGUSMS5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRGVsZXRlUHJvZmlsZVJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiPoLT5JMCMSovL3Y0YmV0YTEve25h",
+            "bWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmlsZXMvKn3aQQRuYW1lErMB",
+            "Cg5TZWFyY2hQcm9maWxlcxIyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5TZWFyY2hQcm9maWxlc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuU2VhcmNoUHJvZmlsZXNSZXNwb25zZSI4gtPkkwIyIi0vdjRi",
+            "ZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfTpzZWFyY2g6ASoa",
+            "bMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvam9ic0KBAQofY29tLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMUITUHJvZmlsZVNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJl",
+            "dGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest), global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest.Parser, new[]{ "Parent", "Filter", "PageToken", "PageSize", "ReadMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse), global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse.Parser, new[]{ "Profiles", "NextPageToken" }, null, null, null),
@@ -161,8 +166,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the tenant under which the profile is
-    /// created.
+    /// Required. The resource name of the tenant under which the profile is created.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
     /// "projects/foo/tenants/bar".
@@ -211,9 +215,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// The token that specifies the current offset (that is, starting result).
     ///
-    /// Please set the value to
-    /// [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token]
-    /// to continue the list.
+    /// Please set the value to [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token] to
+    /// continue the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1322,9 +1325,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequestMetadataFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.RequestMetadata requestMetadata_;
     /// <summary>
-    /// Required. The meta information collected about the profile search user.
-    /// This is used to improve the search quality of the service. These values are
-    /// provided by users, and must be precise and consistent.
+    /// Required. The meta information collected about the profile search user. This is used
+    /// to improve the search quality of the service. These values are provided by
+    /// users, and must be precise and consistent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.RequestMetadata RequestMetadata {
@@ -1338,8 +1341,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ProfileQueryFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.ProfileQuery profileQuery_;
     /// <summary>
-    /// Search query to execute. See
-    /// [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
+    /// Search query to execute. See [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ProfileQuery ProfileQuery {
@@ -1373,10 +1375,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The pageToken, similar to offset enables users of the API to paginate
     /// through the search results. To retrieve the first page of results, set the
     /// pageToken to empty. The search response includes a
-    /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token]
-    /// field that can be used to populate the pageToken field for the next page of
-    /// results. Using pageToken instead of offset increases the performance of the
-    /// API, especially compared to larger offset values.
+    /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token] field that can be
+    /// used to populate the pageToken field for the next page of results. Using
+    /// pageToken instead of offset increases the performance of the API,
+    /// especially compared to larger offset values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1391,9 +1393,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private int offset_;
     /// <summary>
     /// An integer that specifies the current offset (that is, starting result) in
-    /// search results. This field is only considered if
-    /// [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
-    /// is unset.
+    /// search results. This field is only considered if [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token] is unset.
     ///
     /// The maximum allowed value is 5000. Otherwise an error is thrown.
     ///
@@ -1437,27 +1437,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// * "relevance desc": By descending relevance, as determined by the API
     ///    algorithms.
-    /// * "update_date desc": Sort by
-    /// [Profile.update_time][google.cloud.talent.v4beta1.Profile.update_time] in
-    /// descending order
+    /// * "update_date desc": Sort by [Profile.update_time][google.cloud.talent.v4beta1.Profile.update_time] in descending order
     ///   (recently updated profiles first).
-    /// * "create_date desc": Sort by
-    /// [Profile.create_time][google.cloud.talent.v4beta1.Profile.create_time] in
-    /// descending order
+    /// * "create_date desc": Sort by [Profile.create_time][google.cloud.talent.v4beta1.Profile.create_time] in descending order
     ///   (recently created profiles first).
-    /// * "first_name": Sort by
-    /// [PersonName.PersonStructuredName.given_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.given_name]
-    /// in
+    /// * "first_name": Sort by [PersonName.PersonStructuredName.given_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.given_name] in
     ///   ascending order.
-    /// * "first_name desc": Sort by
-    /// [PersonName.PersonStructuredName.given_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.given_name]
+    /// * "first_name desc": Sort by [PersonName.PersonStructuredName.given_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.given_name]
     ///   in descending order.
-    /// * "last_name": Sort by
-    /// [PersonName.PersonStructuredName.family_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.family_name]
-    /// in
+    /// * "last_name": Sort by [PersonName.PersonStructuredName.family_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.family_name] in
     ///   ascending order.
-    /// * "last_name desc": Sort by
-    /// [PersonName.PersonStructuredName.family_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.family_name]
+    /// * "last_name desc": Sort by [PersonName.PersonStructuredName.family_name][google.cloud.talent.v4beta1.PersonName.PersonStructuredName.family_name]
     ///   in ascending order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1491,8 +1481,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.HistogramQuery> histogramQueries_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.HistogramQuery>();
     /// <summary>
     /// A list of expressions specifies histogram requests against matching
-    /// profiles for
-    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
+    /// profiles for [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     ///
     /// The expression syntax looks like a function definition with parameters.
     ///
@@ -1544,19 +1533,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * experience_in_months: experience in months. 0 means 0 month to 1 month
     /// (exclusive).
     /// * application_date: The application date specifies application start dates.
-    /// See
-    /// [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter]
-    /// for more details.
+    /// See [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter] for more details.
     /// * application_outcome_notes: The application outcome reason specifies the
     /// reasons behind the outcome of the job application.
-    /// See
-    /// [ApplicationOutcomeNotesFilter][google.cloud.talent.v4beta1.ApplicationOutcomeNotesFilter]
-    /// for more details.
+    /// See [ApplicationOutcomeNotesFilter][google.cloud.talent.v4beta1.ApplicationOutcomeNotesFilter] for more details.
     /// * application_job_title: The application job title specifies the job
     /// applied for in the application.
-    /// See
-    /// [ApplicationJobFilter][google.cloud.talent.v4beta1.ApplicationJobFilter]
-    /// for more details.
+    /// See [ApplicationJobFilter][google.cloud.talent.v4beta1.ApplicationJobFilter] for more details.
     /// * hirable_status: Hirable status specifies the profile's hirable status.
     /// * string_custom_attribute: String custom attributes. Values can be accessed
     /// via square bracket notation like string_custom_attribute["key1"].
@@ -1582,35 +1565,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string resultSetId_ = "";
     /// <summary>
     /// An id that uniquely identifies the result set of a
-    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles]
-    /// call. The id should be retrieved from the
-    /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse]
-    /// message returned from a previous invocation of
-    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles].
+    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles] call. The id should be
+    /// retrieved from the
+    /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse] message returned from a previous
+    /// invocation of [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles].
     ///
     /// A result set is an ordered list of search results.
     ///
     /// If this field is not set, a new result set is computed based on the
-    /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query].
-    /// A new
-    /// [result_set_id][google.cloud.talent.v4beta1.SearchProfilesRequest.result_set_id]
-    /// is returned as a handle to access this result set.
+    /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query].  A new [result_set_id][google.cloud.talent.v4beta1.SearchProfilesRequest.result_set_id] is returned as a handle to
+    /// access this result set.
     ///
     /// If this field is set, the service will ignore the resource and
-    /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query]
-    /// values, and simply retrieve a page of results from the corresponding result
-    /// set.  In this case, one and only one of
-    /// [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
-    /// or [offset][google.cloud.talent.v4beta1.SearchProfilesRequest.offset] must
-    /// be set.
+    /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query] values, and simply retrieve a page of results from the
+    /// corresponding result set.  In this case, one and only one of [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
+    /// or [offset][google.cloud.talent.v4beta1.SearchProfilesRequest.offset] must be set.
     ///
-    /// A typical use case is to invoke
-    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
-    /// without this field, then use the resulting
-    /// [result_set_id][google.cloud.talent.v4beta1.SearchProfilesRequest.result_set_id]
-    /// in
-    /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse]
-    /// to page through the results.
+    /// A typical use case is to invoke [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] without this
+    /// field, then use the resulting [result_set_id][google.cloud.talent.v4beta1.SearchProfilesRequest.result_set_id] in
+    /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse] to page through the results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResultSetId {
@@ -2034,8 +2007,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Talent.V4Beta1.SummarizedProfile.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile> summarizedProfiles_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile>();
     /// <summary>
-    /// The profile entities that match the specified
-    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
+    /// The profile entities that match the specified [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile> SummarizedProfiles {
@@ -2047,8 +2019,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string resultSetId_ = "";
     /// <summary>
     /// An id that uniquely identifies the result set of a
-    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles]
-    /// call for consistent results.
+    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles] call for consistent
+    /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResultSetId {
@@ -2237,8 +2209,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Profile entry with metadata inside
-  /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
+  /// Profile entry with metadata inside [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
   /// </summary>
   public sealed partial class SummarizedProfile : pb::IMessage<SummarizedProfile> {
     private static readonly pb::MessageParser<SummarizedProfile> _parser = new pb::MessageParser<SummarizedProfile>(() => new SummarizedProfile());
@@ -2281,8 +2252,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.Profile.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Profile> profiles_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Profile>();
     /// <summary>
-    /// A list of profiles that are linked by
-    /// [Profile.group_id][google.cloud.talent.v4beta1.Profile.group_id].
+    /// A list of profiles that are linked by [Profile.group_id][google.cloud.talent.v4beta1.Profile.group_id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Profile> Profiles {
@@ -2296,10 +2266,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// A profile summary shows the profile summary and how the profile matches the
     /// search query.
     ///
-    /// In profile summary, the profiles with the same
-    /// [Profile.group_id][google.cloud.talent.v4beta1.Profile.group_id] are merged
-    /// together. Among profiles, same education/employment records may be slightly
-    /// different but they are merged into one with best efforts.
+    /// In profile summary, the profiles with the same [Profile.group_id][google.cloud.talent.v4beta1.Profile.group_id] are
+    /// merged together. Among profiles, same education/employment records may be
+    /// slightly different but they are merged into one with best efforts.
     ///
     /// For example, in one profile the school name is "UC Berkeley" and the field
     /// study is "Computer Science" and in another one the school name is
