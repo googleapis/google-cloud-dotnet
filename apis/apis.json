@@ -1055,9 +1055,8 @@
   },
   {
     "id": "Google.Cloud.Talent.V4Beta1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/talent/v4beta1",
-    "serviceYaml": "talent_v4beta1.yaml",
     "productName": "Google Cloud Talent Solution",
     "productUrl": "https://cloud.google.com/talent-solution/",
     "version": "2.0.0-alpha00",
