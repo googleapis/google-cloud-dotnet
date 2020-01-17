@@ -2315,14 +2315,6 @@ namespace Google.Cloud.Talent.V4Beta1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class SearchJobsResponse : gaxgrpc::IPageResponse<SearchJobsResponse.Types.MatchingJob>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Types.MatchingJob> GetEnumerator() => MatchingJobs.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
     public static partial class JobService
     {
         public partial class JobServiceClient
