@@ -22,7 +22,7 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.Tests
 {
     using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>>;
-
+    [DisableResourceBasedRouting]
     public class SessionPoolManagerTests
     {
         // Sample connection string for most tests

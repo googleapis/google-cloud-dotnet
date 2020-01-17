@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Admin.Database.V1;
-using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -179,37 +178,7 @@ namespace Google.Cloud.Spanner.Data
                 return await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
             }
 
-            internal async Task<string> GetInstanceEndpointUriAsync()
-            {
-                InstanceAdminClient instanceAdminClient =
-                    await InstanceAdminClient.CreateAsync().ConfigureAwait(false);
-                // Create request for instance with endpoints.
-                GetInstanceRequest request = new GetInstanceRequest
-                {
-                    InstanceName = new InstanceName(Connection.Project, Connection.SpannerInstance),
-                    FieldMask = new FieldMask { Paths = { "endpoint_uris" } }
-                };
-                try
-                {
-                    // Get list of available endpointUris from GetInstance.
-                    Instance instance = instanceAdminClient.GetInstance(request);
-                    return instance.EndpointUris.Count == 0 ? null : instance.EndpointUris[0];
-                }
-                catch (RpcException gRpcException)
-                {
-                    if (gRpcException.StatusCode == StatusCode.PermissionDenied)
-                    {
-#pragma warning disable CS1030 // #warning directive
-#warning PermissionDenied exception
-                        // Print warning message with PermissionDenied
-                        // status in Debug mode.
-                        Console.WriteLine(gRpcException.Message);
-#pragma warning restore CS1030 // #warning directive
-                        return null;
-                    }
-                    throw;
-                }
-            }
+            
 
             private void ValidateConnectionAndCommandTextBuilder()
             {

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.IO;
 using Xunit;
 
@@ -21,11 +20,9 @@ namespace Google.Cloud.Spanner.Data.Tests
     public partial class SpannerConnectionTests
     {
         [Fact]
+        [DisableResourceBasedRouting]
         public void OpenWithNoDatabase_InvalidCredentials()
         {
-            const string ResourceBasedRouteVariableName = "GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING";
-            var resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(ResourceBasedRouteVariableName);
-            Environment.SetEnvironmentVariable(ResourceBasedRouteVariableName, "false");
             var builder = new SpannerConnectionStringBuilder
             {
                 DataSource = "projects/project_id/instances/instance_id",
@@ -35,7 +32,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.Throws<FileNotFoundException>(() => connection.Open());
             }
-            Environment.SetEnvironmentVariable(ResourceBasedRouteVariableName, resourceBasedRoutingFlag);
         }
     }
 }

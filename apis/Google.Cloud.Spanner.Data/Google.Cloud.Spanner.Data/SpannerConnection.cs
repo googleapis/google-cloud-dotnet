@@ -639,18 +639,6 @@ namespace Google.Cloud.Spanner.Data
                     OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
                     try
                     {
-                        bool isResourceBasedRoutingEnabled = GetResourceBasedRoutingFlag();
-                        if (isResourceBasedRoutingEnabled)
-                        {
-                            using (SpannerCommand spannerCommand = new SpannerCommand(this))
-                            {
-                                string endpointUri = await spannerCommand.ExecuteGetInstanceEndpointUriAsync().ConfigureAwait(false);
-                                if (!string.IsNullOrEmpty(endpointUri))
-                                {
-                                    OverrideSpannerClientEndpoints(endpointUri);
-                                }
-                            }
-                        }
                         _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
                     }
                     finally
@@ -887,27 +875,5 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
 
-        /// <summary>
-        /// Get Resource based routing flag from environment variable.
-        /// </summary>
-        /// <returns>resource based routing flage</returns>
-        private static bool GetResourceBasedRoutingFlag()
-        {
-            string resourceBaseRoutingFlagValue =
-                Environment.GetEnvironmentVariable("GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING")?.ToLower();
-            return !string.IsNullOrEmpty(resourceBaseRoutingFlagValue) &&
-                resourceBaseRoutingFlagValue.Equals("true");
-        }
-
-        /// <summary>
-        /// Override the default endpointUri with available endpointUri.
-        /// </summary>
-        /// <param name="endpointUri"></param>
-        private void OverrideSpannerClientEndpoints(string endpointUri)
-        {
-            var newBuilder = Builder.Clone();
-            newBuilder.Host = endpointUri;
-            TrySetNewConnectionInfo(newBuilder);
-        }
     }
 }

@@ -23,6 +23,7 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
+    [DisableResourceBasedRouting]
     public class SpannerClientCreationOptionsTest
     {
         [Fact]

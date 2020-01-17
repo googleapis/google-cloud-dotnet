@@ -420,11 +420,6 @@ namespace Google.Cloud.Spanner.Data
             CreateExecutableCommand().ExecutePartitionedUpdateAsync(cancellationToken);
 
         /// <summary>
-        /// Executes this command to get instance endpointUri.
-        /// </summary>
-        public Task<string> ExecuteGetInstanceEndpointUriAsync() => CreateExecutableCommand().GetInstanceEndpointUriAsync();
-
-        /// <summary>
         /// Creates an executable command that captures all the necessary information from this command.
         /// </summary>
         private ExecutableCommand CreateExecutableCommand() => new ExecutableCommand(this);

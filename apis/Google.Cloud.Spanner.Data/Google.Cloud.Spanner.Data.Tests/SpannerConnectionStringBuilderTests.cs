@@ -94,6 +94,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        [DisableResourceBasedRouting]
         public void DefaultEndpointIfNotSpecified()
         {
             var builder = new SpannerConnectionStringBuilder();
@@ -112,6 +113,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        [DisableResourceBasedRouting]
         public void EndPointSettableViaProperty()
         {
             var connectionStringBuilder = new SpannerConnectionStringBuilder

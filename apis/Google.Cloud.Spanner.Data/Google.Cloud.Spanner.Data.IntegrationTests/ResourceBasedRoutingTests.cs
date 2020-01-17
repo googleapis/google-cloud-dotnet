@@ -15,7 +15,6 @@
 using Google.Cloud.Spanner.Admin.Instance.V1;
 using System;
 using Xunit;
-using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -27,7 +26,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public ResourceBasedRoutingTests(SpannerDatabaseFixture fixture) => _fixture = fixture;
         private const string ResourceBasedRouteVariableName = "GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING";
         [Fact]
-        public async stt.Task Should_Override_Endpoint()
+        public void Should_Override_Endpoint()
         {
             string resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(ResourceBasedRouteVariableName);
 
@@ -41,7 +40,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (SpannerCommand command = new SpannerCommand(connection))
                 {
-                    string instanceEndpointUri = await command.ExecuteGetInstanceEndpointUriAsync();
+                    string instanceEndpointUri = InstanceHostManager.Default.GetHost(connection.Project, connection.SpannerInstance);
                     if (!string.IsNullOrWhiteSpace(instanceEndpointUri))
                     {
                         expectedHost = instanceEndpointUri;
