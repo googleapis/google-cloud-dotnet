@@ -14,414 +14,679 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Talent.V4Beta1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedApplicationServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedApplicationServiceClientTest
     {
-        [Fact]
-        public void CreateApplication()
+        [xunit::FactAttribute]
+        public void CreateApplicationRequestObject()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            CreateApplicationRequest expectedRequest = new CreateApplicationRequest
-            {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
-            };
-            Application expectedResponse = new Application
-            {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
-            };
-            mockGrpcClient.Setup(x => x.CreateApplication(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName parent = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            Application application = new Application();
-            Application response = client.CreateApplication(parent, application);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateApplicationAsync()
-        {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            CreateApplicationRequest expectedRequest = new CreateApplicationRequest
-            {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
-            };
-            Application expectedResponse = new Application
-            {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
-            };
-            mockGrpcClient.Setup(x => x.CreateApplicationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Application>(Task.FromResult(expectedResponse), null, null, null, null));
-            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName parent = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
-            Application application = new Application();
-            Application response = await client.CreateApplicationAsync(parent, application);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateApplication2()
-        {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             CreateApplicationRequest request = new CreateApplicationRequest
             {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 Application = new Application(),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.CreateApplication(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
             Application response = client.CreateApplication(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateApplicationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateApplicationRequestObjectAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             CreateApplicationRequest request = new CreateApplicationRequest
             {
-                ParentAsProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 Application = new Application(),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.CreateApplicationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Application>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            Application response = await client.CreateApplicationAsync(request);
-            Assert.Same(expectedResponse, response);
+            Application responseCallSettings = await client.CreateApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.CreateApplicationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetApplication()
+        [xunit::FactAttribute]
+        public void CreateApplication()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            GetApplicationRequest expectedRequest = new GetApplicationRequest
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            CreateApplicationRequest request = new CreateApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                Application = new Application(),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.GetApplication(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
-            Application response = client.GetApplication(name);
-            Assert.Same(expectedResponse, response);
+            Application response = client.CreateApplication(request.Parent, request.Application);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetApplicationAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateApplicationAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            GetApplicationRequest expectedRequest = new GetApplicationRequest
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            CreateApplicationRequest request = new CreateApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                Application = new Application(),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.GetApplicationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Application>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
-            Application response = await client.GetApplicationAsync(name);
-            Assert.Same(expectedResponse, response);
+            Application responseCallSettings = await client.CreateApplicationAsync(request.Parent, request.Application, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.CreateApplicationAsync(request.Parent, request.Application, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetApplication2()
+        [xunit::FactAttribute]
+        public void CreateApplication_ResourceNames()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            CreateApplicationRequest request = new CreateApplicationRequest
+            {
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                Application = new Application(),
+            };
+            Application expectedResponse = new Application
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
+            };
+            mockGrpcClient.Setup(x => x.CreateApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            Application response = client.CreateApplication(request.ParentAsProfileName, request.Application);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateApplicationAsync_ResourceNames()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            CreateApplicationRequest request = new CreateApplicationRequest
+            {
+                ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
+                Application = new Application(),
+            };
+            Application expectedResponse = new Application
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
+            };
+            mockGrpcClient.Setup(x => x.CreateApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            Application responseCallSettings = await client.CreateApplicationAsync(request.ParentAsProfileName, request.Application, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.CreateApplicationAsync(request.ParentAsProfileName, request.Application, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetApplicationRequestObject()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             GetApplicationRequest request = new GetApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.GetApplication(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
             Application response = client.GetApplication(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetApplicationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetApplicationRequestObjectAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             GetApplicationRequest request = new GetApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.GetApplicationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Application>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            Application response = await client.GetApplicationAsync(request);
-            Assert.Same(expectedResponse, response);
+            Application responseCallSettings = await client.GetApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.GetApplicationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateApplication()
+        [xunit::FactAttribute]
+        public void GetApplication()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            UpdateApplicationRequest expectedRequest = new UpdateApplicationRequest
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            GetApplicationRequest request = new GetApplicationRequest
             {
-                Application = new Application(),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.UpdateApplication(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            Application application = new Application();
-            Application response = client.UpdateApplication(application);
-            Assert.Same(expectedResponse, response);
+            Application response = client.GetApplication(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateApplicationAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetApplicationAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            UpdateApplicationRequest expectedRequest = new UpdateApplicationRequest
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            GetApplicationRequest request = new GetApplicationRequest
             {
-                Application = new Application(),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.UpdateApplicationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Application>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            Application application = new Application();
-            Application response = await client.UpdateApplicationAsync(application);
-            Assert.Same(expectedResponse, response);
+            Application responseCallSettings = await client.GetApplicationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.GetApplicationAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateApplication2()
+        [xunit::FactAttribute]
+        public void GetApplication_ResourceNames()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            GetApplicationRequest request = new GetApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
+            Application expectedResponse = new Application
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
+            };
+            mockGrpcClient.Setup(x => x.GetApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            Application response = client.GetApplication(request.ApplicationName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetApplicationAsync_ResourceNames()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            GetApplicationRequest request = new GetApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
+            Application expectedResponse = new Application
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
+            };
+            mockGrpcClient.Setup(x => x.GetApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            Application responseCallSettings = await client.GetApplicationAsync(request.ApplicationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.GetApplicationAsync(request.ApplicationName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateApplicationRequestObject()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             UpdateApplicationRequest request = new UpdateApplicationRequest
             {
                 Application = new Application(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.UpdateApplication(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
             Application response = client.UpdateApplication(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateApplicationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateApplicationRequestObjectAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            UpdateApplicationRequest request = new UpdateApplicationRequest
+            {
+                Application = new Application(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Application expectedResponse = new Application
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
+            };
+            mockGrpcClient.Setup(x => x.UpdateApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            Application responseCallSettings = await client.UpdateApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.UpdateApplicationAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateApplication()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             UpdateApplicationRequest request = new UpdateApplicationRequest
             {
                 Application = new Application(),
             };
             Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
-                ExternalId = "externalId-1153075697",
-                Profile = "profile-309425751",
-                Job = "job105405",
-                Company = "company950484093",
-                OutcomeNotes = "outcomeNotes-355961964",
-                JobTitleSnippet = "jobTitleSnippet-1100512972",
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            mockGrpcClient.Setup(x => x.UpdateApplicationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Application>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            Application response = await client.UpdateApplicationAsync(request);
-            Assert.Same(expectedResponse, response);
+            Application response = client.UpdateApplication(request.Application);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteApplication()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateApplicationAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            DeleteApplicationRequest expectedRequest = new DeleteApplicationRequest
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            UpdateApplicationRequest request = new UpdateApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Application = new Application(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteApplication(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
-            client.DeleteApplication(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteApplicationAsync()
-        {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
-            DeleteApplicationRequest expectedRequest = new DeleteApplicationRequest
+            Application expectedResponse = new Application
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                Profile = "profile1b48977d",
+                JobAsJobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                ApplicationDate = new gt::Date(),
+                Stage = Application.Types.ApplicationStage.OfferAccepted,
+                State = Application.Types.ApplicationState.Unspecified,
+                Interviews = { new Interview(), },
+                Referral = new bool?(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                OutcomeNotes = "outcome_notes38ed921d",
+                Outcome = Outcome.Neutral,
+                IsMatch = new bool?(),
+                JobTitleSnippet = "job_title_snippet4f14afe7",
+                ExternalId = "external_id9442680e",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteApplicationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            ApplicationName name = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]");
-            await client.DeleteApplicationAsync(name);
+            Application responseCallSettings = await client.UpdateApplicationAsync(request.Application, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Application responseCancellationToken = await client.UpdateApplicationAsync(request.Application, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteApplication2()
+        [xunit::FactAttribute]
+        public void DeleteApplicationRequestObject()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             DeleteApplicationRequest request = new DeleteApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteApplication(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteApplication(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteApplicationAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteApplicationRequestObjectAsync()
         {
-            Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new Mock<ApplicationService.ApplicationServiceClient>(MockBehavior.Strict);
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             DeleteApplicationRequest request = new DeleteApplicationRequest
             {
-                ApplicationName = new ApplicationName("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteApplicationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteApplicationAsync(request);
+            await client.DeleteApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteApplicationAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteApplication()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            DeleteApplicationRequest request = new DeleteApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteApplication(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteApplicationAsync()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            DeleteApplicationRequest request = new DeleteApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteApplicationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteApplicationAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteApplication_ResourceNames()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            DeleteApplicationRequest request = new DeleteApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteApplication(request.ApplicationName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteApplicationAsync_ResourceNames()
+        {
+            moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
+            DeleteApplicationRequest request = new DeleteApplicationRequest
+            {
+                ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ApplicationServiceClient client = new ApplicationServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteApplicationAsync(request.ApplicationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteApplicationAsync(request.ApplicationName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

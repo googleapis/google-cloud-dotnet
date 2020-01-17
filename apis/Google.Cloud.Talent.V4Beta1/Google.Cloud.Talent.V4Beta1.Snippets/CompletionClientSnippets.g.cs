@@ -16,60 +16,54 @@
 
 namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Talent.V4Beta1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
-    using Google.Api.Gax.ResourceNames;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedCompletionClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedCompletionClientSnippets
     {
-        /// <summary>Snippet for CompleteQueryAsync</summary>
-        public async Task CompleteQueryAsync_RequestObject()
-        {
-            // Snippet: CompleteQueryAsync(CompleteQueryRequest,CallSettings)
-            // Additional: CompleteQueryAsync(CompleteQueryRequest,CancellationToken)
-            // Create client
-            CompletionClient completionClient = await CompletionClient.CreateAsync();
-            // Initialize request argument(s)
-            CompleteQueryRequest request = new CompleteQueryRequest
-            {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
-                Query = "",
-                PageSize = 0,
-            };
-            // Make the request
-            CompleteQueryResponse response = await completionClient.CompleteQueryAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CompleteQuery</summary>
         public void CompleteQuery_RequestObject()
         {
-            // Snippet: CompleteQuery(CompleteQueryRequest,CallSettings)
+            // Snippet: CompleteQuery(CompleteQueryRequest, CallSettings)
             // Create client
             CompletionClient completionClient = CompletionClient.Create();
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Query = "",
+                LanguageCodes = { "", },
                 PageSize = 0,
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
+                Type = CompleteQueryRequest.Types.CompletionType.Unspecified,
             };
             // Make the request
             CompleteQueryResponse response = completionClient.CompleteQuery(request);
             // End snippet
         }
 
+        /// <summary>Snippet for CompleteQueryAsync</summary>
+        public async Task CompleteQueryAsync_RequestObject()
+        {
+            // Snippet: CompleteQueryAsync(CompleteQueryRequest, CallSettings)
+            // Additional: CompleteQueryAsync(CompleteQueryRequest, CancellationToken)
+            // Create client
+            CompletionClient completionClient = await CompletionClient.CreateAsync();
+            // Initialize request argument(s)
+            CompleteQueryRequest request = new CompleteQueryRequest
+            {
+                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Query = "",
+                LanguageCodes = { "", },
+                PageSize = 0,
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
+                Type = CompleteQueryRequest.Types.CompletionType.Unspecified,
+            };
+            // Make the request
+            CompleteQueryResponse response = await completionClient.CompleteQueryAsync(request);
+            // End snippet
+        }
     }
 }
