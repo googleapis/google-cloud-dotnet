@@ -201,6 +201,7 @@ generate_gapicgenerator() {
 
 generate_proto() {
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  mkdir -p apis/$1/$1
   $PROTOC \
     --csharp_out=apis/$1/$1 \
     -I $GOOGLEAPIS \
