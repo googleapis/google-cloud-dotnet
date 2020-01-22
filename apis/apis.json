@@ -110,7 +110,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax": "3.0.0-alpha00",
-      "Google.Protobuf": "3.8.0"
+      "Google.Protobuf": "3.11.2"
     }
   },
   {
