@@ -924,8 +924,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required. The company resource to replace the current resource in the
-        /// system.
+        /// Required. The company resource to replace the current resource in the system.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -946,8 +945,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required. The company resource to replace the current resource in the
-        /// system.
+        /// Required. The company resource to replace the current resource in the system.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -965,8 +963,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required. The company resource to replace the current resource in the
-        /// system.
+        /// Required. The company resource to replace the current resource in the system.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

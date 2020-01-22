@@ -8,6 +8,16 @@
 * [Homepage](https://cloud.google.com/dotnet/)
 * [API Documentation](http://googleapis.github.io/google-cloud-dotnet/docs/)
 
+# Incompatibility with gRPC 2.x and C# 8 async sequences
+
+All the GA releases currently available on NuGet depend on [GAX](https://github.com/googleapis/gax-dotnet) version 2.10 or earlier.
+
+This makes them incompatible with any gRPC 2.x (including Grpc.Core, Grpc.Core.Api, Grpc.Net.Client, Grpc.AspNetCore etc), and also incompatible with the `await foreach` feature of C# 8, due to the dependency on System.Interactive.Async version 3.2.0.
+
+We're planning on a major version bump, taking the opportunity to migrate to a new code generator at the same time. Please see the [documented plan](https://googleapis.github.io/google-cloud-dotnet/docs/major-version.html) and subscribe to the [tracking issue](https://github.com/googleapis/google-cloud-dotnet/issues/3519) for more information.
+
+# Available APIs
+
 The following libraries are available at a [GA](#versioning) quality level:
 
 * [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) - [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1) (GA)
