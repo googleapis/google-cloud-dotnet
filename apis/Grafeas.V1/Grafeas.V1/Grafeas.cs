@@ -116,7 +116,7 @@ namespace Grafeas.V1 {
             "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EjAKC29jY3VycmVuY2VzGAIg",
             "AygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlQgPgQQIiTQoeQmF0Y2hDcmVh",
             "dGVPY2N1cnJlbmNlc1Jlc3BvbnNlEisKC29jY3VycmVuY2VzGAEgAygLMhYu",
-            "Z3JhZmVhcy52MS5PY2N1cnJlbmNlMu0PCgdHcmFmZWFzEn0KDUdldE9jY3Vy",
+            "Z3JhZmVhcy52MS5PY2N1cnJlbmNlMpIQCgdHcmFmZWFzEn0KDUdldE9jY3Vy",
             "cmVuY2USIC5ncmFmZWFzLnYxLkdldE9jY3VycmVuY2VSZXF1ZXN0GhYuZ3Jh",
             "ZmVhcy52MS5PY2N1cnJlbmNlIjKC0+STAiUSIy92MS97bmFtZT1wcm9qZWN0",
             "cy8qL29jY3VycmVuY2VzLyp92kEEbmFtZRKXAQoPTGlzdE9jY3VycmVuY2Vz",
@@ -161,9 +161,10 @@ namespace Grafeas.V1 {
             "c3ROb3RlT2NjdXJyZW5jZXMSJi5ncmFmZWFzLnYxLkxpc3ROb3RlT2NjdXJy",
             "ZW5jZXNSZXF1ZXN0GicuZ3JhZmVhcy52MS5MaXN0Tm90ZU9jY3VycmVuY2Vz",
             "UmVzcG9uc2UiP4LT5JMCKxIpL3YxL3tuYW1lPXByb2plY3RzLyovbm90ZXMv",
-            "Kn0vb2NjdXJyZW5jZXPaQQtuYW1lLGZpbHRlckJRCg1pby5ncmFmZWFzLnYx",
-            "UAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3Jh",
-            "ZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "Kn0vb2NjdXJyZW5jZXPaQQtuYW1lLGZpbHRlchojykEgY29udGFpbmVyYW5h",
+            "bHlzaXMuZ29vZ2xlYXBpcy5jb21CUQoNaW8uZ3JhZmVhcy52MVABWjhnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7",
+            "Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, global::Grafeas.V1.BuildReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, global::Grafeas.V1.DeploymentReflection.Descriptor, global::Grafeas.V1.DiscoveryReflection.Descriptor, global::Grafeas.V1.ImageReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, global::Grafeas.V1.UpgradeReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
