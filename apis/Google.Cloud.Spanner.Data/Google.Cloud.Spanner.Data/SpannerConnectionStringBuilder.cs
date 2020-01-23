@@ -149,7 +149,8 @@ namespace Google.Cloud.Spanner.Data
         private InstanceHostManager _instanceHostManager = InstanceHostManager.Default;
 
         /// <summary>
-        /// The <see cref="InstanceHostManager"/> to get host for instance.
+        /// The <see cref="InstanceHostManager"/> When resource based routing is enabled,
+        /// this is used to obtain random host for an instance.
         /// </summary>
         /// <remarks>
         /// This property defaults to <see cref="InstanceHostManager.Default"/>
@@ -166,15 +167,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string Host
         {
-            get
-            {
-                if (ContainsKey(nameof(Host)))
-                {
-                    return (string)this[nameof(Host)];
-                }
-                string host = InstanceHostManager.GetHost(Project, SpannerInstance);
-                return host ?? SpannerClient.DefaultEndpoint.Host;
-            }
+            get => GetOrAddValue(nameof(Host), () => Task.Run(() => InstanceHostManager.GetHostAsnyc(Project, SpannerInstance)).ResultWithUnwrappedExceptions() ?? SpannerClient.DefaultEndpoint.Host);
             set => this[nameof(Host)] = value;
         }
 
@@ -407,6 +400,18 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return defaultValue;
+        }
+
+        private string GetOrAddValue(string key, Func<string> getFunc)
+        {
+            key = key.ToLowerInvariant();
+            if (ContainsKey(key))
+            {
+                return (string)this[key];
+            }
+            string value = getFunc();
+            Add(key, value);
+            return value;
         }
 
         /// <inheritdoc />
