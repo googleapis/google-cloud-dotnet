@@ -25,14 +25,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZmlsdGVycy5wcm90bxIb",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
-            "Gihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvGh5n",
-            "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1",
-            "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aFmdvb2ds",
-            "ZS90eXBlL2RhdGUucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90bxob",
-            "Z29vZ2xlL3R5cGUvdGltZW9mZGF5LnByb3RvIoAFCghKb2JRdWVyeRINCgVx",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGh9nb29nbGUvYXBpL2ZpZWxk",
+            "X2JlaGF2aW9yLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEv",
+            "Y29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
+            "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBl",
+            "cnMucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8aGGdvb2dsZS90eXBl",
+            "L2xhdGxuZy5wcm90bxobZ29vZ2xlL3R5cGUvdGltZW9mZGF5LnByb3RvGhxn",
+            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIoAFCghKb2JRdWVyeRINCgVx",
             "dWVyeRgBIAEoCRIbChNxdWVyeV9sYW5ndWFnZV9jb2RlGA4gASgJEhEKCWNv",
             "bXBhbmllcxgCIAMoCRJFChBsb2NhdGlvbl9maWx0ZXJzGAMgAygLMisuZ29v",
             "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uRmlsdGVyEkAKDmpv",
@@ -138,7 +138,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGEx",
             "O3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobQuery), global::Google.Cloud.Talent.V4Beta1.JobQuery.Parser, new[]{ "Query", "QueryLanguageCode", "Companies", "LocationFilters", "JobCategories", "CommuteFilter", "CompanyDisplayNames", "CompensationFilter", "CustomAttributeFilter", "DisableSpellCheck", "EmploymentTypes", "LanguageCodes", "PublishTimeRange", "ExcludedJobs" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter", "AvailabilityFilters", "PersonNameFilters" }, null, null, null),
@@ -234,8 +234,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int QueryLanguageCodeFieldNumber = 14;
     private string queryLanguageCode_ = "";
     /// <summary>
-    /// The language code of [query][google.cloud.talent.v4beta1.JobQuery.query].
-    /// For example, "en-US". This field helps to better interpret the query.
+    /// The language code of [query][google.cloud.talent.v4beta1.JobQuery.query]. For example, "en-US". This field helps to
+    /// better interpret the query.
     ///
     /// If a value isn't specified, the query language code is automatically
     /// detected, which may not be accurate.
@@ -287,17 +287,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter> locationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter>();
     /// <summary>
     /// The location filter specifies geo-regions containing the jobs to
-    /// search against. See
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more
-    /// information.
+    /// search against. See [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more information.
     ///
     /// If a location value isn't specified, jobs fitting the other search
     /// criteria are retrieved regardless of where they're located.
     ///
     /// If multiple values are specified, jobs are retrieved from any of the
     /// specified locations. If different values are specified for the
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// parameter, the maximum provided distance is used for all locations.
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] parameter, the maximum provided
+    /// distance is used for all locations.
     ///
     /// At most 5 location filters are allowed.
     /// </summary>
@@ -313,8 +311,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> jobCategories_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory>();
     /// <summary>
     /// The category filter specifies the categories of jobs to search against.
-    /// See [JobCategory][google.cloud.talent.v4beta1.JobCategory] for more
-    /// information.
+    /// See [JobCategory][google.cloud.talent.v4beta1.JobCategory] for more information.
     ///
     /// If a value isn't specified, jobs from any category are searched against.
     ///
@@ -333,10 +330,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Allows filtering jobs by commute time with different travel methods (for
     ///  example, driving or public transit).
     ///
-    /// Note: This only works when you specify a
-    /// [CommuteMethod][google.cloud.talent.v4beta1.CommuteMethod]. In this case,
-    /// [location_filters][google.cloud.talent.v4beta1.JobQuery.location_filters]
-    /// is ignored.
+    /// Note: This only works when you specify a [CommuteMethod][google.cloud.talent.v4beta1.CommuteMethod]. In this case,
+    /// [location_filters][google.cloud.talent.v4beta1.JobQuery.location_filters] is ignored.
     ///
     ///  Currently we don't support sorting by commute time.
     /// </summary>
@@ -354,9 +349,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> companyDisplayNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// This filter specifies the exact company
-    /// [Company.display_name][google.cloud.talent.v4beta1.Company.display_name] of
-    /// the jobs to search against.
+    /// This filter specifies the exact company [Company.display_name][google.cloud.talent.v4beta1.Company.display_name]
+    /// of the jobs to search against.
     ///
     /// If a value isn't specified, jobs within the search results are
     /// associated with any company.
@@ -376,10 +370,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Cloud.Talent.V4Beta1.CompensationFilter compensationFilter_;
     /// <summary>
     /// This search filter is applied only to
-    /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info].
-    /// For example, if the filter is specified as "Hourly job with per-hour
-    /// compensation > $15", only jobs meeting these criteria are searched. If a
-    /// filter isn't defined, all open jobs are searched.
+    /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info]. For example, if the filter is specified
+    /// as "Hourly job with per-hour compensation > $15", only jobs meeting
+    /// these criteria are searched. If a filter isn't defined, all open jobs
+    /// are searched.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationFilter CompensationFilter {
@@ -394,8 +388,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string customAttributeFilter_ = "";
     /// <summary>
     /// This filter specifies a structured syntax to match against the
-    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
-    /// marked as `filterable`.
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes] marked as `filterable`.
     ///
     /// The syntax for this expression is a subset of SQL syntax.
     ///
@@ -450,8 +443,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentType> employmentTypes_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentType>();
     /// <summary>
     /// The employment type filter specifies the employment type of jobs to
-    /// search against, such as
-    /// [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
+    /// search against, such as [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
     ///
     /// If a value isn't specified, jobs in the search results includes any
     /// employment type.
@@ -857,61 +849,42 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The location filter specifies geo-regions containing the profiles to
     /// search against.
     ///
-    /// One of
-    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address]
-    /// or
-    /// [LocationFilter.lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng]
-    /// must be provided or an error is thrown. If both
-    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address]
-    /// and
-    /// [LocationFilter.lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng]
-    /// are provided, an error is thrown.
+    /// One of [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address] or [LocationFilter.lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] must be
+    /// provided or an error is thrown. If both [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address] and
+    /// [LocationFilter.lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are provided, an error is thrown.
     ///
     /// The following logic is used to determine which locations in
     /// the profile to filter against:
     ///
-    /// 1. All of the profile's geocoded
-    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where
-    /// [Address.usage][google.cloud.talent.v4beta1.Address.usage] is PERSONAL and
-    /// [Address.current][google.cloud.talent.v4beta1.Address.current] is true.
+    /// 1. All of the profile's geocoded [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where
+    /// [Address.usage][google.cloud.talent.v4beta1.Address.usage] is PERSONAL and [Address.current][google.cloud.talent.v4beta1.Address.current] is true.
     ///
     /// 2. If the above set of locations is empty, all of the profile's geocoded
-    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where
-    /// [Address.usage][google.cloud.talent.v4beta1.Address.usage] is
-    /// CONTACT_INFO_USAGE_UNSPECIFIED and
-    /// [Address.current][google.cloud.talent.v4beta1.Address.current] is true.
+    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where [Address.usage][google.cloud.talent.v4beta1.Address.usage] is
+    /// CONTACT_INFO_USAGE_UNSPECIFIED and [Address.current][google.cloud.talent.v4beta1.Address.current] is true.
     ///
     /// 3. If the above set of locations is empty, all of the profile's geocoded
-    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where
-    /// [Address.usage][google.cloud.talent.v4beta1.Address.usage] is PERSONAL or
-    /// CONTACT_INFO_USAGE_UNSPECIFIED and
-    /// [Address.current][google.cloud.talent.v4beta1.Address.current] is not set.
+    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where [Address.usage][google.cloud.talent.v4beta1.Address.usage] is PERSONAL or
+    /// CONTACT_INFO_USAGE_UNSPECIFIED and [Address.current][google.cloud.talent.v4beta1.Address.current] is not set.
     ///
-    /// This means that any profiles without any
-    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] that
-    /// match any of the above criteria will not be included in a search with
-    /// location filter. Furthermore, any
-    /// [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where
-    /// [Address.usage][google.cloud.talent.v4beta1.Address.usage] is WORK or
-    /// SCHOOL or where
-    /// [Address.current][google.cloud.talent.v4beta1.Address.current] is false are
-    /// not considered for location filter.
+    /// This means that any profiles without any [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] that match
+    /// any of the above criteria will not be included in a search with location
+    /// filter. Furthermore, any [Profile.addresses][google.cloud.talent.v4beta1.Profile.addresses] where [Address.usage][google.cloud.talent.v4beta1.Address.usage] is
+    /// WORK or SCHOOL or where [Address.current][google.cloud.talent.v4beta1.Address.current] is false are not considered for
+    /// location filter.
     ///
     /// If a location filter isn't specified, profiles fitting the other search
     /// criteria are retrieved regardless of where they're located.
     ///
-    /// If
-    /// [LocationFilter.negated][google.cloud.talent.v4beta1.LocationFilter.negated]
-    /// is specified, the result doesn't contain profiles from that location.
+    /// If [LocationFilter.negated][google.cloud.talent.v4beta1.LocationFilter.negated] is specified, the result doesn't contain
+    /// profiles from that location.
     ///
-    /// If
-    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address]
-    /// is provided, the
+    /// If [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address] is provided, the
     /// [LocationType][google.cloud.talent.v4beta1.Location.LocationType], center
     /// point (latitude and longitude), and radius are automatically detected by
     /// the Google Maps Geocoding API and included as well. If
-    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address]
-    /// cannot be geocoded, the filter falls back to keyword search.
+    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address] cannot be geocoded, the filter
+    /// falls back to keyword search.
     ///
     /// If the detected
     /// [LocationType][google.cloud.talent.v4beta1.Location.LocationType] is
@@ -924,38 +897,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// center point and a radius of detected location radius +
     /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles].
     ///
-    /// If
-    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address]
-    /// is provided,
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// is the additional radius on top of the radius of the location geocoded from
-    /// [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address].
-    /// If
-    /// [LocationFilter.lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng]
-    /// is provided,
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// is the only radius that is used.
+    /// If [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address] is provided,
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] is the additional radius on top of the
+    /// radius of the location geocoded from [LocationFilter.address][google.cloud.talent.v4beta1.LocationFilter.address]. If
+    /// [LocationFilter.lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] is provided,
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] is the only radius that is used.
     ///
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// is 10 by default. Note that the value of
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// is 0 if it is unset, so the server does not differentiate
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// that is explicitly set to 0 and
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// that is not set. Which means that if
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// is explicitly set to 0, the server will use the default value of
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// which is 10. To work around this and effectively set
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// to 0, we recommend setting
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// to a very small decimal number (such as 0.00001).
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] is 10 by default. Note that the value
+    /// of [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] is 0 if it is unset, so the server
+    /// does not differentiate [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] that is
+    /// explicitly set to 0 and [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] that is not
+    /// set. Which means that if [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] is explicitly
+    /// set to 0, the server will use the default value of
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] which is 10. To work around this and
+    /// effectively set [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] to 0, we recommend
+    /// setting [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] to a very small decimal number
+    /// (such as 0.00001).
     ///
-    /// If
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
-    /// is negative, an error is thrown.
+    /// If [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] is negative, an error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter> LocationFilters {
@@ -975,9 +934,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple values are specified, profiles are retrieved with any of the
     /// specified job titles.
     ///
-    /// If
-    /// [JobTitleFilter.negated][google.cloud.talent.v4beta1.JobTitleFilter.negated]
-    /// is specified, the result won't contain profiles with the job titles.
+    /// If [JobTitleFilter.negated][google.cloud.talent.v4beta1.JobTitleFilter.negated] is specified, the result won't contain
+    /// profiles with the job titles.
     ///
     /// For example, search for profiles with a job title "Product Manager".
     /// </summary>
@@ -1000,9 +958,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple employer filters are specified, profiles with any matching
     /// employers are retrieved.
     ///
-    /// If
-    /// [EmployerFilter.negated][google.cloud.talent.v4beta1.EmployerFilter.negated]
-    /// is specified, the result won't contain profiles that match the employers.
+    /// If [EmployerFilter.negated][google.cloud.talent.v4beta1.EmployerFilter.negated] is specified, the result won't contain
+    /// profiles that match the employers.
     ///
     /// For example, search for profiles that have working experience at "Google
     /// LLC".
@@ -1026,9 +983,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple education filters are specified, profiles that match any
     /// education filters are retrieved.
     ///
-    /// If
-    /// [EducationFilter.negated][google.cloud.talent.v4beta1.EducationFilter.negated]
-    /// is specified, the result won't contain profiles that match the educations.
+    /// If [EducationFilter.negated][google.cloud.talent.v4beta1.EducationFilter.negated] is specified, the result won't contain
+    /// profiles that match the educations.
     ///
     /// For example, search for profiles with a master degree.
     /// </summary>
@@ -1050,8 +1006,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple skill filters are specified, profiles that match any skill
     /// filters are retrieved.
     ///
-    /// If [SkillFilter.negated][google.cloud.talent.v4beta1.SkillFilter.negated]
-    /// is specified, the result won't contain profiles that match the skills.
+    /// If [SkillFilter.negated][google.cloud.talent.v4beta1.SkillFilter.negated] is specified, the result won't contain profiles
+    /// that match the skills.
     ///
     /// For example, search for profiles that have "Java" and "Python" in skill
     /// list.
@@ -1160,8 +1116,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string customAttributeFilter_ = "";
     /// <summary>
     /// This filter specifies a structured syntax to match against the
-    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes]
-    /// that are marked as `filterable`.
+    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes] that are marked as `filterable`.
     ///
     /// The syntax for this expression is a subset of Google SQL syntax.
     ///
@@ -1203,8 +1158,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// signals.
     ///
     /// Signal 1: Number of days since most recent job application.  See
-    /// [Availability.JobApplicationAvailabilitySignal][google.cloud.talent.v4beta1.Availability.JobApplicationAvailabilitySignal]
-    /// for the details of this signal.
+    /// [Availability.JobApplicationAvailabilitySignal][google.cloud.talent.v4beta1.Availability.JobApplicationAvailabilitySignal] for the details of this
+    /// signal.
     ///
     /// Signal 2: Number of days since last profile update. See
     /// [Availability.ProfileUpdateAvailabilitySignal][google.cloud.talent.v4beta1.Availability.ProfileUpdateAvailabilitySignal]
@@ -1240,12 +1195,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// indicate the candidate's potential qualification / interest / close ability
     /// for a specific job.
     ///
-    /// There can be at most one
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] per
-    /// [signal_type][google.cloud.talent.v4beta1.AvailabilityFilter.signal_type].
-    /// If there are multiple
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] for a
-    /// [signal_type][google.cloud.talent.v4beta1.AvailabilityFilter.signal_type],
+    /// There can be at most one [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] per
+    /// [signal_type][google.cloud.talent.v4beta1.AvailabilityFilter.signal_type]. If there are multiple
+    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] for a [signal_type][google.cloud.talent.v4beta1.AvailabilityFilter.signal_type],
     /// an error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1640,15 +1592,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Allows the client to return jobs without a
     /// set location, specifically, telecommuting jobs (telecommuting is considered
     /// by the service as a special location.
-    /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region]
-    /// indicates if a job permits telecommuting. If this field is set to
-    /// [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
-    /// telecommuting jobs are searched, and
-    /// [address][google.cloud.talent.v4beta1.LocationFilter.address] and
-    /// [lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are ignored.
-    /// If not set or set to
-    /// [TelecommutePreference.TELECOMMUTE_EXCLUDED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_EXCLUDED],
-    /// telecommute job are not searched.
+    /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region] indicates if a job permits telecommuting.
+    /// If this field is set to [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
+    /// telecommuting jobs are searched, and [address][google.cloud.talent.v4beta1.LocationFilter.address] and [lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are
+    /// ignored. If not set or set to
+    /// [TelecommutePreference.TELECOMMUTE_EXCLUDED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_EXCLUDED], telecommute job are not
+    /// searched.
     ///
     /// This filter can be used by itself to search exclusively for telecommuting
     /// jobs, or it can be combined with another location
@@ -2121,45 +2070,35 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Filter by `base compensation entry's` unit. A job is a match if and
         /// only if the job contains a base CompensationEntry and the base
-        /// CompensationEntry's unit matches provided
-        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units]. Populate
-        /// one or more
-        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// CompensationEntry's unit matches provided [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// Populate one or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         ///
-        /// See
-        /// [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
-        /// for definition of base compensation entry.
+        /// See [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for definition of
+        /// base compensation entry.
         /// </summary>
         [pbr::OriginalName("UNIT_ONLY")] UnitOnly = 1,
         /// <summary>
         /// Filter by `base compensation entry's` unit and amount / range. A job
         /// is a match if and only if the job contains a base CompensationEntry, and
         /// the base entry's unit matches provided
-        /// [CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit]
-        /// and amount or range overlaps with provided
+        /// [CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit] and
+        /// amount or range overlaps with provided
         /// [CompensationRange][google.cloud.talent.v4beta1.CompensationInfo.CompensationRange].
         ///
-        /// See
-        /// [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
-        /// for definition of base compensation entry.
+        /// See [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for definition of
+        /// base compensation entry.
         ///
-        /// Set exactly one
-        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units] and
-        /// populate [range][google.cloud.talent.v4beta1.CompensationFilter.range].
+        /// Set exactly one [units][google.cloud.talent.v4beta1.CompensationFilter.units] and populate [range][google.cloud.talent.v4beta1.CompensationFilter.range].
         /// </summary>
         [pbr::OriginalName("UNIT_AND_AMOUNT")] UnitAndAmount = 2,
         /// <summary>
         /// Filter by annualized base compensation amount and `base compensation
-        /// entry's` unit. Populate
-        /// [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or
-        /// more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// entry's` unit. Populate [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         /// </summary>
         [pbr::OriginalName("ANNUALIZED_BASE_AMOUNT")] AnnualizedBaseAmount = 3,
         /// <summary>
         /// Filter by annualized total compensation amount and `base compensation
-        /// entry's` unit . Populate
-        /// [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or
-        /// more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// entry's` unit . Populate [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         /// </summary>
         [pbr::OriginalName("ANNUALIZED_TOTAL_AMOUNT")] AnnualizedTotalAmount = 4,
       }
@@ -2251,8 +2190,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TravelDurationFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration travelDuration_;
     /// <summary>
-    /// Required. The maximum travel time in seconds. The maximum allowed value is
-    /// `3600s` (one hour). Format is `123s`.
+    /// Required. The maximum travel time in seconds. The maximum allowed value is `3600s`
+    /// (one hour). Format is `123s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration TravelDuration {
@@ -2587,8 +2526,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobTitleFieldNumber = 1;
     private string jobTitle_ = "";
     /// <summary>
-    /// Required. The job title. For example, "Software engineer", or "Product
-    /// manager".
+    /// Required. The job title. For example, "Software engineer", or "Product manager".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobTitle {
@@ -2937,12 +2875,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ModeFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode mode_ = 0;
     /// <summary>
-    /// Define set of
-    /// [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord]s to search
-    /// against.
+    /// Define set of [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord]s to search against.
     ///
-    /// Defaults to
-    /// [EmployerFilterMode.ALL_EMPLOYMENT_RECORDS][google.cloud.talent.v4beta1.EmployerFilter.EmployerFilterMode.ALL_EMPLOYMENT_RECORDS].
+    /// Defaults to [EmployerFilterMode.ALL_EMPLOYMENT_RECORDS][google.cloud.talent.v4beta1.EmployerFilter.EmployerFilterMode.ALL_EMPLOYMENT_RECORDS].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode Mode {
@@ -3086,9 +3021,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Enum indicating which set of
-      /// [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records]
-      /// to search against.
+      /// Enum indicating which set of [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records] to search
+      /// against.
       /// </summary>
       public enum EmployerFilterMode {
         /// <summary>
@@ -3096,13 +3030,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// </summary>
         [pbr::OriginalName("EMPLOYER_FILTER_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Apply to all employers in
-        /// [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
+        /// Apply to all employers in [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
         /// </summary>
         [pbr::OriginalName("ALL_EMPLOYMENT_RECORDS")] AllEmploymentRecords = 1,
         /// <summary>
-        /// Apply only to current employer in
-        /// [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
+        /// Apply only to current employer in [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
         /// </summary>
         [pbr::OriginalName("CURRENT_EMPLOYMENT_RECORDS_ONLY")] CurrentEmploymentRecordsOnly = 2,
         /// <summary>
@@ -3354,10 +3286,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// Work experience filter.
   ///
   /// This filter is used to search for profiles with working experience length
-  /// between
-  /// [min_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.min_experience]
-  /// and
-  /// [max_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.max_experience].
+  /// between [min_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.min_experience] and [max_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.max_experience].
   /// </summary>
   public sealed partial class WorkExperienceFilter : pb::IMessage<WorkExperienceFilter> {
     private static readonly pb::MessageParser<WorkExperienceFilter> _parser = new pb::MessageParser<WorkExperienceFilter>(() => new WorkExperienceFilter());
@@ -3537,13 +3466,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Application Date Range Filter.
   ///
-  /// The API matches profiles with
-  /// [Application.application_date][google.cloud.talent.v4beta1.Application.application_date]
-  /// between start date and end date (both boundaries are inclusive). The filter
-  /// is ignored if both
-  /// [start_date][google.cloud.talent.v4beta1.ApplicationDateFilter.start_date]
-  /// and [end_date][google.cloud.talent.v4beta1.ApplicationDateFilter.end_date]
-  /// are missing.
+  /// The API matches profiles with [Application.application_date][google.cloud.talent.v4beta1.Application.application_date] between
+  /// start date and end date (both boundaries are inclusive). The filter is
+  /// ignored if both [start_date][google.cloud.talent.v4beta1.ApplicationDateFilter.start_date] and [end_date][google.cloud.talent.v4beta1.ApplicationDateFilter.end_date] are missing.
   /// </summary>
   public sealed partial class ApplicationDateFilter : pb::IMessage<ApplicationDateFilter> {
     private static readonly pb::MessageParser<ApplicationDateFilter> _parser = new pb::MessageParser<ApplicationDateFilter>(() => new ApplicationDateFilter());
@@ -3764,10 +3689,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeNotesFieldNumber = 1;
     private string outcomeNotes_ = "";
     /// <summary>
-    /// Required. User entered or selected outcome reason. The API does an exact
-    /// match on the
-    /// [Application.outcome_notes][google.cloud.talent.v4beta1.Application.outcome_notes]
-    /// in profiles.
+    /// Required. User entered or selected outcome reason. The API does an exact match on the
+    /// [Application.outcome_notes][google.cloud.talent.v4beta1.Application.outcome_notes] in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OutcomeNotes {
@@ -3782,8 +3705,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private bool negated_;
     /// <summary>
     /// If true, The API excludes all candidates with any
-    /// [Application.outcome_notes][google.cloud.talent.v4beta1.Application.outcome_notes]
-    /// matching the outcome reason specified in the filter.
+    /// [Application.outcome_notes][google.cloud.talent.v4beta1.Application.outcome_notes] matching the outcome reason specified in
+    /// the filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -3937,8 +3860,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string jobRequisitionId_ = "";
     /// <summary>
     /// The job requisition id in the application. The API does an exact match on
-    /// the [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] of
-    /// [Application.job][google.cloud.talent.v4beta1.Application.job] in profiles.
+    /// the [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] of [Application.job][google.cloud.talent.v4beta1.Application.job] in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobRequisitionId {
@@ -3953,8 +3875,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string jobTitle_ = "";
     /// <summary>
     /// The job title in the application. The API does an exact match on the
-    /// [Job.title][google.cloud.talent.v4beta1.Job.title] of
-    /// [Application.job][google.cloud.talent.v4beta1.Application.job] in profiles.
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title] of [Application.job][google.cloud.talent.v4beta1.Application.job] in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobTitle {
@@ -3968,9 +3889,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 4;
     private bool negated_;
     /// <summary>
-    /// If true, the API excludes all profiles with any
-    /// [Application.job][google.cloud.talent.v4beta1.Application.job] matching the
-    /// filters.
+    /// If true, the API excludes all profiles with any [Application.job][google.cloud.talent.v4beta1.Application.job]
+    /// matching the filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -4173,8 +4093,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Specifies which time field to filter profiles.
     ///
-    /// Defaults to
-    /// [TimeField.CREATE_TIME][google.cloud.talent.v4beta1.TimeFilter.TimeField.CREATE_TIME].
+    /// Defaults to [TimeField.CREATE_TIME][google.cloud.talent.v4beta1.TimeFilter.TimeField.CREATE_TIME].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField TimeField {
@@ -4547,12 +4466,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequiredFieldNumber = 3;
     private bool required_;
     /// <summary>
-    /// If multiple
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] are
-    /// provided, the default behavior is to OR all filters, but if this field is
-    /// set to true, this particular
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] will
-    /// be AND'ed against other
+    /// If multiple [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] are provided, the default
+    /// behavior is to OR all filters, but if this field is set to true, this
+    /// particular [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter] will be AND'ed against other
     /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

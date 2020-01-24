@@ -476,8 +476,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new application entity.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
@@ -507,8 +506,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new application entity.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
@@ -535,8 +533,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new application entity.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
@@ -566,8 +563,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new application entity.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
@@ -597,8 +593,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new application entity.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
@@ -625,8 +620,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new application entity.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}".
@@ -912,8 +906,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified application.
         /// </summary>
         /// <param name="application">
-        /// Required. The application resource to replace the current resource in the
-        /// system.
+        /// Required. The application resource to replace the current resource in the system.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -934,8 +927,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified application.
         /// </summary>
         /// <param name="application">
-        /// Required. The application resource to replace the current resource in the
-        /// system.
+        /// Required. The application resource to replace the current resource in the system.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -953,8 +945,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified application.
         /// </summary>
         /// <param name="application">
-        /// Required. The application resource to replace the current resource in the
-        /// system.
+        /// Required. The application resource to replace the current resource in the system.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1222,8 +1213,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all applications associated with the profile.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
@@ -1260,8 +1250,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all applications associated with the profile.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
@@ -1298,8 +1287,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all applications associated with the profile.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
@@ -1336,8 +1324,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all applications associated with the profile.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the profile under which the application is
-        /// created.
+        /// Required. Resource name of the profile under which the application is created.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for

@@ -616,6 +616,20 @@
   },
 
   {
+    "id": "Google.Cloud.OrgPolicy.V1",
+    "generator": "proto",
+    "protoPath": "google/cloud/orgpolicy/v1",
+    "version": "1.0.0-beta01",
+    "type": "other",
+    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
+    "description": "OrgPolicy API messages.",
+    "tags": [ ],
+    "dependencies": {
+      "Google.Api.CommonProtos": "1.7.0"
+    }
+  },
+
+  {
     "id": "Google.Cloud.OsLogin.Common",
     "generator": "micro",
     "protoPath": "google/cloud/oslogin/common",

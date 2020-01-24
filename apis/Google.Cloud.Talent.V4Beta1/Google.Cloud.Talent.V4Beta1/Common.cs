@@ -25,13 +25,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvEhtn",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90",
-            "b2J1Zi93cmFwcGVycy5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxoY",
-            "Z29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5w",
-            "cm90bxogZ29vZ2xlL3R5cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8aG2dvb2ds",
-            "ZS90eXBlL3RpbWVvZmRheS5wcm90byJuCg5UaW1lc3RhbXBSYW5nZRIuCgpz",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
+            "dG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoWZ29vZ2xlL3R5",
+            "cGUvZGF0ZS5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvGhdnb29n",
+            "bGUvdHlwZS9tb25leS5wcm90bxogZ29vZ2xlL3R5cGUvcG9zdGFsX2FkZHJl",
+            "c3MucHJvdG8aG2dvb2dsZS90eXBlL3RpbWVvZmRheS5wcm90bxocZ29vZ2xl",
+            "L2FwaS9hbm5vdGF0aW9ucy5wcm90byJuCg5UaW1lc3RhbXBSYW5nZRIuCgpz",
             "dGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
             "CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
             "twMKCExvY2F0aW9uEkkKDWxvY2F0aW9uX3R5cGUYASABKA4yMi5nb29nbGUu",
@@ -171,7 +171,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRi",
             "ZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimestampRange), global::Google.Cloud.Talent.V4Beta1.TimestampRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Location), global::Google.Cloud.Talent.V4Beta1.Location.Parser, new[]{ "LocationType", "PostalAddress", "LatLng", "RadiusMiles" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) }, null),
@@ -385,8 +385,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The job is offered as a contracted position with the understanding
     /// that it's converted into a full-time position at the end of the
     /// contract. Jobs of this type are also returned by a search for
-    /// [EmploymentType.CONTRACTOR][google.cloud.talent.v4beta1.EmploymentType.CONTRACTOR]
-    /// jobs.
+    /// [EmploymentType.CONTRACTOR][google.cloud.talent.v4beta1.EmploymentType.CONTRACTOR] jobs.
     /// </summary>
     [pbr::OriginalName("CONTRACT_TO_HIRE")] ContractToHire = 4,
     /// <summary>
@@ -600,11 +599,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [pbr::OriginalName("POSTING_REGION_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// In addition to exact location matching, job posting is returned when the
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in the search
-    /// query is in the same administrative area as the returned job posting. For
-    /// example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's
-    /// returned if [LocationFilter][google.cloud.talent.v4beta1.LocationFilter]
-    /// has "Mountain View".
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in the search query is in the same administrative area
+    /// as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job
+    /// is posted in "CA, USA", it's returned if [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] has
+    /// "Mountain View".
     ///
     /// Administrative area refers to top-level administrative subdivision of this
     /// country. For example, US state, IT region, UK constituent nation and
@@ -613,11 +611,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [pbr::OriginalName("ADMINISTRATIVE_AREA")] AdministrativeArea = 1,
     /// <summary>
     /// In addition to exact location matching, job is returned when
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in search
-    /// query is in the same country as this job. For example, if a `NATION_WIDE`
-    /// job is posted in "USA", it's returned if
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] has 'Mountain
-    /// View'.
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in search query is in the same country as this job.
+    /// For example, if a `NATION_WIDE` job is posted in "USA", it's
+    /// returned if [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] has 'Mountain View'.
     /// </summary>
     [pbr::OriginalName("NATION")] Nation = 2,
     /// <summary>
@@ -804,97 +800,69 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Job application signal.
     ///
-    /// In the context of
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
-    /// this signal is related to the candidate's most recent application.
-    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time]
-    /// is calculated from
-    /// max([Application.create_time][google.cloud.talent.v4beta1.Application.create_time])
-    /// from all [Application][google.cloud.talent.v4beta1.Application] records
-    /// where [Application.source][google.cloud.talent.v4beta1.Application.source]
-    /// is any of the following:
+    /// In the context of [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals], this signal is related
+    /// to the candidate's most recent application.
+    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time] is
+    /// calculated from max([Application.create_time][google.cloud.talent.v4beta1.Application.create_time]) from all [Application][google.cloud.talent.v4beta1.Application]
+    /// records where [Application.source][google.cloud.talent.v4beta1.Application.source] is any of the following:
     ///  [APPLY_DIRECT_WEB][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_WEB]
     ///  [APPLY_DIRECT_MOBILE_WEB][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_MOBILE_WEB]
     ///  [APPLY_DIRECT_MOBILE_APP][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_MOBILE_APP]
     ///  [APPLY_DIRECT_IN_PERSON][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_DIRECT_IN_PERSON]
     ///  [APPLY_INDIRECT][google.cloud.talent.v4beta1.Application.ApplicationSource.APPLY_INDIRECT]
     ///
-    /// In the context of
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
-    /// filter is applied on
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
-    /// where [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is
-    /// JOB_APPLICATION.
+    /// In the context of [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals] where
+    /// [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is JOB_APPLICATION.
     /// </summary>
     [pbr::OriginalName("JOB_APPLICATION")] JobApplication = 1,
     /// <summary>
     /// Resume update signal.
     ///
-    /// In the context of
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
-    /// this signal is related to the candidate's most recent update to their
-    /// resume. For a
-    /// [SummarizedProfile.summary][google.cloud.talent.v4beta1.SummarizedProfile.summary],
-    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time]
-    /// is calculated from
-    /// max([Profile.resume_update_time][google.cloud.talent.v4beta1.Profile.resume_update_time])
-    /// from all
+    /// In the context of [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals], this signal is related
+    /// to the candidate's most recent update to their resume.
+    /// For a [SummarizedProfile.summary][google.cloud.talent.v4beta1.SummarizedProfile.summary],
+    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time] is
+    /// calculated from max([Profile.resume_update_time][google.cloud.talent.v4beta1.Profile.resume_update_time]) from all
     /// [SummarizedProfile.profiles][google.cloud.talent.v4beta1.SummarizedProfile.profiles].
     ///
-    /// In the context of
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
-    /// filter is applied on
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
-    /// where [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is
-    /// RESUME_UPDATE.
+    /// In the context of [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals] where
+    /// [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is RESUME_UPDATE.
     /// </summary>
     [pbr::OriginalName("RESUME_UPDATE")] ResumeUpdate = 2,
     /// <summary>
     /// Candidate update signal.
     ///
-    /// In the context of
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
-    /// this signal is related to the candidate's most recent update to their
-    /// profile. For a
-    /// [SummarizedProfile.summary][google.cloud.talent.v4beta1.SummarizedProfile.summary],
-    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time]
-    /// is calculated from
-    /// max([Profile.candidate_update_time][google.cloud.talent.v4beta1.Profile.candidate_update_time])
-    /// from all
+    /// In the context of [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals], this signal is related
+    /// to the candidate's most recent update to their profile.
+    /// For a [SummarizedProfile.summary][google.cloud.talent.v4beta1.SummarizedProfile.summary],
+    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time] is
+    /// calculated from max([Profile.candidate_update_time][google.cloud.talent.v4beta1.Profile.candidate_update_time]) from all
     /// [SummarizedProfile.profiles][google.cloud.talent.v4beta1.SummarizedProfile.profiles].
     ///
-    /// In the context of
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
-    /// filter is applied on
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
-    /// where [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is
-    /// CANDIDATE_UPDATE.
+    /// In the context of [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals] where
+    /// [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is CANDIDATE_UPDATE.
     /// </summary>
     [pbr::OriginalName("CANDIDATE_UPDATE")] CandidateUpdate = 3,
     /// <summary>
     /// Client submission signal.
     ///
-    /// In the context of
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals],
-    /// this signal is related to the candidate's most recent submission.
-    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time]
-    /// is calculated from
-    /// max([Application.create_time][google.cloud.talent.v4beta1.Application.create_time])
-    /// from all [Application][google.cloud.talent.v4beta1.Application] records
-    /// where [Application.stage][google.cloud.talent.v4beta1.Application.stage] is
-    /// any of the following:
+    /// In the context of [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals], this signal is related
+    /// to the candidate's most recent submission.
+    /// [last_update_time][google.cloud.talent.v4beta1.AvailabilitySignal.last_update_time] is
+    /// calculated from max([Application.create_time][google.cloud.talent.v4beta1.Application.create_time]) from all [Application][google.cloud.talent.v4beta1.Application]
+    /// records where [Application.stage][google.cloud.talent.v4beta1.Application.stage] is any of the following:
     ///  [HIRING_MANAGER_REVIEW][google.cloud.talent.v4beta1.Application.ApplicationStage.HIRING_MANAGER_REVIEW]
     ///  [INTERVIEW][google.cloud.talent.v4beta1.Application.ApplicationStage.INTERVIEW]
     ///  [OFFER_EXTENDED][google.cloud.talent.v4beta1.Application.ApplicationStage.OFFER_EXTENDED]
     ///  [OFFER_ACCEPTED][google.cloud.talent.v4beta1.Application.ApplicationStage.OFFER_ACCEPTED]
     ///  [STARTED][google.cloud.talent.v4beta1.Application.ApplicationStage.STARTED]
     ///
-    /// In the context of
-    /// [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the
-    /// filter is applied on
-    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals]
-    /// where [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is
-    /// CLIENT_SUBMISSION.
+    /// In the context of [AvailabilityFilter][google.cloud.talent.v4beta1.AvailabilityFilter], the filter is applied on
+    /// [Profile.availability_signals][google.cloud.talent.v4beta1.Profile.availability_signals] where
+    /// [type][google.cloud.talent.v4beta1.AvailabilitySignal.type] is CLIENT_SUBMISSION.
     /// </summary>
     [pbr::OriginalName("CLIENT_SUBMISSION")] ClientSubmission = 4,
   }
@@ -1125,11 +1093,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType locationType_ = 0;
     /// <summary>
     /// The type of a location, which corresponds to the address lines field of
-    /// [google.type.PostalAddress][google.type.PostalAddress]. For example,
-    /// "Downtown, Atlanta, GA, USA" has a type of
-    /// [LocationType.NEIGHBORHOOD][google.cloud.talent.v4beta1.Location.LocationType.NEIGHBORHOOD],
-    /// and "Kansas City, KS, USA" has a type of
-    /// [LocationType.LOCALITY][google.cloud.talent.v4beta1.Location.LocationType.LOCALITY].
+    /// [google.type.PostalAddress][google.type.PostalAddress]. For example, "Downtown, Atlanta, GA, USA"
+    /// has a type of [LocationType.NEIGHBORHOOD][google.cloud.talent.v4beta1.Location.LocationType.NEIGHBORHOOD], and "Kansas City, KS, USA"
+    /// has a type of [LocationType.LOCALITY][google.cloud.talent.v4beta1.Location.LocationType.LOCALITY].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType LocationType {
@@ -1176,9 +1142,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Radius in miles of the job location. This value is derived from the
     /// location bounding box in which a circle with the specified radius
-    /// centered from [google.type.LatLng][google.type.LatLng] covers the area
-    /// associated with the job location. For example, currently, "Mountain View,
-    /// CA, USA" has a radius of 6.17 miles.
+    /// centered from [google.type.LatLng][google.type.LatLng] covers the area associated with the
+    /// job location.
+    /// For example, currently, "Mountain View, CA, USA" has a radius of
+    /// 6.17 miles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double RadiusMiles {
@@ -1440,9 +1407,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DomainFieldNumber = 1;
     private string domain_ = "";
     /// <summary>
-    /// Required if
-    /// [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids]
-    /// is unset or `false`.
+    /// Required if [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids] is unset or `false`.
     ///
     /// The client-defined scope or source of the service call, which typically
     /// is the domain on
@@ -1470,9 +1435,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SessionIdFieldNumber = 2;
     private string sessionId_ = "";
     /// <summary>
-    /// Required if
-    /// [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids]
-    /// is unset or `false`.
+    /// Required if [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids] is unset or `false`.
     ///
     /// A unique session identification string. A session is defined as the
     /// duration of an end user's interaction with the service over a certain
@@ -1497,9 +1460,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UserIdFieldNumber = 3;
     private string userId_ = "";
     /// <summary>
-    /// Required if
-    /// [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids]
-    /// is unset or `false`.
+    /// Required if [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids] is unset or `false`.
     ///
     /// A unique user identification string, as determined by the client.
     /// To have the strongest positive impact on search quality
@@ -1524,16 +1485,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AllowMissingIdsFieldNumber = 4;
     private bool allowMissingIds_;
     /// <summary>
-    /// Only set when any of
-    /// [domain][google.cloud.talent.v4beta1.RequestMetadata.domain],
-    /// [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and
-    /// [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] isn't
+    /// Only set when any of [domain][google.cloud.talent.v4beta1.RequestMetadata.domain], [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] isn't
     /// available for some reason. It is highly recommended not to set this field
-    /// and provide accurate
-    /// [domain][google.cloud.talent.v4beta1.RequestMetadata.domain],
-    /// [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and
-    /// [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] for the best
-    /// service experience.
+    /// and provide accurate [domain][google.cloud.talent.v4beta1.RequestMetadata.domain], [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] for the
+    /// best service experience.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowMissingIds {
@@ -2106,10 +2061,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> stringValues_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Exactly one of
-    /// [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values]
-    /// or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values]
-    /// must be specified.
+    /// Exactly one of [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values] or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] must be specified.
     ///
     /// This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
     /// `CASE_INSENSITIVE_MATCH`) search.
@@ -2131,17 +2083,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForInt64(18);
     private readonly pbc::RepeatedField<long> longValues_ = new pbc::RepeatedField<long>();
     /// <summary>
-    /// Exactly one of
-    /// [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values]
-    /// or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values]
-    /// must be specified.
+    /// Exactly one of [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values] or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] must be specified.
     ///
     /// This field is used to perform number range search.
     /// (`EQ`, `GT`, `GE`, `LE`, `LT`) over filterable `long_value`.
     ///
-    /// Currently at most 1
-    /// [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] is
-    /// supported.
+    /// Currently at most 1 [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> LongValues {
@@ -2519,8 +2466,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Job compensation information.
     ///
     /// At most one entry can be of type
-    /// [CompensationInfo.CompensationType.BASE][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.BASE],
-    /// which is referred as **base compensation entry** for the job.
+    /// [CompensationInfo.CompensationType.BASE][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.BASE], which is
+    /// referred as **base compensation entry** for the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry> Entries {
@@ -2531,15 +2478,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AnnualizedBaseCompensationRangeFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange annualizedBaseCompensationRange_;
     /// <summary>
-    /// Output only. Annualized base compensation range. Computed as base
-    /// compensation entry's
-    /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
-    /// times
+    /// Output only. Annualized base compensation range. Computed as base compensation entry's
+    /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] times
     /// [CompensationEntry.expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
     ///
-    /// See
-    /// [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
-    /// for explanation on compensation annualization.
+    /// See [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for explanation on compensation annualization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange AnnualizedBaseCompensationRange {
@@ -2553,15 +2496,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AnnualizedTotalCompensationRangeFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange annualizedTotalCompensationRange_;
     /// <summary>
-    /// Output only. Annualized total compensation range. Computed as all
-    /// compensation entries'
-    /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
-    /// times
+    /// Output only. Annualized total compensation range. Computed as all compensation entries'
+    /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] times
     /// [CompensationEntry.expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
     ///
-    /// See
-    /// [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
-    /// for explanation on compensation annualization.
+    /// See [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for explanation on compensation annualization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange AnnualizedTotalCompensationRange {
@@ -2698,30 +2637,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// The type of compensation.
       ///
       /// For compensation amounts specified in non-monetary amounts,
-      /// describe the compensation scheme in the
-      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description].
+      /// describe the compensation scheme in the [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description].
       ///
       /// For example, tipping format is described in
-      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
-      /// (for example, "expect 15-20% tips based on customer bill.") and an estimate
-      /// of the tips provided in
-      /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
-      /// or
-      /// [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range]
-      /// ($10 per hour).
+      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description] (for example, "expect 15-20% tips based
+      /// on customer bill.") and an estimate of the tips provided in
+      /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range] ($10 per hour).
       ///
-      /// For example, equity is described in
-      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
+      /// For example, equity is described in [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
       /// (for example, "1% - 2% equity vesting over 4 years, 1 year cliff") and
-      /// value estimated in
-      /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
-      /// or
-      /// [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range].
-      /// If no value estimate is possible, units are
-      /// [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED]
-      /// and then further clarified in
-      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
-      /// field.
+      /// value estimated in [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or
+      /// [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range]. If no value estimate is possible, units are
+      /// [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED] and then further
+      /// clarified in [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description] field.
       /// </summary>
       public enum CompensationType {
         /// <summary>
@@ -2808,17 +2736,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// as base pay, bonus, or other compensation type.
       ///
       /// Annualization: One compensation entry can be annualized if
-      /// - it contains valid
-      /// [amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
-      /// or
-      /// [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range].
-      /// - and its
-      /// [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year]
-      /// is set or can be derived. Its annualized range is determined as
-      /// ([amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
-      /// or
-      /// [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range])
-      /// times
+      /// - it contains valid [amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range].
+      /// - and its [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year] is set or can be derived.
+      /// Its annualized range is determined as ([amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range]) times
       /// [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
       /// </summary>
       public sealed partial class CompensationEntry : pb::IMessage<CompensationEntry> {
@@ -2873,8 +2793,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Compensation type.
         ///
-        /// Default is
-        /// [CompensationType.COMPENSATION_TYPE_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.COMPENSATION_TYPE_UNSPECIFIED].
+        /// Default is [CompensationType.COMPENSATION_TYPE_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.COMPENSATION_TYPE_UNSPECIFIED].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType Type {
@@ -2890,8 +2809,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Frequency of the specified amount.
         ///
-        /// Default is
-        /// [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED].
+        /// Default is [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit Unit {
@@ -2951,10 +2869,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         private double? expectedUnitsPerYear_;
         /// <summary>
         /// Expected number of units paid each year. If not specified, when
-        /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types]
-        /// is FULLTIME, a default value is inferred based on
-        /// [unit][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.unit].
-        /// Default values:
+        /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types] is FULLTIME, a default value is inferred
+        /// based on [unit][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.unit]. Default values:
         /// - HOURLY: 2080
         /// - DAILY: 260
         /// - WEEKLY: 52
@@ -3751,11 +3667,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SkillNameSnippetFieldNumber = 5;
     private string skillNameSnippet_ = "";
     /// <summary>
-    /// Output only. Skill name snippet shows how the
-    /// [display_name][google.cloud.talent.v4beta1.Skill.display_name] is related
-    /// to a search query. It's empty if the
-    /// [display_name][google.cloud.talent.v4beta1.Skill.display_name] isn't
-    /// related to the search query.
+    /// Output only. Skill name snippet shows how the [display_name][google.cloud.talent.v4beta1.Skill.display_name] is related to a search
+    /// query. It's empty if the [display_name][google.cloud.talent.v4beta1.Skill.display_name] isn't related to the search
+    /// query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SkillNameSnippet {
@@ -3975,8 +3889,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeFieldNumber = 7;
     private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
     /// <summary>
-    /// Required. The overall decision resulting from this interview (positive,
-    /// negative, nuetral).
+    /// Required. The overall decision resulting from this interview (positive, negative,
+    /// nuetral).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Outcome Outcome {
@@ -4323,8 +4237,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
   /// <summary>
   /// Metadata used for long running operations returned by CTS batch APIs.
-  /// It's used to replace
-  /// [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata].
+  /// It's used to replace [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata].
   /// </summary>
   public sealed partial class BatchOperationMetadata : pb::IMessage<BatchOperationMetadata> {
     private static readonly pb::MessageParser<BatchOperationMetadata> _parser = new pb::MessageParser<BatchOperationMetadata>(() => new BatchOperationMetadata());
@@ -4456,8 +4369,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// The time when the batch operation status is updated. The metadata and the
-    /// [update_time][google.cloud.talent.v4beta1.BatchOperationMetadata.update_time]
-    /// is refreshed every minute otherwise cached data is returned.
+    /// [update_time][google.cloud.talent.v4beta1.BatchOperationMetadata.update_time] is refreshed every minute otherwise cached data is
+    /// returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -4472,8 +4385,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// The time when the batch operation is finished and
-    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
-    /// set to `true`.
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is set to `true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -4723,15 +4635,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [pbr::OriginalName("FAILED")] Failed = 4,
         /// <summary>
         /// The batch operation is in the process of cancelling after
-        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
-        /// is called.
+        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation] is called.
         /// </summary>
         [pbr::OriginalName("CANCELLING")] Cancelling = 5,
         /// <summary>
         /// The batch operation is done after
-        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
-        /// is called. Any items processed before cancelling are returned in the
-        /// response.
+        /// [google.longrunning.Operations.CancelOperation][google.longrunning.Operations.CancelOperation] is called. Any items
+        /// processed before cancelling are returned in the response.
         /// </summary>
         [pbr::OriginalName("CANCELLED")] Cancelled = 6,
       }

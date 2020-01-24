@@ -366,8 +366,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="clientEvent">
-        /// Required. Events issued when end user interacts with customer's application
-        /// that uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -403,8 +403,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="clientEvent">
-        /// Required. Events issued when end user interacts with customer's application
-        /// that uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -437,8 +437,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="clientEvent">
-        /// Required. Events issued when end user interacts with customer's application
-        /// that uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -474,8 +474,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="clientEvent">
-        /// Required. Events issued when end user interacts with customer's application
-        /// that uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -511,8 +511,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="clientEvent">
-        /// Required. Events issued when end user interacts with customer's application
-        /// that uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -545,8 +545,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// is created, for example, "projects/foo".
         /// </param>
         /// <param name="clientEvent">
-        /// Required. Events issued when end user interacts with customer's application
-        /// that uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
