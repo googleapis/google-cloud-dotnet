@@ -14,7 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
-using Google.Apis.Requests;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -136,39 +137,17 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override void InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
+        public override BigQueryInsertResults InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
         {
-            var request = CreateInsertAllRequest(tableReference, rows, options, out bool hasRows);
-            if (!hasRows)
+            var request = CreateInsertAllRequest(tableReference, rows, options, out IReadOnlyList<BigQueryInsertRow> validatedRows);
+            if (validatedRows.Count == 0)
             {
-                return;
+                return new BigQueryInsertResults(this, options, validatedRows, new TableDataInsertAllResponse());
             }
-            var response = request.Execute();
-            HandleInsertAllResponse(response, options);
-        }
+            TableDataInsertAllResponse response = request.Execute();
+            BigQueryInsertResults results = new BigQueryInsertResults(this, options, validatedRows, response);
 
-        private void HandleInsertAllResponse(TableDataInsertAllResponse response, InsertOptions options)
-        {
-            var errors = response.InsertErrors;
-            bool shouldThrow = options == null || !options.SuppressInsertErrors;
-            if (errors?.Count > 0 && shouldThrow)
-            {
-                var exception = new GoogleApiException(Service.Name, "Error inserting data")
-                {
-                    Error = new RequestError
-                    {
-                        Errors = response.InsertErrors
-                            .SelectMany(rowErrors => (rowErrors.Errors ?? Enumerable.Empty<ErrorProto>()).Select(error => new SingleError
-                            {
-                                Location = error.Location,
-                                Reason = error.Reason,
-                                Message = $"Row {rowErrors.Index}: {error.Message}"
-                            }))
-                            .ToList()
-                    }
-                };
-                throw exception;
-            }
+            return results.ThrowIfNotSuppressing(options?.SuppressInsertErrors);
         }
 
         /// <inheritdoc />
@@ -281,16 +260,18 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows,
+        public override async Task<BigQueryInsertResults> InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows,
             InsertOptions options = null, CancellationToken cancellationToken = default)
         {
-            var request = CreateInsertAllRequest(tableReference, rows, options, out bool hasRows);
-            if (!hasRows)
+            var request = CreateInsertAllRequest(tableReference, rows, options, out IReadOnlyList<BigQueryInsertRow> validatedRows);
+            if (validatedRows.Count == 0)
             {
-                return;
+                return new BigQueryInsertResults(this, options, validatedRows, new TableDataInsertAllResponse());
             }
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            HandleInsertAllResponse(response, options);
+            BigQueryInsertResults results = new BigQueryInsertResults(this, options, validatedRows, response);
+
+            return results.ThrowIfNotSuppressing(options?.SuppressInsertErrors);
         }
 
         /// <summary>
@@ -316,22 +297,21 @@ namespace Google.Cloud.BigQuery.V2
             return stream;
         }
 
-        private InsertAllRequest CreateInsertAllRequest(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options, out bool hasRows)
+        private InsertAllRequest CreateInsertAllRequest(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options, out IReadOnlyList<BigQueryInsertRow> validatedRows)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(rows, nameof(rows));
 
-            var insertRows = rows.Select(row =>
+            validatedRows = rows.Select(row =>
             {
                 GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
-                return row.ToRowsData(options?.AllowEmptyInsertIds ?? false);
-            }).ToList();
+                return row;
+            }).ToList().AsReadOnly();
             var body = new TableDataInsertAllRequest
             {
-                Rows = insertRows
+                Rows = new RawRowList(validatedRows, options?.AllowEmptyInsertIds ?? false)
             };
-            // It's annoying to use an out parameter for this, but InsertAllRequest doesn't allow access to the body.
-            hasRows = body.Rows.Any();
+
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             // Even though empty InsertIds might be allowed, this can be retried as per guidance from
@@ -340,6 +320,73 @@ namespace Google.Cloud.BigQuery.V2
             // the expense of de-duplication efforts.
             RetryHandler.MarkAsRetriable(request);
             return request;
+        }
+
+        /// <summary>
+        /// Wrapper list so that we can be more efficient and reuse the BigQueryInsertRow
+        /// list.
+        /// This list is really read only, but the type needs to be IList because that's what
+        /// <see cref="TableDataInsertAllRequest.Rows"/> is expecting.
+        /// </summary>
+        internal sealed class RawRowList : IList<TableDataInsertAllRequest.RowsData>
+        {
+            private readonly IReadOnlyList<BigQueryInsertRow> _insertRows;
+            private readonly bool _allowEmptyInsertIds;
+
+            internal RawRowList(IReadOnlyList<BigQueryInsertRow> insertRows, bool allowEmptyInsertIds)
+            {
+                _insertRows = GaxPreconditions.CheckNotNull(insertRows, nameof(insertRows));
+                _allowEmptyInsertIds = allowEmptyInsertIds;
+            }
+
+            public TableDataInsertAllRequest.RowsData this[int index] 
+            { 
+                get => _insertRows[index].ToRowsData(_allowEmptyInsertIds);
+                set => throw new NotSupportedException();
+            }
+
+            public int Count => _insertRows.Count;
+
+            public bool IsReadOnly => true;
+
+            public void Add(TableDataInsertAllRequest.RowsData item) => throw new NotSupportedException();
+
+            public void Clear() => throw new NotSupportedException();
+
+            public bool Contains(TableDataInsertAllRequest.RowsData item) =>
+                IndexOf(item) >= 0;
+
+            public void CopyTo(TableDataInsertAllRequest.RowsData[] array, int arrayIndex)
+            {
+                foreach (var insertRow in _insertRows)
+                {
+                    array[arrayIndex++] = insertRow.ToRowsData(_allowEmptyInsertIds);
+                }
+            }
+
+            public IEnumerator<TableDataInsertAllRequest.RowsData> GetEnumerator() =>
+                _insertRows.Select(insertRow => insertRow.ToRowsData(_allowEmptyInsertIds)).GetEnumerator();
+
+            public int IndexOf(TableDataInsertAllRequest.RowsData item)
+            {
+                for (int i = 0; i < _insertRows.Count; i++)
+                {
+                    if (_insertRows[i].ToRowsData(_allowEmptyInsertIds).Equals(item))
+                    {
+                        return i;
+                    }
+                }
+
+                return -1;
+            }
+
+            public void Insert(int index, TableDataInsertAllRequest.RowsData item) => throw new NotSupportedException();
+
+            public bool Remove(TableDataInsertAllRequest.RowsData item) => throw new NotSupportedException();
+
+            public void RemoveAt(int index) => throw new NotSupportedException();
+
+            IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }
     }
 }

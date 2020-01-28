@@ -546,7 +546,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadParquet(string datasetId, string tableId, Stream input, UploadParquetOptions options = null) =>
             UploadParquet(GetTableReference(datasetId, tableId), input, options);
-
+        
         /// <summary>
         /// Uploads a stream of Parquet data to the specified table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadParquet(TableReference, Stream, UploadParquetOptions)"/>.
@@ -559,7 +559,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadParquet(string projectId, string datasetId, string tableId, Stream input, UploadParquetOptions options = null) =>
             UploadParquet(GetTableReference(projectId, datasetId, tableId), input, options);
-
+        
         /// <summary>
         /// Uploads a stream of Parquet data to the specified table.
         /// </summary>
@@ -569,7 +569,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadParquet(TableReference tableReference, Stream input, UploadParquetOptions options = null) =>
             throw new NotImplementedException();
-
+        
         /// <summary>
         /// Asynchronously uploads a stream of Parquet data to the specified table within this client's project.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadParquetAsync(TableReference, Stream, UploadParquetOptions, CancellationToken)"/>.
@@ -583,7 +583,7 @@ namespace Google.Cloud.BigQuery.V2
         /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadParquetAsync(string datasetId, string tableId, Stream input, UploadParquetOptions options = null, CancellationToken cancellationToken = default) =>
             UploadParquetAsync(GetTableReference(datasetId, tableId), input, options, cancellationToken);
-
+        
         /// <summary>
         /// Asynchronously uploads a stream of Parquet data to the specified table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadParquetAsync(TableReference, Stream, UploadParquetOptions, CancellationToken)"/>.
@@ -598,7 +598,7 @@ namespace Google.Cloud.BigQuery.V2
         /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadParquetAsync(string projectId, string datasetId, string tableId, Stream input, UploadParquetOptions options = null, CancellationToken cancellationToken = default) =>
             UploadParquetAsync(GetTableReference(projectId, datasetId, tableId), input, options, cancellationToken);
-
+        
         /// <summary>
         /// Asynchronously uploads a stream of Parquet data to the specified table.
         /// </summary>
@@ -622,7 +622,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRow(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRow(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
             InsertRow(GetTableReference(projectId, datasetId, tableId), row, options);
 
         /// <summary>
@@ -633,7 +634,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRow(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRow(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
             InsertRow(GetTableReference(datasetId, tableId), row, options);
 
         /// <summary>
@@ -643,7 +645,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRow(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRow(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null) =>
             InsertRows(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options);
 
         /// <summary>
@@ -656,8 +659,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowAsync(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowAsync(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowAsync(GetTableReference(projectId, datasetId, tableId), row, options, cancellationToken);
 
         /// <summary>
@@ -669,8 +673,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowAsync(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowAsync(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowAsync(GetTableReference(datasetId, tableId), row, options, cancellationToken);
 
         /// <summary>
@@ -681,8 +686,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowsAsync(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options, cancellationToken);
         #endregion
 
@@ -699,7 +705,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        public virtual void InsertRows(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRows(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
             InsertRows(GetTableReference(projectId, datasetId, tableId), rows, null);
 
         /// <summary>
@@ -713,7 +720,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        public virtual void InsertRows(string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRows(string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
             InsertRows(GetTableReference(datasetId, tableId), rows, null);
 
         /// <summary>
@@ -726,7 +734,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        public virtual void InsertRows(TableReference tableReference, params BigQueryInsertRow[] rows) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRows(TableReference tableReference, params BigQueryInsertRow[] rows) =>
             InsertRows(tableReference, rows, null);
 
         /// <summary>
@@ -741,8 +750,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowsAsync(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
             InsertRowsAsync(GetTableReference(projectId, datasetId, tableId), rows, null);
 
         /// <summary>
@@ -756,8 +766,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowsAsync(string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
             InsertRowsAsync(GetTableReference(datasetId, tableId), rows, null, CancellationToken.None);
 
         /// <summary>
@@ -770,8 +781,9 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(TableReference tableReference, params BigQueryInsertRow[] rows) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowsAsync(TableReference tableReference, params BigQueryInsertRow[] rows) =>
             InsertRowsAsync(tableReference, rows, null, CancellationToken.None);
         #endregion
 
@@ -784,7 +796,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRows(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRows(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
             InsertRows(GetTableReference(datasetId, tableId), rows, options);
         
         /// <summary>
@@ -796,7 +809,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRows(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRows(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
             InsertRows(GetTableReference(projectId, datasetId, tableId), rows, options);
         
         /// <summary>
@@ -805,7 +819,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public virtual BigQueryInsertResults InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
             throw new NotImplementedException();
         
         /// <summary>
@@ -817,8 +832,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowsAsync(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowsAsync(GetTableReference(datasetId, tableId), rows, options, cancellationToken);
         
         /// <summary>
@@ -831,8 +847,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowsAsync(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowsAsync(GetTableReference(projectId, datasetId, tableId), rows, options, cancellationToken);
         
         /// <summary>
@@ -842,8 +859,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public virtual Task<BigQueryInsertResults> InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
