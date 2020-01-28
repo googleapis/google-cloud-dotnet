@@ -584,7 +584,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var stream = new MemoryStream();
             var row = new BigQueryInsertRow();
-            VerifyEquivalent(
+            VerifyEquivalent(new BigQueryInsertResults(new DerivedBigQueryClient(), options, Enumerable.Repeat(row, 1).ToList(), new TableDataInsertAllResponse()),
                 client => client.InsertRows(MatchesWhenSerialized(reference), new[] { row }, options),
                 client => client.InsertRow(datasetId, tableId, row, options),
                 client => client.InsertRow(ProjectId, datasetId, tableId, row, options),
@@ -601,7 +601,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
-            VerifyEquivalent(
+            VerifyEquivalent(new BigQueryInsertResults(new DerivedBigQueryClient(), options, rows, new TableDataInsertAllResponse()),
                 client => client.InsertRows(MatchesWhenSerialized(reference), rows, options),
                 client => client.InsertRows(datasetId, tableId, rows, options),
                 client => client.InsertRows(ProjectId, datasetId, tableId, rows, options),
@@ -618,7 +618,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
-            VerifyEquivalent(
+            VerifyEquivalent(new BigQueryInsertResults(new DerivedBigQueryClient(), options, rows, new TableDataInsertAllResponse()),
                 client => client.InsertRows(MatchesWhenSerialized(reference), rows, null),
                 client => client.InsertRows(datasetId, tableId, rows[0], rows[1]),
                 client => client.InsertRows(ProjectId, datasetId, tableId, rows[0], rows[1]),
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
             var row = new BigQueryInsertRow();
-            VerifyEquivalentAsync(
+            VerifyEquivalentAsync(new BigQueryInsertResults(new DerivedBigQueryClient(), options, Enumerable.Repeat(row, 1).ToList(), new TableDataInsertAllResponse()),
                 client => client.InsertRowsAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
                 client => client.InsertRowAsync(datasetId, tableId, row, options, token),
                 client => client.InsertRowAsync(ProjectId, datasetId, tableId, row, options, token),
@@ -1150,7 +1150,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
-            VerifyEquivalentAsync(
+            VerifyEquivalentAsync(new BigQueryInsertResults(new DerivedBigQueryClient(), options, rows, new TableDataInsertAllResponse()),
                 client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, options, token),
                 client => client.InsertRowsAsync(datasetId, tableId, rows, options, token),
                 client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows, options, token),
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
-            VerifyEquivalentAsync(
+            VerifyEquivalentAsync(new BigQueryInsertResults(new DerivedBigQueryClient(), options, rows, new TableDataInsertAllResponse()),
                 client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, null, default),
                 client => client.InsertRowsAsync(datasetId, tableId, rows[0], rows[1]),
                 client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),

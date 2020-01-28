@@ -158,7 +158,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public void InsertRow(BigQueryInsertRow row, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public BigQueryInsertResults InsertRow(BigQueryInsertRow row, InsertOptions options = null) =>
             _client.InsertRow(Reference, row, options);
 
         /// <summary>
@@ -167,7 +168,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public void InsertRows(IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public BigQueryInsertResults InsertRows(IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
             _client.InsertRows(Reference, rows, options);
 
         /// <summary>
@@ -175,7 +177,8 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.InsertRows(TableReference, BigQueryInsertRow[])"/>.
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
-        public void InsertRows(params BigQueryInsertRow[] rows) =>
+        /// <returns>An insert result object which contains information on insert errors if any.</returns>
+        public BigQueryInsertResults InsertRows(params BigQueryInsertRow[] rows) =>
             _client.InsertRows(Reference, rows);
 
         /// <summary>
@@ -358,8 +361,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public Task<BigQueryInsertResults> InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             _client.InsertRowAsync(Reference, row, options, cancellationToken);
 
         /// <summary>
@@ -369,8 +373,9 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task InsertRowsAsync(IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public Task<BigQueryInsertResults> InsertRowsAsync(IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             _client.InsertRowsAsync(Reference, rows, options, cancellationToken);
 
         /// <summary>
@@ -378,8 +383,9 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.InsertRowsAsync(TableReference, BigQueryInsertRow[])"/>.
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task InsertRowsAsync(params BigQueryInsertRow[] rows) =>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// an insert result object which contains information on insert errors if any.</returns>
+        public Task<BigQueryInsertResults> InsertRowsAsync(params BigQueryInsertRow[] rows) =>
             _client.InsertRowsAsync(Reference, rows);
 
         /// <summary>

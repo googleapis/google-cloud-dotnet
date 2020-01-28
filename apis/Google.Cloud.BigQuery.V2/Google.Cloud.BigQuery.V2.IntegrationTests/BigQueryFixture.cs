@@ -263,15 +263,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             InsertAndWait(table, () => table.InsertRow(ExhaustiveTypesTest.GetSampleRow()), 1);
         }
 
-        internal void InsertAndWait(BigQueryTable table, Action insertAction, int expectedRowCountChange)
+        internal BigQueryInsertResults InsertAndWait(BigQueryTable table, Func<BigQueryInsertResults> insertAction, int expectedRowCountChange)
         {
             var countBefore = table.ListRows().Count();
             var expectedCount = countBefore + expectedRowCountChange;
-            insertAction();
+            var results = insertAction();
             // Wait until there are *at least* enough rows
             int actualCount = table.PollUntilRowCountIsAtLeast(expectedCount);
             // Now check it's *exactly* the right number of rows.
             Assert.Equal(expectedCount, actualCount);
+
+            return results;
         }
 
         internal List<string> LoadTextResource(string relativeName)

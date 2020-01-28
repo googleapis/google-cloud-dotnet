@@ -133,7 +133,7 @@
   <Method Name="InsertRows"
       RegionLabel="InsertRows(sequence)"
       TargetType="Table"
-      ReturnType="void">
+      ReturnType="BigQueryInsertResults">
 
     <Options Type="InsertOptions" />
     <AdditionalParameters>
@@ -144,6 +144,7 @@
       <summary>
         Inserts all the given rows of data into {target}.
       </summary>
+      <returns>An insert result object which contains information on insert errors if any.</returns>
     </Comments>
   </Method>
 </File>
