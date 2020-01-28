@@ -30,6 +30,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture = fixture;
         }
 
+        private void AssertAllRowsInserted(BigQueryInsertResults insertResult)
+        {
+            Assert.Equal(BigQueryInsertStatus.AllRowsInserted, insertResult.Status);
+            Assert.Empty(insertResult.Errors);
+        }
+
         [Fact]
         public void InsertRow()
         {
@@ -39,7 +45,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var row = BuildRow("Joe", 100, new DateTime(2016, 4, 26, 11, 43, 1, DateTimeKind.Utc));
 
-            _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
+            var insertResult = _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
+
+            AssertAllRowsInserted(insertResult);
 
             var rowsAfter = table.ListRows();
             var fetched = rowsAfter.Single(r => (string)r["player"] == "Joe");
@@ -60,7 +68,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 BuildRow("Lisa", 90, new DateTime(2011, 10, 12, 0, 0, 0, DateTimeKind.Utc))
             };
 
-            _fixture.InsertAndWait(table, () => table.InsertRows(rows), 2);
+            var insertResult = _fixture.InsertAndWait(table, () => table.InsertRows(rows), 2);
+
+            AssertAllRowsInserted(insertResult);
 
             var rowsAfter = table.ListRows().ToList();
             Assert.Contains(rowsAfter, r => (string)r["player"] == "Jenny");
@@ -81,10 +91,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 BuildRow("Henry", 90, new DateTime(2011, 10, 12, 0, 0, 0, DateTimeKind.Utc))
             };
 
-            _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 2);
+            var insertResult = _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 2);
 
             Assert.Null(rows[0].InsertId);
             Assert.Null(rows[1].InsertId);
+
+            AssertAllRowsInserted(insertResult);
 
             var rowsAfter = table.ListRows().ToList();
             Assert.Contains(rowsAfter, r => (string)r["player"] == "Helen");
@@ -95,22 +107,25 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             get
             {
-                yield return new object[] { null };
-                yield return new object[] { new InsertOptions() };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = false } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = true } };
-                yield return new object[] { new InsertOptions { AllowUnknownFields = false } };
-                yield return new object[] { new InsertOptions { AllowUnknownFields = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = false } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = false } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = true } };
+                int[] bothRowsIndexes = new int[] { 0, 1 };
+                int[] oneRowIndex = new int[] { 1 };
+
+                yield return new object[] { null, bothRowsIndexes };
+                yield return new object[] { new InsertOptions(), bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = false }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = false }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = false }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = true }, oneRowIndex };
             }
         }
 
         [Theory]
         [MemberData(nameof(BadDataThrowsOptions))]
-        public void InsertRow_BadData_Throws(InsertOptions options)
+        public void InsertRow_BadData_Throws(InsertOptions options, int[] errorRowsIndexes)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -123,28 +138,37 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new BigQueryInsertRow { { "noSuchField", 10 } },
                 new BigQueryInsertRow { {"year", "Unknown"} }
             };
-            Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
+            var exception = Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
+
+            Assert.Equal(errorRowsIndexes.Length, exception.Error.Errors.Count);
+            foreach (var index in errorRowsIndexes)
+            {
+                Assert.Contains(exception.Error.Errors, e => e.Message.ToLower().Contains($"in row {index}"));
+            }
         }
 
         public static IEnumerable<object[]> BadDataSilentOptions
         {
             get
             {
-                yield return new object[] { new InsertOptions { SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = false, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { AllowUnknownFields = false, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { AllowUnknownFields = true, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = false, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = true, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = false, SuppressInsertErrors = true } };
-                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = true, SuppressInsertErrors = true } };
+                int[] bothRowsIndexes = new int[] { 0, 1 };
+                int[] oneRowIndex = new int[] { 1 };
+
+                yield return new object[] { new InsertOptions { SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = false, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { AllowUnknownFields = true, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = false, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = false, AllowUnknownFields = true, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = false, SuppressInsertErrors = true }, bothRowsIndexes };
+                yield return new object[] { new InsertOptions { SkipInvalidRows = true, AllowUnknownFields = true, SuppressInsertErrors = true }, oneRowIndex };
             }
         }
 
         [Theory]
         [MemberData(nameof(BadDataSilentOptions))]
-        public void InsertRow_BadData_Silent(InsertOptions options)
+        public void InsertRow_BadData_Silent(InsertOptions options, int[] errorRowsIndexes)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -157,7 +181,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new BigQueryInsertRow { { "noSuchField", 10 } },
                 new BigQueryInsertRow { {"year", "Unknown"} }
             };
-            table.InsertRows(rows, options);
+            var insertResult = table.InsertRows(rows, options);
+
+            Assert.Equal(errorRowsIndexes.Length, insertResult.OriginalRowsWithErrors);
+            Assert.Equal(errorRowsIndexes,
+                insertResult.Errors.
+                Select(e => (int?) e.OriginalRowIndex ?? -1).
+                OrderBy(index => index).
+                ToArray());
         }
 
         [Fact]
@@ -185,7 +216,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Even though SuppressInsertErrors is false, this won't throw
             // because server side, unknown fields are ignored silently.
             var options = new InsertOptions { AllowUnknownFields = true };
-            _fixture.InsertAndWait(table, () => table.InsertRow(row, options), 1);
+            var insertResult = _fixture.InsertAndWait(table, () => table.InsertRow(row, options), 1);
+
+            AssertAllRowsInserted(insertResult);
         }
 
         [Fact]
@@ -207,7 +240,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var options = new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = true};
             // Only one row inserted, we are not ignoring unknown fields so the last two rows are bad.
-            _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 1);
+            var insertResult = _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 1);
+
+            Assert.Equal(2, insertResult.OriginalRowsWithErrors);
+            Assert.Equal(3, insertResult.InsertAttemptRowCount);
+            Assert.Equal(BigQueryInsertStatus.SomeRowsInserted, insertResult.Status);
+            Assert.Contains(insertResult.Errors, e => e.OriginalRowIndex == 1);
+            Assert.Contains(insertResult.Errors, e => e.OriginalRowIndex == 2);
         }
 
         [Fact]
@@ -230,8 +269,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var options = new InsertOptions { SkipInvalidRows = true, SuppressInsertErrors = false };
             var exception = Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
             Assert.Equal(2, exception.Error.Errors.Count);
-            Assert.Contains(exception.Error.Errors, e => e.Message.Contains("Row 1"));
-            Assert.Contains(exception.Error.Errors, e => e.Message.Contains("Row 2"));
+            Assert.Contains(exception.Error.Errors, e => e.Message.ToLower().Contains("in row 1"));
+            Assert.Contains(exception.Error.Errors, e => e.Message.ToLower().Contains("in row 2"));
         }
 
         [Fact]
@@ -253,7 +292,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var options = new InsertOptions { AllowUnknownFields = true, SkipInvalidRows = true, SuppressInsertErrors = true };
             // Now two rows are inserted, we are ignoring unknown fields so only the last row is bad.
-            _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 2);
+            var insertResult = _fixture.InsertAndWait(table, () => table.InsertRows(rows, options), 2);
+
+            Assert.Equal(1, insertResult.OriginalRowsWithErrors);
+            Assert.Equal(3, insertResult.InsertAttemptRowCount);
+            Assert.Equal(BigQueryInsertStatus.SomeRowsInserted, insertResult.Status);
+            Assert.Contains(insertResult.Errors, e => e.OriginalRowIndex == 2);
         }
 
         [Fact]
@@ -276,7 +320,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var options = new InsertOptions { AllowUnknownFields = true, SkipInvalidRows = true, SuppressInsertErrors = false };
             var exception = Assert.Throws<GoogleApiException>(() => table.InsertRows(rows, options));
             Assert.Equal(1, exception.Error.Errors.Count);
-            Assert.Contains("Row 2", exception.Error.Errors[0].Message);
+            Assert.Contains("in row 2", exception.Error.Errors[0].Message, StringComparison.InvariantCultureIgnoreCase);
         }
 
         [Fact]
