@@ -36,8 +36,8 @@ namespace Grafeas.V1.FixGeneratedCode
                 .RemoveProperty("GrafeasClient", "DefaultEndpoint")
                 .RemoveProperty("GrafeasClient", "DefaultScopes")
                 .RemoveProperty("GrafeasClient", "ChannelPool")
-                .RemoveMethod("GrafeasClient", "CreateAsync", "ServiceEndpoint", "GrafeasSettings")
-                .RemoveMethod("GrafeasClient", "Create", "ServiceEndpoint", "GrafeasSettings")
+                .RemoveMethod("GrafeasClient", "CreateAsync", "string", "GrafeasSettings")
+                .RemoveMethod("GrafeasClient", "Create", "string", "GrafeasSettings")
                 .RemoveMethod("GrafeasClient", "ShutdownDefaultChannelsAsync")
                 .RemoveType("GrafeasClientBuilder")
                 .Save();
