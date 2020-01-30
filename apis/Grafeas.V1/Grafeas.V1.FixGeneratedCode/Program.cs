@@ -34,12 +34,12 @@ namespace Grafeas.V1.FixGeneratedCode
 
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "GrafeasClient.g.cs"))
                 .RemoveProperty("GrafeasClient", "DefaultEndpoint")
-                .RemoveProperty("GrafeasClient", "DefaultScopes")
                 .RemoveProperty("GrafeasClient", "ChannelPool")
-                .RemoveMethod("GrafeasClient", "CreateAsync", "ServiceEndpoint", "GrafeasSettings")
-                .RemoveMethod("GrafeasClient", "Create", "ServiceEndpoint", "GrafeasSettings")
+                .RemoveMethod("GrafeasClient", "CreateAsync", "CancellationToken")
+                .RemoveMethod("GrafeasClient", "Create")
                 .RemoveMethod("GrafeasClient", "ShutdownDefaultChannelsAsync")
-                .RemoveType("GrafeasClientBuilder")
+                .RemoveMethod("GrafeasClientBuilder", "GetDefaultEndpoint")
+                .RemoveMethod("GrafeasClientBuilder", "GetChannelPool")
                 .Save();
 
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1.Snippets", "GrafeasClientSnippets.g.cs"))
@@ -59,12 +59,12 @@ namespace Grafeas.V1.FixGeneratedCode
 
             public SnippetRewriter() : base(false)
             {
-                _channelDeclaration = SyntaxFactory.ParseStatement("global::Grpc.Core.Channel channel = null;")
+                _channelDeclaration = SyntaxFactory.ParseStatement("string endpoint = \"\";")
                     // TODO: Potentially format the node automatically instead of hard-coding whitespace.
                     .WithLeadingTrivia(SyntaxFactory.Whitespace("            "))
                     // By using the native linebreak format, we avoid generating whitespace-only git changes.
                     .WithTrailingTrivia(SyntaxFactory.Whitespace(Environment.NewLine));
-                _clientCreation = SyntaxFactory.ParseStatement("GrafeasClient grafeasClient = GrafeasClient.Create(channel);");
+                _clientCreation = SyntaxFactory.ParseStatement("GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();");
             }
 
             public override SyntaxNode VisitMethodDeclaration(MethodDeclarationSyntax node)
