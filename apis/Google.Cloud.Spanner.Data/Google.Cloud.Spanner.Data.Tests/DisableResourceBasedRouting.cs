@@ -24,13 +24,13 @@ namespace Google.Cloud.Spanner.Data.Tests
         static string ResourceBasedRoutingValue;
         public override void Before(MethodInfo methodUnderTest)
         {
-            ResourceBasedRoutingValue = Environment.GetEnvironmentVariable(SpannerConstants.ResourceBasedRouteVariableName);
-            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRouteVariableName, "false");
+            ResourceBasedRoutingValue = Environment.GetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName);
+            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName, "false");
         }
 
         public override void After(MethodInfo methodUnderTest)
         {
-            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRouteVariableName, ResourceBasedRoutingValue);
+            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName, ResourceBasedRoutingValue);
         }
     }
 }

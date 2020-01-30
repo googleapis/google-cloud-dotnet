@@ -150,7 +150,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The <see cref="InstanceHostManager"/> When resource based routing is enabled,
-        /// this is used to obtain random host for an instance.
+        /// this is used to obtain host for an instance.
         /// </summary>
         /// <remarks>
         /// This property defaults to <see cref="InstanceHostManager.Default"/>
@@ -162,12 +162,30 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the random endpointUri 
-        /// available on instance or the default host will be used.
+        /// The TCP Host name to connect to Spanner. If not supplied in the connection string,
+        /// the first endpointUri available on instance if resource based routing is enabled or the default host will be used.
         /// </summary>
         public string Host
         {
-            get => GetOrAddValue(nameof(Host), () => Task.Run(() => InstanceHostManager.GetHostAsnyc(Project, SpannerInstance)).ResultWithUnwrappedExceptions() ?? SpannerClient.DefaultEndpoint.Host);
+            get
+            {
+                try
+                {
+                    return GetOrAddValue(nameof(Host), () => Task.Run(() =>
+                InstanceHostManager.GetHostAsync(Project, SpannerInstance)).ResultWithUnwrappedExceptions() ?? SpannerClient.DefaultEndpoint.Host);
+                }
+                catch (RpcException gRpcException) when (gRpcException.StatusCode == StatusCode.PermissionDenied)
+                {
+                    SessionPoolManager.Logger.Warn(@"The client library attempted to connect to an endpoint closer to your 
+Cloud Spanner data but was unable to do so. 
+The client library will fallback and route requests to the endpoint given in the client options,
+which may result in increased latency. 
+We recommend including the scope https://www.googleapis.com/auth/spanner.admin so that the client library 
+can get an instance-specific endpoint and efficiently route requests.");
+                    return SpannerClient.DefaultEndpoint.Host;
+                }
+
+            }
             set => this[nameof(Host)] = value;
         }
 

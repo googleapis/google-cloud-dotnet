@@ -14,10 +14,7 @@
 
 using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +29,6 @@ namespace Google.Cloud.Spanner.Data
     {
         private ConcurrentDictionary<string, IList<string>> _instanceEndpointMapping =
             new ConcurrentDictionary<string, IList<string>>();
-        private static Random s_random = new Random();
 
         /// <summary>
         /// The default instance host manager.
@@ -40,14 +36,15 @@ namespace Google.Cloud.Spanner.Data
         public static InstanceHostManager Default => new InstanceHostManager();
 
         /// <summary>
-        /// Get a host for the given instance.
-        /// If resource routing is enabled then this method looks in its cache and return random host if available in cache.
-        /// In case of not cached it retrieve from server, cache it and return the random host.
+        /// Gets a host for the given instance.
+        /// If resource based routing is enabled (environment variable "GOOGLE_CLOUD_SPANNER_ENABLE_RESOURCE_BASED_ROUTING"),
+        /// this method will attempt to get the given instance endpointUris and return the first one.
+        /// The returning endpointUri will be cached to be used in future inquiries.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
         /// <returns>The host for the given instance if found else null.</returns>
-        public async Task<string> GetHostAsnyc(string projectId, string instanceId)
+        public async Task<string> GetHostAsync(string projectId, string instanceId)
         {
             if (SpannerConstants.IsResourceBasedRoutingEnabled)
             {
@@ -56,8 +53,7 @@ namespace Google.Cloud.Spanner.Data
                     var instanceEndpointUris = await GetInstanceEndpointUrisAsync(projectId, instanceId).ConfigureAwait(false);
                     _instanceEndpointMapping[instanceId] = instanceEndpointUris;
                 }
-                var instanceEndPointUris = _instanceEndpointMapping[instanceId];
-                return instanceEndPointUris.ElementAtOrDefault(s_random.Next(instanceEndPointUris.Count));
+                return _instanceEndpointMapping[instanceId].FirstOrDefault();
             }
             return null;
         }
@@ -66,23 +62,15 @@ namespace Google.Cloud.Spanner.Data
         {
             InstanceAdminClient instanceAdminClient =
                     await InstanceAdminClient.CreateAsync().ConfigureAwait(false);
-            // Create request for instance with endpoints.
+            // Create request for instance with endpointUris.
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = new InstanceName(projectId, instanceId),
                 FieldMask = new FieldMask { Paths = { "endpoint_uris" } }
             };
-            try
-            {
-                // Get list of available endpointUris from GetInstance.
-                Instance instance = instanceAdminClient.GetInstance(request);
-                return instance.EndpointUris.ToList();
-            }
-            catch (RpcException gRpcException) when (gRpcException.StatusCode == StatusCode.PermissionDenied)
-            {
-                Logger.DefaultLogger.Warn("spanner.instances.get permission must be added to use resource based routing.");
-                return new List<string>();
-            }
+            // Get list of available endpointUris from GetInstance.
+            Instance instance = instanceAdminClient.GetInstance(request);
+            return instance.EndpointUris.ToList();
         }
     }
 }

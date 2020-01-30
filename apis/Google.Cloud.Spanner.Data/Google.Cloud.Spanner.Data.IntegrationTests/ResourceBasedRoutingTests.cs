@@ -29,10 +29,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void Should_Override_Endpoint()
         {
-            string resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(SpannerConstants.ResourceBasedRouteVariableName);
+            string resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName);
 
             //enable Resource based routing
-            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRouteVariableName, "true");
+            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName, "true");
 
             //default endpoint
             string expectedHost = InstanceAdminClient.DefaultEndpoint.Host;
@@ -41,7 +41,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (SpannerCommand command = new SpannerCommand(connection))
                 {
-                    string instanceEndpointUri = Task.Run(() => InstanceHostManager.Default.GetHostAsnyc(connection.Project, connection.SpannerInstance)).ResultWithUnwrappedExceptions();
+                    string instanceEndpointUri = Task.Run(() => InstanceHostManager.Default.GetHostAsync(connection.Project, connection.SpannerInstance)).ResultWithUnwrappedExceptions();
                     if (!string.IsNullOrWhiteSpace(instanceEndpointUri))
                     {
                         expectedHost = instanceEndpointUri;
@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 connection.Open();
                 Assert.Equal(expectedHost, connection.Builder.Host);
             }
-            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRouteVariableName, resourceBasedRoutingFlag);
+            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName, resourceBasedRoutingFlag);
         }
     }
 }

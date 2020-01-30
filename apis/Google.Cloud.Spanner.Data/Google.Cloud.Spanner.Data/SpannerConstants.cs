@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.Data
         {
             get
             {
-                string resourceBaseRoutingFlagValue = Environment.GetEnvironmentVariable(ResourceBasedRouteVariableName);
+                string resourceBaseRoutingFlagValue = Environment.GetEnvironmentVariable(ResourceBasedRoutingVariableName);
                 return StringComparer.InvariantCultureIgnoreCase.Equals(resourceBaseRoutingFlagValue, "true");
             }
         }
@@ -36,6 +36,6 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Resource based routing environment variable name.
         /// </summary>
-        public const string ResourceBasedRouteVariableName = "GOOGLE_CLOUD_ENABLE_RESOURCE_BASED_ROUTING";
+        public const string ResourceBasedRoutingVariableName = "GOOGLE_CLOUD_SPANNER_ENABLE_RESOURCE_BASED_ROUTING";
     }
 }
