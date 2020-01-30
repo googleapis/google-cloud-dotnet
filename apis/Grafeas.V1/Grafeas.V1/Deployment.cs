@@ -38,9 +38,9 @@ namespace Grafeas.V1 {
             "Z2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeploymentNote), global::Grafeas.V1.DeploymentNote.Parser, new[]{ "ResourceUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeploymentOccurrence), global::Grafeas.V1.DeploymentOccurrence.Parser, new[]{ "UserEmail", "DeployTime", "UndeployTime", "Config", "Address", "ResourceUri", "Platform" }, null, new[]{ typeof(global::Grafeas.V1.DeploymentOccurrence.Types.Platform) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeploymentNote), global::Grafeas.V1.DeploymentNote.Parser, new[]{ "ResourceUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeploymentOccurrence), global::Grafeas.V1.DeploymentOccurrence.Parser, new[]{ "UserEmail", "DeployTime", "UndeployTime", "Config", "Address", "ResourceUri", "Platform" }, null, new[]{ typeof(global::Grafeas.V1.DeploymentOccurrence.Types.Platform) }, null, null)
           }));
     }
     #endregion
@@ -303,7 +303,7 @@ namespace Grafeas.V1 {
 
     /// <summary>Field number for the "platform" field.</summary>
     public const int PlatformFieldNumber = 7;
-    private global::Grafeas.V1.DeploymentOccurrence.Types.Platform platform_ = 0;
+    private global::Grafeas.V1.DeploymentOccurrence.Types.Platform platform_ = global::Grafeas.V1.DeploymentOccurrence.Types.Platform.Unspecified;
     /// <summary>
     /// Platform hosting this deployment.
     /// </summary>
@@ -347,7 +347,7 @@ namespace Grafeas.V1 {
       if (Config.Length != 0) hash ^= Config.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       hash ^= resourceUri_.GetHashCode();
-      if (Platform != 0) hash ^= Platform.GetHashCode();
+      if (Platform != global::Grafeas.V1.DeploymentOccurrence.Types.Platform.Unspecified) hash ^= Platform.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -382,7 +382,7 @@ namespace Grafeas.V1 {
         output.WriteString(Address);
       }
       resourceUri_.WriteTo(output, _repeated_resourceUri_codec);
-      if (Platform != 0) {
+      if (Platform != global::Grafeas.V1.DeploymentOccurrence.Types.Platform.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Platform);
       }
@@ -410,7 +410,7 @@ namespace Grafeas.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
       size += resourceUri_.CalculateSize(_repeated_resourceUri_codec);
-      if (Platform != 0) {
+      if (Platform != global::Grafeas.V1.DeploymentOccurrence.Types.Platform.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
       }
       if (_unknownFields != null) {
@@ -446,7 +446,7 @@ namespace Grafeas.V1 {
         Address = other.Address;
       }
       resourceUri_.Add(other.resourceUri_);
-      if (other.Platform != 0) {
+      if (other.Platform != global::Grafeas.V1.DeploymentOccurrence.Types.Platform.Unspecified) {
         Platform = other.Platform;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
