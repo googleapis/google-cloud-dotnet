@@ -512,7 +512,7 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// The project whose Uptime check configurations are listed. The format
+        /// Required. The project whose Uptime check configurations are listed. The format
         ///   is `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="pageToken">
@@ -547,7 +547,7 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// The project whose Uptime check configurations are listed. The format
+        /// Required. The project whose Uptime check configurations are listed. The format
         ///   is `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="pageToken">
@@ -621,7 +621,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to retrieve. The format
+        /// Required. The Uptime check configuration to retrieve. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -643,7 +643,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to retrieve. The format
+        /// Required. The Uptime check configuration to retrieve. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="cancellationToken">
@@ -662,7 +662,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to retrieve. The format
+        /// Required. The Uptime check configuration to retrieve. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -684,7 +684,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to retrieve. The format
+        /// Required. The Uptime check configuration to retrieve. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -706,7 +706,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to retrieve. The format
+        /// Required. The Uptime check configuration to retrieve. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="cancellationToken">
@@ -725,7 +725,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to retrieve. The format
+        /// Required. The Uptime check configuration to retrieve. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -803,11 +803,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// The project in which to create the Uptime check. The format
+        /// Required. The project in which to create the Uptime check. The format
         ///   is `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="uptimeCheckConfig">
-        /// The new Uptime check configuration.
+        /// Required. The new Uptime check configuration.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -830,11 +830,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// The project in which to create the Uptime check. The format
+        /// Required. The project in which to create the Uptime check. The format
         ///   is `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="uptimeCheckConfig">
-        /// The new Uptime check configuration.
+        /// Required. The new Uptime check configuration.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -854,11 +854,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// The project in which to create the Uptime check. The format
+        /// Required. The project in which to create the Uptime check. The format
         ///   is `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="uptimeCheckConfig">
-        /// The new Uptime check configuration.
+        /// Required. The new Uptime check configuration.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1103,7 +1103,7 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to delete. The format
+        /// Required. The Uptime check configuration to delete. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1127,7 +1127,7 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to delete. The format
+        /// Required. The Uptime check configuration to delete. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to delete. The format
+        /// Required. The Uptime check configuration to delete. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1169,7 +1169,7 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to delete. The format
+        /// Required. The Uptime check configuration to delete. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to delete. The format
+        /// Required. The Uptime check configuration to delete. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1214,7 +1214,7 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// The Uptime check configuration to delete. The format
+        /// Required. The Uptime check configuration to delete. The format
         ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
         /// </param>
         /// <param name="callSettings">
