@@ -45,28 +45,30 @@ namespace Google.Cloud.PubSub.V1.Tests
 
         private class ServerAction
         {
-            public static ServerAction Data(TimeSpan preInterval, IEnumerable<string> msgs) => new ServerAction(preInterval, msgs, null, null);
+            public static ServerAction Data(TimeSpan preInterval, IEnumerable<string> msgs, int? deliveryAttempt = null) => new ServerAction(preInterval, msgs, null, null, deliveryAttempt);
             public static ServerAction Inf() => new ServerAction(TimeSpan.FromDays(365), null, null, null);
             public static ServerAction BadMoveNext(TimeSpan preInterval, RpcException ex) => new ServerAction(preInterval, null, ex, null);
             public static ServerAction BadCurrent(TimeSpan preInterval, RpcException ex) => new ServerAction(preInterval, null, null, ex);
 
-            private ServerAction(TimeSpan preInterval, IEnumerable<string> msgs, RpcException moveNextEx, RpcException currentEx)
+            private ServerAction(TimeSpan preInterval, IEnumerable<string> msgs, RpcException moveNextEx, RpcException currentEx, int? deliveryAttempt = null)
             {
                 PreInterval = preInterval;
                 Msgs = msgs;
                 MoveNextEx = moveNextEx;
                 CurrentEx = currentEx;
+                DeliveryAttempt = deliveryAttempt;
             }
 
             public TimeSpan PreInterval { get; }
             public IEnumerable<string> Msgs { get; }
             public RpcException MoveNextEx { get; }
             public RpcException CurrentEx { get; }
+            public int? DeliveryAttempt { get; }
         }
 
         private class FakeSubscriberServiceApiClient : SubscriberServiceApiClient
         {
-            public static ReceivedMessage MakeReceivedMessage(string msgId, string content) =>
+            public static ReceivedMessage MakeReceivedMessage(string msgId, string content, int? deliveryAttempt = null) =>
                 new ReceivedMessage
                 {
                     AckId = msgId,
@@ -74,8 +76,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         MessageId = msgId,
                         OrderingKey = content.Contains('|') ? content.Split('|')[0] : "",
-                        Data = ByteString.CopyFromUtf8(content)
-                    }
+                        Data = ByteString.CopyFromUtf8(content),
+                    },
+                    DeliveryAttempt = deliveryAttempt ?? 0,
                 };
 
             public static string MakeMsgId(int batchIndex, int msgIndex) => $"{batchIndex:D4}.{msgIndex:D4}";
@@ -136,7 +139,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         {
                             ReceivedMessages = {
                                 _msgsEn.Current.Action.Msgs.Select((s, i) =>
-                                    MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s))
+                                    MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt))
                             }
                         };
                     }
@@ -883,6 +886,31 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             var ex9 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadMaxExtension, null));
             //Assert.Equal("MaxTotalAckExtension", ex9.ParamName); There's a bug in GaxPreconditions.CheckNonNegativeDelay() which uses the wrong paramName
+        }
+
+        [Fact]
+        public void DeliveryAttempt()
+        {
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, new[] { "m" }, deliveryAttempt: null),
+                ServerAction.Data(TimeSpan.Zero, new[] { "m" }, deliveryAttempt: 2),
+                ServerAction.Inf()
+            };
+            using (var fake = Fake.Create(new[] { msgs }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    List<int?> deliveryAttempts = new List<int?>();
+                    var doneTask = fake.Subscriber.StartAsync((msg, ct) =>
+                    {
+                        deliveryAttempts.Add(msg.GetDeliveryAttempt());
+                        return Task.FromResult(SubscriberClient.Reply.Ack);
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    Assert.Equal(new int?[] { null, 2 }, deliveryAttempts);
+                });
+            }
         }
     }
 }
