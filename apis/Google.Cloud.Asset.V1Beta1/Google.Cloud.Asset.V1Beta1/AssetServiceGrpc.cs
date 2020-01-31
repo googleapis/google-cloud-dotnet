@@ -3,7 +3,7 @@
 //     source: google/cloud/asset/v1beta1/asset_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,6 +81,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+      /// error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -181,6 +183,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+      /// error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -197,6 +201,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+      /// error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -211,6 +217,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+      /// error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -227,6 +235,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+      /// error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

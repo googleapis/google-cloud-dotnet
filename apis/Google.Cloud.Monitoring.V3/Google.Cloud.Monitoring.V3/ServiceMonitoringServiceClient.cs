@@ -633,11 +633,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent workspace.
+        /// Required. Resource name of the parent workspace.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="service">
-        /// The `Service` to create.
+        /// Required. The `Service` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -660,11 +660,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent workspace.
+        /// Required. Resource name of the parent workspace.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="service">
-        /// The `Service` to create.
+        /// Required. The `Service` to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -684,11 +684,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent workspace.
+        /// Required. Resource name of the parent workspace.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="service">
-        /// The `Service` to create.
+        /// Required. The `Service` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -711,11 +711,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent workspace.
+        /// Required. Resource name of the parent workspace.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="service">
-        /// The `Service` to create.
+        /// Required. The `Service` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -738,11 +738,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent workspace.
+        /// Required. Resource name of the parent workspace.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="service">
-        /// The `Service` to create.
+        /// Required. The `Service` to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -762,11 +762,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent workspace.
+        /// Required. Resource name of the parent workspace.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="service">
-        /// The `Service` to create.
+        /// Required. The `Service` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -845,7 +845,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get the named `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service`.
+        /// Required. Resource name of the `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -867,7 +867,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get the named `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service`.
+        /// Required. Resource name of the `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -886,7 +886,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get the named `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service`.
+        /// Required. Resource name of the `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -908,7 +908,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get the named `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service`.
+        /// Required. Resource name of the `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -930,7 +930,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get the named `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service`.
+        /// Required. Resource name of the `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -949,7 +949,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get the named `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service`.
+        /// Required. Resource name of the `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List `Service`s for this workspace.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Workspace`.
+        /// Required. Resource name of the parent `Workspace`.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1061,7 +1061,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List `Service`s for this workspace.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Workspace`.
+        /// Required. Resource name of the parent `Workspace`.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1095,7 +1095,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List `Service`s for this workspace.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Workspace`.
+        /// Required. Resource name of the parent `Workspace`.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List `Service`s for this workspace.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Workspace`.
+        /// Required. Resource name of the parent `Workspace`.
         /// Of the form `projects/{project_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1201,7 +1201,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Update this `Service`.
         /// </summary>
         /// <param name="service">
-        /// The `Service` to draw updates from.
+        /// Required. The `Service` to draw updates from.
         /// The given `name` specifies the resource to update.
         /// </param>
         /// <param name="callSettings">
@@ -1223,7 +1223,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Update this `Service`.
         /// </summary>
         /// <param name="service">
-        /// The `Service` to draw updates from.
+        /// Required. The `Service` to draw updates from.
         /// The given `name` specifies the resource to update.
         /// </param>
         /// <param name="cancellationToken">
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Update this `Service`.
         /// </summary>
         /// <param name="service">
-        /// The `Service` to draw updates from.
+        /// Required. The `Service` to draw updates from.
         /// The given `name` specifies the resource to update.
         /// </param>
         /// <param name="callSettings">
@@ -1320,8 +1320,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Soft delete this `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service` to delete.
-        /// Of the form `projects/{project_id}/service/{service_id}`.
+        /// Required. Resource name of the `Service` to delete.
+        /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1342,8 +1342,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Soft delete this `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service` to delete.
-        /// Of the form `projects/{project_id}/service/{service_id}`.
+        /// Required. Resource name of the `Service` to delete.
+        /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1361,8 +1361,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Soft delete this `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service` to delete.
-        /// Of the form `projects/{project_id}/service/{service_id}`.
+        /// Required. Resource name of the `Service` to delete.
+        /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1380,8 +1380,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Soft delete this `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service` to delete.
-        /// Of the form `projects/{project_id}/service/{service_id}`.
+        /// Required. Resource name of the `Service` to delete.
+        /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1402,8 +1402,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Soft delete this `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service` to delete.
-        /// Of the form `projects/{project_id}/service/{service_id}`.
+        /// Required. Resource name of the `Service` to delete.
+        /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1421,8 +1421,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Soft delete this `Service`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `Service` to delete.
-        /// Of the form `projects/{project_id}/service/{service_id}`.
+        /// Required. Resource name of the `Service` to delete.
+        /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1493,11 +1493,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `ServiceLevelObjective` for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to create.
+        /// Required. The `ServiceLevelObjective` to create.
         /// The provided `name` will be respected if no `ServiceLevelObjective` exists
         /// with this name.
         /// </param>
@@ -1522,11 +1522,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `ServiceLevelObjective` for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to create.
+        /// Required. The `ServiceLevelObjective` to create.
         /// The provided `name` will be respected if no `ServiceLevelObjective` exists
         /// with this name.
         /// </param>
@@ -1548,11 +1548,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `ServiceLevelObjective` for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to create.
+        /// Required. The `ServiceLevelObjective` to create.
         /// The provided `name` will be respected if no `ServiceLevelObjective` exists
         /// with this name.
         /// </param>
@@ -1577,11 +1577,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `ServiceLevelObjective` for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to create.
+        /// Required. The `ServiceLevelObjective` to create.
         /// The provided `name` will be respected if no `ServiceLevelObjective` exists
         /// with this name.
         /// </param>
@@ -1606,11 +1606,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `ServiceLevelObjective` for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to create.
+        /// Required. The `ServiceLevelObjective` to create.
         /// The provided `name` will be respected if no `ServiceLevelObjective` exists
         /// with this name.
         /// </param>
@@ -1632,11 +1632,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `ServiceLevelObjective` for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to create.
+        /// Required. The `ServiceLevelObjective` to create.
         /// The provided `name` will be respected if no `ServiceLevelObjective` exists
         /// with this name.
         /// </param>
@@ -1717,7 +1717,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to get.
+        /// Required. Resource name of the `ServiceLevelObjective` to get.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -1740,7 +1740,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to get.
+        /// Required. Resource name of the `ServiceLevelObjective` to get.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -1760,7 +1760,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to get.
+        /// Required. Resource name of the `ServiceLevelObjective` to get.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -1783,7 +1783,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to get.
+        /// Required. Resource name of the `ServiceLevelObjective` to get.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -1806,7 +1806,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to get.
+        /// Required. Resource name of the `ServiceLevelObjective` to get.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -1826,7 +1826,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to get.
+        /// Required. Resource name of the `ServiceLevelObjective` to get.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -1905,7 +1905,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1939,7 +1939,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1973,7 +1973,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2007,7 +2007,7 @@ namespace Google.Cloud.Monitoring.V3
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the parent `Service`.
+        /// Required. Resource name of the parent `Service`.
         /// Of the form `projects/{project_id}/services/{service_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2079,7 +2079,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Update the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to draw updates from.
+        /// Required. The `ServiceLevelObjective` to draw updates from.
         /// The given `name` specifies the resource to update.
         /// </param>
         /// <param name="callSettings">
@@ -2101,7 +2101,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Update the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to draw updates from.
+        /// Required. The `ServiceLevelObjective` to draw updates from.
         /// The given `name` specifies the resource to update.
         /// </param>
         /// <param name="cancellationToken">
@@ -2120,7 +2120,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Update the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="serviceLevelObjective">
-        /// The `ServiceLevelObjective` to draw updates from.
+        /// Required. The `ServiceLevelObjective` to draw updates from.
         /// The given `name` specifies the resource to update.
         /// </param>
         /// <param name="callSettings">
@@ -2198,7 +2198,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to delete.
+        /// Required. Resource name of the `ServiceLevelObjective` to delete.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -2221,7 +2221,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to delete.
+        /// Required. Resource name of the `ServiceLevelObjective` to delete.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -2241,7 +2241,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to delete.
+        /// Required. Resource name of the `ServiceLevelObjective` to delete.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -2261,7 +2261,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to delete.
+        /// Required. Resource name of the `ServiceLevelObjective` to delete.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -2284,7 +2284,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to delete.
+        /// Required. Resource name of the `ServiceLevelObjective` to delete.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
@@ -2304,7 +2304,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the `ServiceLevelObjective` to delete.
+        /// Required. Resource name of the `ServiceLevelObjective` to delete.
         /// Of the form
         /// `projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}`.
         /// </param>
