@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Globalization;
+
 namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
@@ -31,6 +33,7 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>The delivery attempt; or <c>null</c> if the subscription does not
         /// have dead-letter queues enabled.</returns>
         public static int? GetDeliveryAttempt(this PubsubMessage msg) =>
-            msg.Attributes.TryGetValue(SubscriberClientImpl.DeliveryAttemptAttrKey, out var value) ? (int?)int.Parse(value) : null;
+            msg.Attributes.TryGetValue(SubscriberClientImpl.DeliveryAttemptAttrKey, out var valueStr) ?
+                int.TryParse(valueStr, NumberStyles.Integer, CultureInfo.InvariantCulture, out var valueInt) ? (int?)valueInt : null : null;
     }
 }
