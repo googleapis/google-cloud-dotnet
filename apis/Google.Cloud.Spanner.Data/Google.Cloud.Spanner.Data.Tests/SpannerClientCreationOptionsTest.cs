@@ -71,6 +71,35 @@ namespace Google.Cloud.Spanner.Data.Tests
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
         }
 
+        [Fact]
+        public void Equality_EmulatorHostAndPort()
+        {
+            // Save existing value of environment variable and set it to the emulator host and port.
+            const string emulatorHostVariable = "SPANNER_EMULATOR_HOST";
+            string emulatorHostAndPort = Environment.GetEnvironmentVariable(emulatorHostVariable);
+            Environment.SetEnvironmentVariable(emulatorHostVariable, "localhost:9010");
+
+            string dataSource = "projects/p1/instances/i1/databases/d1";
+            var builder = new SpannerConnectionStringBuilder { DataSource = dataSource };
+            // Timeout doesn't matter
+            var equalBuilder = new SpannerConnectionStringBuilder($"Data Source={dataSource}; Host = localhost; Port = 9010");
+
+            var options = new SpannerClientCreationOptions(builder);
+            var equalOptions = new SpannerClientCreationOptions(equalBuilder);
+
+            // Set the environment back before creating unequal builders.
+            Environment.SetEnvironmentVariable(emulatorHostVariable, emulatorHostAndPort);
+
+            var unequalBuilders = new[]
+            {
+                new SpannerConnectionStringBuilder { DataSource = dataSource, CredentialFile = "creds.json" },
+                new SpannerConnectionStringBuilder($"Data Source={dataSource}", new ComputeCredential().ToChannelCredentials())
+            };
+            var unequalOptions = unequalBuilders.Select(b => new SpannerClientCreationOptions(b)).ToArray();
+
+            EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
+        }
+
         // Credential tests moved from the previous SpannerConnectionStringBuilder tests
         [Fact]
         public async Task CredentialFile()
