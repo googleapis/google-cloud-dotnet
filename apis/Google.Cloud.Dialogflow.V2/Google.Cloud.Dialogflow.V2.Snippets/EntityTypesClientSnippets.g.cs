@@ -520,29 +520,27 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for UpdateEntityTypeAsync</summary>
         public async Task UpdateEntityTypeAsync2()
         {
-            // Snippet: UpdateEntityTypeAsync(EntityType,string,CallSettings)
-            // Additional: UpdateEntityTypeAsync(EntityType,string,CancellationToken)
+            // Snippet: UpdateEntityTypeAsync(EntityType,CallSettings)
+            // Additional: UpdateEntityTypeAsync(EntityType,CancellationToken)
             // Create client
             EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
             // Initialize request argument(s)
             EntityType entityType = new EntityType();
-            string languageCode = "";
             // Make the request
-            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(entityType, languageCode);
+            EntityType response = await entityTypesClient.UpdateEntityTypeAsync(entityType);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateEntityType</summary>
         public void UpdateEntityType2()
         {
-            // Snippet: UpdateEntityType(EntityType,string,CallSettings)
+            // Snippet: UpdateEntityType(EntityType,CallSettings)
             // Create client
             EntityTypesClient entityTypesClient = EntityTypesClient.Create();
             // Initialize request argument(s)
             EntityType entityType = new EntityType();
-            string languageCode = "";
             // Make the request
-            EntityType response = entityTypesClient.UpdateEntityType(entityType, languageCode);
+            EntityType response = entityTypesClient.UpdateEntityType(entityType);
             // End snippet
         }
 
