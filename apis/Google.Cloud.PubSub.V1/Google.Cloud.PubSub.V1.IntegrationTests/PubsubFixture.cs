@@ -13,9 +13,13 @@
 // limitations under the License.
 
 using Google.Api.Gax.ResourceNames;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.CloudResourceManager.v1;
+using Google.Apis.Services;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.PubSub.V1.IntegrationTests
@@ -29,7 +33,22 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         public PubsubFixture()
         {
             GrpcInfo.EnableSubchannelCounting();
+            _projectNumber = new Lazy<Task<string>>(async () =>
+            {
+                var cred = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                cred = cred.CreateScoped(CloudResourceManagerService.Scope.CloudPlatformReadOnly);
+                var crm = new CloudResourceManagerService(new BaseClientService.Initializer
+                {
+                    HttpClientInitializer = cred,
+                    ApplicationName = "pubsub integration test",
+                });
+                var project = await crm.Projects.Get(ProjectId).ExecuteAsync().ConfigureAwait(false);
+                return project.ProjectNumber.ToString();
+            });
         }
+
+        private Lazy<Task<string>> _projectNumber;
+        internal Task<string> GetProjectNumberAsync() => _projectNumber.Value;
 
         internal string CreateTopicId() => IdGenerator.FromGuid(prefix: TopicPrefix);
 
