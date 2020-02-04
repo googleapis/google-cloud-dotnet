@@ -83,7 +83,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder { DataSource = dataSource, EmulatorDetection = EmulatorDetection.EmulatorOnly };
             var options = new SpannerClientCreationOptions(builder);
 
-            // Timeout doesn't matter
             var equalBuilder = new SpannerConnectionStringBuilder($"Data Source={dataSource}; Host = localhost; Port = 9010", Grpc.Core.ChannelCredentials.Insecure);
             var equalOptions = new SpannerClientCreationOptions(equalBuilder);
 
