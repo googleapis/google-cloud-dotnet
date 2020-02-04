@@ -80,15 +80,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             Environment.SetEnvironmentVariable(emulatorHostVariable, "localhost:9010");
 
             string dataSource = "projects/p1/instances/i1/databases/d1";
-            var builder = new SpannerConnectionStringBuilder { DataSource = dataSource };
-            // Timeout doesn't matter
-            var equalBuilder = new SpannerConnectionStringBuilder($"Data Source={dataSource}; Host = localhost; Port = 9010");
-
+            var builder = new SpannerConnectionStringBuilder { DataSource = dataSource, EmulatorDetection = EmulatorDetection.EmulatorOnly };
             var options = new SpannerClientCreationOptions(builder);
-            var equalOptions = new SpannerClientCreationOptions(equalBuilder);
 
-            // Set the environment back before creating unequal builders.
-            Environment.SetEnvironmentVariable(emulatorHostVariable, emulatorHostAndPort);
+            // Timeout doesn't matter
+            var equalBuilder = new SpannerConnectionStringBuilder($"Data Source={dataSource}; Host = localhost; Port = 9010", Grpc.Core.ChannelCredentials.Insecure);
+            var equalOptions = new SpannerClientCreationOptions(equalBuilder);
 
             var unequalBuilders = new[]
             {
@@ -98,6 +95,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var unequalOptions = unequalBuilders.Select(b => new SpannerClientCreationOptions(b)).ToArray();
 
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
+
+            // Set the environment back.
+            Environment.SetEnvironmentVariable(emulatorHostVariable, emulatorHostAndPort);
         }
 
         // Credential tests moved from the previous SpannerConnectionStringBuilder tests

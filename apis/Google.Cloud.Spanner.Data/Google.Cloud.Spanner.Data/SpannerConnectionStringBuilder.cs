@@ -55,8 +55,7 @@ namespace Google.Cloud.Spanner.Data
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
-        private string _emulatorHost;
-        private Int32 _emulatorPort;
+        private EmulatorDetection _emulatorDection;
 
         /// <summary>
         /// Optional path to a JSON Credential file. If a Credential is not supplied, Cloud Spanner
@@ -142,33 +141,73 @@ namespace Google.Cloud.Spanner.Data
             return dataSource;
         }
 
-        // Parse the emulator host and port if the SPANNER_EMULATOR_HOST environment variable is set.
-        private void ParseEmulatorHostAndPort()
+        /// <summary>
+        /// Specifies how the builder responds to the presence of SPANNER_EMULATOR_HOST emulator environment variable.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that the environment variable is
+        /// ignored.
+        /// </remarks>
+        public EmulatorDetection EmulatorDetection
         {
-            // Emulator host and port have already been parsed.
-            if (!string.IsNullOrEmpty(_emulatorHost))
+            get => _emulatorDection;
+            set
+            {
+                _emulatorDection = GaxPreconditions.CheckEnumValue(value, nameof(value));
+                ApplyEmulatorSettings();
+            }
+        }
+
+        // Parse the emulator host and port if the SPANNER_EMULATOR_HOST environment variable is set.
+        private void ApplyEmulatorSettings()
+        {
+            if (EmulatorDetection == EmulatorDetection.None)
             {
                 return;
             }
 
             // Note: we treat present-but-empty environment variables as if they were absent.
-            string emulatorHostAndPort = Environment.GetEnvironmentVariable(EmulatorHostVariable)?.Trim() ?? "";
-
-            // Emulator host env variable was not set.
-            if (string.IsNullOrEmpty(emulatorHostAndPort))
-            {
-                return;
-            }
+            string hostAndPort = Environment.GetEnvironmentVariable(EmulatorHostVariable)?.Trim() ?? "";
 
             // For the moment, translate IP v6 representation of localhost. (ServiceEndpoint doesn't support IPv6 yet.)
-            if (emulatorHostAndPort.StartsWith("::1:"))
+            if (hostAndPort.StartsWith("::1:"))
             {
-                emulatorHostAndPort = $"localhost:{emulatorHostAndPort.Substring(4)}";
+                hostAndPort = $"localhost:{hostAndPort.Substring(4)}";
             }
 
-            var endpoint = ServiceEndpoint.Parse(emulatorHostAndPort);
-            _emulatorHost = endpoint.Host;
-            _emulatorPort = endpoint.Port;
+            var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : ServiceEndpoint.Parse(hostAndPort);
+
+            // Possibly return early or fail, based on whether or not we've got an endpoint.
+            switch (EmulatorDetection)
+            {
+                case EmulatorDetection.ProductionOnly:
+                    GaxPreconditions.CheckState(endpoint == null,
+                        "Emulator environment variable is set, contrary to use of {0}.{1}",
+                        nameof(EmulatorDetection), nameof(EmulatorDetection.ProductionOnly));
+                    return;
+                case EmulatorDetection.EmulatorOnly:
+                    GaxPreconditions.CheckState(
+                        endpoint != null,
+                        "Expected {0} environment variable to be set", EmulatorHostVariable);
+                    break;
+                case EmulatorDetection.ProductionOrEmulator:
+                    if (endpoint == null)
+                    {
+                        return;
+                    }
+                    break;
+            }
+
+            // Check the user hasn't specified anything they shouldn't.
+            GaxPreconditions.CheckState(Host == SpannerClient.DefaultEndpoint.Host, "{0} should not be set when connecting to an emulator", nameof(Host));
+            GaxPreconditions.CheckState(Port == SpannerClient.DefaultEndpoint.Port, "{0} should not be set when connecting to an emulator", nameof(Port));
+            GaxPreconditions.CheckState(CredentialFile == "", "{0} should not be set when connecting to an emulator", nameof(CredentialFile));
+            GaxPreconditions.CheckState(CredentialOverride == null, "{0} should not be set when connecting to an emulator", nameof(CredentialOverride));
+
+            // Set the endpoint, channel credentials and header mutation.
+            Host = endpoint.Host;
+            Port = endpoint.Port;
+            CredentialOverride = Grpc.Core.ChannelCredentials.Insecure;
         }
 
         // Note: EndPoint rather than Endpoint to avoid an unnecessary breaking change from V1.
@@ -181,37 +220,21 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
-        /// host will be used. If the SPANNER_EMULATOR_HOST environment variable is set, the host specified
-        /// in its value will be used as the default host.
+        /// host will be used.
         /// </summary>
         public string Host
         {
-            get
-            {
-                if (ContainsKey(nameof(Host)))
-                {
-                    return (string)this[nameof(Host)];
-                }
-
-                ParseEmulatorHostAndPort();
-                return _emulatorHost ?? SpannerClient.DefaultEndpoint.Host;
-            }
+            get => GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
             set => this[nameof(Host)] = value;
         }
 
         /// <summary>
         /// The TCP port number to connect to Spanner. If not supplied in the connection string, the default
-        /// port will be used.  If the SPANNER_EMULATOR_HOST environment variable is set, the port specified
-        /// in the value will be used as the default port.
+        /// port will be used.
         /// </summary>
         public int Port
         {
-            get
-            {
-                ParseEmulatorHostAndPort();
-                return GetInt32OrDefault(nameof(Port), 1, 65535,
-                    (string.IsNullOrEmpty(_emulatorHost)) ? SpannerClient.DefaultEndpoint.Port : _emulatorPort);
-            }
+            get => GetInt32OrDefault(nameof(Port), 1, 65535, SpannerClient.DefaultEndpoint.Port);
             set => SetInt32WithValidation(nameof(Port), 1, 65535, value);
         }
 
@@ -332,7 +355,7 @@ namespace Google.Cloud.Spanner.Data
             set => SetInt32WithValidation(nameof(Timeout), 0, int.MaxValue, value);
         }
 
-        internal ChannelCredentials CredentialOverride { get; }
+        internal ChannelCredentials CredentialOverride { get; set; }
 
         private SessionPoolManager _sessionPoolManager = SessionPoolManager.Default;
 
@@ -383,19 +406,14 @@ namespace Google.Cloud.Spanner.Data
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager)
         {
             ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
-            // If SPANNER_EMULATOR_HOST env var is set, ignore any provided credentials and use insecure credentials.
-            ParseEmulatorHostAndPort();
-            CredentialOverride = string.IsNullOrEmpty(_emulatorHost) ? credentials : ChannelCredentials.Insecure;
+            CredentialOverride = credentials;
             SessionPoolManager = GaxPreconditions.CheckNotNull(sessionPoolManager, nameof(sessionPoolManager));
         }
 
         /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/>.
         /// </summary>
-        public SpannerConnectionStringBuilder() : this("")
-        {
-            // Ensure the constructor is called that sets the credentials based on the emulator environment variable.
-        }
+        public SpannerConnectionStringBuilder() { }
 
 
         internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager);
