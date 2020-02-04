@@ -407,7 +407,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateEntityTypeRequest expectedRequest = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
-                LanguageCode = "languageCode-412800396",
             };
             EntityType expectedResponse = new EntityType
             {
@@ -419,8 +418,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 .Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
             EntityType entityType = new EntityType();
-            string languageCode = "languageCode-412800396";
-            EntityType response = client.UpdateEntityType(entityType, languageCode);
+            EntityType response = client.UpdateEntityType(entityType);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -434,7 +432,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateEntityTypeRequest expectedRequest = new UpdateEntityTypeRequest
             {
                 EntityType = new EntityType(),
-                LanguageCode = "languageCode-412800396",
             };
             EntityType expectedResponse = new EntityType
             {
@@ -446,8 +443,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<EntityType>(Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
             EntityType entityType = new EntityType();
-            string languageCode = "languageCode-412800396";
-            EntityType response = await client.UpdateEntityTypeAsync(entityType, languageCode);
+            EntityType response = await client.UpdateEntityTypeAsync(entityType);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
