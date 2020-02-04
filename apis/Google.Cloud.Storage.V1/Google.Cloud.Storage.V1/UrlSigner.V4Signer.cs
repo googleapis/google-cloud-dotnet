@@ -32,7 +32,6 @@ namespace Google.Cloud.Storage.V1
         {
             private const string ScopeSuffix = "storage/goog4_request";
             private const string DefaultRegion = "auto";
-            private const string HostHeaderValue = "storage.googleapis.com";
             private const string Algorithm = "GOOG4-RSA-SHA256";
 
             private static readonly int MaxExpirySecondsInclusive = (int) TimeSpan.FromDays(7).TotalSeconds;
@@ -68,9 +67,20 @@ namespace Google.Cloud.Storage.V1
                 private string _resourcePath;
                 private string _canonicalQueryString;
                 internal byte[] _blobToSign;
+                private string _scheme;
+                private string _host;
 
                 internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
                 {
+                    (_host, _resourcePath) = options.UrlStyle switch
+                    {
+                        UrlStyle.PathStyle => (StorageHost, $"/{template.Bucket}"),
+                        UrlStyle.VirtualHostedStyle => ($"{template.Bucket}.{StorageHost}", string.Empty),
+                        UrlStyle.BucketBoundHostname => (options.BucketBoundHostname, string.Empty),
+                        _ => throw new ArgumentOutOfRangeException(nameof(options.UrlStyle))
+                    };
+
+                    _scheme = options.Scheme;
                     options = options.ToExpiration(clock);
 
                     var now = clock.GetCurrentDateTimeUtc();
@@ -91,30 +101,29 @@ namespace Google.Cloud.Storage.V1
                     string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
-                    headers.AddHeader("host", HostHeaderValue);
+                    headers.AddHeader("host", _host);
                     headers.AddHeaders(template.RequestHeaders);
                     headers.AddHeaders(template.ContentHeaders);
                     var canonicalHeaders = string.Join("", headers.Select(pair => $"{pair.Key}:{pair.Value}\n"));
                     var signedHeaders = string.Join(";", headers.Keys.Select(k => k.ToLowerInvariant()));
 
-                    var queryParameters = new SortedDictionary<string, string>(StringComparer.Ordinal)
-                    {
-                        { "X-Goog-Algorithm", Algorithm },
-                        { "X-Goog-Credential", $"{blobSigner.Id}/{credentialScope}" },
-                        { "X-Goog-Date", timestamp },
-                        { "X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture) },
-                        { "X-Goog-SignedHeaders", signedHeaders }
-                    };
+                    var queryParameters = new SortedSet<string>(StringComparer.Ordinal);
+                    queryParameters.AddQueryParameter("X-Goog-Algorithm", Algorithm);
+                    queryParameters.AddQueryParameter("X-Goog-Credential", $"{blobSigner.Id}/{credentialScope}");
+                    queryParameters.AddQueryParameter("X-Goog-Date", timestamp);
+                    queryParameters.AddQueryParameter("X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture));
+                    queryParameters.AddQueryParameter("X-Goog-SignedHeaders", signedHeaders);
 
                     var effectiveRequestMethod = template.HttpMethod;
                     if (effectiveRequestMethod == ResumableHttpMethod)
                     {
                         effectiveRequestMethod = HttpMethod.Post;
-                        queryParameters["X-Goog-Resumable"] ="Start";
+                        queryParameters.AddQueryParameter("X-Goog-Resumable", "Start");
                     }
 
-                    _canonicalQueryString = string.Join("&", queryParameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
-                    _resourcePath = $"/{template.Bucket}";
+                    queryParameters.AddQueryParameters(template.QueryParameters);
+
+                    _canonicalQueryString = string.Join("&", queryParameters);
                     if (!string.IsNullOrEmpty(template.ObjectName))
                     {
                         // EscapeDataString escapes slashes, which we *don't* want to escape here. The simplest option is to
@@ -124,7 +133,15 @@ namespace Google.Cloud.Storage.V1
                         _resourcePath = _resourcePath + "/" + escaped;
                     }
 
-                    var canonicalRequest = $"{effectiveRequestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
+                    string payloadHash = "UNSIGNED-PAYLOAD";
+                    var payloadHashHeader = headers.Where(
+                        header => header.Key.Equals("X-Goog-Content-SHA256", StringComparison.OrdinalIgnoreCase)).ToList();
+                    if (payloadHashHeader.Count == 1)
+                    {
+                        payloadHash = payloadHashHeader[0].Value;
+                    }
+
+                    var canonicalRequest = $"{effectiveRequestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\n{payloadHash}";
 
                     string hashHex;
                     using (var sha256 = SHA256.Create())
@@ -136,7 +153,7 @@ namespace Google.Cloud.Storage.V1
                 }
 
                 internal string GetResult(string signature) =>
-                    $"{StorageHost}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
+                    $"{_scheme}://{_host}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
             }
 
             private const string HexCharacters = "0123456789abcdef";

@@ -108,6 +108,70 @@ namespace Google.Cloud.Storage.V1.Tests
                 var url = await signer.SignAsync(baseRequestTemplate, options);
                 Assert.Equal("https://storage.googleapis.com/bucket-name/object-name?GoogleAccessId=FakeId&Expires=30&Signature=BBB%3D", url);
             }
+
+            [Fact]
+            public async Task ThrowsIfQueryParametersSpecified()
+            {
+                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var requestTemplate = RequestTemplate
+                    .FromBucket("bucket-name")
+                    .WithObjectName("object-name")
+                    .WithQueryParameters(
+                    new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "param1", new string[] { "value1" } }
+                    });
+                var options = Options
+                    .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
+                    .WithSigningVersion(SigningVersion.V2);
+
+                Assert.Throws<ArgumentException>(() => signer.Sign(requestTemplate, options));
+                await Assert.ThrowsAsync<ArgumentException>(() => signer.SignAsync(requestTemplate, options));
+            }
+
+            [Fact]
+            public void WithHttpScheme()
+            {
+                var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
+                var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc))
+                    .WithSigningVersion(SigningVersion.V2)
+                    .WithScheme("http");
+
+                var url = signer.Sign(baseRequestTemplate, options);
+                Assert.Equal("http://storage.googleapis.com/bucket-name/object-name?GoogleAccessId=FakeId&Expires=30&Signature=AAA%3D", url);
+            }
+
+            [Fact]
+            public void WithVirtualHostedStyle()
+            {
+                var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
+                var requestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc))
+                    .WithSigningVersion(SigningVersion.V2)
+                    .WithUrlStyle(UrlStyle.VirtualHostedStyle);
+
+                var url = signer.Sign(requestTemplate, options);
+                Assert.Equal("https://bucket-name.storage.googleapis.com/object-name?GoogleAccessId=FakeId&Expires=30&Signature=AAA%3D", url);
+            }
+
+            [Fact]
+            public async Task ThrowsIfBucketBoundHostSpecified()
+            {
+                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var requestTemplate = RequestTemplate
+                    .FromBucket("bucket-name")
+                    .WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
+                    .WithSigningVersion(SigningVersion.V2)
+                    .WithBucketBoundHostname("my.bucket.domain");
+
+                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign(requestTemplate, options));
+                await Assert.ThrowsAsync<ArgumentOutOfRangeException>(() => signer.SignAsync(requestTemplate, options));
+            }
         }
     }
 }

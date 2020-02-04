@@ -32,11 +32,11 @@ namespace Google.Cloud.Storage.V1
     /// </remarks>
     public sealed partial class UrlSigner
     {
+        private const string StorageHost = "storage.googleapis.com";
         private static readonly ISigner s_v2Signer = new V2Signer();
         private static readonly ISigner s_v4Signer = new V4Signer();
 
         private const string GoogHeaderPrefix = "x-goog-";
-        private const string StorageHost = "https://storage.googleapis.com";
 
         /// <summary>
         /// Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
@@ -255,32 +255,35 @@ namespace Google.Cloud.Storage.V1
             GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).SignAsync(
                 GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate)), options, _blobSigner, _clock, cancellationToken);
 
-        private ISigner GetEffectiveSigner(SigningVersion signingVersion)
-        {
-            switch (signingVersion)
+        private ISigner GetEffectiveSigner(SigningVersion signingVersion) =>
+            signingVersion switch
             {
-                case SigningVersion.Default:
-                    return s_v2Signer;
-                case SigningVersion.V2:
-                    return s_v2Signer;
-                case SigningVersion.V4:
-                    return s_v4Signer;
-                default:
-                    // We really shouldn't get here, as we validate any user-specified signing version.
-                    throw new InvalidOperationException($"Invalid signing version: {signingVersion}");
-            }
-        }
+                SigningVersion.Default => s_v4Signer,
+                SigningVersion.V2 => s_v2Signer,
+                SigningVersion.V4 => s_v4Signer,
+                // We really shouldn't get here, as we validate any user-specified signing version.
+                _ => throw new InvalidOperationException($"Invalid signing version: {signingVersion}")
+            };
 
         private static readonly Regex s_newlineRegex = new Regex(@"\r?\n", RegexOptions.Compiled);
+        private static readonly Regex s_tabRegex = new Regex(@"\t+", RegexOptions.Compiled);
         private static readonly Regex s_whitespaceRegex = new Regex(@"\s+", RegexOptions.Compiled);
 
         /// <summary>
         /// Prepares a header value for signing, trimming both ends and collapsing internal whitespace.
         /// </summary>
-        internal static string PrepareHeaderValue(string value)
+        internal static string PrepareHeaderValue(string value, bool collapseTabs)
         {
             // Remove leading/trailing whitespace
             value = value.Trim();
+
+            if (collapseTabs)
+            {
+                // Replaces all consecutive tabs by a space.
+                // If consecutive spaces result out of this, then the next line will
+                // collapse all the spaces.
+                value = s_tabRegex.Replace(value, " ");
+            }
 
             // Collapse whitespace runs: only keep the last character
             value = s_whitespaceRegex.Replace(value, match => match.Value[match.Value.Length - 1].ToString());

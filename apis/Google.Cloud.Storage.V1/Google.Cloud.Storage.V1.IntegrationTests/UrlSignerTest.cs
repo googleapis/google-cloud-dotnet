@@ -266,6 +266,58 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 caller);
         }
 
+        private static void GetWithVirtualHostedStyleTest_Common(StorageFixture fixture, SigningVersion signingVersion, [CallerMemberName] string caller = null)
+        {
+            string url = null;
+
+            fixture.RegisterDelayTest(
+                s_duration,
+                beforeDelay: async duration =>
+                {
+                    url = fixture.UrlSigner.Sign(
+                        RequestTemplate.FromBucket(fixture.ReadBucket).WithObjectName(fixture.SmallObject),
+                        Options.FromDuration(duration).WithSigningVersion(signingVersion).WithUrlStyle(UrlStyle.VirtualHostedStyle));
+
+                    // Verify that the URL works initially.
+                    var response = await fixture.HttpClient.GetAsync(url);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    AssertContentEqual(fixture.SmallContent, result);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await fixture.HttpClient.GetAsync(url);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                },
+                caller);
+        }
+
+        private static void GetWithHttpTest_Common(StorageFixture fixture, SigningVersion signingVersion, [CallerMemberName] string caller = null)
+        {
+            string url = null;
+
+            fixture.RegisterDelayTest(
+                s_duration,
+                beforeDelay: async duration =>
+                {
+                    url = fixture.UrlSigner.Sign(
+                        RequestTemplate.FromBucket(fixture.ReadBucket).WithObjectName(fixture.SmallObject),
+                        Options.FromDuration(duration).WithSigningVersion(signingVersion).WithScheme("http"));
+
+                    // Verify that the URL works initially.
+                    var response = await fixture.HttpClient.GetAsync(url);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    AssertContentEqual(fixture.SmallContent, result);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await fixture.HttpClient.GetAsync(url);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                },
+                caller);
+        }
+
         private static void HeadTest_Common(StorageFixture fixture, SigningVersion signingVersion, [CallerMemberName] string caller = null)
         {
             Func<HttpRequestMessage> createRequest = null;

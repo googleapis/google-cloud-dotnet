@@ -59,6 +59,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             private void GetWithCustomHeadersTest_InitDelayTest() => GetWithCustomHeadersTest_Common(_fixture, SigningVersion.V4);
 
             [Fact]
+            public async Task GetWithVirtualHostedStyleTest() => await _fixture.FinishDelayTest(GetTestName());
+            private void GetWithVirtualHostedStyleTest_InitDelayTest() => GetWithVirtualHostedStyleTest_Common(_fixture, SigningVersion.V4);
+
+            [Fact]
+            public async Task GetWithHttpTest() => await _fixture.FinishDelayTest(GetTestName());
+            private void GetWithHttpTest_InitDelayTest() => GetWithHttpTest_Common(_fixture, SigningVersion.V4);
+
+            [Fact]
             public async Task HeadTest() => await _fixture.FinishDelayTest(GetTestName());
             private void HeadTest_InitDelayTest() => HeadTest_Common(_fixture, SigningVersion.V4);
 
