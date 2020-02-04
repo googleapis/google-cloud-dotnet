@@ -207,15 +207,24 @@ namespace Google.Cloud.Storage.V1
         }
 
         private static readonly Regex s_newlineRegex = new Regex(@"\r?\n", RegexOptions.Compiled);
+        private static readonly Regex s_tabRegex = new Regex(@"\t+", RegexOptions.Compiled);
         private static readonly Regex s_whitespaceRegex = new Regex(@"\s+", RegexOptions.Compiled);
 
         /// <summary>
         /// Prepares a header value for signing, trimming both ends and collapsing internal whitespace.
         /// </summary>
-        private static string PrepareHeaderValue(string value)
+        private static string PrepareHeaderValue(string value, bool collapseTabs)
         {
             // Remove leading/trailing whitespace
             value = value.Trim();
+
+            if (collapseTabs)
+            {
+                // Replaces all consecutive tabs by a space.
+                // If consecutive spaces result out of this, then the next line will
+                // collapse all the spaces.
+                value = s_tabRegex.Replace(value, " ");
+            }
 
             // Collapse whitespace runs: only keep the last character
             value = s_whitespaceRegex.Replace(value, match => match.Value[match.Value.Length - 1].ToString());

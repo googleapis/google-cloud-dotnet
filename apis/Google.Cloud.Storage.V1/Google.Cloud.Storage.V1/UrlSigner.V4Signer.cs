@@ -183,7 +183,7 @@ namespace Google.Cloud.Storage.V1
                             // but HttpClient coalesces the values itself. This approach means that if the same request is made from .NET
                             // with the signed URL, it will succeed - but it does mean that the signed URL won't be valid when used from
                             // another platform that sends actual multiple values.
-                            var value = string.Join(", ", pair.Value.Select(PrepareHeaderValue)).Trim();
+                            var value = string.Join(", ", pair.Value.Select(v => PrepareHeaderValue(v, true))).Trim();
                             if (canonicalized.TryGetValue(headerName, out var existingValue))
                             {
                                 value = $"{existingValue}, {value}";

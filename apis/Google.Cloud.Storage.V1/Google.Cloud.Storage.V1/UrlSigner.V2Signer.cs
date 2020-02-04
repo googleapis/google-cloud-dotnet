@@ -119,7 +119,7 @@ namespace Google.Cloud.Storage.V1
                         values.Append(',');
                     }
 
-                    values.Append(string.Join(", ", header.Value.Select(PrepareHeaderValue)));
+                    values.Append(string.Join(", ", header.Value.Select(v => PrepareHeaderValue(v, false))));
                 }
             }
 
