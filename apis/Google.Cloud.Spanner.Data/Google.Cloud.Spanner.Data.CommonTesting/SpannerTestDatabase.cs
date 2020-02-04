@@ -81,7 +81,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             var builder = new SpannerConnectionStringBuilder
             {
                 Host = SpannerHost,
-                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}"
+                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}",
+                EmulatorDetection = EmulatorDetection.ProductionOrEmulator
             };
             if (SpannerPort != null)
             {
