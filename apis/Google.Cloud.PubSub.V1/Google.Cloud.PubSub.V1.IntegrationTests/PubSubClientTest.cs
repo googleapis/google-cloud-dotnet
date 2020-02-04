@@ -467,7 +467,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Assert.Equal(7, subchannelsCreated);
         }
 
-        [Fact]
+        // TODO: Enable this test by end of Feb 2020, once feature is no longer whitelisted.
+        [Fact(Skip = "Feature behind whitelist; recommended not to whitelist CI GCP project due to possible pre-GA unreliability")]
         public async Task DeadLetterQueueAndDeliveryAttempt()
         {
             // Construct the pubsub service account name. This is required for setting IAM permissions.
@@ -487,6 +488,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(dlqTopicName).ConfigureAwait(false);
+            // Allow pubsub-managed service account to publish to the DLQ topic.
             await publisherApi.SetIamPolicyAsync(dlqTopicName.ToString(), new Iam.V1.Policy
             {
                 Bindings =
@@ -513,6 +515,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 },
                 AckDeadlineSeconds = 60,
             }).ConfigureAwait(false);
+            // Allow pubsub-managed service account to ACK message in subscription (so it won't be sent to client again).
             await subscriberApi.SetIamPolicyAsync(subscriptionName.ToString(), new Iam.V1.Policy
             {
                 Bindings =
