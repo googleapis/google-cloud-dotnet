@@ -48,8 +48,24 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
                 .FromBucket(test.Bucket)
                 .WithObjectName(test.Object)
                 .WithHttpMethod(s_methods[test.Method])
-                .WithRequestHeaders(test.Headers.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)));
-            var options = Options.FromDuration(TimeSpan.FromSeconds(test.Expiration)).WithSigningVersion(SigningVersion.V4);
+                .WithRequestHeaders(test.Headers.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)))
+                .WithQueryParameters(test.QueryParameters.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)));
+            var options = Options
+                .FromDuration(TimeSpan.FromSeconds(test.Expiration))
+                .WithSigningVersion(SigningVersion.V4)
+                .WithScheme(test.Scheme);
+
+            switch (test.UrlStyle)
+            {
+                case UrlStyle.VirtualHostedStyle:
+                    options = options.WithUrlStyle(UrlSigner.UrlStyle.VirtualHostedStyle);
+                    break;
+                case UrlStyle.BucketBoundHostname:
+                    options = options.WithBucketBoundHostname(test.BucketBoundHostname);
+                    break;
+                default:
+                    break;
+            }
 
             var actualUrl = signer.Sign(requestTemplate, options);
 

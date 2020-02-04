@@ -101,7 +101,7 @@ namespace Google.Cloud.Storage.V1
                         values.Append(',');
                     }
 
-                    values.Append(string.Join(", ", header.Value.Select(PrepareHeaderValue)));
+                    values.Append(string.Join(", ", header.Value.Select(v => PrepareHeaderValue(v, false))));
                 }
             }
 
@@ -121,19 +121,39 @@ namespace Google.Cloud.Storage.V1
             /// </summary>
             private struct SigningState
             {
-                private string _resourcePath;
+                private string _scheme;
+                private string _host;
+                private string _urlResourcePath;
                 private List<string> _queryParameters;
                 internal byte[] _blobToSign;
 
                 internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
                 {
-                    options = options.ToExpiration(clock);
+                    GaxPreconditions.CheckArgument(
+                        template.QueryParameters.Count == 0,
+                        nameof(template.QueryParameters),
+                        $"When using {nameof(SigningVersion.V2)} custom query parematers are not included as part of the signature so none should be specified.");
 
+                    (_host, _urlResourcePath) = options.UrlStyle switch
+                    {
+                        UrlStyle.PathStyle => (StorageHost, $"/{template.Bucket}"),
+                        UrlStyle.VirtualHostedStyle => ($"{template.Bucket}.{StorageHost}", string.Empty),
+                        _ => throw new ArgumentOutOfRangeException(
+                            nameof(options.UrlStyle),
+                            $"When using {nameof(SigningVersion.V2)} only {nameof(UrlStyle.PathStyle)} or {nameof(UrlStyle.VirtualHostedStyle)} can be specified.")
+                    };
+
+                    _scheme = options.Scheme;
+
+                    options = options.ToExpiration(clock);
                     string expiryUnixSeconds = ((int) (options.Expiration.Value - UnixEpoch).TotalSeconds).ToString(CultureInfo.InvariantCulture);
-                    _resourcePath = $"/{template.Bucket}";
+
+                    string signingResourcePath = $"/{template.Bucket}";
                     if (template.ObjectName != null)
                     {
-                        _resourcePath += $"/{Uri.EscapeDataString(template.ObjectName)}";
+                        string escaped = Uri.EscapeDataString(template.ObjectName);
+                        _urlResourcePath += $"/{escaped}";
+                        signingResourcePath += $"/{escaped}";
                     }
 
                     var extensionHeaders = GetExtensionHeaders(template.RequestHeaders, template.ContentHeaders);
@@ -156,7 +176,7 @@ namespace Google.Cloud.Storage.V1
                     };
                     signatureLines.AddRange(extensionHeaders.Select(
                         header => $"{header.Key}:{string.Join(", ", header.Value)}"));
-                    signatureLines.Add(_resourcePath);
+                    signatureLines.Add(signingResourcePath);
                     _blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
                     _queryParameters = new List<string> { $"GoogleAccessId={blobSigner.Id}" };
                     if (expiryUnixSeconds != null)
@@ -168,7 +188,7 @@ namespace Google.Cloud.Storage.V1
                 internal string GetResult(string signature)
                 {
                     _queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
-                    return $"{StorageHost}{_resourcePath}?{string.Join("&", _queryParameters)}";
+                    return $"{_scheme}://{_host}{_urlResourcePath}?{string.Join("&", _queryParameters)}";
                 }
             }
         }

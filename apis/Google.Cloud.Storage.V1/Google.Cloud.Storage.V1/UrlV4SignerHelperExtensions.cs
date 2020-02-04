@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -29,6 +30,31 @@ namespace Google.Cloud.Storage.V1
                 headers.ToDictionary(
                     h => h.Key,
                     h => (IReadOnlyCollection<string>)h.Value.ToList().AsReadOnly()));
+        internal static IReadOnlyDictionary<string, IReadOnlyCollection<string>> QueryAsReadOnly(this Uri uri)
+        {
+            // Query property is only valid for absolute Uris.
+            // It will include the leading question mark.
+            if (uri == null || !uri.IsAbsoluteUri || string.IsNullOrEmpty(uri.Query) || uri.Query.Length == 1)
+            {
+                return s_empty;
+            }
+            string noQuestionMark = uri.Query.Substring(1);
+            // The query will be encoded so we can safely split on '&' and '='.
+            string[] entries = noQuestionMark.Split('&');
+            Dictionary<string, List<string>> queryDictionary = new Dictionary<string, List<string>>();
+            foreach (string entry in entries)
+            {
+                string[] keyAndValue = entry.Split('=');
+                if (!queryDictionary.TryGetValue(keyAndValue[0], out List<string> values))
+                {
+                    values = new List<string>();
+                    queryDictionary.Add(keyAndValue[0], values);
+                }
+                values.Add(keyAndValue[1]);
+            }
+            return new ReadOnlyDictionary<string, IReadOnlyCollection<string>>(
+                queryDictionary.ToDictionary(pair => pair.Key, pair => (IReadOnlyCollection<string>)pair.Value.AsReadOnly()));
+        }
 
         internal static void AddHeader(this SortedDictionary<string, string> canonicalized, string key, string value)
         {
@@ -42,7 +68,7 @@ namespace Google.Cloud.Storage.V1
             // but HttpClient coalesces the values itself. This approach means that if the same request is made from .NET
             // with the signed URL, it will succeed - but it does mean that the signed URL won't be valid when used from
             // another platform that sends actual multiple values.
-            var headerValue = UrlSigner.PrepareHeaderValue(value).Trim();
+            var headerValue = UrlSigner.PrepareHeaderValue(value, true).Trim();
             if (canonicalized.TryGetValue(headerName, out var existingValue))
             {
                 headerValue = $"{existingValue}, {headerValue}";
@@ -68,12 +94,38 @@ namespace Google.Cloud.Storage.V1
                 // but HttpClient coalesces the values itself. This approach means that if the same request is made from .NET
                 // with the signed URL, it will succeed - but it does mean that the signed URL won't be valid when used from
                 // another platform that sends actual multiple values.
-                var value = string.Join(", ", pair.Value.Select(v => UrlSigner.PrepareHeaderValue(v))).Trim();
+                var value = string.Join(", ", pair.Value.Select(v => UrlSigner.PrepareHeaderValue(v, true))).Trim();
                 if (canonicalized.TryGetValue(headerName, out var existingValue))
                 {
                     value = $"{existingValue}, {value}";
                 }
                 canonicalized[headerName] = value;
+            }
+        }
+
+        internal static void AddQueryParameter(this SortedSet<string> canonicalized, string key, string value)
+        {
+            if (key == null)
+            {
+                return;
+            }
+            key = Uri.EscapeDataString(key);
+            value = Uri.EscapeDataString(value ?? string.Empty);
+            canonicalized.Add($"{key}={value}");
+        }
+
+        internal static void AddQueryParameters(this SortedSet<string> canonicalized, IReadOnlyDictionary<string, IReadOnlyCollection<string>> paramsToAdd)
+        {
+            if (paramsToAdd == null)
+            {
+                return;
+            }
+            foreach (var parameters in paramsToAdd)
+            {
+                foreach (var parameter in parameters.Value)
+                {
+                    canonicalized.AddQueryParameter(parameters.Key, parameter);
+                }
             }
         }
     }

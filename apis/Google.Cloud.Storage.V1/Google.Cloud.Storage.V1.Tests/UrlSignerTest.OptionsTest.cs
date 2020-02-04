@@ -31,6 +31,9 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Null(options.Expiration);
                 Assert.Equal(TimeSpan.FromMinutes(1), options.Duration);
                 Assert.Equal(SigningVersion.Default, options.SigningVersion);
+                Assert.Equal(UrlStyle.PathStyle, options.UrlStyle);
+                Assert.Equal("https", options.Scheme);
+                Assert.Null(options.BucketBoundHostname);
             }
 
             [Fact]
@@ -43,6 +46,9 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Null(options.Duration);
                 Assert.Equal(now, options.Expiration);
                 Assert.Equal(SigningVersion.Default, options.SigningVersion);
+                Assert.Equal(UrlStyle.PathStyle, options.UrlStyle);
+                Assert.Equal("https", options.Scheme);
+                Assert.Null(options.BucketBoundHostname);
             }
 
             [Fact]
@@ -107,6 +113,71 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 Assert.NotSame(options, newVersion);
                 Assert.Equal(SigningVersion.V4, newVersion.SigningVersion);
+            }
+
+            [Fact]
+            public void WithBucketBoundHost()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newUrlStyle = options.WithBucketBoundHostname("my.bucket.bound.domain");
+
+                Assert.NotSame(options, newUrlStyle);
+                Assert.Equal(UrlStyle.BucketBoundHostname, newUrlStyle.UrlStyle);
+                Assert.Equal("my.bucket.bound.domain", newUrlStyle.BucketBoundHostname);
+            }
+
+            [Fact]
+            public void WithUrlStyle_Valid()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newUrlStyle = options.WithUrlStyle(UrlStyle.VirtualHostedStyle);
+
+                Assert.NotSame(options, newUrlStyle);
+                Assert.Equal(UrlStyle.VirtualHostedStyle, newUrlStyle.UrlStyle);
+                Assert.Null(newUrlStyle.BucketBoundHostname);
+            }
+
+            [Fact]
+            public void WithUrlStyle_BucketBoundHostname()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Throws<ArgumentException>(() => options.WithUrlStyle(UrlStyle.BucketBoundHostname));
+            }
+
+            [Fact]
+            public void WithUrlStyle_FromBucketBoundHostnameToOther()
+            {
+                var options = Options
+                    .FromDuration(TimeSpan.FromMinutes(1))
+                    .WithBucketBoundHostname("my.bucket.bound.domain");
+
+                var newUrlStyle = options.WithUrlStyle(UrlStyle.VirtualHostedStyle);
+
+                Assert.NotSame(options, newUrlStyle);
+                Assert.Equal(UrlStyle.VirtualHostedStyle, newUrlStyle.UrlStyle);
+                Assert.Null(newUrlStyle.BucketBoundHostname);
+            }
+
+            [Fact]
+            public void WithScheme()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newScheme = options.WithScheme("http");
+
+                Assert.NotSame(options, newScheme);
+                Assert.Equal("http", newScheme.Scheme);
+            }
+
+            [Fact]
+            public void WithScheme_InvalidThrows()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Throws<ArgumentException>(() => options.WithScheme("ftp"));
             }
         }
     }
