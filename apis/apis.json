@@ -243,7 +243,7 @@
       "Tools"
     ],
     "dependencies": {
-      "Google.Api.CommonProtos": "2.0.0-alpha00"
+      "Google.Api.CommonProtos": "2.0.0-beta01"
     }
   },
   {
@@ -619,7 +619,7 @@
       "Stackdriver"
     ],
     "dependencies": {
-      "Google.Api.CommonProtos": "2.0.0-alpha00"
+      "Google.Api.CommonProtos": "2.0.0-beta01"
     }
   },
   {
@@ -680,13 +680,13 @@
     "id": "Google.Cloud.OrgPolicy.V1",
     "generator": "proto",
     "protoPath": "google/cloud/orgpolicy/v1",
-    "version": "1.0.0-beta01",
+    "version": "2.0.0-beta01",
     "type": "other",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
     "description": "OrgPolicy API messages.",
     "tags": [ ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.7.0"
+      "Google.Api.CommonProtos": "2.0.0-beta01"
     }
   },
 
@@ -703,7 +703,7 @@
       "Login"
     ],
     "dependencies": {
-      "Google.Api.CommonProtos": "2.0.0-alpha00",
+      "Google.Api.CommonProtos": "2.0.0-beta01",
       "Google.Api.Gax": "default"
     }
   },
