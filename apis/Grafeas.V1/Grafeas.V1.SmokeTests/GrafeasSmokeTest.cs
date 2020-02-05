@@ -38,8 +38,11 @@ namespace Grafeas.V1.SmokeTests
 
             // Create client
             var channelCredential = GoogleCredential.GetApplicationDefault().ToChannelCredentials();
-            var channel = new Channel("containeranalysis.googleapis.com", channelCredential);
-            GrafeasClient client = GrafeasClient.Create(channel);
+            GrafeasClient client = new GrafeasClientBuilder
+            {
+                Endpoint = "containeranalysis.googleapis.com",
+                ChannelCredentials = channelCredential
+            }.Build();
 
             // Call API method
             ProjectName projectName = ProjectName.FromProject(projectId);
