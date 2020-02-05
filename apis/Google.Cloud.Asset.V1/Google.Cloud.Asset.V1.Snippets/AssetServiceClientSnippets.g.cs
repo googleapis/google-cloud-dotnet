@@ -16,6 +16,7 @@
 
 namespace Google.Cloud.Asset.V1.Snippets
 {
+    using Google.Api.Gax;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                Parent = "",
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 ReadTime = new Timestamp(),
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
@@ -69,7 +70,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                Parent = "",
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 ReadTime = new Timestamp(),
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
@@ -105,7 +106,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = "",
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
@@ -125,7 +126,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = "",
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
