@@ -96,7 +96,7 @@ namespace Google.Cloud.Firestore
 
         // We never end up using these methods, at least with the current implementation
         /// <inheritdoc />
-        protected override ServiceEndpoint GetDefaultEndpoint() =>
+        protected override string GetDefaultEndpoint() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
 
         /// <inheritdoc />
@@ -120,13 +120,18 @@ namespace Google.Cloud.Firestore
             // Note: we treat present-but-empty environment variables as if they were absent.
             string hostAndPort = Environment.GetEnvironmentVariable(EmulatorHostVariable)?.Trim() ?? "";
 
-            // For the moment, translate IP v6 representation of localhost. (ServiceEndpoint doesn't support IPv6 yet.)
-            if (hostAndPort.StartsWith("::1:"))
+            // The emulator output includes something like this:
+            // export FIRESTORE_EMULATOR_HOST=::1:8918
+            // We need to translate that into "ipv6:[::1]:8918" for gRPC
+            if (hostAndPort.StartsWith("::"))
             {
-                hostAndPort = $"localhost:{hostAndPort.Substring(4)}";
+                int colonPortIndex = hostAndPort.LastIndexOf(':');
+                string host = hostAndPort.Substring(0, colonPortIndex);
+                string colonPort = hostAndPort.Substring(colonPortIndex);
+                hostAndPort = $"ipv6:[{host}]{colonPort}";
             }
 
-            var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : ServiceEndpoint.Parse(hostAndPort);
+            var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : hostAndPort;
 
             // Possibly return early or fail, based on whether or not we've got an endpoint.
             switch (EmulatorDetection)
