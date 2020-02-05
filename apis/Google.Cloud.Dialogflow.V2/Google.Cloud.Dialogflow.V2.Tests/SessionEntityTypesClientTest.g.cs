@@ -346,7 +346,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteSessionEntityType_ResourceNames()
+        public void DeleteSessionEntityTypeResourceNames()
         {
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
@@ -361,7 +361,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteSessionEntityTypeAsync_ResourceNames()
+        public async stt::Task DeleteSessionEntityTypeResourceNamesAsync()
         {
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest

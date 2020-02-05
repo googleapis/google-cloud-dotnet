@@ -22,7 +22,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     public sealed class GeneratedCompletionClientSnippets
     {
         /// <summary>Snippet for CompleteQuery</summary>
-        public void CompleteQuery_RequestObject()
+        public void CompleteQueryRequestObject()
         {
             // Snippet: CompleteQuery(CompleteQueryRequest, CallSettings)
             // Create client
@@ -44,7 +44,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CompleteQueryAsync</summary>
-        public async Task CompleteQueryAsync_RequestObject()
+        public async Task CompleteQueryRequestObjectAsync()
         {
             // Snippet: CompleteQueryAsync(CompleteQueryRequest, CallSettings)
             // Additional: CompleteQueryAsync(CompleteQueryRequest, CancellationToken)

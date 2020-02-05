@@ -107,7 +107,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void MutateRow1_ResourceNames()
+        public void MutateRow1ResourceNames()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
@@ -125,7 +125,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task MutateRow1Async_ResourceNames()
+        public async stt::Task MutateRow1ResourceNamesAsync()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
@@ -185,7 +185,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void MutateRow2_ResourceNames()
+        public void MutateRow2ResourceNames()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
@@ -204,7 +204,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task MutateRow2Async_ResourceNames()
+        public async stt::Task MutateRow2ResourceNamesAsync()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             MutateRowRequest request = new MutateRowRequest
@@ -323,7 +323,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CheckAndMutateRow1_ResourceNames()
+        public void CheckAndMutateRow1ResourceNames()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
@@ -346,7 +346,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CheckAndMutateRow1Async_ResourceNames()
+        public async stt::Task CheckAndMutateRow1ResourceNamesAsync()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
@@ -421,7 +421,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CheckAndMutateRow2_ResourceNames()
+        public void CheckAndMutateRow2ResourceNames()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
@@ -445,7 +445,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CheckAndMutateRow2Async_ResourceNames()
+        public async stt::Task CheckAndMutateRow2ResourceNamesAsync()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
@@ -561,7 +561,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void ReadModifyWriteRow1_ResourceNames()
+        public void ReadModifyWriteRow1ResourceNames()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
@@ -582,7 +582,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ReadModifyWriteRow1Async_ResourceNames()
+        public async stt::Task ReadModifyWriteRow1ResourceNamesAsync()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
@@ -651,7 +651,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void ReadModifyWriteRow2_ResourceNames()
+        public void ReadModifyWriteRow2ResourceNames()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
@@ -673,7 +673,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ReadModifyWriteRow2Async_ResourceNames()
+        public async stt::Task ReadModifyWriteRow2ResourceNamesAsync()
         {
             moq::Mock<Bigtable.BigtableClient> mockGrpcClient = new moq::Mock<Bigtable.BigtableClient>(moq::MockBehavior.Strict);
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest

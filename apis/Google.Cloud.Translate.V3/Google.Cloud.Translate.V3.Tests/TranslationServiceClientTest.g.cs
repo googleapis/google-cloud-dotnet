@@ -160,7 +160,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public void TranslateText1_ResourceNames()
+        public void TranslateText1ResourceNames()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -186,7 +186,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TranslateText1Async_ResourceNames()
+        public async stt::Task TranslateText1ResourceNamesAsync()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -274,7 +274,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public void TranslateText2_ResourceNames()
+        public void TranslateText2ResourceNames()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -303,7 +303,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TranslateText2Async_ResourceNames()
+        public async stt::Task TranslateText2ResourceNamesAsync()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -456,7 +456,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public void DetectLanguage_ResourceNames()
+        public void DetectLanguageResourceNames()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -482,7 +482,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DetectLanguageAsync_ResourceNames()
+        public async stt::Task DetectLanguageResourceNamesAsync()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -614,7 +614,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSupportedLanguages_ResourceNames()
+        public void GetSupportedLanguagesResourceNames()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -639,7 +639,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSupportedLanguagesAsync_ResourceNames()
+        public async stt::Task GetSupportedLanguagesResourceNamesAsync()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -774,7 +774,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetGlossary_ResourceNames()
+        public void GetGlossaryResourceNames()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -800,7 +800,7 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetGlossaryAsync_ResourceNames()
+        public async stt::Task GetGlossaryResourceNamesAsync()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

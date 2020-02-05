@@ -250,7 +250,7 @@ namespace Google.Cloud.Trace.V2
         /// </summary>
         public gctv::SpanName SpanName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::SpanName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::SpanName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

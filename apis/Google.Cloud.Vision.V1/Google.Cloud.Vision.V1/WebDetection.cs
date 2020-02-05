@@ -51,11 +51,11 @@ namespace Google.Cloud.Vision.V1 {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection), global::Google.Cloud.Vision.V1.WebDetection.Parser, new[]{ "WebEntities", "FullMatchingImages", "PartialMatchingImages", "PagesWithMatchingImages", "VisuallySimilarImages", "BestGuessLabels" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity), global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.Parser, new[]{ "EntityId", "Score", "Description" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser, new[]{ "Url", "Score" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser, new[]{ "Url", "Score", "PageTitle", "FullMatchingImages", "PartialMatchingImages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel), global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel.Parser, new[]{ "Label", "LanguageCode" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection), global::Google.Cloud.Vision.V1.WebDetection.Parser, new[]{ "WebEntities", "FullMatchingImages", "PartialMatchingImages", "PagesWithMatchingImages", "VisuallySimilarImages", "BestGuessLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity), global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.Parser, new[]{ "EntityId", "Score", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser, new[]{ "Url", "Score" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser, new[]{ "Url", "Score", "PageTitle", "FullMatchingImages", "PartialMatchingImages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel), global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel.Parser, new[]{ "Label", "LanguageCode" }, null, null, null, null)})
           }));
     }
     #endregion

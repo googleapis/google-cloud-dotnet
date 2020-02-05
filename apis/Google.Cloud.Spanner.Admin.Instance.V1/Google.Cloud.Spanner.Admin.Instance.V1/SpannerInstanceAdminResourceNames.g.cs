@@ -252,7 +252,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gcsaiv::InstanceConfigName InstanceConfigName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -264,7 +264,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gcscv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
 
@@ -273,7 +273,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public InstanceConfigName ConfigAsInstanceConfigName
         {
-            get => string.IsNullOrEmpty(Config) ? null : InstanceConfigName.Parse(Config);
+            get => string.IsNullOrEmpty(Config) ? null : InstanceConfigName.Parse(Config, allowUnparsed: true);
             set => Config = value?.ToString() ?? "";
         }
     }
@@ -285,7 +285,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -297,7 +297,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gcsaiv::InstanceConfigName InstanceConfigName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsaiv::InstanceConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -309,7 +309,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gcscv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -321,7 +321,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -333,7 +333,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -345,7 +345,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public gcscv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

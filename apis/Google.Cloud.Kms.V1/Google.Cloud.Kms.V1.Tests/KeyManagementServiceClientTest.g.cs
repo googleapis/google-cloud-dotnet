@@ -114,7 +114,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetKeyRing_ResourceNames()
+        public void GetKeyRingResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             GetKeyRingRequest request = new GetKeyRingRequest
@@ -134,7 +134,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetKeyRingAsync_ResourceNames()
+        public async stt::Task GetKeyRingResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             GetKeyRingRequest request = new GetKeyRingRequest
@@ -476,7 +476,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateKeyRing_ResourceNames()
+        public void CreateKeyRingResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateKeyRingRequest request = new CreateKeyRingRequest
@@ -498,7 +498,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateKeyRingAsync_ResourceNames()
+        public async stt::Task CreateKeyRingResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateKeyRingRequest request = new CreateKeyRingRequest
@@ -664,7 +664,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateCryptoKey_ResourceNames()
+        public void CreateCryptoKeyResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
@@ -698,7 +698,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateCryptoKeyAsync_ResourceNames()
+        public async stt::Task CreateCryptoKeyResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
@@ -862,7 +862,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateCryptoKeyVersion_ResourceNames()
+        public void CreateCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
@@ -893,7 +893,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateCryptoKeyVersionAsync_ResourceNames()
+        public async stt::Task CreateCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
@@ -1118,7 +1118,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateImportJob_ResourceNames()
+        public void CreateImportJobResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateImportJobRequest request = new CreateImportJobRequest
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateImportJobAsync_ResourceNames()
+        public async stt::Task CreateImportJobResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             CreateImportJobRequest request = new CreateImportJobRequest
@@ -1534,7 +1534,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void Encrypt_ResourceNames()
+        public void EncryptResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task EncryptAsync_ResourceNames()
+        public async stt::Task EncryptResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
@@ -1664,7 +1664,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void Decrypt_ResourceNames()
+        public void DecryptResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             DecryptRequest request = new DecryptRequest
@@ -1684,7 +1684,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DecryptAsync_ResourceNames()
+        public async stt::Task DecryptResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             DecryptRequest request = new DecryptRequest
@@ -1790,7 +1790,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AsymmetricSign_ResourceNames()
+        public void AsymmetricSignResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             AsymmetricSignRequest request = new AsymmetricSignRequest
@@ -1810,7 +1810,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task AsymmetricSignAsync_ResourceNames()
+        public async stt::Task AsymmetricSignResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             AsymmetricSignRequest request = new AsymmetricSignRequest
@@ -1916,7 +1916,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AsymmetricDecrypt_ResourceNames()
+        public void AsymmetricDecryptResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
@@ -1936,7 +1936,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task AsymmetricDecryptAsync_ResourceNames()
+        public async stt::Task AsymmetricDecryptResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
@@ -2094,7 +2094,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateCryptoKeyPrimaryVersion_ResourceNames()
+        public void UpdateCryptoKeyPrimaryVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
@@ -2127,7 +2127,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateCryptoKeyPrimaryVersionAsync_ResourceNames()
+        public async stt::Task UpdateCryptoKeyPrimaryVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
@@ -2286,7 +2286,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DestroyCryptoKeyVersion_ResourceNames()
+        public void DestroyCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
@@ -2316,7 +2316,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DestroyCryptoKeyVersionAsync_ResourceNames()
+        public async stt::Task DestroyCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
@@ -2472,7 +2472,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void RestoreCryptoKeyVersion_ResourceNames()
+        public void RestoreCryptoKeyVersionResourceNames()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
@@ -2502,7 +2502,7 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task RestoreCryptoKeyVersionAsync_ResourceNames()
+        public async stt::Task RestoreCryptoKeyVersionResourceNamesAsync()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest

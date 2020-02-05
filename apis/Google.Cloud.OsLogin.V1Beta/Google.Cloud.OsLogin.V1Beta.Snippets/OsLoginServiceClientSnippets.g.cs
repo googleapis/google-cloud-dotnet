@@ -24,7 +24,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
     public sealed class GeneratedOsLoginServiceClientSnippets
     {
         /// <summary>Snippet for DeletePosixAccount</summary>
-        public void DeletePosixAccount_RequestObject()
+        public void DeletePosixAccountRequestObject()
         {
             // Snippet: DeletePosixAccount(DeletePosixAccountRequest, CallSettings)
             // Create client
@@ -40,7 +40,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeletePosixAccountAsync</summary>
-        public async Task DeletePosixAccountAsync_RequestObject()
+        public async Task DeletePosixAccountRequestObjectAsync()
         {
             // Snippet: DeletePosixAccountAsync(DeletePosixAccountRequest, CallSettings)
             // Additional: DeletePosixAccountAsync(DeletePosixAccountRequest, CancellationToken)
@@ -84,7 +84,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeletePosixAccount</summary>
-        public void DeletePosixAccount_ResourceNames()
+        public void DeletePosixAccountResourceNames()
         {
             // Snippet: DeletePosixAccount(PosixAccountName, CallSettings)
             // Create client
@@ -97,7 +97,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeletePosixAccountAsync</summary>
-        public async Task DeletePosixAccountAsync_ResourceNames()
+        public async Task DeletePosixAccountResourceNamesAsync()
         {
             // Snippet: DeletePosixAccountAsync(PosixAccountName, CallSettings)
             // Additional: DeletePosixAccountAsync(PosixAccountName, CancellationToken)
@@ -111,7 +111,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeleteSshPublicKey</summary>
-        public void DeleteSshPublicKey_RequestObject()
+        public void DeleteSshPublicKeyRequestObject()
         {
             // Snippet: DeleteSshPublicKey(DeleteSshPublicKeyRequest, CallSettings)
             // Create client
@@ -127,7 +127,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeleteSshPublicKeyAsync</summary>
-        public async Task DeleteSshPublicKeyAsync_RequestObject()
+        public async Task DeleteSshPublicKeyRequestObjectAsync()
         {
             // Snippet: DeleteSshPublicKeyAsync(DeleteSshPublicKeyRequest, CallSettings)
             // Additional: DeleteSshPublicKeyAsync(DeleteSshPublicKeyRequest, CancellationToken)
@@ -171,7 +171,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeleteSshPublicKey</summary>
-        public void DeleteSshPublicKey_ResourceNames()
+        public void DeleteSshPublicKeyResourceNames()
         {
             // Snippet: DeleteSshPublicKey(SshPublicKeyName, CallSettings)
             // Create client
@@ -184,7 +184,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for DeleteSshPublicKeyAsync</summary>
-        public async Task DeleteSshPublicKeyAsync_ResourceNames()
+        public async Task DeleteSshPublicKeyResourceNamesAsync()
         {
             // Snippet: DeleteSshPublicKeyAsync(SshPublicKeyName, CallSettings)
             // Additional: DeleteSshPublicKeyAsync(SshPublicKeyName, CancellationToken)
@@ -198,7 +198,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetLoginProfile</summary>
-        public void GetLoginProfile_RequestObject()
+        public void GetLoginProfileRequestObject()
         {
             // Snippet: GetLoginProfile(GetLoginProfileRequest, CallSettings)
             // Create client
@@ -216,7 +216,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetLoginProfileAsync</summary>
-        public async Task GetLoginProfileAsync_RequestObject()
+        public async Task GetLoginProfileRequestObjectAsync()
         {
             // Snippet: GetLoginProfileAsync(GetLoginProfileRequest, CallSettings)
             // Additional: GetLoginProfileAsync(GetLoginProfileRequest, CancellationToken)
@@ -262,7 +262,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetLoginProfile</summary>
-        public void GetLoginProfile_ResourceNames()
+        public void GetLoginProfileResourceNames()
         {
             // Snippet: GetLoginProfile(UserName, CallSettings)
             // Create client
@@ -275,7 +275,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetLoginProfileAsync</summary>
-        public async Task GetLoginProfileAsync_ResourceNames()
+        public async Task GetLoginProfileResourceNamesAsync()
         {
             // Snippet: GetLoginProfileAsync(UserName, CallSettings)
             // Additional: GetLoginProfileAsync(UserName, CancellationToken)
@@ -289,7 +289,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetSshPublicKey</summary>
-        public void GetSshPublicKey_RequestObject()
+        public void GetSshPublicKeyRequestObject()
         {
             // Snippet: GetSshPublicKey(GetSshPublicKeyRequest, CallSettings)
             // Create client
@@ -305,7 +305,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetSshPublicKeyAsync</summary>
-        public async Task GetSshPublicKeyAsync_RequestObject()
+        public async Task GetSshPublicKeyRequestObjectAsync()
         {
             // Snippet: GetSshPublicKeyAsync(GetSshPublicKeyRequest, CallSettings)
             // Additional: GetSshPublicKeyAsync(GetSshPublicKeyRequest, CancellationToken)
@@ -349,7 +349,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetSshPublicKey</summary>
-        public void GetSshPublicKey_ResourceNames()
+        public void GetSshPublicKeyResourceNames()
         {
             // Snippet: GetSshPublicKey(SshPublicKeyName, CallSettings)
             // Create client
@@ -362,7 +362,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for GetSshPublicKeyAsync</summary>
-        public async Task GetSshPublicKeyAsync_ResourceNames()
+        public async Task GetSshPublicKeyResourceNamesAsync()
         {
             // Snippet: GetSshPublicKeyAsync(SshPublicKeyName, CallSettings)
             // Additional: GetSshPublicKeyAsync(SshPublicKeyName, CancellationToken)
@@ -376,7 +376,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKey</summary>
-        public void ImportSshPublicKey_RequestObject()
+        public void ImportSshPublicKeyRequestObject()
         {
             // Snippet: ImportSshPublicKey(ImportSshPublicKeyRequest, CallSettings)
             // Create client
@@ -394,7 +394,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKeyAsync</summary>
-        public async Task ImportSshPublicKeyAsync_RequestObject()
+        public async Task ImportSshPublicKeyRequestObjectAsync()
         {
             // Snippet: ImportSshPublicKeyAsync(ImportSshPublicKeyRequest, CallSettings)
             // Additional: ImportSshPublicKeyAsync(ImportSshPublicKeyRequest, CancellationToken)
@@ -442,7 +442,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKey</summary>
-        public void ImportSshPublicKey1_ResourceNames()
+        public void ImportSshPublicKey1ResourceNames()
         {
             // Snippet: ImportSshPublicKey(UserName, SshPublicKey, CallSettings)
             // Create client
@@ -456,7 +456,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKeyAsync</summary>
-        public async Task ImportSshPublicKey1Async_ResourceNames()
+        public async Task ImportSshPublicKey1ResourceNamesAsync()
         {
             // Snippet: ImportSshPublicKeyAsync(UserName, SshPublicKey, CallSettings)
             // Additional: ImportSshPublicKeyAsync(UserName, SshPublicKey, CancellationToken)
@@ -502,7 +502,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKey</summary>
-        public void ImportSshPublicKey2_ResourceNames()
+        public void ImportSshPublicKey2ResourceNames()
         {
             // Snippet: ImportSshPublicKey(UserName, SshPublicKey, string, CallSettings)
             // Create client
@@ -517,7 +517,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKeyAsync</summary>
-        public async Task ImportSshPublicKey2Async_ResourceNames()
+        public async Task ImportSshPublicKey2ResourceNamesAsync()
         {
             // Snippet: ImportSshPublicKeyAsync(UserName, SshPublicKey, string, CallSettings)
             // Additional: ImportSshPublicKeyAsync(UserName, SshPublicKey, string, CancellationToken)
@@ -533,7 +533,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKey</summary>
-        public void UpdateSshPublicKey_RequestObject()
+        public void UpdateSshPublicKeyRequestObject()
         {
             // Snippet: UpdateSshPublicKey(UpdateSshPublicKeyRequest, CallSettings)
             // Create client
@@ -551,7 +551,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKeyAsync</summary>
-        public async Task UpdateSshPublicKeyAsync_RequestObject()
+        public async Task UpdateSshPublicKeyRequestObjectAsync()
         {
             // Snippet: UpdateSshPublicKeyAsync(UpdateSshPublicKeyRequest, CallSettings)
             // Additional: UpdateSshPublicKeyAsync(UpdateSshPublicKeyRequest, CancellationToken)
@@ -599,7 +599,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKey</summary>
-        public void UpdateSshPublicKey1_ResourceNames()
+        public void UpdateSshPublicKey1ResourceNames()
         {
             // Snippet: UpdateSshPublicKey(SshPublicKeyName, SshPublicKey, CallSettings)
             // Create client
@@ -613,7 +613,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKeyAsync</summary>
-        public async Task UpdateSshPublicKey1Async_ResourceNames()
+        public async Task UpdateSshPublicKey1ResourceNamesAsync()
         {
             // Snippet: UpdateSshPublicKeyAsync(SshPublicKeyName, SshPublicKey, CallSettings)
             // Additional: UpdateSshPublicKeyAsync(SshPublicKeyName, SshPublicKey, CancellationToken)
@@ -659,7 +659,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKey</summary>
-        public void UpdateSshPublicKey2_ResourceNames()
+        public void UpdateSshPublicKey2ResourceNames()
         {
             // Snippet: UpdateSshPublicKey(SshPublicKeyName, SshPublicKey, FieldMask, CallSettings)
             // Create client
@@ -674,7 +674,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKeyAsync</summary>
-        public async Task UpdateSshPublicKey2Async_ResourceNames()
+        public async Task UpdateSshPublicKey2ResourceNamesAsync()
         {
             // Snippet: UpdateSshPublicKeyAsync(SshPublicKeyName, SshPublicKey, FieldMask, CallSettings)
             // Additional: UpdateSshPublicKeyAsync(SshPublicKeyName, SshPublicKey, FieldMask, CancellationToken)

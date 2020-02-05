@@ -106,18 +106,18 @@ namespace Google.Cloud.Trace.V2 {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span), global::Google.Cloud.Trace.V2.Span.Parser, new[]{ "Name", "SpanId", "ParentSpanId", "DisplayName", "StartTime", "EndTime", "Attributes", "StackTrace", "TimeEvents", "Links", "Status", "SameProcessAsParentSpan", "ChildSpanCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.Attributes), global::Google.Cloud.Trace.V2.Span.Types.Attributes.Parser, new[]{ "AttributeMap", "DroppedAttributesCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent), global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Parser, new[]{ "Time", "Annotation", "MessageEvent" }, new[]{ "Value" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.Annotation), global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.Annotation.Parser, new[]{ "Description", "Attributes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent), global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Parser, new[]{ "Type", "Id", "UncompressedSizeBytes", "CompressedSizeBytes" }, null, new[]{ typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvents), global::Google.Cloud.Trace.V2.Span.Types.TimeEvents.Parser, new[]{ "TimeEvent", "DroppedAnnotationsCount", "DroppedMessageEventsCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.Link), global::Google.Cloud.Trace.V2.Span.Types.Link.Parser, new[]{ "TraceId", "SpanId", "Type", "Attributes" }, null, new[]{ typeof(global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.Links), global::Google.Cloud.Trace.V2.Span.Types.Links.Parser, new[]{ "Link", "DroppedLinksCount" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.AttributeValue), global::Google.Cloud.Trace.V2.AttributeValue.Parser, new[]{ "StringValue", "IntValue", "BoolValue" }, new[]{ "Value" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.StackTrace), global::Google.Cloud.Trace.V2.StackTrace.Parser, new[]{ "StackFrames", "StackTraceHashId" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrame), global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrame.Parser, new[]{ "FunctionName", "OriginalFunctionName", "FileName", "LineNumber", "ColumnNumber", "LoadModule", "SourceVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames), global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames.Parser, new[]{ "Frame", "DroppedFramesCount" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Module), global::Google.Cloud.Trace.V2.Module.Parser, new[]{ "Module_", "BuildId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.TruncatableString), global::Google.Cloud.Trace.V2.TruncatableString.Parser, new[]{ "Value", "TruncatedByteCount" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span), global::Google.Cloud.Trace.V2.Span.Parser, new[]{ "Name", "SpanId", "ParentSpanId", "DisplayName", "StartTime", "EndTime", "Attributes", "StackTrace", "TimeEvents", "Links", "Status", "SameProcessAsParentSpan", "ChildSpanCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.Attributes), global::Google.Cloud.Trace.V2.Span.Types.Attributes.Parser, new[]{ "AttributeMap", "DroppedAttributesCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent), global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Parser, new[]{ "Time", "Annotation", "MessageEvent" }, new[]{ "Value" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.Annotation), global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.Annotation.Parser, new[]{ "Description", "Attributes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent), global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Parser, new[]{ "Type", "Id", "UncompressedSizeBytes", "CompressedSizeBytes" }, null, new[]{ typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.TimeEvents), global::Google.Cloud.Trace.V2.Span.Types.TimeEvents.Parser, new[]{ "TimeEvent", "DroppedAnnotationsCount", "DroppedMessageEventsCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.Link), global::Google.Cloud.Trace.V2.Span.Types.Link.Parser, new[]{ "TraceId", "SpanId", "Type", "Attributes" }, null, new[]{ typeof(global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Span.Types.Links), global::Google.Cloud.Trace.V2.Span.Types.Links.Parser, new[]{ "Link", "DroppedLinksCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.AttributeValue), global::Google.Cloud.Trace.V2.AttributeValue.Parser, new[]{ "StringValue", "IntValue", "BoolValue" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.StackTrace), global::Google.Cloud.Trace.V2.StackTrace.Parser, new[]{ "StackFrames", "StackTraceHashId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrame), global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrame.Parser, new[]{ "FunctionName", "OriginalFunctionName", "FileName", "LineNumber", "ColumnNumber", "LoadModule", "SourceVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames), global::Google.Cloud.Trace.V2.StackTrace.Types.StackFrames.Parser, new[]{ "Frame", "DroppedFramesCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.Module), global::Google.Cloud.Trace.V2.Module.Parser, new[]{ "Module_", "BuildId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.TruncatableString), global::Google.Cloud.Trace.V2.TruncatableString.Parser, new[]{ "Value", "TruncatedByteCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -764,7 +764,7 @@ namespace Google.Cloud.Trace.V2 {
         /// <summary>Field number for the "attribute_map" field.</summary>
         public const int AttributeMapFieldNumber = 1;
         private static readonly pbc::MapField<string, global::Google.Cloud.Trace.V2.AttributeValue>.Codec _map_attributeMap_codec
-            = new pbc::MapField<string, global::Google.Cloud.Trace.V2.AttributeValue>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Trace.V2.AttributeValue.Parser), 10);
+            = new pbc::MapField<string, global::Google.Cloud.Trace.V2.AttributeValue>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Trace.V2.AttributeValue.Parser), 10);
         private readonly pbc::MapField<string, global::Google.Cloud.Trace.V2.AttributeValue> attributeMap_ = new pbc::MapField<string, global::Google.Cloud.Trace.V2.AttributeValue>();
         /// <summary>
         /// The set of attributes. Each attribute's key can be up to 128 bytes
@@ -1364,7 +1364,7 @@ namespace Google.Cloud.Trace.V2 {
 
             /// <summary>Field number for the "type" field.</summary>
             public const int TypeFieldNumber = 1;
-            private global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type type_ = 0;
+            private global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type type_ = global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified;
             /// <summary>
             /// Type of MessageEvent. Indicates whether the message was sent or
             /// received.
@@ -1445,7 +1445,7 @@ namespace Google.Cloud.Trace.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override int GetHashCode() {
               int hash = 1;
-              if (Type != 0) hash ^= Type.GetHashCode();
+              if (Type != global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified) hash ^= Type.GetHashCode();
               if (Id != 0L) hash ^= Id.GetHashCode();
               if (UncompressedSizeBytes != 0L) hash ^= UncompressedSizeBytes.GetHashCode();
               if (CompressedSizeBytes != 0L) hash ^= CompressedSizeBytes.GetHashCode();
@@ -1462,7 +1462,7 @@ namespace Google.Cloud.Trace.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
-              if (Type != 0) {
+              if (Type != global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified) {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) Type);
               }
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.Trace.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
               int size = 0;
-              if (Type != 0) {
+              if (Type != global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
               }
               if (Id != 0L) {
@@ -1509,7 +1509,7 @@ namespace Google.Cloud.Trace.V2 {
               if (other == null) {
                 return;
               }
-              if (other.Type != 0) {
+              if (other.Type != global::Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified) {
                 Type = other.Type;
               }
               if (other.Id != 0L) {
@@ -1850,7 +1850,7 @@ namespace Google.Cloud.Trace.V2 {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 3;
-        private global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type type_ = 0;
+        private global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type type_ = global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type.Unspecified;
         /// <summary>
         /// The relationship of the current span relative to the linked span.
         /// </summary>
@@ -1902,7 +1902,7 @@ namespace Google.Cloud.Trace.V2 {
           int hash = 1;
           if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
           if (SpanId.Length != 0) hash ^= SpanId.GetHashCode();
-          if (Type != 0) hash ^= Type.GetHashCode();
+          if (Type != global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type.Unspecified) hash ^= Type.GetHashCode();
           if (attributes_ != null) hash ^= Attributes.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1925,7 +1925,7 @@ namespace Google.Cloud.Trace.V2 {
             output.WriteRawTag(18);
             output.WriteString(SpanId);
           }
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type.Unspecified) {
             output.WriteRawTag(24);
             output.WriteEnum((int) Type);
           }
@@ -1947,7 +1947,7 @@ namespace Google.Cloud.Trace.V2 {
           if (SpanId.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(SpanId);
           }
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           if (attributes_ != null) {
@@ -1970,7 +1970,7 @@ namespace Google.Cloud.Trace.V2 {
           if (other.SpanId.Length != 0) {
             SpanId = other.SpanId;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Google.Cloud.Trace.V2.Span.Types.Link.Types.Type.Unspecified) {
             Type = other.Type;
           }
           if (other.attributes_ != null) {

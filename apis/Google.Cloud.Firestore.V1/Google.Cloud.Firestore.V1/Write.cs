@@ -65,14 +65,14 @@ namespace Google.Cloud.Firestore.V1 {
             "ZXN0b3JlLlYxygIZR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Write), global::Google.Cloud.Firestore.V1.Write.Parser, new[]{ "Update", "Delete", "Transform", "UpdateMask", "CurrentDocument" }, new[]{ "Operation" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Parser, new[]{ "Document", "FieldTransforms" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Parser, new[]{ "FieldPath", "SetToServerValue", "Increment", "Maximum", "Minimum", "AppendMissingElements", "RemoveAllFromArray" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteResult), global::Google.Cloud.Firestore.V1.WriteResult.Parser, new[]{ "UpdateTime", "TransformResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentChange), global::Google.Cloud.Firestore.V1.DocumentChange.Parser, new[]{ "Document", "TargetIds", "RemovedTargetIds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentDelete), global::Google.Cloud.Firestore.V1.DocumentDelete.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentRemove), global::Google.Cloud.Firestore.V1.DocumentRemove.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExistenceFilter), global::Google.Cloud.Firestore.V1.ExistenceFilter.Parser, new[]{ "TargetId", "Count" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Write), global::Google.Cloud.Firestore.V1.Write.Parser, new[]{ "Update", "Delete", "Transform", "UpdateMask", "CurrentDocument" }, new[]{ "Operation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Parser, new[]{ "Document", "FieldTransforms" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Parser, new[]{ "FieldPath", "SetToServerValue", "Increment", "Maximum", "Minimum", "AppendMissingElements", "RemoveAllFromArray" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteResult), global::Google.Cloud.Firestore.V1.WriteResult.Parser, new[]{ "UpdateTime", "TransformResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentChange), global::Google.Cloud.Firestore.V1.DocumentChange.Parser, new[]{ "Document", "TargetIds", "RemovedTargetIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentDelete), global::Google.Cloud.Firestore.V1.DocumentDelete.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentRemove), global::Google.Cloud.Firestore.V1.DocumentRemove.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExistenceFilter), global::Google.Cloud.Firestore.V1.ExistenceFilter.Parser, new[]{ "TargetId", "Count" }, null, null, null, null)
           }));
     }
     #endregion
@@ -657,7 +657,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue SetToServerValue {
-          get { return transformTypeCase_ == TransformTypeOneofCase.SetToServerValue ? (global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) transformType_ : 0; }
+          get { return transformTypeCase_ == TransformTypeOneofCase.SetToServerValue ? (global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) transformType_ : global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue.Unspecified; }
           set {
             transformType_ = value;
             transformTypeCase_ = TransformTypeOneofCase.SetToServerValue;

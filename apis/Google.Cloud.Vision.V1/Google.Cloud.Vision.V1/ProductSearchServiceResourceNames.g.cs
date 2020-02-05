@@ -754,7 +754,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductName ProductName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -766,7 +766,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductSetName ProductSetName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -778,7 +778,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ReferenceImageName ReferenceImageName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReferenceImageName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReferenceImageName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -790,7 +790,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -802,7 +802,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -814,7 +814,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductName ProductName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -826,7 +826,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductName ProductName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -838,7 +838,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -850,7 +850,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -862,7 +862,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductSetName ProductSetName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -874,7 +874,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductSetName ProductSetName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -886,7 +886,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public ProductName ParentAsProductName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ProductName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProductName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -898,7 +898,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public ProductName ParentAsProductName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ProductName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProductName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -910,7 +910,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ReferenceImageName ReferenceImageName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReferenceImageName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReferenceImageName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -922,7 +922,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ReferenceImageName ReferenceImageName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReferenceImageName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReferenceImageName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -934,7 +934,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductSetName ProductSetName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
 
@@ -943,7 +943,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public ProductName ProductAsProductName
         {
-            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product);
+            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product, allowUnparsed: true);
             set => Product = value?.ToString() ?? "";
         }
     }
@@ -955,7 +955,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductSetName ProductSetName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
 
@@ -964,7 +964,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public ProductName ProductAsProductName
         {
-            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product);
+            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product, allowUnparsed: true);
             set => Product = value?.ToString() ?? "";
         }
     }
@@ -976,7 +976,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gcvv::ProductSetName ProductSetName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ProductSetName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -988,7 +988,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

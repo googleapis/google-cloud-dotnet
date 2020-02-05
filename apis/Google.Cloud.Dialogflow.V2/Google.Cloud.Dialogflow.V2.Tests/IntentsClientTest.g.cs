@@ -257,7 +257,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIntent1_ResourceNames()
+        public void GetIntent1ResourceNames()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -312,7 +312,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIntent1Async_ResourceNames()
+        public async stt::Task GetIntent1ResourceNamesAsync()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -483,7 +483,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIntent2_ResourceNames()
+        public void GetIntent2ResourceNames()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -539,7 +539,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIntent2Async_ResourceNames()
+        public async stt::Task GetIntent2ResourceNamesAsync()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -829,7 +829,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateIntent1_ResourceNames()
+        public void CreateIntent1ResourceNames()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -885,7 +885,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateIntent1Async_ResourceNames()
+        public async stt::Task CreateIntent1ResourceNamesAsync()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateIntent2_ResourceNames()
+        public void CreateIntent2ResourceNames()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateIntent2Async_ResourceNames()
+        public async stt::Task CreateIntent2ResourceNamesAsync()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteIntent_ResourceNames()
+        public void DeleteIntentResourceNames()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteIntentAsync_ResourceNames()
+        public async stt::Task DeleteIntentResourceNamesAsync()
         {
             moq::Mock<Intents.IntentsClient> mockGrpcClient = new moq::Mock<Intents.IntentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

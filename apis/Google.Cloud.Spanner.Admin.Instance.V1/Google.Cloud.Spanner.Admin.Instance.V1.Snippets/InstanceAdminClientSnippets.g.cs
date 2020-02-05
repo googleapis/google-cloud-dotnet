@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
     public sealed class GeneratedInstanceAdminClientSnippets
     {
         /// <summary>Snippet for ListInstanceConfigs</summary>
-        public void ListInstanceConfigs_RequestObject()
+        public void ListInstanceConfigsRequestObject()
         {
             // Snippet: ListInstanceConfigs(ListInstanceConfigsRequest, CallSettings)
             // Create client
@@ -79,7 +79,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstanceConfigs</summary>
-        public async Task ListInstanceConfigsAsync_RequestObject()
+        public async Task ListInstanceConfigsRequestObjectAsync()
         {
             // Snippet: ListInstanceConfigsAsync(ListInstanceConfigsRequest, CallSettings)
             // Create client
@@ -217,7 +217,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstanceConfigs</summary>
-        public void ListInstanceConfigs_ResourceNames()
+        public void ListInstanceConfigsResourceNames()
         {
             // Snippet: ListInstanceConfigs(ProjectName, string, int?, CallSettings)
             // Create client
@@ -262,7 +262,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstanceConfigs</summary>
-        public async Task ListInstanceConfigsAsync_ResourceNames()
+        public async Task ListInstanceConfigsResourceNamesAsync()
         {
             // Snippet: ListInstanceConfigsAsync(ProjectName, string, int?, CallSettings)
             // Create client
@@ -307,7 +307,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceConfig</summary>
-        public void GetInstanceConfig_RequestObject()
+        public void GetInstanceConfigRequestObject()
         {
             // Snippet: GetInstanceConfig(GetInstanceConfigRequest, CallSettings)
             // Create client
@@ -323,7 +323,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceConfigAsync</summary>
-        public async Task GetInstanceConfigAsync_RequestObject()
+        public async Task GetInstanceConfigRequestObjectAsync()
         {
             // Snippet: GetInstanceConfigAsync(GetInstanceConfigRequest, CallSettings)
             // Additional: GetInstanceConfigAsync(GetInstanceConfigRequest, CancellationToken)
@@ -367,7 +367,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceConfig</summary>
-        public void GetInstanceConfig_ResourceNames()
+        public void GetInstanceConfigResourceNames()
         {
             // Snippet: GetInstanceConfig(InstanceConfigName, CallSettings)
             // Create client
@@ -380,7 +380,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceConfigAsync</summary>
-        public async Task GetInstanceConfigAsync_ResourceNames()
+        public async Task GetInstanceConfigResourceNamesAsync()
         {
             // Snippet: GetInstanceConfigAsync(InstanceConfigName, CallSettings)
             // Additional: GetInstanceConfigAsync(InstanceConfigName, CancellationToken)
@@ -394,7 +394,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances_RequestObject()
+        public void ListInstancesRequestObject()
         {
             // Snippet: ListInstances(ListInstancesRequest, CallSettings)
             // Create client
@@ -443,7 +443,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public async Task ListInstancesAsync_RequestObject()
+        public async Task ListInstancesRequestObjectAsync()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
             // Create client
@@ -582,7 +582,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances_ResourceNames()
+        public void ListInstancesResourceNames()
         {
             // Snippet: ListInstances(ProjectName, string, int?, CallSettings)
             // Create client
@@ -627,7 +627,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public async Task ListInstancesAsync_ResourceNames()
+        public async Task ListInstancesResourceNamesAsync()
         {
             // Snippet: ListInstancesAsync(ProjectName, string, int?, CallSettings)
             // Create client
@@ -672,7 +672,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance_RequestObject()
+        public void GetInstanceRequestObject()
         {
             // Snippet: GetInstance(GetInstanceRequest, CallSettings)
             // Create client
@@ -689,7 +689,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync_RequestObject()
+        public async Task GetInstanceRequestObjectAsync()
         {
             // Snippet: GetInstanceAsync(GetInstanceRequest, CallSettings)
             // Additional: GetInstanceAsync(GetInstanceRequest, CancellationToken)
@@ -734,7 +734,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance_ResourceNames()
+        public void GetInstanceResourceNames()
         {
             // Snippet: GetInstance(InstanceName, CallSettings)
             // Create client
@@ -747,7 +747,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync_ResourceNames()
+        public async Task GetInstanceResourceNamesAsync()
         {
             // Snippet: GetInstanceAsync(InstanceName, CallSettings)
             // Additional: GetInstanceAsync(InstanceName, CancellationToken)
@@ -761,7 +761,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for CreateInstance</summary>
-        public void CreateInstance_RequestObject()
+        public void CreateInstanceRequestObject()
         {
             // Snippet: CreateInstance(CreateInstanceRequest, CallSettings)
             // Create client
@@ -795,7 +795,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for CreateInstanceAsync</summary>
-        public async Task CreateInstanceAsync_RequestObject()
+        public async Task CreateInstanceRequestObjectAsync()
         {
             // Snippet: CreateInstanceAsync(CreateInstanceRequest, CallSettings)
             // Additional: CreateInstanceAsync(CreateInstanceRequest, CancellationToken)
@@ -893,7 +893,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for CreateInstance</summary>
-        public void CreateInstance_ResourceNames()
+        public void CreateInstanceResourceNames()
         {
             // Snippet: CreateInstance(ProjectName, string, Instance, CallSettings)
             // Create client
@@ -924,7 +924,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for CreateInstanceAsync</summary>
-        public async Task CreateInstanceAsync_ResourceNames()
+        public async Task CreateInstanceResourceNamesAsync()
         {
             // Snippet: CreateInstanceAsync(ProjectName, string, Instance, CallSettings)
             // Additional: CreateInstanceAsync(ProjectName, string, Instance, CancellationToken)
@@ -956,7 +956,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateInstance</summary>
-        public void UpdateInstance_RequestObject()
+        public void UpdateInstanceRequestObject()
         {
             // Snippet: UpdateInstance(UpdateInstanceRequest, CallSettings)
             // Create client
@@ -989,7 +989,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateInstanceAsync</summary>
-        public async Task UpdateInstanceAsync_RequestObject()
+        public async Task UpdateInstanceRequestObjectAsync()
         {
             // Snippet: UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)
             // Additional: UpdateInstanceAsync(UpdateInstanceRequest, CancellationToken)
@@ -1084,7 +1084,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance_RequestObject()
+        public void DeleteInstanceRequestObject()
         {
             // Snippet: DeleteInstance(DeleteInstanceRequest, CallSettings)
             // Create client
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync_RequestObject()
+        public async Task DeleteInstanceRequestObjectAsync()
         {
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)
             // Additional: DeleteInstanceAsync(DeleteInstanceRequest, CancellationToken)
@@ -1144,7 +1144,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance_ResourceNames()
+        public void DeleteInstanceResourceNames()
         {
             // Snippet: DeleteInstance(InstanceName, CallSettings)
             // Create client
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync_ResourceNames()
+        public async Task DeleteInstanceResourceNamesAsync()
         {
             // Snippet: DeleteInstanceAsync(InstanceName, CallSettings)
             // Additional: DeleteInstanceAsync(InstanceName, CancellationToken)
@@ -1171,7 +1171,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicyRequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
@@ -1188,7 +1188,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
@@ -1235,7 +1235,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_ResourceNames()
+        public async Task SetIamPolicyResourceNamesAsync()
         {
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
@@ -1264,7 +1264,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicyRequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
@@ -1281,7 +1281,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
@@ -1326,7 +1326,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
@@ -1339,7 +1339,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_ResourceNames()
+        public async Task GetIamPolicyResourceNamesAsync()
         {
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
@@ -1353,7 +1353,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissionsRequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
@@ -1370,7 +1370,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
+        public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
@@ -1417,7 +1417,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
@@ -1431,7 +1431,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_ResourceNames()
+        public async Task TestIamPermissionsResourceNamesAsync()
         {
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)

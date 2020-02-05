@@ -271,7 +271,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::TaskName TaskName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

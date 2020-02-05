@@ -43,9 +43,9 @@ namespace Google.Cloud.Spanner.V1 {
             "bm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation), global::Google.Cloud.Spanner.V1.Mutation.Parser, new[]{ "Insert", "Update", "InsertOrUpdate", "Replace", "Delete" }, new[]{ "Operation" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Write), global::Google.Cloud.Spanner.V1.Mutation.Types.Write.Parser, new[]{ "Table", "Columns", "Values" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Delete), global::Google.Cloud.Spanner.V1.Mutation.Types.Delete.Parser, new[]{ "Table", "KeySet" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation), global::Google.Cloud.Spanner.V1.Mutation.Parser, new[]{ "Insert", "Update", "InsertOrUpdate", "Replace", "Delete" }, new[]{ "Operation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Write), global::Google.Cloud.Spanner.V1.Mutation.Types.Write.Parser, new[]{ "Table", "Columns", "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Delete), global::Google.Cloud.Spanner.V1.Mutation.Types.Delete.Parser, new[]{ "Table", "KeySet" }, null, null, null, null)})
           }));
     }
     #endregion

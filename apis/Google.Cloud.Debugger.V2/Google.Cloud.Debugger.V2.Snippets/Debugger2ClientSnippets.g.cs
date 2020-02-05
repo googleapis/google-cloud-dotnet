@@ -22,7 +22,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
     public sealed class GeneratedDebugger2ClientSnippets
     {
         /// <summary>Snippet for SetBreakpoint</summary>
-        public void SetBreakpoint_RequestObject()
+        public void SetBreakpointRequestObject()
         {
             // Snippet: SetBreakpoint(SetBreakpointRequest, CallSettings)
             // Create client
@@ -40,7 +40,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for SetBreakpointAsync</summary>
-        public async Task SetBreakpointAsync_RequestObject()
+        public async Task SetBreakpointRequestObjectAsync()
         {
             // Snippet: SetBreakpointAsync(SetBreakpointRequest, CallSettings)
             // Additional: SetBreakpointAsync(SetBreakpointRequest, CancellationToken)
@@ -90,7 +90,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for GetBreakpoint</summary>
-        public void GetBreakpoint_RequestObject()
+        public void GetBreakpointRequestObject()
         {
             // Snippet: GetBreakpoint(GetBreakpointRequest, CallSettings)
             // Create client
@@ -108,7 +108,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for GetBreakpointAsync</summary>
-        public async Task GetBreakpointAsync_RequestObject()
+        public async Task GetBreakpointRequestObjectAsync()
         {
             // Snippet: GetBreakpointAsync(GetBreakpointRequest, CallSettings)
             // Additional: GetBreakpointAsync(GetBreakpointRequest, CancellationToken)
@@ -158,7 +158,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteBreakpoint</summary>
-        public void DeleteBreakpoint_RequestObject()
+        public void DeleteBreakpointRequestObject()
         {
             // Snippet: DeleteBreakpoint(DeleteBreakpointRequest, CallSettings)
             // Create client
@@ -176,7 +176,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteBreakpointAsync</summary>
-        public async Task DeleteBreakpointAsync_RequestObject()
+        public async Task DeleteBreakpointRequestObjectAsync()
         {
             // Snippet: DeleteBreakpointAsync(DeleteBreakpointRequest, CallSettings)
             // Additional: DeleteBreakpointAsync(DeleteBreakpointRequest, CancellationToken)
@@ -226,7 +226,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for ListBreakpoints</summary>
-        public void ListBreakpoints_RequestObject()
+        public void ListBreakpointsRequestObject()
         {
             // Snippet: ListBreakpoints(ListBreakpointsRequest, CallSettings)
             // Create client
@@ -247,7 +247,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for ListBreakpointsAsync</summary>
-        public async Task ListBreakpointsAsync_RequestObject()
+        public async Task ListBreakpointsRequestObjectAsync()
         {
             // Snippet: ListBreakpointsAsync(ListBreakpointsRequest, CallSettings)
             // Additional: ListBreakpointsAsync(ListBreakpointsRequest, CancellationToken)
@@ -298,7 +298,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for ListDebuggees</summary>
-        public void ListDebuggees_RequestObject()
+        public void ListDebuggeesRequestObject()
         {
             // Snippet: ListDebuggees(ListDebuggeesRequest, CallSettings)
             // Create client
@@ -316,7 +316,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for ListDebuggeesAsync</summary>
-        public async Task ListDebuggeesAsync_RequestObject()
+        public async Task ListDebuggeesRequestObjectAsync()
         {
             // Snippet: ListDebuggeesAsync(ListDebuggeesRequest, CallSettings)
             // Additional: ListDebuggeesAsync(ListDebuggeesRequest, CancellationToken)

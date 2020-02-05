@@ -48,9 +48,9 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
             "XFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser, new[]{ "Parent", "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser, new[]{ "Parent", "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion

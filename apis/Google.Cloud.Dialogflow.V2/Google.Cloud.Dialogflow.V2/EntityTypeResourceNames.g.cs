@@ -246,7 +246,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::EntityTypeName EntityTypeName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityTypeName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -268,7 +268,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::EntityTypeName EntityTypeName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityTypeName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -278,7 +278,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -290,7 +290,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::EntityTypeName EntityTypeName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityTypeName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntityTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -300,7 +300,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -310,7 +310,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -322,7 +322,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public EntityTypeName ParentAsEntityTypeName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -334,7 +334,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public EntityTypeName ParentAsEntityTypeName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -346,7 +346,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public EntityTypeName ParentAsEntityTypeName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

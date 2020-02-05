@@ -173,20 +173,20 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.JobView), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateJobRequest), global::Google.Cloud.Talent.V4Beta1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetJobRequest), global::Google.Cloud.Talent.V4Beta1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest), global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest.Parser, new[]{ "Job", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest), global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest.Parser, new[]{ "Parent", "Filter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsRequest), global::Google.Cloud.Talent.V4Beta1.ListJobsRequest.Parser, new[]{ "Parent", "Filter", "PageToken", "PageSize", "JobView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsResponse), global::Google.Cloud.Talent.V4Beta1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Metadata" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "RequirePreciseResultSize", "HistogramQueries", "JobView", "Offset", "PageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser, new[]{ "MatchingJobs", "HistogramQueryResults", "NextPageToken", "LocationFilters", "EstimatedTotalSize", "TotalSize", "Metadata", "BroadenedQueryJobsCount", "SpellCorrection" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob.Parser, new[]{ "Job", "JobSummary", "JobTitleSnippet", "SearchTextSnippet", "CommuteInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo.Parser, new[]{ "JobLocation", "TravelDuration" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser, new[]{ "Parent", "Jobs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest.Parser, new[]{ "Parent", "Jobs", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobOperationResult), global::Google.Cloud.Talent.V4Beta1.JobOperationResult.Parser, new[]{ "JobResults" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobOperationResult.Types.JobResult), global::Google.Cloud.Talent.V4Beta1.JobOperationResult.Types.JobResult.Parser, new[]{ "Job", "Status" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.JobView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateJobRequest), global::Google.Cloud.Talent.V4Beta1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetJobRequest), global::Google.Cloud.Talent.V4Beta1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest), global::Google.Cloud.Talent.V4Beta1.UpdateJobRequest.Parser, new[]{ "Job", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest), global::Google.Cloud.Talent.V4Beta1.DeleteJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest.Parser, new[]{ "Parent", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsRequest), global::Google.Cloud.Talent.V4Beta1.ListJobsRequest.Parser, new[]{ "Parent", "Filter", "PageToken", "PageSize", "JobView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsResponse), global::Google.Cloud.Talent.V4Beta1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Metadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "RequirePreciseResultSize", "HistogramQueries", "JobView", "Offset", "PageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser, new[]{ "MatchingJobs", "HistogramQueryResults", "NextPageToken", "LocationFilters", "EstimatedTotalSize", "TotalSize", "Metadata", "BroadenedQueryJobsCount", "SpellCorrection" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob.Parser, new[]{ "Job", "JobSummary", "JobTitleSnippet", "SearchTextSnippet", "CommuteInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo.Parser, new[]{ "JobLocation", "TravelDuration" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser, new[]{ "Parent", "Jobs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest.Parser, new[]{ "Parent", "Jobs", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobOperationResult), global::Google.Cloud.Talent.V4Beta1.JobOperationResult.Parser, new[]{ "JobResults" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobOperationResult.Types.JobResult), global::Google.Cloud.Talent.V4Beta1.JobOperationResult.Types.JobResult.Parser, new[]{ "Job", "Status" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "job_view" field.</summary>
     public const int JobViewFieldNumber = 5;
-    private global::Google.Cloud.Talent.V4Beta1.JobView jobView_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.JobView jobView_ = global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified;
     /// <summary>
     /// The desired job attributes returned for jobs in the
     /// search response. Defaults to [JobView.JOB_VIEW_FULL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_FULL] if no value is
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (JobView != 0) hash ^= JobView.GetHashCode();
+      if (JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) hash ^= JobView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(32);
         output.WriteInt32(PageSize);
       }
-      if (JobView != 0) {
+      if (JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) JobView);
       }
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
-      if (JobView != 0) {
+      if (JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JobView);
       }
       if (_unknownFields != null) {
@@ -1301,7 +1301,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
       }
-      if (other.JobView != 0) {
+      if (other.JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) {
         JobView = other.JobView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1611,7 +1611,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "search_mode" field.</summary>
     public const int SearchModeFieldNumber = 2;
-    private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode searchMode_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode searchMode_ = global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode.Unspecified;
     /// <summary>
     /// Mode of a search.
     ///
@@ -1800,7 +1800,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "job_view" field.</summary>
     public const int JobViewFieldNumber = 8;
-    private global::Google.Cloud.Talent.V4Beta1.JobView jobView_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.JobView jobView_ = global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified;
     /// <summary>
     /// The desired job attributes returned for jobs in the search response.
     /// Defaults to [JobView.JOB_VIEW_SMALL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_SMALL] if no value is specified.
@@ -1935,7 +1935,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "diversification_level" field.</summary>
     public const int DiversificationLevelFieldNumber = 13;
-    private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel diversificationLevel_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel diversificationLevel_ = global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel.Unspecified;
     /// <summary>
     /// Controls whether highly similar jobs are returned next to each other in
     /// the search results. Jobs are identified as highly similar based on
@@ -2037,18 +2037,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (SearchMode != 0) hash ^= SearchMode.GetHashCode();
+      if (SearchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode.Unspecified) hash ^= SearchMode.GetHashCode();
       if (requestMetadata_ != null) hash ^= RequestMetadata.GetHashCode();
       if (jobQuery_ != null) hash ^= JobQuery.GetHashCode();
       if (EnableBroadening != false) hash ^= EnableBroadening.GetHashCode();
       if (RequirePreciseResultSize != false) hash ^= RequirePreciseResultSize.GetHashCode();
       hash ^= histogramQueries_.GetHashCode();
-      if (JobView != 0) hash ^= JobView.GetHashCode();
+      if (JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) hash ^= JobView.GetHashCode();
       if (Offset != 0) hash ^= Offset.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
-      if (DiversificationLevel != 0) hash ^= DiversificationLevel.GetHashCode();
+      if (DiversificationLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel.Unspecified) hash ^= DiversificationLevel.GetHashCode();
       if (customRankingInfo_ != null) hash ^= CustomRankingInfo.GetHashCode();
       if (DisableKeywordMatch != false) hash ^= DisableKeywordMatch.GetHashCode();
       if (_unknownFields != null) {
@@ -2068,7 +2068,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (SearchMode != 0) {
+      if (SearchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) SearchMode);
       }
@@ -2089,7 +2089,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteBool(RequirePreciseResultSize);
       }
       histogramQueries_.WriteTo(output, _repeated_histogramQueries_codec);
-      if (JobView != 0) {
+      if (JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) {
         output.WriteRawTag(64);
         output.WriteEnum((int) JobView);
       }
@@ -2109,7 +2109,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(98);
         output.WriteString(OrderBy);
       }
-      if (DiversificationLevel != 0) {
+      if (DiversificationLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel.Unspecified) {
         output.WriteRawTag(104);
         output.WriteEnum((int) DiversificationLevel);
       }
@@ -2132,7 +2132,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (SearchMode != 0) {
+      if (SearchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchMode);
       }
       if (requestMetadata_ != null) {
@@ -2148,7 +2148,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         size += 1 + 1;
       }
       size += histogramQueries_.CalculateSize(_repeated_histogramQueries_codec);
-      if (JobView != 0) {
+      if (JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JobView);
       }
       if (Offset != 0) {
@@ -2163,7 +2163,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (OrderBy.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
-      if (DiversificationLevel != 0) {
+      if (DiversificationLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DiversificationLevel);
       }
       if (customRankingInfo_ != null) {
@@ -2186,7 +2186,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
-      if (other.SearchMode != 0) {
+      if (other.SearchMode != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode.Unspecified) {
         SearchMode = other.SearchMode;
       }
       if (other.requestMetadata_ != null) {
@@ -2208,7 +2208,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         RequirePreciseResultSize = other.RequirePreciseResultSize;
       }
       histogramQueries_.Add(other.histogramQueries_);
-      if (other.JobView != 0) {
+      if (other.JobView != global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified) {
         JobView = other.JobView;
       }
       if (other.Offset != 0) {
@@ -2223,7 +2223,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.OrderBy.Length != 0) {
         OrderBy = other.OrderBy;
       }
-      if (other.DiversificationLevel != 0) {
+      if (other.DiversificationLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel.Unspecified) {
         DiversificationLevel = other.DiversificationLevel;
       }
       if (other.customRankingInfo_ != null) {
@@ -2418,7 +2418,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         /// <summary>Field number for the "importance_level" field.</summary>
         public const int ImportanceLevelFieldNumber = 1;
-        private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel importanceLevel_ = 0;
+        private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel importanceLevel_ = global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified;
         /// <summary>
         /// Required. Controls over how important the score of
         /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression] gets applied to job's final
@@ -2489,7 +2489,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (ImportanceLevel != 0) hash ^= ImportanceLevel.GetHashCode();
+          if (ImportanceLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified) hash ^= ImportanceLevel.GetHashCode();
           if (RankingExpression.Length != 0) hash ^= RankingExpression.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2504,7 +2504,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (ImportanceLevel != 0) {
+          if (ImportanceLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) ImportanceLevel);
           }
@@ -2520,7 +2520,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (ImportanceLevel != 0) {
+          if (ImportanceLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ImportanceLevel);
           }
           if (RankingExpression.Length != 0) {
@@ -2537,7 +2537,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           if (other == null) {
             return;
           }
-          if (other.ImportanceLevel != 0) {
+          if (other.ImportanceLevel != global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified) {
             ImportanceLevel = other.ImportanceLevel;
           }
           if (other.RankingExpression.Length != 0) {

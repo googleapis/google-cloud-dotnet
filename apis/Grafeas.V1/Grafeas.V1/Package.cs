@@ -45,12 +45,12 @@ namespace Grafeas.V1 {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.Architecture), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Distribution), global::Grafeas.V1.Distribution.Parser, new[]{ "CpeUri", "Architecture", "LatestVersion", "Maintainer", "Url", "Description" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Location), global::Grafeas.V1.Location.Parser, new[]{ "CpeUri", "Version", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageNote), global::Grafeas.V1.PackageNote.Parser, new[]{ "Name", "Distribution" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Name", "Location" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Version), global::Grafeas.V1.Version.Parser, new[]{ "Epoch", "Name", "Revision", "Kind", "FullName" }, null, new[]{ typeof(global::Grafeas.V1.Version.Types.VersionKind) }, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.Architecture), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Distribution), global::Grafeas.V1.Distribution.Parser, new[]{ "CpeUri", "Architecture", "LatestVersion", "Maintainer", "Url", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Location), global::Grafeas.V1.Location.Parser, new[]{ "CpeUri", "Version", "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageNote), global::Grafeas.V1.PackageNote.Parser, new[]{ "Name", "Distribution" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Name", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Version), global::Grafeas.V1.Version.Parser, new[]{ "Epoch", "Name", "Revision", "Kind", "FullName" }, null, new[]{ typeof(global::Grafeas.V1.Version.Types.VersionKind) }, null, null)
           }));
     }
     #endregion
@@ -138,7 +138,7 @@ namespace Grafeas.V1 {
 
     /// <summary>Field number for the "architecture" field.</summary>
     public const int ArchitectureFieldNumber = 2;
-    private global::Grafeas.V1.Architecture architecture_ = 0;
+    private global::Grafeas.V1.Architecture architecture_ = global::Grafeas.V1.Architecture.Unspecified;
     /// <summary>
     /// The CPU architecture for which packages in this distribution channel were
     /// built.
@@ -233,7 +233,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (CpeUri.Length != 0) hash ^= CpeUri.GetHashCode();
-      if (Architecture != 0) hash ^= Architecture.GetHashCode();
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) hash ^= Architecture.GetHashCode();
       if (latestVersion_ != null) hash ^= LatestVersion.GetHashCode();
       if (Maintainer.Length != 0) hash ^= Maintainer.GetHashCode();
       if (Url.Length != 0) hash ^= Url.GetHashCode();
@@ -255,7 +255,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteString(CpeUri);
       }
-      if (Architecture != 0) {
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Architecture);
       }
@@ -286,7 +286,7 @@ namespace Grafeas.V1 {
       if (CpeUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CpeUri);
       }
-      if (Architecture != 0) {
+      if (Architecture != global::Grafeas.V1.Architecture.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Architecture);
       }
       if (latestVersion_ != null) {
@@ -315,7 +315,7 @@ namespace Grafeas.V1 {
       if (other.CpeUri.Length != 0) {
         CpeUri = other.CpeUri;
       }
-      if (other.Architecture != 0) {
+      if (other.Architecture != global::Grafeas.V1.Architecture.Unspecified) {
         Architecture = other.Architecture;
       }
       if (other.latestVersion_ != null) {
@@ -987,7 +987,7 @@ namespace Grafeas.V1 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 4;
-    private global::Grafeas.V1.Version.Types.VersionKind kind_ = 0;
+    private global::Grafeas.V1.Version.Types.VersionKind kind_ = global::Grafeas.V1.Version.Types.VersionKind.Unspecified;
     /// <summary>
     /// Required. Distinguishes between sentinel MIN/MAX versions and normal
     /// versions.
@@ -1042,7 +1042,7 @@ namespace Grafeas.V1 {
       if (Epoch != 0) hash ^= Epoch.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Revision.Length != 0) hash ^= Revision.GetHashCode();
-      if (Kind != 0) hash ^= Kind.GetHashCode();
+      if (Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) hash ^= Kind.GetHashCode();
       if (FullName.Length != 0) hash ^= FullName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1069,7 +1069,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(26);
         output.WriteString(Revision);
       }
-      if (Kind != 0) {
+      if (Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Kind);
       }
@@ -1094,7 +1094,7 @@ namespace Grafeas.V1 {
       if (Revision.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Revision);
       }
-      if (Kind != 0) {
+      if (Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (FullName.Length != 0) {
@@ -1120,7 +1120,7 @@ namespace Grafeas.V1 {
       if (other.Revision.Length != 0) {
         Revision = other.Revision;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) {
         Kind = other.Kind;
       }
       if (other.FullName.Length != 0) {

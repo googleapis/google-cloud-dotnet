@@ -172,21 +172,21 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimestampRange), global::Google.Cloud.Talent.V4Beta1.TimestampRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Location), global::Google.Cloud.Talent.V4Beta1.Location.Parser, new[]{ "LocationType", "PostalAddress", "LatLng", "RadiusMiles" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.RequestMetadata), global::Google.Cloud.Talent.V4Beta1.RequestMetadata.Parser, new[]{ "Domain", "SessionId", "UserId", "AllowMissingIds", "DeviceInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ResponseMetadata), global::Google.Cloud.Talent.V4Beta1.ResponseMetadata.Parser, new[]{ "RequestId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeviceInfo), global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Parser, new[]{ "DeviceType", "Id" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CustomAttribute), global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser, new[]{ "StringValues", "LongValues", "Filterable" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SpellingCorrection), global::Google.Cloud.Talent.V4Beta1.SpellingCorrection.Parser, new[]{ "Corrected", "CorrectedText", "CorrectedHtml" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Parser, new[]{ "Entries", "AnnualizedBaseCompensationRange", "AnnualizedTotalCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType), typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry.Parser, new[]{ "Type", "Unit", "Amount", "Range", "Description", "ExpectedUnitsPerYear" }, new[]{ "CompensationAmount" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange.Parser, new[]{ "MaxCompensation", "MinCompensation" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Certification), global::Google.Cloud.Talent.V4Beta1.Certification.Parser, new[]{ "DisplayName", "AcquireDate", "ExpireDate", "Authority", "Description" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Skill), global::Google.Cloud.Talent.V4Beta1.Skill.Parser, new[]{ "DisplayName", "LastUsedDate", "Level", "Context", "SkillNameSnippet" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Interview), global::Google.Cloud.Talent.V4Beta1.Interview.Parser, new[]{ "Rating", "Outcome" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Rating), global::Google.Cloud.Talent.V4Beta1.Rating.Parser, new[]{ "Overall", "Min", "Max", "Interval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata), global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Parser, new[]{ "State", "StateDescription", "SuccessCount", "FailureCount", "TotalCount", "CreateTime", "UpdateTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State) }, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimestampRange), global::Google.Cloud.Talent.V4Beta1.TimestampRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Location), global::Google.Cloud.Talent.V4Beta1.Location.Parser, new[]{ "LocationType", "PostalAddress", "LatLng", "RadiusMiles" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.RequestMetadata), global::Google.Cloud.Talent.V4Beta1.RequestMetadata.Parser, new[]{ "Domain", "SessionId", "UserId", "AllowMissingIds", "DeviceInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ResponseMetadata), global::Google.Cloud.Talent.V4Beta1.ResponseMetadata.Parser, new[]{ "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeviceInfo), global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Parser, new[]{ "DeviceType", "Id" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CustomAttribute), global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser, new[]{ "StringValues", "LongValues", "Filterable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SpellingCorrection), global::Google.Cloud.Talent.V4Beta1.SpellingCorrection.Parser, new[]{ "Corrected", "CorrectedText", "CorrectedHtml" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Parser, new[]{ "Entries", "AnnualizedBaseCompensationRange", "AnnualizedTotalCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType), typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry.Parser, new[]{ "Type", "Unit", "Amount", "Range", "Description", "ExpectedUnitsPerYear" }, new[]{ "CompensationAmount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange.Parser, new[]{ "MaxCompensation", "MinCompensation" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Certification), global::Google.Cloud.Talent.V4Beta1.Certification.Parser, new[]{ "DisplayName", "AcquireDate", "ExpireDate", "Authority", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Skill), global::Google.Cloud.Talent.V4Beta1.Skill.Parser, new[]{ "DisplayName", "LastUsedDate", "Level", "Context", "SkillNameSnippet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Interview), global::Google.Cloud.Talent.V4Beta1.Interview.Parser, new[]{ "Rating", "Outcome" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Rating), global::Google.Cloud.Talent.V4Beta1.Rating.Parser, new[]{ "Overall", "Min", "Max", "Interval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata), global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Parser, new[]{ "State", "StateDescription", "SuccessCount", "FailureCount", "TotalCount", "CreateTime", "UpdateTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -1090,7 +1090,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "location_type" field.</summary>
     public const int LocationTypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType locationType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType locationType_ = global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType.Unspecified;
     /// <summary>
     /// The type of a location, which corresponds to the address lines field of
     /// [google.type.PostalAddress][google.type.PostalAddress]. For example, "Downtown, Atlanta, GA, USA"
@@ -1178,7 +1178,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (LocationType != 0) hash ^= LocationType.GetHashCode();
+      if (LocationType != global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType.Unspecified) hash ^= LocationType.GetHashCode();
       if (postalAddress_ != null) hash ^= PostalAddress.GetHashCode();
       if (latLng_ != null) hash ^= LatLng.GetHashCode();
       if (RadiusMiles != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RadiusMiles);
@@ -1195,7 +1195,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (LocationType != 0) {
+      if (LocationType != global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LocationType);
       }
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (LocationType != 0) {
+      if (LocationType != global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LocationType);
       }
       if (postalAddress_ != null) {
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.LocationType != 0) {
+      if (other.LocationType != global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType.Unspecified) {
         LocationType = other.LocationType;
       }
       if (other.postalAddress_ != null) {
@@ -1845,7 +1845,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "device_type" field.</summary>
     public const int DeviceTypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType deviceType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType deviceType_ = global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType.Unspecified;
     /// <summary>
     /// Type of the device.
     /// </summary>
@@ -1893,7 +1893,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DeviceType != 0) hash ^= DeviceType.GetHashCode();
+      if (DeviceType != global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType.Unspecified) hash ^= DeviceType.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1908,7 +1908,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DeviceType != 0) {
+      if (DeviceType != global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) DeviceType);
       }
@@ -1924,7 +1924,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DeviceType != 0) {
+      if (DeviceType != global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeviceType);
       }
       if (Id.Length != 0) {
@@ -1941,7 +1941,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.DeviceType != 0) {
+      if (other.DeviceType != global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType.Unspecified) {
         DeviceType = other.DeviceType;
       }
       if (other.Id.Length != 0) {
@@ -2789,7 +2789,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 1;
-        private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType type_ = 0;
+        private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType type_ = global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType.Unspecified;
         /// <summary>
         /// Compensation type.
         ///
@@ -2805,7 +2805,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         /// <summary>Field number for the "unit" field.</summary>
         public const int UnitFieldNumber = 2;
-        private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit unit_ = 0;
+        private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit unit_ = global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit.Unspecified;
         /// <summary>
         /// Frequency of the specified amount.
         ///
@@ -2931,8 +2931,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Type != 0) hash ^= Type.GetHashCode();
-          if (Unit != 0) hash ^= Unit.GetHashCode();
+          if (Type != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType.Unspecified) hash ^= Type.GetHashCode();
+          if (Unit != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit.Unspecified) hash ^= Unit.GetHashCode();
           if (compensationAmountCase_ == CompensationAmountOneofCase.Amount) hash ^= Amount.GetHashCode();
           if (compensationAmountCase_ == CompensationAmountOneofCase.Range) hash ^= Range.GetHashCode();
           if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -2951,11 +2951,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Type);
           }
-          if (Unit != 0) {
+          if (Unit != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Unit);
           }
@@ -2982,10 +2982,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
-          if (Unit != 0) {
+          if (Unit != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
           }
           if (compensationAmountCase_ == CompensationAmountOneofCase.Amount) {
@@ -3011,10 +3011,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           if (other == null) {
             return;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType.Unspecified) {
             Type = other.Type;
           }
-          if (other.Unit != 0) {
+          if (other.Unit != global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit.Unspecified) {
             Unit = other.Unit;
           }
           if (other.Description.Length != 0) {
@@ -3634,7 +3634,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 3;
-    private global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel level_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel level_ = global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel.Unspecified;
     /// <summary>
     /// Skill proficiency level which indicates how proficient the candidate is at
     /// this skill.
@@ -3705,7 +3705,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       int hash = 1;
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (lastUsedDate_ != null) hash ^= LastUsedDate.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
+      if (Level != global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel.Unspecified) hash ^= Level.GetHashCode();
       if (Context.Length != 0) hash ^= Context.GetHashCode();
       if (SkillNameSnippet.Length != 0) hash ^= SkillNameSnippet.GetHashCode();
       if (_unknownFields != null) {
@@ -3729,7 +3729,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(18);
         output.WriteMessage(LastUsedDate);
       }
-      if (Level != 0) {
+      if (Level != global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Level);
       }
@@ -3755,7 +3755,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (lastUsedDate_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUsedDate);
       }
-      if (Level != 0) {
+      if (Level != global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
       }
       if (Context.Length != 0) {
@@ -3784,7 +3784,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         LastUsedDate.MergeFrom(other.LastUsedDate);
       }
-      if (other.Level != 0) {
+      if (other.Level != global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel.Unspecified) {
         Level = other.Level;
       }
       if (other.Context.Length != 0) {
@@ -3887,7 +3887,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "outcome" field.</summary>
     public const int OutcomeFieldNumber = 7;
-    private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified;
     /// <summary>
     /// Required. The overall decision resulting from this interview (positive, negative,
     /// nuetral).
@@ -3922,7 +3922,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (rating_ != null) hash ^= Rating.GetHashCode();
-      if (Outcome != 0) hash ^= Outcome.GetHashCode();
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) hash ^= Outcome.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3940,7 +3940,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(50);
         output.WriteMessage(Rating);
       }
-      if (Outcome != 0) {
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Outcome);
       }
@@ -3955,7 +3955,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (rating_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rating);
       }
-      if (Outcome != 0) {
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
       }
       if (_unknownFields != null) {
@@ -3975,7 +3975,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         Rating.MergeFrom(other.Rating);
       }
-      if (other.Outcome != 0) {
+      if (other.Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
         Outcome = other.Outcome;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4282,7 +4282,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State state_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State state_ = global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State.Unspecified;
     /// <summary>
     /// The state of a long running operation.
     /// </summary>
@@ -4422,7 +4422,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StateDescription.Length != 0) hash ^= StateDescription.GetHashCode();
       if (SuccessCount != 0) hash ^= SuccessCount.GetHashCode();
       if (FailureCount != 0) hash ^= FailureCount.GetHashCode();
@@ -4443,7 +4443,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -4483,7 +4483,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (StateDescription.Length != 0) {
@@ -4518,7 +4518,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Talent.V4Beta1.BatchOperationMetadata.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.StateDescription.Length != 0) {

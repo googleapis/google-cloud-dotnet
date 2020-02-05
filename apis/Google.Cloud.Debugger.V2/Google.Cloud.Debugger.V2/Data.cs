@@ -88,14 +88,14 @@ namespace Google.Cloud.Debugger.V2 {
             "ZXJcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.DevTools.Source.V1.SourceContextReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.FormatMessage), global::Google.Cloud.Debugger.V2.FormatMessage.Parser, new[]{ "Format", "Parameters" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.StatusMessage), global::Google.Cloud.Debugger.V2.StatusMessage.Parser, new[]{ "IsError", "RefersTo", "Description" }, null, new[]{ typeof(global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.SourceLocation), global::Google.Cloud.Debugger.V2.SourceLocation.Parser, new[]{ "Path", "Line", "Column" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.Variable), global::Google.Cloud.Debugger.V2.Variable.Parser, new[]{ "Name", "Value", "Type", "Members", "VarTableIndex", "Status" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.StackFrame), global::Google.Cloud.Debugger.V2.StackFrame.Parser, new[]{ "Function", "Location", "Arguments", "Locals" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.Breakpoint), global::Google.Cloud.Debugger.V2.Breakpoint.Parser, new[]{ "Id", "Action", "Location", "Condition", "Expressions", "LogMessageFormat", "LogLevel", "IsFinalState", "CreateTime", "FinalTime", "UserEmail", "Status", "StackFrames", "EvaluatedExpressions", "VariableTable", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action), typeof(global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.Debuggee), global::Google.Cloud.Debugger.V2.Debuggee.Parser, new[]{ "Id", "Project", "Uniquifier", "Description", "IsInactive", "AgentVersion", "IsDisabled", "Status", "SourceContexts", "ExtSourceContexts", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.FormatMessage), global::Google.Cloud.Debugger.V2.FormatMessage.Parser, new[]{ "Format", "Parameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.StatusMessage), global::Google.Cloud.Debugger.V2.StatusMessage.Parser, new[]{ "IsError", "RefersTo", "Description" }, null, new[]{ typeof(global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.SourceLocation), global::Google.Cloud.Debugger.V2.SourceLocation.Parser, new[]{ "Path", "Line", "Column" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.Variable), global::Google.Cloud.Debugger.V2.Variable.Parser, new[]{ "Name", "Value", "Type", "Members", "VarTableIndex", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.StackFrame), global::Google.Cloud.Debugger.V2.StackFrame.Parser, new[]{ "Function", "Location", "Arguments", "Locals" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.Breakpoint), global::Google.Cloud.Debugger.V2.Breakpoint.Parser, new[]{ "Id", "Action", "Location", "Condition", "Expressions", "LogMessageFormat", "LogLevel", "IsFinalState", "CreateTime", "FinalTime", "UserEmail", "Status", "StackFrames", "EvaluatedExpressions", "VariableTable", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action), typeof(global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.Debuggee), global::Google.Cloud.Debugger.V2.Debuggee.Parser, new[]{ "Id", "Project", "Uniquifier", "Description", "IsInactive", "AgentVersion", "IsDisabled", "Status", "SourceContexts", "ExtSourceContexts", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -327,7 +327,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     /// <summary>Field number for the "refers_to" field.</summary>
     public const int RefersToFieldNumber = 2;
-    private global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference refersTo_ = 0;
+    private global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference refersTo_ = global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference.Unspecified;
     /// <summary>
     /// Reference to which the message applies.
     /// </summary>
@@ -376,7 +376,7 @@ namespace Google.Cloud.Debugger.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (IsError != false) hash ^= IsError.GetHashCode();
-      if (RefersTo != 0) hash ^= RefersTo.GetHashCode();
+      if (RefersTo != global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference.Unspecified) hash ^= RefersTo.GetHashCode();
       if (description_ != null) hash ^= Description.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -395,7 +395,7 @@ namespace Google.Cloud.Debugger.V2 {
         output.WriteRawTag(8);
         output.WriteBool(IsError);
       }
-      if (RefersTo != 0) {
+      if (RefersTo != global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) RefersTo);
       }
@@ -414,7 +414,7 @@ namespace Google.Cloud.Debugger.V2 {
       if (IsError != false) {
         size += 1 + 1;
       }
-      if (RefersTo != 0) {
+      if (RefersTo != global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RefersTo);
       }
       if (description_ != null) {
@@ -434,7 +434,7 @@ namespace Google.Cloud.Debugger.V2 {
       if (other.IsError != false) {
         IsError = other.IsError;
       }
-      if (other.RefersTo != 0) {
+      if (other.RefersTo != global::Google.Cloud.Debugger.V2.StatusMessage.Types.Reference.Unspecified) {
         RefersTo = other.RefersTo;
       }
       if (other.description_ != null) {
@@ -1428,7 +1428,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     /// <summary>Field number for the "action" field.</summary>
     public const int ActionFieldNumber = 13;
-    private global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action action_ = 0;
+    private global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action action_ = global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture;
     /// <summary>
     /// Action that the agent should perform when the code at the
     /// breakpoint location is hit.
@@ -1510,7 +1510,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     /// <summary>Field number for the "log_level" field.</summary>
     public const int LogLevelFieldNumber = 15;
-    private global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel logLevel_ = 0;
+    private global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel logLevel_ = global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.Info;
     /// <summary>
     /// Indicates the severity of the log. Only relevant when action is `LOG`.
     /// </summary>
@@ -1668,7 +1668,7 @@ namespace Google.Cloud.Debugger.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 17;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 138);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 138);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// A set of custom breakpoint properties, populated by the agent, to be
@@ -1715,12 +1715,12 @@ namespace Google.Cloud.Debugger.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Action != 0) hash ^= Action.GetHashCode();
+      if (Action != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) hash ^= Action.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
       if (Condition.Length != 0) hash ^= Condition.GetHashCode();
       hash ^= expressions_.GetHashCode();
       if (LogMessageFormat.Length != 0) hash ^= LogMessageFormat.GetHashCode();
-      if (LogLevel != 0) hash ^= LogLevel.GetHashCode();
+      if (LogLevel != global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.Info) hash ^= LogLevel.GetHashCode();
       if (IsFinalState != false) hash ^= IsFinalState.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (finalTime_ != null) hash ^= FinalTime.GetHashCode();
@@ -1775,7 +1775,7 @@ namespace Google.Cloud.Debugger.V2 {
         output.WriteRawTag(98);
         output.WriteMessage(FinalTime);
       }
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
         output.WriteRawTag(104);
         output.WriteEnum((int) Action);
       }
@@ -1783,7 +1783,7 @@ namespace Google.Cloud.Debugger.V2 {
         output.WriteRawTag(114);
         output.WriteString(LogMessageFormat);
       }
-      if (LogLevel != 0) {
+      if (LogLevel != global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.Info) {
         output.WriteRawTag(120);
         output.WriteEnum((int) LogLevel);
       }
@@ -1803,7 +1803,7 @@ namespace Google.Cloud.Debugger.V2 {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (location_ != null) {
@@ -1816,7 +1816,7 @@ namespace Google.Cloud.Debugger.V2 {
       if (LogMessageFormat.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LogMessageFormat);
       }
-      if (LogLevel != 0) {
+      if (LogLevel != global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.Info) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LogLevel);
       }
       if (IsFinalState != false) {
@@ -1852,7 +1852,7 @@ namespace Google.Cloud.Debugger.V2 {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.Action != 0) {
+      if (other.Action != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
         Action = other.Action;
       }
       if (other.location_ != null) {
@@ -1868,7 +1868,7 @@ namespace Google.Cloud.Debugger.V2 {
       if (other.LogMessageFormat.Length != 0) {
         LogMessageFormat = other.LogMessageFormat;
       }
-      if (other.LogLevel != 0) {
+      if (other.LogLevel != global::Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.Info) {
         LogLevel = other.LogLevel;
       }
       if (other.IsFinalState != false) {
@@ -2244,7 +2244,7 @@ namespace Google.Cloud.Debugger.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 11;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 90);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// A set of custom debuggee properties, populated by the agent, to be

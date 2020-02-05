@@ -30,7 +30,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
     public sealed class GeneratedCloudTasksClientSnippets
     {
         /// <summary>Snippet for ListQueues</summary>
-        public void ListQueues_RequestObject()
+        public void ListQueuesRequestObject()
         {
             // Snippet: ListQueues(ListQueuesRequest, CallSettings)
             // Create client
@@ -79,7 +79,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListQueues</summary>
-        public async Task ListQueuesAsync_RequestObject()
+        public async Task ListQueuesRequestObjectAsync()
         {
             // Snippet: ListQueuesAsync(ListQueuesRequest, CallSettings)
             // Create client
@@ -218,7 +218,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListQueues</summary>
-        public void ListQueues_ResourceNames()
+        public void ListQueuesResourceNames()
         {
             // Snippet: ListQueues(LocationName, string, int?, CallSettings)
             // Create client
@@ -263,7 +263,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListQueues</summary>
-        public async Task ListQueuesAsync_ResourceNames()
+        public async Task ListQueuesResourceNamesAsync()
         {
             // Snippet: ListQueuesAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -308,7 +308,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetQueue</summary>
-        public void GetQueue_RequestObject()
+        public void GetQueueRequestObject()
         {
             // Snippet: GetQueue(GetQueueRequest, CallSettings)
             // Create client
@@ -324,7 +324,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetQueueAsync</summary>
-        public async Task GetQueueAsync_RequestObject()
+        public async Task GetQueueRequestObjectAsync()
         {
             // Snippet: GetQueueAsync(GetQueueRequest, CallSettings)
             // Additional: GetQueueAsync(GetQueueRequest, CancellationToken)
@@ -368,7 +368,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetQueue</summary>
-        public void GetQueue_ResourceNames()
+        public void GetQueueResourceNames()
         {
             // Snippet: GetQueue(QueueName, CallSettings)
             // Create client
@@ -381,7 +381,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetQueueAsync</summary>
-        public async Task GetQueueAsync_ResourceNames()
+        public async Task GetQueueResourceNamesAsync()
         {
             // Snippet: GetQueueAsync(QueueName, CallSettings)
             // Additional: GetQueueAsync(QueueName, CancellationToken)
@@ -395,7 +395,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateQueue</summary>
-        public void CreateQueue_RequestObject()
+        public void CreateQueueRequestObject()
         {
             // Snippet: CreateQueue(CreateQueueRequest, CallSettings)
             // Create client
@@ -412,7 +412,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateQueueAsync</summary>
-        public async Task CreateQueueAsync_RequestObject()
+        public async Task CreateQueueRequestObjectAsync()
         {
             // Snippet: CreateQueueAsync(CreateQueueRequest, CallSettings)
             // Additional: CreateQueueAsync(CreateQueueRequest, CancellationToken)
@@ -459,7 +459,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateQueue</summary>
-        public void CreateQueue_ResourceNames()
+        public void CreateQueueResourceNames()
         {
             // Snippet: CreateQueue(LocationName, Queue, CallSettings)
             // Create client
@@ -473,7 +473,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateQueueAsync</summary>
-        public async Task CreateQueueAsync_ResourceNames()
+        public async Task CreateQueueResourceNamesAsync()
         {
             // Snippet: CreateQueueAsync(LocationName, Queue, CallSettings)
             // Additional: CreateQueueAsync(LocationName, Queue, CancellationToken)
@@ -488,7 +488,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for UpdateQueue</summary>
-        public void UpdateQueue_RequestObject()
+        public void UpdateQueueRequestObject()
         {
             // Snippet: UpdateQueue(UpdateQueueRequest, CallSettings)
             // Create client
@@ -505,7 +505,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for UpdateQueueAsync</summary>
-        public async Task UpdateQueueAsync_RequestObject()
+        public async Task UpdateQueueRequestObjectAsync()
         {
             // Snippet: UpdateQueueAsync(UpdateQueueRequest, CallSettings)
             // Additional: UpdateQueueAsync(UpdateQueueRequest, CancellationToken)
@@ -552,7 +552,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteQueue</summary>
-        public void DeleteQueue_RequestObject()
+        public void DeleteQueueRequestObject()
         {
             // Snippet: DeleteQueue(DeleteQueueRequest, CallSettings)
             // Create client
@@ -568,7 +568,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteQueueAsync</summary>
-        public async Task DeleteQueueAsync_RequestObject()
+        public async Task DeleteQueueRequestObjectAsync()
         {
             // Snippet: DeleteQueueAsync(DeleteQueueRequest, CallSettings)
             // Additional: DeleteQueueAsync(DeleteQueueRequest, CancellationToken)
@@ -612,7 +612,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteQueue</summary>
-        public void DeleteQueue_ResourceNames()
+        public void DeleteQueueResourceNames()
         {
             // Snippet: DeleteQueue(QueueName, CallSettings)
             // Create client
@@ -625,7 +625,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteQueueAsync</summary>
-        public async Task DeleteQueueAsync_ResourceNames()
+        public async Task DeleteQueueResourceNamesAsync()
         {
             // Snippet: DeleteQueueAsync(QueueName, CallSettings)
             // Additional: DeleteQueueAsync(QueueName, CancellationToken)
@@ -639,7 +639,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PurgeQueue</summary>
-        public void PurgeQueue_RequestObject()
+        public void PurgeQueueRequestObject()
         {
             // Snippet: PurgeQueue(PurgeQueueRequest, CallSettings)
             // Create client
@@ -655,7 +655,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PurgeQueueAsync</summary>
-        public async Task PurgeQueueAsync_RequestObject()
+        public async Task PurgeQueueRequestObjectAsync()
         {
             // Snippet: PurgeQueueAsync(PurgeQueueRequest, CallSettings)
             // Additional: PurgeQueueAsync(PurgeQueueRequest, CancellationToken)
@@ -699,7 +699,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PurgeQueue</summary>
-        public void PurgeQueue_ResourceNames()
+        public void PurgeQueueResourceNames()
         {
             // Snippet: PurgeQueue(QueueName, CallSettings)
             // Create client
@@ -712,7 +712,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PurgeQueueAsync</summary>
-        public async Task PurgeQueueAsync_ResourceNames()
+        public async Task PurgeQueueResourceNamesAsync()
         {
             // Snippet: PurgeQueueAsync(QueueName, CallSettings)
             // Additional: PurgeQueueAsync(QueueName, CancellationToken)
@@ -726,7 +726,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PauseQueue</summary>
-        public void PauseQueue_RequestObject()
+        public void PauseQueueRequestObject()
         {
             // Snippet: PauseQueue(PauseQueueRequest, CallSettings)
             // Create client
@@ -742,7 +742,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PauseQueueAsync</summary>
-        public async Task PauseQueueAsync_RequestObject()
+        public async Task PauseQueueRequestObjectAsync()
         {
             // Snippet: PauseQueueAsync(PauseQueueRequest, CallSettings)
             // Additional: PauseQueueAsync(PauseQueueRequest, CancellationToken)
@@ -786,7 +786,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PauseQueue</summary>
-        public void PauseQueue_ResourceNames()
+        public void PauseQueueResourceNames()
         {
             // Snippet: PauseQueue(QueueName, CallSettings)
             // Create client
@@ -799,7 +799,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for PauseQueueAsync</summary>
-        public async Task PauseQueueAsync_ResourceNames()
+        public async Task PauseQueueResourceNamesAsync()
         {
             // Snippet: PauseQueueAsync(QueueName, CallSettings)
             // Additional: PauseQueueAsync(QueueName, CancellationToken)
@@ -813,7 +813,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ResumeQueue</summary>
-        public void ResumeQueue_RequestObject()
+        public void ResumeQueueRequestObject()
         {
             // Snippet: ResumeQueue(ResumeQueueRequest, CallSettings)
             // Create client
@@ -829,7 +829,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ResumeQueueAsync</summary>
-        public async Task ResumeQueueAsync_RequestObject()
+        public async Task ResumeQueueRequestObjectAsync()
         {
             // Snippet: ResumeQueueAsync(ResumeQueueRequest, CallSettings)
             // Additional: ResumeQueueAsync(ResumeQueueRequest, CancellationToken)
@@ -873,7 +873,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ResumeQueue</summary>
-        public void ResumeQueue_ResourceNames()
+        public void ResumeQueueResourceNames()
         {
             // Snippet: ResumeQueue(QueueName, CallSettings)
             // Create client
@@ -886,7 +886,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ResumeQueueAsync</summary>
-        public async Task ResumeQueueAsync_ResourceNames()
+        public async Task ResumeQueueResourceNamesAsync()
         {
             // Snippet: ResumeQueueAsync(QueueName, CallSettings)
             // Additional: ResumeQueueAsync(QueueName, CancellationToken)
@@ -900,7 +900,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicyRequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
@@ -917,7 +917,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
@@ -962,7 +962,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
@@ -975,7 +975,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_ResourceNames()
+        public async Task GetIamPolicyResourceNamesAsync()
         {
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
@@ -989,7 +989,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicyRequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
@@ -1067,7 +1067,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_ResourceNames()
+        public async Task SetIamPolicyResourceNamesAsync()
         {
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
@@ -1082,7 +1082,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissionsRequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
@@ -1099,7 +1099,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
+        public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
@@ -1146,7 +1146,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
@@ -1160,7 +1160,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_ResourceNames()
+        public async Task TestIamPermissionsResourceNamesAsync()
         {
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
@@ -1175,7 +1175,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListTasks</summary>
-        public void ListTasks_RequestObject()
+        public void ListTasksRequestObject()
         {
             // Snippet: ListTasks(ListTasksRequest, CallSettings)
             // Create client
@@ -1224,7 +1224,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListTasks</summary>
-        public async Task ListTasksAsync_RequestObject()
+        public async Task ListTasksRequestObjectAsync()
         {
             // Snippet: ListTasksAsync(ListTasksRequest, CallSettings)
             // Create client
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListTasks</summary>
-        public void ListTasks_ResourceNames()
+        public void ListTasksResourceNames()
         {
             // Snippet: ListTasks(QueueName, string, int?, CallSettings)
             // Create client
@@ -1408,7 +1408,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for ListTasks</summary>
-        public async Task ListTasksAsync_ResourceNames()
+        public async Task ListTasksResourceNamesAsync()
         {
             // Snippet: ListTasksAsync(QueueName, string, int?, CallSettings)
             // Create client
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetTask</summary>
-        public void GetTask_RequestObject()
+        public void GetTaskRequestObject()
         {
             // Snippet: GetTask(GetTaskRequest, CallSettings)
             // Create client
@@ -1470,7 +1470,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetTaskAsync</summary>
-        public async Task GetTaskAsync_RequestObject()
+        public async Task GetTaskRequestObjectAsync()
         {
             // Snippet: GetTaskAsync(GetTaskRequest, CallSettings)
             // Additional: GetTaskAsync(GetTaskRequest, CancellationToken)
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetTask</summary>
-        public void GetTask_ResourceNames()
+        public void GetTaskResourceNames()
         {
             // Snippet: GetTask(TaskName, CallSettings)
             // Create client
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for GetTaskAsync</summary>
-        public async Task GetTaskAsync_ResourceNames()
+        public async Task GetTaskResourceNamesAsync()
         {
             // Snippet: GetTaskAsync(TaskName, CallSettings)
             // Additional: GetTaskAsync(TaskName, CancellationToken)
@@ -1542,7 +1542,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateTask</summary>
-        public void CreateTask_RequestObject()
+        public void CreateTaskRequestObject()
         {
             // Snippet: CreateTask(CreateTaskRequest, CallSettings)
             // Create client
@@ -1560,7 +1560,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateTaskAsync</summary>
-        public async Task CreateTaskAsync_RequestObject()
+        public async Task CreateTaskRequestObjectAsync()
         {
             // Snippet: CreateTaskAsync(CreateTaskRequest, CallSettings)
             // Additional: CreateTaskAsync(CreateTaskRequest, CancellationToken)
@@ -1608,7 +1608,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateTask</summary>
-        public void CreateTask_ResourceNames()
+        public void CreateTaskResourceNames()
         {
             // Snippet: CreateTask(QueueName, Task, CallSettings)
             // Create client
@@ -1622,7 +1622,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for CreateTaskAsync</summary>
-        public async Task CreateTaskAsync_ResourceNames()
+        public async Task CreateTaskResourceNamesAsync()
         {
             // Snippet: CreateTaskAsync(QueueName, Task, CallSettings)
             // Additional: CreateTaskAsync(QueueName, Task, CancellationToken)
@@ -1637,7 +1637,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteTask</summary>
-        public void DeleteTask_RequestObject()
+        public void DeleteTaskRequestObject()
         {
             // Snippet: DeleteTask(DeleteTaskRequest, CallSettings)
             // Create client
@@ -1653,7 +1653,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteTaskAsync</summary>
-        public async Task DeleteTaskAsync_RequestObject()
+        public async Task DeleteTaskRequestObjectAsync()
         {
             // Snippet: DeleteTaskAsync(DeleteTaskRequest, CallSettings)
             // Additional: DeleteTaskAsync(DeleteTaskRequest, CancellationToken)
@@ -1697,7 +1697,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteTask</summary>
-        public void DeleteTask_ResourceNames()
+        public void DeleteTaskResourceNames()
         {
             // Snippet: DeleteTask(TaskName, CallSettings)
             // Create client
@@ -1710,7 +1710,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for DeleteTaskAsync</summary>
-        public async Task DeleteTaskAsync_ResourceNames()
+        public async Task DeleteTaskResourceNamesAsync()
         {
             // Snippet: DeleteTaskAsync(TaskName, CallSettings)
             // Additional: DeleteTaskAsync(TaskName, CancellationToken)
@@ -1724,7 +1724,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for RunTask</summary>
-        public void RunTask_RequestObject()
+        public void RunTaskRequestObject()
         {
             // Snippet: RunTask(RunTaskRequest, CallSettings)
             // Create client
@@ -1741,7 +1741,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for RunTaskAsync</summary>
-        public async Task RunTaskAsync_RequestObject()
+        public async Task RunTaskRequestObjectAsync()
         {
             // Snippet: RunTaskAsync(RunTaskRequest, CallSettings)
             // Additional: RunTaskAsync(RunTaskRequest, CancellationToken)
@@ -1786,7 +1786,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for RunTask</summary>
-        public void RunTask_ResourceNames()
+        public void RunTaskResourceNames()
         {
             // Snippet: RunTask(TaskName, CallSettings)
             // Create client
@@ -1799,7 +1799,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         }
 
         /// <summary>Snippet for RunTaskAsync</summary>
-        public async Task RunTaskAsync_ResourceNames()
+        public async Task RunTaskResourceNamesAsync()
         {
             // Snippet: RunTaskAsync(TaskName, CallSettings)
             // Additional: RunTaskAsync(TaskName, CancellationToken)

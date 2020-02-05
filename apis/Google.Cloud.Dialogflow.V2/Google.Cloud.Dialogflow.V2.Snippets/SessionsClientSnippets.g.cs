@@ -24,7 +24,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     public sealed class GeneratedSessionsClientSnippets
     {
         /// <summary>Snippet for DetectIntent</summary>
-        public void DetectIntent_RequestObject()
+        public void DetectIntentRequestObject()
         {
             // Snippet: DetectIntent(DetectIntentRequest, CallSettings)
             // Create client
@@ -32,7 +32,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             DetectIntentRequest request = new DetectIntentRequest
             {
-                Session = "",
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
@@ -44,7 +44,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DetectIntentAsync</summary>
-        public async Task DetectIntentAsync_RequestObject()
+        public async Task DetectIntentRequestObjectAsync()
         {
             // Snippet: DetectIntentAsync(DetectIntentRequest, CallSettings)
             // Additional: DetectIntentAsync(DetectIntentRequest, CancellationToken)
@@ -53,7 +53,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             DetectIntentRequest request = new DetectIntentRequest
             {
-                Session = "",
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
@@ -71,7 +71,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize request argument(s)
-            string session = "";
+            string session = "projects/[PROJECT]/locations/[LOCATION]/agent/sessions/[SESSION]";
             QueryInput queryInput = new QueryInput();
             // Make the request
             DetectIntentResponse response = sessionsClient.DetectIntent(session, queryInput);
@@ -86,7 +86,36 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionsClient sessionsClient = await SessionsClient.CreateAsync();
             // Initialize request argument(s)
-            string session = "";
+            string session = "projects/[PROJECT]/locations/[LOCATION]/agent/sessions/[SESSION]";
+            QueryInput queryInput = new QueryInput();
+            // Make the request
+            DetectIntentResponse response = await sessionsClient.DetectIntentAsync(session, queryInput);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DetectIntent</summary>
+        public void DetectIntentResourceNames()
+        {
+            // Snippet: DetectIntent(SessionName, QueryInput, CallSettings)
+            // Create client
+            SessionsClient sessionsClient = SessionsClient.Create();
+            // Initialize request argument(s)
+            SessionName session = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            QueryInput queryInput = new QueryInput();
+            // Make the request
+            DetectIntentResponse response = sessionsClient.DetectIntent(session, queryInput);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DetectIntentAsync</summary>
+        public async Task DetectIntentResourceNamesAsync()
+        {
+            // Snippet: DetectIntentAsync(SessionName, QueryInput, CallSettings)
+            // Additional: DetectIntentAsync(SessionName, QueryInput, CancellationToken)
+            // Create client
+            SessionsClient sessionsClient = await SessionsClient.CreateAsync();
+            // Initialize request argument(s)
+            SessionName session = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
             QueryInput queryInput = new QueryInput();
             // Make the request
             DetectIntentResponse response = await sessionsClient.DetectIntentAsync(session, queryInput);

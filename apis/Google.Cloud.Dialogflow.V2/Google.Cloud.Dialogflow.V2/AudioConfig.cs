@@ -74,13 +74,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             "b2dmbG93LlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechContext), global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechContext), global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null)
           }));
     }
     #endregion
@@ -724,7 +724,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "audio_encoding" field.</summary>
     public const int AudioEncodingFieldNumber = 1;
-    private global::Google.Cloud.Dialogflow.V2.AudioEncoding audioEncoding_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.AudioEncoding audioEncoding_ = global::Google.Cloud.Dialogflow.V2.AudioEncoding.Unspecified;
     /// <summary>
     /// Required. Audio encoding of the audio content to process.
     /// </summary>
@@ -855,7 +855,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "model_variant" field.</summary>
     public const int ModelVariantFieldNumber = 10;
-    private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant modelVariant_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant modelVariant_ = global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified;
     /// <summary>
     /// Optional. Which variant of the [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
     /// </summary>
@@ -918,14 +918,14 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (AudioEncoding != 0) hash ^= AudioEncoding.GetHashCode();
+      if (AudioEncoding != global::Google.Cloud.Dialogflow.V2.AudioEncoding.Unspecified) hash ^= AudioEncoding.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (EnableWordInfo != false) hash ^= EnableWordInfo.GetHashCode();
       hash ^= phraseHints_.GetHashCode();
       hash ^= speechContexts_.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
-      if (ModelVariant != 0) hash ^= ModelVariant.GetHashCode();
+      if (ModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) hash ^= ModelVariant.GetHashCode();
       if (SingleUtterance != false) hash ^= SingleUtterance.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -940,7 +940,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (AudioEncoding != 0) {
+      if (AudioEncoding != global::Google.Cloud.Dialogflow.V2.AudioEncoding.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) AudioEncoding);
       }
@@ -961,7 +961,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(64);
         output.WriteBool(SingleUtterance);
       }
-      if (ModelVariant != 0) {
+      if (ModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
         output.WriteRawTag(80);
         output.WriteEnum((int) ModelVariant);
       }
@@ -978,7 +978,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (AudioEncoding != 0) {
+      if (AudioEncoding != global::Google.Cloud.Dialogflow.V2.AudioEncoding.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AudioEncoding);
       }
       if (SampleRateHertz != 0) {
@@ -995,7 +995,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Model.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
-      if (ModelVariant != 0) {
+      if (ModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelVariant);
       }
       if (SingleUtterance != false) {
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other == null) {
         return;
       }
-      if (other.AudioEncoding != 0) {
+      if (other.AudioEncoding != global::Google.Cloud.Dialogflow.V2.AudioEncoding.Unspecified) {
         AudioEncoding = other.AudioEncoding;
       }
       if (other.SampleRateHertz != 0) {
@@ -1029,7 +1029,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.Model.Length != 0) {
         Model = other.Model;
       }
-      if (other.ModelVariant != 0) {
+      if (other.ModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
         ModelVariant = other.ModelVariant;
       }
       if (other.SingleUtterance != false) {
@@ -1144,7 +1144,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "ssml_gender" field.</summary>
     public const int SsmlGenderFieldNumber = 2;
-    private global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender ssmlGender_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender ssmlGender_ = global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender.Unspecified;
     /// <summary>
     /// Optional. The preferred gender of the voice. If not set, the service will
     /// choose a voice based on the other parameters such as language_code and
@@ -1182,7 +1182,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (SsmlGender != 0) hash ^= SsmlGender.GetHashCode();
+      if (SsmlGender != global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender.Unspecified) hash ^= SsmlGender.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1200,7 +1200,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (SsmlGender != 0) {
+      if (SsmlGender != global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) SsmlGender);
       }
@@ -1215,7 +1215,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (SsmlGender != 0) {
+      if (SsmlGender != global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SsmlGender);
       }
       if (_unknownFields != null) {
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.SsmlGender != 0) {
+      if (other.SsmlGender != global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender.Unspecified) {
         SsmlGender = other.SsmlGender;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1574,7 +1574,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "audio_encoding" field.</summary>
     public const int AudioEncodingFieldNumber = 1;
-    private global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding audioEncoding_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding audioEncoding_ = global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding.Unspecified;
     /// <summary>
     /// Required. Audio encoding of the synthesized audio content.
     /// </summary>
@@ -1640,7 +1640,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (AudioEncoding != 0) hash ^= AudioEncoding.GetHashCode();
+      if (AudioEncoding != global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding.Unspecified) hash ^= AudioEncoding.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
       if (synthesizeSpeechConfig_ != null) hash ^= SynthesizeSpeechConfig.GetHashCode();
       if (_unknownFields != null) {
@@ -1656,7 +1656,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (AudioEncoding != 0) {
+      if (AudioEncoding != global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) AudioEncoding);
       }
@@ -1676,7 +1676,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (AudioEncoding != 0) {
+      if (AudioEncoding != global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AudioEncoding);
       }
       if (SampleRateHertz != 0) {
@@ -1696,7 +1696,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other == null) {
         return;
       }
-      if (other.AudioEncoding != 0) {
+      if (other.AudioEncoding != global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding.Unspecified) {
         AudioEncoding = other.AudioEncoding;
       }
       if (other.SampleRateHertz != 0) {

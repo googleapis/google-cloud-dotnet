@@ -54,7 +54,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
             "R29vZ2xlOjpDbG91ZDo6Q29udGFpbmVyQW5hbHlzaXM6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null));
+          new pbr::GeneratedClrTypeInfo(null, null, null));
     }
     #endregion
 

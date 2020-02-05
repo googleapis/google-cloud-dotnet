@@ -50,11 +50,11 @@ namespace Google.Cloud.Spanner.V1 {
             "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null, null)
           }));
     }
     #endregion

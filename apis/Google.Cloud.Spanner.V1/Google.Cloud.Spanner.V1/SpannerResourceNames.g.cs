@@ -283,7 +283,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database);
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
             set => Database = value?.ToString() ?? "";
         }
     }
@@ -295,7 +295,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database);
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
             set => Database = value?.ToString() ?? "";
         }
     }
@@ -307,7 +307,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public gcsv::SessionName SessionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SessionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SessionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -319,7 +319,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public gcsv::SessionName SessionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SessionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SessionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -331,7 +331,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database);
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
             set => Database = value?.ToString() ?? "";
         }
     }
@@ -343,7 +343,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public gcsv::SessionName SessionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SessionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SessionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -355,7 +355,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -367,7 +367,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -379,7 +379,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -391,7 +391,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -403,7 +403,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -415,7 +415,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -427,7 +427,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }
@@ -439,7 +439,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionAsSessionName
         {
-            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session);
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
         }
     }

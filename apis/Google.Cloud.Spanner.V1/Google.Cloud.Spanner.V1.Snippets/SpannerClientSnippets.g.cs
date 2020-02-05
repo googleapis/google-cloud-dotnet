@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
     public sealed class GeneratedSpannerClientSnippets
     {
         /// <summary>Snippet for CreateSession</summary>
-        public void CreateSession_RequestObject()
+        public void CreateSessionRequestObject()
         {
             // Snippet: CreateSession(CreateSessionRequest, CallSettings)
             // Create client
@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for CreateSessionAsync</summary>
-        public async Task CreateSessionAsync_RequestObject()
+        public async Task CreateSessionRequestObjectAsync()
         {
             // Snippet: CreateSessionAsync(CreateSessionRequest, CallSettings)
             // Additional: CreateSessionAsync(CreateSessionRequest, CancellationToken)
@@ -93,7 +93,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for CreateSession</summary>
-        public void CreateSession_ResourceNames()
+        public void CreateSessionResourceNames()
         {
             // Snippet: CreateSession(DatabaseName, CallSettings)
             // Create client
@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for CreateSessionAsync</summary>
-        public async Task CreateSessionAsync_ResourceNames()
+        public async Task CreateSessionResourceNamesAsync()
         {
             // Snippet: CreateSessionAsync(DatabaseName, CallSettings)
             // Additional: CreateSessionAsync(DatabaseName, CancellationToken)
@@ -120,7 +120,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateSessions</summary>
-        public void BatchCreateSessions_RequestObject()
+        public void BatchCreateSessionsRequestObject()
         {
             // Snippet: BatchCreateSessions(BatchCreateSessionsRequest, CallSettings)
             // Create client
@@ -138,7 +138,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateSessionsAsync</summary>
-        public async Task BatchCreateSessionsAsync_RequestObject()
+        public async Task BatchCreateSessionsRequestObjectAsync()
         {
             // Snippet: BatchCreateSessionsAsync(BatchCreateSessionsRequest, CallSettings)
             // Additional: BatchCreateSessionsAsync(BatchCreateSessionsRequest, CancellationToken)
@@ -186,7 +186,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateSessions</summary>
-        public void BatchCreateSessions_ResourceNames()
+        public void BatchCreateSessionsResourceNames()
         {
             // Snippet: BatchCreateSessions(DatabaseName, int, CallSettings)
             // Create client
@@ -200,7 +200,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateSessionsAsync</summary>
-        public async Task BatchCreateSessionsAsync_ResourceNames()
+        public async Task BatchCreateSessionsResourceNamesAsync()
         {
             // Snippet: BatchCreateSessionsAsync(DatabaseName, int, CallSettings)
             // Additional: BatchCreateSessionsAsync(DatabaseName, int, CancellationToken)
@@ -215,7 +215,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for GetSession</summary>
-        public void GetSession_RequestObject()
+        public void GetSessionRequestObject()
         {
             // Snippet: GetSession(GetSessionRequest, CallSettings)
             // Create client
@@ -231,7 +231,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for GetSessionAsync</summary>
-        public async Task GetSessionAsync_RequestObject()
+        public async Task GetSessionRequestObjectAsync()
         {
             // Snippet: GetSessionAsync(GetSessionRequest, CallSettings)
             // Additional: GetSessionAsync(GetSessionRequest, CancellationToken)
@@ -275,7 +275,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for GetSession</summary>
-        public void GetSession_ResourceNames()
+        public void GetSessionResourceNames()
         {
             // Snippet: GetSession(SessionName, CallSettings)
             // Create client
@@ -288,7 +288,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for GetSessionAsync</summary>
-        public async Task GetSessionAsync_ResourceNames()
+        public async Task GetSessionResourceNamesAsync()
         {
             // Snippet: GetSessionAsync(SessionName, CallSettings)
             // Additional: GetSessionAsync(SessionName, CancellationToken)
@@ -302,7 +302,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ListSessions</summary>
-        public void ListSessions_RequestObject()
+        public void ListSessionsRequestObject()
         {
             // Snippet: ListSessions(ListSessionsRequest, CallSettings)
             // Create client
@@ -351,7 +351,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ListSessions</summary>
-        public async Task ListSessionsAsync_RequestObject()
+        public async Task ListSessionsRequestObjectAsync()
         {
             // Snippet: ListSessionsAsync(ListSessionsRequest, CallSettings)
             // Create client
@@ -490,7 +490,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ListSessions</summary>
-        public void ListSessions_ResourceNames()
+        public void ListSessionsResourceNames()
         {
             // Snippet: ListSessions(DatabaseName, string, int?, CallSettings)
             // Create client
@@ -535,7 +535,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ListSessions</summary>
-        public async Task ListSessionsAsync_ResourceNames()
+        public async Task ListSessionsResourceNamesAsync()
         {
             // Snippet: ListSessionsAsync(DatabaseName, string, int?, CallSettings)
             // Create client
@@ -580,7 +580,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteSession</summary>
-        public void DeleteSession_RequestObject()
+        public void DeleteSessionRequestObject()
         {
             // Snippet: DeleteSession(DeleteSessionRequest, CallSettings)
             // Create client
@@ -596,7 +596,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteSessionAsync</summary>
-        public async Task DeleteSessionAsync_RequestObject()
+        public async Task DeleteSessionRequestObjectAsync()
         {
             // Snippet: DeleteSessionAsync(DeleteSessionRequest, CallSettings)
             // Additional: DeleteSessionAsync(DeleteSessionRequest, CancellationToken)
@@ -640,7 +640,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteSession</summary>
-        public void DeleteSession_ResourceNames()
+        public void DeleteSessionResourceNames()
         {
             // Snippet: DeleteSession(SessionName, CallSettings)
             // Create client
@@ -653,7 +653,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteSessionAsync</summary>
-        public async Task DeleteSessionAsync_ResourceNames()
+        public async Task DeleteSessionResourceNamesAsync()
         {
             // Snippet: DeleteSessionAsync(SessionName, CallSettings)
             // Additional: DeleteSessionAsync(SessionName, CancellationToken)
@@ -667,7 +667,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ExecuteSql</summary>
-        public void ExecuteSql_RequestObject()
+        public void ExecuteSqlRequestObject()
         {
             // Snippet: ExecuteSql(ExecuteSqlRequest, CallSettings)
             // Create client
@@ -697,7 +697,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ExecuteSqlAsync</summary>
-        public async Task ExecuteSqlAsync_RequestObject()
+        public async Task ExecuteSqlRequestObjectAsync()
         {
             // Snippet: ExecuteSqlAsync(ExecuteSqlRequest, CallSettings)
             // Additional: ExecuteSqlAsync(ExecuteSqlRequest, CancellationToken)
@@ -728,7 +728,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ExecuteStreamingSql</summary>
-        public async Task ExecuteStreamingSql_RequestObject()
+        public async Task ExecuteStreamingSqlRequestObject()
         {
             // Snippet: ExecuteStreamingSql(ExecuteSqlRequest, CallSettings)
             // Create client
@@ -768,7 +768,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ExecuteBatchDml</summary>
-        public void ExecuteBatchDml_RequestObject()
+        public void ExecuteBatchDmlRequestObject()
         {
             // Snippet: ExecuteBatchDml(ExecuteBatchDmlRequest, CallSettings)
             // Create client
@@ -790,7 +790,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ExecuteBatchDmlAsync</summary>
-        public async Task ExecuteBatchDmlAsync_RequestObject()
+        public async Task ExecuteBatchDmlRequestObjectAsync()
         {
             // Snippet: ExecuteBatchDmlAsync(ExecuteBatchDmlRequest, CallSettings)
             // Additional: ExecuteBatchDmlAsync(ExecuteBatchDmlRequest, CancellationToken)
@@ -813,7 +813,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for Read</summary>
-        public void Read_RequestObject()
+        public void ReadRequestObject()
         {
             // Snippet: Read(ReadRequest, CallSettings)
             // Create client
@@ -837,7 +837,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for ReadAsync</summary>
-        public async Task ReadAsync_RequestObject()
+        public async Task ReadRequestObjectAsync()
         {
             // Snippet: ReadAsync(ReadRequest, CallSettings)
             // Additional: ReadAsync(ReadRequest, CancellationToken)
@@ -862,7 +862,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for StreamingRead</summary>
-        public async Task StreamingRead_RequestObject()
+        public async Task StreamingReadRequestObject()
         {
             // Snippet: StreamingRead(ReadRequest, CallSettings)
             // Create client
@@ -896,7 +896,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction_RequestObject()
+        public void BeginTransactionRequestObject()
         {
             // Snippet: BeginTransaction(BeginTransactionRequest, CallSettings)
             // Create client
@@ -913,7 +913,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync_RequestObject()
+        public async Task BeginTransactionRequestObjectAsync()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest, CallSettings)
             // Additional: BeginTransactionAsync(BeginTransactionRequest, CancellationToken)
@@ -960,7 +960,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction_ResourceNames()
+        public void BeginTransactionResourceNames()
         {
             // Snippet: BeginTransaction(SessionName, TransactionOptions, CallSettings)
             // Create client
@@ -974,7 +974,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync_ResourceNames()
+        public async Task BeginTransactionResourceNamesAsync()
         {
             // Snippet: BeginTransactionAsync(SessionName, TransactionOptions, CallSettings)
             // Additional: BeginTransactionAsync(SessionName, TransactionOptions, CancellationToken)
@@ -989,7 +989,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit_RequestObject()
+        public void CommitRequestObject()
         {
             // Snippet: Commit(CommitRequest, CallSettings)
             // Create client
@@ -1008,7 +1008,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for CommitAsync</summary>
-        public async Task CommitAsync_RequestObject()
+        public async Task CommitRequestObjectAsync()
         {
             // Snippet: CommitAsync(CommitRequest, CallSettings)
             // Additional: CommitAsync(CommitRequest, CancellationToken)
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit1_ResourceNames()
+        public void Commit1ResourceNames()
         {
             // Snippet: Commit(SessionName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
@@ -1074,7 +1074,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for CommitAsync</summary>
-        public async Task Commit1Async_ResourceNames()
+        public async Task Commit1ResourceNamesAsync()
         {
             // Snippet: CommitAsync(SessionName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Additional: CommitAsync(SessionName, ByteString, IEnumerable<Mutation>, CancellationToken)
@@ -1121,7 +1121,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit2_ResourceNames()
+        public void Commit2ResourceNames()
         {
             // Snippet: Commit(SessionName, TransactionOptions, IEnumerable<Mutation>, CallSettings)
             // Create client
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for CommitAsync</summary>
-        public async Task Commit2Async_ResourceNames()
+        public async Task Commit2ResourceNamesAsync()
         {
             // Snippet: CommitAsync(SessionName, TransactionOptions, IEnumerable<Mutation>, CallSettings)
             // Additional: CommitAsync(SessionName, TransactionOptions, IEnumerable<Mutation>, CancellationToken)
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for Rollback</summary>
-        public void Rollback_RequestObject()
+        public void RollbackRequestObject()
         {
             // Snippet: Rollback(RollbackRequest, CallSettings)
             // Create client
@@ -1169,7 +1169,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync_RequestObject()
+        public async Task RollbackRequestObjectAsync()
         {
             // Snippet: RollbackAsync(RollbackRequest, CallSettings)
             // Additional: RollbackAsync(RollbackRequest, CancellationToken)
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for Rollback</summary>
-        public void Rollback_ResourceNames()
+        public void RollbackResourceNames()
         {
             // Snippet: Rollback(SessionName, ByteString, CallSettings)
             // Create client
@@ -1230,7 +1230,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync_ResourceNames()
+        public async Task RollbackResourceNamesAsync()
         {
             // Snippet: RollbackAsync(SessionName, ByteString, CallSettings)
             // Additional: RollbackAsync(SessionName, ByteString, CancellationToken)
@@ -1245,7 +1245,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for PartitionQuery</summary>
-        public void PartitionQuery_RequestObject()
+        public void PartitionQueryRequestObject()
         {
             // Snippet: PartitionQuery(PartitionQueryRequest, CallSettings)
             // Create client
@@ -1272,7 +1272,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for PartitionQueryAsync</summary>
-        public async Task PartitionQueryAsync_RequestObject()
+        public async Task PartitionQueryRequestObjectAsync()
         {
             // Snippet: PartitionQueryAsync(PartitionQueryRequest, CallSettings)
             // Additional: PartitionQueryAsync(PartitionQueryRequest, CancellationToken)
@@ -1300,7 +1300,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for PartitionRead</summary>
-        public void PartitionRead_RequestObject()
+        public void PartitionReadRequestObject()
         {
             // Snippet: PartitionRead(PartitionReadRequest, CallSettings)
             // Create client
@@ -1322,7 +1322,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         }
 
         /// <summary>Snippet for PartitionReadAsync</summary>
-        public async Task PartitionReadAsync_RequestObject()
+        public async Task PartitionReadRequestObjectAsync()
         {
             // Snippet: PartitionReadAsync(PartitionReadRequest, CallSettings)
             // Additional: PartitionReadAsync(PartitionReadRequest, CancellationToken)

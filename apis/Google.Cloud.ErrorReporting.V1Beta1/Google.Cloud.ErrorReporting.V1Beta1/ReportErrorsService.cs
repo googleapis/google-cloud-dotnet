@@ -58,10 +58,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "ZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.Parser, new[]{ "ProjectName", "Event" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.Parser, new[]{ "ProjectName", "Event" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null, null)
           }));
     }
     #endregion

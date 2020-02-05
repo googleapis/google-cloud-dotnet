@@ -118,17 +118,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "Z1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment), typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "TimedCountDuration", "Alignment", "AlignmentTime", "Order", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser, new[]{ "ErrorGroupStats", "NextPageToken", "TimeRangeBegin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats.Parser, new[]{ "Group", "Count", "AffectedUsersCount", "TimedCounts", "FirstSeenTime", "LastSeenTime", "AffectedServices", "NumAffectedServices", "Representative" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount), global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount.Parser, new[]{ "Count", "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser, new[]{ "ErrorEvents", "NextPageToken", "TimeRangeBegin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange), global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Parser, new[]{ "Period" }, null, new[]{ typeof(global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser, new[]{ "ProjectName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment), typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "TimedCountDuration", "Alignment", "AlignmentTime", "Order", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser, new[]{ "ErrorGroupStats", "NextPageToken", "TimeRangeBegin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats.Parser, new[]{ "Group", "Count", "AffectedUsersCount", "TimedCounts", "FirstSeenTime", "LastSeenTime", "AffectedServices", "NumAffectedServices", "Representative" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount), global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount.Parser, new[]{ "Count", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser, new[]{ "ErrorEvents", "NextPageToken", "TimeRangeBegin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange), global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Parser, new[]{ "Period" }, null, new[]{ typeof(global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser, new[]{ "ProjectName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -325,7 +325,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     /// <summary>Field number for the "alignment" field.</summary>
     public const int AlignmentFieldNumber = 7;
-    private global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment alignment_ = 0;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment alignment_ = global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment.ErrorCountAlignmentUnspecified;
     /// <summary>
     /// Optional. The alignment of the timed counts to be returned.
     /// Default is `ALIGNMENT_EQUAL_AT_END`.
@@ -355,7 +355,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     /// <summary>Field number for the "order" field.</summary>
     public const int OrderFieldNumber = 9;
-    private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder order_ = 0;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder order_ = global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder.GroupOrderUnspecified;
     /// <summary>
     /// Optional. The sort order in which the results are returned.
     /// Default is `COUNT_DESC`.
@@ -433,9 +433,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       if (serviceFilter_ != null) hash ^= ServiceFilter.GetHashCode();
       if (timeRange_ != null) hash ^= TimeRange.GetHashCode();
       if (timedCountDuration_ != null) hash ^= TimedCountDuration.GetHashCode();
-      if (Alignment != 0) hash ^= Alignment.GetHashCode();
+      if (Alignment != global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment.ErrorCountAlignmentUnspecified) hash ^= Alignment.GetHashCode();
       if (alignmentTime_ != null) hash ^= AlignmentTime.GetHashCode();
-      if (Order != 0) hash ^= Order.GetHashCode();
+      if (Order != global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder.GroupOrderUnspecified) hash ^= Order.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -468,7 +468,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteMessage(TimedCountDuration);
       }
-      if (Alignment != 0) {
+      if (Alignment != global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment.ErrorCountAlignmentUnspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Alignment);
       }
@@ -476,7 +476,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(AlignmentTime);
       }
-      if (Order != 0) {
+      if (Order != global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder.GroupOrderUnspecified) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Order);
       }
@@ -509,13 +509,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       if (timedCountDuration_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimedCountDuration);
       }
-      if (Alignment != 0) {
+      if (Alignment != global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment.ErrorCountAlignmentUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Alignment);
       }
       if (alignmentTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AlignmentTime);
       }
-      if (Order != 0) {
+      if (Order != global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder.GroupOrderUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Order);
       }
       if (PageSize != 0) {
@@ -557,7 +557,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         }
         TimedCountDuration.MergeFrom(other.TimedCountDuration);
       }
-      if (other.Alignment != 0) {
+      if (other.Alignment != global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment.ErrorCountAlignmentUnspecified) {
         Alignment = other.Alignment;
       }
       if (other.alignmentTime_ != null) {
@@ -566,7 +566,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         }
         AlignmentTime.MergeFrom(other.AlignmentTime);
       }
-      if (other.Order != 0) {
+      if (other.Order != global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder.GroupOrderUnspecified) {
         Order = other.Order;
       }
       if (other.PageSize != 0) {
@@ -2022,7 +2022,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     /// <summary>Field number for the "period" field.</summary>
     public const int PeriodFieldNumber = 1;
-    private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period period_ = 0;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period period_ = global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period.Unspecified;
     /// <summary>
     /// Restricts the query to the specified time range.
     /// </summary>
@@ -2054,7 +2054,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Period != 0) hash ^= Period.GetHashCode();
+      if (Period != global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period.Unspecified) hash ^= Period.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2068,7 +2068,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Period != 0) {
+      if (Period != global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Period);
       }
@@ -2080,7 +2080,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Period != 0) {
+      if (Period != global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Period);
       }
       if (_unknownFields != null) {
@@ -2094,7 +2094,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Period != 0) {
+      if (other.Period != global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period.Unspecified) {
         Period = other.Period;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

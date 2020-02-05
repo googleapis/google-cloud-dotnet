@@ -96,7 +96,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteEvents_ResourceNames()
+        public void DeleteEventsResourceNames()
         {
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest
@@ -112,7 +112,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteEventsAsync_ResourceNames()
+        public async stt::Task DeleteEventsResourceNamesAsync()
         {
             moq::Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new moq::Mock<ErrorStatsService.ErrorStatsServiceClient>(moq::MockBehavior.Strict);
             DeleteEventsRequest request = new DeleteEventsRequest

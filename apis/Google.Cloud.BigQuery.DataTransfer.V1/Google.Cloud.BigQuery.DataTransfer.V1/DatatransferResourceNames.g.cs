@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gcbdv = Google.Cloud.BigQuery.DataTransfer.V1;
 using sys = System;
 
@@ -300,7 +301,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::DataSourceName DataSourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::DataSourceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::DataSourceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -312,27 +313,97 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::DataSourceName DataSourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::DataSourceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::DataSourceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
 
     public partial class ListDataSourcesRequest
     {
-        /// <summary><see cref="ParentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public ParentName ParentAsParentName
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ParentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
 
     public partial class CreateTransferConfigRequest
     {
-        /// <summary><see cref="ParentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public ParentName ParentAsParentName
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ParentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -344,7 +415,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::TransferConfigName TransferConfigName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::TransferConfigName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::TransferConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -356,7 +427,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::TransferConfigName TransferConfigName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::TransferConfigName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::TransferConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -368,7 +439,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::RunName RunName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::RunName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::RunName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -380,17 +451,52 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::RunName RunName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::RunName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::RunName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
 
     public partial class ListTransferConfigsRequest
     {
-        /// <summary><see cref="ParentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public ParentName ParentAsParentName
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ParentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -402,7 +508,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public TransferConfigName ParentAsTransferConfigName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TransferConfigName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TransferConfigName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -412,7 +518,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary><see cref="RunName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public RunName ParentAsRunName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RunName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : RunName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -424,7 +530,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public gcbdv::DataSourceName DataSourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbdv::DataSourceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbdv::DataSourceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -436,7 +542,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public TransferConfigName ParentAsTransferConfigName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TransferConfigName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TransferConfigName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -448,7 +554,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public TransferConfigName ParentAsTransferConfigName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TransferConfigName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TransferConfigName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

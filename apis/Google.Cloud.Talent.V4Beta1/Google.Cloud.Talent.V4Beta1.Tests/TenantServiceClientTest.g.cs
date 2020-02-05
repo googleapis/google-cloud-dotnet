@@ -137,7 +137,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateTenant_ResourceNames()
+        public void CreateTenantResourceNames()
         {
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             CreateTenantRequest request = new CreateTenantRequest
@@ -163,7 +163,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateTenantAsync_ResourceNames()
+        public async stt::Task CreateTenantResourceNamesAsync()
         {
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             CreateTenantRequest request = new CreateTenantRequest
@@ -295,7 +295,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetTenant_ResourceNames()
+        public void GetTenantResourceNames()
         {
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             GetTenantRequest request = new GetTenantRequest
@@ -320,7 +320,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetTenantAsync_ResourceNames()
+        public async stt::Task GetTenantResourceNamesAsync()
         {
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             GetTenantRequest request = new GetTenantRequest
@@ -515,7 +515,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteTenant_ResourceNames()
+        public void DeleteTenantResourceNames()
         {
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             DeleteTenantRequest request = new DeleteTenantRequest
@@ -530,7 +530,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteTenantAsync_ResourceNames()
+        public async stt::Task DeleteTenantResourceNamesAsync()
         {
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             DeleteTenantRequest request = new DeleteTenantRequest

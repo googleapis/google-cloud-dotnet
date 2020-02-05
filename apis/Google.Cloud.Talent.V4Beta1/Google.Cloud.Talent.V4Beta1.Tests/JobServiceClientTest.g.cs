@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -35,7 +36,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
@@ -99,7 +100,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
@@ -165,7 +166,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
@@ -229,7 +230,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
@@ -289,13 +290,273 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateJob_ResourceNames()
+        public void CreateJobResourceNames1()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Job = new Job(),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                RequisitionId = "requisition_id21c2f0af",
+                Title = "title17dbd3d5",
+                Description = "description2cf9da67",
+                Addresses =
+                {
+                    "addresses2f3a3e96",
+                },
+                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                JobBenefits = { JobBenefit.Dental, },
+                CompensationInfo = new CompensationInfo(),
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                DegreeTypes =
+                {
+                    DegreeType.PrimaryEducation,
+                },
+                Department = "departmentca9f9d45",
+                EmploymentTypes =
+                {
+                    EmploymentType.OtherEmploymentType,
+                },
+                Incentives = "incentives80814488",
+                LanguageCode = "language_code2f6c7160",
+                JobLevel = JobLevel.Director,
+                PromotionValue = 899484920,
+                Qualifications = "qualifications920abb76",
+                Responsibilities = "responsibilities978e5c9b",
+                PostingRegion = PostingRegion.AdministrativeArea,
+                JobStartTime = new wkt::Timestamp(),
+                JobEndTime = new wkt::Timestamp(),
+                PostingPublishTime = new wkt::Timestamp(),
+                PostingExpireTime = new wkt::Timestamp(),
+                PostingCreateTime = new wkt::Timestamp(),
+                PostingUpdateTime = new wkt::Timestamp(),
+                CompanyDisplayName = "company_display_name07e5990f",
+                DerivedInfo = new Job.Types.DerivedInfo(),
+                ProcessingOptions = new Job.Types.ProcessingOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            Job response = client.CreateJob(request.ParentAsProjectName, request.Job);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateJobResourceNames1Async()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateJobRequest request = new CreateJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Job = new Job(),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                RequisitionId = "requisition_id21c2f0af",
+                Title = "title17dbd3d5",
+                Description = "description2cf9da67",
+                Addresses =
+                {
+                    "addresses2f3a3e96",
+                },
+                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                JobBenefits = { JobBenefit.Dental, },
+                CompensationInfo = new CompensationInfo(),
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                DegreeTypes =
+                {
+                    DegreeType.PrimaryEducation,
+                },
+                Department = "departmentca9f9d45",
+                EmploymentTypes =
+                {
+                    EmploymentType.OtherEmploymentType,
+                },
+                Incentives = "incentives80814488",
+                LanguageCode = "language_code2f6c7160",
+                JobLevel = JobLevel.Director,
+                PromotionValue = 899484920,
+                Qualifications = "qualifications920abb76",
+                Responsibilities = "responsibilities978e5c9b",
+                PostingRegion = PostingRegion.AdministrativeArea,
+                JobStartTime = new wkt::Timestamp(),
+                JobEndTime = new wkt::Timestamp(),
+                PostingPublishTime = new wkt::Timestamp(),
+                PostingExpireTime = new wkt::Timestamp(),
+                PostingCreateTime = new wkt::Timestamp(),
+                PostingUpdateTime = new wkt::Timestamp(),
+                CompanyDisplayName = "company_display_name07e5990f",
+                DerivedInfo = new Job.Types.DerivedInfo(),
+                ProcessingOptions = new Job.Types.ProcessingOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.CreateJobAsync(request.ParentAsProjectName, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.CreateJobAsync(request.ParentAsProjectName, request.Job, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateJobResourceNames2()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateJobRequest request = new CreateJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Job = new Job(),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                RequisitionId = "requisition_id21c2f0af",
+                Title = "title17dbd3d5",
+                Description = "description2cf9da67",
+                Addresses =
+                {
+                    "addresses2f3a3e96",
+                },
+                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                JobBenefits = { JobBenefit.Dental, },
+                CompensationInfo = new CompensationInfo(),
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                DegreeTypes =
+                {
+                    DegreeType.PrimaryEducation,
+                },
+                Department = "departmentca9f9d45",
+                EmploymentTypes =
+                {
+                    EmploymentType.OtherEmploymentType,
+                },
+                Incentives = "incentives80814488",
+                LanguageCode = "language_code2f6c7160",
+                JobLevel = JobLevel.Director,
+                PromotionValue = 899484920,
+                Qualifications = "qualifications920abb76",
+                Responsibilities = "responsibilities978e5c9b",
+                PostingRegion = PostingRegion.AdministrativeArea,
+                JobStartTime = new wkt::Timestamp(),
+                JobEndTime = new wkt::Timestamp(),
+                PostingPublishTime = new wkt::Timestamp(),
+                PostingExpireTime = new wkt::Timestamp(),
+                PostingCreateTime = new wkt::Timestamp(),
+                PostingUpdateTime = new wkt::Timestamp(),
+                CompanyDisplayName = "company_display_name07e5990f",
+                DerivedInfo = new Job.Types.DerivedInfo(),
+                ProcessingOptions = new Job.Types.ProcessingOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            Job response = client.CreateJob(request.ParentAsTenantName, request.Job);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateJobResourceNames2Async()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateJobRequest request = new CreateJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Job = new Job(),
+            };
+            Job expectedResponse = new Job
+            {
+                JobName = JobName.FromProjectJob("[PROJECT]", "[JOB]"),
+                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                RequisitionId = "requisition_id21c2f0af",
+                Title = "title17dbd3d5",
+                Description = "description2cf9da67",
+                Addresses =
+                {
+                    "addresses2f3a3e96",
+                },
+                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                JobBenefits = { JobBenefit.Dental, },
+                CompensationInfo = new CompensationInfo(),
+                CustomAttributes =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new CustomAttribute()
+                    },
+                },
+                DegreeTypes =
+                {
+                    DegreeType.PrimaryEducation,
+                },
+                Department = "departmentca9f9d45",
+                EmploymentTypes =
+                {
+                    EmploymentType.OtherEmploymentType,
+                },
+                Incentives = "incentives80814488",
+                LanguageCode = "language_code2f6c7160",
+                JobLevel = JobLevel.Director,
+                PromotionValue = 899484920,
+                Qualifications = "qualifications920abb76",
+                Responsibilities = "responsibilities978e5c9b",
+                PostingRegion = PostingRegion.AdministrativeArea,
+                JobStartTime = new wkt::Timestamp(),
+                JobEndTime = new wkt::Timestamp(),
+                PostingPublishTime = new wkt::Timestamp(),
+                PostingExpireTime = new wkt::Timestamp(),
+                PostingCreateTime = new wkt::Timestamp(),
+                PostingUpdateTime = new wkt::Timestamp(),
+                CompanyDisplayName = "company_display_name07e5990f",
+                DerivedInfo = new Job.Types.DerivedInfo(),
+                ProcessingOptions = new Job.Types.ProcessingOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            Job responseCallSettings = await client.CreateJobAsync(request.ParentAsTenantName, request.Job, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Job responseCancellationToken = await client.CreateJobAsync(request.ParentAsTenantName, request.Job, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateJobResourceNames3()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateJobRequest request = new CreateJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
@@ -353,13 +614,13 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateJobAsync_ResourceNames()
+        public async stt::Task CreateJobResourceNames3Async()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
@@ -675,7 +936,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetJob_ResourceNames()
+        public void GetJobResourceNames()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -738,7 +999,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetJobAsync_ResourceNames()
+        public async stt::Task GetJobResourceNamesAsync()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1121,7 +1382,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteJob_ResourceNames()
+        public void DeleteJobResourceNames()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1137,7 +1398,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteJobAsync_ResourceNames()
+        public async stt::Task DeleteJobResourceNamesAsync()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1160,7 +1421,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Filter = "filtere47ac9b2",
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1177,7 +1438,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Filter = "filtere47ac9b2",
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1195,7 +1456,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Filter = "filtere47ac9b2",
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1212,7 +1473,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Filter = "filtere47ac9b2",
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1224,13 +1485,83 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void BatchDeleteJobs_ResourceNames()
+        public void BatchDeleteJobsResourceNames1()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchDeleteJobs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            client.BatchDeleteJobs(request.ParentAsProjectName, request.Filter);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchDeleteJobsResourceNames1Async()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchDeleteJobsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            await client.BatchDeleteJobsAsync(request.ParentAsProjectName, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.BatchDeleteJobsAsync(request.ParentAsProjectName, request.Filter, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchDeleteJobsResourceNames2()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchDeleteJobs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            client.BatchDeleteJobs(request.ParentAsTenantName, request.Filter);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchDeleteJobsResourceNames2Async()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchDeleteJobsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            await client.BatchDeleteJobsAsync(request.ParentAsTenantName, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.BatchDeleteJobsAsync(request.ParentAsTenantName, request.Filter, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchDeleteJobsResourceNames3()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Filter = "filtere47ac9b2",
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1241,13 +1572,13 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task BatchDeleteJobsAsync_ResourceNames()
+        public async stt::Task BatchDeleteJobsResourceNames3Async()
         {
             moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Filter = "filtere47ac9b2",
             };
             wkt::Empty expectedResponse = new wkt::Empty { };

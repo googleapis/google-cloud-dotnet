@@ -91,14 +91,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.EntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SessionEntityType), global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser, new[]{ "Name", "EntityOverrideMode", "Entities" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse.Parser, new[]{ "SessionEntityTypes", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest.Parser, new[]{ "Parent", "SessionEntityType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest.Parser, new[]{ "SessionEntityType", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SessionEntityType), global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser, new[]{ "Name", "EntityOverrideMode", "Entities" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse.Parser, new[]{ "SessionEntityTypes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest.Parser, new[]{ "Parent", "SessionEntityType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest.Parser, new[]{ "SessionEntityType", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -171,7 +171,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "entity_override_mode" field.</summary>
     public const int EntityOverrideModeFieldNumber = 2;
-    private global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode entityOverrideMode_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode entityOverrideMode_ = global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode.Unspecified;
     /// <summary>
     /// Required. Indicates whether the additional data should override or
     /// supplement the custom entity type definition.
@@ -221,7 +221,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (EntityOverrideMode != 0) hash ^= EntityOverrideMode.GetHashCode();
+      if (EntityOverrideMode != global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode.Unspecified) hash ^= EntityOverrideMode.GetHashCode();
       hash ^= entities_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -240,7 +240,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (EntityOverrideMode != 0) {
+      if (EntityOverrideMode != global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EntityOverrideMode);
       }
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (EntityOverrideMode != 0) {
+      if (EntityOverrideMode != global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntityOverrideMode);
       }
       size += entities_.CalculateSize(_repeated_entities_codec);
@@ -274,7 +274,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.EntityOverrideMode != 0) {
+      if (other.EntityOverrideMode != global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode.Unspecified) {
         EntityOverrideMode = other.EntityOverrideMode;
       }
       entities_.Add(other.entities_);

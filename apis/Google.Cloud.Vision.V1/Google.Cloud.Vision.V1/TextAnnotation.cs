@@ -70,15 +70,15 @@ namespace Google.Cloud.Vision.V1 {
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation), global::Google.Cloud.Vision.V1.TextAnnotation.Parser, new[]{ "Pages", "Text" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Parser, new[]{ "Type", "IsPrefix" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty), global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty.Parser, new[]{ "DetectedLanguages", "DetectedBreak" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Page), global::Google.Cloud.Vision.V1.Page.Parser, new[]{ "Property", "Width", "Height", "Blocks", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Block), global::Google.Cloud.Vision.V1.Block.Parser, new[]{ "Property", "BoundingBox", "Paragraphs", "BlockType", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Block.Types.BlockType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Paragraph), global::Google.Cloud.Vision.V1.Paragraph.Parser, new[]{ "Property", "BoundingBox", "Words", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Word), global::Google.Cloud.Vision.V1.Word.Parser, new[]{ "Property", "BoundingBox", "Symbols", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Symbol), global::Google.Cloud.Vision.V1.Symbol.Parser, new[]{ "Property", "BoundingBox", "Text", "Confidence" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation), global::Google.Cloud.Vision.V1.TextAnnotation.Parser, new[]{ "Pages", "Text" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Parser, new[]{ "Type", "IsPrefix" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty), global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty.Parser, new[]{ "DetectedLanguages", "DetectedBreak" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Page), global::Google.Cloud.Vision.V1.Page.Parser, new[]{ "Property", "Width", "Height", "Blocks", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Block), global::Google.Cloud.Vision.V1.Block.Parser, new[]{ "Property", "BoundingBox", "Paragraphs", "BlockType", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Block.Types.BlockType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Paragraph), global::Google.Cloud.Vision.V1.Paragraph.Parser, new[]{ "Property", "BoundingBox", "Words", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Word), global::Google.Cloud.Vision.V1.Word.Parser, new[]{ "Property", "BoundingBox", "Symbols", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Symbol), global::Google.Cloud.Vision.V1.Symbol.Parser, new[]{ "Property", "BoundingBox", "Text", "Confidence" }, null, null, null, null)
           }));
     }
     #endregion
@@ -459,7 +459,7 @@ namespace Google.Cloud.Vision.V1 {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 1;
-        private global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType type_ = 0;
+        private global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType type_ = global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown;
         /// <summary>
         /// Detected break type.
         /// </summary>
@@ -506,7 +506,7 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Type != 0) hash ^= Type.GetHashCode();
+          if (Type != global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) hash ^= Type.GetHashCode();
           if (IsPrefix != false) hash ^= IsPrefix.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -521,7 +521,7 @@ namespace Google.Cloud.Vision.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Type);
           }
@@ -537,7 +537,7 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           if (IsPrefix != false) {
@@ -554,7 +554,7 @@ namespace Google.Cloud.Vision.V1 {
           if (other == null) {
             return;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType.Unknown) {
             Type = other.Type;
           }
           if (other.IsPrefix != false) {
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "block_type" field.</summary>
     public const int BlockTypeFieldNumber = 4;
-    private global::Google.Cloud.Vision.V1.Block.Types.BlockType blockType_ = 0;
+    private global::Google.Cloud.Vision.V1.Block.Types.BlockType blockType_ = global::Google.Cloud.Vision.V1.Block.Types.BlockType.Unknown;
     /// <summary>
     /// Detected block type (text, image etc) for this block.
     /// </summary>
@@ -1207,7 +1207,7 @@ namespace Google.Cloud.Vision.V1 {
       if (property_ != null) hash ^= Property.GetHashCode();
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       hash ^= paragraphs_.GetHashCode();
-      if (BlockType != 0) hash ^= BlockType.GetHashCode();
+      if (BlockType != global::Google.Cloud.Vision.V1.Block.Types.BlockType.Unknown) hash ^= BlockType.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteMessage(BoundingBox);
       }
       paragraphs_.WriteTo(output, _repeated_paragraphs_codec);
-      if (BlockType != 0) {
+      if (BlockType != global::Google.Cloud.Vision.V1.Block.Types.BlockType.Unknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) BlockType);
       }
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.Vision.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingBox);
       }
       size += paragraphs_.CalculateSize(_repeated_paragraphs_codec);
-      if (BlockType != 0) {
+      if (BlockType != global::Google.Cloud.Vision.V1.Block.Types.BlockType.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlockType);
       }
       if (Confidence != 0F) {
@@ -1284,7 +1284,7 @@ namespace Google.Cloud.Vision.V1 {
         BoundingBox.MergeFrom(other.BoundingBox);
       }
       paragraphs_.Add(other.paragraphs_);
-      if (other.BlockType != 0) {
+      if (other.BlockType != global::Google.Cloud.Vision.V1.Block.Types.BlockType.Unknown) {
         BlockType = other.BlockType;
       }
       if (other.Confidence != 0F) {

@@ -100,7 +100,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ReportErrorEvent_ResourceNames()
+        public void ReportErrorEventResourceNames()
         {
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest
@@ -117,7 +117,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ReportErrorEventAsync_ResourceNames()
+        public async stt::Task ReportErrorEventResourceNamesAsync()
         {
             moq::Mock<ReportErrorsService.ReportErrorsServiceClient> mockGrpcClient = new moq::Mock<ReportErrorsService.ReportErrorsServiceClient>(moq::MockBehavior.Strict);
             ReportErrorEventRequest request = new ReportErrorEventRequest

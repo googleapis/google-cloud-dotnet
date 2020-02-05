@@ -92,16 +92,16 @@ namespace Google.Cloud.Debugger.V2 {
             "YnVnZ2VyXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Debugger.V2.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.SetBreakpointRequest), global::Google.Cloud.Debugger.V2.SetBreakpointRequest.Parser, new[]{ "DebuggeeId", "Breakpoint", "ClientVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.SetBreakpointResponse), global::Google.Cloud.Debugger.V2.SetBreakpointResponse.Parser, new[]{ "Breakpoint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.GetBreakpointRequest), global::Google.Cloud.Debugger.V2.GetBreakpointRequest.Parser, new[]{ "DebuggeeId", "BreakpointId", "ClientVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.GetBreakpointResponse), global::Google.Cloud.Debugger.V2.GetBreakpointResponse.Parser, new[]{ "Breakpoint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest), global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest.Parser, new[]{ "DebuggeeId", "BreakpointId", "ClientVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListBreakpointsRequest), global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Parser, new[]{ "DebuggeeId", "IncludeAllUsers", "IncludeInactive", "Action", "StripResults", "WaitToken", "ClientVersion" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue), global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue.Parser, new[]{ "Value" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListBreakpointsResponse), global::Google.Cloud.Debugger.V2.ListBreakpointsResponse.Parser, new[]{ "Breakpoints", "NextWaitToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListDebuggeesRequest), global::Google.Cloud.Debugger.V2.ListDebuggeesRequest.Parser, new[]{ "Project", "IncludeInactive", "ClientVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListDebuggeesResponse), global::Google.Cloud.Debugger.V2.ListDebuggeesResponse.Parser, new[]{ "Debuggees" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.SetBreakpointRequest), global::Google.Cloud.Debugger.V2.SetBreakpointRequest.Parser, new[]{ "DebuggeeId", "Breakpoint", "ClientVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.SetBreakpointResponse), global::Google.Cloud.Debugger.V2.SetBreakpointResponse.Parser, new[]{ "Breakpoint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.GetBreakpointRequest), global::Google.Cloud.Debugger.V2.GetBreakpointRequest.Parser, new[]{ "DebuggeeId", "BreakpointId", "ClientVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.GetBreakpointResponse), global::Google.Cloud.Debugger.V2.GetBreakpointResponse.Parser, new[]{ "Breakpoint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest), global::Google.Cloud.Debugger.V2.DeleteBreakpointRequest.Parser, new[]{ "DebuggeeId", "BreakpointId", "ClientVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListBreakpointsRequest), global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Parser, new[]{ "DebuggeeId", "IncludeAllUsers", "IncludeInactive", "Action", "StripResults", "WaitToken", "ClientVersion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue), global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue.Parser, new[]{ "Value" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListBreakpointsResponse), global::Google.Cloud.Debugger.V2.ListBreakpointsResponse.Parser, new[]{ "Breakpoints", "NextWaitToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListDebuggeesRequest), global::Google.Cloud.Debugger.V2.ListDebuggeesRequest.Parser, new[]{ "Project", "IncludeInactive", "ClientVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListDebuggeesResponse), global::Google.Cloud.Debugger.V2.ListDebuggeesResponse.Parser, new[]{ "Debuggees" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1371,7 +1371,7 @@ namespace Google.Cloud.Debugger.V2 {
 
         /// <summary>Field number for the "value" field.</summary>
         public const int ValueFieldNumber = 1;
-        private global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action value_ = 0;
+        private global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action value_ = global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture;
         /// <summary>
         /// Only breakpoints with the specified action will pass the filter.
         /// </summary>
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.Debugger.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Value != 0) hash ^= Value.GetHashCode();
+          if (Value != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) hash ^= Value.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1417,7 +1417,7 @@ namespace Google.Cloud.Debugger.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Value != 0) {
+          if (Value != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Value);
           }
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.Debugger.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Value != 0) {
+          if (Value != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Value);
           }
           if (_unknownFields != null) {
@@ -1443,7 +1443,7 @@ namespace Google.Cloud.Debugger.V2 {
           if (other == null) {
             return;
           }
-          if (other.Value != 0) {
+          if (other.Value != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
             Value = other.Value;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

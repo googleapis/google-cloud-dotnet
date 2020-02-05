@@ -243,7 +243,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::SourceName SourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SourceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SourceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

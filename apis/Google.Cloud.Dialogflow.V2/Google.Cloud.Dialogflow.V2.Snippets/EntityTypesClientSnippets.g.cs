@@ -28,7 +28,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     public sealed class GeneratedEntityTypesClientSnippets
     {
         /// <summary>Snippet for ListEntityTypes</summary>
-        public void ListEntityTypes_RequestObject()
+        public void ListEntityTypesRequestObject()
         {
             // Snippet: ListEntityTypes(ListEntityTypesRequest, CallSettings)
             // Create client
@@ -77,7 +77,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListEntityTypes</summary>
-        public async Task ListEntityTypesAsync_RequestObject()
+        public async Task ListEntityTypesRequestObjectAsync()
         {
             // Snippet: ListEntityTypesAsync(ListEntityTypesRequest, CallSettings)
             // Create client
@@ -216,7 +216,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListEntityTypes</summary>
-        public void ListEntityTypes1_ResourceNames()
+        public void ListEntityTypes1ResourceNames()
         {
             // Snippet: ListEntityTypes(AgentName, string, int?, CallSettings)
             // Create client
@@ -261,7 +261,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListEntityTypes</summary>
-        public async Task ListEntityTypes1Async_ResourceNames()
+        public async Task ListEntityTypes1ResourceNamesAsync()
         {
             // Snippet: ListEntityTypesAsync(AgentName, string, int?, CallSettings)
             // Create client
@@ -398,7 +398,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListEntityTypes</summary>
-        public void ListEntityTypes2_ResourceNames()
+        public void ListEntityTypes2ResourceNames()
         {
             // Snippet: ListEntityTypes(AgentName, string, string, int?, CallSettings)
             // Create client
@@ -444,7 +444,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListEntityTypes</summary>
-        public async Task ListEntityTypes2Async_ResourceNames()
+        public async Task ListEntityTypes2ResourceNamesAsync()
         {
             // Snippet: ListEntityTypesAsync(AgentName, string, string, int?, CallSettings)
             // Create client
@@ -490,7 +490,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityType</summary>
-        public void GetEntityType_RequestObject()
+        public void GetEntityTypeRequestObject()
         {
             // Snippet: GetEntityType(GetEntityTypeRequest, CallSettings)
             // Create client
@@ -507,7 +507,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityTypeAsync</summary>
-        public async Task GetEntityTypeAsync_RequestObject()
+        public async Task GetEntityTypeRequestObjectAsync()
         {
             // Snippet: GetEntityTypeAsync(GetEntityTypeRequest, CallSettings)
             // Additional: GetEntityTypeAsync(GetEntityTypeRequest, CancellationToken)
@@ -552,7 +552,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityType</summary>
-        public void GetEntityType1_ResourceNames()
+        public void GetEntityType1ResourceNames()
         {
             // Snippet: GetEntityType(EntityTypeName, CallSettings)
             // Create client
@@ -565,7 +565,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityTypeAsync</summary>
-        public async Task GetEntityType1Async_ResourceNames()
+        public async Task GetEntityType1ResourceNamesAsync()
         {
             // Snippet: GetEntityTypeAsync(EntityTypeName, CallSettings)
             // Additional: GetEntityTypeAsync(EntityTypeName, CancellationToken)
@@ -608,7 +608,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityType</summary>
-        public void GetEntityType2_ResourceNames()
+        public void GetEntityType2ResourceNames()
         {
             // Snippet: GetEntityType(EntityTypeName, string, CallSettings)
             // Create client
@@ -622,7 +622,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetEntityTypeAsync</summary>
-        public async Task GetEntityType2Async_ResourceNames()
+        public async Task GetEntityType2ResourceNamesAsync()
         {
             // Snippet: GetEntityTypeAsync(EntityTypeName, string, CallSettings)
             // Additional: GetEntityTypeAsync(EntityTypeName, string, CancellationToken)
@@ -637,7 +637,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
-        public void CreateEntityType_RequestObject()
+        public void CreateEntityTypeRequestObject()
         {
             // Snippet: CreateEntityType(CreateEntityTypeRequest, CallSettings)
             // Create client
@@ -655,7 +655,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityTypeAsync_RequestObject()
+        public async Task CreateEntityTypeRequestObjectAsync()
         {
             // Snippet: CreateEntityTypeAsync(CreateEntityTypeRequest, CallSettings)
             // Additional: CreateEntityTypeAsync(CreateEntityTypeRequest, CancellationToken)
@@ -703,7 +703,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
-        public void CreateEntityType1_ResourceNames()
+        public void CreateEntityType1ResourceNames()
         {
             // Snippet: CreateEntityType(AgentName, EntityType, CallSettings)
             // Create client
@@ -717,7 +717,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityType1Async_ResourceNames()
+        public async Task CreateEntityType1ResourceNamesAsync()
         {
             // Snippet: CreateEntityTypeAsync(AgentName, EntityType, CallSettings)
             // Additional: CreateEntityTypeAsync(AgentName, EntityType, CancellationToken)
@@ -763,7 +763,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
-        public void CreateEntityType2_ResourceNames()
+        public void CreateEntityType2ResourceNames()
         {
             // Snippet: CreateEntityType(AgentName, EntityType, string, CallSettings)
             // Create client
@@ -778,7 +778,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityType2Async_ResourceNames()
+        public async Task CreateEntityType2ResourceNamesAsync()
         {
             // Snippet: CreateEntityTypeAsync(AgentName, EntityType, string, CallSettings)
             // Additional: CreateEntityTypeAsync(AgentName, EntityType, string, CancellationToken)
@@ -794,7 +794,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateEntityType</summary>
-        public void UpdateEntityType_RequestObject()
+        public void UpdateEntityTypeRequestObject()
         {
             // Snippet: UpdateEntityType(UpdateEntityTypeRequest, CallSettings)
             // Create client
@@ -812,7 +812,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateEntityTypeAsync</summary>
-        public async Task UpdateEntityTypeAsync_RequestObject()
+        public async Task UpdateEntityTypeRequestObjectAsync()
         {
             // Snippet: UpdateEntityTypeAsync(UpdateEntityTypeRequest, CallSettings)
             // Additional: UpdateEntityTypeAsync(UpdateEntityTypeRequest, CancellationToken)
@@ -887,7 +887,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteEntityType</summary>
-        public void DeleteEntityType_RequestObject()
+        public void DeleteEntityTypeRequestObject()
         {
             // Snippet: DeleteEntityType(DeleteEntityTypeRequest, CallSettings)
             // Create client
@@ -903,7 +903,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteEntityTypeAsync</summary>
-        public async Task DeleteEntityTypeAsync_RequestObject()
+        public async Task DeleteEntityTypeRequestObjectAsync()
         {
             // Snippet: DeleteEntityTypeAsync(DeleteEntityTypeRequest, CallSettings)
             // Additional: DeleteEntityTypeAsync(DeleteEntityTypeRequest, CancellationToken)
@@ -947,7 +947,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteEntityType</summary>
-        public void DeleteEntityType_ResourceNames()
+        public void DeleteEntityTypeResourceNames()
         {
             // Snippet: DeleteEntityType(EntityTypeName, CallSettings)
             // Create client
@@ -960,7 +960,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteEntityTypeAsync</summary>
-        public async Task DeleteEntityTypeAsync_ResourceNames()
+        public async Task DeleteEntityTypeResourceNamesAsync()
         {
             // Snippet: DeleteEntityTypeAsync(EntityTypeName, CallSettings)
             // Additional: DeleteEntityTypeAsync(EntityTypeName, CancellationToken)
@@ -974,7 +974,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntityTypes</summary>
-        public void BatchUpdateEntityTypes_RequestObject()
+        public void BatchUpdateEntityTypesRequestObject()
         {
             // Snippet: BatchUpdateEntityTypes(BatchUpdateEntityTypesRequest, CallSettings)
             // Create client
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntityTypesAsync</summary>
-        public async Task BatchUpdateEntityTypesAsync_RequestObject()
+        public async Task BatchUpdateEntityTypesRequestObjectAsync()
         {
             // Snippet: BatchUpdateEntityTypesAsync(BatchUpdateEntityTypesRequest, CallSettings)
             // Additional: BatchUpdateEntityTypesAsync(BatchUpdateEntityTypesRequest, CancellationToken)
@@ -1047,7 +1047,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntityTypes</summary>
-        public void BatchDeleteEntityTypes_RequestObject()
+        public void BatchDeleteEntityTypesRequestObject()
         {
             // Snippet: BatchDeleteEntityTypes(BatchDeleteEntityTypesRequest, CallSettings)
             // Create client
@@ -1080,7 +1080,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntityTypesAsync</summary>
-        public async Task BatchDeleteEntityTypesAsync_RequestObject()
+        public async Task BatchDeleteEntityTypesRequestObjectAsync()
         {
             // Snippet: BatchDeleteEntityTypesAsync(BatchDeleteEntityTypesRequest, CallSettings)
             // Additional: BatchDeleteEntityTypesAsync(BatchDeleteEntityTypesRequest, CancellationToken)
@@ -1114,7 +1114,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchCreateEntities</summary>
-        public void BatchCreateEntities_RequestObject()
+        public void BatchCreateEntitiesRequestObject()
         {
             // Snippet: BatchCreateEntities(BatchCreateEntitiesRequest, CallSettings)
             // Create client
@@ -1151,7 +1151,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
-        public async Task BatchCreateEntitiesAsync_RequestObject()
+        public async Task BatchCreateEntitiesRequestObjectAsync()
         {
             // Snippet: BatchCreateEntitiesAsync(BatchCreateEntitiesRequest, CallSettings)
             // Additional: BatchCreateEntitiesAsync(BatchCreateEntitiesRequest, CancellationToken)
@@ -1256,7 +1256,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchCreateEntities</summary>
-        public void BatchCreateEntities1_ResourceNames()
+        public void BatchCreateEntities1ResourceNames()
         {
             // Snippet: BatchCreateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Create client
@@ -1289,7 +1289,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
-        public async Task BatchCreateEntities1Async_ResourceNames()
+        public async Task BatchCreateEntities1ResourceNamesAsync()
         {
             // Snippet: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Additional: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CancellationToken)
@@ -1392,7 +1392,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchCreateEntities</summary>
-        public void BatchCreateEntities2_ResourceNames()
+        public void BatchCreateEntities2ResourceNames()
         {
             // Snippet: BatchCreateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
             // Create client
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchCreateEntitiesAsync</summary>
-        public async Task BatchCreateEntities2Async_ResourceNames()
+        public async Task BatchCreateEntities2ResourceNamesAsync()
         {
             // Snippet: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
             // Additional: BatchCreateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CancellationToken)
@@ -1461,7 +1461,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntities</summary>
-        public void BatchUpdateEntities_RequestObject()
+        public void BatchUpdateEntitiesRequestObject()
         {
             // Snippet: BatchUpdateEntities(BatchUpdateEntitiesRequest, CallSettings)
             // Create client
@@ -1499,7 +1499,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
-        public async Task BatchUpdateEntitiesAsync_RequestObject()
+        public async Task BatchUpdateEntitiesRequestObjectAsync()
         {
             // Snippet: BatchUpdateEntitiesAsync(BatchUpdateEntitiesRequest, CallSettings)
             // Additional: BatchUpdateEntitiesAsync(BatchUpdateEntitiesRequest, CancellationToken)
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntities</summary>
-        public void BatchUpdateEntities1_ResourceNames()
+        public void BatchUpdateEntities1ResourceNames()
         {
             // Snippet: BatchUpdateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Create client
@@ -1638,7 +1638,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
-        public async Task BatchUpdateEntities1Async_ResourceNames()
+        public async Task BatchUpdateEntities1ResourceNamesAsync()
         {
             // Snippet: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CallSettings)
             // Additional: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, CancellationToken)
@@ -1741,7 +1741,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntities</summary>
-        public void BatchUpdateEntities2_ResourceNames()
+        public void BatchUpdateEntities2ResourceNames()
         {
             // Snippet: BatchUpdateEntities(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
             // Create client
@@ -1775,7 +1775,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateEntitiesAsync</summary>
-        public async Task BatchUpdateEntities2Async_ResourceNames()
+        public async Task BatchUpdateEntities2ResourceNamesAsync()
         {
             // Snippet: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CallSettings)
             // Additional: BatchUpdateEntitiesAsync(EntityTypeName, IEnumerable<EntityType.Types.Entity>, string, CancellationToken)
@@ -1810,7 +1810,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntities</summary>
-        public void BatchDeleteEntities_RequestObject()
+        public void BatchDeleteEntitiesRequestObject()
         {
             // Snippet: BatchDeleteEntities(BatchDeleteEntitiesRequest, CallSettings)
             // Create client
@@ -1844,7 +1844,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
-        public async Task BatchDeleteEntitiesAsync_RequestObject()
+        public async Task BatchDeleteEntitiesRequestObjectAsync()
         {
             // Snippet: BatchDeleteEntitiesAsync(BatchDeleteEntitiesRequest, CallSettings)
             // Additional: BatchDeleteEntitiesAsync(BatchDeleteEntitiesRequest, CancellationToken)
@@ -1940,7 +1940,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntities</summary>
-        public void BatchDeleteEntities1_ResourceNames()
+        public void BatchDeleteEntities1ResourceNames()
         {
             // Snippet: BatchDeleteEntities(EntityTypeName, IEnumerable<string>, CallSettings)
             // Create client
@@ -1970,7 +1970,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
-        public async Task BatchDeleteEntities1Async_ResourceNames()
+        public async Task BatchDeleteEntities1ResourceNamesAsync()
         {
             // Snippet: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, CallSettings)
             // Additional: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, CancellationToken)
@@ -2064,7 +2064,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntities</summary>
-        public void BatchDeleteEntities2_ResourceNames()
+        public void BatchDeleteEntities2ResourceNames()
         {
             // Snippet: BatchDeleteEntities(EntityTypeName, IEnumerable<string>, string, CallSettings)
             // Create client
@@ -2095,7 +2095,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteEntitiesAsync</summary>
-        public async Task BatchDeleteEntities2Async_ResourceNames()
+        public async Task BatchDeleteEntities2ResourceNamesAsync()
         {
             // Snippet: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, string, CallSettings)
             // Additional: BatchDeleteEntitiesAsync(EntityTypeName, IEnumerable<string>, string, CancellationToken)

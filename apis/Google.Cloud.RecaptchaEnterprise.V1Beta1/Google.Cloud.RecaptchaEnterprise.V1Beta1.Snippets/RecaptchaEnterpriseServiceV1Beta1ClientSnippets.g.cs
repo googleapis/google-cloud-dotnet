@@ -27,7 +27,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
     public sealed class GeneratedRecaptchaEnterpriseServiceV1Beta1ClientSnippets
     {
         /// <summary>Snippet for CreateAssessment</summary>
-        public void CreateAssessment_RequestObject()
+        public void CreateAssessmentRequestObject()
         {
             // Snippet: CreateAssessment(CreateAssessmentRequest, CallSettings)
             // Create client
@@ -44,7 +44,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateAssessmentAsync</summary>
-        public async Task CreateAssessmentAsync_RequestObject()
+        public async Task CreateAssessmentRequestObjectAsync()
         {
             // Snippet: CreateAssessmentAsync(CreateAssessmentRequest, CallSettings)
             // Additional: CreateAssessmentAsync(CreateAssessmentRequest, CancellationToken)
@@ -91,7 +91,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateAssessment</summary>
-        public void CreateAssessment_ResourceNames()
+        public void CreateAssessmentResourceNames()
         {
             // Snippet: CreateAssessment(ProjectName, Assessment, CallSettings)
             // Create client
@@ -105,7 +105,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateAssessmentAsync</summary>
-        public async Task CreateAssessmentAsync_ResourceNames()
+        public async Task CreateAssessmentResourceNamesAsync()
         {
             // Snippet: CreateAssessmentAsync(ProjectName, Assessment, CallSettings)
             // Additional: CreateAssessmentAsync(ProjectName, Assessment, CancellationToken)
@@ -120,7 +120,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for AnnotateAssessment</summary>
-        public void AnnotateAssessment_RequestObject()
+        public void AnnotateAssessmentRequestObject()
         {
             // Snippet: AnnotateAssessment(AnnotateAssessmentRequest, CallSettings)
             // Create client
@@ -137,7 +137,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for AnnotateAssessmentAsync</summary>
-        public async Task AnnotateAssessmentAsync_RequestObject()
+        public async Task AnnotateAssessmentRequestObjectAsync()
         {
             // Snippet: AnnotateAssessmentAsync(AnnotateAssessmentRequest, CallSettings)
             // Additional: AnnotateAssessmentAsync(AnnotateAssessmentRequest, CancellationToken)
@@ -184,7 +184,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for AnnotateAssessment</summary>
-        public void AnnotateAssessment_ResourceNames()
+        public void AnnotateAssessmentResourceNames()
         {
             // Snippet: AnnotateAssessment(AssessmentName, AnnotateAssessmentRequest.Types.Annotation, CallSettings)
             // Create client
@@ -198,7 +198,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for AnnotateAssessmentAsync</summary>
-        public async Task AnnotateAssessmentAsync_ResourceNames()
+        public async Task AnnotateAssessmentResourceNamesAsync()
         {
             // Snippet: AnnotateAssessmentAsync(AssessmentName, AnnotateAssessmentRequest.Types.Annotation, CallSettings)
             // Additional: AnnotateAssessmentAsync(AssessmentName, AnnotateAssessmentRequest.Types.Annotation, CancellationToken)
@@ -213,7 +213,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateKey</summary>
-        public void CreateKey_RequestObject()
+        public void CreateKeyRequestObject()
         {
             // Snippet: CreateKey(CreateKeyRequest, CallSettings)
             // Create client
@@ -230,7 +230,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateKeyAsync</summary>
-        public async Task CreateKeyAsync_RequestObject()
+        public async Task CreateKeyRequestObjectAsync()
         {
             // Snippet: CreateKeyAsync(CreateKeyRequest, CallSettings)
             // Additional: CreateKeyAsync(CreateKeyRequest, CancellationToken)
@@ -248,7 +248,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListKeys</summary>
-        public void ListKeys_RequestObject()
+        public void ListKeysRequestObject()
         {
             // Snippet: ListKeys(ListKeysRequest, CallSettings)
             // Create client
@@ -296,7 +296,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListKeys</summary>
-        public async Task ListKeysAsync_RequestObject()
+        public async Task ListKeysRequestObjectAsync()
         {
             // Snippet: ListKeysAsync(ListKeysRequest, CallSettings)
             // Create client
@@ -344,7 +344,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetKey</summary>
-        public void GetKey_RequestObject()
+        public void GetKeyRequestObject()
         {
             // Snippet: GetKey(GetKeyRequest, CallSettings)
             // Create client
@@ -360,7 +360,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetKeyAsync</summary>
-        public async Task GetKeyAsync_RequestObject()
+        public async Task GetKeyRequestObjectAsync()
         {
             // Snippet: GetKeyAsync(GetKeyRequest, CallSettings)
             // Additional: GetKeyAsync(GetKeyRequest, CancellationToken)
@@ -377,7 +377,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateKey</summary>
-        public void UpdateKey_RequestObject()
+        public void UpdateKeyRequestObject()
         {
             // Snippet: UpdateKey(UpdateKeyRequest, CallSettings)
             // Create client
@@ -394,7 +394,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateKeyAsync</summary>
-        public async Task UpdateKeyAsync_RequestObject()
+        public async Task UpdateKeyRequestObjectAsync()
         {
             // Snippet: UpdateKeyAsync(UpdateKeyRequest, CallSettings)
             // Additional: UpdateKeyAsync(UpdateKeyRequest, CancellationToken)
@@ -412,7 +412,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteKey</summary>
-        public void DeleteKey_RequestObject()
+        public void DeleteKeyRequestObject()
         {
             // Snippet: DeleteKey(DeleteKeyRequest, CallSettings)
             // Create client
@@ -428,7 +428,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteKeyAsync</summary>
-        public async Task DeleteKeyAsync_RequestObject()
+        public async Task DeleteKeyRequestObjectAsync()
         {
             // Snippet: DeleteKeyAsync(DeleteKeyRequest, CallSettings)
             // Additional: DeleteKeyAsync(DeleteKeyRequest, CancellationToken)

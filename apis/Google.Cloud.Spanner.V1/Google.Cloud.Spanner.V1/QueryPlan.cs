@@ -48,10 +48,10 @@ namespace Google.Cloud.Spanner.V1 {
             "b2dsZVxDbG91ZFxTcGFubmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode), global::Google.Cloud.Spanner.V1.PlanNode.Parser, new[]{ "Index", "Kind", "DisplayName", "ChildLinks", "ShortRepresentation", "Metadata", "ExecutionStats" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink), global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.Parser, new[]{ "ChildIndex", "Type", "Variable" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation), global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.Parser, new[]{ "Description", "Subqueries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.QueryPlan), global::Google.Cloud.Spanner.V1.QueryPlan.Parser, new[]{ "PlanNodes" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode), global::Google.Cloud.Spanner.V1.PlanNode.Parser, new[]{ "Index", "Kind", "DisplayName", "ChildLinks", "ShortRepresentation", "Metadata", "ExecutionStats" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink), global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.Parser, new[]{ "ChildIndex", "Type", "Variable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation), global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.Parser, new[]{ "Description", "Subqueries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.QueryPlan), global::Google.Cloud.Spanner.V1.QueryPlan.Parser, new[]{ "PlanNodes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -117,7 +117,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 2;
-    private global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind kind_ = 0;
+    private global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind kind_ = global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind.Unspecified;
     /// <summary>
     /// Used to determine the type of node. May be needed for visualizing
     /// different kinds of nodes differently. For example, If the node is a
@@ -239,7 +239,7 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Index != 0) hash ^= Index.GetHashCode();
-      if (Kind != 0) hash ^= Kind.GetHashCode();
+      if (Kind != global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind.Unspecified) hash ^= Kind.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       hash ^= childLinks_.GetHashCode();
       if (shortRepresentation_ != null) hash ^= ShortRepresentation.GetHashCode();
@@ -262,7 +262,7 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(Index);
       }
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Kind);
       }
@@ -294,7 +294,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
       }
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (DisplayName.Length != 0) {
@@ -324,7 +324,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (other.Index != 0) {
         Index = other.Index;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind.Unspecified) {
         Kind = other.Kind;
       }
       if (other.DisplayName.Length != 0) {
@@ -693,7 +693,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// <summary>Field number for the "subqueries" field.</summary>
         public const int SubqueriesFieldNumber = 2;
         private static readonly pbc::MapField<string, int>.Codec _map_subqueries_codec
-            = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForInt32(16), 18);
+            = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 18);
         private readonly pbc::MapField<string, int> subqueries_ = new pbc::MapField<string, int>();
         /// <summary>
         /// A mapping of (subquery variable name) -> (subquery node id) for cases

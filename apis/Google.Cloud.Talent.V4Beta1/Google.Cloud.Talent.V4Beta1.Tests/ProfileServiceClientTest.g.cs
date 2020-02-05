@@ -340,7 +340,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateProfile_ResourceNames()
+        public void CreateProfileResourceNames()
         {
             moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
@@ -417,7 +417,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateProfileAsync_ResourceNames()
+        public async stt::Task CreateProfileResourceNamesAsync()
         {
             moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
@@ -804,7 +804,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetProfile_ResourceNames()
+        public void GetProfileResourceNames()
         {
             moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             GetProfileRequest request = new GetProfileRequest
@@ -880,7 +880,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetProfileAsync_ResourceNames()
+        public async stt::Task GetProfileResourceNamesAsync()
         {
             moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             GetProfileRequest request = new GetProfileRequest
@@ -1330,7 +1330,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteProfile_ResourceNames()
+        public void DeleteProfileResourceNames()
         {
             moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             DeleteProfileRequest request = new DeleteProfileRequest
@@ -1345,7 +1345,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteProfileAsync_ResourceNames()
+        public async stt::Task DeleteProfileResourceNamesAsync()
         {
             moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
             DeleteProfileRequest request = new DeleteProfileRequest

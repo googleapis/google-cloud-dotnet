@@ -37,11 +37,11 @@ namespace Google.Cloud.Vision.V1 {
             "djE7dmlzaW9u+AEBogIER0NWTmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Vertex), global::Google.Cloud.Vision.V1.Vertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.NormalizedVertex), global::Google.Cloud.Vision.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BoundingPoly), global::Google.Cloud.Vision.V1.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Position), global::Google.Cloud.Vision.V1.Position.Parser, new[]{ "X", "Y", "Z" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Vertex), global::Google.Cloud.Vision.V1.Vertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.NormalizedVertex), global::Google.Cloud.Vision.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BoundingPoly), global::Google.Cloud.Vision.V1.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Position), global::Google.Cloud.Vision.V1.Position.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null)
           }));
     }
     #endregion

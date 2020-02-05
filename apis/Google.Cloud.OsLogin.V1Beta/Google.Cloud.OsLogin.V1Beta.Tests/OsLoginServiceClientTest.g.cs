@@ -91,7 +91,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeletePosixAccount_ResourceNames()
+        public void DeletePosixAccountResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
@@ -106,7 +106,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeletePosixAccountAsync_ResourceNames()
+        public async stt::Task DeletePosixAccountResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeletePosixAccountRequest request = new DeletePosixAccountRequest
@@ -184,7 +184,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteSshPublicKey_ResourceNames()
+        public void DeleteSshPublicKeyResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
@@ -199,7 +199,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteSshPublicKeyAsync_ResourceNames()
+        public async stt::Task DeleteSshPublicKeyResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             DeleteSshPublicKeyRequest request = new DeleteSshPublicKeyRequest
@@ -343,7 +343,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetLoginProfile_ResourceNames()
+        public void GetLoginProfileResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
@@ -373,7 +373,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetLoginProfileAsync_ResourceNames()
+        public async stt::Task GetLoginProfileResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetLoginProfileRequest request = new GetLoginProfileRequest
@@ -497,7 +497,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSshPublicKey_ResourceNames()
+        public void GetSshPublicKeyResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
@@ -519,7 +519,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSshPublicKeyAsync_ResourceNames()
+        public async stt::Task GetSshPublicKeyResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             GetSshPublicKeyRequest request = new GetSshPublicKeyRequest
@@ -629,7 +629,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void ImportSshPublicKey1_ResourceNames()
+        public void ImportSshPublicKey1ResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
@@ -649,7 +649,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ImportSshPublicKey1Async_ResourceNames()
+        public async stt::Task ImportSshPublicKey1ResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
@@ -715,7 +715,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void ImportSshPublicKey2_ResourceNames()
+        public void ImportSshPublicKey2ResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
@@ -736,7 +736,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ImportSshPublicKey2Async_ResourceNames()
+        public async stt::Task ImportSshPublicKey2ResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
@@ -857,7 +857,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateSshPublicKey1_ResourceNames()
+        public void UpdateSshPublicKey1ResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
@@ -880,7 +880,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateSshPublicKey1Async_ResourceNames()
+        public async stt::Task UpdateSshPublicKey1ResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
@@ -955,7 +955,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateSshPublicKey2_ResourceNames()
+        public void UpdateSshPublicKey2ResourceNames()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
@@ -979,7 +979,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateSshPublicKey2Async_ResourceNames()
+        public async stt::Task UpdateSshPublicKey2ResourceNamesAsync()
         {
             moq::Mock<OsLoginService.OsLoginServiceClient> mockGrpcClient = new moq::Mock<OsLoginService.OsLoginServiceClient>(moq::MockBehavior.Strict);
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest

@@ -149,7 +149,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateSession_ResourceNames()
+        public void CreateSessionResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
@@ -177,7 +177,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateSessionAsync_ResourceNames()
+        public async stt::Task CreateSessionResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CreateSessionRequest request = new CreateSessionRequest
@@ -293,7 +293,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void BatchCreateSessions_ResourceNames()
+        public void BatchCreateSessionsResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
@@ -313,7 +313,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task BatchCreateSessionsAsync_ResourceNames()
+        public async stt::Task BatchCreateSessionsResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
@@ -451,7 +451,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSession_ResourceNames()
+        public void GetSessionResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
@@ -479,7 +479,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSessionAsync_ResourceNames()
+        public async stt::Task GetSessionResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             GetSessionRequest request = new GetSessionRequest
@@ -571,7 +571,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteSession_ResourceNames()
+        public void DeleteSessionResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
@@ -586,7 +586,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteSessionAsync_ResourceNames()
+        public async stt::Task DeleteSessionResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             DeleteSessionRequest request = new DeleteSessionRequest
@@ -888,7 +888,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void BeginTransaction_ResourceNames()
+        public void BeginTransactionResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
@@ -909,7 +909,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task BeginTransactionAsync_ResourceNames()
+        public async stt::Task BeginTransactionResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             BeginTransactionRequest request = new BeginTransactionRequest
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void Commit1_ResourceNames()
+        public void Commit1ResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task Commit1Async_ResourceNames()
+        public async stt::Task Commit1ResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void Commit2_ResourceNames()
+        public void Commit2ResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task Commit2Async_ResourceNames()
+        public async stt::Task Commit2ResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             CommitRequest request = new CommitRequest
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void Rollback_ResourceNames()
+        public void RollbackResourceNames()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest
@@ -1236,7 +1236,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task RollbackAsync_ResourceNames()
+        public async stt::Task RollbackResourceNamesAsync()
         {
             moq::Mock<Spanner.SpannerClient> mockGrpcClient = new moq::Mock<Spanner.SpannerClient>(moq::MockBehavior.Strict);
             RollbackRequest request = new RollbackRequest

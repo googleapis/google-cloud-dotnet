@@ -26,7 +26,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -38,7 +38,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::QueueName QueueName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -50,7 +50,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -62,7 +62,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::QueueName QueueName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -74,7 +74,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::QueueName QueueName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -86,7 +86,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::QueueName QueueName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -98,7 +98,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::QueueName QueueName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::QueueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -108,7 +108,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public QueueName ParentAsQueueName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -120,7 +120,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::TaskName TaskName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -130,7 +130,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public QueueName ParentAsQueueName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -142,7 +142,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::TaskName TaskName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -154,7 +154,7 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </summary>
         public gctv::TaskName TaskName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
