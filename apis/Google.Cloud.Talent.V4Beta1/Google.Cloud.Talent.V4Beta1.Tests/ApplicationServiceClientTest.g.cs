@@ -173,7 +173,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateApplication_ResourceNames()
+        public void CreateApplicationResourceNames()
         {
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             CreateApplicationRequest request = new CreateApplicationRequest
@@ -208,7 +208,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateApplicationAsync_ResourceNames()
+        public async stt::Task CreateApplicationResourceNamesAsync()
         {
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             CreateApplicationRequest request = new CreateApplicationRequest
@@ -385,7 +385,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetApplication_ResourceNames()
+        public void GetApplicationResourceNames()
         {
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             GetApplicationRequest request = new GetApplicationRequest
@@ -419,7 +419,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetApplicationAsync_ResourceNames()
+        public async stt::Task GetApplicationResourceNamesAsync()
         {
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             GetApplicationRequest request = new GetApplicationRequest
@@ -659,7 +659,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteApplication_ResourceNames()
+        public void DeleteApplicationResourceNames()
         {
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             DeleteApplicationRequest request = new DeleteApplicationRequest
@@ -674,7 +674,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteApplicationAsync_ResourceNames()
+        public async stt::Task DeleteApplicationResourceNamesAsync()
         {
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             DeleteApplicationRequest request = new DeleteApplicationRequest

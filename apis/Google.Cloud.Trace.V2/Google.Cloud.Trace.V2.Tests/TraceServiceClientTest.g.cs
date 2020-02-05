@@ -96,7 +96,7 @@ namespace Google.Cloud.Trace.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void BatchWriteSpans_ResourceNames()
+        public void BatchWriteSpansResourceNames()
         {
             moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
@@ -112,7 +112,7 @@ namespace Google.Cloud.Trace.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task BatchWriteSpansAsync_ResourceNames()
+        public async stt::Task BatchWriteSpansResourceNamesAsync()
         {
             moq::Mock<TraceService.TraceServiceClient> mockGrpcClient = new moq::Mock<TraceService.TraceServiceClient>(moq::MockBehavior.Strict);
             BatchWriteSpansRequest request = new BatchWriteSpansRequest

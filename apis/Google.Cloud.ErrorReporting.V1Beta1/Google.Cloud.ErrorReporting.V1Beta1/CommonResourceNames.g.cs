@@ -235,7 +235,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public gcev::ErrorGroupName ErrorGroupName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcev::ErrorGroupName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcev::ErrorGroupName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

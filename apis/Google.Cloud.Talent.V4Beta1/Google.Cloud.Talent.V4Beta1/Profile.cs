@@ -154,22 +154,22 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "CandidateUpdateTime", "ResumeUpdateTime", "Resume", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "Applications", "Assignments", "CustomAttributes", "Processed", "KeywordSnippet", "AvailabilitySignals", "DerivedAddresses" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilitySignal), global::Google.Cloud.Talent.V4Beta1.AvailabilitySignal.Parser, new[]{ "Type", "LastUpdateTime", "FilterSatisfied" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Resume), global::Google.Cloud.Talent.V4Beta1.Resume.Parser, new[]{ "StructuredResume", "ResumeType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName), global::Google.Cloud.Talent.V4Beta1.PersonName.Parser, new[]{ "FormattedName", "StructuredName", "PreferredName" }, new[]{ "PersonName" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName), global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName.Parser, new[]{ "GivenName", "PreferredName", "MiddleInitial", "FamilyName", "Suffixes", "Prefixes" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Address), global::Google.Cloud.Talent.V4Beta1.Address.Parser, new[]{ "Usage", "UnstructuredAddress", "StructuredAddress", "Current" }, new[]{ "Address" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Email), global::Google.Cloud.Talent.V4Beta1.Email.Parser, new[]{ "Usage", "EmailAddress" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Phone), global::Google.Cloud.Talent.V4Beta1.Phone.Parser, new[]{ "Usage", "Type", "Number", "WhenAvailable" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonalUri), global::Google.Cloud.Talent.V4Beta1.PersonalUri.Parser, new[]{ "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo), global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo.Parser, new[]{ "Usage", "Name", "ContactId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentRecord), global::Google.Cloud.Talent.V4Beta1.EmploymentRecord.Parser, new[]{ "StartDate", "EndDate", "EmployerName", "DivisionName", "Address", "JobTitle", "JobDescription", "IsSupervisor", "IsSelfEmployed", "IsCurrent", "JobTitleSnippet", "JobDescriptionSnippet", "EmployerNameSnippet" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EducationRecord), global::Google.Cloud.Talent.V4Beta1.EducationRecord.Parser, new[]{ "StartDate", "EndDate", "ExpectedGraduationDate", "SchoolName", "Address", "DegreeDescription", "StructuredDegree", "Description", "IsCurrent", "SchoolNameSnippet", "DegreeSnippet" }, new[]{ "Degree" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Degree), global::Google.Cloud.Talent.V4Beta1.Degree.Parser, new[]{ "DegreeType", "DegreeName", "FieldsOfStudy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Activity), global::Google.Cloud.Talent.V4Beta1.Activity.Parser, new[]{ "DisplayName", "Description", "Uri", "CreateDate", "UpdateDate", "TeamMembers", "SkillsUsed", "ActivityNameSnippet", "ActivityDescriptionSnippet", "SkillsUsedSnippet" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Publication), global::Google.Cloud.Talent.V4Beta1.Publication.Parser, new[]{ "Authors", "Title", "Description", "Journal", "Volume", "Publisher", "PublicationDate", "PublicationType", "Isbn" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Patent), global::Google.Cloud.Talent.V4Beta1.Patent.Parser, new[]{ "DisplayName", "Inventors", "PatentStatus", "PatentStatusDate", "PatentFilingDate", "PatentOffice", "PatentNumber", "PatentDescription", "SkillsUsed" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "CandidateUpdateTime", "ResumeUpdateTime", "Resume", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "Applications", "Assignments", "CustomAttributes", "Processed", "KeywordSnippet", "AvailabilitySignals", "DerivedAddresses" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilitySignal), global::Google.Cloud.Talent.V4Beta1.AvailabilitySignal.Parser, new[]{ "Type", "LastUpdateTime", "FilterSatisfied" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Resume), global::Google.Cloud.Talent.V4Beta1.Resume.Parser, new[]{ "StructuredResume", "ResumeType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName), global::Google.Cloud.Talent.V4Beta1.PersonName.Parser, new[]{ "FormattedName", "StructuredName", "PreferredName" }, new[]{ "PersonName" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName), global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName.Parser, new[]{ "GivenName", "PreferredName", "MiddleInitial", "FamilyName", "Suffixes", "Prefixes" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Address), global::Google.Cloud.Talent.V4Beta1.Address.Parser, new[]{ "Usage", "UnstructuredAddress", "StructuredAddress", "Current" }, new[]{ "Address" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Email), global::Google.Cloud.Talent.V4Beta1.Email.Parser, new[]{ "Usage", "EmailAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Phone), global::Google.Cloud.Talent.V4Beta1.Phone.Parser, new[]{ "Usage", "Type", "Number", "WhenAvailable" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonalUri), global::Google.Cloud.Talent.V4Beta1.PersonalUri.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo), global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo.Parser, new[]{ "Usage", "Name", "ContactId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentRecord), global::Google.Cloud.Talent.V4Beta1.EmploymentRecord.Parser, new[]{ "StartDate", "EndDate", "EmployerName", "DivisionName", "Address", "JobTitle", "JobDescription", "IsSupervisor", "IsSelfEmployed", "IsCurrent", "JobTitleSnippet", "JobDescriptionSnippet", "EmployerNameSnippet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EducationRecord), global::Google.Cloud.Talent.V4Beta1.EducationRecord.Parser, new[]{ "StartDate", "EndDate", "ExpectedGraduationDate", "SchoolName", "Address", "DegreeDescription", "StructuredDegree", "Description", "IsCurrent", "SchoolNameSnippet", "DegreeSnippet" }, new[]{ "Degree" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Degree), global::Google.Cloud.Talent.V4Beta1.Degree.Parser, new[]{ "DegreeType", "DegreeName", "FieldsOfStudy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Activity), global::Google.Cloud.Talent.V4Beta1.Activity.Parser, new[]{ "DisplayName", "Description", "Uri", "CreateDate", "UpdateDate", "TeamMembers", "SkillsUsed", "ActivityNameSnippet", "ActivityDescriptionSnippet", "SkillsUsedSnippet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Publication), global::Google.Cloud.Talent.V4Beta1.Publication.Parser, new[]{ "Authors", "Title", "Description", "Journal", "Volume", "Publisher", "PublicationDate", "PublicationType", "Isbn" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Patent), global::Google.Cloud.Talent.V4Beta1.Patent.Parser, new[]{ "DisplayName", "Inventors", "PatentStatus", "PatentStatusDate", "PatentFilingDate", "PatentOffice", "PatentNumber", "PatentDescription", "SkillsUsed" }, null, null, null, null)
           }));
     }
     #endregion
@@ -705,7 +705,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "custom_attributes" field.</summary>
     public const int CustomAttributesFieldNumber = 26;
     private static readonly pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec _map_customAttributes_codec
-        = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser), 210);
+        = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser), 210);
     private readonly pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute> customAttributes_ = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>();
     /// <summary>
     /// A map of fields to hold both filterable and non-filterable custom profile
@@ -1305,7 +1305,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType type_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType type_ = global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified;
     /// <summary>
     /// Type of signal.
     /// </summary>
@@ -1374,7 +1374,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) hash ^= Type.GetHashCode();
       if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
       if (filterSatisfied_ != null) hash ^= FilterSatisfied.GetHashCode();
       if (_unknownFields != null) {
@@ -1390,7 +1390,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -1409,7 +1409,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (lastUpdateTime_ != null) {
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) {
         Type = other.Type;
       }
       if (other.lastUpdateTime_ != null) {
@@ -1541,7 +1541,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "resume_type" field.</summary>
     public const int ResumeTypeFieldNumber = 2;
-    private global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType resumeType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType resumeType_ = global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType.Unspecified;
     /// <summary>
     /// The format of [structured_resume][google.cloud.talent.v4beta1.Resume.structured_resume].
     /// </summary>
@@ -1575,7 +1575,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (StructuredResume.Length != 0) hash ^= StructuredResume.GetHashCode();
-      if (ResumeType != 0) hash ^= ResumeType.GetHashCode();
+      if (ResumeType != global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType.Unspecified) hash ^= ResumeType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1593,7 +1593,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(10);
         output.WriteString(StructuredResume);
       }
-      if (ResumeType != 0) {
+      if (ResumeType != global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ResumeType);
       }
@@ -1608,7 +1608,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (StructuredResume.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StructuredResume);
       }
-      if (ResumeType != 0) {
+      if (ResumeType != global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResumeType);
       }
       if (_unknownFields != null) {
@@ -1625,7 +1625,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.StructuredResume.Length != 0) {
         StructuredResume = other.StructuredResume;
       }
-      if (other.ResumeType != 0) {
+      if (other.ResumeType != global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType.Unspecified) {
         ResumeType = other.ResumeType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2270,7 +2270,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "usage" field.</summary>
     public const int UsageFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified;
     /// <summary>
     /// The usage of the address. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
@@ -2375,7 +2375,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Usage != 0) hash ^= Usage.GetHashCode();
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) hash ^= Usage.GetHashCode();
       if (addressCase_ == AddressOneofCase.UnstructuredAddress) hash ^= UnstructuredAddress.GetHashCode();
       if (addressCase_ == AddressOneofCase.StructuredAddress) hash ^= StructuredAddress.GetHashCode();
       if (current_ != null) hash ^= Current.GetHashCode();
@@ -2393,7 +2393,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Usage);
       }
@@ -2416,7 +2416,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Usage);
       }
       if (addressCase_ == AddressOneofCase.UnstructuredAddress) {
@@ -2439,7 +2439,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Usage != 0) {
+      if (other.Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         Usage = other.Usage;
       }
       if (other.current_ != null) {
@@ -2540,7 +2540,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "usage" field.</summary>
     public const int UsageFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified;
     /// <summary>
     /// The usage of the email address. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
@@ -2589,7 +2589,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Usage != 0) hash ^= Usage.GetHashCode();
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) hash ^= Usage.GetHashCode();
       if (EmailAddress.Length != 0) hash ^= EmailAddress.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2604,7 +2604,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Usage);
       }
@@ -2620,7 +2620,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Usage);
       }
       if (EmailAddress.Length != 0) {
@@ -2637,7 +2637,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Usage != 0) {
+      if (other.Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         Usage = other.Usage;
       }
       if (other.EmailAddress.Length != 0) {
@@ -2710,7 +2710,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "usage" field.</summary>
     public const int UsageFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified;
     /// <summary>
     /// The usage of the phone. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
@@ -2724,7 +2724,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType type_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType type_ = global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType.Unspecified;
     /// <summary>
     /// The phone type. For example, LANDLINE, MOBILE, FAX.
     /// </summary>
@@ -2796,8 +2796,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Usage != 0) hash ^= Usage.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) hash ^= Usage.GetHashCode();
+      if (Type != global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType.Unspecified) hash ^= Type.GetHashCode();
       if (Number.Length != 0) hash ^= Number.GetHashCode();
       if (WhenAvailable.Length != 0) hash ^= WhenAvailable.GetHashCode();
       if (_unknownFields != null) {
@@ -2813,11 +2813,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Usage);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -2837,10 +2837,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Usage);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Number.Length != 0) {
@@ -2860,10 +2860,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Usage != 0) {
+      if (other.Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         Usage = other.Usage;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType.Unspecified) {
         Type = other.Type;
       }
       if (other.Number.Length != 0) {
@@ -3143,7 +3143,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "usage" field.</summary>
     public const int UsageFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage usage_ = global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified;
     /// <summary>
     /// The usage of this contact method. For example, SCHOOL, WORK, PERSONAL.
     /// </summary>
@@ -3211,7 +3211,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Usage != 0) hash ^= Usage.GetHashCode();
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) hash ^= Usage.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ContactId.Length != 0) hash ^= ContactId.GetHashCode();
       if (_unknownFields != null) {
@@ -3227,7 +3227,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Usage);
       }
@@ -3247,7 +3247,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Usage != 0) {
+      if (Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Usage);
       }
       if (Name.Length != 0) {
@@ -3267,7 +3267,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Usage != 0) {
+      if (other.Usage != global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage.Unspecified) {
         Usage = other.Usage;
       }
       if (other.Name.Length != 0) {
@@ -4437,7 +4437,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "degree_type" field.</summary>
     public const int DegreeTypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.DegreeType degreeType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.DegreeType degreeType_ = global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified;
     /// <summary>
     /// ISCED degree type.
     /// </summary>
@@ -4506,7 +4506,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DegreeType != 0) hash ^= DegreeType.GetHashCode();
+      if (DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) hash ^= DegreeType.GetHashCode();
       if (DegreeName.Length != 0) hash ^= DegreeName.GetHashCode();
       hash ^= fieldsOfStudy_.GetHashCode();
       if (_unknownFields != null) {
@@ -4522,7 +4522,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DegreeType != 0) {
+      if (DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) DegreeType);
       }
@@ -4539,7 +4539,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DegreeType != 0) {
+      if (DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DegreeType);
       }
       if (DegreeName.Length != 0) {
@@ -4557,7 +4557,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.DegreeType != 0) {
+      if (other.DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) {
         DegreeType = other.DegreeType;
       }
       if (other.DegreeName.Length != 0) {

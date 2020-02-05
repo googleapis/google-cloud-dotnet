@@ -54,9 +54,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "ZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser, new[]{ "GroupName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser, new[]{ "Group" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser, new[]{ "GroupName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser, new[]{ "Group" }, null, null, null, null)
           }));
     }
     #endregion

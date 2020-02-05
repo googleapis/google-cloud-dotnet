@@ -25,7 +25,7 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         public RecommenderName ParentAsRecommenderName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RecommenderName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : RecommenderName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -37,7 +37,7 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         public gcrv::RecommendationName RecommendationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         public gcrv::RecommendationName RecommendationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -61,7 +61,7 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         public gcrv::RecommendationName RecommendationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -73,7 +73,7 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         public gcrv::RecommendationName RecommendationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

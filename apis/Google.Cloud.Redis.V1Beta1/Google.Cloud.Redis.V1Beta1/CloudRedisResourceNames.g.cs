@@ -257,7 +257,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </summary>
         public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -269,7 +269,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -281,7 +281,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </summary>
         public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -293,8 +293,20 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpgradeInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -305,7 +317,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </summary>
         public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -317,7 +329,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </summary>
         public gcrv::InstanceName InstanceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

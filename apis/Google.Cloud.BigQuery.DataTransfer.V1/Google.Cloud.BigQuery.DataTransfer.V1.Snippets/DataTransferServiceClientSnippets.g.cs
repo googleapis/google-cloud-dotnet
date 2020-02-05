@@ -17,6 +17,7 @@
 namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -26,7 +27,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
     public sealed class GeneratedDataTransferServiceClientSnippets
     {
         /// <summary>Snippet for GetDataSource</summary>
-        public void GetDataSource_RequestObject()
+        public void GetDataSourceRequestObject()
         {
             // Snippet: GetDataSource(GetDataSourceRequest, CallSettings)
             // Create client
@@ -42,7 +43,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetDataSourceAsync</summary>
-        public async Task GetDataSourceAsync_RequestObject()
+        public async Task GetDataSourceRequestObjectAsync()
         {
             // Snippet: GetDataSourceAsync(GetDataSourceRequest, CallSettings)
             // Additional: GetDataSourceAsync(GetDataSourceRequest, CancellationToken)
@@ -86,7 +87,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetDataSource</summary>
-        public void GetDataSource_ResourceNames()
+        public void GetDataSourceResourceNames()
         {
             // Snippet: GetDataSource(DataSourceName, CallSettings)
             // Create client
@@ -99,7 +100,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetDataSourceAsync</summary>
-        public async Task GetDataSourceAsync_ResourceNames()
+        public async Task GetDataSourceResourceNamesAsync()
         {
             // Snippet: GetDataSourceAsync(DataSourceName, CallSettings)
             // Additional: GetDataSourceAsync(DataSourceName, CancellationToken)
@@ -113,7 +114,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListDataSources</summary>
-        public void ListDataSources_RequestObject()
+        public void ListDataSourcesRequestObject()
         {
             // Snippet: ListDataSources(ListDataSourcesRequest, CallSettings)
             // Create client
@@ -121,7 +122,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListDataSourcesRequest request = new ListDataSourcesRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSources(request);
@@ -161,7 +162,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListDataSources</summary>
-        public async Task ListDataSourcesAsync_RequestObject()
+        public async Task ListDataSourcesRequestObjectAsync()
         {
             // Snippet: ListDataSourcesAsync(ListDataSourcesRequest, CallSettings)
             // Create client
@@ -169,7 +170,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListDataSourcesRequest request = new ListDataSourcesRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSourcesAsync(request);
@@ -299,13 +300,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListDataSources</summary>
-        public void ListDataSources_ResourceNames()
+        public void ListDataSourcesResourceNames1()
         {
-            // Snippet: ListDataSources(ParentName, string, int?, CallSettings)
+            // Snippet: ListDataSources(ProjectName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProject("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
             PagedEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSources(parent);
 
@@ -344,13 +345,103 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListDataSources</summary>
-        public async Task ListDataSourcesAsync_ResourceNames()
+        public async Task ListDataSourcesResourceNames1Async()
         {
-            // Snippet: ListDataSourcesAsync(ParentName, string, int?, CallSettings)
+            // Snippet: ListDataSourcesAsync(ProjectName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProject("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DataSource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDataSourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public void ListDataSourcesResourceNames2()
+        {
+            // Snippet: ListDataSources(LocationName, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public async Task ListDataSourcesResourceNames2Async()
+        {
+            // Snippet: ListDataSourcesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = dataTransferServiceClient.ListDataSourcesAsync(parent);
 
@@ -389,7 +480,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTransferConfig</summary>
-        public void CreateTransferConfig_RequestObject()
+        public void CreateTransferConfigRequestObject()
         {
             // Snippet: CreateTransferConfig(CreateTransferConfigRequest, CallSettings)
             // Create client
@@ -397,7 +488,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
                 AuthorizationCode = "",
                 VersionInfo = "",
@@ -409,7 +500,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTransferConfigAsync</summary>
-        public async Task CreateTransferConfigAsync_RequestObject()
+        public async Task CreateTransferConfigRequestObjectAsync()
         {
             // Snippet: CreateTransferConfigAsync(CreateTransferConfigRequest, CallSettings)
             // Additional: CreateTransferConfigAsync(CreateTransferConfigRequest, CancellationToken)
@@ -418,7 +509,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
                 AuthorizationCode = "",
                 VersionInfo = "",
@@ -459,13 +550,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTransferConfig</summary>
-        public void CreateTransferConfig_ResourceNames()
+        public void CreateTransferConfigResourceNames1()
         {
-            // Snippet: CreateTransferConfig(ParentName, TransferConfig, CallSettings)
+            // Snippet: CreateTransferConfig(ProjectName, TransferConfig, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProject("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             TransferConfig transferConfig = new TransferConfig();
             // Make the request
             TransferConfig response = dataTransferServiceClient.CreateTransferConfig(parent, transferConfig);
@@ -473,14 +564,43 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTransferConfigAsync</summary>
-        public async Task CreateTransferConfigAsync_ResourceNames()
+        public async Task CreateTransferConfigResourceNames1Async()
         {
-            // Snippet: CreateTransferConfigAsync(ParentName, TransferConfig, CallSettings)
-            // Additional: CreateTransferConfigAsync(ParentName, TransferConfig, CancellationToken)
+            // Snippet: CreateTransferConfigAsync(ProjectName, TransferConfig, CallSettings)
+            // Additional: CreateTransferConfigAsync(ProjectName, TransferConfig, CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProject("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            TransferConfig transferConfig = new TransferConfig();
+            // Make the request
+            TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(parent, transferConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTransferConfig</summary>
+        public void CreateTransferConfigResourceNames2()
+        {
+            // Snippet: CreateTransferConfig(LocationName, TransferConfig, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            TransferConfig transferConfig = new TransferConfig();
+            // Make the request
+            TransferConfig response = dataTransferServiceClient.CreateTransferConfig(parent, transferConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTransferConfigAsync</summary>
+        public async Task CreateTransferConfigResourceNames2Async()
+        {
+            // Snippet: CreateTransferConfigAsync(LocationName, TransferConfig, CallSettings)
+            // Additional: CreateTransferConfigAsync(LocationName, TransferConfig, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             TransferConfig transferConfig = new TransferConfig();
             // Make the request
             TransferConfig response = await dataTransferServiceClient.CreateTransferConfigAsync(parent, transferConfig);
@@ -488,7 +608,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateTransferConfig</summary>
-        public void UpdateTransferConfig_RequestObject()
+        public void UpdateTransferConfigRequestObject()
         {
             // Snippet: UpdateTransferConfig(UpdateTransferConfigRequest, CallSettings)
             // Create client
@@ -508,7 +628,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateTransferConfigAsync</summary>
-        public async Task UpdateTransferConfigAsync_RequestObject()
+        public async Task UpdateTransferConfigRequestObjectAsync()
         {
             // Snippet: UpdateTransferConfigAsync(UpdateTransferConfigRequest, CallSettings)
             // Additional: UpdateTransferConfigAsync(UpdateTransferConfigRequest, CancellationToken)
@@ -558,7 +678,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferConfig</summary>
-        public void DeleteTransferConfig_RequestObject()
+        public void DeleteTransferConfigRequestObject()
         {
             // Snippet: DeleteTransferConfig(DeleteTransferConfigRequest, CallSettings)
             // Create client
@@ -574,7 +694,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferConfigAsync</summary>
-        public async Task DeleteTransferConfigAsync_RequestObject()
+        public async Task DeleteTransferConfigRequestObjectAsync()
         {
             // Snippet: DeleteTransferConfigAsync(DeleteTransferConfigRequest, CallSettings)
             // Additional: DeleteTransferConfigAsync(DeleteTransferConfigRequest, CancellationToken)
@@ -618,7 +738,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferConfig</summary>
-        public void DeleteTransferConfig_ResourceNames()
+        public void DeleteTransferConfigResourceNames()
         {
             // Snippet: DeleteTransferConfig(TransferConfigName, CallSettings)
             // Create client
@@ -631,7 +751,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferConfigAsync</summary>
-        public async Task DeleteTransferConfigAsync_ResourceNames()
+        public async Task DeleteTransferConfigResourceNamesAsync()
         {
             // Snippet: DeleteTransferConfigAsync(TransferConfigName, CallSettings)
             // Additional: DeleteTransferConfigAsync(TransferConfigName, CancellationToken)
@@ -645,7 +765,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferConfig</summary>
-        public void GetTransferConfig_RequestObject()
+        public void GetTransferConfigRequestObject()
         {
             // Snippet: GetTransferConfig(GetTransferConfigRequest, CallSettings)
             // Create client
@@ -661,7 +781,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferConfigAsync</summary>
-        public async Task GetTransferConfigAsync_RequestObject()
+        public async Task GetTransferConfigRequestObjectAsync()
         {
             // Snippet: GetTransferConfigAsync(GetTransferConfigRequest, CallSettings)
             // Additional: GetTransferConfigAsync(GetTransferConfigRequest, CancellationToken)
@@ -705,7 +825,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferConfig</summary>
-        public void GetTransferConfig_ResourceNames()
+        public void GetTransferConfigResourceNames()
         {
             // Snippet: GetTransferConfig(TransferConfigName, CallSettings)
             // Create client
@@ -718,7 +838,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferConfigAsync</summary>
-        public async Task GetTransferConfigAsync_ResourceNames()
+        public async Task GetTransferConfigResourceNamesAsync()
         {
             // Snippet: GetTransferConfigAsync(TransferConfigName, CallSettings)
             // Additional: GetTransferConfigAsync(TransferConfigName, CancellationToken)
@@ -732,7 +852,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferConfigs</summary>
-        public void ListTransferConfigs_RequestObject()
+        public void ListTransferConfigsRequestObject()
         {
             // Snippet: ListTransferConfigs(ListTransferConfigsRequest, CallSettings)
             // Create client
@@ -740,7 +860,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 DataSourceIds = { "", },
             };
             // Make the request
@@ -781,7 +901,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferConfigs</summary>
-        public async Task ListTransferConfigsAsync_RequestObject()
+        public async Task ListTransferConfigsRequestObjectAsync()
         {
             // Snippet: ListTransferConfigsAsync(ListTransferConfigsRequest, CallSettings)
             // Create client
@@ -789,7 +909,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // Initialize request argument(s)
             ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 DataSourceIds = { "", },
             };
             // Make the request
@@ -920,13 +1040,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferConfigs</summary>
-        public void ListTransferConfigs_ResourceNames()
+        public void ListTransferConfigsResourceNames1()
         {
-            // Snippet: ListTransferConfigs(ParentName, string, int?, CallSettings)
+            // Snippet: ListTransferConfigs(ProjectName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProject("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
             PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigs(parent);
 
@@ -965,13 +1085,103 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferConfigs</summary>
-        public async Task ListTransferConfigsAsync_ResourceNames()
+        public async Task ListTransferConfigsResourceNames1Async()
         {
-            // Snippet: ListTransferConfigsAsync(ParentName, string, int?, CallSettings)
+            // Snippet: ListTransferConfigsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProject("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TransferConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTransferConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferConfigs</summary>
+        public void ListTransferConfigsResourceNames2()
+        {
+            // Snippet: ListTransferConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TransferConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTransferConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TransferConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TransferConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TransferConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTransferConfigs</summary>
+        public async Task ListTransferConfigsResourceNames2Async()
+        {
+            // Snippet: ListTransferConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> response = dataTransferServiceClient.ListTransferConfigsAsync(parent);
 
@@ -1010,7 +1220,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ScheduleTransferRuns</summary>
-        public void ScheduleTransferRuns_RequestObject()
+        public void ScheduleTransferRunsRequestObject()
         {
             // Snippet: ScheduleTransferRuns(ScheduleTransferRunsRequest, CallSettings)
             // Create client
@@ -1028,7 +1238,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
-        public async Task ScheduleTransferRunsAsync_RequestObject()
+        public async Task ScheduleTransferRunsRequestObjectAsync()
         {
             // Snippet: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest, CallSettings)
             // Additional: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest, CancellationToken)
@@ -1078,7 +1288,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ScheduleTransferRuns</summary>
-        public void ScheduleTransferRuns_ResourceNames()
+        public void ScheduleTransferRunsResourceNames()
         {
             // Snippet: ScheduleTransferRuns(TransferConfigName, Timestamp, Timestamp, CallSettings)
             // Create client
@@ -1093,7 +1303,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ScheduleTransferRunsAsync</summary>
-        public async Task ScheduleTransferRunsAsync_ResourceNames()
+        public async Task ScheduleTransferRunsResourceNamesAsync()
         {
             // Snippet: ScheduleTransferRunsAsync(TransferConfigName, Timestamp, Timestamp, CallSettings)
             // Additional: ScheduleTransferRunsAsync(TransferConfigName, Timestamp, Timestamp, CancellationToken)
@@ -1109,7 +1319,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for StartManualTransferRuns</summary>
-        public void StartManualTransferRuns_RequestObject()
+        public void StartManualTransferRunsRequestObject()
         {
             // Snippet: StartManualTransferRuns(StartManualTransferRunsRequest, CallSettings)
             // Create client
@@ -1127,7 +1337,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for StartManualTransferRunsAsync</summary>
-        public async Task StartManualTransferRunsAsync_RequestObject()
+        public async Task StartManualTransferRunsRequestObjectAsync()
         {
             // Snippet: StartManualTransferRunsAsync(StartManualTransferRunsRequest, CallSettings)
             // Additional: StartManualTransferRunsAsync(StartManualTransferRunsRequest, CancellationToken)
@@ -1146,7 +1356,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferRun</summary>
-        public void GetTransferRun_RequestObject()
+        public void GetTransferRunRequestObject()
         {
             // Snippet: GetTransferRun(GetTransferRunRequest, CallSettings)
             // Create client
@@ -1162,7 +1372,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferRunAsync</summary>
-        public async Task GetTransferRunAsync_RequestObject()
+        public async Task GetTransferRunRequestObjectAsync()
         {
             // Snippet: GetTransferRunAsync(GetTransferRunRequest, CallSettings)
             // Additional: GetTransferRunAsync(GetTransferRunRequest, CancellationToken)
@@ -1206,7 +1416,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferRun</summary>
-        public void GetTransferRun_ResourceNames()
+        public void GetTransferRunResourceNames()
         {
             // Snippet: GetTransferRun(RunName, CallSettings)
             // Create client
@@ -1219,7 +1429,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for GetTransferRunAsync</summary>
-        public async Task GetTransferRunAsync_ResourceNames()
+        public async Task GetTransferRunResourceNamesAsync()
         {
             // Snippet: GetTransferRunAsync(RunName, CallSettings)
             // Additional: GetTransferRunAsync(RunName, CancellationToken)
@@ -1233,7 +1443,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferRun</summary>
-        public void DeleteTransferRun_RequestObject()
+        public void DeleteTransferRunRequestObject()
         {
             // Snippet: DeleteTransferRun(DeleteTransferRunRequest, CallSettings)
             // Create client
@@ -1249,7 +1459,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferRunAsync</summary>
-        public async Task DeleteTransferRunAsync_RequestObject()
+        public async Task DeleteTransferRunRequestObjectAsync()
         {
             // Snippet: DeleteTransferRunAsync(DeleteTransferRunRequest, CallSettings)
             // Additional: DeleteTransferRunAsync(DeleteTransferRunRequest, CancellationToken)
@@ -1293,7 +1503,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferRun</summary>
-        public void DeleteTransferRun_ResourceNames()
+        public void DeleteTransferRunResourceNames()
         {
             // Snippet: DeleteTransferRun(RunName, CallSettings)
             // Create client
@@ -1306,7 +1516,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTransferRunAsync</summary>
-        public async Task DeleteTransferRunAsync_ResourceNames()
+        public async Task DeleteTransferRunResourceNamesAsync()
         {
             // Snippet: DeleteTransferRunAsync(RunName, CallSettings)
             // Additional: DeleteTransferRunAsync(RunName, CancellationToken)
@@ -1320,7 +1530,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferRuns</summary>
-        public void ListTransferRuns_RequestObject()
+        public void ListTransferRunsRequestObject()
         {
             // Snippet: ListTransferRuns(ListTransferRunsRequest, CallSettings)
             // Create client
@@ -1373,7 +1583,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferRuns</summary>
-        public async Task ListTransferRunsAsync_RequestObject()
+        public async Task ListTransferRunsRequestObjectAsync()
         {
             // Snippet: ListTransferRunsAsync(ListTransferRunsRequest, CallSettings)
             // Create client
@@ -1516,7 +1726,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferRuns</summary>
-        public void ListTransferRuns_ResourceNames()
+        public void ListTransferRunsResourceNames()
         {
             // Snippet: ListTransferRuns(TransferConfigName, string, int?, CallSettings)
             // Create client
@@ -1561,7 +1771,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferRuns</summary>
-        public async Task ListTransferRunsAsync_ResourceNames()
+        public async Task ListTransferRunsResourceNamesAsync()
         {
             // Snippet: ListTransferRunsAsync(TransferConfigName, string, int?, CallSettings)
             // Create client
@@ -1606,7 +1816,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferLogs</summary>
-        public void ListTransferLogs_RequestObject()
+        public void ListTransferLogsRequestObject()
         {
             // Snippet: ListTransferLogs(ListTransferLogsRequest, CallSettings)
             // Create client
@@ -1658,7 +1868,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferLogs</summary>
-        public async Task ListTransferLogsAsync_RequestObject()
+        public async Task ListTransferLogsRequestObjectAsync()
         {
             // Snippet: ListTransferLogsAsync(ListTransferLogsRequest, CallSettings)
             // Create client
@@ -1800,7 +2010,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferLogs</summary>
-        public void ListTransferLogs_ResourceNames()
+        public void ListTransferLogsResourceNames()
         {
             // Snippet: ListTransferLogs(RunName, string, int?, CallSettings)
             // Create client
@@ -1845,7 +2055,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for ListTransferLogs</summary>
-        public async Task ListTransferLogsAsync_ResourceNames()
+        public async Task ListTransferLogsResourceNamesAsync()
         {
             // Snippet: ListTransferLogsAsync(RunName, string, int?, CallSettings)
             // Create client
@@ -1890,7 +2100,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CheckValidCreds</summary>
-        public void CheckValidCreds_RequestObject()
+        public void CheckValidCredsRequestObject()
         {
             // Snippet: CheckValidCreds(CheckValidCredsRequest, CallSettings)
             // Create client
@@ -1906,7 +2116,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CheckValidCredsAsync</summary>
-        public async Task CheckValidCredsAsync_RequestObject()
+        public async Task CheckValidCredsRequestObjectAsync()
         {
             // Snippet: CheckValidCredsAsync(CheckValidCredsRequest, CallSettings)
             // Additional: CheckValidCredsAsync(CheckValidCredsRequest, CancellationToken)
@@ -1950,7 +2160,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CheckValidCreds</summary>
-        public void CheckValidCreds_ResourceNames()
+        public void CheckValidCredsResourceNames()
         {
             // Snippet: CheckValidCreds(DataSourceName, CallSettings)
             // Create client
@@ -1963,7 +2173,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         }
 
         /// <summary>Snippet for CheckValidCredsAsync</summary>
-        public async Task CheckValidCredsAsync_ResourceNames()
+        public async Task CheckValidCredsResourceNamesAsync()
         {
             // Snippet: CheckValidCredsAsync(DataSourceName, CallSettings)
             // Additional: CheckValidCredsAsync(DataSourceName, CancellationToken)

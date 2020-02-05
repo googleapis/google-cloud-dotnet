@@ -89,17 +89,17 @@ namespace Google.Cloud.Billing.V1 {
             "Q0xEQ1RMR6oCF0dvb2dsZS5DbG91ZC5CaWxsaW5nLlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Service), global::Google.Cloud.Billing.V1.Service.Parser, new[]{ "Name", "ServiceId", "DisplayName", "BusinessEntityName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Sku), global::Google.Cloud.Billing.V1.Sku.Parser, new[]{ "Name", "SkuId", "Description", "Category", "ServiceRegions", "PricingInfo", "ServiceProviderName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Category), global::Google.Cloud.Billing.V1.Category.Parser, new[]{ "ServiceDisplayName", "ResourceFamily", "ResourceGroup", "UsageType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingInfo), global::Google.Cloud.Billing.V1.PricingInfo.Parser, new[]{ "EffectiveTime", "Summary", "PricingExpression", "AggregationInfo", "CurrencyConversionRate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression), global::Google.Cloud.Billing.V1.PricingExpression.Parser, new[]{ "UsageUnit", "UsageUnitDescription", "BaseUnit", "BaseUnitDescription", "BaseUnitConversionFactor", "DisplayQuantity", "TieredRates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate), global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate.Parser, new[]{ "StartUsageAmount", "UnitPrice" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.AggregationInfo), global::Google.Cloud.Billing.V1.AggregationInfo.Parser, new[]{ "AggregationLevel", "AggregationInterval", "AggregationCount" }, null, new[]{ typeof(global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel), typeof(global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListServicesRequest), global::Google.Cloud.Billing.V1.ListServicesRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListServicesResponse), global::Google.Cloud.Billing.V1.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListSkusRequest), global::Google.Cloud.Billing.V1.ListSkusRequest.Parser, new[]{ "Parent", "StartTime", "EndTime", "CurrencyCode", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListSkusResponse), global::Google.Cloud.Billing.V1.ListSkusResponse.Parser, new[]{ "Skus", "NextPageToken" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Service), global::Google.Cloud.Billing.V1.Service.Parser, new[]{ "Name", "ServiceId", "DisplayName", "BusinessEntityName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Sku), global::Google.Cloud.Billing.V1.Sku.Parser, new[]{ "Name", "SkuId", "Description", "Category", "ServiceRegions", "PricingInfo", "ServiceProviderName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.Category), global::Google.Cloud.Billing.V1.Category.Parser, new[]{ "ServiceDisplayName", "ResourceFamily", "ResourceGroup", "UsageType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingInfo), global::Google.Cloud.Billing.V1.PricingInfo.Parser, new[]{ "EffectiveTime", "Summary", "PricingExpression", "AggregationInfo", "CurrencyConversionRate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression), global::Google.Cloud.Billing.V1.PricingExpression.Parser, new[]{ "UsageUnit", "UsageUnitDescription", "BaseUnit", "BaseUnitDescription", "BaseUnitConversionFactor", "DisplayQuantity", "TieredRates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate), global::Google.Cloud.Billing.V1.PricingExpression.Types.TierRate.Parser, new[]{ "StartUsageAmount", "UnitPrice" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.AggregationInfo), global::Google.Cloud.Billing.V1.AggregationInfo.Parser, new[]{ "AggregationLevel", "AggregationInterval", "AggregationCount" }, null, new[]{ typeof(global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel), typeof(global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListServicesRequest), global::Google.Cloud.Billing.V1.ListServicesRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListServicesResponse), global::Google.Cloud.Billing.V1.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListSkusRequest), global::Google.Cloud.Billing.V1.ListSkusRequest.Parser, new[]{ "Parent", "StartTime", "EndTime", "CurrencyCode", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListSkusResponse), global::Google.Cloud.Billing.V1.ListSkusResponse.Parser, new[]{ "Skus", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1735,7 +1735,7 @@ namespace Google.Cloud.Billing.V1 {
 
     /// <summary>Field number for the "aggregation_level" field.</summary>
     public const int AggregationLevelFieldNumber = 1;
-    private global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel aggregationLevel_ = 0;
+    private global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel aggregationLevel_ = global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel AggregationLevel {
       get { return aggregationLevel_; }
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.Billing.V1 {
 
     /// <summary>Field number for the "aggregation_interval" field.</summary>
     public const int AggregationIntervalFieldNumber = 2;
-    private global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval aggregationInterval_ = 0;
+    private global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval aggregationInterval_ = global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval AggregationInterval {
       get { return aggregationInterval_; }
@@ -1793,8 +1793,8 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (AggregationLevel != 0) hash ^= AggregationLevel.GetHashCode();
-      if (AggregationInterval != 0) hash ^= AggregationInterval.GetHashCode();
+      if (AggregationLevel != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel.Unspecified) hash ^= AggregationLevel.GetHashCode();
+      if (AggregationInterval != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval.Unspecified) hash ^= AggregationInterval.GetHashCode();
       if (AggregationCount != 0) hash ^= AggregationCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1809,11 +1809,11 @@ namespace Google.Cloud.Billing.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (AggregationLevel != 0) {
+      if (AggregationLevel != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) AggregationLevel);
       }
-      if (AggregationInterval != 0) {
+      if (AggregationInterval != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) AggregationInterval);
       }
@@ -1829,10 +1829,10 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (AggregationLevel != 0) {
+      if (AggregationLevel != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AggregationLevel);
       }
-      if (AggregationInterval != 0) {
+      if (AggregationInterval != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AggregationInterval);
       }
       if (AggregationCount != 0) {
@@ -1849,10 +1849,10 @@ namespace Google.Cloud.Billing.V1 {
       if (other == null) {
         return;
       }
-      if (other.AggregationLevel != 0) {
+      if (other.AggregationLevel != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationLevel.Unspecified) {
         AggregationLevel = other.AggregationLevel;
       }
-      if (other.AggregationInterval != 0) {
+      if (other.AggregationInterval != global::Google.Cloud.Billing.V1.AggregationInfo.Types.AggregationInterval.Unspecified) {
         AggregationInterval = other.AggregationInterval;
       }
       if (other.AggregationCount != 0) {

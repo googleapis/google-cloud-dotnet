@@ -41,9 +41,9 @@ namespace Google.Cloud.Spanner.V1 {
             "LlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType), global::Google.Cloud.Spanner.V1.StructType.Parser, new[]{ "Fields" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType.Types.Field), global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser, new[]{ "Name", "Type" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType), global::Google.Cloud.Spanner.V1.StructType.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType.Types.Field), global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser, new[]{ "Name", "Type" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -159,7 +159,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     /// <summary>Field number for the "code" field.</summary>
     public const int CodeFieldNumber = 1;
-    private global::Google.Cloud.Spanner.V1.TypeCode code_ = 0;
+    private global::Google.Cloud.Spanner.V1.TypeCode code_ = global::Google.Cloud.Spanner.V1.TypeCode.Unspecified;
     /// <summary>
     /// Required. The [TypeCode][google.spanner.v1.TypeCode] for this type.
     /// </summary>
@@ -223,7 +223,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Code != 0) hash ^= Code.GetHashCode();
+      if (Code != global::Google.Cloud.Spanner.V1.TypeCode.Unspecified) hash ^= Code.GetHashCode();
       if (arrayElementType_ != null) hash ^= ArrayElementType.GetHashCode();
       if (structType_ != null) hash ^= StructType.GetHashCode();
       if (_unknownFields != null) {
@@ -239,7 +239,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Code != 0) {
+      if (Code != global::Google.Cloud.Spanner.V1.TypeCode.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Code);
       }
@@ -259,7 +259,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Code != 0) {
+      if (Code != global::Google.Cloud.Spanner.V1.TypeCode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
       }
       if (arrayElementType_ != null) {
@@ -279,7 +279,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (other == null) {
         return;
       }
-      if (other.Code != 0) {
+      if (other.Code != global::Google.Cloud.Spanner.V1.TypeCode.Unspecified) {
         Code = other.Code;
       }
       if (other.arrayElementType_ != null) {

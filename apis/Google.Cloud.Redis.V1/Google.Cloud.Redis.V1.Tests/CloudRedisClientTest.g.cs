@@ -69,6 +69,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 MemorySizeGb = 863378110,
                 AuthorizedNetwork = "authorized_network63563381",
                 PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+                ConnectMode = Instance.Types.ConnectMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -118,6 +119,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 MemorySizeGb = 863378110,
                 AuthorizedNetwork = "authorized_network63563381",
                 PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+                ConnectMode = Instance.Types.ConnectMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -169,6 +171,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 MemorySizeGb = 863378110,
                 AuthorizedNetwork = "authorized_network63563381",
                 PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+                ConnectMode = Instance.Types.ConnectMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -218,6 +221,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 MemorySizeGb = 863378110,
                 AuthorizedNetwork = "authorized_network63563381",
                 PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+                ConnectMode = Instance.Types.ConnectMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -229,7 +233,7 @@ namespace Google.Cloud.Redis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetInstance_ResourceNames()
+        public void GetInstanceResourceNames()
         {
             moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -269,6 +273,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 MemorySizeGb = 863378110,
                 AuthorizedNetwork = "authorized_network63563381",
                 PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+                ConnectMode = Instance.Types.ConnectMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -278,7 +283,7 @@ namespace Google.Cloud.Redis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetInstanceAsync_ResourceNames()
+        public async stt::Task GetInstanceResourceNamesAsync()
         {
             moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -318,6 +323,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 MemorySizeGb = 863378110,
                 AuthorizedNetwork = "authorized_network63563381",
                 PersistenceIamIdentity = "persistence_iam_identitye8d96e46",
+                ConnectMode = Instance.Types.ConnectMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);

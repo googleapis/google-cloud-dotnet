@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
@@ -181,7 +182,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetDataSource_ResourceNames()
+        public void GetDataSourceResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetDataSourceRequest request = new GetDataSourceRequest
@@ -218,7 +219,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetDataSourceAsync_ResourceNames()
+        public async stt::Task GetDataSourceResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetDataSourceRequest request = new GetDataSourceRequest
@@ -262,7 +263,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
                 AuthorizationCode = "authorization_codef52cfb2e",
                 VersionInfo = "version_info0ffd741f",
@@ -300,7 +301,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
                 AuthorizationCode = "authorization_codef52cfb2e",
                 VersionInfo = "version_info0ffd741f",
@@ -340,7 +341,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
@@ -375,7 +376,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
@@ -407,12 +408,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateTransferConfig_ResourceNames()
+        public void CreateTransferConfigResourceNames1()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
@@ -436,18 +437,18 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig response = client.CreateTransferConfig(request.ParentAsParentName, request.TransferConfig);
+            TransferConfig response = client.CreateTransferConfig(request.ParentAsProjectName, request.TransferConfig);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateTransferConfigAsync_ResourceNames()
+        public async stt::Task CreateTransferConfigResourceNames1Async()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CreateTransferConfigRequest request = new CreateTransferConfigRequest
             {
-                ParentAsParentName = ParentName.FromProject("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
             };
             TransferConfig expectedResponse = new TransferConfig
@@ -471,9 +472,81 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            TransferConfig responseCallSettings = await client.CreateTransferConfigAsync(request.ParentAsParentName, request.TransferConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            TransferConfig responseCallSettings = await client.CreateTransferConfigAsync(request.ParentAsProjectName, request.TransferConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            TransferConfig responseCancellationToken = await client.CreateTransferConfigAsync(request.ParentAsParentName, request.TransferConfig, st::CancellationToken.None);
+            TransferConfig responseCancellationToken = await client.CreateTransferConfigAsync(request.ParentAsProjectName, request.TransferConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTransferConfigResourceNames2()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                TransferConfig = new TransferConfig(),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig response = client.CreateTransferConfig(request.ParentAsLocationName, request.TransferConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTransferConfigResourceNames2Async()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            CreateTransferConfigRequest request = new CreateTransferConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                TransferConfig = new TransferConfig(),
+            };
+            TransferConfig expectedResponse = new TransferConfig
+            {
+                TransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
+                DestinationDatasetId = "destination_dataset_idb2e283b4",
+                DisplayName = "display_name137f65c2",
+                UpdateTime = new wkt::Timestamp(),
+                DataSourceId = "data_source_id4a2ea315",
+                Schedule = "schedule59559879",
+                NextRunTime = new wkt::Timestamp(),
+                Params = new wkt::Struct(),
+                State = TransferState.Unspecified,
+                UserId = -7972883667886640920L,
+                DataRefreshWindowDays = -902059417,
+                Disabled = false,
+                DatasetRegion = "dataset_region57ab9184",
+                NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
+                EmailPreferences = new EmailPreferences(),
+                ScheduleOptions = new ScheduleOptions(),
+            };
+            mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            TransferConfig responseCallSettings = await client.CreateTransferConfigAsync(request.ParentAsLocationName, request.TransferConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TransferConfig responseCancellationToken = await client.CreateTransferConfigAsync(request.ParentAsLocationName, request.TransferConfig, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -691,7 +764,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteTransferConfig_ResourceNames()
+        public void DeleteTransferConfigResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
@@ -706,7 +779,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteTransferConfigAsync_ResourceNames()
+        public async stt::Task DeleteTransferConfigResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferConfigRequest request = new DeleteTransferConfigRequest
@@ -862,7 +935,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetTransferConfig_ResourceNames()
+        public void GetTransferConfigResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferConfigRequest request = new GetTransferConfigRequest
@@ -896,7 +969,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetTransferConfigAsync_ResourceNames()
+        public async stt::Task GetTransferConfigResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferConfigRequest request = new GetTransferConfigRequest
@@ -1020,7 +1093,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ScheduleTransferRuns_ResourceNames()
+        public void ScheduleTransferRunsResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
@@ -1041,7 +1114,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ScheduleTransferRunsAsync_ResourceNames()
+        public async stt::Task ScheduleTransferRunsResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             ScheduleTransferRunsRequest request = new ScheduleTransferRunsRequest
@@ -1244,7 +1317,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetTransferRun_ResourceNames()
+        public void GetTransferRunResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferRunRequest request = new GetTransferRunRequest
@@ -1277,7 +1350,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetTransferRunAsync_ResourceNames()
+        public async stt::Task GetTransferRunResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             GetTransferRunRequest request = new GetTransferRunRequest
@@ -1374,7 +1447,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteTransferRun_ResourceNames()
+        public void DeleteTransferRunResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
@@ -1389,7 +1462,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteTransferRunAsync_ResourceNames()
+        public async stt::Task DeleteTransferRunResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             DeleteTransferRunRequest request = new DeleteTransferRunRequest
@@ -1485,7 +1558,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CheckValidCreds_ResourceNames()
+        public void CheckValidCredsResourceNames()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CheckValidCredsRequest request = new CheckValidCredsRequest
@@ -1504,7 +1577,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CheckValidCredsAsync_ResourceNames()
+        public async stt::Task CheckValidCredsResourceNamesAsync()
         {
             moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
             CheckValidCredsRequest request = new CheckValidCredsRequest

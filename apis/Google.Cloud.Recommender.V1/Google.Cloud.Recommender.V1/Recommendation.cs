@@ -84,15 +84,15 @@ namespace Google.Cloud.Recommender.V1 {
             "b2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation), global::Google.Cloud.Recommender.V1.Recommendation.Parser, new[]{ "Name", "Description", "RecommenderSubtype", "LastRefreshTime", "PrimaryImpact", "AdditionalImpact", "Content", "StateInfo", "Etag" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationContent), global::Google.Cloud.Recommender.V1.RecommendationContent.Parser, new[]{ "OperationGroups" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.OperationGroup), global::Google.Cloud.Recommender.V1.OperationGroup.Parser, new[]{ "Operations" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Operation), global::Google.Cloud.Recommender.V1.Operation.Parser, new[]{ "Action", "ResourceType", "Resource", "Path", "SourceResource", "SourcePath", "Value", "ValueMatcher", "PathFilters", "PathValueMatchers" }, new[]{ "PathValue" }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ValueMatcher), global::Google.Cloud.Recommender.V1.ValueMatcher.Parser, new[]{ "MatchesPattern" }, new[]{ "MatchVariant" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.CostProjection), global::Google.Cloud.Recommender.V1.CostProjection.Parser, new[]{ "Cost", "Duration" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo), global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation), global::Google.Cloud.Recommender.V1.Recommendation.Parser, new[]{ "Name", "Description", "RecommenderSubtype", "LastRefreshTime", "PrimaryImpact", "AdditionalImpact", "Content", "StateInfo", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationContent), global::Google.Cloud.Recommender.V1.RecommendationContent.Parser, new[]{ "OperationGroups" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.OperationGroup), global::Google.Cloud.Recommender.V1.OperationGroup.Parser, new[]{ "Operations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Operation), global::Google.Cloud.Recommender.V1.Operation.Parser, new[]{ "Action", "ResourceType", "Resource", "Path", "SourceResource", "SourcePath", "Value", "ValueMatcher", "PathFilters", "PathValueMatchers" }, new[]{ "PathValue" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ValueMatcher), global::Google.Cloud.Recommender.V1.ValueMatcher.Parser, new[]{ "MatchesPattern" }, new[]{ "MatchVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.CostProjection), global::Google.Cloud.Recommender.V1.CostProjection.Parser, new[]{ "Cost", "Duration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo), global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -960,7 +960,7 @@ namespace Google.Cloud.Recommender.V1 {
     /// <summary>Field number for the "path_filters" field.</summary>
     public const int PathFiltersFieldNumber = 8;
     private static readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec _map_pathFilters_codec
-        = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 66);
+        = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 66);
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> pathFilters_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
     /// Set of filters to apply if `path` refers to array elements or nested array
@@ -992,7 +992,7 @@ namespace Google.Cloud.Recommender.V1 {
     /// <summary>Field number for the "path_value_matchers" field.</summary>
     public const int PathValueMatchersFieldNumber = 11;
     private static readonly pbc::MapField<string, global::Google.Cloud.Recommender.V1.ValueMatcher>.Codec _map_pathValueMatchers_codec
-        = new pbc::MapField<string, global::Google.Cloud.Recommender.V1.ValueMatcher>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Recommender.V1.ValueMatcher.Parser), 90);
+        = new pbc::MapField<string, global::Google.Cloud.Recommender.V1.ValueMatcher>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Recommender.V1.ValueMatcher.Parser), 90);
     private readonly pbc::MapField<string, global::Google.Cloud.Recommender.V1.ValueMatcher> pathValueMatchers_ = new pbc::MapField<string, global::Google.Cloud.Recommender.V1.ValueMatcher>();
     /// <summary>
     /// Similar to path_filters, this contains set of filters to apply if `path`
@@ -1650,7 +1650,7 @@ namespace Google.Cloud.Recommender.V1 {
 
     /// <summary>Field number for the "category" field.</summary>
     public const int CategoryFieldNumber = 1;
-    private global::Google.Cloud.Recommender.V1.Impact.Types.Category category_ = 0;
+    private global::Google.Cloud.Recommender.V1.Impact.Types.Category category_ = global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified;
     /// <summary>
     /// Category that is being targeted.
     /// </summary>
@@ -1716,7 +1716,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Category != 0) hash ^= Category.GetHashCode();
+      if (Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) hash ^= Category.GetHashCode();
       if (projectionCase_ == ProjectionOneofCase.CostProjection) hash ^= CostProjection.GetHashCode();
       hash ^= (int) projectionCase_;
       if (_unknownFields != null) {
@@ -1732,7 +1732,7 @@ namespace Google.Cloud.Recommender.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Category != 0) {
+      if (Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Category);
       }
@@ -1748,7 +1748,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Category != 0) {
+      if (Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Category);
       }
       if (projectionCase_ == ProjectionOneofCase.CostProjection) {
@@ -1765,7 +1765,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other == null) {
         return;
       }
-      if (other.Category != 0) {
+      if (other.Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) {
         Category = other.Category;
       }
       switch (other.ProjectionCase) {
@@ -1880,7 +1880,7 @@ namespace Google.Cloud.Recommender.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State state_ = 0;
+    private global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State state_ = global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified;
     /// <summary>
     /// The state of the recommendation, Eg ACTIVE, SUCCEEDED, FAILED.
     /// </summary>
@@ -1895,7 +1895,7 @@ namespace Google.Cloud.Recommender.V1 {
     /// <summary>Field number for the "state_metadata" field.</summary>
     public const int StateMetadataFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_stateMetadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> stateMetadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// A map of metadata for the state, provided by user or automations systems.
@@ -1926,7 +1926,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= StateMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1941,7 +1941,7 @@ namespace Google.Cloud.Recommender.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -1954,7 +1954,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += stateMetadata_.CalculateSize(_map_stateMetadata_codec);
@@ -1969,7 +1969,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified) {
         State = other.State;
       }
       stateMetadata_.Add(other.stateMetadata_);

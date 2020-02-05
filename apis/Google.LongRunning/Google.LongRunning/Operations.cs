@@ -43,7 +43,7 @@ namespace Google.LongRunning {
             "b25SZXF1ZXN0EgwKBG5hbWUYASABKAkiUAoUV2FpdE9wZXJhdGlvblJlcXVl",
             "c3QSDAoEbmFtZRgBIAEoCRIqCgd0aW1lb3V0GAIgASgLMhkuZ29vZ2xlLnBy",
             "b3RvYnVmLkR1cmF0aW9uIj0KDU9wZXJhdGlvbkluZm8SFQoNcmVzcG9uc2Vf",
-            "dHlwZRgBIAEoCRIVCg1tZXRhZGF0YV90eXBlGAIgASgJMosFCgpPcGVyYXRp",
+            "dHlwZRgBIAEoCRIVCg1tZXRhZGF0YV90eXBlGAIgASgJMqoFCgpPcGVyYXRp",
             "b25zEpQBCg5MaXN0T3BlcmF0aW9ucxIpLmdvb2dsZS5sb25ncnVubmluZy5M",
             "aXN0T3BlcmF0aW9uc1JlcXVlc3QaKi5nb29nbGUubG9uZ3J1bm5pbmcuTGlz",
             "dE9wZXJhdGlvbnNSZXNwb25zZSIrgtPkkwIXEhUvdjEve25hbWU9b3BlcmF0",
@@ -58,28 +58,43 @@ namespace Google.LongRunning {
             "bXB0eSIxgtPkkwIkIh8vdjEve25hbWU9b3BlcmF0aW9ucy8qKn06Y2FuY2Vs",
             "OgEq2kEEbmFtZRJaCg1XYWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5u",
             "aW5nLldhaXRPcGVyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiIAOloKDm9wZXJhdGlvbl9pbmZvEh4uZ29vZ2xlLnByb3Rv",
-            "YnVmLk1ldGhvZE9wdGlvbnMYmQggASgLMiEuZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbkluZm9ClwEKFmNvbS5nb29nbGUubG9uZ3J1bm5pbmdCD09w",
-            "ZXJhdGlvbnNQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2xvbmdydW5uaW5nO2xvbmdydW5uaW5n+AEBqgISR29vZ2xl",
-            "LkxvbmdSdW5uaW5nygISR29vZ2xlXExvbmdSdW5uaW5nYgZwcm90bzM="));
+            "Lk9wZXJhdGlvbiIAGh3KQRpsb25ncnVubmluZy5nb29nbGVhcGlzLmNvbTpa",
+            "Cg5vcGVyYXRpb25faW5mbxIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRp",
+            "b25zGJkIIAEoCzIhLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb25JbmZv",
+            "QpcBChZjb20uZ29vZ2xlLmxvbmdydW5uaW5nQg9PcGVyYXRpb25zUHJvdG9Q",
+            "AVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb25n",
+            "cnVubmluZztsb25ncnVubmluZ/gBAaoCEkdvb2dsZS5Mb25nUnVubmluZ8oC",
+            "Ekdvb2dsZVxMb25nUnVubmluZ2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.Operation), global::Google.LongRunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.GetOperationRequest), global::Google.LongRunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsRequest), global::Google.LongRunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsResponse), global::Google.LongRunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.CancelOperationRequest), global::Google.LongRunning.CancelOperationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.DeleteOperationRequest), global::Google.LongRunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.WaitOperationRequest), global::Google.LongRunning.WaitOperationRequest.Parser, new[]{ "Name", "Timeout" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.OperationInfo), global::Google.LongRunning.OperationInfo.Parser, new[]{ "ResponseType", "MetadataType" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { OperationsExtensions.OperationInfo }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.Operation), global::Google.LongRunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.GetOperationRequest), global::Google.LongRunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsRequest), global::Google.LongRunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsResponse), global::Google.LongRunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.CancelOperationRequest), global::Google.LongRunning.CancelOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.DeleteOperationRequest), global::Google.LongRunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.WaitOperationRequest), global::Google.LongRunning.WaitOperationRequest.Parser, new[]{ "Name", "Timeout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.OperationInfo), global::Google.LongRunning.OperationInfo.Parser, new[]{ "ResponseType", "MetadataType" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  /// <summary>Holder for extension identifiers generated from the top level of google/longrunning/operations.proto</summary>
+  public static partial class OperationsExtensions {
+    /// <summary>
+    /// Additional information regarding long-running operations.
+    /// In particular, this specifies the types that are returned from
+    /// long-running operations.
+    ///
+    /// Required for methods that return `google.longrunning.Operation`; invalid
+    /// otherwise.
+    /// </summary>
+    public static readonly pb::Extension<global::Google.Protobuf.Reflection.MethodOptions, global::Google.LongRunning.OperationInfo> OperationInfo =
+      new pb::Extension<global::Google.Protobuf.Reflection.MethodOptions, global::Google.LongRunning.OperationInfo>(1049, pb::FieldCodec.ForMessage(8394, global::Google.LongRunning.OperationInfo.Parser));
+  }
+
   #region Messages
   /// <summary>
   /// This resource represents a long-running operation that is the result of a

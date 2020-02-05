@@ -100,7 +100,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ReportPhishing_ResourceNames()
+        public void ReportPhishingResourceNames()
         {
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
@@ -117,7 +117,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ReportPhishingAsync_ResourceNames()
+        public async stt::Task ReportPhishingResourceNamesAsync()
         {
             moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new moq::Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(moq::MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest

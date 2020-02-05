@@ -198,42 +198,42 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             "aWRlb0ludGVsbGlnZW5jZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest.Parser, new[]{ "InputUri", "InputContent", "Features", "VideoContext", "OutputUri", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoContext), global::Google.Cloud.VideoIntelligence.V1.VideoContext.Parser, new[]{ "Segments", "LabelDetectionConfig", "ShotChangeDetectionConfig", "ExplicitContentDetectionConfig", "FaceDetectionConfig", "SpeechTranscriptionConfig", "TextDetectionConfig", "ObjectTrackingConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig.Parser, new[]{ "LabelDetectionMode", "StationaryCamera", "Model", "FrameConfidenceThreshold", "VideoConfidenceThreshold" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig.Parser, new[]{ "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig.Parser, new[]{ "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig.Parser, new[]{ "Model", "IncludeBoundingBoxes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig.Parser, new[]{ "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig.Parser, new[]{ "LanguageHints", "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoSegment), global::Google.Cloud.VideoIntelligence.V1.VideoSegment.Parser, new[]{ "StartTimeOffset", "EndTimeOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelSegment), global::Google.Cloud.VideoIntelligence.V1.LabelSegment.Parser, new[]{ "Segment", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelFrame), global::Google.Cloud.VideoIntelligence.V1.LabelFrame.Parser, new[]{ "TimeOffset", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.Entity), global::Google.Cloud.VideoIntelligence.V1.Entity.Parser, new[]{ "EntityId", "Description", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation), global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation.Parser, new[]{ "Entity", "CategoryEntities", "Segments", "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame.Parser, new[]{ "TimeOffset", "PornographyLikelihood" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation.Parser, new[]{ "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox), global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox.Parser, new[]{ "Left", "Top", "Right", "Bottom" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceSegment), global::Google.Cloud.VideoIntelligence.V1.FaceSegment.Parser, new[]{ "Segment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceFrame), global::Google.Cloud.VideoIntelligence.V1.FaceFrame.Parser, new[]{ "NormalizedBoundingBoxes", "TimeOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation), global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation.Parser, new[]{ "Thumbnail", "Segments", "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults.Parser, new[]{ "InputUri", "Segment", "SegmentLabelAnnotations", "SegmentPresenceLabelAnnotations", "ShotLabelAnnotations", "ShotPresenceLabelAnnotations", "FrameLabelAnnotations", "FaceAnnotations", "ShotAnnotations", "ExplicitAnnotation", "SpeechTranscriptions", "TextAnnotations", "ObjectAnnotations", "Error" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse.Parser, new[]{ "AnnotationResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress.Parser, new[]{ "InputUri", "ProgressPercent", "StartTime", "UpdateTime", "Feature", "Segment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress.Parser, new[]{ "AnnotationProgress" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig), global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig.Parser, new[]{ "LanguageCode", "MaxAlternatives", "FilterProfanity", "SpeechContexts", "EnableAutomaticPunctuation", "AudioTracks", "EnableSpeakerDiarization", "DiarizationSpeakerCount", "EnableWordConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechContext), global::Google.Cloud.VideoIntelligence.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechTranscription), global::Google.Cloud.VideoIntelligence.V1.SpeechTranscription.Parser, new[]{ "Alternatives", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechRecognitionAlternative), global::Google.Cloud.VideoIntelligence.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.WordInfo), global::Google.Cloud.VideoIntelligence.V1.WordInfo.Parser, new[]{ "StartTime", "EndTime", "Word", "Confidence", "SpeakerTag" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex), global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly), global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly.Parser, new[]{ "Vertices" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextSegment), global::Google.Cloud.VideoIntelligence.V1.TextSegment.Parser, new[]{ "Segment", "Confidence", "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextFrame), global::Google.Cloud.VideoIntelligence.V1.TextFrame.Parser, new[]{ "RotatedBoundingBox", "TimeOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextAnnotation), global::Google.Cloud.VideoIntelligence.V1.TextAnnotation.Parser, new[]{ "Text", "Segments" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame.Parser, new[]{ "NormalizedBoundingBox", "TimeOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation.Parser, new[]{ "Segment", "TrackId", "Entity", "Confidence", "Frames" }, new[]{ "TrackInfo" }, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest.Parser, new[]{ "InputUri", "InputContent", "Features", "VideoContext", "OutputUri", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoContext), global::Google.Cloud.VideoIntelligence.V1.VideoContext.Parser, new[]{ "Segments", "LabelDetectionConfig", "ShotChangeDetectionConfig", "ExplicitContentDetectionConfig", "FaceDetectionConfig", "SpeechTranscriptionConfig", "TextDetectionConfig", "ObjectTrackingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig.Parser, new[]{ "LabelDetectionMode", "StationaryCamera", "Model", "FrameConfidenceThreshold", "VideoConfidenceThreshold" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig.Parser, new[]{ "Model", "IncludeBoundingBoxes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig.Parser, new[]{ "LanguageHints", "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoSegment), global::Google.Cloud.VideoIntelligence.V1.VideoSegment.Parser, new[]{ "StartTimeOffset", "EndTimeOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelSegment), global::Google.Cloud.VideoIntelligence.V1.LabelSegment.Parser, new[]{ "Segment", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelFrame), global::Google.Cloud.VideoIntelligence.V1.LabelFrame.Parser, new[]{ "TimeOffset", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.Entity), global::Google.Cloud.VideoIntelligence.V1.Entity.Parser, new[]{ "EntityId", "Description", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation), global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation.Parser, new[]{ "Entity", "CategoryEntities", "Segments", "Frames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame.Parser, new[]{ "TimeOffset", "PornographyLikelihood" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation.Parser, new[]{ "Frames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox), global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox.Parser, new[]{ "Left", "Top", "Right", "Bottom" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceSegment), global::Google.Cloud.VideoIntelligence.V1.FaceSegment.Parser, new[]{ "Segment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceFrame), global::Google.Cloud.VideoIntelligence.V1.FaceFrame.Parser, new[]{ "NormalizedBoundingBoxes", "TimeOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation), global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation.Parser, new[]{ "Thumbnail", "Segments", "Frames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults.Parser, new[]{ "InputUri", "Segment", "SegmentLabelAnnotations", "SegmentPresenceLabelAnnotations", "ShotLabelAnnotations", "ShotPresenceLabelAnnotations", "FrameLabelAnnotations", "FaceAnnotations", "ShotAnnotations", "ExplicitAnnotation", "SpeechTranscriptions", "TextAnnotations", "ObjectAnnotations", "Error" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse.Parser, new[]{ "AnnotationResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress.Parser, new[]{ "InputUri", "ProgressPercent", "StartTime", "UpdateTime", "Feature", "Segment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress.Parser, new[]{ "AnnotationProgress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig), global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig.Parser, new[]{ "LanguageCode", "MaxAlternatives", "FilterProfanity", "SpeechContexts", "EnableAutomaticPunctuation", "AudioTracks", "EnableSpeakerDiarization", "DiarizationSpeakerCount", "EnableWordConfidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechContext), global::Google.Cloud.VideoIntelligence.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechTranscription), global::Google.Cloud.VideoIntelligence.V1.SpeechTranscription.Parser, new[]{ "Alternatives", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.SpeechRecognitionAlternative), global::Google.Cloud.VideoIntelligence.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.WordInfo), global::Google.Cloud.VideoIntelligence.V1.WordInfo.Parser, new[]{ "StartTime", "EndTime", "Word", "Confidence", "SpeakerTag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex), global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly), global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly.Parser, new[]{ "Vertices" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextSegment), global::Google.Cloud.VideoIntelligence.V1.TextSegment.Parser, new[]{ "Segment", "Confidence", "Frames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextFrame), global::Google.Cloud.VideoIntelligence.V1.TextFrame.Parser, new[]{ "RotatedBoundingBox", "TimeOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextAnnotation), global::Google.Cloud.VideoIntelligence.V1.TextAnnotation.Parser, new[]{ "Text", "Segments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame.Parser, new[]{ "NormalizedBoundingBox", "TimeOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation.Parser, new[]{ "Segment", "TrackId", "Entity", "Confidence", "Frames" }, new[]{ "TrackInfo" }, null, null, null)
           }));
     }
     #endregion
@@ -1071,7 +1071,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     /// <summary>Field number for the "label_detection_mode" field.</summary>
     public const int LabelDetectionModeFieldNumber = 1;
-    private global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode labelDetectionMode_ = 0;
+    private global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode labelDetectionMode_ = global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified;
     /// <summary>
     /// What labels should be detected with LABEL_DETECTION, in addition to
     /// video-level labels or segment-level labels.
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (LabelDetectionMode != 0) hash ^= LabelDetectionMode.GetHashCode();
+      if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) hash ^= LabelDetectionMode.GetHashCode();
       if (StationaryCamera != false) hash ^= StationaryCamera.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (FrameConfidenceThreshold != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FrameConfidenceThreshold);
@@ -1197,7 +1197,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (LabelDetectionMode != 0) {
+      if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LabelDetectionMode);
       }
@@ -1225,7 +1225,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (LabelDetectionMode != 0) {
+      if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LabelDetectionMode);
       }
       if (StationaryCamera != false) {
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (other == null) {
         return;
       }
-      if (other.LabelDetectionMode != 0) {
+      if (other.LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
         LabelDetectionMode = other.LabelDetectionMode;
       }
       if (other.StationaryCamera != false) {
@@ -3038,7 +3038,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     /// <summary>Field number for the "pornography_likelihood" field.</summary>
     public const int PornographyLikelihoodFieldNumber = 2;
-    private global::Google.Cloud.VideoIntelligence.V1.Likelihood pornographyLikelihood_ = 0;
+    private global::Google.Cloud.VideoIntelligence.V1.Likelihood pornographyLikelihood_ = global::Google.Cloud.VideoIntelligence.V1.Likelihood.Unspecified;
     /// <summary>
     /// Likelihood of the pornography content..
     /// </summary>
@@ -3072,7 +3072,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (timeOffset_ != null) hash ^= TimeOffset.GetHashCode();
-      if (PornographyLikelihood != 0) hash ^= PornographyLikelihood.GetHashCode();
+      if (PornographyLikelihood != global::Google.Cloud.VideoIntelligence.V1.Likelihood.Unspecified) hash ^= PornographyLikelihood.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3090,7 +3090,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(TimeOffset);
       }
-      if (PornographyLikelihood != 0) {
+      if (PornographyLikelihood != global::Google.Cloud.VideoIntelligence.V1.Likelihood.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) PornographyLikelihood);
       }
@@ -3105,7 +3105,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (timeOffset_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeOffset);
       }
-      if (PornographyLikelihood != 0) {
+      if (PornographyLikelihood != global::Google.Cloud.VideoIntelligence.V1.Likelihood.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PornographyLikelihood);
       }
       if (_unknownFields != null) {
@@ -3125,7 +3125,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         }
         TimeOffset.MergeFrom(other.TimeOffset);
       }
-      if (other.PornographyLikelihood != 0) {
+      if (other.PornographyLikelihood != global::Google.Cloud.VideoIntelligence.V1.Likelihood.Unspecified) {
         PornographyLikelihood = other.PornographyLikelihood;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4727,7 +4727,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     /// <summary>Field number for the "feature" field.</summary>
     public const int FeatureFieldNumber = 5;
-    private global::Google.Cloud.VideoIntelligence.V1.Feature feature_ = 0;
+    private global::Google.Cloud.VideoIntelligence.V1.Feature feature_ = global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified;
     /// <summary>
     /// Specifies which feature is being tracked if the request contains more than
     /// one features.
@@ -4784,7 +4784,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (ProgressPercent != 0) hash ^= ProgressPercent.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (Feature != 0) hash ^= Feature.GetHashCode();
+      if (Feature != global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified) hash ^= Feature.GetHashCode();
       if (segment_ != null) hash ^= Segment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4815,7 +4815,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(UpdateTime);
       }
-      if (Feature != 0) {
+      if (Feature != global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Feature);
       }
@@ -4843,7 +4843,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (Feature != 0) {
+      if (Feature != global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Feature);
       }
       if (segment_ != null) {
@@ -4878,7 +4878,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.Feature != 0) {
+      if (other.Feature != global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified) {
         Feature = other.Feature;
       }
       if (other.segment_ != null) {

@@ -137,7 +137,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIndex_ResourceNames()
+        public void GetIndexResourceNames()
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -163,7 +163,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIndexAsync_ResourceNames()
+        public async stt::Task GetIndexResourceNamesAsync()
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -257,7 +257,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteIndex_ResourceNames()
+        public void DeleteIndexResourceNames()
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -273,7 +273,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteIndexAsync_ResourceNames()
+        public async stt::Task DeleteIndexResourceNamesAsync()
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -378,7 +378,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetField_ResourceNames()
+        public void GetFieldResourceNames()
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -399,7 +399,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetFieldAsync_ResourceNames()
+        public async stt::Task GetFieldResourceNamesAsync()
         {
             moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

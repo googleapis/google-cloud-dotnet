@@ -63,8 +63,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Application), global::Google.Cloud.Talent.V4Beta1.Application.Parser, new[]{ "Name", "ExternalId", "Profile", "Job", "Company", "ApplicationDate", "Stage", "State", "Interviews", "Referral", "CreateTime", "UpdateTime", "OutcomeNotes", "Outcome", "IsMatch", "JobTitleSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState), typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Application), global::Google.Cloud.Talent.V4Beta1.Application.Parser, new[]{ "Name", "ExternalId", "Profile", "Job", "Company", "ApplicationDate", "Stage", "State", "Interviews", "Referral", "CreateTime", "UpdateTime", "OutcomeNotes", "Outcome", "IsMatch", "JobTitleSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState), typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) }, null, null)
           }));
     }
     #endregion
@@ -234,7 +234,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "stage" field.</summary>
     public const int StageFieldNumber = 11;
-    private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage stage_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage stage_ = global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified;
     /// <summary>
     /// Required. What is the most recent stage of the application (that is, new, screen,
     /// send cv, hired, finished work)?  This field is intentionally not
@@ -251,7 +251,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 13;
-    private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState state_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState state_ = global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState.Unspecified;
     /// <summary>
     /// The application state.
     /// </summary>
@@ -341,7 +341,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "outcome" field.</summary>
     public const int OutcomeFieldNumber = 22;
-    private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified;
     /// <summary>
     /// Outcome positiveness shows how positive the outcome is.
     /// </summary>
@@ -428,14 +428,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Job.Length != 0) hash ^= Job.GetHashCode();
       if (Company.Length != 0) hash ^= Company.GetHashCode();
       if (applicationDate_ != null) hash ^= ApplicationDate.GetHashCode();
-      if (Stage != 0) hash ^= Stage.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (Stage != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified) hash ^= Stage.GetHashCode();
+      if (State != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState.Unspecified) hash ^= State.GetHashCode();
       hash ^= interviews_.GetHashCode();
       if (referral_ != null) hash ^= Referral.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (OutcomeNotes.Length != 0) hash ^= OutcomeNotes.GetHashCode();
-      if (Outcome != 0) hash ^= Outcome.GetHashCode();
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) hash ^= Outcome.GetHashCode();
       if (isMatch_ != null) hash ^= IsMatch.GetHashCode();
       if (JobTitleSnippet.Length != 0) hash ^= JobTitleSnippet.GetHashCode();
       if (_unknownFields != null) {
@@ -471,11 +471,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(58);
         output.WriteMessage(ApplicationDate);
       }
-      if (Stage != 0) {
+      if (Stage != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified) {
         output.WriteRawTag(88);
         output.WriteEnum((int) Stage);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState.Unspecified) {
         output.WriteRawTag(104);
         output.WriteEnum((int) State);
       }
@@ -495,7 +495,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(170, 1);
         output.WriteString(OutcomeNotes);
       }
-      if (Outcome != 0) {
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) Outcome);
       }
@@ -536,10 +536,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (applicationDate_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationDate);
       }
-      if (Stage != 0) {
+      if (Stage != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Stage);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += interviews_.CalculateSize(_repeated_interviews_codec);
@@ -555,7 +555,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (OutcomeNotes.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(OutcomeNotes);
       }
-      if (Outcome != 0) {
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
       }
       if (isMatch_ != null) {
@@ -596,10 +596,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         ApplicationDate.MergeFrom(other.ApplicationDate);
       }
-      if (other.Stage != 0) {
+      if (other.Stage != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified) {
         Stage = other.Stage;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState.Unspecified) {
         State = other.State;
       }
       interviews_.Add(other.interviews_);
@@ -623,7 +623,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.OutcomeNotes.Length != 0) {
         OutcomeNotes = other.OutcomeNotes;
       }
-      if (other.Outcome != 0) {
+      if (other.Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
         Outcome = other.Outcome;
       }
       if (other.isMatch_ != null) {

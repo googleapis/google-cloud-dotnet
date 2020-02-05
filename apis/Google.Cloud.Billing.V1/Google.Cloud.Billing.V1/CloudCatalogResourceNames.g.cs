@@ -419,7 +419,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public gcbv::ServiceName ServiceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbv::ServiceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::ServiceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -431,7 +431,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public gcbv::SkuName SkuName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbv::SkuName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::SkuName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -443,7 +443,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public ServiceName ParentAsServiceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ServiceName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ServiceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

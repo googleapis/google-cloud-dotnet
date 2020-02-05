@@ -192,28 +192,28 @@ namespace Google.Cloud.Dataproc.V1 {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor, global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowTemplate), global::Google.Cloud.Dataproc.V1.WorkflowTemplate.Parser, new[]{ "Id", "Name", "Version", "CreateTime", "UpdateTime", "Labels", "Placement", "Jobs", "Parameters" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement), global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement.Parser, new[]{ "ManagedCluster", "ClusterSelector" }, new[]{ "Placement" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ManagedCluster), global::Google.Cloud.Dataproc.V1.ManagedCluster.Parser, new[]{ "ClusterName", "Config", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterSelector), global::Google.Cloud.Dataproc.V1.ClusterSelector.Parser, new[]{ "Zone", "ClusterLabels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.OrderedJob), global::Google.Cloud.Dataproc.V1.OrderedJob.Parser, new[]{ "StepId", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkSqlJob", "Labels", "Scheduling", "PrerequisiteStepIds" }, new[]{ "JobType" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.TemplateParameter), global::Google.Cloud.Dataproc.V1.TemplateParameter.Parser, new[]{ "Name", "Fields", "Description", "Validation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ParameterValidation), global::Google.Cloud.Dataproc.V1.ParameterValidation.Parser, new[]{ "Regex", "Values" }, new[]{ "ValidationType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RegexValidation), global::Google.Cloud.Dataproc.V1.RegexValidation.Parser, new[]{ "Regexes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ValueValidation), global::Google.Cloud.Dataproc.V1.ValueValidation.Parser, new[]{ "Values" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowMetadata), global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Parser, new[]{ "Template", "Version", "CreateCluster", "Graph", "DeleteCluster", "State", "ClusterName", "Parameters", "StartTime", "EndTime", "ClusterUuid" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperation), global::Google.Cloud.Dataproc.V1.ClusterOperation.Parser, new[]{ "OperationId", "Error", "Done" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowGraph), global::Google.Cloud.Dataproc.V1.WorkflowGraph.Parser, new[]{ "Nodes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowNode), global::Google.Cloud.Dataproc.V1.WorkflowNode.Parser, new[]{ "StepId", "PrerequisiteStepIds", "JobId", "State", "Error" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest.Parser, new[]{ "Parent", "Template" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest.Parser, new[]{ "Name", "Version" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest.Parser, new[]{ "Name", "Version", "RequestId", "Parameters" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest.Parser, new[]{ "Parent", "Template", "RequestId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest.Parser, new[]{ "Template" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest), global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse), global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse.Parser, new[]{ "Templates", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest.Parser, new[]{ "Name", "Version" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowTemplate), global::Google.Cloud.Dataproc.V1.WorkflowTemplate.Parser, new[]{ "Id", "Name", "Version", "CreateTime", "UpdateTime", "Labels", "Placement", "Jobs", "Parameters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement), global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement.Parser, new[]{ "ManagedCluster", "ClusterSelector" }, new[]{ "Placement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ManagedCluster), global::Google.Cloud.Dataproc.V1.ManagedCluster.Parser, new[]{ "ClusterName", "Config", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterSelector), global::Google.Cloud.Dataproc.V1.ClusterSelector.Parser, new[]{ "Zone", "ClusterLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.OrderedJob), global::Google.Cloud.Dataproc.V1.OrderedJob.Parser, new[]{ "StepId", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkSqlJob", "Labels", "Scheduling", "PrerequisiteStepIds" }, new[]{ "JobType" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.TemplateParameter), global::Google.Cloud.Dataproc.V1.TemplateParameter.Parser, new[]{ "Name", "Fields", "Description", "Validation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ParameterValidation), global::Google.Cloud.Dataproc.V1.ParameterValidation.Parser, new[]{ "Regex", "Values" }, new[]{ "ValidationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RegexValidation), global::Google.Cloud.Dataproc.V1.RegexValidation.Parser, new[]{ "Regexes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ValueValidation), global::Google.Cloud.Dataproc.V1.ValueValidation.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowMetadata), global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Parser, new[]{ "Template", "Version", "CreateCluster", "Graph", "DeleteCluster", "State", "ClusterName", "Parameters", "StartTime", "EndTime", "ClusterUuid" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperation), global::Google.Cloud.Dataproc.V1.ClusterOperation.Parser, new[]{ "OperationId", "Error", "Done" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowGraph), global::Google.Cloud.Dataproc.V1.WorkflowGraph.Parser, new[]{ "Nodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.WorkflowNode), global::Google.Cloud.Dataproc.V1.WorkflowNode.Parser, new[]{ "StepId", "PrerequisiteStepIds", "JobId", "State", "Error" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest.Parser, new[]{ "Parent", "Template" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest.Parser, new[]{ "Name", "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest.Parser, new[]{ "Name", "Version", "RequestId", "Parameters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest.Parser, new[]{ "Parent", "Template", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest.Parser, new[]{ "Template" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest), global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse), global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse.Parser, new[]{ "Templates", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest), global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest.Parser, new[]{ "Name", "Version" }, null, null, null, null)
           }));
     }
     #endregion
@@ -352,7 +352,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 6;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 50);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. The labels to associate with this template. These labels
@@ -917,7 +917,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. The labels to associate with this cluster.
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "cluster_labels" field.</summary>
     public const int ClusterLabelsFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_clusterLabels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> clusterLabels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Required. The cluster labels. Cluster must have all labels
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 8;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 66);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. The labels to associate with this job.
@@ -2611,7 +2611,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 6;
-    private global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State state_ = 0;
+    private global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State state_ = global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State.Unknown;
     /// <summary>
     /// Output only. The workflow state.
     /// </summary>
@@ -2640,7 +2640,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "parameters" field.</summary>
     public const int ParametersFieldNumber = 8;
     private static readonly pbc::MapField<string, string>.Codec _map_parameters_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 66);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
     private readonly pbc::MapField<string, string> parameters_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Map from parameter names to values that were used for those parameters.
@@ -2727,7 +2727,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (createCluster_ != null) hash ^= CreateCluster.GetHashCode();
       if (graph_ != null) hash ^= Graph.GetHashCode();
       if (deleteCluster_ != null) hash ^= DeleteCluster.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State.Unknown) hash ^= State.GetHashCode();
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
       hash ^= Parameters.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -2766,7 +2766,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(DeleteCluster);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State.Unknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) State);
       }
@@ -2810,7 +2810,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (deleteCluster_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteCluster);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (ClusterName.Length != 0) {
@@ -2861,7 +2861,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         DeleteCluster.MergeFrom(other.DeleteCluster);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State.Unknown) {
         State = other.State;
       }
       if (other.ClusterName.Length != 0) {
@@ -3396,7 +3396,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 5;
-    private global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState state_ = 0;
+    private global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState state_ = global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState.Unspecified;
     /// <summary>
     /// Output only. The node state.
     /// </summary>
@@ -3449,7 +3449,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (StepId.Length != 0) hash ^= StepId.GetHashCode();
       hash ^= prerequisiteStepIds_.GetHashCode();
       if (JobId.Length != 0) hash ^= JobId.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState.Unspecified) hash ^= State.GetHashCode();
       if (Error.Length != 0) hash ^= Error.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3473,7 +3473,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteString(JobId);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) State);
       }
@@ -3496,7 +3496,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (JobId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JobId);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (Error.Length != 0) {
@@ -3520,7 +3520,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.JobId.Length != 0) {
         JobId = other.JobId;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState.Unspecified) {
         State = other.State;
       }
       if (other.Error.Length != 0) {
@@ -4067,7 +4067,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "parameters" field.</summary>
     public const int ParametersFieldNumber = 6;
     private static readonly pbc::MapField<string, string>.Codec _map_parameters_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 50);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> parameters_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Map from parameter names to values that should be used for those

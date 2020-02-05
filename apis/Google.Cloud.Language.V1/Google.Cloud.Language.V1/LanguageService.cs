@@ -210,29 +210,29 @@ namespace Google.Cloud.Language.V1 {
             "MTtsYW5ndWFnZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1.EncodingType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Document), global::Google.Cloud.Language.V1.Document.Parser, new[]{ "Type", "Content", "GcsContentUri", "Language" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.Language.V1.Document.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Sentence), global::Google.Cloud.Language.V1.Sentence.Parser, new[]{ "Text", "Sentiment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Entity), global::Google.Cloud.Language.V1.Entity.Parser, new[]{ "Name", "Type", "Metadata", "Salience", "Mentions", "Sentiment" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.Entity.Types.Type) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Token), global::Google.Cloud.Language.V1.Token.Parser, new[]{ "Text", "PartOfSpeech", "DependencyEdge", "Lemma" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Sentiment), global::Google.Cloud.Language.V1.Sentiment.Parser, new[]{ "Magnitude", "Score" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.PartOfSpeech), global::Google.Cloud.Language.V1.PartOfSpeech.Parser, new[]{ "Tag", "Aspect", "Case", "Form", "Gender", "Mood", "Number", "Person", "Proper", "Reciprocity", "Tense", "Voice" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.DependencyEdge), global::Google.Cloud.Language.V1.DependencyEdge.Parser, new[]{ "HeadTokenIndex", "Label" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.DependencyEdge.Types.Label) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.EntityMention), global::Google.Cloud.Language.V1.EntityMention.Parser, new[]{ "Text", "Type", "Sentiment" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.EntityMention.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.TextSpan), global::Google.Cloud.Language.V1.TextSpan.Parser, new[]{ "Content", "BeginOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationCategory), global::Google.Cloud.Language.V1.ClassificationCategory.Parser, new[]{ "Name", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest), global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentResponse), global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser, new[]{ "DocumentSentiment", "Language", "Sentences" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse.Parser, new[]{ "Entities", "Language" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest), global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse), global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser, new[]{ "Entities", "Language" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest), global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser, new[]{ "Sentences", "Tokens", "Language" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextRequest), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser, new[]{ "Document" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextResponse), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser, new[]{ "Categories" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language", "Categories" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1.EncodingType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Document), global::Google.Cloud.Language.V1.Document.Parser, new[]{ "Type", "Content", "GcsContentUri", "Language" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.Language.V1.Document.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Sentence), global::Google.Cloud.Language.V1.Sentence.Parser, new[]{ "Text", "Sentiment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Entity), global::Google.Cloud.Language.V1.Entity.Parser, new[]{ "Name", "Type", "Metadata", "Salience", "Mentions", "Sentiment" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.Entity.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Token), global::Google.Cloud.Language.V1.Token.Parser, new[]{ "Text", "PartOfSpeech", "DependencyEdge", "Lemma" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.Sentiment), global::Google.Cloud.Language.V1.Sentiment.Parser, new[]{ "Magnitude", "Score" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.PartOfSpeech), global::Google.Cloud.Language.V1.PartOfSpeech.Parser, new[]{ "Tag", "Aspect", "Case", "Form", "Gender", "Mood", "Number", "Person", "Proper", "Reciprocity", "Tense", "Voice" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense), typeof(global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.DependencyEdge), global::Google.Cloud.Language.V1.DependencyEdge.Parser, new[]{ "HeadTokenIndex", "Label" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.DependencyEdge.Types.Label) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.EntityMention), global::Google.Cloud.Language.V1.EntityMention.Parser, new[]{ "Text", "Type", "Sentiment" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.EntityMention.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.TextSpan), global::Google.Cloud.Language.V1.TextSpan.Parser, new[]{ "Content", "BeginOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationCategory), global::Google.Cloud.Language.V1.ClassificationCategory.Parser, new[]{ "Name", "Confidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest), global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentResponse), global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser, new[]{ "DocumentSentiment", "Language", "Sentences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse.Parser, new[]{ "Entities", "Language" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest), global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse), global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser, new[]{ "Entities", "Language" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest), global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser, new[]{ "Sentences", "Tokens", "Language" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextRequest), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser, new[]{ "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextResponse), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser, new[]{ "Categories" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language", "Categories" }, null, null, null, null)
           }));
     }
     #endregion
@@ -326,7 +326,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Language.V1.Document.Types.Type type_ = 0;
+    private global::Google.Cloud.Language.V1.Document.Types.Type type_ = global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified;
     /// <summary>
     /// Required. If the type is not set or is `TYPE_UNSPECIFIED`,
     /// returns an `INVALID_ARGUMENT` error.
@@ -435,7 +435,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
       if (sourceCase_ == SourceOneofCase.GcsContentUri) hash ^= GcsContentUri.GetHashCode();
       if (Language.Length != 0) hash ^= Language.GetHashCode();
@@ -453,7 +453,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -477,7 +477,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (sourceCase_ == SourceOneofCase.Content) {
@@ -500,7 +500,7 @@ namespace Google.Cloud.Language.V1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) {
         Type = other.Type;
       }
       if (other.Language.Length != 0) {
@@ -813,7 +813,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.Entity.Types.Type type_ = 0;
+    private global::Google.Cloud.Language.V1.Entity.Types.Type type_ = global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown;
     /// <summary>
     /// The entity type.
     /// </summary>
@@ -828,7 +828,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>Field number for the "metadata" field.</summary>
     public const int MetadataFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_metadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Metadata associated with the entity.
@@ -918,7 +918,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown) hash ^= Type.GetHashCode();
       hash ^= Metadata.GetHashCode();
       if (Salience != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Salience);
       hash ^= mentions_.GetHashCode();
@@ -940,7 +940,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -965,7 +965,7 @@ namespace Google.Cloud.Language.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += metadata_.CalculateSize(_map_metadata_codec);
@@ -990,7 +990,7 @@ namespace Google.Cloud.Language.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown) {
         Type = other.Type;
       }
       metadata_.Add(other.metadata_);
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "tag" field.</summary>
     public const int TagFieldNumber = 1;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag tag_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag tag_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag.Unknown;
     /// <summary>
     /// The part of speech tag.
     /// </summary>
@@ -1623,7 +1623,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "aspect" field.</summary>
     public const int AspectFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect aspect_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect aspect_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect.Unknown;
     /// <summary>
     /// The grammatical aspect.
     /// </summary>
@@ -1637,7 +1637,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "case" field.</summary>
     public const int CaseFieldNumber = 3;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case case_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case case_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case.Unknown;
     /// <summary>
     /// The grammatical case.
     /// </summary>
@@ -1651,7 +1651,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "form" field.</summary>
     public const int FormFieldNumber = 4;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form form_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form form_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form.Unknown;
     /// <summary>
     /// The grammatical form.
     /// </summary>
@@ -1665,7 +1665,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "gender" field.</summary>
     public const int GenderFieldNumber = 5;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender gender_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender gender_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender.Unknown;
     /// <summary>
     /// The grammatical gender.
     /// </summary>
@@ -1679,7 +1679,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "mood" field.</summary>
     public const int MoodFieldNumber = 6;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood mood_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood mood_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood.Unknown;
     /// <summary>
     /// The grammatical mood.
     /// </summary>
@@ -1693,7 +1693,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "number" field.</summary>
     public const int NumberFieldNumber = 7;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number number_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number number_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number.Unknown;
     /// <summary>
     /// The grammatical number.
     /// </summary>
@@ -1707,7 +1707,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "person" field.</summary>
     public const int PersonFieldNumber = 8;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person person_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person person_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person.Unknown;
     /// <summary>
     /// The grammatical person.
     /// </summary>
@@ -1721,7 +1721,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "proper" field.</summary>
     public const int ProperFieldNumber = 9;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper proper_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper proper_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper.Unknown;
     /// <summary>
     /// The grammatical properness.
     /// </summary>
@@ -1735,7 +1735,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "reciprocity" field.</summary>
     public const int ReciprocityFieldNumber = 10;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity reciprocity_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity reciprocity_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity.Unknown;
     /// <summary>
     /// The grammatical reciprocity.
     /// </summary>
@@ -1749,7 +1749,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "tense" field.</summary>
     public const int TenseFieldNumber = 11;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense tense_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense tense_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense.Unknown;
     /// <summary>
     /// The grammatical tense.
     /// </summary>
@@ -1763,7 +1763,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "voice" field.</summary>
     public const int VoiceFieldNumber = 12;
-    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice voice_ = 0;
+    private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice voice_ = global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice.Unknown;
     /// <summary>
     /// The grammatical voice.
     /// </summary>
@@ -1806,18 +1806,18 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Tag != 0) hash ^= Tag.GetHashCode();
-      if (Aspect != 0) hash ^= Aspect.GetHashCode();
-      if (Case != 0) hash ^= Case.GetHashCode();
-      if (Form != 0) hash ^= Form.GetHashCode();
-      if (Gender != 0) hash ^= Gender.GetHashCode();
-      if (Mood != 0) hash ^= Mood.GetHashCode();
-      if (Number != 0) hash ^= Number.GetHashCode();
-      if (Person != 0) hash ^= Person.GetHashCode();
-      if (Proper != 0) hash ^= Proper.GetHashCode();
-      if (Reciprocity != 0) hash ^= Reciprocity.GetHashCode();
-      if (Tense != 0) hash ^= Tense.GetHashCode();
-      if (Voice != 0) hash ^= Voice.GetHashCode();
+      if (Tag != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag.Unknown) hash ^= Tag.GetHashCode();
+      if (Aspect != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect.Unknown) hash ^= Aspect.GetHashCode();
+      if (Case != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case.Unknown) hash ^= Case.GetHashCode();
+      if (Form != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form.Unknown) hash ^= Form.GetHashCode();
+      if (Gender != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender.Unknown) hash ^= Gender.GetHashCode();
+      if (Mood != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood.Unknown) hash ^= Mood.GetHashCode();
+      if (Number != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number.Unknown) hash ^= Number.GetHashCode();
+      if (Person != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person.Unknown) hash ^= Person.GetHashCode();
+      if (Proper != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper.Unknown) hash ^= Proper.GetHashCode();
+      if (Reciprocity != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity.Unknown) hash ^= Reciprocity.GetHashCode();
+      if (Tense != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense.Unknown) hash ^= Tense.GetHashCode();
+      if (Voice != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice.Unknown) hash ^= Voice.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1831,51 +1831,51 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Tag != 0) {
+      if (Tag != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Tag);
       }
-      if (Aspect != 0) {
+      if (Aspect != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Aspect);
       }
-      if (Case != 0) {
+      if (Case != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Case);
       }
-      if (Form != 0) {
+      if (Form != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form.Unknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Form);
       }
-      if (Gender != 0) {
+      if (Gender != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender.Unknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Gender);
       }
-      if (Mood != 0) {
+      if (Mood != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood.Unknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Mood);
       }
-      if (Number != 0) {
+      if (Number != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number.Unknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Number);
       }
-      if (Person != 0) {
+      if (Person != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person.Unknown) {
         output.WriteRawTag(64);
         output.WriteEnum((int) Person);
       }
-      if (Proper != 0) {
+      if (Proper != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper.Unknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Proper);
       }
-      if (Reciprocity != 0) {
+      if (Reciprocity != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity.Unknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Reciprocity);
       }
-      if (Tense != 0) {
+      if (Tense != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense.Unknown) {
         output.WriteRawTag(88);
         output.WriteEnum((int) Tense);
       }
-      if (Voice != 0) {
+      if (Voice != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice.Unknown) {
         output.WriteRawTag(96);
         output.WriteEnum((int) Voice);
       }
@@ -1887,40 +1887,40 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Tag != 0) {
+      if (Tag != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tag);
       }
-      if (Aspect != 0) {
+      if (Aspect != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Aspect);
       }
-      if (Case != 0) {
+      if (Case != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Case);
       }
-      if (Form != 0) {
+      if (Form != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Form);
       }
-      if (Gender != 0) {
+      if (Gender != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Gender);
       }
-      if (Mood != 0) {
+      if (Mood != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mood);
       }
-      if (Number != 0) {
+      if (Number != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Number);
       }
-      if (Person != 0) {
+      if (Person != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Person);
       }
-      if (Proper != 0) {
+      if (Proper != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Proper);
       }
-      if (Reciprocity != 0) {
+      if (Reciprocity != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reciprocity);
       }
-      if (Tense != 0) {
+      if (Tense != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tense);
       }
-      if (Voice != 0) {
+      if (Voice != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Voice);
       }
       if (_unknownFields != null) {
@@ -1934,40 +1934,40 @@ namespace Google.Cloud.Language.V1 {
       if (other == null) {
         return;
       }
-      if (other.Tag != 0) {
+      if (other.Tag != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag.Unknown) {
         Tag = other.Tag;
       }
-      if (other.Aspect != 0) {
+      if (other.Aspect != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect.Unknown) {
         Aspect = other.Aspect;
       }
-      if (other.Case != 0) {
+      if (other.Case != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case.Unknown) {
         Case = other.Case;
       }
-      if (other.Form != 0) {
+      if (other.Form != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form.Unknown) {
         Form = other.Form;
       }
-      if (other.Gender != 0) {
+      if (other.Gender != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender.Unknown) {
         Gender = other.Gender;
       }
-      if (other.Mood != 0) {
+      if (other.Mood != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood.Unknown) {
         Mood = other.Mood;
       }
-      if (other.Number != 0) {
+      if (other.Number != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number.Unknown) {
         Number = other.Number;
       }
-      if (other.Person != 0) {
+      if (other.Person != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person.Unknown) {
         Person = other.Person;
       }
-      if (other.Proper != 0) {
+      if (other.Proper != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper.Unknown) {
         Proper = other.Proper;
       }
-      if (other.Reciprocity != 0) {
+      if (other.Reciprocity != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity.Unknown) {
         Reciprocity = other.Reciprocity;
       }
-      if (other.Tense != 0) {
+      if (other.Tense != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense.Unknown) {
         Tense = other.Tense;
       }
-      if (other.Voice != 0) {
+      if (other.Voice != global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice.Unknown) {
         Voice = other.Voice;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2509,7 +2509,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "label" field.</summary>
     public const int LabelFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.DependencyEdge.Types.Label label_ = 0;
+    private global::Google.Cloud.Language.V1.DependencyEdge.Types.Label label_ = global::Google.Cloud.Language.V1.DependencyEdge.Types.Label.Unknown;
     /// <summary>
     /// The parse label for the token.
     /// </summary>
@@ -2543,7 +2543,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HeadTokenIndex != 0) hash ^= HeadTokenIndex.GetHashCode();
-      if (Label != 0) hash ^= Label.GetHashCode();
+      if (Label != global::Google.Cloud.Language.V1.DependencyEdge.Types.Label.Unknown) hash ^= Label.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2561,7 +2561,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(HeadTokenIndex);
       }
-      if (Label != 0) {
+      if (Label != global::Google.Cloud.Language.V1.DependencyEdge.Types.Label.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Label);
       }
@@ -2576,7 +2576,7 @@ namespace Google.Cloud.Language.V1 {
       if (HeadTokenIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(HeadTokenIndex);
       }
-      if (Label != 0) {
+      if (Label != global::Google.Cloud.Language.V1.DependencyEdge.Types.Label.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Label);
       }
       if (_unknownFields != null) {
@@ -2593,7 +2593,7 @@ namespace Google.Cloud.Language.V1 {
       if (other.HeadTokenIndex != 0) {
         HeadTokenIndex = other.HeadTokenIndex;
       }
-      if (other.Label != 0) {
+      if (other.Label != global::Google.Cloud.Language.V1.DependencyEdge.Types.Label.Unknown) {
         Label = other.Label;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3022,7 +3022,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.EntityMention.Types.Type type_ = 0;
+    private global::Google.Cloud.Language.V1.EntityMention.Types.Type type_ = global::Google.Cloud.Language.V1.EntityMention.Types.Type.Unknown;
     /// <summary>
     /// The type of the entity mention.
     /// </summary>
@@ -3074,7 +3074,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (text_ != null) hash ^= Text.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Language.V1.EntityMention.Types.Type.Unknown) hash ^= Type.GetHashCode();
       if (sentiment_ != null) hash ^= Sentiment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3093,7 +3093,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Text);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Language.V1.EntityMention.Types.Type.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -3112,7 +3112,7 @@ namespace Google.Cloud.Language.V1 {
       if (text_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Text);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Language.V1.EntityMention.Types.Type.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (sentiment_ != null) {
@@ -3135,7 +3135,7 @@ namespace Google.Cloud.Language.V1 {
         }
         Text.MergeFrom(other.Text);
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Language.V1.EntityMention.Types.Type.Unknown) {
         Type = other.Type;
       }
       if (other.sentiment_ != null) {
@@ -3593,7 +3593,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "encoding_type" field.</summary>
     public const int EncodingTypeFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
+    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = global::Google.Cloud.Language.V1.EncodingType.None;
     /// <summary>
     /// The encoding type used by the API to calculate sentence offsets.
     /// </summary>
@@ -3627,7 +3627,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
-      if (EncodingType != 0) hash ^= EncodingType.GetHashCode();
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) hash ^= EncodingType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3645,7 +3645,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EncodingType);
       }
@@ -3660,7 +3660,7 @@ namespace Google.Cloud.Language.V1 {
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncodingType);
       }
       if (_unknownFields != null) {
@@ -3680,7 +3680,7 @@ namespace Google.Cloud.Language.V1 {
         }
         Document.MergeFrom(other.Document);
       }
-      if (other.EncodingType != 0) {
+      if (other.EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         EncodingType = other.EncodingType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3962,7 +3962,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "encoding_type" field.</summary>
     public const int EncodingTypeFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
+    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = global::Google.Cloud.Language.V1.EncodingType.None;
     /// <summary>
     /// The encoding type used by the API to calculate offsets.
     /// </summary>
@@ -3996,7 +3996,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
-      if (EncodingType != 0) hash ^= EncodingType.GetHashCode();
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) hash ^= EncodingType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4014,7 +4014,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EncodingType);
       }
@@ -4029,7 +4029,7 @@ namespace Google.Cloud.Language.V1 {
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncodingType);
       }
       if (_unknownFields != null) {
@@ -4049,7 +4049,7 @@ namespace Google.Cloud.Language.V1 {
         }
         Document.MergeFrom(other.Document);
       }
-      if (other.EncodingType != 0) {
+      if (other.EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         EncodingType = other.EncodingType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4294,7 +4294,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "encoding_type" field.</summary>
     public const int EncodingTypeFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
+    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = global::Google.Cloud.Language.V1.EncodingType.None;
     /// <summary>
     /// The encoding type used by the API to calculate offsets.
     /// </summary>
@@ -4328,7 +4328,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
-      if (EncodingType != 0) hash ^= EncodingType.GetHashCode();
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) hash ^= EncodingType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4346,7 +4346,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EncodingType);
       }
@@ -4361,7 +4361,7 @@ namespace Google.Cloud.Language.V1 {
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncodingType);
       }
       if (_unknownFields != null) {
@@ -4381,7 +4381,7 @@ namespace Google.Cloud.Language.V1 {
         }
         Document.MergeFrom(other.Document);
       }
-      if (other.EncodingType != 0) {
+      if (other.EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         EncodingType = other.EncodingType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4626,7 +4626,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "encoding_type" field.</summary>
     public const int EncodingTypeFieldNumber = 2;
-    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
+    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = global::Google.Cloud.Language.V1.EncodingType.None;
     /// <summary>
     /// The encoding type used by the API to calculate offsets.
     /// </summary>
@@ -4660,7 +4660,7 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
-      if (EncodingType != 0) hash ^= EncodingType.GetHashCode();
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) hash ^= EncodingType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4678,7 +4678,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EncodingType);
       }
@@ -4693,7 +4693,7 @@ namespace Google.Cloud.Language.V1 {
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncodingType);
       }
       if (_unknownFields != null) {
@@ -4713,7 +4713,7 @@ namespace Google.Cloud.Language.V1 {
         }
         Document.MergeFrom(other.Document);
       }
-      if (other.EncodingType != 0) {
+      if (other.EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         EncodingType = other.EncodingType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5265,7 +5265,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Field number for the "encoding_type" field.</summary>
     public const int EncodingTypeFieldNumber = 3;
-    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
+    private global::Google.Cloud.Language.V1.EncodingType encodingType_ = global::Google.Cloud.Language.V1.EncodingType.None;
     /// <summary>
     /// The encoding type used by the API to calculate offsets.
     /// </summary>
@@ -5301,7 +5301,7 @@ namespace Google.Cloud.Language.V1 {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
       if (features_ != null) hash ^= Features.GetHashCode();
-      if (EncodingType != 0) hash ^= EncodingType.GetHashCode();
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) hash ^= EncodingType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5323,7 +5323,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Features);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         output.WriteRawTag(24);
         output.WriteEnum((int) EncodingType);
       }
@@ -5341,7 +5341,7 @@ namespace Google.Cloud.Language.V1 {
       if (features_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Features);
       }
-      if (EncodingType != 0) {
+      if (EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncodingType);
       }
       if (_unknownFields != null) {
@@ -5367,7 +5367,7 @@ namespace Google.Cloud.Language.V1 {
         }
         Features.MergeFrom(other.Features);
       }
-      if (other.EncodingType != 0) {
+      if (other.EncodingType != global::Google.Cloud.Language.V1.EncodingType.None) {
         EncodingType = other.EncodingType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

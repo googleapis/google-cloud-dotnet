@@ -59,9 +59,9 @@ namespace Google.Cloud.Scheduler.V1 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.Job), global::Google.Cloud.Scheduler.V1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig", "AttemptDeadline" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1.Job.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.RetryConfig), global::Google.Cloud.Scheduler.V1.RetryConfig.Parser, new[]{ "RetryCount", "MaxRetryDuration", "MinBackoffDuration", "MaxBackoffDuration", "MaxDoublings" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.Job), global::Google.Cloud.Scheduler.V1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig", "AttemptDeadline" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1.Job.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.RetryConfig), global::Google.Cloud.Scheduler.V1.RetryConfig.Parser, new[]{ "RetryCount", "MaxRetryDuration", "MinBackoffDuration", "MaxBackoffDuration", "MaxDoublings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -292,7 +292,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 10;
-    private global::Google.Cloud.Scheduler.V1.Job.Types.State state_ = 0;
+    private global::Google.Cloud.Scheduler.V1.Job.Types.State state_ = global::Google.Cloud.Scheduler.V1.Job.Types.State.Unspecified;
     /// <summary>
     /// Output only. State of the job.
     /// </summary>
@@ -447,7 +447,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
       if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
       if (userUpdateTime_ != null) hash ^= UserUpdateTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Scheduler.V1.Job.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (status_ != null) hash ^= Status.GetHashCode();
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (lastAttemptTime_ != null) hash ^= LastAttemptTime.GetHashCode();
@@ -491,7 +491,7 @@ namespace Google.Cloud.Scheduler.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(UserUpdateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Scheduler.V1.Job.Types.State.Unspecified) {
         output.WriteRawTag(80);
         output.WriteEnum((int) State);
       }
@@ -555,7 +555,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (userUpdateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserUpdateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Scheduler.V1.Job.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (status_ != null) {
@@ -602,7 +602,7 @@ namespace Google.Cloud.Scheduler.V1 {
         }
         UserUpdateTime.MergeFrom(other.UserUpdateTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Scheduler.V1.Job.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.status_ != null) {

@@ -136,7 +136,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetQueue_ResourceNames()
+        public void GetQueueResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
@@ -161,7 +161,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetQueueAsync_ResourceNames()
+        public async stt::Task GetQueueResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetQueueRequest request = new GetQueueRequest
@@ -296,7 +296,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateQueue_ResourceNames()
+        public void CreateQueueResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
@@ -322,7 +322,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateQueueAsync_ResourceNames()
+        public async stt::Task CreateQueueResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateQueueRequest request = new CreateQueueRequest
@@ -520,7 +520,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteQueue_ResourceNames()
+        public void DeleteQueueResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
@@ -535,7 +535,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteQueueAsync_ResourceNames()
+        public async stt::Task DeleteQueueResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteQueueRequest request = new DeleteQueueRequest
@@ -655,7 +655,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void PurgeQueue_ResourceNames()
+        public void PurgeQueueResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
@@ -680,7 +680,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task PurgeQueueAsync_ResourceNames()
+        public async stt::Task PurgeQueueResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PurgeQueueRequest request = new PurgeQueueRequest
@@ -811,7 +811,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void PauseQueue_ResourceNames()
+        public void PauseQueueResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
@@ -836,7 +836,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task PauseQueueAsync_ResourceNames()
+        public async stt::Task PauseQueueResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             PauseQueueRequest request = new PauseQueueRequest
@@ -967,7 +967,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void ResumeQueue_ResourceNames()
+        public void ResumeQueueResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
@@ -992,7 +992,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ResumeQueueAsync_ResourceNames()
+        public async stt::Task ResumeQueueResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             ResumeQueueRequest request = new ResumeQueueRequest
@@ -1121,7 +1121,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
@@ -1145,7 +1145,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
@@ -1300,7 +1300,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
@@ -1435,7 +1435,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
@@ -1461,7 +1461,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
@@ -1611,7 +1611,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetTask_ResourceNames()
+        public void GetTaskResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
@@ -1640,7 +1640,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetTaskAsync_ResourceNames()
+        public async stt::Task GetTaskResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             GetTaskRequest request = new GetTaskRequest
@@ -1797,7 +1797,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateTask_ResourceNames()
+        public void CreateTaskResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
@@ -1827,7 +1827,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateTaskAsync_ResourceNames()
+        public async stt::Task CreateTaskResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             CreateTaskRequest request = new CreateTaskRequest
@@ -1921,7 +1921,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteTask_ResourceNames()
+        public void DeleteTaskResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
@@ -1936,7 +1936,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteTaskAsync_ResourceNames()
+        public async stt::Task DeleteTaskResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             DeleteTaskRequest request = new DeleteTaskRequest
@@ -2074,7 +2074,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public void RunTask_ResourceNames()
+        public void RunTaskResourceNames()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest
@@ -2103,7 +2103,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task RunTaskAsync_ResourceNames()
+        public async stt::Task RunTaskResourceNamesAsync()
         {
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             RunTaskRequest request = new RunTaskRequest

@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gctv = Google.Cloud.Talent.V4Beta1;
 
 namespace Google.Cloud.Talent.V4Beta1
@@ -21,11 +23,55 @@ namespace Google.Cloud.Talent.V4Beta1
     public partial class CreateCompanyRequest
     {
         /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public TenantOrProjectName ParentAsTenantOrProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (TenantName.TryParse(Parent, out TenantName tenant))
+                {
+                    return tenant;
+                }
+                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
+                {
+                    return tenantOrProject;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -37,7 +83,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::CompanyName CompanyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::CompanyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::CompanyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -49,7 +95,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::CompanyName CompanyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::CompanyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::CompanyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -61,7 +107,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public TenantOrProjectName ParentAsTenantOrProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

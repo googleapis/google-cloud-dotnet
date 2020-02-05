@@ -26,7 +26,7 @@ namespace Google.Cloud.Billing.V1.Snippets
     public sealed class GeneratedCloudCatalogClientSnippets
     {
         /// <summary>Snippet for ListServices</summary>
-        public void ListServices_RequestObject()
+        public void ListServicesRequestObject()
         {
             // Snippet: ListServices(ListServicesRequest, CallSettings)
             // Create client
@@ -71,7 +71,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListServices</summary>
-        public async Task ListServicesAsync_RequestObject()
+        public async Task ListServicesRequestObjectAsync()
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
             // Create client
@@ -202,7 +202,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListSkus</summary>
-        public void ListSkus_RequestObject()
+        public void ListSkusRequestObject()
         {
             // Snippet: ListSkus(ListSkusRequest, CallSettings)
             // Create client
@@ -253,7 +253,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListSkus</summary>
-        public async Task ListSkusAsync_RequestObject()
+        public async Task ListSkusRequestObjectAsync()
         {
             // Snippet: ListSkusAsync(ListSkusRequest, CallSettings)
             // Create client
@@ -394,7 +394,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListSkus</summary>
-        public void ListSkus_ResourceNames()
+        public void ListSkusResourceNames()
         {
             // Snippet: ListSkus(ServiceName, string, int?, CallSettings)
             // Create client
@@ -439,7 +439,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListSkus</summary>
-        public async Task ListSkusAsync_ResourceNames()
+        public async Task ListSkusResourceNamesAsync()
         {
             // Snippet: ListSkusAsync(ServiceName, string, int?, CallSettings)
             // Create client

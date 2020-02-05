@@ -152,21 +152,21 @@ namespace Google.Cloud.Dialogflow.V2 {
             "dWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityType), global::Google.Cloud.Dialogflow.V2.EntityType.Parser, new[]{ "Name", "DisplayName", "Kind", "AutoExpansionMode", "Entities", "EnableFuzzyExtraction" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind), typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity), global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity.Parser, new[]{ "Value", "Synonyms" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest.Parser, new[]{ "Parent", "LanguageCode", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse), global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse.Parser, new[]{ "EntityTypes", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest.Parser, new[]{ "Parent", "EntityType", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest.Parser, new[]{ "EntityType", "LanguageCode", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest.Parser, new[]{ "Parent", "EntityTypeBatchUri", "EntityTypeBatchInline", "LanguageCode", "UpdateMask" }, new[]{ "EntityTypeBatch" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesResponse), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesResponse.Parser, new[]{ "EntityTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest.Parser, new[]{ "Parent", "EntityTypeNames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest), global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest.Parser, new[]{ "Parent", "Entities", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest.Parser, new[]{ "Parent", "Entities", "LanguageCode", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest), global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest.Parser, new[]{ "Parent", "EntityValues", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityTypeBatch), global::Google.Cloud.Dialogflow.V2.EntityTypeBatch.Parser, new[]{ "EntityTypes" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityType), global::Google.Cloud.Dialogflow.V2.EntityType.Parser, new[]{ "Name", "DisplayName", "Kind", "AutoExpansionMode", "Entities", "EnableFuzzyExtraction" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind), typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity), global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity.Parser, new[]{ "Value", "Synonyms" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest.Parser, new[]{ "Parent", "LanguageCode", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse), global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse.Parser, new[]{ "EntityTypes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest.Parser, new[]{ "Parent", "EntityType", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest.Parser, new[]{ "EntityType", "LanguageCode", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest), global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest.Parser, new[]{ "Parent", "EntityTypeBatchUri", "EntityTypeBatchInline", "LanguageCode", "UpdateMask" }, new[]{ "EntityTypeBatch" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesResponse), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesResponse.Parser, new[]{ "EntityTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest.Parser, new[]{ "Parent", "EntityTypeNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest), global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest.Parser, new[]{ "Parent", "Entities", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest.Parser, new[]{ "Parent", "Entities", "LanguageCode", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest), global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest.Parser, new[]{ "Parent", "EntityValues", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityTypeBatch), global::Google.Cloud.Dialogflow.V2.EntityTypeBatch.Parser, new[]{ "EntityTypes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -250,7 +250,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 3;
-    private global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind kind_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind kind_ = global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind.Unspecified;
     /// <summary>
     /// Required. Indicates the kind of entity type.
     /// </summary>
@@ -264,7 +264,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "auto_expansion_mode" field.</summary>
     public const int AutoExpansionModeFieldNumber = 4;
-    private global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode autoExpansionMode_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode autoExpansionMode_ = global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode.Unspecified;
     /// <summary>
     /// Optional. Indicates whether the entity type can be automatically
     /// expanded.
@@ -331,8 +331,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Kind != 0) hash ^= Kind.GetHashCode();
-      if (AutoExpansionMode != 0) hash ^= AutoExpansionMode.GetHashCode();
+      if (Kind != global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind.Unspecified) hash ^= Kind.GetHashCode();
+      if (AutoExpansionMode != global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode.Unspecified) hash ^= AutoExpansionMode.GetHashCode();
       hash ^= entities_.GetHashCode();
       if (EnableFuzzyExtraction != false) hash ^= EnableFuzzyExtraction.GetHashCode();
       if (_unknownFields != null) {
@@ -356,11 +356,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Kind);
       }
-      if (AutoExpansionMode != 0) {
+      if (AutoExpansionMode != global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) AutoExpansionMode);
       }
@@ -383,10 +383,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
-      if (AutoExpansionMode != 0) {
+      if (AutoExpansionMode != global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AutoExpansionMode);
       }
       size += entities_.CalculateSize(_repeated_entities_codec);
@@ -410,10 +410,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind.Unspecified) {
         Kind = other.Kind;
       }
-      if (other.AutoExpansionMode != 0) {
+      if (other.AutoExpansionMode != global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode.Unspecified) {
         AutoExpansionMode = other.AutoExpansionMode;
       }
       entities_.Add(other.entities_);

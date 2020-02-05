@@ -264,7 +264,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::FindingName FindingName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::FindingName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::FindingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

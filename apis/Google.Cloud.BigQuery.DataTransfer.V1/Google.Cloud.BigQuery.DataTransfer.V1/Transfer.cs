@@ -91,12 +91,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             "ZmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences), global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences.Parser, new[]{ "EnableFailureEmail" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions.Parser, new[]{ "DisableAutoScheduling", "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Parser, new[]{ "MessageTime", "Severity", "MessageText" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) }, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences), global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences.Parser, new[]{ "EnableFailureEmail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions.Parser, new[]{ "DisableAutoScheduling", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Parser, new[]{ "MessageTime", "Severity", "MessageText" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) }, null, null)
           }));
     }
     #endregion
@@ -752,7 +752,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 10;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState state_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState state_ = global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified;
     /// <summary>
     /// Output only. State of the most recently updated transfer run.
     /// </summary>
@@ -887,7 +887,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Disabled != false) hash ^= Disabled.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (nextRunTime_ != null) hash ^= NextRunTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (DatasetRegion.Length != 0) hash ^= DatasetRegion.GetHashCode();
       if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
@@ -938,7 +938,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(Params);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) {
         output.WriteRawTag(80);
         output.WriteEnum((int) State);
       }
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (nextRunTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextRunTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (UserId != 0L) {
@@ -1079,7 +1079,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         }
         NextRunTime.MergeFrom(other.NextRunTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) {
         State = other.State;
       }
       if (other.UserId != 0L) {
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 8;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState state_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState state_ = global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified;
     /// <summary>
     /// Data transfer run state. Ignored for input requests.
     /// </summary>
@@ -1541,7 +1541,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (params_ != null) hash ^= Params.GetHashCode();
       if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
       if (DataSourceId.Length != 0) hash ^= DataSourceId.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
       if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
@@ -1588,7 +1588,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(58);
         output.WriteString(DataSourceId);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) {
         output.WriteRawTag(64);
         output.WriteEnum((int) State);
       }
@@ -1658,7 +1658,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (DataSourceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataSourceId);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (UserId != 0L) {
@@ -1732,7 +1732,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.DataSourceId.Length != 0) {
         DataSourceId = other.DataSourceId;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) {
         State = other.State;
       }
       if (other.UserId != 0L) {
@@ -1912,7 +1912,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "severity" field.</summary>
     public const int SeverityFieldNumber = 2;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity severity_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity severity_ = global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity.Unspecified;
     /// <summary>
     /// Message severity.
     /// </summary>
@@ -1961,7 +1961,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (messageTime_ != null) hash ^= MessageTime.GetHashCode();
-      if (Severity != 0) hash ^= Severity.GetHashCode();
+      if (Severity != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity.Unspecified) hash ^= Severity.GetHashCode();
       if (MessageText.Length != 0) hash ^= MessageText.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1980,7 +1980,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(MessageTime);
       }
-      if (Severity != 0) {
+      if (Severity != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Severity);
       }
@@ -1999,7 +1999,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (messageTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MessageTime);
       }
-      if (Severity != 0) {
+      if (Severity != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (MessageText.Length != 0) {
@@ -2022,7 +2022,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         }
         MessageTime.MergeFrom(other.MessageTime);
       }
-      if (other.Severity != 0) {
+      if (other.Severity != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity.Unspecified) {
         Severity = other.Severity;
       }
       if (other.MessageText.Length != 0) {

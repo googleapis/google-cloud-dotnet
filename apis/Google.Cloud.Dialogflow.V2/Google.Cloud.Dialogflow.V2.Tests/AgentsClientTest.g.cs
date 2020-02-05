@@ -170,7 +170,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetAgent_ResourceNames()
+        public void GetAgentResourceNames()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -204,7 +204,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetAgentAsync_ResourceNames()
+        public async stt::Task GetAgentResourceNamesAsync()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -442,7 +442,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteAgent_ResourceNames()
+        public void DeleteAgentResourceNames()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -458,7 +458,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteAgentAsync_ResourceNames()
+        public async stt::Task DeleteAgentResourceNamesAsync()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

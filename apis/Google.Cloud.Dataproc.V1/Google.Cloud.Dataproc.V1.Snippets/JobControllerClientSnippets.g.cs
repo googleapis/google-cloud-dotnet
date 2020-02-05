@@ -26,7 +26,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     public sealed class GeneratedJobControllerClientSnippets
     {
         /// <summary>Snippet for SubmitJob</summary>
-        public void SubmitJob_RequestObject()
+        public void SubmitJobRequestObject()
         {
             // Snippet: SubmitJob(SubmitJobRequest, CallSettings)
             // Create client
@@ -45,7 +45,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for SubmitJobAsync</summary>
-        public async Task SubmitJobAsync_RequestObject()
+        public async Task SubmitJobRequestObjectAsync()
         {
             // Snippet: SubmitJobAsync(SubmitJobRequest, CallSettings)
             // Additional: SubmitJobAsync(SubmitJobRequest, CancellationToken)
@@ -96,7 +96,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetJob</summary>
-        public void GetJob_RequestObject()
+        public void GetJobRequestObject()
         {
             // Snippet: GetJob(GetJobRequest, CallSettings)
             // Create client
@@ -114,7 +114,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetJobAsync</summary>
-        public async Task GetJobAsync_RequestObject()
+        public async Task GetJobRequestObjectAsync()
         {
             // Snippet: GetJobAsync(GetJobRequest, CallSettings)
             // Additional: GetJobAsync(GetJobRequest, CancellationToken)
@@ -164,7 +164,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobs</summary>
-        public void ListJobs_RequestObject()
+        public void ListJobsRequestObject()
         {
             // Snippet: ListJobs(ListJobsRequest, CallSettings)
             // Create client
@@ -216,7 +216,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobs</summary>
-        public async Task ListJobsAsync_RequestObject()
+        public async Task ListJobsRequestObjectAsync()
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
             // Create client
@@ -454,7 +454,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateJob</summary>
-        public void UpdateJob_RequestObject()
+        public void UpdateJobRequestObject()
         {
             // Snippet: UpdateJob(UpdateJobRequest, CallSettings)
             // Create client
@@ -474,7 +474,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateJobAsync</summary>
-        public async Task UpdateJobAsync_RequestObject()
+        public async Task UpdateJobRequestObjectAsync()
         {
             // Snippet: UpdateJobAsync(UpdateJobRequest, CallSettings)
             // Additional: UpdateJobAsync(UpdateJobRequest, CancellationToken)
@@ -495,7 +495,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for CancelJob</summary>
-        public void CancelJob_RequestObject()
+        public void CancelJobRequestObject()
         {
             // Snippet: CancelJob(CancelJobRequest, CallSettings)
             // Create client
@@ -513,7 +513,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for CancelJobAsync</summary>
-        public async Task CancelJobAsync_RequestObject()
+        public async Task CancelJobRequestObjectAsync()
         {
             // Snippet: CancelJobAsync(CancelJobRequest, CallSettings)
             // Additional: CancelJobAsync(CancelJobRequest, CancellationToken)
@@ -563,7 +563,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteJob</summary>
-        public void DeleteJob_RequestObject()
+        public void DeleteJobRequestObject()
         {
             // Snippet: DeleteJob(DeleteJobRequest, CallSettings)
             // Create client
@@ -581,7 +581,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteJobAsync</summary>
-        public async Task DeleteJobAsync_RequestObject()
+        public async Task DeleteJobRequestObjectAsync()
         {
             // Snippet: DeleteJobAsync(DeleteJobRequest, CallSettings)
             // Additional: DeleteJobAsync(DeleteJobRequest, CancellationToken)

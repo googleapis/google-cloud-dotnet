@@ -114,18 +114,18 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.FieldReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest), global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest.Parser, new[]{ "Parent", "Index" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest), global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse), global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse.Parser, new[]{ "Indexes", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest), global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest), global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest), global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest.Parser, new[]{ "Field", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest), global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest), global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse), global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse.Parser, new[]{ "Fields", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser, new[]{ "Name", "CollectionIds", "OutputUriPrefix" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser, new[]{ "Name", "CollectionIds", "InputUriPrefix" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest), global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest.Parser, new[]{ "Parent", "Index" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest), global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse), global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse.Parser, new[]{ "Indexes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest), global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest), global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest), global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest.Parser, new[]{ "Field", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest), global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest), global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse), global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse.Parser, new[]{ "Fields", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser, new[]{ "Name", "CollectionIds", "OutputUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser, new[]{ "Name", "CollectionIds", "InputUriPrefix" }, null, null, null, null)
           }));
     }
     #endregion

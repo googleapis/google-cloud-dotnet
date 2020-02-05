@@ -162,7 +162,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetJob_ResourceNames()
+        public void GetJobResourceNames()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
@@ -194,7 +194,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetJobAsync_ResourceNames()
+        public async stt::Task GetJobResourceNamesAsync()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
@@ -364,7 +364,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateJob_ResourceNames()
+        public void CreateJobResourceNames()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
@@ -397,7 +397,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateJobAsync_ResourceNames()
+        public async stt::Task CreateJobResourceNamesAsync()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
@@ -630,7 +630,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteJob_ResourceNames()
+        public void DeleteJobResourceNames()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
@@ -645,7 +645,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteJobAsync_ResourceNames()
+        public async stt::Task DeleteJobResourceNamesAsync()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
@@ -793,7 +793,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void PauseJob_ResourceNames()
+        public void PauseJobResourceNames()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             PauseJobRequest request = new PauseJobRequest
@@ -825,7 +825,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task PauseJobAsync_ResourceNames()
+        public async stt::Task PauseJobResourceNamesAsync()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             PauseJobRequest request = new PauseJobRequest
@@ -991,7 +991,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ResumeJob_ResourceNames()
+        public void ResumeJobResourceNames()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             ResumeJobRequest request = new ResumeJobRequest
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ResumeJobAsync_ResourceNames()
+        public async stt::Task ResumeJobResourceNamesAsync()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             ResumeJobRequest request = new ResumeJobRequest
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void RunJob_ResourceNames()
+        public void RunJobResourceNames()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             RunJobRequest request = new RunJobRequest
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.Scheduler.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task RunJobAsync_ResourceNames()
+        public async stt::Task RunJobResourceNamesAsync()
         {
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             RunJobRequest request = new RunJobRequest

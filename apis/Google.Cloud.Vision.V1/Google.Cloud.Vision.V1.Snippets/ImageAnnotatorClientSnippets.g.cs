@@ -24,7 +24,7 @@ namespace Google.Cloud.Vision.V1.Snippets
     public sealed class GeneratedImageAnnotatorClientSnippets
     {
         /// <summary>Snippet for BatchAnnotateImages</summary>
-        public void BatchAnnotateImages_RequestObject()
+        public void BatchAnnotateImagesRequestObject()
         {
             // Snippet: BatchAnnotateImages(BatchAnnotateImagesRequest, CallSettings)
             // Create client
@@ -44,7 +44,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for BatchAnnotateImagesAsync</summary>
-        public async Task BatchAnnotateImagesAsync_RequestObject()
+        public async Task BatchAnnotateImagesRequestObjectAsync()
         {
             // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CallSettings)
             // Additional: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CancellationToken)
@@ -98,7 +98,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for BatchAnnotateFiles</summary>
-        public void BatchAnnotateFiles_RequestObject()
+        public void BatchAnnotateFilesRequestObject()
         {
             // Snippet: BatchAnnotateFiles(BatchAnnotateFilesRequest, CallSettings)
             // Create client
@@ -118,7 +118,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for BatchAnnotateFilesAsync</summary>
-        public async Task BatchAnnotateFilesAsync_RequestObject()
+        public async Task BatchAnnotateFilesRequestObjectAsync()
         {
             // Snippet: BatchAnnotateFilesAsync(BatchAnnotateFilesRequest, CallSettings)
             // Additional: BatchAnnotateFilesAsync(BatchAnnotateFilesRequest, CancellationToken)
@@ -172,7 +172,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateImages</summary>
-        public void AsyncBatchAnnotateImages_RequestObject()
+        public void AsyncBatchAnnotateImagesRequestObject()
         {
             // Snippet: AsyncBatchAnnotateImages(AsyncBatchAnnotateImagesRequest, CallSettings)
             // Create client
@@ -209,7 +209,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateImagesAsync</summary>
-        public async Task AsyncBatchAnnotateImagesAsync_RequestObject()
+        public async Task AsyncBatchAnnotateImagesRequestObjectAsync()
         {
             // Snippet: AsyncBatchAnnotateImagesAsync(AsyncBatchAnnotateImagesRequest, CallSettings)
             // Additional: AsyncBatchAnnotateImagesAsync(AsyncBatchAnnotateImagesRequest, CancellationToken)
@@ -314,7 +314,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateFiles</summary>
-        public void AsyncBatchAnnotateFiles_RequestObject()
+        public void AsyncBatchAnnotateFilesRequestObject()
         {
             // Snippet: AsyncBatchAnnotateFiles(AsyncBatchAnnotateFilesRequest, CallSettings)
             // Create client
@@ -350,7 +350,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         /// <summary>Snippet for AsyncBatchAnnotateFilesAsync</summary>
-        public async Task AsyncBatchAnnotateFilesAsync_RequestObject()
+        public async Task AsyncBatchAnnotateFilesRequestObjectAsync()
         {
             // Snippet: AsyncBatchAnnotateFilesAsync(AsyncBatchAnnotateFilesRequest, CallSettings)
             // Additional: AsyncBatchAnnotateFilesAsync(AsyncBatchAnnotateFilesRequest, CancellationToken)

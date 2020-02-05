@@ -29,7 +29,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
     public sealed class GeneratedFirestoreClientSnippets
     {
         /// <summary>Snippet for GetDocument</summary>
-        public void GetDocument_RequestObject()
+        public void GetDocumentRequestObject()
         {
             // Snippet: GetDocument(GetDocumentRequest, CallSettings)
             // Create client
@@ -48,7 +48,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for GetDocumentAsync</summary>
-        public async Task GetDocumentAsync_RequestObject()
+        public async Task GetDocumentRequestObjectAsync()
         {
             // Snippet: GetDocumentAsync(GetDocumentRequest, CallSettings)
             // Additional: GetDocumentAsync(GetDocumentRequest, CancellationToken)
@@ -68,7 +68,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for ListDocuments</summary>
-        public void ListDocuments_RequestObject()
+        public void ListDocumentsRequestObject()
         {
             // Snippet: ListDocuments(ListDocumentsRequest, CallSettings)
             // Create client
@@ -122,7 +122,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for ListDocuments</summary>
-        public async Task ListDocumentsAsync_RequestObject()
+        public async Task ListDocumentsRequestObjectAsync()
         {
             // Snippet: ListDocumentsAsync(ListDocumentsRequest, CallSettings)
             // Create client
@@ -176,7 +176,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDocument</summary>
-        public void CreateDocument_RequestObject()
+        public void CreateDocumentRequestObject()
         {
             // Snippet: CreateDocument(CreateDocumentRequest, CallSettings)
             // Create client
@@ -196,7 +196,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDocumentAsync</summary>
-        public async Task CreateDocumentAsync_RequestObject()
+        public async Task CreateDocumentRequestObjectAsync()
         {
             // Snippet: CreateDocumentAsync(CreateDocumentRequest, CallSettings)
             // Additional: CreateDocumentAsync(CreateDocumentRequest, CancellationToken)
@@ -217,7 +217,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDocument</summary>
-        public void UpdateDocument_RequestObject()
+        public void UpdateDocumentRequestObject()
         {
             // Snippet: UpdateDocument(UpdateDocumentRequest, CallSettings)
             // Create client
@@ -236,7 +236,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDocumentAsync</summary>
-        public async Task UpdateDocumentAsync_RequestObject()
+        public async Task UpdateDocumentRequestObjectAsync()
         {
             // Snippet: UpdateDocumentAsync(UpdateDocumentRequest, CallSettings)
             // Additional: UpdateDocumentAsync(UpdateDocumentRequest, CancellationToken)
@@ -285,7 +285,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDocument</summary>
-        public void DeleteDocument_RequestObject()
+        public void DeleteDocumentRequestObject()
         {
             // Snippet: DeleteDocument(DeleteDocumentRequest, CallSettings)
             // Create client
@@ -302,7 +302,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDocumentAsync</summary>
-        public async Task DeleteDocumentAsync_RequestObject()
+        public async Task DeleteDocumentRequestObjectAsync()
         {
             // Snippet: DeleteDocumentAsync(DeleteDocumentRequest, CallSettings)
             // Additional: DeleteDocumentAsync(DeleteDocumentRequest, CancellationToken)
@@ -347,7 +347,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for BatchGetDocuments</summary>
-        public async Task BatchGetDocuments_RequestObject()
+        public async Task BatchGetDocumentsRequestObject()
         {
             // Snippet: BatchGetDocuments(BatchGetDocumentsRequest, CallSettings)
             // Create client
@@ -378,7 +378,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction_RequestObject()
+        public void BeginTransactionRequestObject()
         {
             // Snippet: BeginTransaction(BeginTransactionRequest, CallSettings)
             // Create client
@@ -395,7 +395,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync_RequestObject()
+        public async Task BeginTransactionRequestObjectAsync()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest, CallSettings)
             // Additional: BeginTransactionAsync(BeginTransactionRequest, CancellationToken)
@@ -440,7 +440,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit_RequestObject()
+        public void CommitRequestObject()
         {
             // Snippet: Commit(CommitRequest, CallSettings)
             // Create client
@@ -458,7 +458,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for CommitAsync</summary>
-        public async Task CommitAsync_RequestObject()
+        public async Task CommitRequestObjectAsync()
         {
             // Snippet: CommitAsync(CommitRequest, CallSettings)
             // Additional: CommitAsync(CommitRequest, CancellationToken)
@@ -506,7 +506,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for Rollback</summary>
-        public void Rollback_RequestObject()
+        public void RollbackRequestObject()
         {
             // Snippet: Rollback(RollbackRequest, CallSettings)
             // Create client
@@ -523,7 +523,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync_RequestObject()
+        public async Task RollbackRequestObjectAsync()
         {
             // Snippet: RollbackAsync(RollbackRequest, CallSettings)
             // Additional: RollbackAsync(RollbackRequest, CancellationToken)
@@ -570,7 +570,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for RunQuery</summary>
-        public async Task RunQuery_RequestObject()
+        public async Task RunQueryRequestObject()
         {
             // Snippet: RunQuery(RunQueryRequest, CallSettings)
             // Create client
@@ -701,7 +701,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for ListCollectionIds</summary>
-        public void ListCollectionIds_RequestObject()
+        public void ListCollectionIdsRequestObject()
         {
             // Snippet: ListCollectionIds(ListCollectionIdsRequest, CallSettings)
             // Create client
@@ -746,7 +746,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
         }
 
         /// <summary>Snippet for ListCollectionIds</summary>
-        public async Task ListCollectionIdsAsync_RequestObject()
+        public async Task ListCollectionIdsRequestObjectAsync()
         {
             // Snippet: ListCollectionIdsAsync(ListCollectionIdsRequest, CallSettings)
             // Create client

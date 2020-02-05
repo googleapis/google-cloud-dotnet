@@ -25,7 +25,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public gagr::BillingAccountName BillingAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -37,7 +37,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public gagr::BillingAccountName BillingAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public gagr::BillingAccountName BillingAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -61,7 +61,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         public gagr::BillingAccountName BillingAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

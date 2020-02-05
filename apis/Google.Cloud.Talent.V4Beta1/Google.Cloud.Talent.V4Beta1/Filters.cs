@@ -139,24 +139,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "O3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobQuery), global::Google.Cloud.Talent.V4Beta1.JobQuery.Parser, new[]{ "Query", "QueryLanguageCode", "Companies", "LocationFilters", "JobCategories", "CommuteFilter", "CompanyDisplayNames", "CompensationFilter", "CustomAttributeFilter", "DisableSpellCheck", "EmploymentTypes", "LanguageCodes", "PublishTimeRange", "ExcludedJobs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter", "AvailabilityFilters", "PersonNameFilters" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter), global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser, new[]{ "Address", "RegionCode", "LatLng", "DistanceInMiles", "TelecommutePreference", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter), global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Parser, new[]{ "Type", "Units", "Range", "IncludeJobsWithUnspecifiedCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobTitleFilter), global::Google.Cloud.Talent.V4Beta1.JobTitleFilter.Parser, new[]{ "JobTitle", "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SkillFilter), global::Google.Cloud.Talent.V4Beta1.SkillFilter.Parser, new[]{ "Skill", "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmployerFilter), global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Parser, new[]{ "Employer", "Mode", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EducationFilter), global::Google.Cloud.Talent.V4Beta1.EducationFilter.Parser, new[]{ "School", "FieldOfStudy", "DegreeType", "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter), global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter.Parser, new[]{ "MinExperience", "MaxExperience" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter.Parser, new[]{ "StartDate", "EndDate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter.Parser, new[]{ "OutcomeNotes", "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter.Parser, new[]{ "JobRequisitionId", "JobTitle", "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter), global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser, new[]{ "StartTime", "EndTime", "TimeField" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter.Parser, new[]{ "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter.Parser, new[]{ "SignalType", "Range", "Required" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonNameFilter), global::Google.Cloud.Talent.V4Beta1.PersonNameFilter.Parser, new[]{ "PersonName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobQuery), global::Google.Cloud.Talent.V4Beta1.JobQuery.Parser, new[]{ "Query", "QueryLanguageCode", "Companies", "LocationFilters", "JobCategories", "CommuteFilter", "CompanyDisplayNames", "CompensationFilter", "CustomAttributeFilter", "DisableSpellCheck", "EmploymentTypes", "LanguageCodes", "PublishTimeRange", "ExcludedJobs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter", "AvailabilityFilters", "PersonNameFilters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter), global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser, new[]{ "Address", "RegionCode", "LatLng", "DistanceInMiles", "TelecommutePreference", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter), global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Parser, new[]{ "Type", "Units", "Range", "IncludeJobsWithUnspecifiedCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobTitleFilter), global::Google.Cloud.Talent.V4Beta1.JobTitleFilter.Parser, new[]{ "JobTitle", "Negated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SkillFilter), global::Google.Cloud.Talent.V4Beta1.SkillFilter.Parser, new[]{ "Skill", "Negated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmployerFilter), global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Parser, new[]{ "Employer", "Mode", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EducationFilter), global::Google.Cloud.Talent.V4Beta1.EducationFilter.Parser, new[]{ "School", "FieldOfStudy", "DegreeType", "Negated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter), global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter.Parser, new[]{ "MinExperience", "MaxExperience" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter.Parser, new[]{ "OutcomeNotes", "Negated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter.Parser, new[]{ "JobRequisitionId", "JobTitle", "Negated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter), global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser, new[]{ "StartTime", "EndTime", "TimeField" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter.Parser, new[]{ "Negated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.AvailabilityFilter.Parser, new[]{ "SignalType", "Range", "Required" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonNameFilter), global::Google.Cloud.Talent.V4Beta1.PersonNameFilter.Parser, new[]{ "PersonName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1587,7 +1587,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "telecommute_preference" field.</summary>
     public const int TelecommutePreferenceFieldNumber = 5;
-    private global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference telecommutePreference_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference telecommutePreference_ = global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference.Unspecified;
     /// <summary>
     /// Allows the client to return jobs without a
     /// set location, specifically, telecommuting jobs (telecommuting is considered
@@ -1662,7 +1662,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (latLng_ != null) hash ^= LatLng.GetHashCode();
       if (DistanceInMiles != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DistanceInMiles);
-      if (TelecommutePreference != 0) hash ^= TelecommutePreference.GetHashCode();
+      if (TelecommutePreference != global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference.Unspecified) hash ^= TelecommutePreference.GetHashCode();
       if (Negated != false) hash ^= Negated.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1693,7 +1693,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(33);
         output.WriteDouble(DistanceInMiles);
       }
-      if (TelecommutePreference != 0) {
+      if (TelecommutePreference != global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) TelecommutePreference);
       }
@@ -1721,7 +1721,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (DistanceInMiles != 0D) {
         size += 1 + 8;
       }
-      if (TelecommutePreference != 0) {
+      if (TelecommutePreference != global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TelecommutePreference);
       }
       if (Negated != false) {
@@ -1753,7 +1753,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.DistanceInMiles != 0D) {
         DistanceInMiles = other.DistanceInMiles;
       }
-      if (other.TelecommutePreference != 0) {
+      if (other.TelecommutePreference != global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference.Unspecified) {
         TelecommutePreference = other.TelecommutePreference;
       }
       if (other.Negated != false) {
@@ -1870,7 +1870,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType type_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType type_ = global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType.Unspecified;
     /// <summary>
     /// Required. Type of filter.
     /// </summary>
@@ -1948,7 +1948,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType.Unspecified) hash ^= Type.GetHashCode();
       hash ^= units_.GetHashCode();
       if (range_ != null) hash ^= Range.GetHashCode();
       if (IncludeJobsWithUnspecifiedCompensationRange != false) hash ^= IncludeJobsWithUnspecifiedCompensationRange.GetHashCode();
@@ -1965,7 +1965,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -1986,7 +1986,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += units_.CalculateSize(_repeated_units_codec);
@@ -2007,7 +2007,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType.Unspecified) {
         Type = other.Type;
       }
       units_.Add(other.units_);
@@ -2159,7 +2159,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "commute_method" field.</summary>
     public const int CommuteMethodFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.CommuteMethod commuteMethod_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.CommuteMethod commuteMethod_ = global::Google.Cloud.Talent.V4Beta1.CommuteMethod.Unspecified;
     /// <summary>
     /// Required. The method of transportation to calculate the commute time for.
     /// </summary>
@@ -2226,7 +2226,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic RoadTraffic {
-      get { return trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic ? (global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) trafficOption_ : 0; }
+      get { return trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic ? (global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) trafficOption_ : global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic.Unspecified; }
       set {
         trafficOption_ = value;
         trafficOptionCase_ = TrafficOptionOneofCase.RoadTraffic;
@@ -2295,7 +2295,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (CommuteMethod != 0) hash ^= CommuteMethod.GetHashCode();
+      if (CommuteMethod != global::Google.Cloud.Talent.V4Beta1.CommuteMethod.Unspecified) hash ^= CommuteMethod.GetHashCode();
       if (startCoordinates_ != null) hash ^= StartCoordinates.GetHashCode();
       if (travelDuration_ != null) hash ^= TravelDuration.GetHashCode();
       if (AllowImpreciseAddresses != false) hash ^= AllowImpreciseAddresses.GetHashCode();
@@ -2315,7 +2315,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (CommuteMethod != 0) {
+      if (CommuteMethod != global::Google.Cloud.Talent.V4Beta1.CommuteMethod.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) CommuteMethod);
       }
@@ -2347,7 +2347,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (CommuteMethod != 0) {
+      if (CommuteMethod != global::Google.Cloud.Talent.V4Beta1.CommuteMethod.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CommuteMethod);
       }
       if (startCoordinates_ != null) {
@@ -2376,7 +2376,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.CommuteMethod != 0) {
+      if (other.CommuteMethod != global::Google.Cloud.Talent.V4Beta1.CommuteMethod.Unspecified) {
         CommuteMethod = other.CommuteMethod;
       }
       if (other.startCoordinates_ != null) {
@@ -2873,7 +2873,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "mode" field.</summary>
     public const int ModeFieldNumber = 2;
-    private global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode mode_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode mode_ = global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode.Unspecified;
     /// <summary>
     /// Define set of [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord]s to search against.
     ///
@@ -2925,7 +2925,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Employer.Length != 0) hash ^= Employer.GetHashCode();
-      if (Mode != 0) hash ^= Mode.GetHashCode();
+      if (Mode != global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode.Unspecified) hash ^= Mode.GetHashCode();
       if (Negated != false) hash ^= Negated.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2944,7 +2944,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Employer);
       }
-      if (Mode != 0) {
+      if (Mode != global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Mode);
       }
@@ -2963,7 +2963,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Employer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Employer);
       }
-      if (Mode != 0) {
+      if (Mode != global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
       if (Negated != false) {
@@ -2983,7 +2983,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.Employer.Length != 0) {
         Employer = other.Employer;
       }
-      if (other.Mode != 0) {
+      if (other.Mode != global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode.Unspecified) {
         Mode = other.Mode;
       }
       if (other.Negated != false) {
@@ -3121,7 +3121,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "degree_type" field.</summary>
     public const int DegreeTypeFieldNumber = 3;
-    private global::Google.Cloud.Talent.V4Beta1.DegreeType degreeType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.DegreeType degreeType_ = global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified;
     /// <summary>
     /// Education degree in ISCED code. Each value in degree covers a specific
     /// level of education, without any expansion to upper nor lower levels of
@@ -3175,7 +3175,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       int hash = 1;
       if (School.Length != 0) hash ^= School.GetHashCode();
       if (FieldOfStudy.Length != 0) hash ^= FieldOfStudy.GetHashCode();
-      if (DegreeType != 0) hash ^= DegreeType.GetHashCode();
+      if (DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) hash ^= DegreeType.GetHashCode();
       if (Negated != false) hash ^= Negated.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3198,7 +3198,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(18);
         output.WriteString(FieldOfStudy);
       }
-      if (DegreeType != 0) {
+      if (DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) DegreeType);
       }
@@ -3220,7 +3220,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (FieldOfStudy.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldOfStudy);
       }
-      if (DegreeType != 0) {
+      if (DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DegreeType);
       }
       if (Negated != false) {
@@ -3243,7 +3243,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.FieldOfStudy.Length != 0) {
         FieldOfStudy = other.FieldOfStudy;
       }
-      if (other.DegreeType != 0) {
+      if (other.DegreeType != global::Google.Cloud.Talent.V4Beta1.DegreeType.Unspecified) {
         DegreeType = other.DegreeType;
       }
       if (other.Negated != false) {
@@ -4089,7 +4089,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "time_field" field.</summary>
     public const int TimeFieldFieldNumber = 3;
-    private global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField timeField_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField timeField_ = global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField.Unspecified;
     /// <summary>
     /// Specifies which time field to filter profiles.
     ///
@@ -4127,7 +4127,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       int hash = 1;
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
-      if (TimeField != 0) hash ^= TimeField.GetHashCode();
+      if (TimeField != global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField.Unspecified) hash ^= TimeField.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4149,7 +4149,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(18);
         output.WriteMessage(EndTime);
       }
-      if (TimeField != 0) {
+      if (TimeField != global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) TimeField);
       }
@@ -4167,7 +4167,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
-      if (TimeField != 0) {
+      if (TimeField != global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TimeField);
       }
       if (_unknownFields != null) {
@@ -4193,7 +4193,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
-      if (other.TimeField != 0) {
+      if (other.TimeField != global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField.Unspecified) {
         TimeField = other.TimeField;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4436,7 +4436,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "signal_type" field.</summary>
     public const int SignalTypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType signalType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType signalType_ = global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified;
     /// <summary>
     /// Required. Type of signal to apply filter on.
     /// </summary>
@@ -4501,7 +4501,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (SignalType != 0) hash ^= SignalType.GetHashCode();
+      if (SignalType != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) hash ^= SignalType.GetHashCode();
       if (range_ != null) hash ^= Range.GetHashCode();
       if (Required != false) hash ^= Required.GetHashCode();
       if (_unknownFields != null) {
@@ -4517,7 +4517,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (SignalType != 0) {
+      if (SignalType != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) SignalType);
       }
@@ -4537,7 +4537,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (SignalType != 0) {
+      if (SignalType != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignalType);
       }
       if (range_ != null) {
@@ -4557,7 +4557,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.SignalType != 0) {
+      if (other.SignalType != global::Google.Cloud.Talent.V4Beta1.AvailabilitySignalType.Unspecified) {
         SignalType = other.SignalType;
       }
       if (other.range_ != null) {

@@ -26,7 +26,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
     public sealed class GeneratedRecommenderClientSnippets
     {
         /// <summary>Snippet for ListRecommendations</summary>
-        public void ListRecommendations_RequestObject()
+        public void ListRecommendationsRequestObject()
         {
             // Snippet: ListRecommendations(ListRecommendationsRequest, CallSettings)
             // Create client
@@ -75,7 +75,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for ListRecommendations</summary>
-        public async Task ListRecommendationsAsync_RequestObject()
+        public async Task ListRecommendationsRequestObjectAsync()
         {
             // Snippet: ListRecommendationsAsync(ListRecommendationsRequest, CallSettings)
             // Create client
@@ -214,7 +214,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for ListRecommendations</summary>
-        public void ListRecommendations1_ResourceNames()
+        public void ListRecommendations1ResourceNames()
         {
             // Snippet: ListRecommendations(RecommenderName, string, int?, CallSettings)
             // Create client
@@ -259,7 +259,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for ListRecommendations</summary>
-        public async Task ListRecommendations1Async_ResourceNames()
+        public async Task ListRecommendations1ResourceNamesAsync()
         {
             // Snippet: ListRecommendationsAsync(RecommenderName, string, int?, CallSettings)
             // Create client
@@ -396,7 +396,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for ListRecommendations</summary>
-        public void ListRecommendations2_ResourceNames()
+        public void ListRecommendations2ResourceNames()
         {
             // Snippet: ListRecommendations(RecommenderName, string, string, int?, CallSettings)
             // Create client
@@ -442,7 +442,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for ListRecommendations</summary>
-        public async Task ListRecommendations2Async_ResourceNames()
+        public async Task ListRecommendations2ResourceNamesAsync()
         {
             // Snippet: ListRecommendationsAsync(RecommenderName, string, string, int?, CallSettings)
             // Create client
@@ -488,7 +488,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for GetRecommendation</summary>
-        public void GetRecommendation_RequestObject()
+        public void GetRecommendationRequestObject()
         {
             // Snippet: GetRecommendation(GetRecommendationRequest, CallSettings)
             // Create client
@@ -504,7 +504,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for GetRecommendationAsync</summary>
-        public async Task GetRecommendationAsync_RequestObject()
+        public async Task GetRecommendationRequestObjectAsync()
         {
             // Snippet: GetRecommendationAsync(GetRecommendationRequest, CallSettings)
             // Additional: GetRecommendationAsync(GetRecommendationRequest, CancellationToken)
@@ -548,7 +548,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for GetRecommendation</summary>
-        public void GetRecommendation_ResourceNames()
+        public void GetRecommendationResourceNames()
         {
             // Snippet: GetRecommendation(RecommendationName, CallSettings)
             // Create client
@@ -561,7 +561,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for GetRecommendationAsync</summary>
-        public async Task GetRecommendationAsync_ResourceNames()
+        public async Task GetRecommendationResourceNamesAsync()
         {
             // Snippet: GetRecommendationAsync(RecommendationName, CallSettings)
             // Additional: GetRecommendationAsync(RecommendationName, CancellationToken)
@@ -575,7 +575,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationClaimed</summary>
-        public void MarkRecommendationClaimed_RequestObject()
+        public void MarkRecommendationClaimedRequestObject()
         {
             // Snippet: MarkRecommendationClaimed(MarkRecommendationClaimedRequest, CallSettings)
             // Create client
@@ -593,7 +593,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationClaimedAsync</summary>
-        public async Task MarkRecommendationClaimedAsync_RequestObject()
+        public async Task MarkRecommendationClaimedRequestObjectAsync()
         {
             // Snippet: MarkRecommendationClaimedAsync(MarkRecommendationClaimedRequest, CallSettings)
             // Additional: MarkRecommendationClaimedAsync(MarkRecommendationClaimedRequest, CancellationToken)
@@ -643,7 +643,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationClaimed</summary>
-        public void MarkRecommendationClaimed_ResourceNames()
+        public void MarkRecommendationClaimedResourceNames()
         {
             // Snippet: MarkRecommendationClaimed(RecommendationName, IDictionary<string,string>, string, CallSettings)
             // Create client
@@ -658,7 +658,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationClaimedAsync</summary>
-        public async Task MarkRecommendationClaimedAsync_ResourceNames()
+        public async Task MarkRecommendationClaimedResourceNamesAsync()
         {
             // Snippet: MarkRecommendationClaimedAsync(RecommendationName, IDictionary<string,string>, string, CallSettings)
             // Additional: MarkRecommendationClaimedAsync(RecommendationName, IDictionary<string,string>, string, CancellationToken)
@@ -674,7 +674,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationSucceeded</summary>
-        public void MarkRecommendationSucceeded_RequestObject()
+        public void MarkRecommendationSucceededRequestObject()
         {
             // Snippet: MarkRecommendationSucceeded(MarkRecommendationSucceededRequest, CallSettings)
             // Create client
@@ -692,7 +692,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationSucceededAsync</summary>
-        public async Task MarkRecommendationSucceededAsync_RequestObject()
+        public async Task MarkRecommendationSucceededRequestObjectAsync()
         {
             // Snippet: MarkRecommendationSucceededAsync(MarkRecommendationSucceededRequest, CallSettings)
             // Additional: MarkRecommendationSucceededAsync(MarkRecommendationSucceededRequest, CancellationToken)
@@ -742,7 +742,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationSucceeded</summary>
-        public void MarkRecommendationSucceeded_ResourceNames()
+        public void MarkRecommendationSucceededResourceNames()
         {
             // Snippet: MarkRecommendationSucceeded(RecommendationName, IDictionary<string,string>, string, CallSettings)
             // Create client
@@ -757,7 +757,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationSucceededAsync</summary>
-        public async Task MarkRecommendationSucceededAsync_ResourceNames()
+        public async Task MarkRecommendationSucceededResourceNamesAsync()
         {
             // Snippet: MarkRecommendationSucceededAsync(RecommendationName, IDictionary<string,string>, string, CallSettings)
             // Additional: MarkRecommendationSucceededAsync(RecommendationName, IDictionary<string,string>, string, CancellationToken)
@@ -773,7 +773,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationFailed</summary>
-        public void MarkRecommendationFailed_RequestObject()
+        public void MarkRecommendationFailedRequestObject()
         {
             // Snippet: MarkRecommendationFailed(MarkRecommendationFailedRequest, CallSettings)
             // Create client
@@ -791,7 +791,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationFailedAsync</summary>
-        public async Task MarkRecommendationFailedAsync_RequestObject()
+        public async Task MarkRecommendationFailedRequestObjectAsync()
         {
             // Snippet: MarkRecommendationFailedAsync(MarkRecommendationFailedRequest, CallSettings)
             // Additional: MarkRecommendationFailedAsync(MarkRecommendationFailedRequest, CancellationToken)
@@ -841,7 +841,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationFailed</summary>
-        public void MarkRecommendationFailed_ResourceNames()
+        public void MarkRecommendationFailedResourceNames()
         {
             // Snippet: MarkRecommendationFailed(RecommendationName, IDictionary<string,string>, string, CallSettings)
             // Create client
@@ -856,7 +856,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
         }
 
         /// <summary>Snippet for MarkRecommendationFailedAsync</summary>
-        public async Task MarkRecommendationFailedAsync_ResourceNames()
+        public async Task MarkRecommendationFailedResourceNamesAsync()
         {
             // Snippet: MarkRecommendationFailedAsync(RecommendationName, IDictionary<string,string>, string, CallSettings)
             // Additional: MarkRecommendationFailedAsync(RecommendationName, IDictionary<string,string>, string, CancellationToken)

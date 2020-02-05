@@ -30,7 +30,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
     public sealed class GeneratedSecurityCenterClientSnippets
     {
         /// <summary>Snippet for CreateSource</summary>
-        public void CreateSource_RequestObject()
+        public void CreateSourceRequestObject()
         {
             // Snippet: CreateSource(CreateSourceRequest, CallSettings)
             // Create client
@@ -47,7 +47,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateSourceAsync</summary>
-        public async Task CreateSourceAsync_RequestObject()
+        public async Task CreateSourceRequestObjectAsync()
         {
             // Snippet: CreateSourceAsync(CreateSourceRequest, CallSettings)
             // Additional: CreateSourceAsync(CreateSourceRequest, CancellationToken)
@@ -94,7 +94,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateSource</summary>
-        public void CreateSource_ResourceNames()
+        public void CreateSourceResourceNames()
         {
             // Snippet: CreateSource(OrganizationName, Source, CallSettings)
             // Create client
@@ -108,7 +108,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateSourceAsync</summary>
-        public async Task CreateSourceAsync_ResourceNames()
+        public async Task CreateSourceResourceNamesAsync()
         {
             // Snippet: CreateSourceAsync(OrganizationName, Source, CallSettings)
             // Additional: CreateSourceAsync(OrganizationName, Source, CancellationToken)
@@ -123,7 +123,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFinding</summary>
-        public void CreateFinding_RequestObject()
+        public void CreateFindingRequestObject()
         {
             // Snippet: CreateFinding(CreateFindingRequest, CallSettings)
             // Create client
@@ -141,7 +141,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFindingAsync</summary>
-        public async Task CreateFindingAsync_RequestObject()
+        public async Task CreateFindingRequestObjectAsync()
         {
             // Snippet: CreateFindingAsync(CreateFindingRequest, CallSettings)
             // Additional: CreateFindingAsync(CreateFindingRequest, CancellationToken)
@@ -191,7 +191,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFinding</summary>
-        public void CreateFinding_ResourceNames()
+        public void CreateFindingResourceNames()
         {
             // Snippet: CreateFinding(SourceName, string, Finding, CallSettings)
             // Create client
@@ -206,7 +206,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFindingAsync</summary>
-        public async Task CreateFindingAsync_ResourceNames()
+        public async Task CreateFindingResourceNamesAsync()
         {
             // Snippet: CreateFindingAsync(SourceName, string, Finding, CallSettings)
             // Additional: CreateFindingAsync(SourceName, string, Finding, CancellationToken)
@@ -222,7 +222,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicyRequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
@@ -239,7 +239,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
@@ -284,7 +284,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
@@ -297,7 +297,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_ResourceNames()
+        public async Task GetIamPolicyResourceNamesAsync()
         {
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
@@ -311,7 +311,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetOrganizationSettings</summary>
-        public void GetOrganizationSettings_RequestObject()
+        public void GetOrganizationSettingsRequestObject()
         {
             // Snippet: GetOrganizationSettings(GetOrganizationSettingsRequest, CallSettings)
             // Create client
@@ -327,7 +327,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetOrganizationSettingsAsync</summary>
-        public async Task GetOrganizationSettingsAsync_RequestObject()
+        public async Task GetOrganizationSettingsRequestObjectAsync()
         {
             // Snippet: GetOrganizationSettingsAsync(GetOrganizationSettingsRequest, CallSettings)
             // Additional: GetOrganizationSettingsAsync(GetOrganizationSettingsRequest, CancellationToken)
@@ -371,7 +371,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetOrganizationSettings</summary>
-        public void GetOrganizationSettings_ResourceNames()
+        public void GetOrganizationSettingsResourceNames()
         {
             // Snippet: GetOrganizationSettings(OrganizationSettingsName, CallSettings)
             // Create client
@@ -384,7 +384,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetOrganizationSettingsAsync</summary>
-        public async Task GetOrganizationSettingsAsync_ResourceNames()
+        public async Task GetOrganizationSettingsResourceNamesAsync()
         {
             // Snippet: GetOrganizationSettingsAsync(OrganizationSettingsName, CallSettings)
             // Additional: GetOrganizationSettingsAsync(OrganizationSettingsName, CancellationToken)
@@ -398,7 +398,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetSource</summary>
-        public void GetSource_RequestObject()
+        public void GetSourceRequestObject()
         {
             // Snippet: GetSource(GetSourceRequest, CallSettings)
             // Create client
@@ -414,7 +414,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetSourceAsync</summary>
-        public async Task GetSourceAsync_RequestObject()
+        public async Task GetSourceRequestObjectAsync()
         {
             // Snippet: GetSourceAsync(GetSourceRequest, CallSettings)
             // Additional: GetSourceAsync(GetSourceRequest, CancellationToken)
@@ -458,7 +458,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetSource</summary>
-        public void GetSource_ResourceNames()
+        public void GetSourceResourceNames()
         {
             // Snippet: GetSource(SourceName, CallSettings)
             // Create client
@@ -471,7 +471,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GetSourceAsync</summary>
-        public async Task GetSourceAsync_ResourceNames()
+        public async Task GetSourceResourceNamesAsync()
         {
             // Snippet: GetSourceAsync(SourceName, CallSettings)
             // Additional: GetSourceAsync(SourceName, CancellationToken)
@@ -485,7 +485,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GroupAssets</summary>
-        public void GroupAssets_RequestObject()
+        public void GroupAssetsRequestObject()
         {
             // Snippet: GroupAssets(GroupAssetsRequest, CallSettings)
             // Create client
@@ -537,7 +537,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GroupAssets</summary>
-        public async Task GroupAssetsAsync_RequestObject()
+        public async Task GroupAssetsRequestObjectAsync()
         {
             // Snippet: GroupAssetsAsync(GroupAssetsRequest, CallSettings)
             // Create client
@@ -589,7 +589,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public void GroupFindings_RequestObject()
+        public void GroupFindingsRequestObject()
         {
             // Snippet: GroupFindings(GroupFindingsRequest, CallSettings)
             // Create client
@@ -641,7 +641,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public async Task GroupFindingsAsync_RequestObject()
+        public async Task GroupFindingsRequestObjectAsync()
         {
             // Snippet: GroupFindingsAsync(GroupFindingsRequest, CallSettings)
             // Create client
@@ -785,7 +785,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public void GroupFindings_ResourceNames()
+        public void GroupFindingsResourceNames()
         {
             // Snippet: GroupFindings(SourceName, string, string, int?, CallSettings)
             // Create client
@@ -831,7 +831,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public async Task GroupFindingsAsync_ResourceNames()
+        public async Task GroupFindingsResourceNamesAsync()
         {
             // Snippet: GroupFindingsAsync(SourceName, string, string, int?, CallSettings)
             // Create client
@@ -877,7 +877,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListAssets</summary>
-        public void ListAssets_RequestObject()
+        public void ListAssetsRequestObject()
         {
             // Snippet: ListAssets(ListAssetsRequest, CallSettings)
             // Create client
@@ -930,7 +930,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListAssets</summary>
-        public async Task ListAssetsAsync_RequestObject()
+        public async Task ListAssetsRequestObjectAsync()
         {
             // Snippet: ListAssetsAsync(ListAssetsRequest, CallSettings)
             // Create client
@@ -983,7 +983,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListFindings</summary>
-        public void ListFindings_RequestObject()
+        public void ListFindingsRequestObject()
         {
             // Snippet: ListFindings(ListFindingsRequest, CallSettings)
             // Create client
@@ -1036,7 +1036,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListFindings</summary>
-        public async Task ListFindingsAsync_RequestObject()
+        public async Task ListFindingsRequestObjectAsync()
         {
             // Snippet: ListFindingsAsync(ListFindingsRequest, CallSettings)
             // Create client
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public void ListSources_RequestObject()
+        public void ListSourcesRequestObject()
         {
             // Snippet: ListSources(ListSourcesRequest, CallSettings)
             // Create client
@@ -1137,7 +1137,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public async Task ListSourcesAsync_RequestObject()
+        public async Task ListSourcesRequestObjectAsync()
         {
             // Snippet: ListSourcesAsync(ListSourcesRequest, CallSettings)
             // Create client
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public void ListSources_ResourceNames()
+        public void ListSourcesResourceNames()
         {
             // Snippet: ListSources(OrganizationName, string, int?, CallSettings)
             // Create client
@@ -1320,7 +1320,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public async Task ListSourcesAsync_ResourceNames()
+        public async Task ListSourcesResourceNamesAsync()
         {
             // Snippet: ListSourcesAsync(OrganizationName, string, int?, CallSettings)
             // Create client
@@ -1365,7 +1365,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscovery</summary>
-        public void RunAssetDiscovery_RequestObject()
+        public void RunAssetDiscoveryRequestObject()
         {
             // Snippet: RunAssetDiscovery(RunAssetDiscoveryRequest, CallSettings)
             // Create client
@@ -1397,7 +1397,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscoveryAsync</summary>
-        public async Task RunAssetDiscoveryAsync_RequestObject()
+        public async Task RunAssetDiscoveryRequestObjectAsync()
         {
             // Snippet: RunAssetDiscoveryAsync(RunAssetDiscoveryRequest, CallSettings)
             // Additional: RunAssetDiscoveryAsync(RunAssetDiscoveryRequest, CancellationToken)
@@ -1489,7 +1489,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscovery</summary>
-        public void RunAssetDiscovery_ResourceNames()
+        public void RunAssetDiscoveryResourceNames()
         {
             // Snippet: RunAssetDiscovery(OrganizationName, CallSettings)
             // Create client
@@ -1518,7 +1518,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscoveryAsync</summary>
-        public async Task RunAssetDiscoveryAsync_ResourceNames()
+        public async Task RunAssetDiscoveryResourceNamesAsync()
         {
             // Snippet: RunAssetDiscoveryAsync(OrganizationName, CallSettings)
             // Additional: RunAssetDiscoveryAsync(OrganizationName, CancellationToken)
@@ -1548,7 +1548,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetFindingState</summary>
-        public void SetFindingState_RequestObject()
+        public void SetFindingStateRequestObject()
         {
             // Snippet: SetFindingState(SetFindingStateRequest, CallSettings)
             // Create client
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetFindingStateAsync</summary>
-        public async Task SetFindingStateAsync_RequestObject()
+        public async Task SetFindingStateRequestObjectAsync()
         {
             // Snippet: SetFindingStateAsync(SetFindingStateRequest, CallSettings)
             // Additional: SetFindingStateAsync(SetFindingStateRequest, CancellationToken)
@@ -1616,7 +1616,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetFindingState</summary>
-        public void SetFindingState_ResourceNames()
+        public void SetFindingStateResourceNames()
         {
             // Snippet: SetFindingState(FindingName, Finding.Types.State, Timestamp, CallSettings)
             // Create client
@@ -1631,7 +1631,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetFindingStateAsync</summary>
-        public async Task SetFindingStateAsync_ResourceNames()
+        public async Task SetFindingStateResourceNamesAsync()
         {
             // Snippet: SetFindingStateAsync(FindingName, Finding.Types.State, Timestamp, CallSettings)
             // Additional: SetFindingStateAsync(FindingName, Finding.Types.State, Timestamp, CancellationToken)
@@ -1647,7 +1647,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicyRequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
@@ -1664,7 +1664,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
@@ -1711,7 +1711,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
@@ -1725,7 +1725,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_ResourceNames()
+        public async Task SetIamPolicyResourceNamesAsync()
         {
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
@@ -1740,7 +1740,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissionsRequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
+        public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
@@ -1804,7 +1804,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
@@ -1818,7 +1818,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_ResourceNames()
+        public async Task TestIamPermissionsResourceNamesAsync()
         {
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
@@ -1833,7 +1833,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateFinding</summary>
-        public void UpdateFinding_RequestObject()
+        public void UpdateFindingRequestObject()
         {
             // Snippet: UpdateFinding(UpdateFindingRequest, CallSettings)
             // Create client
@@ -1850,7 +1850,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateFindingAsync</summary>
-        public async Task UpdateFindingAsync_RequestObject()
+        public async Task UpdateFindingRequestObjectAsync()
         {
             // Snippet: UpdateFindingAsync(UpdateFindingRequest, CallSettings)
             // Additional: UpdateFindingAsync(UpdateFindingRequest, CancellationToken)
@@ -1895,7 +1895,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateOrganizationSettings</summary>
-        public void UpdateOrganizationSettings_RequestObject()
+        public void UpdateOrganizationSettingsRequestObject()
         {
             // Snippet: UpdateOrganizationSettings(UpdateOrganizationSettingsRequest, CallSettings)
             // Create client
@@ -1912,7 +1912,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateOrganizationSettingsAsync</summary>
-        public async Task UpdateOrganizationSettingsAsync_RequestObject()
+        public async Task UpdateOrganizationSettingsRequestObjectAsync()
         {
             // Snippet: UpdateOrganizationSettingsAsync(UpdateOrganizationSettingsRequest, CallSettings)
             // Additional: UpdateOrganizationSettingsAsync(UpdateOrganizationSettingsRequest, CancellationToken)
@@ -1957,7 +1957,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateSource</summary>
-        public void UpdateSource_RequestObject()
+        public void UpdateSourceRequestObject()
         {
             // Snippet: UpdateSource(UpdateSourceRequest, CallSettings)
             // Create client
@@ -1974,7 +1974,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateSourceAsync</summary>
-        public async Task UpdateSourceAsync_RequestObject()
+        public async Task UpdateSourceRequestObjectAsync()
         {
             // Snippet: UpdateSourceAsync(UpdateSourceRequest, CallSettings)
             // Additional: UpdateSourceAsync(UpdateSourceRequest, CancellationToken)
@@ -2019,7 +2019,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateSecurityMarks</summary>
-        public void UpdateSecurityMarks_RequestObject()
+        public void UpdateSecurityMarksRequestObject()
         {
             // Snippet: UpdateSecurityMarks(UpdateSecurityMarksRequest, CallSettings)
             // Create client
@@ -2037,7 +2037,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateSecurityMarksAsync</summary>
-        public async Task UpdateSecurityMarksAsync_RequestObject()
+        public async Task UpdateSecurityMarksRequestObjectAsync()
         {
             // Snippet: UpdateSecurityMarksAsync(UpdateSecurityMarksRequest, CallSettings)
             // Additional: UpdateSecurityMarksAsync(UpdateSecurityMarksRequest, CancellationToken)

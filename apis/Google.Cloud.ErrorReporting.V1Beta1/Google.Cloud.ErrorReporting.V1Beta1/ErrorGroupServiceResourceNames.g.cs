@@ -23,7 +23,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ErrorGroupName GroupNameAsErrorGroupName
         {
-            get => string.IsNullOrEmpty(GroupName) ? null : ErrorGroupName.Parse(GroupName);
+            get => string.IsNullOrEmpty(GroupName) ? null : ErrorGroupName.Parse(GroupName, allowUnparsed: true);
             set => GroupName = value?.ToString() ?? "";
         }
     }

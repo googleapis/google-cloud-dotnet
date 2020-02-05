@@ -255,7 +255,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::ProfileName ProfileName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::ProfileName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::ProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

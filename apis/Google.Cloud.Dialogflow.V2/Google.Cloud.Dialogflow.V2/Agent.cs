@@ -116,18 +116,18 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Agent), global::Google.Cloud.Dialogflow.V2.Agent.Parser, new[]{ "Parent", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "EnableLogging", "MatchMode", "ClassificationThreshold", "ApiVersion", "Tier" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode), typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion), typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetAgentRequest), global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser, new[]{ "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SetAgentRequest), global::Google.Cloud.Dialogflow.V2.SetAgentRequest.Parser, new[]{ "Agent", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest), global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest.Parser, new[]{ "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest), global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse), global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse.Parser, new[]{ "Agents", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TrainAgentRequest), global::Google.Cloud.Dialogflow.V2.TrainAgentRequest.Parser, new[]{ "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ExportAgentRequest), global::Google.Cloud.Dialogflow.V2.ExportAgentRequest.Parser, new[]{ "Parent", "AgentUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ExportAgentResponse), global::Google.Cloud.Dialogflow.V2.ExportAgentResponse.Parser, new[]{ "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ImportAgentRequest), global::Google.Cloud.Dialogflow.V2.ImportAgentRequest.Parser, new[]{ "Parent", "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest), global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest.Parser, new[]{ "Parent", "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Agent), global::Google.Cloud.Dialogflow.V2.Agent.Parser, new[]{ "Parent", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "EnableLogging", "MatchMode", "ClassificationThreshold", "ApiVersion", "Tier" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode), typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion), typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetAgentRequest), global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SetAgentRequest), global::Google.Cloud.Dialogflow.V2.SetAgentRequest.Parser, new[]{ "Agent", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest), global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest), global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse), global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse.Parser, new[]{ "Agents", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TrainAgentRequest), global::Google.Cloud.Dialogflow.V2.TrainAgentRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ExportAgentRequest), global::Google.Cloud.Dialogflow.V2.ExportAgentRequest.Parser, new[]{ "Parent", "AgentUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ExportAgentResponse), global::Google.Cloud.Dialogflow.V2.ExportAgentResponse.Parser, new[]{ "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ImportAgentRequest), global::Google.Cloud.Dialogflow.V2.ImportAgentRequest.Parser, new[]{ "Parent", "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest), global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest.Parser, new[]{ "Parent", "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null, null)
           }));
     }
     #endregion
@@ -308,7 +308,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "match_mode" field.</summary>
     public const int MatchModeFieldNumber = 9;
-    private global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode matchMode_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode matchMode_ = global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode.Unspecified;
     /// <summary>
     /// Optional. Determines how intents are detected from user queries.
     /// </summary>
@@ -342,7 +342,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "api_version" field.</summary>
     public const int ApiVersionFieldNumber = 14;
-    private global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion apiVersion_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion apiVersion_ = global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion.Unspecified;
     /// <summary>
     /// Optional. API version displayed in Dialogflow console. If not specified,
     /// V2 API is assumed. Clients are free to query different service endpoints
@@ -359,7 +359,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "tier" field.</summary>
     public const int TierFieldNumber = 15;
-    private global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier tier_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier tier_ = global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier.Unspecified;
     /// <summary>
     /// Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
     /// </summary>
@@ -410,10 +410,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (AvatarUri.Length != 0) hash ^= AvatarUri.GetHashCode();
       if (EnableLogging != false) hash ^= EnableLogging.GetHashCode();
-      if (MatchMode != 0) hash ^= MatchMode.GetHashCode();
+      if (MatchMode != global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode.Unspecified) hash ^= MatchMode.GetHashCode();
       if (ClassificationThreshold != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ClassificationThreshold);
-      if (ApiVersion != 0) hash ^= ApiVersion.GetHashCode();
-      if (Tier != 0) hash ^= Tier.GetHashCode();
+      if (ApiVersion != global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion.Unspecified) hash ^= ApiVersion.GetHashCode();
+      if (Tier != global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier.Unspecified) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -456,7 +456,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(64);
         output.WriteBool(EnableLogging);
       }
-      if (MatchMode != 0) {
+      if (MatchMode != global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode.Unspecified) {
         output.WriteRawTag(72);
         output.WriteEnum((int) MatchMode);
       }
@@ -464,11 +464,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(85);
         output.WriteFloat(ClassificationThreshold);
       }
-      if (ApiVersion != 0) {
+      if (ApiVersion != global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion.Unspecified) {
         output.WriteRawTag(112);
         output.WriteEnum((int) ApiVersion);
       }
-      if (Tier != 0) {
+      if (Tier != global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier.Unspecified) {
         output.WriteRawTag(120);
         output.WriteEnum((int) Tier);
       }
@@ -502,16 +502,16 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (EnableLogging != false) {
         size += 1 + 1;
       }
-      if (MatchMode != 0) {
+      if (MatchMode != global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MatchMode);
       }
       if (ClassificationThreshold != 0F) {
         size += 1 + 4;
       }
-      if (ApiVersion != 0) {
+      if (ApiVersion != global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ApiVersion);
       }
-      if (Tier != 0) {
+      if (Tier != global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
       }
       if (_unknownFields != null) {
@@ -547,16 +547,16 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.EnableLogging != false) {
         EnableLogging = other.EnableLogging;
       }
-      if (other.MatchMode != 0) {
+      if (other.MatchMode != global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode.Unspecified) {
         MatchMode = other.MatchMode;
       }
       if (other.ClassificationThreshold != 0F) {
         ClassificationThreshold = other.ClassificationThreshold;
       }
-      if (other.ApiVersion != 0) {
+      if (other.ApiVersion != global::Google.Cloud.Dialogflow.V2.Agent.Types.ApiVersion.Unspecified) {
         ApiVersion = other.ApiVersion;
       }
-      if (other.Tier != 0) {
+      if (other.Tier != global::Google.Cloud.Dialogflow.V2.Agent.Types.Tier.Unspecified) {
         Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

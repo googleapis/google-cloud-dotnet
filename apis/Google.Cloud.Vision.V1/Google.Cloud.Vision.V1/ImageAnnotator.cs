@@ -246,45 +246,45 @@ namespace Google.Cloud.Vision.V1 {
             "aW9u+AEBogIER0NWTmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchReflection.Descriptor, global::Google.Cloud.Vision.V1.TextAnnotationReflection.Descriptor, global::Google.Cloud.Vision.V1.WebDetectionReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Feature), global::Google.Cloud.Vision.V1.Feature.Parser, new[]{ "Type", "MaxResults", "Model" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Feature.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageSource), global::Google.Cloud.Vision.V1.ImageSource.Parser, new[]{ "GcsImageUri", "ImageUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Image), global::Google.Cloud.Vision.V1.Image.Parser, new[]{ "Content", "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.FaceAnnotation), global::Google.Cloud.Vision.V1.FaceAnnotation.Parser, new[]{ "BoundingPoly", "FdBoundingPoly", "Landmarks", "RollAngle", "PanAngle", "TiltAngle", "DetectionConfidence", "LandmarkingConfidence", "JoyLikelihood", "SorrowLikelihood", "AngerLikelihood", "SurpriseLikelihood", "UnderExposedLikelihood", "BlurredLikelihood", "HeadwearLikelihood" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark), global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Parser, new[]{ "Type", "Position" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LocationInfo), global::Google.Cloud.Vision.V1.LocationInfo.Parser, new[]{ "LatLng" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Property), global::Google.Cloud.Vision.V1.Property.Parser, new[]{ "Name", "Value", "Uint64Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.EntityAnnotation), global::Google.Cloud.Vision.V1.EntityAnnotation.Parser, new[]{ "Mid", "Locale", "Description", "Score", "Confidence", "Topicality", "BoundingPoly", "Locations", "Properties" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LocalizedObjectAnnotation), global::Google.Cloud.Vision.V1.LocalizedObjectAnnotation.Parser, new[]{ "Mid", "LanguageCode", "Name", "Score", "BoundingPoly" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.SafeSearchAnnotation), global::Google.Cloud.Vision.V1.SafeSearchAnnotation.Parser, new[]{ "Adult", "Spoof", "Medical", "Violence", "Racy", "AdultConfidence", "SpoofConfidence", "MedicalConfidence", "ViolenceConfidence", "RacyConfidence", "NsfwConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LatLongRect), global::Google.Cloud.Vision.V1.LatLongRect.Parser, new[]{ "MinLatLng", "MaxLatLng" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ColorInfo), global::Google.Cloud.Vision.V1.ColorInfo.Parser, new[]{ "Color", "Score", "PixelFraction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DominantColorsAnnotation), global::Google.Cloud.Vision.V1.DominantColorsAnnotation.Parser, new[]{ "Colors" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageProperties), global::Google.Cloud.Vision.V1.ImageProperties.Parser, new[]{ "DominantColors" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHint), global::Google.Cloud.Vision.V1.CropHint.Parser, new[]{ "BoundingPoly", "Confidence", "ImportanceFraction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHintsAnnotation), global::Google.Cloud.Vision.V1.CropHintsAnnotation.Parser, new[]{ "CropHints" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHintsParams), global::Google.Cloud.Vision.V1.CropHintsParams.Parser, new[]{ "AspectRatios" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetectionParams), global::Google.Cloud.Vision.V1.WebDetectionParams.Parser, new[]{ "IncludeGeoResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageContext), global::Google.Cloud.Vision.V1.ImageContext.Parser, new[]{ "LatLongRect", "LanguageHints", "CropHintsParams", "ProductSearchParams", "WebDetectionParams" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageRequest), global::Google.Cloud.Vision.V1.AnnotateImageRequest.Parser, new[]{ "Image", "Features", "ImageContext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageAnnotationContext), global::Google.Cloud.Vision.V1.ImageAnnotationContext.Parser, new[]{ "Uri", "PageNumber" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageResponse), global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "LocalizedObjectAnnotations", "TextAnnotations", "FullTextAnnotation", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "CropHintsAnnotation", "WebDetection", "ProductSearchResults", "Error", "Context" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser, new[]{ "Responses" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileRequest), global::Google.Cloud.Vision.V1.AnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "Pages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileResponse), global::Google.Cloud.Vision.V1.AnnotateFileResponse.Parser, new[]{ "InputConfig", "Responses", "TotalPages", "Error" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest), global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse), global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse.Parser, new[]{ "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser, new[]{ "Requests", "OutputConfig", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse.Parser, new[]{ "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.InputConfig), global::Google.Cloud.Vision.V1.InputConfig.Parser, new[]{ "GcsSource", "Content", "MimeType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.OutputConfig), global::Google.Cloud.Vision.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BatchSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GcsSource), global::Google.Cloud.Vision.V1.GcsSource.Parser, new[]{ "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GcsDestination), global::Google.Cloud.Vision.V1.GcsDestination.Parser, new[]{ "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.OperationMetadata), global::Google.Cloud.Vision.V1.OperationMetadata.Parser, new[]{ "State", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.OperationMetadata.Types.State) }, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Feature), global::Google.Cloud.Vision.V1.Feature.Parser, new[]{ "Type", "MaxResults", "Model" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Feature.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageSource), global::Google.Cloud.Vision.V1.ImageSource.Parser, new[]{ "GcsImageUri", "ImageUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Image), global::Google.Cloud.Vision.V1.Image.Parser, new[]{ "Content", "Source" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.FaceAnnotation), global::Google.Cloud.Vision.V1.FaceAnnotation.Parser, new[]{ "BoundingPoly", "FdBoundingPoly", "Landmarks", "RollAngle", "PanAngle", "TiltAngle", "DetectionConfidence", "LandmarkingConfidence", "JoyLikelihood", "SorrowLikelihood", "AngerLikelihood", "SurpriseLikelihood", "UnderExposedLikelihood", "BlurredLikelihood", "HeadwearLikelihood" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark), global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Parser, new[]{ "Type", "Position" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LocationInfo), global::Google.Cloud.Vision.V1.LocationInfo.Parser, new[]{ "LatLng" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Property), global::Google.Cloud.Vision.V1.Property.Parser, new[]{ "Name", "Value", "Uint64Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.EntityAnnotation), global::Google.Cloud.Vision.V1.EntityAnnotation.Parser, new[]{ "Mid", "Locale", "Description", "Score", "Confidence", "Topicality", "BoundingPoly", "Locations", "Properties" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LocalizedObjectAnnotation), global::Google.Cloud.Vision.V1.LocalizedObjectAnnotation.Parser, new[]{ "Mid", "LanguageCode", "Name", "Score", "BoundingPoly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.SafeSearchAnnotation), global::Google.Cloud.Vision.V1.SafeSearchAnnotation.Parser, new[]{ "Adult", "Spoof", "Medical", "Violence", "Racy", "AdultConfidence", "SpoofConfidence", "MedicalConfidence", "ViolenceConfidence", "RacyConfidence", "NsfwConfidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LatLongRect), global::Google.Cloud.Vision.V1.LatLongRect.Parser, new[]{ "MinLatLng", "MaxLatLng" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ColorInfo), global::Google.Cloud.Vision.V1.ColorInfo.Parser, new[]{ "Color", "Score", "PixelFraction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DominantColorsAnnotation), global::Google.Cloud.Vision.V1.DominantColorsAnnotation.Parser, new[]{ "Colors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageProperties), global::Google.Cloud.Vision.V1.ImageProperties.Parser, new[]{ "DominantColors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHint), global::Google.Cloud.Vision.V1.CropHint.Parser, new[]{ "BoundingPoly", "Confidence", "ImportanceFraction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHintsAnnotation), global::Google.Cloud.Vision.V1.CropHintsAnnotation.Parser, new[]{ "CropHints" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHintsParams), global::Google.Cloud.Vision.V1.CropHintsParams.Parser, new[]{ "AspectRatios" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetectionParams), global::Google.Cloud.Vision.V1.WebDetectionParams.Parser, new[]{ "IncludeGeoResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageContext), global::Google.Cloud.Vision.V1.ImageContext.Parser, new[]{ "LatLongRect", "LanguageHints", "CropHintsParams", "ProductSearchParams", "WebDetectionParams" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageRequest), global::Google.Cloud.Vision.V1.AnnotateImageRequest.Parser, new[]{ "Image", "Features", "ImageContext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageAnnotationContext), global::Google.Cloud.Vision.V1.ImageAnnotationContext.Parser, new[]{ "Uri", "PageNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageResponse), global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "LocalizedObjectAnnotations", "TextAnnotations", "FullTextAnnotation", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "CropHintsAnnotation", "WebDetection", "ProductSearchResults", "Error", "Context" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileRequest), global::Google.Cloud.Vision.V1.AnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "Pages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileResponse), global::Google.Cloud.Vision.V1.AnnotateFileResponse.Parser, new[]{ "InputConfig", "Responses", "TotalPages", "Error" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest), global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse), global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse.Parser, new[]{ "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser, new[]{ "Requests", "OutputConfig", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse.Parser, new[]{ "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.InputConfig), global::Google.Cloud.Vision.V1.InputConfig.Parser, new[]{ "GcsSource", "Content", "MimeType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.OutputConfig), global::Google.Cloud.Vision.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BatchSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GcsSource), global::Google.Cloud.Vision.V1.GcsSource.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GcsDestination), global::Google.Cloud.Vision.V1.GcsDestination.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.OperationMetadata), global::Google.Cloud.Vision.V1.OperationMetadata.Parser, new[]{ "State", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.OperationMetadata.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -368,7 +368,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Vision.V1.Feature.Types.Type type_ = 0;
+    private global::Google.Cloud.Vision.V1.Feature.Types.Type type_ = global::Google.Cloud.Vision.V1.Feature.Types.Type.Unspecified;
     /// <summary>
     /// The feature type.
     /// </summary>
@@ -433,7 +433,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Vision.V1.Feature.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (_unknownFields != null) {
@@ -449,7 +449,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Vision.V1.Feature.Types.Type.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -469,7 +469,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Vision.V1.Feature.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (MaxResults != 0) {
@@ -489,7 +489,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Vision.V1.Feature.Types.Type.Unspecified) {
         Type = other.Type;
       }
       if (other.MaxResults != 0) {
@@ -1140,7 +1140,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "joy_likelihood" field.</summary>
     public const int JoyLikelihoodFieldNumber = 9;
-    private global::Google.Cloud.Vision.V1.Likelihood joyLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood joyLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Joy likelihood.
     /// </summary>
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "sorrow_likelihood" field.</summary>
     public const int SorrowLikelihoodFieldNumber = 10;
-    private global::Google.Cloud.Vision.V1.Likelihood sorrowLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood sorrowLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Sorrow likelihood.
     /// </summary>
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "anger_likelihood" field.</summary>
     public const int AngerLikelihoodFieldNumber = 11;
-    private global::Google.Cloud.Vision.V1.Likelihood angerLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood angerLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Anger likelihood.
     /// </summary>
@@ -1182,7 +1182,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "surprise_likelihood" field.</summary>
     public const int SurpriseLikelihoodFieldNumber = 12;
-    private global::Google.Cloud.Vision.V1.Likelihood surpriseLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood surpriseLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Surprise likelihood.
     /// </summary>
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "under_exposed_likelihood" field.</summary>
     public const int UnderExposedLikelihoodFieldNumber = 13;
-    private global::Google.Cloud.Vision.V1.Likelihood underExposedLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood underExposedLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Under-exposed likelihood.
     /// </summary>
@@ -1210,7 +1210,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "blurred_likelihood" field.</summary>
     public const int BlurredLikelihoodFieldNumber = 14;
-    private global::Google.Cloud.Vision.V1.Likelihood blurredLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood blurredLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Blurred likelihood.
     /// </summary>
@@ -1224,7 +1224,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "headwear_likelihood" field.</summary>
     public const int HeadwearLikelihoodFieldNumber = 15;
-    private global::Google.Cloud.Vision.V1.Likelihood headwearLikelihood_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood headwearLikelihood_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Headwear likelihood.
     /// </summary>
@@ -1278,13 +1278,13 @@ namespace Google.Cloud.Vision.V1 {
       if (TiltAngle != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TiltAngle);
       if (DetectionConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DetectionConfidence);
       if (LandmarkingConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LandmarkingConfidence);
-      if (JoyLikelihood != 0) hash ^= JoyLikelihood.GetHashCode();
-      if (SorrowLikelihood != 0) hash ^= SorrowLikelihood.GetHashCode();
-      if (AngerLikelihood != 0) hash ^= AngerLikelihood.GetHashCode();
-      if (SurpriseLikelihood != 0) hash ^= SurpriseLikelihood.GetHashCode();
-      if (UnderExposedLikelihood != 0) hash ^= UnderExposedLikelihood.GetHashCode();
-      if (BlurredLikelihood != 0) hash ^= BlurredLikelihood.GetHashCode();
-      if (HeadwearLikelihood != 0) hash ^= HeadwearLikelihood.GetHashCode();
+      if (JoyLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= JoyLikelihood.GetHashCode();
+      if (SorrowLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= SorrowLikelihood.GetHashCode();
+      if (AngerLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= AngerLikelihood.GetHashCode();
+      if (SurpriseLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= SurpriseLikelihood.GetHashCode();
+      if (UnderExposedLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= UnderExposedLikelihood.GetHashCode();
+      if (BlurredLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= BlurredLikelihood.GetHashCode();
+      if (HeadwearLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= HeadwearLikelihood.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1327,31 +1327,31 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(69);
         output.WriteFloat(LandmarkingConfidence);
       }
-      if (JoyLikelihood != 0) {
+      if (JoyLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) JoyLikelihood);
       }
-      if (SorrowLikelihood != 0) {
+      if (SorrowLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) SorrowLikelihood);
       }
-      if (AngerLikelihood != 0) {
+      if (AngerLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(88);
         output.WriteEnum((int) AngerLikelihood);
       }
-      if (SurpriseLikelihood != 0) {
+      if (SurpriseLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(96);
         output.WriteEnum((int) SurpriseLikelihood);
       }
-      if (UnderExposedLikelihood != 0) {
+      if (UnderExposedLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(104);
         output.WriteEnum((int) UnderExposedLikelihood);
       }
-      if (BlurredLikelihood != 0) {
+      if (BlurredLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(112);
         output.WriteEnum((int) BlurredLikelihood);
       }
-      if (HeadwearLikelihood != 0) {
+      if (HeadwearLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(120);
         output.WriteEnum((int) HeadwearLikelihood);
       }
@@ -1385,25 +1385,25 @@ namespace Google.Cloud.Vision.V1 {
       if (LandmarkingConfidence != 0F) {
         size += 1 + 4;
       }
-      if (JoyLikelihood != 0) {
+      if (JoyLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JoyLikelihood);
       }
-      if (SorrowLikelihood != 0) {
+      if (SorrowLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SorrowLikelihood);
       }
-      if (AngerLikelihood != 0) {
+      if (AngerLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AngerLikelihood);
       }
-      if (SurpriseLikelihood != 0) {
+      if (SurpriseLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SurpriseLikelihood);
       }
-      if (UnderExposedLikelihood != 0) {
+      if (UnderExposedLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UnderExposedLikelihood);
       }
-      if (BlurredLikelihood != 0) {
+      if (BlurredLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlurredLikelihood);
       }
-      if (HeadwearLikelihood != 0) {
+      if (HeadwearLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HeadwearLikelihood);
       }
       if (_unknownFields != null) {
@@ -1445,25 +1445,25 @@ namespace Google.Cloud.Vision.V1 {
       if (other.LandmarkingConfidence != 0F) {
         LandmarkingConfidence = other.LandmarkingConfidence;
       }
-      if (other.JoyLikelihood != 0) {
+      if (other.JoyLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         JoyLikelihood = other.JoyLikelihood;
       }
-      if (other.SorrowLikelihood != 0) {
+      if (other.SorrowLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         SorrowLikelihood = other.SorrowLikelihood;
       }
-      if (other.AngerLikelihood != 0) {
+      if (other.AngerLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         AngerLikelihood = other.AngerLikelihood;
       }
-      if (other.SurpriseLikelihood != 0) {
+      if (other.SurpriseLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         SurpriseLikelihood = other.SurpriseLikelihood;
       }
-      if (other.UnderExposedLikelihood != 0) {
+      if (other.UnderExposedLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         UnderExposedLikelihood = other.UnderExposedLikelihood;
       }
-      if (other.BlurredLikelihood != 0) {
+      if (other.BlurredLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         BlurredLikelihood = other.BlurredLikelihood;
       }
-      if (other.HeadwearLikelihood != 0) {
+      if (other.HeadwearLikelihood != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         HeadwearLikelihood = other.HeadwearLikelihood;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1591,7 +1591,7 @@ namespace Google.Cloud.Vision.V1 {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 3;
-        private global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type type_ = 0;
+        private global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type type_ = global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.UnknownLandmark;
         /// <summary>
         /// Face landmark type.
         /// </summary>
@@ -1638,7 +1638,7 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Type != 0) hash ^= Type.GetHashCode();
+          if (Type != global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.UnknownLandmark) hash ^= Type.GetHashCode();
           if (position_ != null) hash ^= Position.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1653,7 +1653,7 @@ namespace Google.Cloud.Vision.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.UnknownLandmark) {
             output.WriteRawTag(24);
             output.WriteEnum((int) Type);
           }
@@ -1669,7 +1669,7 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.UnknownLandmark) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           if (position_ != null) {
@@ -1686,7 +1686,7 @@ namespace Google.Cloud.Vision.V1 {
           if (other == null) {
             return;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.UnknownLandmark) {
             Type = other.Type;
           }
           if (other.position_ != null) {
@@ -2931,7 +2931,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "adult" field.</summary>
     public const int AdultFieldNumber = 1;
-    private global::Google.Cloud.Vision.V1.Likelihood adult_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood adult_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Represents the adult content likelihood for the image. Adult content may
     /// contain elements such as nudity, pornographic images or cartoons, or
@@ -2947,7 +2947,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "spoof" field.</summary>
     public const int SpoofFieldNumber = 2;
-    private global::Google.Cloud.Vision.V1.Likelihood spoof_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood spoof_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Spoof likelihood. The likelihood that an modification
     /// was made to the image's canonical version to make it appear
@@ -2963,7 +2963,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "medical" field.</summary>
     public const int MedicalFieldNumber = 3;
-    private global::Google.Cloud.Vision.V1.Likelihood medical_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood medical_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Likelihood that this is a medical image.
     /// </summary>
@@ -2977,7 +2977,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "violence" field.</summary>
     public const int ViolenceFieldNumber = 4;
-    private global::Google.Cloud.Vision.V1.Likelihood violence_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood violence_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Likelihood that this image contains violent content.
     /// </summary>
@@ -2991,7 +2991,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "racy" field.</summary>
     public const int RacyFieldNumber = 9;
-    private global::Google.Cloud.Vision.V1.Likelihood racy_ = 0;
+    private global::Google.Cloud.Vision.V1.Likelihood racy_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
     /// Likelihood that the request image contains racy content. Racy content may
     /// include (but is not limited to) skimpy or sheer clothing, strategically
@@ -3126,11 +3126,11 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Adult != 0) hash ^= Adult.GetHashCode();
-      if (Spoof != 0) hash ^= Spoof.GetHashCode();
-      if (Medical != 0) hash ^= Medical.GetHashCode();
-      if (Violence != 0) hash ^= Violence.GetHashCode();
-      if (Racy != 0) hash ^= Racy.GetHashCode();
+      if (Adult != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= Adult.GetHashCode();
+      if (Spoof != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= Spoof.GetHashCode();
+      if (Medical != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= Medical.GetHashCode();
+      if (Violence != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= Violence.GetHashCode();
+      if (Racy != global::Google.Cloud.Vision.V1.Likelihood.Unknown) hash ^= Racy.GetHashCode();
       if (AdultConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AdultConfidence);
       if (SpoofConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SpoofConfidence);
       if (MedicalConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MedicalConfidence);
@@ -3150,23 +3150,23 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Adult != 0) {
+      if (Adult != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Adult);
       }
-      if (Spoof != 0) {
+      if (Spoof != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Spoof);
       }
-      if (Medical != 0) {
+      if (Medical != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Medical);
       }
-      if (Violence != 0) {
+      if (Violence != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Violence);
       }
-      if (Racy != 0) {
+      if (Racy != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Racy);
       }
@@ -3202,19 +3202,19 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Adult != 0) {
+      if (Adult != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Adult);
       }
-      if (Spoof != 0) {
+      if (Spoof != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Spoof);
       }
-      if (Medical != 0) {
+      if (Medical != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Medical);
       }
-      if (Violence != 0) {
+      if (Violence != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Violence);
       }
-      if (Racy != 0) {
+      if (Racy != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Racy);
       }
       if (AdultConfidence != 0F) {
@@ -3246,19 +3246,19 @@ namespace Google.Cloud.Vision.V1 {
       if (other == null) {
         return;
       }
-      if (other.Adult != 0) {
+      if (other.Adult != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         Adult = other.Adult;
       }
-      if (other.Spoof != 0) {
+      if (other.Spoof != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         Spoof = other.Spoof;
       }
-      if (other.Medical != 0) {
+      if (other.Medical != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         Medical = other.Medical;
       }
-      if (other.Violence != 0) {
+      if (other.Violence != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         Violence = other.Violence;
       }
-      if (other.Racy != 0) {
+      if (other.Racy != global::Google.Cloud.Vision.V1.Likelihood.Unknown) {
         Racy = other.Racy;
       }
       if (other.AdultConfidence != 0F) {
@@ -8603,7 +8603,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Vision.V1.OperationMetadata.Types.State state_ = 0;
+    private global::Google.Cloud.Vision.V1.OperationMetadata.Types.State state_ = global::Google.Cloud.Vision.V1.OperationMetadata.Types.State.Unspecified;
     /// <summary>
     /// Current state of the batch operation.
     /// </summary>
@@ -8665,7 +8665,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Vision.V1.OperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
@@ -8681,7 +8681,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.Vision.V1.OperationMetadata.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -8701,7 +8701,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Vision.V1.OperationMetadata.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (createTime_ != null) {
@@ -8721,7 +8721,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Vision.V1.OperationMetadata.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.createTime_ != null) {

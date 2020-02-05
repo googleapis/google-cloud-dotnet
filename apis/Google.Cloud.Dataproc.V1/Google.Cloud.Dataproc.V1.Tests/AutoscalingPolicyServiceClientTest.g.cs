@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,7 +34,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Policy = new AutoscalingPolicy(),
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
@@ -57,7 +58,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Policy = new AutoscalingPolicy(),
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy

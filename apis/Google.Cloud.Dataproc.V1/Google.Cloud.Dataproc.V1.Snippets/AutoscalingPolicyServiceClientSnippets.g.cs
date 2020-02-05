@@ -17,6 +17,7 @@
 namespace Google.Cloud.Dataproc.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     public sealed class GeneratedAutoscalingPolicyServiceClientSnippets
     {
         /// <summary>Snippet for CreateAutoscalingPolicy</summary>
-        public void CreateAutoscalingPolicy_RequestObject()
+        public void CreateAutoscalingPolicyRequestObject()
         {
             // Snippet: CreateAutoscalingPolicy(CreateAutoscalingPolicyRequest, CallSettings)
             // Create client
@@ -33,7 +34,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Policy = new AutoscalingPolicy(),
             };
             // Make the request
@@ -42,7 +43,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for CreateAutoscalingPolicyAsync</summary>
-        public async Task CreateAutoscalingPolicyAsync_RequestObject()
+        public async Task CreateAutoscalingPolicyRequestObjectAsync()
         {
             // Snippet: CreateAutoscalingPolicyAsync(CreateAutoscalingPolicyRequest, CallSettings)
             // Additional: CreateAutoscalingPolicyAsync(CreateAutoscalingPolicyRequest, CancellationToken)
@@ -51,7 +52,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Policy = new AutoscalingPolicy(),
             };
             // Make the request
@@ -60,7 +61,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateAutoscalingPolicy</summary>
-        public void UpdateAutoscalingPolicy_RequestObject()
+        public void UpdateAutoscalingPolicyRequestObject()
         {
             // Snippet: UpdateAutoscalingPolicy(UpdateAutoscalingPolicyRequest, CallSettings)
             // Create client
@@ -76,7 +77,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateAutoscalingPolicyAsync</summary>
-        public async Task UpdateAutoscalingPolicyAsync_RequestObject()
+        public async Task UpdateAutoscalingPolicyRequestObjectAsync()
         {
             // Snippet: UpdateAutoscalingPolicyAsync(UpdateAutoscalingPolicyRequest, CallSettings)
             // Additional: UpdateAutoscalingPolicyAsync(UpdateAutoscalingPolicyRequest, CancellationToken)
@@ -93,7 +94,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetAutoscalingPolicy</summary>
-        public void GetAutoscalingPolicy_RequestObject()
+        public void GetAutoscalingPolicyRequestObject()
         {
             // Snippet: GetAutoscalingPolicy(GetAutoscalingPolicyRequest, CallSettings)
             // Create client
@@ -109,7 +110,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetAutoscalingPolicyAsync</summary>
-        public async Task GetAutoscalingPolicyAsync_RequestObject()
+        public async Task GetAutoscalingPolicyRequestObjectAsync()
         {
             // Snippet: GetAutoscalingPolicyAsync(GetAutoscalingPolicyRequest, CallSettings)
             // Additional: GetAutoscalingPolicyAsync(GetAutoscalingPolicyRequest, CancellationToken)
@@ -126,7 +127,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListAutoscalingPolicies</summary>
-        public void ListAutoscalingPolicies_RequestObject()
+        public void ListAutoscalingPoliciesRequestObject()
         {
             // Snippet: ListAutoscalingPolicies(ListAutoscalingPoliciesRequest, CallSettings)
             // Create client
@@ -134,7 +135,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response = autoscalingPolicyServiceClient.ListAutoscalingPolicies(request);
@@ -174,7 +175,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListAutoscalingPolicies</summary>
-        public async Task ListAutoscalingPoliciesAsync_RequestObject()
+        public async Task ListAutoscalingPoliciesRequestObjectAsync()
         {
             // Snippet: ListAutoscalingPoliciesAsync(ListAutoscalingPoliciesRequest, CallSettings)
             // Create client
@@ -182,7 +183,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             ListAutoscalingPoliciesRequest request = new ListAutoscalingPoliciesRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> response = autoscalingPolicyServiceClient.ListAutoscalingPoliciesAsync(request);
@@ -222,7 +223,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteAutoscalingPolicy</summary>
-        public void DeleteAutoscalingPolicy_RequestObject()
+        public void DeleteAutoscalingPolicyRequestObject()
         {
             // Snippet: DeleteAutoscalingPolicy(DeleteAutoscalingPolicyRequest, CallSettings)
             // Create client
@@ -238,7 +239,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteAutoscalingPolicyAsync</summary>
-        public async Task DeleteAutoscalingPolicyAsync_RequestObject()
+        public async Task DeleteAutoscalingPolicyRequestObjectAsync()
         {
             // Snippet: DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest, CallSettings)
             // Additional: DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest, CancellationToken)

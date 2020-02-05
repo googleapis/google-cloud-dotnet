@@ -79,13 +79,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.Admin.V1.OperationState), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Index", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Field", "IndexConfigDeltas", "State", "ProgressDocuments", "ProgressBytes" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser, new[]{ "ChangeType", "Index" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "OutputUriPrefix" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "InputUriPrefix" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse.Parser, new[]{ "OutputUriPrefix" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Progress), global::Google.Cloud.Firestore.Admin.V1.Progress.Parser, new[]{ "EstimatedWork", "CompletedWork" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.Admin.V1.OperationState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Index", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Field", "IndexConfigDeltas", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser, new[]{ "ChangeType", "Index" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "OutputUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "InputUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Progress), global::Google.Cloud.Firestore.Admin.V1.Progress.Parser, new[]{ "EstimatedWork", "CompletedWork" }, null, null, null, null)
           }));
     }
     #endregion
@@ -224,7 +224,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 4;
-    private global::Google.Cloud.Firestore.Admin.V1.OperationState state_ = 0;
+    private global::Google.Cloud.Firestore.Admin.V1.OperationState state_ = global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified;
     /// <summary>
     /// The state of the operation.
     /// </summary>
@@ -292,7 +292,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (Index.Length != 0) hash ^= Index.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= State.GetHashCode();
       if (progressDocuments_ != null) hash ^= ProgressDocuments.GetHashCode();
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
       if (_unknownFields != null) {
@@ -320,7 +320,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(26);
         output.WriteString(Index);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) State);
       }
@@ -349,7 +349,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Index.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Index);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (progressDocuments_ != null) {
@@ -384,7 +384,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (other.Index.Length != 0) {
         Index = other.Index;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         State = other.State;
       }
       if (other.progressDocuments_ != null) {
@@ -556,7 +556,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 5;
-    private global::Google.Cloud.Firestore.Admin.V1.OperationState state_ = 0;
+    private global::Google.Cloud.Firestore.Admin.V1.OperationState state_ = global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified;
     /// <summary>
     /// The state of the operation.
     /// </summary>
@@ -626,7 +626,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (Field.Length != 0) hash ^= Field.GetHashCode();
       hash ^= indexConfigDeltas_.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= State.GetHashCode();
       if (progressDocuments_ != null) hash ^= ProgressDocuments.GetHashCode();
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
       if (_unknownFields != null) {
@@ -655,7 +655,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteString(Field);
       }
       indexConfigDeltas_.WriteTo(output, _repeated_indexConfigDeltas_codec);
-      if (State != 0) {
+      if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) State);
       }
@@ -685,7 +685,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Field);
       }
       size += indexConfigDeltas_.CalculateSize(_repeated_indexConfigDeltas_codec);
-      if (State != 0) {
+      if (State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (progressDocuments_ != null) {
@@ -721,7 +721,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         Field = other.Field;
       }
       indexConfigDeltas_.Add(other.indexConfigDeltas_);
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         State = other.State;
       }
       if (other.progressDocuments_ != null) {
@@ -835,7 +835,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
         /// <summary>Field number for the "change_type" field.</summary>
         public const int ChangeTypeFieldNumber = 1;
-        private global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType changeType_ = 0;
+        private global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType changeType_ = global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType.Unspecified;
         /// <summary>
         /// Specifies how the index is changing.
         /// </summary>
@@ -882,7 +882,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (ChangeType != 0) hash ^= ChangeType.GetHashCode();
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType.Unspecified) hash ^= ChangeType.GetHashCode();
           if (index_ != null) hash ^= Index.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -897,7 +897,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (ChangeType != 0) {
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) ChangeType);
           }
@@ -913,7 +913,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (ChangeType != 0) {
+          if (ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChangeType);
           }
           if (index_ != null) {
@@ -930,7 +930,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (other == null) {
             return;
           }
-          if (other.ChangeType != 0) {
+          if (other.ChangeType != global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType.Unspecified) {
             ChangeType = other.ChangeType;
           }
           if (other.index_ != null) {
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     /// <summary>Field number for the "operation_state" field.</summary>
     public const int OperationStateFieldNumber = 3;
-    private global::Google.Cloud.Firestore.Admin.V1.OperationState operationState_ = 0;
+    private global::Google.Cloud.Firestore.Admin.V1.OperationState operationState_ = global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified;
     /// <summary>
     /// The state of the export operation.
     /// </summary>
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       int hash = 1;
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
-      if (OperationState != 0) hash ^= OperationState.GetHashCode();
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= OperationState.GetHashCode();
       if (progressDocuments_ != null) hash ^= ProgressDocuments.GetHashCode();
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
       hash ^= collectionIds_.GetHashCode();
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(EndTime);
       }
-      if (OperationState != 0) {
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) OperationState);
       }
@@ -1224,7 +1224,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
-      if (OperationState != 0) {
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperationState);
       }
       if (progressDocuments_ != null) {
@@ -1260,7 +1260,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
-      if (other.OperationState != 0) {
+      if (other.OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         OperationState = other.OperationState;
       }
       if (other.progressDocuments_ != null) {
@@ -1411,7 +1411,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     /// <summary>Field number for the "operation_state" field.</summary>
     public const int OperationStateFieldNumber = 3;
-    private global::Google.Cloud.Firestore.Admin.V1.OperationState operationState_ = 0;
+    private global::Google.Cloud.Firestore.Admin.V1.OperationState operationState_ = global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified;
     /// <summary>
     /// The state of the import operation.
     /// </summary>
@@ -1506,7 +1506,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       int hash = 1;
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
-      if (OperationState != 0) hash ^= OperationState.GetHashCode();
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= OperationState.GetHashCode();
       if (progressDocuments_ != null) hash ^= ProgressDocuments.GetHashCode();
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
       hash ^= collectionIds_.GetHashCode();
@@ -1532,7 +1532,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(EndTime);
       }
-      if (OperationState != 0) {
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) OperationState);
       }
@@ -1563,7 +1563,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
-      if (OperationState != 0) {
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperationState);
       }
       if (progressDocuments_ != null) {
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
-      if (other.OperationState != 0) {
+      if (other.OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
         OperationState = other.OperationState;
       }
       if (other.progressDocuments_ != null) {

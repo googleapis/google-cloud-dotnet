@@ -40,9 +40,9 @@ namespace Google.Cloud.Spanner.V1 {
             "ci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.KeyRange), global::Google.Cloud.Spanner.V1.KeyRange.Parser, new[]{ "StartClosed", "StartOpen", "EndClosed", "EndOpen" }, new[]{ "StartKeyType", "EndKeyType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.KeySet), global::Google.Cloud.Spanner.V1.KeySet.Parser, new[]{ "Keys", "Ranges", "All" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.KeyRange), global::Google.Cloud.Spanner.V1.KeyRange.Parser, new[]{ "StartClosed", "StartOpen", "EndClosed", "EndOpen" }, new[]{ "StartKeyType", "EndKeyType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.KeySet), global::Google.Cloud.Spanner.V1.KeySet.Parser, new[]{ "Keys", "Ranges", "All" }, null, null, null, null)
           }));
     }
     #endregion

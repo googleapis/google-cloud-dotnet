@@ -23,7 +23,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
     public sealed class GeneratedPhishingProtectionServiceV1Beta1ClientSnippets
     {
         /// <summary>Snippet for ReportPhishing</summary>
-        public void ReportPhishing_RequestObject()
+        public void ReportPhishingRequestObject()
         {
             // Snippet: ReportPhishing(ReportPhishingRequest, CallSettings)
             // Create client
@@ -40,7 +40,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportPhishingAsync</summary>
-        public async Task ReportPhishingAsync_RequestObject()
+        public async Task ReportPhishingRequestObjectAsync()
         {
             // Snippet: ReportPhishingAsync(ReportPhishingRequest, CallSettings)
             // Additional: ReportPhishingAsync(ReportPhishingRequest, CancellationToken)
@@ -87,7 +87,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportPhishing</summary>
-        public void ReportPhishing_ResourceNames()
+        public void ReportPhishingResourceNames()
         {
             // Snippet: ReportPhishing(ProjectName, string, CallSettings)
             // Create client
@@ -101,7 +101,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportPhishingAsync</summary>
-        public async Task ReportPhishingAsync_ResourceNames()
+        public async Task ReportPhishingResourceNamesAsync()
         {
             // Snippet: ReportPhishingAsync(ProjectName, string, CallSettings)
             // Additional: ReportPhishingAsync(ProjectName, string, CancellationToken)
