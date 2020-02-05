@@ -235,28 +235,28 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Y3VyaXR5Q2VudGVyOjpWMVAAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponseReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AssetReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.OrganizationSettingsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest), global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest.Parser, new[]{ "Parent", "FindingId", "Finding" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest), global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest.Parser, new[]{ "Parent", "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest), global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GetSourceRequest), global::Google.Cloud.SecurityCenter.V1.GetSourceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest), global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest.Parser, new[]{ "Parent", "Filter", "GroupBy", "CompareDuration", "ReadTime", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse), global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse.Parser, new[]{ "GroupByResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest), global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest.Parser, new[]{ "Parent", "Filter", "GroupBy", "ReadTime", "CompareDuration", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse), global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse.Parser, new[]{ "GroupByResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupResult), global::Google.Cloud.SecurityCenter.V1.GroupResult.Parser, new[]{ "Properties", "Count" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest), global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse), global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse.Parser, new[]{ "Sources", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest), global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "ReadTime", "CompareDuration", "FieldMask", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser, new[]{ "ListAssetsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Parser, new[]{ "Asset", "StateChange" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest), global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "ReadTime", "CompareDuration", "FieldMask", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser, new[]{ "ListFindingsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Parser, new[]{ "Finding", "StateChange", "Resource" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource.Parser, new[]{ "Name", "ProjectName", "ProjectDisplayName", "ParentName", "ParentDisplayName" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest), global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest.Parser, new[]{ "Name", "State", "StartTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser, new[]{ "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest), global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser, new[]{ "Finding", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest), global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest.Parser, new[]{ "OrganizationSettings", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest), global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest.Parser, new[]{ "Source", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest), global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser, new[]{ "SecurityMarks", "UpdateMask", "StartTime" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest), global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest.Parser, new[]{ "Parent", "FindingId", "Finding" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest), global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest.Parser, new[]{ "Parent", "Source" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest), global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GetSourceRequest), global::Google.Cloud.SecurityCenter.V1.GetSourceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest), global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest.Parser, new[]{ "Parent", "Filter", "GroupBy", "CompareDuration", "ReadTime", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse), global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse.Parser, new[]{ "GroupByResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest), global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest.Parser, new[]{ "Parent", "Filter", "GroupBy", "ReadTime", "CompareDuration", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse), global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse.Parser, new[]{ "GroupByResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.GroupResult), global::Google.Cloud.SecurityCenter.V1.GroupResult.Parser, new[]{ "Properties", "Count" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest), global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse), global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse.Parser, new[]{ "Sources", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest), global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "ReadTime", "CompareDuration", "FieldMask", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser, new[]{ "ListAssetsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Parser, new[]{ "Asset", "StateChange" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest), global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "ReadTime", "CompareDuration", "FieldMask", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser, new[]{ "ListFindingsResults", "ReadTime", "NextPageToken", "TotalSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Parser, new[]{ "Finding", "StateChange", "Resource" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.Resource.Parser, new[]{ "Name", "ProjectName", "ProjectDisplayName", "ParentName", "ParentDisplayName" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest), global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest.Parser, new[]{ "Name", "State", "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest), global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser, new[]{ "Finding", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest), global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest.Parser, new[]{ "OrganizationSettings", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest), global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest.Parser, new[]{ "Source", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest), global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser, new[]{ "SecurityMarks", "UpdateMask", "StartTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2275,7 +2275,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 1;
     private static readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec _map_properties_codec
-        = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 10);
+        = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 10);
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> properties_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
     /// Properties matching the groupBy fields in the request.
@@ -3512,7 +3512,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
         /// <summary>Field number for the "state_change" field.</summary>
         public const int StateChangeFieldNumber = 2;
-        private global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange stateChange_ = 0;
+        private global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange stateChange_ = global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange.Unused;
         /// <summary>
         /// State change of the asset between the points in time.
         /// </summary>
@@ -3546,7 +3546,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (asset_ != null) hash ^= Asset.GetHashCode();
-          if (StateChange != 0) hash ^= StateChange.GetHashCode();
+          if (StateChange != global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange.Unused) hash ^= StateChange.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3564,7 +3564,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Asset);
           }
-          if (StateChange != 0) {
+          if (StateChange != global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange.Unused) {
             output.WriteRawTag(16);
             output.WriteEnum((int) StateChange);
           }
@@ -3579,7 +3579,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           if (asset_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Asset);
           }
-          if (StateChange != 0) {
+          if (StateChange != global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange.Unused) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StateChange);
           }
           if (_unknownFields != null) {
@@ -3599,7 +3599,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             }
             Asset.MergeFrom(other.Asset);
           }
-          if (other.StateChange != 0) {
+          if (other.StateChange != global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Types.ListAssetsResult.Types.StateChange.Unused) {
             StateChange = other.StateChange;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4415,7 +4415,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
         /// <summary>Field number for the "state_change" field.</summary>
         public const int StateChangeFieldNumber = 2;
-        private global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange stateChange_ = 0;
+        private global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange stateChange_ = global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange.Unused;
         /// <summary>
         /// State change of the finding between the points in time.
         /// </summary>
@@ -4464,7 +4464,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (finding_ != null) hash ^= Finding.GetHashCode();
-          if (StateChange != 0) hash ^= StateChange.GetHashCode();
+          if (StateChange != global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange.Unused) hash ^= StateChange.GetHashCode();
           if (resource_ != null) hash ^= Resource.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4483,7 +4483,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Finding);
           }
-          if (StateChange != 0) {
+          if (StateChange != global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange.Unused) {
             output.WriteRawTag(16);
             output.WriteEnum((int) StateChange);
           }
@@ -4502,7 +4502,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           if (finding_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Finding);
           }
-          if (StateChange != 0) {
+          if (StateChange != global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange.Unused) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StateChange);
           }
           if (resource_ != null) {
@@ -4525,7 +4525,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             }
             Finding.MergeFrom(other.Finding);
           }
-          if (other.StateChange != 0) {
+          if (other.StateChange != global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Types.ListFindingsResult.Types.StateChange.Unused) {
             StateChange = other.StateChange;
           }
           if (other.resource_ != null) {
@@ -4936,7 +4936,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 2;
-    private global::Google.Cloud.SecurityCenter.V1.Finding.Types.State state_ = 0;
+    private global::Google.Cloud.SecurityCenter.V1.Finding.Types.State state_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.State.Unspecified;
     /// <summary>
     /// Required. The desired State of the finding.
     /// </summary>
@@ -4985,7 +4985,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5004,7 +5004,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.State.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -5023,7 +5023,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (startTime_ != null) {
@@ -5043,7 +5043,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.startTime_ != null) {

@@ -111,7 +111,7 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <inheritdoc/>
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => SessionsClient.DefaultEndpoint;
+        protected override string GetDefaultEndpoint() => SessionsClient.DefaultEndpoint;
 
         /// <inheritdoc/>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => SessionsClient.DefaultScopes;
@@ -127,7 +127,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// The default endpoint for the Sessions service, which is a host of "dialogflow.googleapis.com" and a port of
         /// 443.
         /// </summary>
-        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("dialogflow.googleapis.com", 443);
+        public static string DefaultEndpoint { get; } = "dialogflow.googleapis.com:443";
 
         /// <summary>The default Sessions scopes.</summary>
         /// <remarks>
@@ -146,96 +146,22 @@ namespace Google.Cloud.Dialogflow.V2
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="SessionsClient"/>, applying defaults for all unspecified settings, and
-        /// creating a channel connecting to the given endpoint with application default credentials where necessary.
-        /// See the example for how to use custom credentials.
+        /// Asynchronously creates a <see cref="SessionsClient"/> using the default credentials, endpoint and settings. 
+        /// To specify custom credentials or other settings, use <see cref="SessionsClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = await ImageAnnotatorClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="SessionsSettings"/>.</param>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
         /// <returns>The task representing the created <see cref="SessionsClient"/>.</returns>
-        public static async stt::Task<SessionsClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, SessionsSettings settings = null)
-        {
-            grpccore::Channel channel = await ChannelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
+        public static stt::Task<SessionsClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new SessionsClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="SessionsClient"/>, applying defaults for all unspecified settings, and
-        /// creating a channel connecting to the given endpoint with application default credentials where necessary.
-        /// See the example for how to use custom credentials.
+        /// Synchronously creates a <see cref="SessionsClient"/> using the default credentials, endpoint and settings. 
+        /// To specify custom credentials or other settings, use <see cref="SessionsClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// channel.ShutdownAsync().Wait();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="SessionsSettings"/>.</param>
         /// <returns>The created <see cref="SessionsClient"/>.</returns>
-        public static SessionsClient Create(gaxgrpc::ServiceEndpoint endpoint = null, SessionsSettings settings = null)
-        {
-            grpccore::Channel channel = ChannelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="SessionsClient"/> which uses the specified channel for remote operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="SessionsSettings"/>.</param>
-        /// <returns>The created <see cref="SessionsClient"/>.</returns>
-        public static SessionsClient Create(grpccore::Channel channel, SessionsSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        public static SessionsClient Create() => new SessionsClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="SessionsClient"/> which uses the specified call invoker for remote operations.
@@ -245,7 +171,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="settings">Optional <see cref="SessionsSettings"/>.</param>
         /// <returns>The created <see cref="SessionsClient"/>.</returns>
-        public static SessionsClient Create(grpccore::CallInvoker callInvoker, SessionsSettings settings = null)
+        internal static SessionsClient Create(grpccore::CallInvoker callInvoker, SessionsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -258,15 +184,14 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by
-        /// <see cref="Create(grpccore::CallInvoker,SessionsSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,SessionsSettings)"/>. Channels which weren't automatically
-        /// created are not affected.
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
         /// </summary>
         /// <remarks>
-        /// After calling this method, further calls to <see cref="Create(grpccore::CallInvoker,SessionsSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,SessionsSettings)"/> will create new channels, which could
-        /// in turn be shut down by another call to this method.
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
@@ -400,6 +325,98 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DetectIntentResponse> DetectIntentAsync(string session, QueryInput queryInput, st::CancellationToken cancellationToken) =>
+            DetectIntentAsync(session, queryInput, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result. This method is not idempotent, because it may cause contexts
+        /// and session entity types to be updated, which in turn might affect
+        /// results of future queries.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The name of the session this query is sent to. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
+        /// caller to choose an appropriate session ID. It can be a random number or
+        /// some type of user identifier (preferably hashed). The length of the session
+        /// ID must not exceed 36 bytes.
+        /// </param>
+        /// <param name="queryInput">
+        /// Required. The input specification. It can be set to:
+        /// 
+        /// 1.  an audio config
+        /// which instructs the speech recognizer how to process the speech audio,
+        /// 
+        /// 2.  a conversational query in the form of text, or
+        /// 
+        /// 3.  an event that specifies which intent to trigger.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DetectIntentResponse DetectIntent(SessionName session, QueryInput queryInput, gaxgrpc::CallSettings callSettings = null) =>
+            DetectIntent(new DetectIntentRequest
+            {
+                SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                QueryInput = gax::GaxPreconditions.CheckNotNull(queryInput, nameof(queryInput)),
+            }, callSettings);
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result. This method is not idempotent, because it may cause contexts
+        /// and session entity types to be updated, which in turn might affect
+        /// results of future queries.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The name of the session this query is sent to. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
+        /// caller to choose an appropriate session ID. It can be a random number or
+        /// some type of user identifier (preferably hashed). The length of the session
+        /// ID must not exceed 36 bytes.
+        /// </param>
+        /// <param name="queryInput">
+        /// Required. The input specification. It can be set to:
+        /// 
+        /// 1.  an audio config
+        /// which instructs the speech recognizer how to process the speech audio,
+        /// 
+        /// 2.  a conversational query in the form of text, or
+        /// 
+        /// 3.  an event that specifies which intent to trigger.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DetectIntentResponse> DetectIntentAsync(SessionName session, QueryInput queryInput, gaxgrpc::CallSettings callSettings = null) =>
+            DetectIntentAsync(new DetectIntentRequest
+            {
+                SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                QueryInput = gax::GaxPreconditions.CheckNotNull(queryInput, nameof(queryInput)),
+            }, callSettings);
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result. This method is not idempotent, because it may cause contexts
+        /// and session entity types to be updated, which in turn might affect
+        /// results of future queries.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The name of the session this query is sent to. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
+        /// caller to choose an appropriate session ID. It can be a random number or
+        /// some type of user identifier (preferably hashed). The length of the session
+        /// ID must not exceed 36 bytes.
+        /// </param>
+        /// <param name="queryInput">
+        /// Required. The input specification. It can be set to:
+        /// 
+        /// 1.  an audio config
+        /// which instructs the speech recognizer how to process the speech audio,
+        /// 
+        /// 2.  a conversational query in the form of text, or
+        /// 
+        /// 3.  an event that specifies which intent to trigger.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DetectIntentResponse> DetectIntentAsync(SessionName session, QueryInput queryInput, st::CancellationToken cancellationToken) =>
             DetectIntentAsync(session, queryInput, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

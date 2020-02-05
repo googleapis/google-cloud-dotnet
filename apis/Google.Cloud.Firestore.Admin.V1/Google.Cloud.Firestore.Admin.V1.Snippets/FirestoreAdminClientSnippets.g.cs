@@ -28,7 +28,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
     public sealed class GeneratedFirestoreAdminClientSnippets
     {
         /// <summary>Snippet for CreateIndex</summary>
-        public void CreateIndex_RequestObject()
+        public void CreateIndexRequestObject()
         {
             // Snippet: CreateIndex(CreateIndexRequest, CallSettings)
             // Create client
@@ -61,7 +61,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for CreateIndexAsync</summary>
-        public async Task CreateIndexAsync_RequestObject()
+        public async Task CreateIndexRequestObjectAsync()
         {
             // Snippet: CreateIndexAsync(CreateIndexRequest, CallSettings)
             // Additional: CreateIndexAsync(CreateIndexRequest, CancellationToken)
@@ -156,7 +156,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for CreateIndex</summary>
-        public void CreateIndex_ResourceNames()
+        public void CreateIndexResourceNames()
         {
             // Snippet: CreateIndex(CollectionGroupName, Index, CallSettings)
             // Create client
@@ -186,7 +186,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for CreateIndexAsync</summary>
-        public async Task CreateIndexAsync_ResourceNames()
+        public async Task CreateIndexResourceNamesAsync()
         {
             // Snippet: CreateIndexAsync(CollectionGroupName, Index, CallSettings)
             // Additional: CreateIndexAsync(CollectionGroupName, Index, CancellationToken)
@@ -217,7 +217,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListIndexes</summary>
-        public void ListIndexes_RequestObject()
+        public void ListIndexesRequestObject()
         {
             // Snippet: ListIndexes(ListIndexesRequest, CallSettings)
             // Create client
@@ -266,7 +266,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListIndexes</summary>
-        public async Task ListIndexesAsync_RequestObject()
+        public async Task ListIndexesRequestObjectAsync()
         {
             // Snippet: ListIndexesAsync(ListIndexesRequest, CallSettings)
             // Create client
@@ -405,7 +405,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListIndexes</summary>
-        public void ListIndexes_ResourceNames()
+        public void ListIndexesResourceNames()
         {
             // Snippet: ListIndexes(CollectionGroupName, string, int?, CallSettings)
             // Create client
@@ -450,7 +450,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListIndexes</summary>
-        public async Task ListIndexesAsync_ResourceNames()
+        public async Task ListIndexesResourceNamesAsync()
         {
             // Snippet: ListIndexesAsync(CollectionGroupName, string, int?, CallSettings)
             // Create client
@@ -495,7 +495,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetIndex</summary>
-        public void GetIndex_RequestObject()
+        public void GetIndexRequestObject()
         {
             // Snippet: GetIndex(GetIndexRequest, CallSettings)
             // Create client
@@ -511,7 +511,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetIndexAsync</summary>
-        public async Task GetIndexAsync_RequestObject()
+        public async Task GetIndexRequestObjectAsync()
         {
             // Snippet: GetIndexAsync(GetIndexRequest, CallSettings)
             // Additional: GetIndexAsync(GetIndexRequest, CancellationToken)
@@ -555,7 +555,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetIndex</summary>
-        public void GetIndex_ResourceNames()
+        public void GetIndexResourceNames()
         {
             // Snippet: GetIndex(IndexName, CallSettings)
             // Create client
@@ -568,7 +568,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetIndexAsync</summary>
-        public async Task GetIndexAsync_ResourceNames()
+        public async Task GetIndexResourceNamesAsync()
         {
             // Snippet: GetIndexAsync(IndexName, CallSettings)
             // Additional: GetIndexAsync(IndexName, CancellationToken)
@@ -582,7 +582,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteIndex</summary>
-        public void DeleteIndex_RequestObject()
+        public void DeleteIndexRequestObject()
         {
             // Snippet: DeleteIndex(DeleteIndexRequest, CallSettings)
             // Create client
@@ -598,7 +598,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteIndexAsync</summary>
-        public async Task DeleteIndexAsync_RequestObject()
+        public async Task DeleteIndexRequestObjectAsync()
         {
             // Snippet: DeleteIndexAsync(DeleteIndexRequest, CallSettings)
             // Additional: DeleteIndexAsync(DeleteIndexRequest, CancellationToken)
@@ -642,7 +642,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteIndex</summary>
-        public void DeleteIndex_ResourceNames()
+        public void DeleteIndexResourceNames()
         {
             // Snippet: DeleteIndex(IndexName, CallSettings)
             // Create client
@@ -655,7 +655,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteIndexAsync</summary>
-        public async Task DeleteIndexAsync_ResourceNames()
+        public async Task DeleteIndexResourceNamesAsync()
         {
             // Snippet: DeleteIndexAsync(IndexName, CallSettings)
             // Additional: DeleteIndexAsync(IndexName, CancellationToken)
@@ -669,7 +669,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetField</summary>
-        public void GetField_RequestObject()
+        public void GetFieldRequestObject()
         {
             // Snippet: GetField(GetFieldRequest, CallSettings)
             // Create client
@@ -685,7 +685,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetFieldAsync</summary>
-        public async Task GetFieldAsync_RequestObject()
+        public async Task GetFieldRequestObjectAsync()
         {
             // Snippet: GetFieldAsync(GetFieldRequest, CallSettings)
             // Additional: GetFieldAsync(GetFieldRequest, CancellationToken)
@@ -729,7 +729,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetField</summary>
-        public void GetField_ResourceNames()
+        public void GetFieldResourceNames()
         {
             // Snippet: GetField(FieldName, CallSettings)
             // Create client
@@ -742,7 +742,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for GetFieldAsync</summary>
-        public async Task GetFieldAsync_ResourceNames()
+        public async Task GetFieldResourceNamesAsync()
         {
             // Snippet: GetFieldAsync(FieldName, CallSettings)
             // Additional: GetFieldAsync(FieldName, CancellationToken)
@@ -756,7 +756,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateField</summary>
-        public void UpdateField_RequestObject()
+        public void UpdateFieldRequestObject()
         {
             // Snippet: UpdateField(UpdateFieldRequest, CallSettings)
             // Create client
@@ -789,7 +789,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateFieldAsync</summary>
-        public async Task UpdateFieldAsync_RequestObject()
+        public async Task UpdateFieldRequestObjectAsync()
         {
             // Snippet: UpdateFieldAsync(UpdateFieldRequest, CallSettings)
             // Additional: UpdateFieldAsync(UpdateFieldRequest, CancellationToken)
@@ -882,7 +882,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListFields</summary>
-        public void ListFields_RequestObject()
+        public void ListFieldsRequestObject()
         {
             // Snippet: ListFields(ListFieldsRequest, CallSettings)
             // Create client
@@ -931,7 +931,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListFields</summary>
-        public async Task ListFieldsAsync_RequestObject()
+        public async Task ListFieldsRequestObjectAsync()
         {
             // Snippet: ListFieldsAsync(ListFieldsRequest, CallSettings)
             // Create client
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListFields</summary>
-        public void ListFields_ResourceNames()
+        public void ListFieldsResourceNames()
         {
             // Snippet: ListFields(CollectionGroupName, string, int?, CallSettings)
             // Create client
@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ListFields</summary>
-        public async Task ListFieldsAsync_ResourceNames()
+        public async Task ListFieldsResourceNamesAsync()
         {
             // Snippet: ListFieldsAsync(CollectionGroupName, string, int?, CallSettings)
             // Create client
@@ -1160,7 +1160,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ExportDocuments</summary>
-        public void ExportDocuments_RequestObject()
+        public void ExportDocumentsRequestObject()
         {
             // Snippet: ExportDocuments(ExportDocumentsRequest, CallSettings)
             // Create client
@@ -1194,7 +1194,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ExportDocumentsAsync</summary>
-        public async Task ExportDocumentsAsync_RequestObject()
+        public async Task ExportDocumentsRequestObjectAsync()
         {
             // Snippet: ExportDocumentsAsync(ExportDocumentsRequest, CallSettings)
             // Additional: ExportDocumentsAsync(ExportDocumentsRequest, CancellationToken)
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ExportDocuments</summary>
-        public void ExportDocuments_ResourceNames()
+        public void ExportDocumentsResourceNames()
         {
             // Snippet: ExportDocuments(DatabaseName, CallSettings)
             // Create client
@@ -1317,7 +1317,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ExportDocumentsAsync</summary>
-        public async Task ExportDocumentsAsync_ResourceNames()
+        public async Task ExportDocumentsResourceNamesAsync()
         {
             // Snippet: ExportDocumentsAsync(DatabaseName, CallSettings)
             // Additional: ExportDocumentsAsync(DatabaseName, CancellationToken)
@@ -1347,7 +1347,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ImportDocuments</summary>
-        public void ImportDocuments_RequestObject()
+        public void ImportDocumentsRequestObject()
         {
             // Snippet: ImportDocuments(ImportDocumentsRequest, CallSettings)
             // Create client
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ImportDocumentsAsync</summary>
-        public async Task ImportDocumentsAsync_RequestObject()
+        public async Task ImportDocumentsRequestObjectAsync()
         {
             // Snippet: ImportDocumentsAsync(ImportDocumentsRequest, CallSettings)
             // Additional: ImportDocumentsAsync(ImportDocumentsRequest, CancellationToken)
@@ -1475,7 +1475,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ImportDocuments</summary>
-        public void ImportDocuments_ResourceNames()
+        public void ImportDocumentsResourceNames()
         {
             // Snippet: ImportDocuments(DatabaseName, CallSettings)
             // Create client
@@ -1504,7 +1504,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         }
 
         /// <summary>Snippet for ImportDocumentsAsync</summary>
-        public async Task ImportDocumentsAsync_ResourceNames()
+        public async Task ImportDocumentsResourceNamesAsync()
         {
             // Snippet: ImportDocumentsAsync(DatabaseName, CallSettings)
             // Additional: ImportDocumentsAsync(DatabaseName, CancellationToken)

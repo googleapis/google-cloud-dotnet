@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -35,7 +36,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -73,7 +74,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -113,7 +114,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -151,7 +152,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -185,13 +186,91 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateWorkflowTemplate_ResourceNames()
+        public void CreateWorkflowTemplateResourceNames1()
         {
             moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Template = new WorkflowTemplate(),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate response = client.CreateWorkflowTemplate(request.ParentAsLocationName, request.Template);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateWorkflowTemplateResourceNames1Async()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Template = new WorkflowTemplate(),
+            };
+            WorkflowTemplate expectedResponse = new WorkflowTemplate
+            {
+                WorkflowTemplateName = WorkflowTemplateName.FromProjectRegionWorkflowTemplate("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Id = "id74b70bb8",
+                Version = 271578922,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Placement = new WorkflowTemplatePlacement(),
+                Jobs = { new OrderedJob(), },
+                Parameters =
+                {
+                    new TemplateParameter(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
+            WorkflowTemplate responseCallSettings = await client.CreateWorkflowTemplateAsync(request.ParentAsLocationName, request.Template, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WorkflowTemplate responseCancellationToken = await client.CreateWorkflowTemplateAsync(request.ParentAsLocationName, request.Template, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateWorkflowTemplateResourceNames2()
+        {
+            moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -223,13 +302,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateWorkflowTemplateAsync_ResourceNames()
+        public async stt::Task CreateWorkflowTemplateResourceNames2Async()
         {
             moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionOrLocationName = RegionOrLocationName.FromProjectRegion("[PROJECT]", "[REGION]"),
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -417,7 +496,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetWorkflowTemplate_ResourceNames()
+        public void GetWorkflowTemplateResourceNames()
         {
             moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -454,7 +533,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetWorkflowTemplateAsync_ResourceNames()
+        public async stt::Task GetWorkflowTemplateResourceNamesAsync()
         {
             moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -713,7 +792,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteWorkflowTemplate_ResourceNames()
+        public void DeleteWorkflowTemplateResourceNames()
         {
             moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -729,7 +808,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteWorkflowTemplateAsync_ResourceNames()
+        public async stt::Task DeleteWorkflowTemplateResourceNamesAsync()
         {
             moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient> mockGrpcClient = new moq::Mock<WorkflowTemplateService.WorkflowTemplateServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

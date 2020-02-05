@@ -26,7 +26,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     public sealed class GeneratedProfileServiceClientSnippets
     {
         /// <summary>Snippet for ListProfiles</summary>
-        public void ListProfiles_RequestObject()
+        public void ListProfilesRequestObject()
         {
             // Snippet: ListProfiles(ListProfilesRequest, CallSettings)
             // Create client
@@ -76,7 +76,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListProfiles</summary>
-        public async Task ListProfilesAsync_RequestObject()
+        public async Task ListProfilesRequestObjectAsync()
         {
             // Snippet: ListProfilesAsync(ListProfilesRequest, CallSettings)
             // Create client
@@ -216,7 +216,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateProfile</summary>
-        public void CreateProfile_RequestObject()
+        public void CreateProfileRequestObject()
         {
             // Snippet: CreateProfile(CreateProfileRequest, CallSettings)
             // Create client
@@ -233,7 +233,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateProfileAsync</summary>
-        public async Task CreateProfileAsync_RequestObject()
+        public async Task CreateProfileRequestObjectAsync()
         {
             // Snippet: CreateProfileAsync(CreateProfileRequest, CallSettings)
             // Additional: CreateProfileAsync(CreateProfileRequest, CancellationToken)
@@ -280,7 +280,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateProfile</summary>
-        public void CreateProfile_ResourceNames()
+        public void CreateProfileResourceNames()
         {
             // Snippet: CreateProfile(TenantName, Profile, CallSettings)
             // Create client
@@ -294,7 +294,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateProfileAsync</summary>
-        public async Task CreateProfileAsync_ResourceNames()
+        public async Task CreateProfileResourceNamesAsync()
         {
             // Snippet: CreateProfileAsync(TenantName, Profile, CallSettings)
             // Additional: CreateProfileAsync(TenantName, Profile, CancellationToken)
@@ -309,7 +309,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetProfile</summary>
-        public void GetProfile_RequestObject()
+        public void GetProfileRequestObject()
         {
             // Snippet: GetProfile(GetProfileRequest, CallSettings)
             // Create client
@@ -325,7 +325,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetProfileAsync</summary>
-        public async Task GetProfileAsync_RequestObject()
+        public async Task GetProfileRequestObjectAsync()
         {
             // Snippet: GetProfileAsync(GetProfileRequest, CallSettings)
             // Additional: GetProfileAsync(GetProfileRequest, CancellationToken)
@@ -369,7 +369,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetProfile</summary>
-        public void GetProfile_ResourceNames()
+        public void GetProfileResourceNames()
         {
             // Snippet: GetProfile(ProfileName, CallSettings)
             // Create client
@@ -382,7 +382,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetProfileAsync</summary>
-        public async Task GetProfileAsync_ResourceNames()
+        public async Task GetProfileResourceNamesAsync()
         {
             // Snippet: GetProfileAsync(ProfileName, CallSettings)
             // Additional: GetProfileAsync(ProfileName, CancellationToken)
@@ -396,7 +396,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateProfile</summary>
-        public void UpdateProfile_RequestObject()
+        public void UpdateProfileRequestObject()
         {
             // Snippet: UpdateProfile(UpdateProfileRequest, CallSettings)
             // Create client
@@ -413,7 +413,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateProfileAsync</summary>
-        public async Task UpdateProfileAsync_RequestObject()
+        public async Task UpdateProfileRequestObjectAsync()
         {
             // Snippet: UpdateProfileAsync(UpdateProfileRequest, CallSettings)
             // Additional: UpdateProfileAsync(UpdateProfileRequest, CancellationToken)
@@ -458,7 +458,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteProfile</summary>
-        public void DeleteProfile_RequestObject()
+        public void DeleteProfileRequestObject()
         {
             // Snippet: DeleteProfile(DeleteProfileRequest, CallSettings)
             // Create client
@@ -474,7 +474,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteProfileAsync</summary>
-        public async Task DeleteProfileAsync_RequestObject()
+        public async Task DeleteProfileRequestObjectAsync()
         {
             // Snippet: DeleteProfileAsync(DeleteProfileRequest, CallSettings)
             // Additional: DeleteProfileAsync(DeleteProfileRequest, CancellationToken)
@@ -518,7 +518,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteProfile</summary>
-        public void DeleteProfile_ResourceNames()
+        public void DeleteProfileResourceNames()
         {
             // Snippet: DeleteProfile(ProfileName, CallSettings)
             // Create client
@@ -531,7 +531,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteProfileAsync</summary>
-        public async Task DeleteProfileAsync_ResourceNames()
+        public async Task DeleteProfileResourceNamesAsync()
         {
             // Snippet: DeleteProfileAsync(ProfileName, CallSettings)
             // Additional: DeleteProfileAsync(ProfileName, CancellationToken)
@@ -545,7 +545,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for SearchProfiles</summary>
-        public void SearchProfiles_RequestObject()
+        public void SearchProfilesRequestObject()
         {
             // Snippet: SearchProfiles(SearchProfilesRequest, CallSettings)
             // Create client
@@ -605,7 +605,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for SearchProfiles</summary>
-        public async Task SearchProfilesAsync_RequestObject()
+        public async Task SearchProfilesRequestObjectAsync()
         {
             // Snippet: SearchProfilesAsync(SearchProfilesRequest, CallSettings)
             // Create client

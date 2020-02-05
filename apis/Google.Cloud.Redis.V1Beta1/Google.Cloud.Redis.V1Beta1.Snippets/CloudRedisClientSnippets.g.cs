@@ -28,7 +28,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
     public sealed class GeneratedCloudRedisClientSnippets
     {
         /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances_RequestObject()
+        public void ListInstancesRequestObject()
         {
             // Snippet: ListInstances(ListInstancesRequest, CallSettings)
             // Create client
@@ -76,7 +76,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public async Task ListInstancesAsync_RequestObject()
+        public async Task ListInstancesRequestObjectAsync()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
             // Create client
@@ -214,7 +214,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public void ListInstances_ResourceNames()
+        public void ListInstancesResourceNames()
         {
             // Snippet: ListInstances(LocationName, string, int?, CallSettings)
             // Create client
@@ -259,7 +259,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListInstances</summary>
-        public async Task ListInstancesAsync_ResourceNames()
+        public async Task ListInstancesResourceNamesAsync()
         {
             // Snippet: ListInstancesAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -304,7 +304,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance_RequestObject()
+        public void GetInstanceRequestObject()
         {
             // Snippet: GetInstance(GetInstanceRequest, CallSettings)
             // Create client
@@ -320,7 +320,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync_RequestObject()
+        public async Task GetInstanceRequestObjectAsync()
         {
             // Snippet: GetInstanceAsync(GetInstanceRequest, CallSettings)
             // Additional: GetInstanceAsync(GetInstanceRequest, CancellationToken)
@@ -364,7 +364,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetInstance</summary>
-        public void GetInstance_ResourceNames()
+        public void GetInstanceResourceNames()
         {
             // Snippet: GetInstance(InstanceName, CallSettings)
             // Create client
@@ -377,7 +377,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetInstanceAsync</summary>
-        public async Task GetInstanceAsync_ResourceNames()
+        public async Task GetInstanceResourceNamesAsync()
         {
             // Snippet: GetInstanceAsync(InstanceName, CallSettings)
             // Additional: GetInstanceAsync(InstanceName, CancellationToken)
@@ -391,7 +391,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateInstance</summary>
-        public void CreateInstance_RequestObject()
+        public void CreateInstanceRequestObject()
         {
             // Snippet: CreateInstance(CreateInstanceRequest, CallSettings)
             // Create client
@@ -425,7 +425,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateInstanceAsync</summary>
-        public async Task CreateInstanceAsync_RequestObject()
+        public async Task CreateInstanceRequestObjectAsync()
         {
             // Snippet: CreateInstanceAsync(CreateInstanceRequest, CallSettings)
             // Additional: CreateInstanceAsync(CreateInstanceRequest, CancellationToken)
@@ -523,7 +523,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateInstance</summary>
-        public void CreateInstance_ResourceNames()
+        public void CreateInstanceResourceNames()
         {
             // Snippet: CreateInstance(LocationName, string, Instance, CallSettings)
             // Create client
@@ -554,7 +554,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateInstanceAsync</summary>
-        public async Task CreateInstanceAsync_ResourceNames()
+        public async Task CreateInstanceResourceNamesAsync()
         {
             // Snippet: CreateInstanceAsync(LocationName, string, Instance, CallSettings)
             // Additional: CreateInstanceAsync(LocationName, string, Instance, CancellationToken)
@@ -586,7 +586,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateInstance</summary>
-        public void UpdateInstance_RequestObject()
+        public void UpdateInstanceRequestObject()
         {
             // Snippet: UpdateInstance(UpdateInstanceRequest, CallSettings)
             // Create client
@@ -619,7 +619,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateInstanceAsync</summary>
-        public async Task UpdateInstanceAsync_RequestObject()
+        public async Task UpdateInstanceRequestObjectAsync()
         {
             // Snippet: UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)
             // Additional: UpdateInstanceAsync(UpdateInstanceRequest, CancellationToken)
@@ -714,7 +714,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpgradeInstance</summary>
-        public void UpgradeInstance_RequestObject()
+        public void UpgradeInstanceRequestObject()
         {
             // Snippet: UpgradeInstance(UpgradeInstanceRequest, CallSettings)
             // Create client
@@ -722,7 +722,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             UpgradeInstanceRequest request = new UpgradeInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 RedisVersion = "",
             };
             // Make the request
@@ -747,7 +747,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpgradeInstanceAsync</summary>
-        public async Task UpgradeInstanceAsync_RequestObject()
+        public async Task UpgradeInstanceRequestObjectAsync()
         {
             // Snippet: UpgradeInstanceAsync(UpgradeInstanceRequest, CallSettings)
             // Additional: UpgradeInstanceAsync(UpgradeInstanceRequest, CancellationToken)
@@ -756,7 +756,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // Initialize request argument(s)
             UpgradeInstanceRequest request = new UpgradeInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 RedisVersion = "",
             };
             // Make the request
@@ -842,13 +842,13 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpgradeInstance</summary>
-        public void UpgradeInstance_ResourceNames()
+        public void UpgradeInstanceResourceNames()
         {
             // Snippet: UpgradeInstance(InstanceName, string, CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             string redisVersion = "";
             // Make the request
             Operation<Instance, Any> response = cloudRedisClient.UpgradeInstance(name, redisVersion);
@@ -872,14 +872,14 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpgradeInstanceAsync</summary>
-        public async Task UpgradeInstanceAsync_ResourceNames()
+        public async Task UpgradeInstanceResourceNamesAsync()
         {
             // Snippet: UpgradeInstanceAsync(InstanceName, string, CallSettings)
             // Additional: UpgradeInstanceAsync(InstanceName, string, CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             string redisVersion = "";
             // Make the request
             Operation<Instance, Any> response = await cloudRedisClient.UpgradeInstanceAsync(name, redisVersion);
@@ -903,7 +903,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ImportInstance</summary>
-        public void ImportInstance_RequestObject()
+        public void ImportInstanceRequestObject()
         {
             // Snippet: ImportInstance(ImportInstanceRequest, CallSettings)
             // Create client
@@ -936,7 +936,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ImportInstanceAsync</summary>
-        public async Task ImportInstanceAsync_RequestObject()
+        public async Task ImportInstanceRequestObjectAsync()
         {
             // Snippet: ImportInstanceAsync(ImportInstanceRequest, CallSettings)
             // Additional: ImportInstanceAsync(ImportInstanceRequest, CancellationToken)
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ExportInstance</summary>
-        public void ExportInstance_RequestObject()
+        public void ExportInstanceRequestObject()
         {
             // Snippet: ExportInstance(ExportInstanceRequest, CallSettings)
             // Create client
@@ -1064,7 +1064,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ExportInstanceAsync</summary>
-        public async Task ExportInstanceAsync_RequestObject()
+        public async Task ExportInstanceRequestObjectAsync()
         {
             // Snippet: ExportInstanceAsync(ExportInstanceRequest, CallSettings)
             // Additional: ExportInstanceAsync(ExportInstanceRequest, CancellationToken)
@@ -1159,7 +1159,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for FailoverInstance</summary>
-        public void FailoverInstance_RequestObject()
+        public void FailoverInstanceRequestObject()
         {
             // Snippet: FailoverInstance(FailoverInstanceRequest, CallSettings)
             // Create client
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for FailoverInstanceAsync</summary>
-        public async Task FailoverInstanceAsync_RequestObject()
+        public async Task FailoverInstanceRequestObjectAsync()
         {
             // Snippet: FailoverInstanceAsync(FailoverInstanceRequest, CallSettings)
             // Additional: FailoverInstanceAsync(FailoverInstanceRequest, CancellationToken)
@@ -1287,7 +1287,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for FailoverInstance</summary>
-        public void FailoverInstance_ResourceNames()
+        public void FailoverInstanceResourceNames()
         {
             // Snippet: FailoverInstance(InstanceName, FailoverInstanceRequest.Types.DataProtectionMode, CallSettings)
             // Create client
@@ -1317,7 +1317,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for FailoverInstanceAsync</summary>
-        public async Task FailoverInstanceAsync_ResourceNames()
+        public async Task FailoverInstanceResourceNamesAsync()
         {
             // Snippet: FailoverInstanceAsync(InstanceName, FailoverInstanceRequest.Types.DataProtectionMode, CallSettings)
             // Additional: FailoverInstanceAsync(InstanceName, FailoverInstanceRequest.Types.DataProtectionMode, CancellationToken)
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance_RequestObject()
+        public void DeleteInstanceRequestObject()
         {
             // Snippet: DeleteInstance(DeleteInstanceRequest, CallSettings)
             // Create client
@@ -1380,7 +1380,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync_RequestObject()
+        public async Task DeleteInstanceRequestObjectAsync()
         {
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)
             // Additional: DeleteInstanceAsync(DeleteInstanceRequest, CancellationToken)
@@ -1472,7 +1472,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance_ResourceNames()
+        public void DeleteInstanceResourceNames()
         {
             // Snippet: DeleteInstance(InstanceName, CallSettings)
             // Create client
@@ -1501,7 +1501,7 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync_ResourceNames()
+        public async Task DeleteInstanceResourceNamesAsync()
         {
             // Snippet: DeleteInstanceAsync(InstanceName, CallSettings)
             // Additional: DeleteInstanceAsync(InstanceName, CancellationToken)

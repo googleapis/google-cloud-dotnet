@@ -25,7 +25,7 @@ namespace Google.Cloud.Speech.V1.Snippets
     public sealed class GeneratedSpeechClientSnippets
     {
         /// <summary>Snippet for Recognize</summary>
-        public void Recognize_RequestObject()
+        public void RecognizeRequestObject()
         {
             // Snippet: Recognize(RecognizeRequest, CallSettings)
             // Create client
@@ -42,7 +42,7 @@ namespace Google.Cloud.Speech.V1.Snippets
         }
 
         /// <summary>Snippet for RecognizeAsync</summary>
-        public async Task RecognizeAsync_RequestObject()
+        public async Task RecognizeRequestObjectAsync()
         {
             // Snippet: RecognizeAsync(RecognizeRequest, CallSettings)
             // Additional: RecognizeAsync(RecognizeRequest, CancellationToken)
@@ -89,7 +89,7 @@ namespace Google.Cloud.Speech.V1.Snippets
         }
 
         /// <summary>Snippet for LongRunningRecognize</summary>
-        public void LongRunningRecognize_RequestObject()
+        public void LongRunningRecognizeRequestObject()
         {
             // Snippet: LongRunningRecognize(LongRunningRecognizeRequest, CallSettings)
             // Create client
@@ -122,7 +122,7 @@ namespace Google.Cloud.Speech.V1.Snippets
         }
 
         /// <summary>Snippet for LongRunningRecognizeAsync</summary>
-        public async Task LongRunningRecognizeAsync_RequestObject()
+        public async Task LongRunningRecognizeRequestObjectAsync()
         {
             // Snippet: LongRunningRecognizeAsync(LongRunningRecognizeRequest, CallSettings)
             // Additional: LongRunningRecognizeAsync(LongRunningRecognizeRequest, CancellationToken)

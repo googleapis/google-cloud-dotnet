@@ -48,9 +48,9 @@ namespace Google.Cloud.OsLogin.Common {
             "bi5nb29nbGVhcGlzLmNvbS9Vc2VyEgx1c2Vycy97dXNlcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsLogin.Common.OperatingSystemType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.PosixAccount), global::Google.Cloud.OsLogin.Common.PosixAccount.Parser, new[]{ "Primary", "Username", "Uid", "Gid", "HomeDirectory", "Shell", "Gecos", "SystemId", "AccountId", "OperatingSystemType", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.SshPublicKey), global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser, new[]{ "Key", "ExpirationTimeUsec", "Fingerprint", "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsLogin.Common.OperatingSystemType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.PosixAccount), global::Google.Cloud.OsLogin.Common.PosixAccount.Parser, new[]{ "Primary", "Username", "Uid", "Gid", "HomeDirectory", "Shell", "Gecos", "SystemId", "AccountId", "OperatingSystemType", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.Common.SshPublicKey), global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser, new[]{ "Key", "ExpirationTimeUsec", "Fingerprint", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -255,7 +255,7 @@ namespace Google.Cloud.OsLogin.Common {
 
     /// <summary>Field number for the "operating_system_type" field.</summary>
     public const int OperatingSystemTypeFieldNumber = 10;
-    private global::Google.Cloud.OsLogin.Common.OperatingSystemType operatingSystemType_ = 0;
+    private global::Google.Cloud.OsLogin.Common.OperatingSystemType operatingSystemType_ = global::Google.Cloud.OsLogin.Common.OperatingSystemType.Unspecified;
     /// <summary>
     /// The operating system type where this account applies.
     /// </summary>
@@ -320,7 +320,7 @@ namespace Google.Cloud.OsLogin.Common {
       if (Gecos.Length != 0) hash ^= Gecos.GetHashCode();
       if (SystemId.Length != 0) hash ^= SystemId.GetHashCode();
       if (AccountId.Length != 0) hash ^= AccountId.GetHashCode();
-      if (OperatingSystemType != 0) hash ^= OperatingSystemType.GetHashCode();
+      if (OperatingSystemType != global::Google.Cloud.OsLogin.Common.OperatingSystemType.Unspecified) hash ^= OperatingSystemType.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -371,7 +371,7 @@ namespace Google.Cloud.OsLogin.Common {
         output.WriteRawTag(74);
         output.WriteString(AccountId);
       }
-      if (OperatingSystemType != 0) {
+      if (OperatingSystemType != global::Google.Cloud.OsLogin.Common.OperatingSystemType.Unspecified) {
         output.WriteRawTag(80);
         output.WriteEnum((int) OperatingSystemType);
       }
@@ -414,7 +414,7 @@ namespace Google.Cloud.OsLogin.Common {
       if (AccountId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountId);
       }
-      if (OperatingSystemType != 0) {
+      if (OperatingSystemType != global::Google.Cloud.OsLogin.Common.OperatingSystemType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperatingSystemType);
       }
       if (Name.Length != 0) {
@@ -458,7 +458,7 @@ namespace Google.Cloud.OsLogin.Common {
       if (other.AccountId.Length != 0) {
         AccountId = other.AccountId;
       }
-      if (other.OperatingSystemType != 0) {
+      if (other.OperatingSystemType != global::Google.Cloud.OsLogin.Common.OperatingSystemType.Unspecified) {
         OperatingSystemType = other.OperatingSystemType;
       }
       if (other.Name.Length != 0) {

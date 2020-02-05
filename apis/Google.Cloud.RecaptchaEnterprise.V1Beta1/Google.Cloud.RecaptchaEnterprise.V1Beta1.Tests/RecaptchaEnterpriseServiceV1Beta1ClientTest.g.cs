@@ -141,7 +141,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateAssessment_ResourceNames()
+        public void CreateAssessmentResourceNames()
         {
             moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             CreateAssessmentRequest request = new CreateAssessmentRequest
@@ -168,7 +168,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateAssessmentAsync_ResourceNames()
+        public async stt::Task CreateAssessmentResourceNamesAsync()
         {
             moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             CreateAssessmentRequest request = new CreateAssessmentRequest
@@ -269,7 +269,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AnnotateAssessment_ResourceNames()
+        public void AnnotateAssessmentResourceNames()
         {
             moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
@@ -286,7 +286,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task AnnotateAssessmentAsync_ResourceNames()
+        public async stt::Task AnnotateAssessmentResourceNamesAsync()
         {
             moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(moq::MockBehavior.Strict);
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest

@@ -43,11 +43,11 @@ namespace Google.Cloud.Firestore.V1 {
             "b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentMask), global::Google.Cloud.Firestore.V1.DocumentMask.Parser, new[]{ "FieldPaths" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Precondition), global::Google.Cloud.Firestore.V1.Precondition.Parser, new[]{ "Exists", "UpdateTime" }, new[]{ "ConditionType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions), global::Google.Cloud.Firestore.V1.TransactionOptions.Parser, new[]{ "ReadOnly", "ReadWrite" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "RetryTransaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, new[]{ "ConsistencySelector" }, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentMask), global::Google.Cloud.Firestore.V1.DocumentMask.Parser, new[]{ "FieldPaths" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Precondition), global::Google.Cloud.Firestore.V1.Precondition.Parser, new[]{ "Exists", "UpdateTime" }, new[]{ "ConditionType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions), global::Google.Cloud.Firestore.V1.TransactionOptions.Parser, new[]{ "ReadOnly", "ReadWrite" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "RetryTransaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null)})
           }));
     }
     #endregion

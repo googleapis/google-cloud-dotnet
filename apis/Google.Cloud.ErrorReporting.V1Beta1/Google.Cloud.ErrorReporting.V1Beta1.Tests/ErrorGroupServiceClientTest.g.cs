@@ -127,7 +127,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetGroup_ResourceNames()
+        public void GetGroupResourceNames()
         {
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
@@ -151,7 +151,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetGroupAsync_ResourceNames()
+        public async stt::Task GetGroupResourceNamesAsync()
         {
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest

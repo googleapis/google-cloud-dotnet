@@ -55,10 +55,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Y2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "EventNotes" }, new[]{ "Event" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs", "Profile" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent), global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Parser, new[]{ "Type", "Profiles", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "EventNotes" }, new[]{ "Event" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs", "Profile" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent), global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Parser, new[]{ "Type", "Profiles", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) }, null, null)
           }));
     }
     #endregion
@@ -460,7 +460,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType type_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType type_ = global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType.Unspecified;
     /// <summary>
     /// Required. The type of the event (see [JobEventType][google.cloud.talent.v4beta1.JobEvent.JobEventType]).
     /// </summary>
@@ -533,7 +533,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType.Unspecified) hash ^= Type.GetHashCode();
       hash ^= jobs_.GetHashCode();
       if (Profile.Length != 0) hash ^= Profile.GetHashCode();
       if (_unknownFields != null) {
@@ -549,7 +549,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -566,7 +566,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += jobs_.CalculateSize(_repeated_jobs_codec);
@@ -584,7 +584,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType.Unspecified) {
         Type = other.Type;
       }
       jobs_.Add(other.jobs_);
@@ -782,7 +782,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType type_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType type_ = global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified;
     /// <summary>
     /// Required. Type of event.
     /// </summary>
@@ -851,7 +851,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) hash ^= Type.GetHashCode();
       hash ^= profiles_.GetHashCode();
       hash ^= jobs_.GetHashCode();
       if (_unknownFields != null) {
@@ -867,7 +867,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -881,7 +881,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += profiles_.CalculateSize(_repeated_profiles_codec);
@@ -897,7 +897,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType.Unspecified) {
         Type = other.Type;
       }
       profiles_.Add(other.profiles_);

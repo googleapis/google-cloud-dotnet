@@ -62,9 +62,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "MTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest), global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Parser, new[]{ "Parent", "Query", "LanguageCodes", "PageSize", "Company", "Scope", "Type" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope), typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Parser, new[]{ "CompletionResults", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult.Parser, new[]{ "Suggestion", "Type", "ImageUri" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest), global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Parser, new[]{ "Parent", "Query", "LanguageCodes", "PageSize", "Company", "Scope", "Type" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope), typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Parser, new[]{ "CompletionResults", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult.Parser, new[]{ "Suggestion", "Type", "ImageUri" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -207,7 +207,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "scope" field.</summary>
     public const int ScopeFieldNumber = 6;
-    private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope scope_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope scope_ = global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope.Unspecified;
     /// <summary>
     /// The scope of the completion. The defaults is [CompletionScope.PUBLIC][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionScope.PUBLIC].
     /// </summary>
@@ -221,7 +221,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 7;
-    private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType type_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType type_ = global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified;
     /// <summary>
     /// The completion topic. The default is [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED].
     /// </summary>
@@ -264,8 +264,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= languageCodes_.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (Company.Length != 0) hash ^= Company.GetHashCode();
-      if (Scope != 0) hash ^= Scope.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Scope != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope.Unspecified) hash ^= Scope.GetHashCode();
+      if (Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -296,11 +296,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(42);
         output.WriteString(Company);
       }
-      if (Scope != 0) {
+      if (Scope != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Scope);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Type);
       }
@@ -325,10 +325,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Company.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Company);
       }
-      if (Scope != 0) {
+      if (Scope != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Scope);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
@@ -355,10 +355,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.Company.Length != 0) {
         Company = other.Company;
       }
-      if (other.Scope != 0) {
+      if (other.Scope != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope.Unspecified) {
         Scope = other.Scope;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) {
         Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -696,7 +696,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 2;
-        private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType type_ = 0;
+        private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType type_ = global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified;
         /// <summary>
         /// The completion topic.
         /// </summary>
@@ -746,7 +746,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Suggestion.Length != 0) hash ^= Suggestion.GetHashCode();
-          if (Type != 0) hash ^= Type.GetHashCode();
+          if (Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) hash ^= Type.GetHashCode();
           if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -765,7 +765,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             output.WriteRawTag(10);
             output.WriteString(Suggestion);
           }
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Type);
           }
@@ -784,7 +784,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           if (Suggestion.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Suggestion);
           }
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           if (ImageUri.Length != 0) {
@@ -804,7 +804,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           if (other.Suggestion.Length != 0) {
             Suggestion = other.Suggestion;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified) {
             Type = other.Type;
           }
           if (other.ImageUri.Length != 0) {

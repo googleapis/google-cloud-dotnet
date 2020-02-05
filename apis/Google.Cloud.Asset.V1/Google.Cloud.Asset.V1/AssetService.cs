@@ -111,23 +111,23 @@ namespace Google.Cloud.Asset.V1 {
             "bG91ZFxBc3NldFxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsRequest), global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.CreateFeedRequest), global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser, new[]{ "Parent", "FeedId", "Feed" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GetFeedRequest), global::Google.Cloud.Asset.V1.GetFeedRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ListFeedsRequest), global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser, new[]{ "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ListFeedsResponse), global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser, new[]{ "Feeds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.UpdateFeedRequest), global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser, new[]{ "Feed", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.DeleteFeedRequest), global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputConfig), global::Google.Cloud.Asset.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PubsubDestination), global::Google.Cloud.Asset.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.FeedOutputConfig), global::Google.Cloud.Asset.V1.FeedOutputConfig.Parser, new[]{ "PubsubDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Feed), global::Google.Cloud.Asset.V1.Feed.Parser, new[]{ "Name", "AssetNames", "AssetTypes", "ContentType", "FeedOutputConfig" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsRequest), global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.CreateFeedRequest), global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser, new[]{ "Parent", "FeedId", "Feed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GetFeedRequest), global::Google.Cloud.Asset.V1.GetFeedRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ListFeedsRequest), global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ListFeedsResponse), global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser, new[]{ "Feeds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.UpdateFeedRequest), global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser, new[]{ "Feed", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.DeleteFeedRequest), global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputConfig), global::Google.Cloud.Asset.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PubsubDestination), global::Google.Cloud.Asset.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.FeedOutputConfig), global::Google.Cloud.Asset.V1.FeedOutputConfig.Parser, new[]{ "PubsubDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Feed), global::Google.Cloud.Asset.V1.Feed.Parser, new[]{ "Name", "AssetNames", "AssetTypes", "ContentType", "FeedOutputConfig" }, null, null, null, null)
           }));
     }
     #endregion
@@ -258,7 +258,7 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 4;
-    private global::Google.Cloud.Asset.V1.ContentType contentType_ = 0;
+    private global::Google.Cloud.Asset.V1.ContentType contentType_ = global::Google.Cloud.Asset.V1.ContentType.Unspecified;
     /// <summary>
     /// Asset content type. If not specified, no content but the asset name will be
     /// returned.
@@ -313,7 +313,7 @@ namespace Google.Cloud.Asset.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       hash ^= assetTypes_.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) hash ^= ContentType.GetHashCode();
       if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -337,7 +337,7 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteMessage(ReadTime);
       }
       assetTypes_.WriteTo(output, _repeated_assetTypes_codec);
-      if (ContentType != 0) {
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ContentType);
       }
@@ -360,7 +360,7 @@ namespace Google.Cloud.Asset.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
       size += assetTypes_.CalculateSize(_repeated_assetTypes_codec);
-      if (ContentType != 0) {
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (outputConfig_ != null) {
@@ -387,7 +387,7 @@ namespace Google.Cloud.Asset.V1 {
         ReadTime.MergeFrom(other.ReadTime);
       }
       assetTypes_.Add(other.assetTypes_);
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         ContentType = other.ContentType;
       }
       if (other.outputConfig_ != null) {
@@ -700,7 +700,7 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 3;
-    private global::Google.Cloud.Asset.V1.ContentType contentType_ = 0;
+    private global::Google.Cloud.Asset.V1.ContentType contentType_ = global::Google.Cloud.Asset.V1.ContentType.Unspecified;
     /// <summary>
     /// Optional. The content type.
     /// </summary>
@@ -756,7 +756,7 @@ namespace Google.Cloud.Asset.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       hash ^= assetNames_.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) hash ^= ContentType.GetHashCode();
       if (readTimeWindow_ != null) hash ^= ReadTimeWindow.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -776,7 +776,7 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteString(Parent);
       }
       assetNames_.WriteTo(output, _repeated_assetNames_codec);
-      if (ContentType != 0) {
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) ContentType);
       }
@@ -796,7 +796,7 @@ namespace Google.Cloud.Asset.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       size += assetNames_.CalculateSize(_repeated_assetNames_codec);
-      if (ContentType != 0) {
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (readTimeWindow_ != null) {
@@ -817,7 +817,7 @@ namespace Google.Cloud.Asset.V1 {
         Parent = other.Parent;
       }
       assetNames_.Add(other.assetNames_);
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         ContentType = other.ContentType;
       }
       if (other.readTimeWindow_ != null) {
@@ -2962,7 +2962,7 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 4;
-    private global::Google.Cloud.Asset.V1.ContentType contentType_ = 0;
+    private global::Google.Cloud.Asset.V1.ContentType contentType_ = global::Google.Cloud.Asset.V1.ContentType.Unspecified;
     /// <summary>
     /// Asset content type. If not specified, no content but the asset name and
     /// type will be returned.
@@ -3017,7 +3017,7 @@ namespace Google.Cloud.Asset.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= assetNames_.GetHashCode();
       hash ^= assetTypes_.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) hash ^= ContentType.GetHashCode();
       if (feedOutputConfig_ != null) hash ^= FeedOutputConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3038,7 +3038,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       assetNames_.WriteTo(output, _repeated_assetNames_codec);
       assetTypes_.WriteTo(output, _repeated_assetTypes_codec);
-      if (ContentType != 0) {
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ContentType);
       }
@@ -3059,7 +3059,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       size += assetNames_.CalculateSize(_repeated_assetNames_codec);
       size += assetTypes_.CalculateSize(_repeated_assetTypes_codec);
-      if (ContentType != 0) {
+      if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (feedOutputConfig_ != null) {
@@ -3081,7 +3081,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       assetNames_.Add(other.assetNames_);
       assetTypes_.Add(other.assetTypes_);
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) {
         ContentType = other.ContentType;
       }
       if (other.feedOutputConfig_ != null) {

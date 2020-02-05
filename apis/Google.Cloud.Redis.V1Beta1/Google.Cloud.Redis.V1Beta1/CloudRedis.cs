@@ -155,24 +155,24 @@ namespace Google.Cloud.Redis.V1Beta1 {
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.Instance), global::Google.Cloud.Redis.V1Beta1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode) }, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest), global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse), global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest), global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest), global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest), global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest.Parser, new[]{ "UpdateMask", "Instance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest), global::Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest.Parser, new[]{ "Name", "RedisVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest), global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GcsSource), global::Google.Cloud.Redis.V1Beta1.GcsSource.Parser, new[]{ "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.InputConfig), global::Google.Cloud.Redis.V1Beta1.InputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest), global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest.Parser, new[]{ "Name", "InputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GcsDestination), global::Google.Cloud.Redis.V1Beta1.GcsDestination.Parser, new[]{ "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.OutputConfig), global::Google.Cloud.Redis.V1Beta1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest), global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest.Parser, new[]{ "Name", "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest), global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Parser, new[]{ "Name", "DataProtectionMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.LocationMetadata), global::Google.Cloud.Redis.V1Beta1.LocationMetadata.Parser, new[]{ "AvailableZones" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ZoneMetadata), global::Google.Cloud.Redis.V1Beta1.ZoneMetadata.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.Instance), global::Google.Cloud.Redis.V1Beta1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest), global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse), global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest), global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest), global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest), global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest.Parser, new[]{ "UpdateMask", "Instance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest), global::Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest.Parser, new[]{ "Name", "RedisVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest), global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GcsSource), global::Google.Cloud.Redis.V1Beta1.GcsSource.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.InputConfig), global::Google.Cloud.Redis.V1Beta1.InputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest), global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest.Parser, new[]{ "Name", "InputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GcsDestination), global::Google.Cloud.Redis.V1Beta1.GcsDestination.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.OutputConfig), global::Google.Cloud.Redis.V1Beta1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest), global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest.Parser, new[]{ "Name", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest), global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Parser, new[]{ "Name", "DataProtectionMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.LocationMetadata), global::Google.Cloud.Redis.V1Beta1.LocationMetadata.Parser, new[]{ "AvailableZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ZoneMetadata), global::Google.Cloud.Redis.V1Beta1.ZoneMetadata.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -273,7 +273,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Resource labels to represent user provided metadata
@@ -416,7 +416,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 14;
-    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.State state_ = 0;
+    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.State state_ = global::Google.Cloud.Redis.V1Beta1.Instance.Types.State.Unspecified;
     /// <summary>
     /// Output only. The current state of this instance.
     /// </summary>
@@ -446,7 +446,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// <summary>Field number for the "redis_configs" field.</summary>
     public const int RedisConfigsFieldNumber = 16;
     private static readonly pbc::MapField<string, string>.Codec _map_redisConfigs_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 130);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 130);
     private readonly pbc::MapField<string, string> redisConfigs_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Redis configuration parameters, according to
@@ -471,7 +471,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     /// <summary>Field number for the "tier" field.</summary>
     public const int TierFieldNumber = 17;
-    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier tier_ = 0;
+    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier tier_ = global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier.Unspecified;
     /// <summary>
     /// Required. The service tier of the instance.
     /// </summary>
@@ -534,7 +534,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     /// <summary>Field number for the "connect_mode" field.</summary>
     public const int ConnectModeFieldNumber = 22;
-    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode connectMode_ = 0;
+    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode connectMode_ = global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified;
     /// <summary>
     /// Optional. The connect mode of Redis instance.
     /// If not provided, default one will be used.
@@ -597,14 +597,14 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (Port != 0) hash ^= Port.GetHashCode();
       if (CurrentLocationId.Length != 0) hash ^= CurrentLocationId.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Redis.V1Beta1.Instance.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
       hash ^= RedisConfigs.GetHashCode();
-      if (Tier != 0) hash ^= Tier.GetHashCode();
+      if (Tier != global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier.Unspecified) hash ^= Tier.GetHashCode();
       if (MemorySizeGb != 0) hash ^= MemorySizeGb.GetHashCode();
       if (AuthorizedNetwork.Length != 0) hash ^= AuthorizedNetwork.GetHashCode();
       if (PersistenceIamIdentity.Length != 0) hash ^= PersistenceIamIdentity.GetHashCode();
-      if (ConnectMode != 0) hash ^= ConnectMode.GetHashCode();
+      if (ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) hash ^= ConnectMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -659,7 +659,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteRawTag(106);
         output.WriteMessage(CreateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Redis.V1Beta1.Instance.Types.State.Unspecified) {
         output.WriteRawTag(112);
         output.WriteEnum((int) State);
       }
@@ -668,7 +668,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteString(StatusMessage);
       }
       redisConfigs_.WriteTo(output, _map_redisConfigs_codec);
-      if (Tier != 0) {
+      if (Tier != global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier.Unspecified) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) Tier);
       }
@@ -684,7 +684,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteRawTag(170, 1);
         output.WriteString(PersistenceIamIdentity);
       }
-      if (ConnectMode != 0) {
+      if (ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) ConnectMode);
       }
@@ -727,14 +727,14 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Redis.V1Beta1.Instance.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (StatusMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StatusMessage);
       }
       size += redisConfigs_.CalculateSize(_map_redisConfigs_codec);
-      if (Tier != 0) {
+      if (Tier != global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
       }
       if (MemorySizeGb != 0) {
@@ -746,7 +746,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (PersistenceIamIdentity.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PersistenceIamIdentity);
       }
-      if (ConnectMode != 0) {
+      if (ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ConnectMode);
       }
       if (_unknownFields != null) {
@@ -794,14 +794,14 @@ namespace Google.Cloud.Redis.V1Beta1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Redis.V1Beta1.Instance.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.StatusMessage.Length != 0) {
         StatusMessage = other.StatusMessage;
       }
       redisConfigs_.Add(other.redisConfigs_);
-      if (other.Tier != 0) {
+      if (other.Tier != global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier.Unspecified) {
         Tier = other.Tier;
       }
       if (other.MemorySizeGb != 0) {
@@ -813,7 +813,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (other.PersistenceIamIdentity.Length != 0) {
         PersistenceIamIdentity = other.PersistenceIamIdentity;
       }
-      if (other.ConnectMode != 0) {
+      if (other.ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) {
         ConnectMode = other.ConnectMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3254,7 +3254,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     /// <summary>Field number for the "data_protection_mode" field.</summary>
     public const int DataProtectionModeFieldNumber = 2;
-    private global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode_ = 0;
+    private global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode_ = global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
     /// <summary>
     /// Optional. Available data protection modes that the user can choose. If it's
     /// unspecified, data protection mode will be LIMITED_DATA_LOSS by default.
@@ -3289,7 +3289,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (DataProtectionMode != 0) hash ^= DataProtectionMode.GetHashCode();
+      if (DataProtectionMode != global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode.Unspecified) hash ^= DataProtectionMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3307,7 +3307,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DataProtectionMode != 0) {
+      if (DataProtectionMode != global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) DataProtectionMode);
       }
@@ -3322,7 +3322,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (DataProtectionMode != 0) {
+      if (DataProtectionMode != global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataProtectionMode);
       }
       if (_unknownFields != null) {
@@ -3339,7 +3339,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.DataProtectionMode != 0) {
+      if (other.DataProtectionMode != global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode.Unspecified) {
         DataProtectionMode = other.DataProtectionMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3439,7 +3439,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// <summary>Field number for the "available_zones" field.</summary>
     public const int AvailableZonesFieldNumber = 1;
     private static readonly pbc::MapField<string, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata>.Codec _map_availableZones_codec
-        = new pbc::MapField<string, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata.Parser), 10);
+        = new pbc::MapField<string, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata.Parser), 10);
     private readonly pbc::MapField<string, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata> availableZones_ = new pbc::MapField<string, global::Google.Cloud.Redis.V1Beta1.ZoneMetadata>();
     /// <summary>
     /// Output only. The set of available zones in the location. The map is keyed

@@ -26,7 +26,7 @@ namespace Google.LongRunning.Snippets
     public sealed class GeneratedOperationsClientSnippets
     {
         /// <summary>Snippet for ListOperations</summary>
-        public void ListOperations_RequestObject()
+        public void ListOperationsRequestObject()
         {
             // Snippet: ListOperations(ListOperationsRequest, CallSettings)
             // Create client
@@ -71,7 +71,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for ListOperations</summary>
-        public async Task ListOperationsAsync_RequestObject()
+        public async Task ListOperationsRequestObjectAsync()
         {
             // Snippet: ListOperationsAsync(ListOperationsRequest, CallSettings)
             // Create client
@@ -208,7 +208,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for GetOperation</summary>
-        public void GetOperation_RequestObject()
+        public void GetOperationRequestObject()
         {
             // Snippet: GetOperation(GetOperationRequest, CallSettings)
             // Create client
@@ -221,7 +221,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync_RequestObject()
+        public async Task GetOperationRequestObjectAsync()
         {
             // Snippet: GetOperationAsync(GetOperationRequest, CallSettings)
             // Additional: GetOperationAsync(GetOperationRequest, CancellationToken)
@@ -262,7 +262,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for DeleteOperation</summary>
-        public void DeleteOperation_RequestObject()
+        public void DeleteOperationRequestObject()
         {
             // Snippet: DeleteOperation(DeleteOperationRequest, CallSettings)
             // Create client
@@ -275,7 +275,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for DeleteOperationAsync</summary>
-        public async Task DeleteOperationAsync_RequestObject()
+        public async Task DeleteOperationRequestObjectAsync()
         {
             // Snippet: DeleteOperationAsync(DeleteOperationRequest, CallSettings)
             // Additional: DeleteOperationAsync(DeleteOperationRequest, CancellationToken)
@@ -316,7 +316,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for CancelOperation</summary>
-        public void CancelOperation_RequestObject()
+        public void CancelOperationRequestObject()
         {
             // Snippet: CancelOperation(CancelOperationRequest, CallSettings)
             // Create client
@@ -329,7 +329,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync_RequestObject()
+        public async Task CancelOperationRequestObjectAsync()
         {
             // Snippet: CancelOperationAsync(CancelOperationRequest, CallSettings)
             // Additional: CancelOperationAsync(CancelOperationRequest, CancellationToken)
@@ -370,7 +370,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for WaitOperation</summary>
-        public void WaitOperation_RequestObject()
+        public void WaitOperationRequestObject()
         {
             // Snippet: WaitOperation(WaitOperationRequest, CallSettings)
             // Create client
@@ -387,7 +387,7 @@ namespace Google.LongRunning.Snippets
         }
 
         /// <summary>Snippet for WaitOperationAsync</summary>
-        public async Task WaitOperationAsync_RequestObject()
+        public async Task WaitOperationRequestObjectAsync()
         {
             // Snippet: WaitOperationAsync(WaitOperationRequest, CallSettings)
             // Additional: WaitOperationAsync(WaitOperationRequest, CancellationToken)

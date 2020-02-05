@@ -28,7 +28,7 @@ namespace Google.Cloud.Kms.V1.Snippets
     public sealed class GeneratedKeyManagementServiceClientSnippets
     {
         /// <summary>Snippet for ListKeyRings</summary>
-        public void ListKeyRings_RequestObject()
+        public void ListKeyRingsRequestObject()
         {
             // Snippet: ListKeyRings(ListKeyRingsRequest, CallSettings)
             // Create client
@@ -78,7 +78,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListKeyRings</summary>
-        public async Task ListKeyRingsAsync_RequestObject()
+        public async Task ListKeyRingsRequestObjectAsync()
         {
             // Snippet: ListKeyRingsAsync(ListKeyRingsRequest, CallSettings)
             // Create client
@@ -218,7 +218,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListKeyRings</summary>
-        public void ListKeyRings_ResourceNames()
+        public void ListKeyRingsResourceNames()
         {
             // Snippet: ListKeyRings(LocationName, string, int?, CallSettings)
             // Create client
@@ -263,7 +263,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListKeyRings</summary>
-        public async Task ListKeyRingsAsync_ResourceNames()
+        public async Task ListKeyRingsResourceNamesAsync()
         {
             // Snippet: ListKeyRingsAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -308,7 +308,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeys</summary>
-        public void ListCryptoKeys_RequestObject()
+        public void ListCryptoKeysRequestObject()
         {
             // Snippet: ListCryptoKeys(ListCryptoKeysRequest, CallSettings)
             // Create client
@@ -359,7 +359,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeys</summary>
-        public async Task ListCryptoKeysAsync_RequestObject()
+        public async Task ListCryptoKeysRequestObjectAsync()
         {
             // Snippet: ListCryptoKeysAsync(ListCryptoKeysRequest, CallSettings)
             // Create client
@@ -500,7 +500,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeys</summary>
-        public void ListCryptoKeys_ResourceNames()
+        public void ListCryptoKeysResourceNames()
         {
             // Snippet: ListCryptoKeys(KeyRingName, string, int?, CallSettings)
             // Create client
@@ -545,7 +545,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeys</summary>
-        public async Task ListCryptoKeysAsync_ResourceNames()
+        public async Task ListCryptoKeysResourceNamesAsync()
         {
             // Snippet: ListCryptoKeysAsync(KeyRingName, string, int?, CallSettings)
             // Create client
@@ -590,7 +590,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeyVersions</summary>
-        public void ListCryptoKeyVersions_RequestObject()
+        public void ListCryptoKeyVersionsRequestObject()
         {
             // Snippet: ListCryptoKeyVersions(ListCryptoKeyVersionsRequest, CallSettings)
             // Create client
@@ -641,7 +641,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeyVersions</summary>
-        public async Task ListCryptoKeyVersionsAsync_RequestObject()
+        public async Task ListCryptoKeyVersionsRequestObjectAsync()
         {
             // Snippet: ListCryptoKeyVersionsAsync(ListCryptoKeyVersionsRequest, CallSettings)
             // Create client
@@ -782,7 +782,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeyVersions</summary>
-        public void ListCryptoKeyVersions_ResourceNames()
+        public void ListCryptoKeyVersionsResourceNames()
         {
             // Snippet: ListCryptoKeyVersions(KeyRingName, string, int?, CallSettings)
             // Create client
@@ -827,7 +827,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListCryptoKeyVersions</summary>
-        public async Task ListCryptoKeyVersionsAsync_ResourceNames()
+        public async Task ListCryptoKeyVersionsResourceNamesAsync()
         {
             // Snippet: ListCryptoKeyVersionsAsync(KeyRingName, string, int?, CallSettings)
             // Create client
@@ -872,7 +872,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListImportJobs</summary>
-        public void ListImportJobs_RequestObject()
+        public void ListImportJobsRequestObject()
         {
             // Snippet: ListImportJobs(ListImportJobsRequest, CallSettings)
             // Create client
@@ -922,7 +922,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListImportJobs</summary>
-        public async Task ListImportJobsAsync_RequestObject()
+        public async Task ListImportJobsRequestObjectAsync()
         {
             // Snippet: ListImportJobsAsync(ListImportJobsRequest, CallSettings)
             // Create client
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListImportJobs</summary>
-        public void ListImportJobs_ResourceNames()
+        public void ListImportJobsResourceNames()
         {
             // Snippet: ListImportJobs(KeyRingName, string, int?, CallSettings)
             // Create client
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ListImportJobs</summary>
-        public async Task ListImportJobsAsync_ResourceNames()
+        public async Task ListImportJobsResourceNamesAsync()
         {
             // Snippet: ListImportJobsAsync(KeyRingName, string, int?, CallSettings)
             // Create client
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetKeyRing</summary>
-        public void GetKeyRing_RequestObject()
+        public void GetKeyRingRequestObject()
         {
             // Snippet: GetKeyRing(GetKeyRingRequest, CallSettings)
             // Create client
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetKeyRingAsync</summary>
-        public async Task GetKeyRingAsync_RequestObject()
+        public async Task GetKeyRingRequestObjectAsync()
         {
             // Snippet: GetKeyRingAsync(GetKeyRingRequest, CallSettings)
             // Additional: GetKeyRingAsync(GetKeyRingRequest, CancellationToken)
@@ -1212,7 +1212,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetKeyRing</summary>
-        public void GetKeyRing_ResourceNames()
+        public void GetKeyRingResourceNames()
         {
             // Snippet: GetKeyRing(KeyRingName, CallSettings)
             // Create client
@@ -1225,7 +1225,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetKeyRingAsync</summary>
-        public async Task GetKeyRingAsync_ResourceNames()
+        public async Task GetKeyRingResourceNamesAsync()
         {
             // Snippet: GetKeyRingAsync(KeyRingName, CallSettings)
             // Additional: GetKeyRingAsync(KeyRingName, CancellationToken)
@@ -1239,7 +1239,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetCryptoKey</summary>
-        public void GetCryptoKey_RequestObject()
+        public void GetCryptoKeyRequestObject()
         {
             // Snippet: GetCryptoKey(GetCryptoKeyRequest, CallSettings)
             // Create client
@@ -1255,7 +1255,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetCryptoKeyAsync</summary>
-        public async Task GetCryptoKeyAsync_RequestObject()
+        public async Task GetCryptoKeyRequestObjectAsync()
         {
             // Snippet: GetCryptoKeyAsync(GetCryptoKeyRequest, CallSettings)
             // Additional: GetCryptoKeyAsync(GetCryptoKeyRequest, CancellationToken)
@@ -1272,7 +1272,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetCryptoKeyVersion</summary>
-        public void GetCryptoKeyVersion_RequestObject()
+        public void GetCryptoKeyVersionRequestObject()
         {
             // Snippet: GetCryptoKeyVersion(GetCryptoKeyVersionRequest, CallSettings)
             // Create client
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetCryptoKeyVersionAsync</summary>
-        public async Task GetCryptoKeyVersionAsync_RequestObject()
+        public async Task GetCryptoKeyVersionRequestObjectAsync()
         {
             // Snippet: GetCryptoKeyVersionAsync(GetCryptoKeyVersionRequest, CallSettings)
             // Additional: GetCryptoKeyVersionAsync(GetCryptoKeyVersionRequest, CancellationToken)
@@ -1305,7 +1305,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetPublicKey</summary>
-        public void GetPublicKey_RequestObject()
+        public void GetPublicKeyRequestObject()
         {
             // Snippet: GetPublicKey(GetPublicKeyRequest, CallSettings)
             // Create client
@@ -1321,7 +1321,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetPublicKeyAsync</summary>
-        public async Task GetPublicKeyAsync_RequestObject()
+        public async Task GetPublicKeyRequestObjectAsync()
         {
             // Snippet: GetPublicKeyAsync(GetPublicKeyRequest, CallSettings)
             // Additional: GetPublicKeyAsync(GetPublicKeyRequest, CancellationToken)
@@ -1338,7 +1338,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetImportJob</summary>
-        public void GetImportJob_RequestObject()
+        public void GetImportJobRequestObject()
         {
             // Snippet: GetImportJob(GetImportJobRequest, CallSettings)
             // Create client
@@ -1354,7 +1354,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for GetImportJobAsync</summary>
-        public async Task GetImportJobAsync_RequestObject()
+        public async Task GetImportJobRequestObjectAsync()
         {
             // Snippet: GetImportJobAsync(GetImportJobRequest, CallSettings)
             // Additional: GetImportJobAsync(GetImportJobRequest, CancellationToken)
@@ -1371,7 +1371,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateKeyRing</summary>
-        public void CreateKeyRing_RequestObject()
+        public void CreateKeyRingRequestObject()
         {
             // Snippet: CreateKeyRing(CreateKeyRingRequest, CallSettings)
             // Create client
@@ -1389,7 +1389,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateKeyRingAsync</summary>
-        public async Task CreateKeyRingAsync_RequestObject()
+        public async Task CreateKeyRingRequestObjectAsync()
         {
             // Snippet: CreateKeyRingAsync(CreateKeyRingRequest, CallSettings)
             // Additional: CreateKeyRingAsync(CreateKeyRingRequest, CancellationToken)
@@ -1439,7 +1439,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateKeyRing</summary>
-        public void CreateKeyRing_ResourceNames()
+        public void CreateKeyRingResourceNames()
         {
             // Snippet: CreateKeyRing(LocationName, string, KeyRing, CallSettings)
             // Create client
@@ -1454,7 +1454,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateKeyRingAsync</summary>
-        public async Task CreateKeyRingAsync_ResourceNames()
+        public async Task CreateKeyRingResourceNamesAsync()
         {
             // Snippet: CreateKeyRingAsync(LocationName, string, KeyRing, CallSettings)
             // Additional: CreateKeyRingAsync(LocationName, string, KeyRing, CancellationToken)
@@ -1470,7 +1470,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKey</summary>
-        public void CreateCryptoKey_RequestObject()
+        public void CreateCryptoKeyRequestObject()
         {
             // Snippet: CreateCryptoKey(CreateCryptoKeyRequest, CallSettings)
             // Create client
@@ -1489,7 +1489,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKeyAsync</summary>
-        public async Task CreateCryptoKeyAsync_RequestObject()
+        public async Task CreateCryptoKeyRequestObjectAsync()
         {
             // Snippet: CreateCryptoKeyAsync(CreateCryptoKeyRequest, CallSettings)
             // Additional: CreateCryptoKeyAsync(CreateCryptoKeyRequest, CancellationToken)
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKey</summary>
-        public void CreateCryptoKey_ResourceNames()
+        public void CreateCryptoKeyResourceNames()
         {
             // Snippet: CreateCryptoKey(KeyRingName, string, CryptoKey, CallSettings)
             // Create client
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKeyAsync</summary>
-        public async Task CreateCryptoKeyAsync_ResourceNames()
+        public async Task CreateCryptoKeyResourceNamesAsync()
         {
             // Snippet: CreateCryptoKeyAsync(KeyRingName, string, CryptoKey, CallSettings)
             // Additional: CreateCryptoKeyAsync(KeyRingName, string, CryptoKey, CancellationToken)
@@ -1571,7 +1571,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKeyVersion</summary>
-        public void CreateCryptoKeyVersion_RequestObject()
+        public void CreateCryptoKeyVersionRequestObject()
         {
             // Snippet: CreateCryptoKeyVersion(CreateCryptoKeyVersionRequest, CallSettings)
             // Create client
@@ -1588,7 +1588,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKeyVersionAsync</summary>
-        public async Task CreateCryptoKeyVersionAsync_RequestObject()
+        public async Task CreateCryptoKeyVersionRequestObjectAsync()
         {
             // Snippet: CreateCryptoKeyVersionAsync(CreateCryptoKeyVersionRequest, CallSettings)
             // Additional: CreateCryptoKeyVersionAsync(CreateCryptoKeyVersionRequest, CancellationToken)
@@ -1635,7 +1635,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKeyVersion</summary>
-        public void CreateCryptoKeyVersion_ResourceNames()
+        public void CreateCryptoKeyVersionResourceNames()
         {
             // Snippet: CreateCryptoKeyVersion(CryptoKeyName, CryptoKeyVersion, CallSettings)
             // Create client
@@ -1649,7 +1649,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCryptoKeyVersionAsync</summary>
-        public async Task CreateCryptoKeyVersionAsync_ResourceNames()
+        public async Task CreateCryptoKeyVersionResourceNamesAsync()
         {
             // Snippet: CreateCryptoKeyVersionAsync(CryptoKeyName, CryptoKeyVersion, CallSettings)
             // Additional: CreateCryptoKeyVersionAsync(CryptoKeyName, CryptoKeyVersion, CancellationToken)
@@ -1664,7 +1664,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ImportCryptoKeyVersion</summary>
-        public void ImportCryptoKeyVersion_RequestObject()
+        public void ImportCryptoKeyVersionRequestObject()
         {
             // Snippet: ImportCryptoKeyVersion(ImportCryptoKeyVersionRequest, CallSettings)
             // Create client
@@ -1683,7 +1683,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for ImportCryptoKeyVersionAsync</summary>
-        public async Task ImportCryptoKeyVersionAsync_RequestObject()
+        public async Task ImportCryptoKeyVersionRequestObjectAsync()
         {
             // Snippet: ImportCryptoKeyVersionAsync(ImportCryptoKeyVersionRequest, CallSettings)
             // Additional: ImportCryptoKeyVersionAsync(ImportCryptoKeyVersionRequest, CancellationToken)
@@ -1703,7 +1703,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateImportJob</summary>
-        public void CreateImportJob_RequestObject()
+        public void CreateImportJobRequestObject()
         {
             // Snippet: CreateImportJob(CreateImportJobRequest, CallSettings)
             // Create client
@@ -1721,7 +1721,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateImportJobAsync</summary>
-        public async Task CreateImportJobAsync_RequestObject()
+        public async Task CreateImportJobRequestObjectAsync()
         {
             // Snippet: CreateImportJobAsync(CreateImportJobRequest, CallSettings)
             // Additional: CreateImportJobAsync(CreateImportJobRequest, CancellationToken)
@@ -1771,7 +1771,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateImportJob</summary>
-        public void CreateImportJob_ResourceNames()
+        public void CreateImportJobResourceNames()
         {
             // Snippet: CreateImportJob(KeyRingName, string, ImportJob, CallSettings)
             // Create client
@@ -1786,7 +1786,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for CreateImportJobAsync</summary>
-        public async Task CreateImportJobAsync_ResourceNames()
+        public async Task CreateImportJobResourceNamesAsync()
         {
             // Snippet: CreateImportJobAsync(KeyRingName, string, ImportJob, CallSettings)
             // Additional: CreateImportJobAsync(KeyRingName, string, ImportJob, CancellationToken)
@@ -1802,7 +1802,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKey</summary>
-        public void UpdateCryptoKey_RequestObject()
+        public void UpdateCryptoKeyRequestObject()
         {
             // Snippet: UpdateCryptoKey(UpdateCryptoKeyRequest, CallSettings)
             // Create client
@@ -1819,7 +1819,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyAsync</summary>
-        public async Task UpdateCryptoKeyAsync_RequestObject()
+        public async Task UpdateCryptoKeyRequestObjectAsync()
         {
             // Snippet: UpdateCryptoKeyAsync(UpdateCryptoKeyRequest, CallSettings)
             // Additional: UpdateCryptoKeyAsync(UpdateCryptoKeyRequest, CancellationToken)
@@ -1866,7 +1866,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyVersion</summary>
-        public void UpdateCryptoKeyVersion_RequestObject()
+        public void UpdateCryptoKeyVersionRequestObject()
         {
             // Snippet: UpdateCryptoKeyVersion(UpdateCryptoKeyVersionRequest, CallSettings)
             // Create client
@@ -1883,7 +1883,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyVersionAsync</summary>
-        public async Task UpdateCryptoKeyVersionAsync_RequestObject()
+        public async Task UpdateCryptoKeyVersionRequestObjectAsync()
         {
             // Snippet: UpdateCryptoKeyVersionAsync(UpdateCryptoKeyVersionRequest, CallSettings)
             // Additional: UpdateCryptoKeyVersionAsync(UpdateCryptoKeyVersionRequest, CancellationToken)
@@ -1930,7 +1930,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for Encrypt</summary>
-        public void Encrypt_RequestObject()
+        public void EncryptRequestObject()
         {
             // Snippet: Encrypt(EncryptRequest, CallSettings)
             // Create client
@@ -1948,7 +1948,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for EncryptAsync</summary>
-        public async Task EncryptAsync_RequestObject()
+        public async Task EncryptRequestObjectAsync()
         {
             // Snippet: EncryptAsync(EncryptRequest, CallSettings)
             // Additional: EncryptAsync(EncryptRequest, CancellationToken)
@@ -1996,7 +1996,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for Encrypt</summary>
-        public void Encrypt_ResourceNames()
+        public void EncryptResourceNames()
         {
             // Snippet: Encrypt(CryptoKeyName, ByteString, CallSettings)
             // Create client
@@ -2010,7 +2010,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for EncryptAsync</summary>
-        public async Task EncryptAsync_ResourceNames()
+        public async Task EncryptResourceNamesAsync()
         {
             // Snippet: EncryptAsync(CryptoKeyName, ByteString, CallSettings)
             // Additional: EncryptAsync(CryptoKeyName, ByteString, CancellationToken)
@@ -2025,7 +2025,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for Decrypt</summary>
-        public void Decrypt_RequestObject()
+        public void DecryptRequestObject()
         {
             // Snippet: Decrypt(DecryptRequest, CallSettings)
             // Create client
@@ -2043,7 +2043,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for DecryptAsync</summary>
-        public async Task DecryptAsync_RequestObject()
+        public async Task DecryptRequestObjectAsync()
         {
             // Snippet: DecryptAsync(DecryptRequest, CallSettings)
             // Additional: DecryptAsync(DecryptRequest, CancellationToken)
@@ -2091,7 +2091,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for Decrypt</summary>
-        public void Decrypt_ResourceNames()
+        public void DecryptResourceNames()
         {
             // Snippet: Decrypt(CryptoKeyName, ByteString, CallSettings)
             // Create client
@@ -2105,7 +2105,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for DecryptAsync</summary>
-        public async Task DecryptAsync_ResourceNames()
+        public async Task DecryptResourceNamesAsync()
         {
             // Snippet: DecryptAsync(CryptoKeyName, ByteString, CallSettings)
             // Additional: DecryptAsync(CryptoKeyName, ByteString, CancellationToken)
@@ -2120,7 +2120,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricSign</summary>
-        public void AsymmetricSign_RequestObject()
+        public void AsymmetricSignRequestObject()
         {
             // Snippet: AsymmetricSign(AsymmetricSignRequest, CallSettings)
             // Create client
@@ -2137,7 +2137,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricSignAsync</summary>
-        public async Task AsymmetricSignAsync_RequestObject()
+        public async Task AsymmetricSignRequestObjectAsync()
         {
             // Snippet: AsymmetricSignAsync(AsymmetricSignRequest, CallSettings)
             // Additional: AsymmetricSignAsync(AsymmetricSignRequest, CancellationToken)
@@ -2184,7 +2184,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricSign</summary>
-        public void AsymmetricSign_ResourceNames()
+        public void AsymmetricSignResourceNames()
         {
             // Snippet: AsymmetricSign(CryptoKeyVersionName, Digest, CallSettings)
             // Create client
@@ -2198,7 +2198,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricSignAsync</summary>
-        public async Task AsymmetricSignAsync_ResourceNames()
+        public async Task AsymmetricSignResourceNamesAsync()
         {
             // Snippet: AsymmetricSignAsync(CryptoKeyVersionName, Digest, CallSettings)
             // Additional: AsymmetricSignAsync(CryptoKeyVersionName, Digest, CancellationToken)
@@ -2213,7 +2213,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricDecrypt</summary>
-        public void AsymmetricDecrypt_RequestObject()
+        public void AsymmetricDecryptRequestObject()
         {
             // Snippet: AsymmetricDecrypt(AsymmetricDecryptRequest, CallSettings)
             // Create client
@@ -2230,7 +2230,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricDecryptAsync</summary>
-        public async Task AsymmetricDecryptAsync_RequestObject()
+        public async Task AsymmetricDecryptRequestObjectAsync()
         {
             // Snippet: AsymmetricDecryptAsync(AsymmetricDecryptRequest, CallSettings)
             // Additional: AsymmetricDecryptAsync(AsymmetricDecryptRequest, CancellationToken)
@@ -2277,7 +2277,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricDecrypt</summary>
-        public void AsymmetricDecrypt_ResourceNames()
+        public void AsymmetricDecryptResourceNames()
         {
             // Snippet: AsymmetricDecrypt(CryptoKeyVersionName, ByteString, CallSettings)
             // Create client
@@ -2291,7 +2291,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for AsymmetricDecryptAsync</summary>
-        public async Task AsymmetricDecryptAsync_ResourceNames()
+        public async Task AsymmetricDecryptResourceNamesAsync()
         {
             // Snippet: AsymmetricDecryptAsync(CryptoKeyVersionName, ByteString, CallSettings)
             // Additional: AsymmetricDecryptAsync(CryptoKeyVersionName, ByteString, CancellationToken)
@@ -2306,7 +2306,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
-        public void UpdateCryptoKeyPrimaryVersion_RequestObject()
+        public void UpdateCryptoKeyPrimaryVersionRequestObject()
         {
             // Snippet: UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest, CallSettings)
             // Create client
@@ -2323,7 +2323,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
-        public async Task UpdateCryptoKeyPrimaryVersionAsync_RequestObject()
+        public async Task UpdateCryptoKeyPrimaryVersionRequestObjectAsync()
         {
             // Snippet: UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest, CallSettings)
             // Additional: UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest, CancellationToken)
@@ -2370,7 +2370,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
-        public void UpdateCryptoKeyPrimaryVersion_ResourceNames()
+        public void UpdateCryptoKeyPrimaryVersionResourceNames()
         {
             // Snippet: UpdateCryptoKeyPrimaryVersion(CryptoKeyName, string, CallSettings)
             // Create client
@@ -2384,7 +2384,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
-        public async Task UpdateCryptoKeyPrimaryVersionAsync_ResourceNames()
+        public async Task UpdateCryptoKeyPrimaryVersionResourceNamesAsync()
         {
             // Snippet: UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName, string, CallSettings)
             // Additional: UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName, string, CancellationToken)
@@ -2399,7 +2399,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
-        public void DestroyCryptoKeyVersion_RequestObject()
+        public void DestroyCryptoKeyVersionRequestObject()
         {
             // Snippet: DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest, CallSettings)
             // Create client
@@ -2415,7 +2415,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
-        public async Task DestroyCryptoKeyVersionAsync_RequestObject()
+        public async Task DestroyCryptoKeyVersionRequestObjectAsync()
         {
             // Snippet: DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest, CallSettings)
             // Additional: DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest, CancellationToken)
@@ -2459,7 +2459,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
-        public void DestroyCryptoKeyVersion_ResourceNames()
+        public void DestroyCryptoKeyVersionResourceNames()
         {
             // Snippet: DestroyCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
             // Create client
@@ -2472,7 +2472,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
-        public async Task DestroyCryptoKeyVersionAsync_ResourceNames()
+        public async Task DestroyCryptoKeyVersionResourceNamesAsync()
         {
             // Snippet: DestroyCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
             // Additional: DestroyCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
@@ -2486,7 +2486,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
-        public void RestoreCryptoKeyVersion_RequestObject()
+        public void RestoreCryptoKeyVersionRequestObject()
         {
             // Snippet: RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest, CallSettings)
             // Create client
@@ -2502,7 +2502,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
-        public async Task RestoreCryptoKeyVersionAsync_RequestObject()
+        public async Task RestoreCryptoKeyVersionRequestObjectAsync()
         {
             // Snippet: RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest, CallSettings)
             // Additional: RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest, CancellationToken)
@@ -2546,7 +2546,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
-        public void RestoreCryptoKeyVersion_ResourceNames()
+        public void RestoreCryptoKeyVersionResourceNames()
         {
             // Snippet: RestoreCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
             // Create client
@@ -2559,7 +2559,7 @@ namespace Google.Cloud.Kms.V1.Snippets
         }
 
         /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
-        public async Task RestoreCryptoKeyVersionAsync_ResourceNames()
+        public async Task RestoreCryptoKeyVersionResourceNamesAsync()
         {
             // Snippet: RestoreCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
             // Additional: RestoreCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)

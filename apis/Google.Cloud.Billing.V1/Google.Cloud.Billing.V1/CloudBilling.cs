@@ -107,18 +107,18 @@ namespace Google.Cloud.Billing.V1 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.BillingAccount), global::Google.Cloud.Billing.V1.BillingAccount.Parser, new[]{ "Name", "Open", "DisplayName", "MasterBillingAccount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ProjectBillingInfo), global::Google.Cloud.Billing.V1.ProjectBillingInfo.Parser, new[]{ "Name", "ProjectId", "BillingAccountName", "BillingEnabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GetBillingAccountRequest), global::Google.Cloud.Billing.V1.GetBillingAccountRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest), global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsResponse), global::Google.Cloud.Billing.V1.ListBillingAccountsResponse.Parser, new[]{ "BillingAccounts", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest), global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser, new[]{ "BillingAccount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest), global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest.Parser, new[]{ "Name", "Account", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest.Parser, new[]{ "Name", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse), global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse.Parser, new[]{ "ProjectBillingInfo", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser, new[]{ "Name", "ProjectBillingInfo" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.BillingAccount), global::Google.Cloud.Billing.V1.BillingAccount.Parser, new[]{ "Name", "Open", "DisplayName", "MasterBillingAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ProjectBillingInfo), global::Google.Cloud.Billing.V1.ProjectBillingInfo.Parser, new[]{ "Name", "ProjectId", "BillingAccountName", "BillingEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GetBillingAccountRequest), global::Google.Cloud.Billing.V1.GetBillingAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest), global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsResponse), global::Google.Cloud.Billing.V1.ListBillingAccountsResponse.Parser, new[]{ "BillingAccounts", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest), global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser, new[]{ "BillingAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest), global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest.Parser, new[]{ "Name", "Account", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest.Parser, new[]{ "Name", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse), global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse.Parser, new[]{ "ProjectBillingInfo", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser, new[]{ "Name", "ProjectBillingInfo" }, null, null, null, null)
           }));
     }
     #endregion

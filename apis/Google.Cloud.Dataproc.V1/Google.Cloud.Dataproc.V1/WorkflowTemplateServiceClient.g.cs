@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -241,7 +242,7 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <inheritdoc/>
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => WorkflowTemplateServiceClient.DefaultEndpoint;
+        protected override string GetDefaultEndpoint() => WorkflowTemplateServiceClient.DefaultEndpoint;
 
         /// <inheritdoc/>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => WorkflowTemplateServiceClient.DefaultScopes;
@@ -257,7 +258,7 @@ namespace Google.Cloud.Dataproc.V1
         /// The default endpoint for the WorkflowTemplateService service, which is a host of "dataproc.googleapis.com"
         /// and a port of 443.
         /// </summary>
-        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("dataproc.googleapis.com", 443);
+        public static string DefaultEndpoint { get; } = "dataproc.googleapis.com:443";
 
         /// <summary>The default WorkflowTemplateService scopes.</summary>
         /// <remarks>
@@ -274,97 +275,24 @@ namespace Google.Cloud.Dataproc.V1
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="WorkflowTemplateServiceClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Asynchronously creates a <see cref="WorkflowTemplateServiceClient"/> using the default credentials, endpoint
+        /// and settings. To specify custom credentials or other settings, use
+        /// <see cref="WorkflowTemplateServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = await ImageAnnotatorClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="WorkflowTemplateServiceSettings"/>.</param>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
         /// <returns>The task representing the created <see cref="WorkflowTemplateServiceClient"/>.</returns>
-        public static async stt::Task<WorkflowTemplateServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, WorkflowTemplateServiceSettings settings = null)
-        {
-            grpccore::Channel channel = await ChannelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
+        public static stt::Task<WorkflowTemplateServiceClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new WorkflowTemplateServiceClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="WorkflowTemplateServiceClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Synchronously creates a <see cref="WorkflowTemplateServiceClient"/> using the default credentials, endpoint
+        /// and settings. To specify custom credentials or other settings, use
+        /// <see cref="WorkflowTemplateServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// channel.ShutdownAsync().Wait();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="WorkflowTemplateServiceSettings"/>.</param>
         /// <returns>The created <see cref="WorkflowTemplateServiceClient"/>.</returns>
-        public static WorkflowTemplateServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, WorkflowTemplateServiceSettings settings = null)
-        {
-            grpccore::Channel channel = ChannelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="WorkflowTemplateServiceClient"/> which uses the specified channel for remote
-        /// operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="WorkflowTemplateServiceSettings"/>.</param>
-        /// <returns>The created <see cref="WorkflowTemplateServiceClient"/>.</returns>
-        public static WorkflowTemplateServiceClient Create(grpccore::Channel channel, WorkflowTemplateServiceSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        public static WorkflowTemplateServiceClient Create() => new WorkflowTemplateServiceClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="WorkflowTemplateServiceClient"/> which uses the specified call invoker for remote
@@ -375,7 +303,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="settings">Optional <see cref="WorkflowTemplateServiceSettings"/>.</param>
         /// <returns>The created <see cref="WorkflowTemplateServiceClient"/>.</returns>
-        public static WorkflowTemplateServiceClient Create(grpccore::CallInvoker callInvoker, WorkflowTemplateServiceSettings settings = null)
+        internal static WorkflowTemplateServiceClient Create(grpccore::CallInvoker callInvoker, WorkflowTemplateServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -388,16 +316,14 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by
-        /// <see cref="Create(grpccore::CallInvoker,WorkflowTemplateServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,WorkflowTemplateServiceSettings)"/>. Channels which weren't
-        /// automatically created are not affected.
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
         /// </summary>
         /// <remarks>
-        /// After calling this method, further calls to
-        /// <see cref="Create(grpccore::CallInvoker,WorkflowTemplateServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,WorkflowTemplateServiceSettings)"/> will create new
-        /// channels, which could in turn be shut down by another call to this method.
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
@@ -507,6 +433,83 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(string parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
+            CreateWorkflowTemplateAsync(parent, template, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new workflow template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,create`, the resource name of the
+        /// region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.create`, the resource name of
+        /// the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The Dataproc workflow template to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowTemplate CreateWorkflowTemplate(gagr::LocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkflowTemplate(new CreateWorkflowTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new workflow template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,create`, the resource name of the
+        /// region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.create`, the resource name of
+        /// the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The Dataproc workflow template to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(gagr::LocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkflowTemplateAsync(new CreateWorkflowTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new workflow template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,create`, the resource name of the
+        /// region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.create`, the resource name of
+        /// the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The Dataproc workflow template to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(gagr::LocationName parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
             CreateWorkflowTemplateAsync(parent, template, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1727,6 +1730,152 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, WorkflowMetadata> InstantiateInlineWorkflowTemplate(gagr::LocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+            InstantiateInlineWorkflowTemplate(new InstantiateInlineWorkflowTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        /// 
+        /// This method is equivalent to executing the sequence
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
+        /// 
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        /// 
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        /// 
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+        /// Also see [Using
+        /// WorkflowMetadata](/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).
+        /// 
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,instantiateinline`, the resource
+        /// name of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.instantiateinline`, the
+        /// resource name of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The workflow template to instantiate.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(gagr::LocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
+            InstantiateInlineWorkflowTemplateAsync(new InstantiateInlineWorkflowTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        /// 
+        /// This method is equivalent to executing the sequence
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
+        /// 
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        /// 
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        /// 
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+        /// Also see [Using
+        /// WorkflowMetadata](/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).
+        /// 
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,instantiateinline`, the resource
+        /// name of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.instantiateinline`, the
+        /// resource name of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The workflow template to instantiate.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(gagr::LocationName parent, WorkflowTemplate template, st::CancellationToken cancellationToken) =>
+            InstantiateInlineWorkflowTemplateAsync(parent, template, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        /// 
+        /// This method is equivalent to executing the sequence
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
+        /// 
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        /// 
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        /// 
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata](/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+        /// Also see [Using
+        /// WorkflowMetadata](/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).
+        /// 
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,instantiateinline`, the resource
+        /// name of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.instantiateinline`, the
+        /// resource name of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The workflow template to instantiate.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual lro::Operation<wkt::Empty, WorkflowMetadata> InstantiateInlineWorkflowTemplate(RegionOrLocationName parent, WorkflowTemplate template, gaxgrpc::CallSettings callSettings = null) =>
             InstantiateInlineWorkflowTemplate(new InstantiateInlineWorkflowTemplateRequest
             {
@@ -1988,6 +2137,72 @@ namespace Google.Cloud.Dataproc.V1
             ListWorkflowTemplatesAsync(new ListWorkflowTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists workflows that match the specified filter in the request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,list`, the resource
+        /// name of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.list`, the
+        /// resource name of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkflowTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkflowTemplates(new ListWorkflowTemplatesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists workflows that match the specified filter in the request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.workflowTemplates,list`, the resource
+        /// name of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.workflowTemplates.list`, the
+        /// resource name of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkflowTemplatesAsync(new ListWorkflowTemplatesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);

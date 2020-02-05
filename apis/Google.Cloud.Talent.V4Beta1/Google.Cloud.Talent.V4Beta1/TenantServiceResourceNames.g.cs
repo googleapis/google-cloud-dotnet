@@ -26,7 +26,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -38,7 +38,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::TenantName TenantName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TenantName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TenantName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -50,7 +50,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::TenantName TenantName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TenantName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TenantName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -62,7 +62,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

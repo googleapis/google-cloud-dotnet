@@ -34,8 +34,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "ZFxGaXJlc3RvcmVcQWRtaW5cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.LatlngReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.LocationMetadata), global::Google.Cloud.Firestore.Admin.V1.LocationMetadata.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.LocationMetadata), global::Google.Cloud.Firestore.Admin.V1.LocationMetadata.Parser, null, null, null, null, null)
           }));
     }
     #endregion

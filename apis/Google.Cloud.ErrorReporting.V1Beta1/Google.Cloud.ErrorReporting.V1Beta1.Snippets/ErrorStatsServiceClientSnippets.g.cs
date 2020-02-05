@@ -27,7 +27,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
     public sealed class GeneratedErrorStatsServiceClientSnippets
     {
         /// <summary>Snippet for ListGroupStats</summary>
-        public void ListGroupStats_RequestObject()
+        public void ListGroupStatsRequestObject()
         {
             // Snippet: ListGroupStats(ListGroupStatsRequest, CallSettings)
             // Create client
@@ -82,7 +82,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListGroupStats</summary>
-        public async Task ListGroupStatsAsync_RequestObject()
+        public async Task ListGroupStatsRequestObjectAsync()
         {
             // Snippet: ListGroupStatsAsync(ListGroupStatsRequest, CallSettings)
             // Create client
@@ -229,7 +229,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListGroupStats</summary>
-        public void ListGroupStats_ResourceNames()
+        public void ListGroupStatsResourceNames()
         {
             // Snippet: ListGroupStats(ProjectName, QueryTimeRange, string, int?, CallSettings)
             // Create client
@@ -275,7 +275,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListGroupStats</summary>
-        public async Task ListGroupStatsAsync_ResourceNames()
+        public async Task ListGroupStatsResourceNamesAsync()
         {
             // Snippet: ListGroupStatsAsync(ProjectName, QueryTimeRange, string, int?, CallSettings)
             // Create client
@@ -321,7 +321,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListEvents</summary>
-        public void ListEvents_RequestObject()
+        public void ListEventsRequestObject()
         {
             // Snippet: ListEvents(ListEventsRequest, CallSettings)
             // Create client
@@ -372,7 +372,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListEvents</summary>
-        public async Task ListEventsAsync_RequestObject()
+        public async Task ListEventsRequestObjectAsync()
         {
             // Snippet: ListEventsAsync(ListEventsRequest, CallSettings)
             // Create client
@@ -515,7 +515,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListEvents</summary>
-        public void ListEvents_ResourceNames()
+        public void ListEventsResourceNames()
         {
             // Snippet: ListEvents(ProjectName, string, string, int?, CallSettings)
             // Create client
@@ -561,7 +561,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListEvents</summary>
-        public async Task ListEventsAsync_ResourceNames()
+        public async Task ListEventsResourceNamesAsync()
         {
             // Snippet: ListEventsAsync(ProjectName, string, string, int?, CallSettings)
             // Create client
@@ -607,7 +607,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteEvents</summary>
-        public void DeleteEvents_RequestObject()
+        public void DeleteEventsRequestObject()
         {
             // Snippet: DeleteEvents(DeleteEventsRequest, CallSettings)
             // Create client
@@ -623,7 +623,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteEventsAsync</summary>
-        public async Task DeleteEventsAsync_RequestObject()
+        public async Task DeleteEventsRequestObjectAsync()
         {
             // Snippet: DeleteEventsAsync(DeleteEventsRequest, CallSettings)
             // Additional: DeleteEventsAsync(DeleteEventsRequest, CancellationToken)
@@ -667,7 +667,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteEvents</summary>
-        public void DeleteEvents_ResourceNames()
+        public void DeleteEventsResourceNames()
         {
             // Snippet: DeleteEvents(ProjectName, CallSettings)
             // Create client
@@ -680,7 +680,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteEventsAsync</summary>
-        public async Task DeleteEventsAsync_ResourceNames()
+        public async Task DeleteEventsResourceNamesAsync()
         {
             // Snippet: DeleteEventsAsync(ProjectName, CallSettings)
             // Additional: DeleteEventsAsync(ProjectName, CancellationToken)

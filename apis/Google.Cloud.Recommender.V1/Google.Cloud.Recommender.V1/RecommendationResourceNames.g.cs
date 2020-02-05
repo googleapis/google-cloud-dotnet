@@ -526,7 +526,7 @@ namespace Google.Cloud.Recommender.V1
         /// </summary>
         public gcrv::RecommendationName RecommendationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

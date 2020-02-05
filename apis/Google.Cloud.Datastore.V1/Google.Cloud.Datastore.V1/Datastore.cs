@@ -118,26 +118,26 @@ namespace Google.Cloud.Datastore.V1 {
             "RGF0YXN0b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupRequest), global::Google.Cloud.Datastore.V1.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryRequest), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryResponse), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionRequest), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser, new[]{ "ProjectId", "TransactionOptions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionResponse), global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackRequest), global::Google.Cloud.Datastore.V1.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackResponse), global::Google.Cloud.Datastore.V1.RollbackResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitRequest), global::Google.Cloud.Datastore.V1.CommitRequest.Parser, new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, new[]{ "TransactionSelector" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitResponse), global::Google.Cloud.Datastore.V1.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsRequest), global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser, new[]{ "ProjectId", "Keys" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsResponse), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsRequest), global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser, new[]{ "ProjectId", "DatabaseId", "Keys" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsResponse), global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion" }, new[]{ "Operation", "ConflictDetectionStrategy" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "ConflictDetected" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions), global::Google.Cloud.Datastore.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "ReadOnly" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "PreviousTransaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.Parser, null, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupRequest), global::Google.Cloud.Datastore.V1.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryRequest), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryResponse), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionRequest), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser, new[]{ "ProjectId", "TransactionOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionResponse), global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackRequest), global::Google.Cloud.Datastore.V1.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackResponse), global::Google.Cloud.Datastore.V1.RollbackResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitRequest), global::Google.Cloud.Datastore.V1.CommitRequest.Parser, new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, new[]{ "TransactionSelector" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CommitResponse), global::Google.Cloud.Datastore.V1.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsRequest), global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser, new[]{ "ProjectId", "Keys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsResponse), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsRequest), global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser, new[]{ "ProjectId", "DatabaseId", "Keys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsResponse), global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion" }, new[]{ "Operation", "ConflictDetectionStrategy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "ConflictDetected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions), global::Google.Cloud.Datastore.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "PreviousTransaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.Parser, null, null, null, null, null)})
           }));
     }
     #endregion
@@ -1657,7 +1657,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Field number for the "mode" field.</summary>
     public const int ModeFieldNumber = 5;
-    private global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode mode_ = 0;
+    private global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode mode_ = global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified;
     /// <summary>
     /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
     /// </summary>
@@ -1753,7 +1753,7 @@ namespace Google.Cloud.Datastore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
-      if (Mode != 0) hash ^= Mode.GetHashCode();
+      if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
       hash ^= mutations_.GetHashCode();
       hash ^= (int) transactionSelectorCase_;
@@ -1774,7 +1774,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Transaction);
       }
-      if (Mode != 0) {
+      if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Mode);
       }
@@ -1794,7 +1794,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (ProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
       }
-      if (Mode != 0) {
+      if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
@@ -1815,7 +1815,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      if (other.Mode != 0) {
+      if (other.Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) {
         Mode = other.Mode;
       }
       mutations_.Add(other.mutations_);
@@ -3249,7 +3249,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency ReadConsistency {
-      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : 0; }
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified; }
       set {
         consistencyType_ = value;
         consistencyTypeCase_ = ConsistencyTypeOneofCase.ReadConsistency;

@@ -241,7 +241,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::IntentName IntentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::IntentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::IntentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -251,7 +251,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -263,7 +263,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::IntentName IntentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::IntentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::IntentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -273,7 +273,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -285,7 +285,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::IntentName IntentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::IntentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::IntentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -295,7 +295,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -305,7 +305,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public AgentName ParentAsAgentName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

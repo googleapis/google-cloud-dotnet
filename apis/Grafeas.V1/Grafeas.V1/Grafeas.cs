@@ -113,7 +113,7 @@ namespace Grafeas.V1 {
             "UHJvamVjdBIwCgtvY2N1cnJlbmNlcxgCIAMoCzIWLmdyYWZlYXMudjEuT2Nj",
             "dXJyZW5jZUID4EECIk0KHkJhdGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXNwb25z",
             "ZRIrCgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZlYXMudjEuT2NjdXJyZW5j",
-            "ZTLtDwoHR3JhZmVhcxJ9Cg1HZXRPY2N1cnJlbmNlEiAuZ3JhZmVhcy52MS5H",
+            "ZTKSEAoHR3JhZmVhcxJ9Cg1HZXRPY2N1cnJlbmNlEiAuZ3JhZmVhcy52MS5H",
             "ZXRPY2N1cnJlbmNlUmVxdWVzdBoWLmdyYWZlYXMudjEuT2NjdXJyZW5jZSIy",
             "gtPkkwIlEiMvdjEve25hbWU9cHJvamVjdHMvKi9vY2N1cnJlbmNlcy8qfdpB",
             "BG5hbWUSlwEKD0xpc3RPY2N1cnJlbmNlcxIiLmdyYWZlYXMudjEuTGlzdE9j",
@@ -158,33 +158,34 @@ namespace Grafeas.V1 {
             "Z3JhZmVhcy52MS5MaXN0Tm90ZU9jY3VycmVuY2VzUmVxdWVzdBonLmdyYWZl",
             "YXMudjEuTGlzdE5vdGVPY2N1cnJlbmNlc1Jlc3BvbnNlIj+C0+STAisSKS92",
             "MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp9L29jY3VycmVuY2Vz2kELbmFt",
-            "ZSxmaWx0ZXJCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dS",
-            "QWIGcHJvdG8z"));
+            "ZSxmaWx0ZXIaI8pBIGNvbnRhaW5lcmFuYWx5c2lzLmdvb2dsZWFwaXMuY29t",
+            "QnwKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkHqQSgKEmdy",
+            "YWZlYXMuaW8vUHJvamVjdBIScHJvamVjdHMve3Byb2plY3R9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, global::Grafeas.V1.BuildReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, global::Grafeas.V1.DeploymentReflection.Descriptor, global::Grafeas.V1.DiscoveryReflection.Descriptor, global::Grafeas.V1.ImageReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, global::Grafeas.V1.UpgradeReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "ResourceUri", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade" }, new[]{ "Details" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Note), global::Grafeas.V1.Note.Parser, new[]{ "Name", "ShortDescription", "LongDescription", "Kind", "RelatedUrl", "ExpirationTime", "CreateTime", "UpdateTime", "RelatedNoteNames", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceRequest), global::Grafeas.V1.GetOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesRequest), global::Grafeas.V1.ListOccurrencesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesResponse), global::Grafeas.V1.ListOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeleteOccurrenceRequest), global::Grafeas.V1.DeleteOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CreateOccurrenceRequest), global::Grafeas.V1.CreateOccurrenceRequest.Parser, new[]{ "Parent", "Occurrence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpdateOccurrenceRequest), global::Grafeas.V1.UpdateOccurrenceRequest.Parser, new[]{ "Name", "Occurrence", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetNoteRequest), global::Grafeas.V1.GetNoteRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceNoteRequest), global::Grafeas.V1.GetOccurrenceNoteRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesRequest), global::Grafeas.V1.ListNotesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesResponse), global::Grafeas.V1.ListNotesResponse.Parser, new[]{ "Notes", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeleteNoteRequest), global::Grafeas.V1.DeleteNoteRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CreateNoteRequest), global::Grafeas.V1.CreateNoteRequest.Parser, new[]{ "Parent", "NoteId", "Note" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpdateNoteRequest), global::Grafeas.V1.UpdateNoteRequest.Parser, new[]{ "Name", "Note", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNoteOccurrencesRequest), global::Grafeas.V1.ListNoteOccurrencesRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNoteOccurrencesResponse), global::Grafeas.V1.ListNoteOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateNotesRequest), global::Grafeas.V1.BatchCreateNotesRequest.Parser, new[]{ "Parent", "Notes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateNotesResponse), global::Grafeas.V1.BatchCreateNotesResponse.Parser, new[]{ "Notes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateOccurrencesRequest), global::Grafeas.V1.BatchCreateOccurrencesRequest.Parser, new[]{ "Parent", "Occurrences" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateOccurrencesResponse), global::Grafeas.V1.BatchCreateOccurrencesResponse.Parser, new[]{ "Occurrences" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "ResourceUri", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade" }, new[]{ "Details" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Note), global::Grafeas.V1.Note.Parser, new[]{ "Name", "ShortDescription", "LongDescription", "Kind", "RelatedUrl", "ExpirationTime", "CreateTime", "UpdateTime", "RelatedNoteNames", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceRequest), global::Grafeas.V1.GetOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesRequest), global::Grafeas.V1.ListOccurrencesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesResponse), global::Grafeas.V1.ListOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeleteOccurrenceRequest), global::Grafeas.V1.DeleteOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CreateOccurrenceRequest), global::Grafeas.V1.CreateOccurrenceRequest.Parser, new[]{ "Parent", "Occurrence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpdateOccurrenceRequest), global::Grafeas.V1.UpdateOccurrenceRequest.Parser, new[]{ "Name", "Occurrence", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetNoteRequest), global::Grafeas.V1.GetNoteRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceNoteRequest), global::Grafeas.V1.GetOccurrenceNoteRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesRequest), global::Grafeas.V1.ListNotesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesResponse), global::Grafeas.V1.ListNotesResponse.Parser, new[]{ "Notes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeleteNoteRequest), global::Grafeas.V1.DeleteNoteRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CreateNoteRequest), global::Grafeas.V1.CreateNoteRequest.Parser, new[]{ "Parent", "NoteId", "Note" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpdateNoteRequest), global::Grafeas.V1.UpdateNoteRequest.Parser, new[]{ "Name", "Note", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNoteOccurrencesRequest), global::Grafeas.V1.ListNoteOccurrencesRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNoteOccurrencesResponse), global::Grafeas.V1.ListNoteOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateNotesRequest), global::Grafeas.V1.BatchCreateNotesRequest.Parser, new[]{ "Parent", "Notes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateNotesResponse), global::Grafeas.V1.BatchCreateNotesResponse.Parser, new[]{ "Notes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateOccurrencesRequest), global::Grafeas.V1.BatchCreateOccurrencesRequest.Parser, new[]{ "Parent", "Occurrences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BatchCreateOccurrencesResponse), global::Grafeas.V1.BatchCreateOccurrencesResponse.Parser, new[]{ "Occurrences" }, null, null, null, null)
           }));
     }
     #endregion
@@ -310,7 +311,7 @@ namespace Grafeas.V1 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 4;
-    private global::Grafeas.V1.NoteKind kind_ = 0;
+    private global::Grafeas.V1.NoteKind kind_ = global::Grafeas.V1.NoteKind.Unspecified;
     /// <summary>
     /// Output only. This explicitly denotes which of the occurrence details are
     /// specified. This field can be used as a filter in list requests.
@@ -541,7 +542,7 @@ namespace Grafeas.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ResourceUri.Length != 0) hash ^= ResourceUri.GetHashCode();
       if (NoteName.Length != 0) hash ^= NoteName.GetHashCode();
-      if (Kind != 0) hash ^= Kind.GetHashCode();
+      if (Kind != global::Grafeas.V1.NoteKind.Unspecified) hash ^= Kind.GetHashCode();
       if (Remediation.Length != 0) hash ^= Remediation.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -579,7 +580,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(26);
         output.WriteString(NoteName);
       }
-      if (Kind != 0) {
+      if (Kind != global::Grafeas.V1.NoteKind.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Kind);
       }
@@ -644,7 +645,7 @@ namespace Grafeas.V1 {
       if (NoteName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NoteName);
       }
-      if (Kind != 0) {
+      if (Kind != global::Grafeas.V1.NoteKind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (Remediation.Length != 0) {
@@ -700,7 +701,7 @@ namespace Grafeas.V1 {
       if (other.NoteName.Length != 0) {
         NoteName = other.NoteName;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Grafeas.V1.NoteKind.Unspecified) {
         Kind = other.Kind;
       }
       if (other.Remediation.Length != 0) {
@@ -1009,7 +1010,7 @@ namespace Grafeas.V1 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 4;
-    private global::Grafeas.V1.NoteKind kind_ = 0;
+    private global::Grafeas.V1.NoteKind kind_ = global::Grafeas.V1.NoteKind.Unspecified;
     /// <summary>
     /// Output only. The type of analysis. This field can be used as a filter in
     /// list requests.
@@ -1269,7 +1270,7 @@ namespace Grafeas.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ShortDescription.Length != 0) hash ^= ShortDescription.GetHashCode();
       if (LongDescription.Length != 0) hash ^= LongDescription.GetHashCode();
-      if (Kind != 0) hash ^= Kind.GetHashCode();
+      if (Kind != global::Grafeas.V1.NoteKind.Unspecified) hash ^= Kind.GetHashCode();
       hash ^= relatedUrl_.GetHashCode();
       if (expirationTime_ != null) hash ^= ExpirationTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -1309,7 +1310,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(26);
         output.WriteString(LongDescription);
       }
-      if (Kind != 0) {
+      if (Kind != global::Grafeas.V1.NoteKind.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Kind);
       }
@@ -1376,7 +1377,7 @@ namespace Grafeas.V1 {
       if (LongDescription.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LongDescription);
       }
-      if (Kind != 0) {
+      if (Kind != global::Grafeas.V1.NoteKind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       size += relatedUrl_.CalculateSize(_repeated_relatedUrl_codec);
@@ -1434,7 +1435,7 @@ namespace Grafeas.V1 {
       if (other.LongDescription.Length != 0) {
         LongDescription = other.LongDescription;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Grafeas.V1.NoteKind.Unspecified) {
         Kind = other.Kind;
       }
       relatedUrl_.Add(other.relatedUrl_);
@@ -4342,7 +4343,7 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "notes" field.</summary>
     public const int NotesFieldNumber = 2;
     private static readonly pbc::MapField<string, global::Grafeas.V1.Note>.Codec _map_notes_codec
-        = new pbc::MapField<string, global::Grafeas.V1.Note>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Grafeas.V1.Note.Parser), 18);
+        = new pbc::MapField<string, global::Grafeas.V1.Note>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Grafeas.V1.Note.Parser), 18);
     private readonly pbc::MapField<string, global::Grafeas.V1.Note> notes_ = new pbc::MapField<string, global::Grafeas.V1.Note>();
     /// <summary>
     /// The notes to create. Max allowed length is 1000.

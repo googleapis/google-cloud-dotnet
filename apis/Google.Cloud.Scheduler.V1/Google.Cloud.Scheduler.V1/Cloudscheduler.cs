@@ -84,16 +84,16 @@ namespace Google.Cloud.Scheduler.V1 {
             "ZHVsZXIvdjE7c2NoZWR1bGVyogIJU0NIRURVTEVSYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.ListJobsRequest), global::Google.Cloud.Scheduler.V1.ListJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.ListJobsResponse), global::Google.Cloud.Scheduler.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.GetJobRequest), global::Google.Cloud.Scheduler.V1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.CreateJobRequest), global::Google.Cloud.Scheduler.V1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.UpdateJobRequest), global::Google.Cloud.Scheduler.V1.UpdateJobRequest.Parser, new[]{ "Job", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.DeleteJobRequest), global::Google.Cloud.Scheduler.V1.DeleteJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.PauseJobRequest), global::Google.Cloud.Scheduler.V1.PauseJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.ResumeJobRequest), global::Google.Cloud.Scheduler.V1.ResumeJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.RunJobRequest), global::Google.Cloud.Scheduler.V1.RunJobRequest.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.ListJobsRequest), global::Google.Cloud.Scheduler.V1.ListJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.ListJobsResponse), global::Google.Cloud.Scheduler.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.GetJobRequest), global::Google.Cloud.Scheduler.V1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.CreateJobRequest), global::Google.Cloud.Scheduler.V1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.UpdateJobRequest), global::Google.Cloud.Scheduler.V1.UpdateJobRequest.Parser, new[]{ "Job", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.DeleteJobRequest), global::Google.Cloud.Scheduler.V1.DeleteJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.PauseJobRequest), global::Google.Cloud.Scheduler.V1.PauseJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.ResumeJobRequest), global::Google.Cloud.Scheduler.V1.ResumeJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.RunJobRequest), global::Google.Cloud.Scheduler.V1.RunJobRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion

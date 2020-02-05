@@ -88,19 +88,19 @@ namespace Google.Cloud.Datastore.V1 {
             "VjHKAhlHb29nbGVcQ2xvdWRcRGF0YXN0b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.EntityResult), global::Google.Cloud.Datastore.V1.EntityResult.Parser, new[]{ "Entity", "Version", "Cursor" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Query), global::Google.Cloud.Datastore.V1.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.KindExpression), global::Google.Cloud.Datastore.V1.KindExpression.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyReference), global::Google.Cloud.Datastore.V1.PropertyReference.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Projection), global::Google.Cloud.Datastore.V1.Projection.Parser, new[]{ "Property" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyOrder), global::Google.Cloud.Datastore.V1.PropertyOrder.Parser, new[]{ "Property", "Direction" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Filter), global::Google.Cloud.Datastore.V1.Filter.Parser, new[]{ "CompositeFilter", "PropertyFilter" }, new[]{ "FilterType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CompositeFilter), global::Google.Cloud.Datastore.V1.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyFilter), global::Google.Cloud.Datastore.V1.PropertyFilter.Parser, new[]{ "Property", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.GqlQuery), global::Google.Cloud.Datastore.V1.GqlQuery.Parser, new[]{ "QueryString", "AllowLiterals", "NamedBindings", "PositionalBindings" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.GqlQueryParameter), global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser, new[]{ "Value", "Cursor" }, new[]{ "ParameterType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.QueryResultBatch), global::Google.Cloud.Datastore.V1.QueryResultBatch.Parser, new[]{ "SkippedResults", "SkippedCursor", "EntityResultType", "EntityResults", "EndCursor", "MoreResults", "SnapshotVersion" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.EntityResult), global::Google.Cloud.Datastore.V1.EntityResult.Parser, new[]{ "Entity", "Version", "Cursor" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Query), global::Google.Cloud.Datastore.V1.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.KindExpression), global::Google.Cloud.Datastore.V1.KindExpression.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyReference), global::Google.Cloud.Datastore.V1.PropertyReference.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Projection), global::Google.Cloud.Datastore.V1.Projection.Parser, new[]{ "Property" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyOrder), global::Google.Cloud.Datastore.V1.PropertyOrder.Parser, new[]{ "Property", "Direction" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Filter), global::Google.Cloud.Datastore.V1.Filter.Parser, new[]{ "CompositeFilter", "PropertyFilter" }, new[]{ "FilterType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CompositeFilter), global::Google.Cloud.Datastore.V1.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyFilter), global::Google.Cloud.Datastore.V1.PropertyFilter.Parser, new[]{ "Property", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.GqlQuery), global::Google.Cloud.Datastore.V1.GqlQuery.Parser, new[]{ "QueryString", "AllowLiterals", "NamedBindings", "PositionalBindings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.GqlQueryParameter), global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser, new[]{ "Value", "Cursor" }, new[]{ "ParameterType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.QueryResultBatch), global::Google.Cloud.Datastore.V1.QueryResultBatch.Parser, new[]{ "SkippedResults", "SkippedCursor", "EntityResultType", "EntityResults", "EndCursor", "MoreResults", "SnapshotVersion" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType) }, null, null)
           }));
     }
     #endregion
@@ -1194,7 +1194,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Field number for the "direction" field.</summary>
     public const int DirectionFieldNumber = 2;
-    private global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction direction_ = 0;
+    private global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction direction_ = global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction.Unspecified;
     /// <summary>
     /// The direction to order by. Defaults to `ASCENDING`.
     /// </summary>
@@ -1228,7 +1228,7 @@ namespace Google.Cloud.Datastore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (property_ != null) hash ^= Property.GetHashCode();
-      if (Direction != 0) hash ^= Direction.GetHashCode();
+      if (Direction != global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction.Unspecified) hash ^= Direction.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1246,7 +1246,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Property);
       }
-      if (Direction != 0) {
+      if (Direction != global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Direction);
       }
@@ -1261,7 +1261,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (property_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Property);
       }
-      if (Direction != 0) {
+      if (Direction != global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Direction);
       }
       if (_unknownFields != null) {
@@ -1281,7 +1281,7 @@ namespace Google.Cloud.Datastore.V1 {
         }
         Property.MergeFrom(other.Property);
       }
-      if (other.Direction != 0) {
+      if (other.Direction != global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction.Unspecified) {
         Direction = other.Direction;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1590,7 +1590,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Field number for the "op" field.</summary>
     public const int OpFieldNumber = 1;
-    private global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator op_ = 0;
+    private global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator op_ = global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator.Unspecified;
     /// <summary>
     /// The operator for combining multiple filters.
     /// </summary>
@@ -1637,7 +1637,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Op != 0) hash ^= Op.GetHashCode();
+      if (Op != global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
       hash ^= filters_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1652,7 +1652,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Op != 0) {
+      if (Op != global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Op);
       }
@@ -1665,7 +1665,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Op != 0) {
+      if (Op != global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
       }
       size += filters_.CalculateSize(_repeated_filters_codec);
@@ -1680,7 +1680,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (other == null) {
         return;
       }
-      if (other.Op != 0) {
+      if (other.Op != global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator.Unspecified) {
         Op = other.Op;
       }
       filters_.Add(other.filters_);
@@ -1785,7 +1785,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Field number for the "op" field.</summary>
     public const int OpFieldNumber = 2;
-    private global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator op_ = 0;
+    private global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator op_ = global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator.Unspecified;
     /// <summary>
     /// The operator to filter by.
     /// </summary>
@@ -1834,7 +1834,7 @@ namespace Google.Cloud.Datastore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (property_ != null) hash ^= Property.GetHashCode();
-      if (Op != 0) hash ^= Op.GetHashCode();
+      if (Op != global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
       if (value_ != null) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1853,7 +1853,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Property);
       }
-      if (Op != 0) {
+      if (Op != global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Op);
       }
@@ -1872,7 +1872,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (property_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Property);
       }
-      if (Op != 0) {
+      if (Op != global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
       }
       if (value_ != null) {
@@ -1895,7 +1895,7 @@ namespace Google.Cloud.Datastore.V1 {
         }
         Property.MergeFrom(other.Property);
       }
-      if (other.Op != 0) {
+      if (other.Op != global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator.Unspecified) {
         Op = other.Op;
       }
       if (other.value_ != null) {
@@ -2056,7 +2056,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "named_bindings" field.</summary>
     public const int NamedBindingsFieldNumber = 5;
     private static readonly pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter>.Codec _map_namedBindings_codec
-        = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser), 42);
+        = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter> namedBindings_ = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter>();
     /// <summary>
     /// For each non-reserved named binding site in the query string, there must be
@@ -2485,7 +2485,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Field number for the "entity_result_type" field.</summary>
     public const int EntityResultTypeFieldNumber = 1;
-    private global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType entityResultType_ = 0;
+    private global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType entityResultType_ = global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.Unspecified;
     /// <summary>
     /// The result type for every entity in `entity_results`.
     /// </summary>
@@ -2526,7 +2526,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Field number for the "more_results" field.</summary>
     public const int MoreResultsFieldNumber = 5;
-    private global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType moreResults_ = 0;
+    private global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType moreResults_ = global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType.Unspecified;
     /// <summary>
     /// The state of the query after the current batch.
     /// </summary>
@@ -2588,10 +2588,10 @@ namespace Google.Cloud.Datastore.V1 {
       int hash = 1;
       if (SkippedResults != 0) hash ^= SkippedResults.GetHashCode();
       if (SkippedCursor.Length != 0) hash ^= SkippedCursor.GetHashCode();
-      if (EntityResultType != 0) hash ^= EntityResultType.GetHashCode();
+      if (EntityResultType != global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.Unspecified) hash ^= EntityResultType.GetHashCode();
       hash ^= entityResults_.GetHashCode();
       if (EndCursor.Length != 0) hash ^= EndCursor.GetHashCode();
-      if (MoreResults != 0) hash ^= MoreResults.GetHashCode();
+      if (MoreResults != global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType.Unspecified) hash ^= MoreResults.GetHashCode();
       if (SnapshotVersion != 0L) hash ^= SnapshotVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2606,7 +2606,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (EntityResultType != 0) {
+      if (EntityResultType != global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) EntityResultType);
       }
@@ -2619,7 +2619,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(34);
         output.WriteBytes(EndCursor);
       }
-      if (MoreResults != 0) {
+      if (MoreResults != global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) MoreResults);
       }
@@ -2645,14 +2645,14 @@ namespace Google.Cloud.Datastore.V1 {
       if (SkippedCursor.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(SkippedCursor);
       }
-      if (EntityResultType != 0) {
+      if (EntityResultType != global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntityResultType);
       }
       size += entityResults_.CalculateSize(_repeated_entityResults_codec);
       if (EndCursor.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndCursor);
       }
-      if (MoreResults != 0) {
+      if (MoreResults != global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MoreResults);
       }
       if (SnapshotVersion != 0L) {
@@ -2675,14 +2675,14 @@ namespace Google.Cloud.Datastore.V1 {
       if (other.SkippedCursor.Length != 0) {
         SkippedCursor = other.SkippedCursor;
       }
-      if (other.EntityResultType != 0) {
+      if (other.EntityResultType != global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.Unspecified) {
         EntityResultType = other.EntityResultType;
       }
       entityResults_.Add(other.entityResults_);
       if (other.EndCursor.Length != 0) {
         EndCursor = other.EndCursor;
       }
-      if (other.MoreResults != 0) {
+      if (other.MoreResults != global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType.Unspecified) {
         MoreResults = other.MoreResults;
       }
       if (other.SnapshotVersion != 0L) {

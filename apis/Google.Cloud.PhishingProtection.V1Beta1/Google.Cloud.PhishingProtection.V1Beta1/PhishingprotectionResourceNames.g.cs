@@ -25,7 +25,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

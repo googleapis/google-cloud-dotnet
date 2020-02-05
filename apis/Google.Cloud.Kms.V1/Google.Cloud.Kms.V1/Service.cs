@@ -237,40 +237,40 @@ namespace Google.Cloud.Kms.V1 {
             "R29vZ2xlXENsb3VkXEttc1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsRequest), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "VersionView", "Filter", "OrderBy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View", "Filter", "OrderBy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListImportJobsRequest), global::Google.Cloud.Kms.V1.ListImportJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsResponse), global::Google.Cloud.Kms.V1.ListKeyRingsResponse.Parser, new[]{ "KeyRings", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysResponse), global::Google.Cloud.Kms.V1.ListCryptoKeysResponse.Parser, new[]{ "CryptoKeys", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse.Parser, new[]{ "CryptoKeyVersions", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListImportJobsResponse), global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser, new[]{ "ImportJobs", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetKeyRingRequest), global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest), global::Google.Cloud.Kms.V1.GetCryptoKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetPublicKeyRequest), global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetImportJobRequest), global::Google.Cloud.Kms.V1.GetImportJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateKeyRingRequest), global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser, new[]{ "Parent", "KeyRingId", "KeyRing" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser, new[]{ "Parent", "CryptoKeyId", "CryptoKey", "SkipInitialVersionCreation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser, new[]{ "Parent", "CryptoKeyVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser, new[]{ "Parent", "Algorithm", "ImportJob", "RsaAesWrappedKey" }, new[]{ "WrappedKeyMaterial" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateImportJobRequest), global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser, new[]{ "Parent", "ImportJobId", "ImportJob" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser, new[]{ "CryptoKey", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser, new[]{ "CryptoKeyVersion", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptRequest), global::Google.Cloud.Kms.V1.EncryptRequest.Parser, new[]{ "Name", "Plaintext", "AdditionalAuthenticatedData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptRequest), global::Google.Cloud.Kms.V1.DecryptRequest.Parser, new[]{ "Name", "Ciphertext", "AdditionalAuthenticatedData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignRequest), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser, new[]{ "Name", "Digest" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser, new[]{ "Name", "Ciphertext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptResponse), global::Google.Cloud.Kms.V1.DecryptResponse.Parser, new[]{ "Plaintext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptResponse), global::Google.Cloud.Kms.V1.EncryptResponse.Parser, new[]{ "Name", "Ciphertext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignResponse), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser, new[]{ "Signature" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser, new[]{ "Plaintext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser, new[]{ "Name", "CryptoKeyVersionId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.Digest), global::Google.Cloud.Kms.V1.Digest.Parser, new[]{ "Sha256", "Sha384", "Sha512" }, new[]{ "Digest" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.LocationMetadata), global::Google.Cloud.Kms.V1.LocationMetadata.Parser, new[]{ "HsmAvailable" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsRequest), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "VersionView", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListImportJobsRequest), global::Google.Cloud.Kms.V1.ListImportJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsResponse), global::Google.Cloud.Kms.V1.ListKeyRingsResponse.Parser, new[]{ "KeyRings", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysResponse), global::Google.Cloud.Kms.V1.ListCryptoKeysResponse.Parser, new[]{ "CryptoKeys", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse.Parser, new[]{ "CryptoKeyVersions", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListImportJobsResponse), global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser, new[]{ "ImportJobs", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetKeyRingRequest), global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest), global::Google.Cloud.Kms.V1.GetCryptoKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetPublicKeyRequest), global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetImportJobRequest), global::Google.Cloud.Kms.V1.GetImportJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateKeyRingRequest), global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser, new[]{ "Parent", "KeyRingId", "KeyRing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser, new[]{ "Parent", "CryptoKeyId", "CryptoKey", "SkipInitialVersionCreation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser, new[]{ "Parent", "CryptoKeyVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser, new[]{ "Parent", "Algorithm", "ImportJob", "RsaAesWrappedKey" }, new[]{ "WrappedKeyMaterial" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateImportJobRequest), global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser, new[]{ "Parent", "ImportJobId", "ImportJob" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser, new[]{ "CryptoKey", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser, new[]{ "CryptoKeyVersion", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptRequest), global::Google.Cloud.Kms.V1.EncryptRequest.Parser, new[]{ "Name", "Plaintext", "AdditionalAuthenticatedData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptRequest), global::Google.Cloud.Kms.V1.DecryptRequest.Parser, new[]{ "Name", "Ciphertext", "AdditionalAuthenticatedData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignRequest), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser, new[]{ "Name", "Digest" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser, new[]{ "Name", "Ciphertext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptResponse), global::Google.Cloud.Kms.V1.DecryptResponse.Parser, new[]{ "Plaintext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptResponse), global::Google.Cloud.Kms.V1.EncryptResponse.Parser, new[]{ "Name", "Ciphertext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignResponse), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser, new[]{ "Signature" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser, new[]{ "Plaintext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser, new[]{ "Name", "CryptoKeyVersionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.Digest), global::Google.Cloud.Kms.V1.Digest.Parser, new[]{ "Sha256", "Sha384", "Sha512" }, new[]{ "Digest" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.LocationMetadata), global::Google.Cloud.Kms.V1.LocationMetadata.Parser, new[]{ "HsmAvailable" }, null, null, null, null)
           }));
     }
     #endregion
@@ -638,7 +638,7 @@ namespace Google.Cloud.Kms.V1 {
 
     /// <summary>Field number for the "version_view" field.</summary>
     public const int VersionViewFieldNumber = 4;
-    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView versionView_ = 0;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView versionView_ = global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified;
     /// <summary>
     /// The fields of the primary version to include in the response.
     /// </summary>
@@ -712,7 +712,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (VersionView != 0) hash ^= VersionView.GetHashCode();
+      if (VersionView != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) hash ^= VersionView.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
@@ -740,7 +740,7 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (VersionView != 0) {
+      if (VersionView != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) VersionView);
       }
@@ -769,7 +769,7 @@ namespace Google.Cloud.Kms.V1 {
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
-      if (VersionView != 0) {
+      if (VersionView != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VersionView);
       }
       if (Filter.Length != 0) {
@@ -798,7 +798,7 @@ namespace Google.Cloud.Kms.V1 {
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
-      if (other.VersionView != 0) {
+      if (other.VersionView != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) {
         VersionView = other.VersionView;
       }
       if (other.Filter.Length != 0) {
@@ -940,7 +940,7 @@ namespace Google.Cloud.Kms.V1 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 4;
-    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView view_ = 0;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView view_ = global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified;
     /// <summary>
     /// The fields to include in the response.
     /// </summary>
@@ -1014,7 +1014,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (View != 0) hash ^= View.GetHashCode();
+      if (View != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) hash ^= View.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) View);
       }
@@ -1071,7 +1071,7 @@ namespace Google.Cloud.Kms.V1 {
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (Filter.Length != 0) {
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Kms.V1 {
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
-      if (other.View != 0) {
+      if (other.View != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified) {
         View = other.View;
       }
       if (other.Filter.Length != 0) {
@@ -3538,7 +3538,7 @@ namespace Google.Cloud.Kms.V1 {
 
     /// <summary>Field number for the "algorithm" field.</summary>
     public const int AlgorithmFieldNumber = 2;
-    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified;
     /// <summary>
     /// Required. The [algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] of
     /// the key being imported. This does not need to match the
@@ -3647,7 +3647,7 @@ namespace Google.Cloud.Kms.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (Algorithm != 0) hash ^= Algorithm.GetHashCode();
+      if (Algorithm != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified) hash ^= Algorithm.GetHashCode();
       if (ImportJob.Length != 0) hash ^= ImportJob.GetHashCode();
       if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) hash ^= RsaAesWrappedKey.GetHashCode();
       hash ^= (int) wrappedKeyMaterialCase_;
@@ -3668,7 +3668,7 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (Algorithm != 0) {
+      if (Algorithm != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Algorithm);
       }
@@ -3691,7 +3691,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (Algorithm != 0) {
+      if (Algorithm != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Algorithm);
       }
       if (ImportJob.Length != 0) {
@@ -3714,7 +3714,7 @@ namespace Google.Cloud.Kms.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
-      if (other.Algorithm != 0) {
+      if (other.Algorithm != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified) {
         Algorithm = other.Algorithm;
       }
       if (other.ImportJob.Length != 0) {

@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
     public sealed class GeneratedDatabaseAdminClientSnippets
     {
         /// <summary>Snippet for ListDatabases</summary>
-        public void ListDatabases_RequestObject()
+        public void ListDatabasesRequestObject()
         {
             // Snippet: ListDatabases(ListDatabasesRequest, CallSettings)
             // Create client
@@ -78,7 +78,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for ListDatabases</summary>
-        public async Task ListDatabasesAsync_RequestObject()
+        public async Task ListDatabasesRequestObjectAsync()
         {
             // Snippet: ListDatabasesAsync(ListDatabasesRequest, CallSettings)
             // Create client
@@ -216,7 +216,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for ListDatabases</summary>
-        public void ListDatabases_ResourceNames()
+        public void ListDatabasesResourceNames()
         {
             // Snippet: ListDatabases(InstanceName, string, int?, CallSettings)
             // Create client
@@ -261,7 +261,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for ListDatabases</summary>
-        public async Task ListDatabasesAsync_ResourceNames()
+        public async Task ListDatabasesResourceNamesAsync()
         {
             // Snippet: ListDatabasesAsync(InstanceName, string, int?, CallSettings)
             // Create client
@@ -306,7 +306,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDatabase</summary>
-        public void CreateDatabase_RequestObject()
+        public void CreateDatabaseRequestObject()
         {
             // Snippet: CreateDatabase(CreateDatabaseRequest, CallSettings)
             // Create client
@@ -340,7 +340,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDatabaseAsync</summary>
-        public async Task CreateDatabaseAsync_RequestObject()
+        public async Task CreateDatabaseRequestObjectAsync()
         {
             // Snippet: CreateDatabaseAsync(CreateDatabaseRequest, CallSettings)
             // Additional: CreateDatabaseAsync(CreateDatabaseRequest, CancellationToken)
@@ -436,7 +436,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDatabase</summary>
-        public void CreateDatabase_ResourceNames()
+        public void CreateDatabaseResourceNames()
         {
             // Snippet: CreateDatabase(InstanceName, string, CallSettings)
             // Create client
@@ -466,7 +466,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for CreateDatabaseAsync</summary>
-        public async Task CreateDatabaseAsync_ResourceNames()
+        public async Task CreateDatabaseResourceNamesAsync()
         {
             // Snippet: CreateDatabaseAsync(InstanceName, string, CallSettings)
             // Additional: CreateDatabaseAsync(InstanceName, string, CancellationToken)
@@ -497,7 +497,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabase</summary>
-        public void GetDatabase_RequestObject()
+        public void GetDatabaseRequestObject()
         {
             // Snippet: GetDatabase(GetDatabaseRequest, CallSettings)
             // Create client
@@ -513,7 +513,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabaseAsync</summary>
-        public async Task GetDatabaseAsync_RequestObject()
+        public async Task GetDatabaseRequestObjectAsync()
         {
             // Snippet: GetDatabaseAsync(GetDatabaseRequest, CallSettings)
             // Additional: GetDatabaseAsync(GetDatabaseRequest, CancellationToken)
@@ -557,7 +557,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabase</summary>
-        public void GetDatabase_ResourceNames()
+        public void GetDatabaseResourceNames()
         {
             // Snippet: GetDatabase(DatabaseName, CallSettings)
             // Create client
@@ -570,7 +570,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabaseAsync</summary>
-        public async Task GetDatabaseAsync_ResourceNames()
+        public async Task GetDatabaseResourceNamesAsync()
         {
             // Snippet: GetDatabaseAsync(DatabaseName, CallSettings)
             // Additional: GetDatabaseAsync(DatabaseName, CancellationToken)
@@ -584,7 +584,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDatabaseDdl</summary>
-        public void UpdateDatabaseDdl_RequestObject()
+        public void UpdateDatabaseDdlRequestObject()
         {
             // Snippet: UpdateDatabaseDdl(UpdateDatabaseDdlRequest, CallSettings)
             // Create client
@@ -618,7 +618,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDatabaseDdlAsync</summary>
-        public async Task UpdateDatabaseDdlAsync_RequestObject()
+        public async Task UpdateDatabaseDdlRequestObjectAsync()
         {
             // Snippet: UpdateDatabaseDdlAsync(UpdateDatabaseDdlRequest, CallSettings)
             // Additional: UpdateDatabaseDdlAsync(UpdateDatabaseDdlRequest, CancellationToken)
@@ -714,7 +714,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDatabaseDdl</summary>
-        public void UpdateDatabaseDdl_ResourceNames()
+        public void UpdateDatabaseDdlResourceNames()
         {
             // Snippet: UpdateDatabaseDdl(DatabaseName, IEnumerable<string>, CallSettings)
             // Create client
@@ -744,7 +744,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDatabaseDdlAsync</summary>
-        public async Task UpdateDatabaseDdlAsync_ResourceNames()
+        public async Task UpdateDatabaseDdlResourceNamesAsync()
         {
             // Snippet: UpdateDatabaseDdlAsync(DatabaseName, IEnumerable<string>, CallSettings)
             // Additional: UpdateDatabaseDdlAsync(DatabaseName, IEnumerable<string>, CancellationToken)
@@ -775,7 +775,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for DropDatabase</summary>
-        public void DropDatabase_RequestObject()
+        public void DropDatabaseRequestObject()
         {
             // Snippet: DropDatabase(DropDatabaseRequest, CallSettings)
             // Create client
@@ -791,7 +791,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for DropDatabaseAsync</summary>
-        public async Task DropDatabaseAsync_RequestObject()
+        public async Task DropDatabaseRequestObjectAsync()
         {
             // Snippet: DropDatabaseAsync(DropDatabaseRequest, CallSettings)
             // Additional: DropDatabaseAsync(DropDatabaseRequest, CancellationToken)
@@ -835,7 +835,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for DropDatabase</summary>
-        public void DropDatabase_ResourceNames()
+        public void DropDatabaseResourceNames()
         {
             // Snippet: DropDatabase(DatabaseName, CallSettings)
             // Create client
@@ -848,7 +848,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for DropDatabaseAsync</summary>
-        public async Task DropDatabaseAsync_ResourceNames()
+        public async Task DropDatabaseResourceNamesAsync()
         {
             // Snippet: DropDatabaseAsync(DatabaseName, CallSettings)
             // Additional: DropDatabaseAsync(DatabaseName, CancellationToken)
@@ -862,7 +862,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabaseDdl</summary>
-        public void GetDatabaseDdl_RequestObject()
+        public void GetDatabaseDdlRequestObject()
         {
             // Snippet: GetDatabaseDdl(GetDatabaseDdlRequest, CallSettings)
             // Create client
@@ -878,7 +878,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabaseDdlAsync</summary>
-        public async Task GetDatabaseDdlAsync_RequestObject()
+        public async Task GetDatabaseDdlRequestObjectAsync()
         {
             // Snippet: GetDatabaseDdlAsync(GetDatabaseDdlRequest, CallSettings)
             // Additional: GetDatabaseDdlAsync(GetDatabaseDdlRequest, CancellationToken)
@@ -922,7 +922,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabaseDdl</summary>
-        public void GetDatabaseDdl_ResourceNames()
+        public void GetDatabaseDdlResourceNames()
         {
             // Snippet: GetDatabaseDdl(DatabaseName, CallSettings)
             // Create client
@@ -935,7 +935,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetDatabaseDdlAsync</summary>
-        public async Task GetDatabaseDdlAsync_ResourceNames()
+        public async Task GetDatabaseDdlResourceNamesAsync()
         {
             // Snippet: GetDatabaseDdlAsync(DatabaseName, CallSettings)
             // Additional: GetDatabaseDdlAsync(DatabaseName, CancellationToken)
@@ -949,7 +949,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicyRequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
@@ -966,7 +966,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
@@ -1013,7 +1013,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_ResourceNames()
+        public async Task SetIamPolicyResourceNamesAsync()
         {
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicyRequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
@@ -1104,7 +1104,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
@@ -1117,7 +1117,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_ResourceNames()
+        public async Task GetIamPolicyResourceNamesAsync()
         {
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissionsRequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
+        public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
@@ -1195,7 +1195,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_ResourceNames()
+        public async Task TestIamPermissionsResourceNamesAsync()
         {
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)

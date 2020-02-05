@@ -16,7 +16,6 @@
 
 namespace Google.Cloud.Asset.V1.Snippets
 {
-    using Google.Api.Gax;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -25,7 +24,7 @@ namespace Google.Cloud.Asset.V1.Snippets
     public sealed class GeneratedAssetServiceClientSnippets
     {
         /// <summary>Snippet for ExportAssets</summary>
-        public void ExportAssets_RequestObject()
+        public void ExportAssetsRequestObject()
         {
             // Snippet: ExportAssets(ExportAssetsRequest, CallSettings)
             // Create client
@@ -33,7 +32,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Parent = "",
                 ReadTime = new Timestamp(),
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
@@ -61,7 +60,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for ExportAssetsAsync</summary>
-        public async Task ExportAssetsAsync_RequestObject()
+        public async Task ExportAssetsRequestObjectAsync()
         {
             // Snippet: ExportAssetsAsync(ExportAssetsRequest, CallSettings)
             // Additional: ExportAssetsAsync(ExportAssetsRequest, CancellationToken)
@@ -70,7 +69,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Parent = "",
                 ReadTime = new Timestamp(),
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
@@ -98,7 +97,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for BatchGetAssetsHistory</summary>
-        public void BatchGetAssetsHistory_RequestObject()
+        public void BatchGetAssetsHistoryRequestObject()
         {
             // Snippet: BatchGetAssetsHistory(BatchGetAssetsHistoryRequest, CallSettings)
             // Create client
@@ -106,7 +105,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Parent = "",
                 AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
@@ -117,7 +116,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for BatchGetAssetsHistoryAsync</summary>
-        public async Task BatchGetAssetsHistoryAsync_RequestObject()
+        public async Task BatchGetAssetsHistoryRequestObjectAsync()
         {
             // Snippet: BatchGetAssetsHistoryAsync(BatchGetAssetsHistoryRequest, CallSettings)
             // Additional: BatchGetAssetsHistoryAsync(BatchGetAssetsHistoryRequest, CancellationToken)
@@ -126,7 +125,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Parent = "",
                 AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
@@ -137,7 +136,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeed</summary>
-        public void CreateFeed_RequestObject()
+        public void CreateFeedRequestObject()
         {
             // Snippet: CreateFeed(CreateFeedRequest, CallSettings)
             // Create client
@@ -155,7 +154,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeedAsync</summary>
-        public async Task CreateFeedAsync_RequestObject()
+        public async Task CreateFeedRequestObjectAsync()
         {
             // Snippet: CreateFeedAsync(CreateFeedRequest, CallSettings)
             // Additional: CreateFeedAsync(CreateFeedRequest, CancellationToken)
@@ -201,7 +200,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for GetFeed</summary>
-        public void GetFeed_RequestObject()
+        public void GetFeedRequestObject()
         {
             // Snippet: GetFeed(GetFeedRequest, CallSettings)
             // Create client
@@ -217,7 +216,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for GetFeedAsync</summary>
-        public async Task GetFeedAsync_RequestObject()
+        public async Task GetFeedRequestObjectAsync()
         {
             // Snippet: GetFeedAsync(GetFeedRequest, CallSettings)
             // Additional: GetFeedAsync(GetFeedRequest, CancellationToken)
@@ -261,7 +260,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for GetFeed</summary>
-        public void GetFeed_ResourceNames()
+        public void GetFeedResourceNames()
         {
             // Snippet: GetFeed(FeedName, CallSettings)
             // Create client
@@ -274,7 +273,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for GetFeedAsync</summary>
-        public async Task GetFeedAsync_ResourceNames()
+        public async Task GetFeedResourceNamesAsync()
         {
             // Snippet: GetFeedAsync(FeedName, CallSettings)
             // Additional: GetFeedAsync(FeedName, CancellationToken)
@@ -288,7 +287,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for ListFeeds</summary>
-        public void ListFeeds_RequestObject()
+        public void ListFeedsRequestObject()
         {
             // Snippet: ListFeeds(ListFeedsRequest, CallSettings)
             // Create client
@@ -301,7 +300,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for ListFeedsAsync</summary>
-        public async Task ListFeedsAsync_RequestObject()
+        public async Task ListFeedsRequestObjectAsync()
         {
             // Snippet: ListFeedsAsync(ListFeedsRequest, CallSettings)
             // Additional: ListFeedsAsync(ListFeedsRequest, CancellationToken)
@@ -342,7 +341,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateFeed</summary>
-        public void UpdateFeed_RequestObject()
+        public void UpdateFeedRequestObject()
         {
             // Snippet: UpdateFeed(UpdateFeedRequest, CallSettings)
             // Create client
@@ -359,7 +358,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateFeedAsync</summary>
-        public async Task UpdateFeedAsync_RequestObject()
+        public async Task UpdateFeedRequestObjectAsync()
         {
             // Snippet: UpdateFeedAsync(UpdateFeedRequest, CallSettings)
             // Additional: UpdateFeedAsync(UpdateFeedRequest, CancellationToken)
@@ -404,7 +403,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteFeed</summary>
-        public void DeleteFeed_RequestObject()
+        public void DeleteFeedRequestObject()
         {
             // Snippet: DeleteFeed(DeleteFeedRequest, CallSettings)
             // Create client
@@ -420,7 +419,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteFeedAsync</summary>
-        public async Task DeleteFeedAsync_RequestObject()
+        public async Task DeleteFeedRequestObjectAsync()
         {
             // Snippet: DeleteFeedAsync(DeleteFeedRequest, CallSettings)
             // Additional: DeleteFeedAsync(DeleteFeedRequest, CancellationToken)
@@ -464,7 +463,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteFeed</summary>
-        public void DeleteFeed_ResourceNames()
+        public void DeleteFeedResourceNames()
         {
             // Snippet: DeleteFeed(FeedName, CallSettings)
             // Create client
@@ -477,7 +476,7 @@ namespace Google.Cloud.Asset.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteFeedAsync</summary>
-        public async Task DeleteFeedAsync_ResourceNames()
+        public async Task DeleteFeedResourceNamesAsync()
         {
             // Snippet: DeleteFeedAsync(FeedName, CallSettings)
             // Additional: DeleteFeedAsync(FeedName, CancellationToken)

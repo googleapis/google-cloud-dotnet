@@ -252,7 +252,7 @@ namespace Google.Cloud.Scheduler.V1
         /// </summary>
         public gcsv::JobName JobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::JobName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -134,7 +134,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
@@ -159,7 +159,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
@@ -288,7 +288,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
@@ -312,7 +312,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
@@ -446,7 +446,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
@@ -472,7 +472,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest

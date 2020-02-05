@@ -135,7 +135,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateProductSet_ResourceNames()
+        public void CreateProductSetResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -160,7 +160,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateProductSetAsync_ResourceNames()
+        public async stt::Task CreateProductSetResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -283,7 +283,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetProductSet_ResourceNames()
+        public void GetProductSetResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -306,7 +306,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetProductSetAsync_ResourceNames()
+        public async stt::Task GetProductSetResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -497,7 +497,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteProductSet_ResourceNames()
+        public void DeleteProductSetResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -513,7 +513,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteProductSetAsync_ResourceNames()
+        public async stt::Task DeleteProductSetResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -650,7 +650,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateProduct_ResourceNames()
+        public void CreateProductResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -679,7 +679,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateProductAsync_ResourceNames()
+        public async stt::Task CreateProductResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -822,7 +822,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetProduct_ResourceNames()
+        public void GetProductResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -849,7 +849,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetProductAsync_ResourceNames()
+        public async stt::Task GetProductResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1060,7 +1060,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteProduct_ResourceNames()
+        public void DeleteProductResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1076,7 +1076,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteProductAsync_ResourceNames()
+        public async stt::Task DeleteProductResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateReferenceImage_ResourceNames()
+        public void CreateReferenceImageResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1217,7 +1217,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateReferenceImageAsync_ResourceNames()
+        public async stt::Task CreateReferenceImageResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1309,7 +1309,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteReferenceImage_ResourceNames()
+        public void DeleteReferenceImageResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1325,7 +1325,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteReferenceImageAsync_ResourceNames()
+        public async stt::Task DeleteReferenceImageResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetReferenceImage_ResourceNames()
+        public void GetReferenceImageResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1456,7 +1456,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetReferenceImageAsync_ResourceNames()
+        public async stt::Task GetReferenceImageResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1550,7 +1550,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AddProductToProductSet_ResourceNames()
+        public void AddProductToProductSetResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1567,7 +1567,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task AddProductToProductSetAsync_ResourceNames()
+        public async stt::Task AddProductToProductSetResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1655,7 +1655,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void RemoveProductFromProductSet_ResourceNames()
+        public void RemoveProductFromProductSetResourceNames()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1672,7 +1672,7 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task RemoveProductFromProductSetAsync_ResourceNames()
+        public async stt::Task RemoveProductFromProductSetResourceNamesAsync()
         {
             moq::Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new moq::Mock<ProductSearch.ProductSearchClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

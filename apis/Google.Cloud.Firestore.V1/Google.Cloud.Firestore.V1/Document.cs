@@ -54,11 +54,11 @@ namespace Google.Cloud.Firestore.V1 {
             "ygIZR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue" }, new[]{ "ValueType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ArrayValue), global::Google.Cloud.Firestore.V1.ArrayValue.Parser, new[]{ "Values" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.MapValue), global::Google.Cloud.Firestore.V1.MapValue.Parser, new[]{ "Fields" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue" }, new[]{ "ValueType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ArrayValue), global::Google.Cloud.Firestore.V1.ArrayValue.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.MapValue), global::Google.Cloud.Firestore.V1.MapValue.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -125,7 +125,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "fields" field.</summary>
     public const int FieldsFieldNumber = 2;
     private static readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec _map_fields_codec
-        = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser), 18);
+        = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value> fields_ = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>();
     /// <summary>
     /// The document's fields.
@@ -410,7 +410,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : 0; }
+      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NullValue; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.NullValue;
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "fields" field.</summary>
     public const int FieldsFieldNumber = 1;
     private static readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec _map_fields_codec
-        = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser), 10);
+        = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser), 10);
     private readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value> fields_ = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>();
     /// <summary>
     /// The map's fields.

@@ -129,7 +129,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateSource_ResourceNames()
+        public void CreateSourceResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -152,7 +152,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateSourceAsync_ResourceNames()
+        public async stt::Task CreateSourceResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -329,7 +329,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateFinding_ResourceNames()
+        public void CreateFindingResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -366,7 +366,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateFindingAsync_ResourceNames()
+        public async stt::Task CreateFindingResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -511,7 +511,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -536,7 +536,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -655,7 +655,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetOrganizationSettings_ResourceNames()
+        public void GetOrganizationSettingsResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -677,7 +677,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetOrganizationSettingsAsync_ResourceNames()
+        public async stt::Task GetOrganizationSettingsResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -793,7 +793,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSource_ResourceNames()
+        public void GetSourceResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -815,7 +815,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSourceAsync_ResourceNames()
+        public async stt::Task GetSourceResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -991,7 +991,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetFindingState_ResourceNames()
+        public void SetFindingStateResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetFindingStateAsync_ResourceNames()
+        public async stt::Task SetFindingStateResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1175,7 +1175,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1201,7 +1201,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1341,7 +1341,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -1368,7 +1368,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

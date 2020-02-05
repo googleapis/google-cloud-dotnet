@@ -192,31 +192,31 @@ namespace Google.Cloud.Firestore.V1 {
             "ZXN0b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.GetDocumentRequest), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser, new[]{ "Name", "Mask", "Transaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsRequest), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser, new[]{ "Parent", "CollectionId", "PageSize", "PageToken", "OrderBy", "Mask", "Transaction", "ReadTime", "ShowMissing" }, new[]{ "ConsistencySelector" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsResponse), global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser, new[]{ "Documents", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CreateDocumentRequest), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser, new[]{ "Parent", "CollectionId", "DocumentId", "Document", "Mask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser, new[]{ "Document", "UpdateMask", "Mask", "CurrentDocument" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser, new[]{ "Name", "CurrentDocument" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest), global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser, new[]{ "Database", "Documents", "Mask", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse), global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse.Parser, new[]{ "Found", "Missing", "Transaction", "ReadTime" }, new[]{ "Result" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionRequest), global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser, new[]{ "Database", "Options" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionResponse), global::Google.Cloud.Firestore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitRequest), global::Google.Cloud.Firestore.V1.CommitRequest.Parser, new[]{ "Database", "Writes", "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitResponse), global::Google.Cloud.Firestore.V1.CommitResponse.Parser, new[]{ "WriteResults", "CommitTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RollbackRequest), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser, new[]{ "Database", "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryRequest), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "QueryType", "ConsistencySelector" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryResponse), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser, new[]{ "Transaction", "Document", "ReadTime", "SkippedResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteRequest), global::Google.Cloud.Firestore.V1.WriteRequest.Parser, new[]{ "Database", "StreamId", "Writes", "StreamToken", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteResponse), global::Google.Cloud.Firestore.V1.WriteResponse.Parser, new[]{ "StreamId", "StreamToken", "WriteResults", "CommitTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenRequest), global::Google.Cloud.Firestore.V1.ListenRequest.Parser, new[]{ "Database", "AddTarget", "RemoveTarget", "Labels" }, new[]{ "TargetChange" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenResponse), global::Google.Cloud.Firestore.V1.ListenResponse.Parser, new[]{ "TargetChange", "DocumentChange", "DocumentDelete", "DocumentRemove", "Filter" }, new[]{ "ResponseType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target), global::Google.Cloud.Firestore.V1.Target.Parser, new[]{ "Query", "Documents", "ResumeToken", "ReadTime", "TargetId", "Once" }, new[]{ "TargetType", "ResumeType" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target.Types.DocumentsTarget), global::Google.Cloud.Firestore.V1.Target.Types.DocumentsTarget.Parser, new[]{ "Documents" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target.Types.QueryTarget), global::Google.Cloud.Firestore.V1.Target.Types.QueryTarget.Parser, new[]{ "Parent", "StructuredQuery" }, new[]{ "QueryType" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TargetChange), global::Google.Cloud.Firestore.V1.TargetChange.Parser, new[]{ "TargetChangeType", "TargetIds", "Cause", "ResumeToken", "ReadTime" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse), global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser, new[]{ "CollectionIds", "NextPageToken" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.GetDocumentRequest), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser, new[]{ "Name", "Mask", "Transaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsRequest), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser, new[]{ "Parent", "CollectionId", "PageSize", "PageToken", "OrderBy", "Mask", "Transaction", "ReadTime", "ShowMissing" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsResponse), global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser, new[]{ "Documents", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CreateDocumentRequest), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser, new[]{ "Parent", "CollectionId", "DocumentId", "Document", "Mask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser, new[]{ "Document", "UpdateMask", "Mask", "CurrentDocument" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser, new[]{ "Name", "CurrentDocument" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest), global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser, new[]{ "Database", "Documents", "Mask", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse), global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse.Parser, new[]{ "Found", "Missing", "Transaction", "ReadTime" }, new[]{ "Result" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionRequest), global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser, new[]{ "Database", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionResponse), global::Google.Cloud.Firestore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitRequest), global::Google.Cloud.Firestore.V1.CommitRequest.Parser, new[]{ "Database", "Writes", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitResponse), global::Google.Cloud.Firestore.V1.CommitResponse.Parser, new[]{ "WriteResults", "CommitTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RollbackRequest), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser, new[]{ "Database", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryRequest), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryResponse), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser, new[]{ "Transaction", "Document", "ReadTime", "SkippedResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteRequest), global::Google.Cloud.Firestore.V1.WriteRequest.Parser, new[]{ "Database", "StreamId", "Writes", "StreamToken", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteResponse), global::Google.Cloud.Firestore.V1.WriteResponse.Parser, new[]{ "StreamId", "StreamToken", "WriteResults", "CommitTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenRequest), global::Google.Cloud.Firestore.V1.ListenRequest.Parser, new[]{ "Database", "AddTarget", "RemoveTarget", "Labels" }, new[]{ "TargetChange" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenResponse), global::Google.Cloud.Firestore.V1.ListenResponse.Parser, new[]{ "TargetChange", "DocumentChange", "DocumentDelete", "DocumentRemove", "Filter" }, new[]{ "ResponseType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target), global::Google.Cloud.Firestore.V1.Target.Parser, new[]{ "Query", "Documents", "ResumeToken", "ReadTime", "TargetId", "Once" }, new[]{ "TargetType", "ResumeType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target.Types.DocumentsTarget), global::Google.Cloud.Firestore.V1.Target.Types.DocumentsTarget.Parser, new[]{ "Documents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target.Types.QueryTarget), global::Google.Cloud.Firestore.V1.Target.Types.QueryTarget.Parser, new[]{ "Parent", "StructuredQuery" }, new[]{ "QueryType" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TargetChange), global::Google.Cloud.Firestore.V1.TargetChange.Parser, new[]{ "TargetChangeType", "TargetIds", "Cause", "ResumeToken", "ReadTime" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse), global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser, new[]{ "CollectionIds", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4017,7 +4017,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels associated with this write request.
@@ -4488,7 +4488,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels associated with this target change.
@@ -5767,7 +5767,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     /// <summary>Field number for the "target_change_type" field.</summary>
     public const int TargetChangeTypeFieldNumber = 1;
-    private global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType targetChangeType_ = 0;
+    private global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType targetChangeType_ = global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType.NoChange;
     /// <summary>
     /// The type of change that occurred.
     /// </summary>
@@ -5874,7 +5874,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TargetChangeType != 0) hash ^= TargetChangeType.GetHashCode();
+      if (TargetChangeType != global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType.NoChange) hash ^= TargetChangeType.GetHashCode();
       hash ^= targetIds_.GetHashCode();
       if (cause_ != null) hash ^= Cause.GetHashCode();
       if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
@@ -5892,7 +5892,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TargetChangeType != 0) {
+      if (TargetChangeType != global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType.NoChange) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TargetChangeType);
       }
@@ -5917,7 +5917,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TargetChangeType != 0) {
+      if (TargetChangeType != global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType.NoChange) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TargetChangeType);
       }
       size += targetIds_.CalculateSize(_repeated_targetIds_codec);
@@ -5941,7 +5941,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (other == null) {
         return;
       }
-      if (other.TargetChangeType != 0) {
+      if (other.TargetChangeType != global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType.NoChange) {
         TargetChangeType = other.TargetChangeType;
       }
       targetIds_.Add(other.targetIds_);

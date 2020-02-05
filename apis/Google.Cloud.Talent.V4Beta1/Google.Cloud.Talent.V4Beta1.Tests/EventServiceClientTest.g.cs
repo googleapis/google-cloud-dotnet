@@ -132,7 +132,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateClientEvent_ResourceNames()
+        public void CreateClientEventResourceNames()
         {
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
@@ -157,7 +157,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateClientEventAsync_ResourceNames()
+        public async stt::Task CreateClientEventResourceNamesAsync()
         {
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest

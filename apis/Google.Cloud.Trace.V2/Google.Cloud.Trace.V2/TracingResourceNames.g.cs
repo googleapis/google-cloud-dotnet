@@ -25,7 +25,7 @@ namespace Google.Cloud.Trace.V2
         /// </summary>
         public gagr::ProjectName ProjectName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::ProjectName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gagr::ProjectName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

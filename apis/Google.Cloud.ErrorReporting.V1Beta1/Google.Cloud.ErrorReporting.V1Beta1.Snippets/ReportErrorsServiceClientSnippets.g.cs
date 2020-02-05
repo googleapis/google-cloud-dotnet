@@ -23,7 +23,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
     public sealed class GeneratedReportErrorsServiceClientSnippets
     {
         /// <summary>Snippet for ReportErrorEvent</summary>
-        public void ReportErrorEvent_RequestObject()
+        public void ReportErrorEventRequestObject()
         {
             // Snippet: ReportErrorEvent(ReportErrorEventRequest, CallSettings)
             // Create client
@@ -40,7 +40,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportErrorEventAsync</summary>
-        public async Task ReportErrorEventAsync_RequestObject()
+        public async Task ReportErrorEventRequestObjectAsync()
         {
             // Snippet: ReportErrorEventAsync(ReportErrorEventRequest, CallSettings)
             // Additional: ReportErrorEventAsync(ReportErrorEventRequest, CancellationToken)
@@ -87,7 +87,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportErrorEvent</summary>
-        public void ReportErrorEvent_ResourceNames()
+        public void ReportErrorEventResourceNames()
         {
             // Snippet: ReportErrorEvent(ProjectName, ReportedErrorEvent, CallSettings)
             // Create client
@@ -101,7 +101,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for ReportErrorEventAsync</summary>
-        public async Task ReportErrorEventAsync_ResourceNames()
+        public async Task ReportErrorEventResourceNamesAsync()
         {
             // Snippet: ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CallSettings)
             // Additional: ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CancellationToken)

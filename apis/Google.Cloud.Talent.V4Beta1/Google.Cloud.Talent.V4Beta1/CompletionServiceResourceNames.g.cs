@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public TenantOrProjectName ParentAsTenantOrProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -32,7 +32,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public CompanyName CompanyAsCompanyName
         {
-            get => string.IsNullOrEmpty(Company) ? null : CompanyName.Parse(Company);
+            get => string.IsNullOrEmpty(Company) ? null : CompanyName.Parse(Company, allowUnparsed: true);
             set => Company = value?.ToString() ?? "";
         }
     }

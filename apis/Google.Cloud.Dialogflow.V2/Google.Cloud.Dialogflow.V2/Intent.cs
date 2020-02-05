@@ -271,39 +271,39 @@ namespace Google.Cloud.Dialogflow.V2 {
             "REaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.IntentView), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent), global::Google.Cloud.Dialogflow.V2.Intent.Parser, new[]{ "Name", "DisplayName", "WebhookState", "Priority", "IsFallback", "MlDisabled", "InputContextNames", "Events", "TrainingPhrases", "Action", "OutputContexts", "ResetContexts", "Parameters", "Messages", "DefaultResponsePlatforms", "RootFollowupIntentName", "ParentFollowupIntentName", "FollowupIntentInfo" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase), global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Parser, new[]{ "Name", "Type", "Parts", "TimesAddedCount" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part), global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part.Parser, new[]{ "Text", "EntityType", "Alias", "UserDefined" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter), global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter.Parser, new[]{ "Name", "DisplayName", "Value", "DefaultValue", "EntityTypeDisplayName", "Mandatory", "Prompts", "IsList" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Parser, new[]{ "Text", "Image", "QuickReplies", "Card", "Payload", "SimpleResponses", "BasicCard", "Suggestions", "LinkOutSuggestion", "ListSelect", "CarouselSelect", "BrowseCarouselCard", "TableCard", "MediaContent", "Platform" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Text), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Text.Parser, new[]{ "Text_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image.Parser, new[]{ "ImageUri", "AccessibilityText" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.QuickReplies), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.QuickReplies.Parser, new[]{ "Title", "QuickReplies_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Parser, new[]{ "Title", "Subtitle", "ImageUri", "Buttons" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Types.Button), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Types.Button.Parser, new[]{ "Text", "Postback" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponse), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponse.Parser, new[]{ "TextToSpeech", "Ssml", "DisplayText" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponses), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponses.Parser, new[]{ "SimpleResponses_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Parser, new[]{ "Title", "Subtitle", "FormattedText", "Image", "Buttons" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Parser, new[]{ "Title", "OpenUriAction" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction.Parser, new[]{ "Uri" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestion), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestion.Parser, new[]{ "Title" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestions), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestions.Parser, new[]{ "Suggestions_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.LinkOutSuggestion), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.LinkOutSuggestion.Parser, new[]{ "DestinationName", "Uri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Parser, new[]{ "Title", "Items", "Subtitle" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Types.Item), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Types.Item.Parser, new[]{ "Info", "Title", "Description", "Image" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Parser, new[]{ "Items" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Types.Item), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Types.Item.Parser, new[]{ "Info", "Title", "Description", "Image" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo.Parser, new[]{ "Key", "Synonyms" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Parser, new[]{ "MediaType", "MediaObjects" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaObject), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaObject.Parser, new[]{ "Name", "Description", "LargeImage", "Icon", "ContentUrl" }, new[]{ "Image" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Parser, new[]{ "Items", "ImageDisplayOptions" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Parser, new[]{ "OpenUriAction", "Title", "Description", "Image", "Footer" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Parser, new[]{ "Url", "UrlTypeHint" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint) }, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCard), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCard.Parser, new[]{ "Title", "Subtitle", "Image", "ColumnProperties", "Rows", "Buttons" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Parser, new[]{ "Header", "HorizontalAlignment" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardRow), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardRow.Parser, new[]{ "Cells", "DividerAfter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardCell), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardCell.Parser, new[]{ "Text" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo), global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo.Parser, new[]{ "FollowupIntentName", "ParentFollowupIntentName" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListIntentsRequest), global::Google.Cloud.Dialogflow.V2.ListIntentsRequest.Parser, new[]{ "Parent", "LanguageCode", "IntentView", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListIntentsResponse), global::Google.Cloud.Dialogflow.V2.ListIntentsResponse.Parser, new[]{ "Intents", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetIntentRequest), global::Google.Cloud.Dialogflow.V2.GetIntentRequest.Parser, new[]{ "Name", "LanguageCode", "IntentView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateIntentRequest), global::Google.Cloud.Dialogflow.V2.CreateIntentRequest.Parser, new[]{ "Parent", "Intent", "LanguageCode", "IntentView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateIntentRequest), global::Google.Cloud.Dialogflow.V2.UpdateIntentRequest.Parser, new[]{ "Intent", "LanguageCode", "UpdateMask", "IntentView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteIntentRequest), global::Google.Cloud.Dialogflow.V2.DeleteIntentRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsRequest), global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsRequest.Parser, new[]{ "Parent", "IntentBatchUri", "IntentBatchInline", "LanguageCode", "UpdateMask", "IntentView" }, new[]{ "IntentBatch" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsResponse), global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsResponse.Parser, new[]{ "Intents" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchDeleteIntentsRequest), global::Google.Cloud.Dialogflow.V2.BatchDeleteIntentsRequest.Parser, new[]{ "Parent", "Intents" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.IntentBatch), global::Google.Cloud.Dialogflow.V2.IntentBatch.Parser, new[]{ "Intents" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.IntentView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent), global::Google.Cloud.Dialogflow.V2.Intent.Parser, new[]{ "Name", "DisplayName", "WebhookState", "Priority", "IsFallback", "MlDisabled", "InputContextNames", "Events", "TrainingPhrases", "Action", "OutputContexts", "ResetContexts", "Parameters", "Messages", "DefaultResponsePlatforms", "RootFollowupIntentName", "ParentFollowupIntentName", "FollowupIntentInfo" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase), global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Parser, new[]{ "Name", "Type", "Parts", "TimesAddedCount" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part), global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part.Parser, new[]{ "Text", "EntityType", "Alias", "UserDefined" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter), global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter.Parser, new[]{ "Name", "DisplayName", "Value", "DefaultValue", "EntityTypeDisplayName", "Mandatory", "Prompts", "IsList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Parser, new[]{ "Text", "Image", "QuickReplies", "Card", "Payload", "SimpleResponses", "BasicCard", "Suggestions", "LinkOutSuggestion", "ListSelect", "CarouselSelect", "BrowseCarouselCard", "TableCard", "MediaContent", "Platform" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Text), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Text.Parser, new[]{ "Text_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image.Parser, new[]{ "ImageUri", "AccessibilityText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.QuickReplies), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.QuickReplies.Parser, new[]{ "Title", "QuickReplies_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Parser, new[]{ "Title", "Subtitle", "ImageUri", "Buttons" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Types.Button), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Types.Button.Parser, new[]{ "Text", "Postback" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponse), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponse.Parser, new[]{ "TextToSpeech", "Ssml", "DisplayText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponses), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponses.Parser, new[]{ "SimpleResponses_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Parser, new[]{ "Title", "Subtitle", "FormattedText", "Image", "Buttons" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Parser, new[]{ "Title", "OpenUriAction" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction.Parser, new[]{ "Uri" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestion), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestion.Parser, new[]{ "Title" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestions), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestions.Parser, new[]{ "Suggestions_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.LinkOutSuggestion), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.LinkOutSuggestion.Parser, new[]{ "DestinationName", "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Parser, new[]{ "Title", "Items", "Subtitle" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Types.Item), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Types.Item.Parser, new[]{ "Info", "Title", "Description", "Image" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Parser, new[]{ "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Types.Item), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Types.Item.Parser, new[]{ "Info", "Title", "Description", "Image" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo.Parser, new[]{ "Key", "Synonyms" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Parser, new[]{ "MediaType", "MediaObjects" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaObject), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaObject.Parser, new[]{ "Name", "Description", "LargeImage", "Icon", "ContentUrl" }, new[]{ "Image" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Parser, new[]{ "Items", "ImageDisplayOptions" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Parser, new[]{ "OpenUriAction", "Title", "Description", "Image", "Footer" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Parser, new[]{ "Url", "UrlTypeHint" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint) }, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCard), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCard.Parser, new[]{ "Title", "Subtitle", "Image", "ColumnProperties", "Rows", "Buttons" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Parser, new[]{ "Header", "HorizontalAlignment" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardRow), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardRow.Parser, new[]{ "Cells", "DividerAfter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardCell), global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardCell.Parser, new[]{ "Text" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo), global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo.Parser, new[]{ "FollowupIntentName", "ParentFollowupIntentName" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListIntentsRequest), global::Google.Cloud.Dialogflow.V2.ListIntentsRequest.Parser, new[]{ "Parent", "LanguageCode", "IntentView", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListIntentsResponse), global::Google.Cloud.Dialogflow.V2.ListIntentsResponse.Parser, new[]{ "Intents", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetIntentRequest), global::Google.Cloud.Dialogflow.V2.GetIntentRequest.Parser, new[]{ "Name", "LanguageCode", "IntentView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateIntentRequest), global::Google.Cloud.Dialogflow.V2.CreateIntentRequest.Parser, new[]{ "Parent", "Intent", "LanguageCode", "IntentView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateIntentRequest), global::Google.Cloud.Dialogflow.V2.UpdateIntentRequest.Parser, new[]{ "Intent", "LanguageCode", "UpdateMask", "IntentView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteIntentRequest), global::Google.Cloud.Dialogflow.V2.DeleteIntentRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsRequest), global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsRequest.Parser, new[]{ "Parent", "IntentBatchUri", "IntentBatchInline", "LanguageCode", "UpdateMask", "IntentView" }, new[]{ "IntentBatch" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsResponse), global::Google.Cloud.Dialogflow.V2.BatchUpdateIntentsResponse.Parser, new[]{ "Intents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.BatchDeleteIntentsRequest), global::Google.Cloud.Dialogflow.V2.BatchDeleteIntentsRequest.Parser, new[]{ "Parent", "Intents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.IntentBatch), global::Google.Cloud.Dialogflow.V2.IntentBatch.Parser, new[]{ "Intents" }, null, null, null, null)
           }));
     }
     #endregion
@@ -418,7 +418,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "webhook_state" field.</summary>
     public const int WebhookStateFieldNumber = 6;
-    private global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState webhookState_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState webhookState_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState.Unspecified;
     /// <summary>
     /// Optional. Indicates whether webhooks are enabled for the intent.
     /// </summary>
@@ -706,7 +706,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (WebhookState != 0) hash ^= WebhookState.GetHashCode();
+      if (WebhookState != global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState.Unspecified) hash ^= WebhookState.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
       if (IsFallback != false) hash ^= IsFallback.GetHashCode();
       if (MlDisabled != false) hash ^= MlDisabled.GetHashCode();
@@ -751,7 +751,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(32);
         output.WriteBool(IsFallback);
       }
-      if (WebhookState != 0) {
+      if (WebhookState != global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) WebhookState);
       }
@@ -797,7 +797,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (WebhookState != 0) {
+      if (WebhookState != global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WebhookState);
       }
       if (Priority != 0) {
@@ -846,7 +846,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.WebhookState != 0) {
+      if (other.WebhookState != global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState.Unspecified) {
         WebhookState = other.WebhookState;
       }
       if (other.Priority != 0) {
@@ -1045,7 +1045,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 2;
-        private global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type type_ = 0;
+        private global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type type_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type.Unspecified;
         /// <summary>
         /// Required. The type of the training phrase.
         /// </summary>
@@ -1128,7 +1128,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
-          if (Type != 0) hash ^= Type.GetHashCode();
+          if (Type != global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type.Unspecified) hash ^= Type.GetHashCode();
           hash ^= parts_.GetHashCode();
           if (TimesAddedCount != 0) hash ^= TimesAddedCount.GetHashCode();
           if (_unknownFields != null) {
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Type);
           }
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
-          if (Type != 0) {
+          if (Type != global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
           }
           size += parts_.CalculateSize(_repeated_parts_codec);
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (other.Name.Length != 0) {
             Name = other.Name;
           }
-          if (other.Type != 0) {
+          if (other.Type != global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type.Unspecified) {
             Type = other.Type;
           }
           parts_.Add(other.parts_);
@@ -2133,7 +2133,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         /// <summary>Field number for the "platform" field.</summary>
         public const int PlatformFieldNumber = 6;
-        private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform platform_ = 0;
+        private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform platform_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform.Unspecified;
         /// <summary>
         /// Optional. The platform that this message is intended for.
         /// </summary>
@@ -2225,7 +2225,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (messageCase_ == MessageOneofCase.BrowseCarouselCard) hash ^= BrowseCarouselCard.GetHashCode();
           if (messageCase_ == MessageOneofCase.TableCard) hash ^= TableCard.GetHashCode();
           if (messageCase_ == MessageOneofCase.MediaContent) hash ^= MediaContent.GetHashCode();
-          if (Platform != 0) hash ^= Platform.GetHashCode();
+          if (Platform != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform.Unspecified) hash ^= Platform.GetHashCode();
           hash ^= (int) messageCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2260,7 +2260,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteRawTag(42);
             output.WriteMessage(Payload);
           }
-          if (Platform != 0) {
+          if (Platform != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform.Unspecified) {
             output.WriteRawTag(48);
             output.WriteEnum((int) Platform);
           }
@@ -2350,7 +2350,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (messageCase_ == MessageOneofCase.MediaContent) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(MediaContent);
           }
-          if (Platform != 0) {
+          if (Platform != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
           }
           if (_unknownFields != null) {
@@ -2364,7 +2364,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (other == null) {
             return;
           }
-          if (other.Platform != 0) {
+          if (other.Platform != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform.Unspecified) {
             Platform = other.Platform;
           }
           switch (other.MessageCase) {
@@ -5905,7 +5905,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             /// <summary>Field number for the "media_type" field.</summary>
             public const int MediaTypeFieldNumber = 1;
-            private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType mediaType_ = 0;
+            private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType mediaType_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified;
             /// <summary>
             /// Optional. What type of media is the content (ie "audio").
             /// </summary>
@@ -5951,7 +5951,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override int GetHashCode() {
               int hash = 1;
-              if (MediaType != 0) hash ^= MediaType.GetHashCode();
+              if (MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) hash ^= MediaType.GetHashCode();
               hash ^= mediaObjects_.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -5966,7 +5966,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
-              if (MediaType != 0) {
+              if (MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) MediaType);
               }
@@ -5979,7 +5979,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
               int size = 0;
-              if (MediaType != 0) {
+              if (MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MediaType);
               }
               size += mediaObjects_.CalculateSize(_repeated_mediaObjects_codec);
@@ -5994,7 +5994,7 @@ namespace Google.Cloud.Dialogflow.V2 {
               if (other == null) {
                 return;
               }
-              if (other.MediaType != 0) {
+              if (other.MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) {
                 MediaType = other.MediaType;
               }
               mediaObjects_.Add(other.mediaObjects_);
@@ -6405,7 +6405,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             /// <summary>Field number for the "image_display_options" field.</summary>
             public const int ImageDisplayOptionsFieldNumber = 2;
-            private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions imageDisplayOptions_ = 0;
+            private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions imageDisplayOptions_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions.Unspecified;
             /// <summary>
             /// Optional. Settings for displaying the image. Applies to every image in
             /// [items][google.cloud.dialogflow.v2.Intent.Message.BrowseCarouselCard.items].
@@ -6440,7 +6440,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             public override int GetHashCode() {
               int hash = 1;
               hash ^= items_.GetHashCode();
-              if (ImageDisplayOptions != 0) hash ^= ImageDisplayOptions.GetHashCode();
+              if (ImageDisplayOptions != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions.Unspecified) hash ^= ImageDisplayOptions.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -6455,7 +6455,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
               items_.WriteTo(output, _repeated_items_codec);
-              if (ImageDisplayOptions != 0) {
+              if (ImageDisplayOptions != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions.Unspecified) {
                 output.WriteRawTag(16);
                 output.WriteEnum((int) ImageDisplayOptions);
               }
@@ -6468,7 +6468,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             public int CalculateSize() {
               int size = 0;
               size += items_.CalculateSize(_repeated_items_codec);
-              if (ImageDisplayOptions != 0) {
+              if (ImageDisplayOptions != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ImageDisplayOptions);
               }
               if (_unknownFields != null) {
@@ -6483,7 +6483,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 return;
               }
               items_.Add(other.items_);
-              if (other.ImageDisplayOptions != 0) {
+              if (other.ImageDisplayOptions != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions.Unspecified) {
                 ImageDisplayOptions = other.ImageDisplayOptions;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -6879,7 +6879,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                     /// <summary>Field number for the "url_type_hint" field.</summary>
                     public const int UrlTypeHintFieldNumber = 3;
-                    private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint urlTypeHint_ = 0;
+                    private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint urlTypeHint_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint.Unspecified;
                     /// <summary>
                     /// Optional. Specifies the type of viewer that is used when opening
                     /// the URL. Defaults to opening via web browser.
@@ -6914,7 +6914,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     public override int GetHashCode() {
                       int hash = 1;
                       if (Url.Length != 0) hash ^= Url.GetHashCode();
-                      if (UrlTypeHint != 0) hash ^= UrlTypeHint.GetHashCode();
+                      if (UrlTypeHint != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint.Unspecified) hash ^= UrlTypeHint.GetHashCode();
                       if (_unknownFields != null) {
                         hash ^= _unknownFields.GetHashCode();
                       }
@@ -6932,7 +6932,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                         output.WriteRawTag(10);
                         output.WriteString(Url);
                       }
-                      if (UrlTypeHint != 0) {
+                      if (UrlTypeHint != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint.Unspecified) {
                         output.WriteRawTag(24);
                         output.WriteEnum((int) UrlTypeHint);
                       }
@@ -6947,7 +6947,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                       if (Url.Length != 0) {
                         size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
                       }
-                      if (UrlTypeHint != 0) {
+                      if (UrlTypeHint != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint.Unspecified) {
                         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UrlTypeHint);
                       }
                       if (_unknownFields != null) {
@@ -6964,7 +6964,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                       if (other.Url.Length != 0) {
                         Url = other.Url;
                       }
-                      if (other.UrlTypeHint != 0) {
+                      if (other.UrlTypeHint != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint.Unspecified) {
                         UrlTypeHint = other.UrlTypeHint;
                       }
                       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -7354,7 +7354,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             /// <summary>Field number for the "horizontal_alignment" field.</summary>
             public const int HorizontalAlignmentFieldNumber = 2;
-            private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment horizontalAlignment_ = 0;
+            private global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment horizontalAlignment_ = global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment.Unspecified;
             /// <summary>
             /// Optional. Defines text alignment for all cells in this column.
             /// </summary>
@@ -7388,7 +7388,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             public override int GetHashCode() {
               int hash = 1;
               if (Header.Length != 0) hash ^= Header.GetHashCode();
-              if (HorizontalAlignment != 0) hash ^= HorizontalAlignment.GetHashCode();
+              if (HorizontalAlignment != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment.Unspecified) hash ^= HorizontalAlignment.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -7406,7 +7406,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 output.WriteRawTag(10);
                 output.WriteString(Header);
               }
-              if (HorizontalAlignment != 0) {
+              if (HorizontalAlignment != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment.Unspecified) {
                 output.WriteRawTag(16);
                 output.WriteEnum((int) HorizontalAlignment);
               }
@@ -7421,7 +7421,7 @@ namespace Google.Cloud.Dialogflow.V2 {
               if (Header.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Header);
               }
-              if (HorizontalAlignment != 0) {
+              if (HorizontalAlignment != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HorizontalAlignment);
               }
               if (_unknownFields != null) {
@@ -7438,7 +7438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
               if (other.Header.Length != 0) {
                 Header = other.Header;
               }
-              if (other.HorizontalAlignment != 0) {
+              if (other.HorizontalAlignment != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment.Unspecified) {
                 HorizontalAlignment = other.HorizontalAlignment;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -8043,7 +8043,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "intent_view" field.</summary>
     public const int IntentViewFieldNumber = 3;
-    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified;
     /// <summary>
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
@@ -8110,7 +8110,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
-      if (IntentView != 0) hash ^= IntentView.GetHashCode();
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) hash ^= IntentView.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -8134,7 +8134,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(18);
         output.WriteString(LanguageCode);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) IntentView);
       }
@@ -8160,7 +8160,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntentView);
       }
       if (PageSize != 0) {
@@ -8186,7 +8186,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      if (other.IntentView != 0) {
+      if (other.IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         IntentView = other.IntentView;
       }
       if (other.PageSize != 0) {
@@ -8467,7 +8467,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "intent_view" field.</summary>
     public const int IntentViewFieldNumber = 3;
-    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified;
     /// <summary>
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
@@ -8503,7 +8503,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
-      if (IntentView != 0) hash ^= IntentView.GetHashCode();
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) hash ^= IntentView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8525,7 +8525,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(18);
         output.WriteString(LanguageCode);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) IntentView);
       }
@@ -8543,7 +8543,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntentView);
       }
       if (_unknownFields != null) {
@@ -8563,7 +8563,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      if (other.IntentView != 0) {
+      if (other.IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         IntentView = other.IntentView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -8685,7 +8685,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "intent_view" field.</summary>
     public const int IntentViewFieldNumber = 4;
-    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified;
     /// <summary>
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
@@ -8723,7 +8723,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (intent_ != null) hash ^= Intent.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
-      if (IntentView != 0) hash ^= IntentView.GetHashCode();
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) hash ^= IntentView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8749,7 +8749,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(26);
         output.WriteString(LanguageCode);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) IntentView);
       }
@@ -8770,7 +8770,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntentView);
       }
       if (_unknownFields != null) {
@@ -8796,7 +8796,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      if (other.IntentView != 0) {
+      if (other.IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         IntentView = other.IntentView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -8924,7 +8924,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "intent_view" field.</summary>
     public const int IntentViewFieldNumber = 4;
-    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified;
     /// <summary>
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
@@ -8962,7 +8962,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (intent_ != null) hash ^= Intent.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
-      if (IntentView != 0) hash ^= IntentView.GetHashCode();
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) hash ^= IntentView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8988,7 +8988,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(UpdateMask);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) IntentView);
       }
@@ -9009,7 +9009,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntentView);
       }
       if (_unknownFields != null) {
@@ -9038,7 +9038,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
-      if (other.IntentView != 0) {
+      if (other.IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         IntentView = other.IntentView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -9346,7 +9346,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     /// <summary>Field number for the "intent_view" field.</summary>
     public const int IntentViewFieldNumber = 6;
-    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = 0;
+    private global::Google.Cloud.Dialogflow.V2.IntentView intentView_ = global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified;
     /// <summary>
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
@@ -9408,7 +9408,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchInline) hash ^= IntentBatchInline.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
-      if (IntentView != 0) hash ^= IntentView.GetHashCode();
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) hash ^= IntentView.GetHashCode();
       hash ^= (int) intentBatchCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9443,7 +9443,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(UpdateMask);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) IntentView);
       }
@@ -9470,7 +9470,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
       }
-      if (IntentView != 0) {
+      if (IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntentView);
       }
       if (_unknownFields != null) {
@@ -9496,7 +9496,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
         UpdateMask.MergeFrom(other.UpdateMask);
       }
-      if (other.IntentView != 0) {
+      if (other.IntentView != global::Google.Cloud.Dialogflow.V2.IntentView.Unspecified) {
         IntentView = other.IntentView;
       }
       switch (other.IntentBatchCase) {

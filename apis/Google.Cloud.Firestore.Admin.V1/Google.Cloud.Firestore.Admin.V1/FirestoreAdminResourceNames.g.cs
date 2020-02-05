@@ -483,7 +483,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public CollectionGroupName ParentAsCollectionGroupName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : CollectionGroupName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : CollectionGroupName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -495,7 +495,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public CollectionGroupName ParentAsCollectionGroupName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : CollectionGroupName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : CollectionGroupName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -507,7 +507,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public gcfav::IndexName IndexName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcfav::IndexName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::IndexName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -519,7 +519,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public gcfav::IndexName IndexName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcfav::IndexName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::IndexName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -531,7 +531,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public gcfav::FieldName FieldName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcfav::FieldName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::FieldName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -543,7 +543,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public CollectionGroupName ParentAsCollectionGroupName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : CollectionGroupName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : CollectionGroupName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -555,7 +555,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public gcfav::DatabaseName DatabaseName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -567,7 +567,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public gcfav::DatabaseName DatabaseName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

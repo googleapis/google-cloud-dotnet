@@ -140,7 +140,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetRecommendation_ResourceNames()
+        public void GetRecommendationResourceNames()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
@@ -167,7 +167,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetRecommendationAsync_ResourceNames()
+        public async stt::Task GetRecommendationResourceNamesAsync()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             GetRecommendationRequest request = new GetRecommendationRequest
@@ -340,7 +340,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void MarkRecommendationClaimed_ResourceNames()
+        public void MarkRecommendationClaimedResourceNames()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
@@ -375,7 +375,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task MarkRecommendationClaimedAsync_ResourceNames()
+        public async stt::Task MarkRecommendationClaimedResourceNamesAsync()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationClaimedRequest request = new MarkRecommendationClaimedRequest
@@ -556,7 +556,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void MarkRecommendationSucceeded_ResourceNames()
+        public void MarkRecommendationSucceededResourceNames()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
@@ -591,7 +591,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task MarkRecommendationSucceededAsync_ResourceNames()
+        public async stt::Task MarkRecommendationSucceededResourceNamesAsync()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationSucceededRequest request = new MarkRecommendationSucceededRequest
@@ -772,7 +772,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void MarkRecommendationFailed_ResourceNames()
+        public void MarkRecommendationFailedResourceNames()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest
@@ -807,7 +807,7 @@ namespace Google.Cloud.Recommender.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task MarkRecommendationFailedAsync_ResourceNames()
+        public async stt::Task MarkRecommendationFailedResourceNamesAsync()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
             MarkRecommendationFailedRequest request = new MarkRecommendationFailedRequest

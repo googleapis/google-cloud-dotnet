@@ -49,12 +49,12 @@ namespace Grafeas.V1 {
             "ZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpgradeNote), global::Grafeas.V1.UpgradeNote.Parser, new[]{ "Package", "Version", "Distributions", "WindowsUpdate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpgradeDistribution), global::Grafeas.V1.UpgradeDistribution.Parser, new[]{ "CpeUri", "Classification", "Severity", "Cve" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.WindowsUpdate), global::Grafeas.V1.WindowsUpdate.Parser, new[]{ "Identity", "Title", "Description", "Categories", "KbArticleIds", "SupportUrl", "LastPublishedTimestamp" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.WindowsUpdate.Types.Identity), global::Grafeas.V1.WindowsUpdate.Types.Identity.Parser, new[]{ "UpdateId", "Revision" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.WindowsUpdate.Types.Category), global::Grafeas.V1.WindowsUpdate.Types.Category.Parser, new[]{ "CategoryId", "Name" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpgradeOccurrence), global::Grafeas.V1.UpgradeOccurrence.Parser, new[]{ "Package", "ParsedVersion", "Distribution", "WindowsUpdate" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpgradeNote), global::Grafeas.V1.UpgradeNote.Parser, new[]{ "Package", "Version", "Distributions", "WindowsUpdate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpgradeDistribution), global::Grafeas.V1.UpgradeDistribution.Parser, new[]{ "CpeUri", "Classification", "Severity", "Cve" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.WindowsUpdate), global::Grafeas.V1.WindowsUpdate.Parser, new[]{ "Identity", "Title", "Description", "Categories", "KbArticleIds", "SupportUrl", "LastPublishedTimestamp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.WindowsUpdate.Types.Identity), global::Grafeas.V1.WindowsUpdate.Types.Identity.Parser, new[]{ "UpdateId", "Revision" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.WindowsUpdate.Types.Category), global::Grafeas.V1.WindowsUpdate.Types.Category.Parser, new[]{ "CategoryId", "Name" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpgradeOccurrence), global::Grafeas.V1.UpgradeOccurrence.Parser, new[]{ "Package", "ParsedVersion", "Distribution", "WindowsUpdate" }, null, null, null, null)
           }));
     }
     #endregion

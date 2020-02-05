@@ -49,9 +49,9 @@ namespace Google.Cloud.Dataproc.V1 {
             "cm9jYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus), global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Parser, new[]{ "State", "InnerState", "Details", "StateStartTime" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata), global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata.Parser, new[]{ "ClusterName", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus), global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Parser, new[]{ "State", "InnerState", "Details", "StateStartTime" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata), global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata.Parser, new[]{ "ClusterName", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -100,7 +100,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State state_ = 0;
+    private global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State state_ = global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown;
     /// <summary>
     /// Output only. A message containing the operation state.
     /// </summary>
@@ -177,7 +177,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown) hash ^= State.GetHashCode();
       if (InnerState.Length != 0) hash ^= InnerState.GetHashCode();
       if (Details.Length != 0) hash ^= Details.GetHashCode();
       if (stateStartTime_ != null) hash ^= StateStartTime.GetHashCode();
@@ -194,7 +194,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -218,7 +218,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (InnerState.Length != 0) {
@@ -241,7 +241,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown) {
         State = other.State;
       }
       if (other.InnerState.Length != 0) {
@@ -451,7 +451,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 13;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 106);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 106);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Output only. Labels associated with the operation

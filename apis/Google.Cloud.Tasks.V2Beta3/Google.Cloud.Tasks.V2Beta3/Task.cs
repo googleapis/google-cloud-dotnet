@@ -55,9 +55,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "L2dvb2dsZWFwaXMvY2xvdWQvdGFza3MvdjJiZXRhMzt0YXNrc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "HttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Attempt), global::Google.Cloud.Tasks.V2Beta3.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "HttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Attempt), global::Google.Cloud.Tasks.V2Beta3.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null, null)
           }));
     }
     #endregion
@@ -325,7 +325,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 10;
-    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View view_ = 0;
+    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View view_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
     /// Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] has
     /// been returned.
@@ -398,7 +398,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (ResponseCount != 0) hash ^= ResponseCount.GetHashCode();
       if (firstAttempt_ != null) hash ^= FirstAttempt.GetHashCode();
       if (lastAttempt_ != null) hash ^= LastAttempt.GetHashCode();
-      if (View != 0) hash ^= View.GetHashCode();
+      if (View != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) hash ^= View.GetHashCode();
       hash ^= (int) payloadTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -445,7 +445,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(74);
         output.WriteMessage(LastAttempt);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         output.WriteRawTag(80);
         output.WriteEnum((int) View);
       }
@@ -495,7 +495,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (lastAttempt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastAttempt);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
@@ -548,7 +548,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         }
         LastAttempt.MergeFrom(other.LastAttempt);
       }
-      if (other.View != 0) {
+      if (other.View != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         View = other.View;
       }
       switch (other.PayloadTypeCase) {

@@ -25,7 +25,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public ProfileName ParentAsProfileName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ProfileName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProfileName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -37,7 +37,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::ApplicationName ApplicationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::ApplicationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::ApplicationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::ApplicationName ApplicationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::ApplicationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::ApplicationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -61,7 +61,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public ProfileName ParentAsProfileName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ProfileName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : ProfileName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
