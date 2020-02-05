@@ -281,7 +281,6 @@ namespace Google.Cloud.Spanner.Data
         private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, SpannerSettings spannerSettings, Logger logger)
         {
             var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
-            var channel = new Channel(channelOptions.Endpoint.Host, channelOptions.Endpoint.Port, credentials);
 
             var apiConfig = new ApiConfig
             {
@@ -301,9 +300,13 @@ namespace Google.Cloud.Spanner.Data
             };
 
             var endpoint = channelOptions.Endpoint;
-            var callInvoker = new GcpCallInvoker(endpoint.Host, endpoint.Port, credentials, grpcOptions);
+            var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, grpcOptions);
 
-            return SpannerClient.Create(callInvoker, spannerSettings);
+            return new SpannerClientBuilder
+            {
+                CallInvoker = callInvoker,
+                Settings = spannerSettings
+            }.Build();
         }
     }
 }

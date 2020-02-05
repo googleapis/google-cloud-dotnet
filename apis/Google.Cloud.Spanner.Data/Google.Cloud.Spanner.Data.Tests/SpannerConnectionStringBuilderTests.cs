@@ -97,8 +97,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void DefaultEndpointIfNotSpecified()
         {
             var builder = new SpannerConnectionStringBuilder();
-            Assert.Equal(SpannerClient.DefaultEndpoint.Host, builder.Host);
-            Assert.Equal(SpannerClient.DefaultEndpoint.Port, builder.Port);
+            var bits = SpannerClient.DefaultEndpoint.Split(':');
+            Assert.Equal(bits[0], builder.Host);
+            Assert.Equal(int.Parse(bits[1]), builder.Port);
         }
 
         [Fact]

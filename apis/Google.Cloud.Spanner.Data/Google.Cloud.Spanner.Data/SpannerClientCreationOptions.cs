@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The end-point to connect to; never null.
         /// </summary>
-        internal ServiceEndpoint Endpoint { get; }
+        internal string Endpoint { get; }
 
         /// <summary>
         /// The number of gRPC channels to use (passed to Grpc.Gcp)
