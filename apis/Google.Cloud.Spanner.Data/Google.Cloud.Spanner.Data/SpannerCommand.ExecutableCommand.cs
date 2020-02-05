@@ -200,10 +200,10 @@ namespace Google.Cloud.Spanner.Data
                 var builder = Connection.Builder;
                 var channelOptions = new SpannerClientCreationOptions(builder);
                 var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
-                var channel = new Channel(channelOptions.Endpoint.Host, channelOptions.Endpoint.Port, credentials);
+                var channel = new Channel(channelOptions.Endpoint, credentials);
                 try
                 {
-                    var databaseAdminClient = DatabaseAdminClient.Create(channel);
+                    var databaseAdminClient = new DatabaseAdminClientBuilder { CallInvoker = channel.CreateCallInvoker() }.Build();
                     if (CommandTextBuilder.IsCreateDatabaseCommand)
                     {
                         var parent = new InstanceName(Connection.Project, Connection.SpannerInstance);
