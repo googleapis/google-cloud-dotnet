@@ -17,6 +17,7 @@ using Google.Type;
 using System;
 using Xunit;
 using static Google.Cloud.Datastore.V1.Key.Types;
+using DateTime = System.DateTime;
 
 namespace Google.Cloud.Datastore.V1.Tests
 {

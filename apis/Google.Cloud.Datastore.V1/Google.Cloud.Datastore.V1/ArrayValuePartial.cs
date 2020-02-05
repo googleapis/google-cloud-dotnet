@@ -18,6 +18,7 @@ using Google.Type;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DateTime = System.DateTime;
 
 namespace Google.Cloud.Datastore.V1
 {
