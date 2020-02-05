@@ -52,6 +52,8 @@ namespace Google.Cloud.Redis.V1Beta1
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
             UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings.Clone();
+            UpgradeInstanceSettings = existing.UpgradeInstanceSettings;
+            UpgradeInstanceOperationsSettings = existing.UpgradeInstanceOperationsSettings.Clone();
             ImportInstanceSettings = existing.ImportInstanceSettings;
             ImportInstanceOperationsSettings = existing.ImportInstanceOperationsSettings.Clone();
             ExportInstanceSettings = existing.ExportInstanceSettings;
@@ -125,6 +127,31 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.UpgradeInstance</c> and <c>CloudRedisClient.UpgradeInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>By default, retry will not be attempted.</remarks>
+        public gaxgrpc::CallSettings UpgradeInstanceSettings { get; set; }
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClient.UpgradeInstance</c> and
+        /// <c>CloudRedisClient.UpgradeInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpgradeInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -425,6 +452,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -441,6 +469,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -457,6 +486,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -490,6 +520,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -523,6 +554,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -556,6 +588,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -1179,6 +1212,180 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpdateInstanceAsync(wkt::FieldMask updateMask, Instance instance, st::CancellationToken cancellationToken) =>
             UpdateInstanceAsync(updateMask, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> UpgradeInstance(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(UpgradeInstanceRequest request, st::CancellationToken cancellationToken) =>
+            UpgradeInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpgradeInstance</c>.</summary>
+        public virtual lro::OperationsClient UpgradeInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpgradeInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> PollOnceUpgradeInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, wkt::Any>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpgradeInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> PollOnceUpgradeInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpgradeInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="redisVersion">
+        /// Required. Specifies the target version of Redis software to upgrade to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> UpgradeInstance(string name, string redisVersion, gaxgrpc::CallSettings callSettings = null) =>
+            UpgradeInstance(new UpgradeInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RedisVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(redisVersion, nameof(redisVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="redisVersion">
+        /// Required. Specifies the target version of Redis software to upgrade to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(string name, string redisVersion, gaxgrpc::CallSettings callSettings = null) =>
+            UpgradeInstanceAsync(new UpgradeInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RedisVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(redisVersion, nameof(redisVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="redisVersion">
+        /// Required. Specifies the target version of Redis software to upgrade to.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(string name, string redisVersion, st::CancellationToken cancellationToken) =>
+            UpgradeInstanceAsync(name, redisVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="redisVersion">
+        /// Required. Specifies the target version of Redis software to upgrade to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> UpgradeInstance(InstanceName name, string redisVersion, gaxgrpc::CallSettings callSettings = null) =>
+            UpgradeInstance(new UpgradeInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RedisVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(redisVersion, nameof(redisVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="redisVersion">
+        /// Required. Specifies the target version of Redis software to upgrade to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(InstanceName name, string redisVersion, gaxgrpc::CallSettings callSettings = null) =>
+            UpgradeInstanceAsync(new UpgradeInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RedisVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(redisVersion, nameof(redisVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="redisVersion">
+        /// Required. Specifies the target version of Redis software to upgrade to.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(InstanceName name, string redisVersion, st::CancellationToken cancellationToken) =>
+            UpgradeInstanceAsync(name, redisVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
@@ -1814,6 +2021,8 @@ namespace Google.Cloud.Redis.V1Beta1
 
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
 
+        private readonly gaxgrpc::ApiCall<UpgradeInstanceRequest, lro::Operation> _callUpgradeInstance;
+
         private readonly gaxgrpc::ApiCall<ImportInstanceRequest, lro::Operation> _callImportInstance;
 
         private readonly gaxgrpc::ApiCall<ExportInstanceRequest, lro::Operation> _callExportInstance;
@@ -1834,6 +2043,7 @@ namespace Google.Cloud.Redis.V1Beta1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings);
+            UpgradeInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeInstanceOperationsSettings);
             ImportInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportInstanceOperationsSettings);
             ExportInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInstanceOperationsSettings);
             FailoverInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FailoverInstanceOperationsSettings);
@@ -1850,6 +2060,9 @@ namespace Google.Cloud.Redis.V1Beta1
             _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>(grpcClient.UpdateInstanceAsync, grpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings).WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
             Modify_ApiCall(ref _callUpdateInstance);
             Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
+            _callUpgradeInstance = clientHelper.BuildApiCall<UpgradeInstanceRequest, lro::Operation>(grpcClient.UpgradeInstanceAsync, grpcClient.UpgradeInstance, effectiveSettings.UpgradeInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpgradeInstance);
+            Modify_UpgradeInstanceApiCall(ref _callUpgradeInstance);
             _callImportInstance = clientHelper.BuildApiCall<ImportInstanceRequest, lro::Operation>(grpcClient.ImportInstanceAsync, grpcClient.ImportInstance, effectiveSettings.ImportInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportInstance);
             Modify_ImportInstanceApiCall(ref _callImportInstance);
@@ -1875,6 +2088,8 @@ namespace Google.Cloud.Redis.V1Beta1
 
         partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
 
+        partial void Modify_UpgradeInstanceApiCall(ref gaxgrpc::ApiCall<UpgradeInstanceRequest, lro::Operation> call);
+
         partial void Modify_ImportInstanceApiCall(ref gaxgrpc::ApiCall<ImportInstanceRequest, lro::Operation> call);
 
         partial void Modify_ExportInstanceApiCall(ref gaxgrpc::ApiCall<ExportInstanceRequest, lro::Operation> call);
@@ -1896,6 +2111,8 @@ namespace Google.Cloud.Redis.V1Beta1
 
         partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpgradeInstanceRequest(ref UpgradeInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ImportInstanceRequest(ref ImportInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportInstanceRequest(ref ExportInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -1909,6 +2126,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -1928,6 +2146,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -2048,6 +2267,35 @@ namespace Google.Cloud.Redis.V1Beta1
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, wkt::Any>(await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), UpdateInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpgradeInstance</c>.</summary>
+        public override lro::OperationsClient UpgradeInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, wkt::Any> UpgradeInstance(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpgradeInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, wkt::Any>(_callUpgradeInstance.Sync(request, callSettings), UpgradeInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Upgrades Redis instance to the newer Redis version specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, wkt::Any>> UpgradeInstanceAsync(UpgradeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpgradeInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, wkt::Any>(await _callUpgradeInstance.Async(request, callSettings).ConfigureAwait(false), UpgradeInstanceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>ImportInstance</c>.</summary>
