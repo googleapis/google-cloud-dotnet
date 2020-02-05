@@ -1,5 +1,4 @@
 {
   "distribution_name": "Google.Cloud.OrgPolicy.V1",
-  "release_level": "beta",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.OrgPolicy.V1/latest"
+  "release_level": "ga"
 }
