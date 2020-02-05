@@ -141,10 +141,10 @@ namespace Google.Cloud.Spanner.Data
         // Note: EndPoint rather than Endpoint to avoid an unnecessary breaking change from V1.
 
         /// <summary>
-        /// The <see cref="ServiceEndpoint"/> to use to connect to Spanner. If not supplied in the
+        /// The endpoint to use to connect to Spanner. If not supplied in the
         /// connection string, the default endpoint will be used.
         /// </summary>
-        public ServiceEndpoint EndPoint => new ServiceEndpoint(Host, Port);
+        public string EndPoint => $"{Host}:{Port}";
 
         /// <summary>
         /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
@@ -152,7 +152,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string Host
         {
-            get => GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
+            // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
+            // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
+            // SpannerClient.DefaultEndpoint;
+            get => GetValueOrDefault(nameof(Host), "spanner.googleapis.com");
             set => this[nameof(Host)] = value;
         }
 
@@ -162,7 +165,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int Port
         {
-            get => GetInt32OrDefault(nameof(Port), 1, 65535, SpannerClient.DefaultEndpoint.Port);
+            // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
+            // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
+            // SpannerClient.DefaultEndpoint;
+            get => GetInt32OrDefault(nameof(Port), 1, 65535, 443);
             set => SetInt32WithValidation(nameof(Port), 1, 65535, value);
         }
 
