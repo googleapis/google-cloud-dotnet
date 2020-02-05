@@ -125,7 +125,7 @@ namespace Google.Cloud.Datastore.V1
 
         // We never end up using these methods, at least with the current implementation
         /// <inheritdoc />
-        protected override ServiceEndpoint GetDefaultEndpoint() =>
+        protected override string GetDefaultEndpoint() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
 
         /// <inheritdoc />
@@ -140,10 +140,10 @@ namespace Google.Cloud.Datastore.V1
         {
             internal const string EmulatorHostVariable = "DATASTORE_EMULATOR_HOST";
             internal const string EmulatorProjectVariable = "DATASTORE_PROJECT_ID";
-            internal ServiceEndpoint Endpoint { get; }
+            internal string Endpoint { get; }
             internal string ProjectId { get; }
 
-            private EmulatorConfiguration(ServiceEndpoint endpoint, string projectId)
+            private EmulatorConfiguration(string endpoint, string projectId)
             {
                 Endpoint = endpoint;
                 ProjectId = projectId;
@@ -154,7 +154,7 @@ namespace Google.Cloud.Datastore.V1
                 // Note: we treat present-but-empty environment variables as if they were absent.
                 string hostAndPort = Environment.GetEnvironmentVariable(EmulatorHostVariable)?.Trim();
                 string projectId = Environment.GetEnvironmentVariable(EmulatorProjectVariable)?.Trim();
-                var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : ServiceEndpoint.Parse(hostAndPort);
+                var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : hostAndPort;
                 return new EmulatorConfiguration(endpoint, projectId == "" ? null : projectId);
             }
         }
