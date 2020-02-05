@@ -137,9 +137,9 @@ namespace Google.Cloud.Bigtable.V2
 
             Task EstablishStream(ReadRowsRequest request)  =>
                 Utilities.RetryOperationUntilCompleted(
-                    () =>
+                    thisCallSettings =>
                     {
-                        _stream = _client.ReadRowsInternal(request, _callSettings);
+                        _stream = _client.ReadRowsInternal(request, thisCallSettings);
                         return Task.FromResult(true);
                     },
                     _client.Clock,

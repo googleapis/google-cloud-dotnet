@@ -1,6 +1,7 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2", "Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj", "{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}"
 EndProject
@@ -18,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.Ge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.Common.V2", "..\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj", "{FD3A1128-0981-460C-86F2-621CA0A4799D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{9FC53511-2F0C-4099-B53F-7FD2863D2880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{9FC53511-2F0C-4099-B53F-7FD2863D2880}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{C81D237A-B51E-44B6-B413-6C02EDB2C084}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{C81D237A-B51E-44B6-B413-6C02EDB2C084}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Iam.V1", "..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj", "{7865F184-8894-488E-9990-247B6ECB1F7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +156,30 @@ Global
 		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x64.Build.0 = Release|Any CPU
 		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x86.ActiveCfg = Release|Any CPU
 		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x86.Build.0 = Release|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Debug|x64.Build.0 = Debug|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Debug|x86.Build.0 = Debug|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Release|x64.ActiveCfg = Release|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Release|x64.Build.0 = Release|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Release|x86.ActiveCfg = Release|Any CPU
+		{7865F184-8894-488E-9990-247B6ECB1F7A}.Release|x86.Build.0 = Release|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Debug|x64.Build.0 = Debug|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Debug|x86.Build.0 = Debug|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Release|x64.ActiveCfg = Release|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Release|x64.Build.0 = Release|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Release|x86.ActiveCfg = Release|Any CPU
+		{A4948C2D-A6D7-4EF3-9230-ACCD2B029075}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
