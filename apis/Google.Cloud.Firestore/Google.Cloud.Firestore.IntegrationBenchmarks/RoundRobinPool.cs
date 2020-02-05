@@ -48,7 +48,7 @@ namespace Google.Cloud.Firestore.IntegrationBenchmarks
                     FirestoreClient.DefaultEndpoint.ToString(),
                     credential.ToChannelCredentials(),
                     new ChannelOption[] { new ChannelOption("grpc_gcp.client_channel.id", Guid.NewGuid().ToString()) });
-                var client = FirestoreClient.Create(channel);
+                var client = new FirestoreClientBuilder { CallInvoker = channel.CreateCallInvoker() }.Build();
                 return FirestoreDb.Create(projectId, client);
             }
         }
