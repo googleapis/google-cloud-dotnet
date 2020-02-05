@@ -131,32 +131,32 @@ namespace Google.Cloud.Dlp.V2 {
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern", "GroupIndexes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment.Parser, new[]{ "FixedLikelihood", "RelativeLikelihood" }, new[]{ "Adjustment" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule.Parser, new[]{ "HotwordRegex", "Proximity", "LikelihoodAdjustment" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.FieldId), global::Google.Cloud.Dlp.V2.FieldId.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PartitionId), global::Google.Cloud.Dlp.V2.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.KindExpression), global::Google.Cloud.Dlp.V2.KindExpression.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreOptions), global::Google.Cloud.Dlp.V2.DatastoreOptions.Parser, new[]{ "PartitionId", "Kind" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageRegexFileSet), global::Google.Cloud.Dlp.V2.CloudStorageRegexFileSet.Parser, new[]{ "BucketName", "IncludeRegex", "ExcludeRegex" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Parser, new[]{ "FileSet", "BytesLimitPerFile", "BytesLimitPerFilePercent", "FileTypes", "SampleMethod", "FilesLimitPercent" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url", "RegexFileSet" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageFileSet), global::Google.Cloud.Dlp.V2.CloudStorageFileSet.Parser, new[]{ "Url" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStoragePath), global::Google.Cloud.Dlp.V2.CloudStoragePath.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit", "RowsLimitPercent", "SampleMethod", "ExcludedFields" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions", "BigQueryOptions", "TimespanConfig" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig.Parser, new[]{ "StartTime", "EndTime", "TimestampField", "EnableAutoPopulationOfTimespanConfig" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryKey), global::Google.Cloud.Dlp.V2.BigQueryKey.Parser, new[]{ "TableReference", "RowNumber" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreKey), global::Google.Cloud.Dlp.V2.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key), global::Google.Cloud.Dlp.V2.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key.Types.PathElement), global::Google.Cloud.Dlp.V2.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordKey), global::Google.Cloud.Dlp.V2.RecordKey.Parser, new[]{ "DatastoreKey", "BigQueryKey", "IdValues" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryTable), global::Google.Cloud.Dlp.V2.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryField), global::Google.Cloud.Dlp.V2.BigQueryField.Parser, new[]{ "Table", "Field" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.EntityId), global::Google.Cloud.Dlp.V2.EntityId.Parser, new[]{ "Field" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern", "GroupIndexes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment.Parser, new[]{ "FixedLikelihood", "RelativeLikelihood" }, new[]{ "Adjustment" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule.Parser, new[]{ "HotwordRegex", "Proximity", "LikelihoodAdjustment" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.FieldId), global::Google.Cloud.Dlp.V2.FieldId.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PartitionId), global::Google.Cloud.Dlp.V2.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.KindExpression), global::Google.Cloud.Dlp.V2.KindExpression.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreOptions), global::Google.Cloud.Dlp.V2.DatastoreOptions.Parser, new[]{ "PartitionId", "Kind" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageRegexFileSet), global::Google.Cloud.Dlp.V2.CloudStorageRegexFileSet.Parser, new[]{ "BucketName", "IncludeRegex", "ExcludeRegex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Parser, new[]{ "FileSet", "BytesLimitPerFile", "BytesLimitPerFilePercent", "FileTypes", "SampleMethod", "FilesLimitPercent" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url", "RegexFileSet" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageFileSet), global::Google.Cloud.Dlp.V2.CloudStorageFileSet.Parser, new[]{ "Url" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStoragePath), global::Google.Cloud.Dlp.V2.CloudStoragePath.Parser, new[]{ "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit", "RowsLimitPercent", "SampleMethod", "ExcludedFields" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions", "BigQueryOptions", "TimespanConfig" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig.Parser, new[]{ "StartTime", "EndTime", "TimestampField", "EnableAutoPopulationOfTimespanConfig" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryKey), global::Google.Cloud.Dlp.V2.BigQueryKey.Parser, new[]{ "TableReference", "RowNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreKey), global::Google.Cloud.Dlp.V2.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key), global::Google.Cloud.Dlp.V2.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key.Types.PathElement), global::Google.Cloud.Dlp.V2.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordKey), global::Google.Cloud.Dlp.V2.RecordKey.Parser, new[]{ "DatastoreKey", "BigQueryKey", "IdValues" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryTable), global::Google.Cloud.Dlp.V2.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryField), global::Google.Cloud.Dlp.V2.BigQueryField.Parser, new[]{ "Table", "Field" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.EntityId), global::Google.Cloud.Dlp.V2.EntityId.Parser, new[]{ "Field" }, null, null, null, null)
           }));
     }
     #endregion
@@ -616,7 +616,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "likelihood" field.</summary>
     public const int LikelihoodFieldNumber = 6;
-    private global::Google.Cloud.Dlp.V2.Likelihood likelihood_ = 0;
+    private global::Google.Cloud.Dlp.V2.Likelihood likelihood_ = global::Google.Cloud.Dlp.V2.Likelihood.Unspecified;
     /// <summary>
     /// Likelihood to return for this CustomInfoType. This base value can be
     /// altered by a detection rule if the finding meets the criteria specified by
@@ -705,7 +705,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "exclusion_type" field.</summary>
     public const int ExclusionTypeFieldNumber = 8;
-    private global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType exclusionType_ = 0;
+    private global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType exclusionType_ = global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified;
     /// <summary>
     /// If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding
     /// to be returned. It still can be used for rules matching.
@@ -768,13 +768,13 @@ namespace Google.Cloud.Dlp.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (infoType_ != null) hash ^= InfoType.GetHashCode();
-      if (Likelihood != 0) hash ^= Likelihood.GetHashCode();
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) hash ^= Likelihood.GetHashCode();
       if (typeCase_ == TypeOneofCase.Dictionary) hash ^= Dictionary.GetHashCode();
       if (typeCase_ == TypeOneofCase.Regex) hash ^= Regex.GetHashCode();
       if (typeCase_ == TypeOneofCase.SurrogateType) hash ^= SurrogateType.GetHashCode();
       if (typeCase_ == TypeOneofCase.StoredType) hash ^= StoredType.GetHashCode();
       hash ^= detectionRules_.GetHashCode();
-      if (ExclusionType != 0) hash ^= ExclusionType.GetHashCode();
+      if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) hash ^= ExclusionType.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -809,12 +809,12 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(StoredType);
       }
-      if (Likelihood != 0) {
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Likelihood);
       }
       detectionRules_.WriteTo(output, _repeated_detectionRules_codec);
-      if (ExclusionType != 0) {
+      if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         output.WriteRawTag(64);
         output.WriteEnum((int) ExclusionType);
       }
@@ -829,7 +829,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (infoType_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
       }
-      if (Likelihood != 0) {
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Likelihood);
       }
       if (typeCase_ == TypeOneofCase.Dictionary) {
@@ -845,7 +845,7 @@ namespace Google.Cloud.Dlp.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoredType);
       }
       size += detectionRules_.CalculateSize(_repeated_detectionRules_codec);
-      if (ExclusionType != 0) {
+      if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExclusionType);
       }
       if (_unknownFields != null) {
@@ -865,11 +865,11 @@ namespace Google.Cloud.Dlp.V2 {
         }
         InfoType.MergeFrom(other.InfoType);
       }
-      if (other.Likelihood != 0) {
+      if (other.Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         Likelihood = other.Likelihood;
       }
       detectionRules_.Add(other.detectionRules_);
-      if (other.ExclusionType != 0) {
+      if (other.ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         ExclusionType = other.ExclusionType;
       }
       switch (other.TypeCase) {
@@ -2026,7 +2026,7 @@ namespace Google.Cloud.Dlp.V2 {
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public global::Google.Cloud.Dlp.V2.Likelihood FixedLikelihood {
-              get { return adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood ? (global::Google.Cloud.Dlp.V2.Likelihood) adjustment_ : 0; }
+              get { return adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood ? (global::Google.Cloud.Dlp.V2.Likelihood) adjustment_ : global::Google.Cloud.Dlp.V2.Likelihood.Unspecified; }
               set {
                 adjustment_ = value;
                 adjustmentCase_ = AdjustmentOneofCase.FixedLikelihood;
@@ -3366,7 +3366,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "sample_method" field.</summary>
     public const int SampleMethodFieldNumber = 6;
-    private global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod sampleMethod_ = 0;
+    private global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod sampleMethod_ = global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod SampleMethod {
       get { return sampleMethod_; }
@@ -3420,7 +3420,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (BytesLimitPerFile != 0L) hash ^= BytesLimitPerFile.GetHashCode();
       if (BytesLimitPerFilePercent != 0) hash ^= BytesLimitPerFilePercent.GetHashCode();
       hash ^= fileTypes_.GetHashCode();
-      if (SampleMethod != 0) hash ^= SampleMethod.GetHashCode();
+      if (SampleMethod != global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod.Unspecified) hash ^= SampleMethod.GetHashCode();
       if (FilesLimitPercent != 0) hash ^= FilesLimitPercent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3444,7 +3444,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteInt64(BytesLimitPerFile);
       }
       fileTypes_.WriteTo(output, _repeated_fileTypes_codec);
-      if (SampleMethod != 0) {
+      if (SampleMethod != global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) SampleMethod);
       }
@@ -3474,7 +3474,7 @@ namespace Google.Cloud.Dlp.V2 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(BytesLimitPerFilePercent);
       }
       size += fileTypes_.CalculateSize(_repeated_fileTypes_codec);
-      if (SampleMethod != 0) {
+      if (SampleMethod != global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleMethod);
       }
       if (FilesLimitPercent != 0) {
@@ -3504,7 +3504,7 @@ namespace Google.Cloud.Dlp.V2 {
         BytesLimitPerFilePercent = other.BytesLimitPerFilePercent;
       }
       fileTypes_.Add(other.fileTypes_);
-      if (other.SampleMethod != 0) {
+      if (other.SampleMethod != global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod.Unspecified) {
         SampleMethod = other.SampleMethod;
       }
       if (other.FilesLimitPercent != 0) {
@@ -4141,7 +4141,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "sample_method" field.</summary>
     public const int SampleMethodFieldNumber = 4;
-    private global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod sampleMethod_ = 0;
+    private global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod sampleMethod_ = global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod SampleMethod {
       get { return sampleMethod_; }
@@ -4193,7 +4193,7 @@ namespace Google.Cloud.Dlp.V2 {
       hash ^= identifyingFields_.GetHashCode();
       if (RowsLimit != 0L) hash ^= RowsLimit.GetHashCode();
       if (RowsLimitPercent != 0) hash ^= RowsLimitPercent.GetHashCode();
-      if (SampleMethod != 0) hash ^= SampleMethod.GetHashCode();
+      if (SampleMethod != global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod.Unspecified) hash ^= SampleMethod.GetHashCode();
       hash ^= excludedFields_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4217,7 +4217,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(24);
         output.WriteInt64(RowsLimit);
       }
-      if (SampleMethod != 0) {
+      if (SampleMethod != global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) SampleMethod);
       }
@@ -4244,7 +4244,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (RowsLimitPercent != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RowsLimitPercent);
       }
-      if (SampleMethod != 0) {
+      if (SampleMethod != global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleMethod);
       }
       size += excludedFields_.CalculateSize(_repeated_excludedFields_codec);
@@ -4272,7 +4272,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other.RowsLimitPercent != 0) {
         RowsLimitPercent = other.RowsLimitPercent;
       }
-      if (other.SampleMethod != 0) {
+      if (other.SampleMethod != global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod.Unspecified) {
         SampleMethod = other.SampleMethod;
       }
       excludedFields_.Add(other.excludedFields_);

@@ -901,142 +901,142 @@ namespace Google.Cloud.Dlp.V2 {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.RelationalOperator), typeof(global::Google.Cloud.Dlp.V2.MatchingType), typeof(global::Google.Cloud.Dlp.V2.ContentOption), typeof(global::Google.Cloud.Dlp.V2.InfoTypeSupportedBy), typeof(global::Google.Cloud.Dlp.V2.DlpJobType), typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeState), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ExcludeInfoTypes), global::Google.Cloud.Dlp.V2.ExcludeInfoTypes.Parser, new[]{ "InfoTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ExclusionRule), global::Google.Cloud.Dlp.V2.ExclusionRule.Parser, new[]{ "Dictionary", "Regex", "ExcludeInfoTypes", "MatchingType" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectionRule), global::Google.Cloud.Dlp.V2.InspectionRule.Parser, new[]{ "HotwordRule", "ExclusionRule" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectionRuleSet), global::Google.Cloud.Dlp.V2.InspectionRuleSet.Parser, new[]{ "InfoTypes", "Rules" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectConfig), global::Google.Cloud.Dlp.V2.InspectConfig.Parser, new[]{ "InfoTypes", "MinLikelihood", "Limits", "IncludeQuote", "ExcludeInfoTypes", "CustomInfoTypes", "ContentOptions", "RuleSet" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits), global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits.Parser, new[]{ "MaxFindingsPerItem", "MaxFindingsPerRequest", "MaxFindingsPerInfoType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits.Types.InfoTypeLimit), global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits.Types.InfoTypeLimit.Parser, new[]{ "InfoType", "MaxFindings" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ByteContentItem), global::Google.Cloud.Dlp.V2.ByteContentItem.Parser, new[]{ "Type", "Data" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ContentItem), global::Google.Cloud.Dlp.V2.ContentItem.Parser, new[]{ "Value", "Table", "ByteItem" }, new[]{ "DataItem" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Table), global::Google.Cloud.Dlp.V2.Table.Parser, new[]{ "Headers", "Rows" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Table.Types.Row), global::Google.Cloud.Dlp.V2.Table.Types.Row.Parser, new[]{ "Values" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectResult), global::Google.Cloud.Dlp.V2.InspectResult.Parser, new[]{ "Findings", "FindingsTruncated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Finding), global::Google.Cloud.Dlp.V2.Finding.Parser, new[]{ "Quote", "InfoType", "Likelihood", "Location", "CreateTime", "QuoteInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Location), global::Google.Cloud.Dlp.V2.Location.Parser, new[]{ "ByteRange", "CodepointRange", "ContentLocations" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ContentLocation), global::Google.Cloud.Dlp.V2.ContentLocation.Parser, new[]{ "ContainerName", "RecordLocation", "ImageLocation", "DocumentLocation", "ContainerTimestamp", "ContainerVersion" }, new[]{ "Location" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DocumentLocation), global::Google.Cloud.Dlp.V2.DocumentLocation.Parser, new[]{ "FileOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordLocation), global::Google.Cloud.Dlp.V2.RecordLocation.Parser, new[]{ "RecordKey", "FieldId", "TableLocation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableLocation), global::Google.Cloud.Dlp.V2.TableLocation.Parser, new[]{ "RowIndex" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Range), global::Google.Cloud.Dlp.V2.Range.Parser, new[]{ "Start", "End" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ImageLocation), global::Google.Cloud.Dlp.V2.ImageLocation.Parser, new[]{ "BoundingBoxes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BoundingBox), global::Google.Cloud.Dlp.V2.BoundingBox.Parser, new[]{ "Top", "Left", "Width", "Height" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactImageRequest), global::Google.Cloud.Dlp.V2.RedactImageRequest.Parser, new[]{ "Parent", "LocationId", "InspectConfig", "ImageRedactionConfigs", "IncludeFindings", "ByteItem" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactImageRequest.Types.ImageRedactionConfig), global::Google.Cloud.Dlp.V2.RedactImageRequest.Types.ImageRedactionConfig.Parser, new[]{ "InfoType", "RedactAllText", "RedactionColor" }, new[]{ "Target" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Color), global::Google.Cloud.Dlp.V2.Color.Parser, new[]{ "Red", "Green", "Blue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactImageResponse), global::Google.Cloud.Dlp.V2.RedactImageResponse.Parser, new[]{ "RedactedImage", "ExtractedText", "InspectResult" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest), global::Google.Cloud.Dlp.V2.DeidentifyContentRequest.Parser, new[]{ "Parent", "DeidentifyConfig", "InspectConfig", "Item", "InspectTemplateName", "DeidentifyTemplateName", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyContentResponse), global::Google.Cloud.Dlp.V2.DeidentifyContentResponse.Parser, new[]{ "Item", "Overview" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest), global::Google.Cloud.Dlp.V2.ReidentifyContentRequest.Parser, new[]{ "Parent", "ReidentifyConfig", "InspectConfig", "Item", "InspectTemplateName", "ReidentifyTemplateName", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReidentifyContentResponse), global::Google.Cloud.Dlp.V2.ReidentifyContentResponse.Parser, new[]{ "Item", "Overview" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectContentRequest), global::Google.Cloud.Dlp.V2.InspectContentRequest.Parser, new[]{ "Parent", "InspectConfig", "Item", "InspectTemplateName", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectContentResponse), global::Google.Cloud.Dlp.V2.InspectContentResponse.Parser, new[]{ "Result" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.OutputStorageConfig), global::Google.Cloud.Dlp.V2.OutputStorageConfig.Parser, new[]{ "Table", "OutputSchema" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeStats), global::Google.Cloud.Dlp.V2.InfoTypeStats.Parser, new[]{ "InfoType", "Count" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectDataSourceDetails), global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Parser, new[]{ "RequestedOptions", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions), global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions.Parser, new[]{ "SnapshotInspectTemplate", "JobConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result), global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result.Parser, new[]{ "ProcessedBytes", "TotalEstimatedBytes", "InfoTypeStats" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeDescription), global::Google.Cloud.Dlp.V2.InfoTypeDescription.Parser, new[]{ "Name", "DisplayName", "SupportedBy", "Description" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest), global::Google.Cloud.Dlp.V2.ListInfoTypesRequest.Parser, new[]{ "LanguageCode", "Filter", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInfoTypesResponse), global::Google.Cloud.Dlp.V2.ListInfoTypesResponse.Parser, new[]{ "InfoTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RiskAnalysisJobConfig), global::Google.Cloud.Dlp.V2.RiskAnalysisJobConfig.Parser, new[]{ "PrivacyMetric", "SourceTable", "Actions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.QuasiId), global::Google.Cloud.Dlp.V2.QuasiId.Parser, new[]{ "Field", "InfoType", "CustomTag", "Inferred" }, new[]{ "Tag" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StatisticalTable), global::Google.Cloud.Dlp.V2.StatisticalTable.Parser, new[]{ "Table", "QuasiIds", "RelativeFrequency" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StatisticalTable.Types.QuasiIdentifierField), global::Google.Cloud.Dlp.V2.StatisticalTable.Types.QuasiIdentifierField.Parser, new[]{ "Field", "CustomTag" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric), global::Google.Cloud.Dlp.V2.PrivacyMetric.Parser, new[]{ "NumericalStatsConfig", "CategoricalStatsConfig", "KAnonymityConfig", "LDiversityConfig", "KMapEstimationConfig", "DeltaPresenceEstimationConfig" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.NumericalStatsConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.NumericalStatsConfig.Parser, new[]{ "Field" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.CategoricalStatsConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.CategoricalStatsConfig.Parser, new[]{ "Field" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KAnonymityConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KAnonymityConfig.Parser, new[]{ "QuasiIds", "EntityId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.LDiversityConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.LDiversityConfig.Parser, new[]{ "QuasiIds", "SensitiveAttribute" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Parser, new[]{ "QuasiIds", "RegionCode", "AuxiliaryTables" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.TaggedField), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.TaggedField.Parser, new[]{ "Field", "InfoType", "CustomTag", "Inferred" }, new[]{ "Tag" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable.Parser, new[]{ "Table", "QuasiIds", "RelativeFrequency" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable.Types.QuasiIdField), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable.Types.QuasiIdField.Parser, new[]{ "Field", "CustomTag" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.DeltaPresenceEstimationConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.DeltaPresenceEstimationConfig.Parser, new[]{ "QuasiIds", "RegionCode", "AuxiliaryTables" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Parser, new[]{ "RequestedPrivacyMetric", "RequestedSourceTable", "NumericalStatsResult", "CategoricalStatsResult", "KAnonymityResult", "LDiversityResult", "KMapEstimationResult", "DeltaPresenceEstimationResult" }, new[]{ "Result" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.NumericalStatsResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.NumericalStatsResult.Parser, new[]{ "MinValue", "MaxValue", "QuantileValues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult.Parser, new[]{ "ValueFrequencyHistogramBuckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.Parser, new[]{ "ValueFrequencyLowerBound", "ValueFrequencyUpperBound", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Parser, new[]{ "EquivalenceClassHistogramBuckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.Parser, new[]{ "QuasiIdsValues", "EquivalenceClassSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.Parser, new[]{ "EquivalenceClassSizeLowerBound", "EquivalenceClassSizeUpperBound", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Parser, new[]{ "SensitiveValueFrequencyHistogramBuckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityEquivalenceClass), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityEquivalenceClass.Parser, new[]{ "QuasiIdsValues", "EquivalenceClassSize", "NumDistinctSensitiveValues", "TopSensitiveValues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityHistogramBucket.Parser, new[]{ "SensitiveValueFrequencyLowerBound", "SensitiveValueFrequencyUpperBound", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Parser, new[]{ "KMapEstimationHistogram" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationQuasiIdValues), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationQuasiIdValues.Parser, new[]{ "QuasiIdsValues", "EstimatedAnonymity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationHistogramBucket.Parser, new[]{ "MinAnonymity", "MaxAnonymity", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Parser, new[]{ "DeltaPresenceEstimationHistogram" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationQuasiIdValues), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationQuasiIdValues.Parser, new[]{ "QuasiIdsValues", "EstimatedProbability" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationHistogramBucket.Parser, new[]{ "MinProbability", "MaxProbability", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ValueFrequency), global::Google.Cloud.Dlp.V2.ValueFrequency.Parser, new[]{ "Value", "Count" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Value), global::Google.Cloud.Dlp.V2.Value.Parser, new[]{ "IntegerValue", "FloatValue", "StringValue", "BooleanValue", "TimestampValue", "TimeValue", "DateValue", "DayOfWeekValue" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.QuoteInfo), global::Google.Cloud.Dlp.V2.QuoteInfo.Parser, new[]{ "DateTime" }, new[]{ "ParsedQuote" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DateTime), global::Google.Cloud.Dlp.V2.DateTime.Parser, new[]{ "Date", "DayOfWeek", "Time", "TimeZone" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone), global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone.Parser, new[]{ "OffsetMinutes" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyConfig), global::Google.Cloud.Dlp.V2.DeidentifyConfig.Parser, new[]{ "InfoTypeTransformations", "RecordTransformations" }, new[]{ "Transformation" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrimitiveTransformation), global::Google.Cloud.Dlp.V2.PrimitiveTransformation.Parser, new[]{ "ReplaceConfig", "RedactConfig", "CharacterMaskConfig", "CryptoReplaceFfxFpeConfig", "FixedSizeBucketingConfig", "BucketingConfig", "ReplaceWithInfoTypeConfig", "TimePartConfig", "CryptoHashConfig", "DateShiftConfig", "CryptoDeterministicConfig" }, new[]{ "Transformation" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TimePartConfig), global::Google.Cloud.Dlp.V2.TimePartConfig.Parser, new[]{ "PartToExtract" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoHashConfig), global::Google.Cloud.Dlp.V2.CryptoHashConfig.Parser, new[]{ "CryptoKey" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoDeterministicConfig), global::Google.Cloud.Dlp.V2.CryptoDeterministicConfig.Parser, new[]{ "CryptoKey", "SurrogateInfoType", "Context" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReplaceValueConfig), global::Google.Cloud.Dlp.V2.ReplaceValueConfig.Parser, new[]{ "NewValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReplaceWithInfoTypeConfig), global::Google.Cloud.Dlp.V2.ReplaceWithInfoTypeConfig.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactConfig), global::Google.Cloud.Dlp.V2.RedactConfig.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CharsToIgnore), global::Google.Cloud.Dlp.V2.CharsToIgnore.Parser, new[]{ "CharactersToSkip", "CommonCharactersToIgnore" }, new[]{ "Characters" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CharacterMaskConfig), global::Google.Cloud.Dlp.V2.CharacterMaskConfig.Parser, new[]{ "MaskingCharacter", "NumberToMask", "ReverseOrder", "CharactersToIgnore" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.FixedSizeBucketingConfig), global::Google.Cloud.Dlp.V2.FixedSizeBucketingConfig.Parser, new[]{ "LowerBound", "UpperBound", "BucketSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BucketingConfig), global::Google.Cloud.Dlp.V2.BucketingConfig.Parser, new[]{ "Buckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BucketingConfig.Types.Bucket), global::Google.Cloud.Dlp.V2.BucketingConfig.Types.Bucket.Parser, new[]{ "Min", "Max", "ReplacementValue" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig), global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Parser, new[]{ "CryptoKey", "Context", "CommonAlphabet", "CustomAlphabet", "Radix", "SurrogateInfoType" }, new[]{ "Alphabet" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoKey), global::Google.Cloud.Dlp.V2.CryptoKey.Parser, new[]{ "Transient", "Unwrapped", "KmsWrapped" }, new[]{ "Source" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransientCryptoKey), global::Google.Cloud.Dlp.V2.TransientCryptoKey.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UnwrappedCryptoKey), global::Google.Cloud.Dlp.V2.UnwrappedCryptoKey.Parser, new[]{ "Key" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.KmsWrappedCryptoKey), global::Google.Cloud.Dlp.V2.KmsWrappedCryptoKey.Parser, new[]{ "WrappedKey", "CryptoKeyName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DateShiftConfig), global::Google.Cloud.Dlp.V2.DateShiftConfig.Parser, new[]{ "UpperBoundDays", "LowerBoundDays", "Context", "CryptoKey" }, new[]{ "Method" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeTransformations), global::Google.Cloud.Dlp.V2.InfoTypeTransformations.Parser, new[]{ "Transformations" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeTransformations.Types.InfoTypeTransformation), global::Google.Cloud.Dlp.V2.InfoTypeTransformations.Types.InfoTypeTransformation.Parser, new[]{ "InfoTypes", "PrimitiveTransformation" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.FieldTransformation), global::Google.Cloud.Dlp.V2.FieldTransformation.Parser, new[]{ "Fields", "Condition", "PrimitiveTransformation", "InfoTypeTransformations" }, new[]{ "Transformation" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordTransformations), global::Google.Cloud.Dlp.V2.RecordTransformations.Parser, new[]{ "FieldTransformations", "RecordSuppressions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordSuppression), global::Google.Cloud.Dlp.V2.RecordSuppression.Parser, new[]{ "Condition" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition), global::Google.Cloud.Dlp.V2.RecordCondition.Parser, new[]{ "Expressions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Condition), global::Google.Cloud.Dlp.V2.RecordCondition.Types.Condition.Parser, new[]{ "Field", "Operator", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Conditions), global::Google.Cloud.Dlp.V2.RecordCondition.Types.Conditions.Parser, new[]{ "Conditions_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions), global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Parser, new[]{ "LogicalOperator", "Conditions" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransformationOverview), global::Google.Cloud.Dlp.V2.TransformationOverview.Parser, new[]{ "TransformedBytes", "TransformationSummaries" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransformationSummary), global::Google.Cloud.Dlp.V2.TransformationSummary.Parser, new[]{ "InfoType", "Field", "Transformation", "FieldTransformations", "RecordSuppress", "Results", "TransformedBytes" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransformationSummary.Types.SummaryResult), global::Google.Cloud.Dlp.V2.TransformationSummary.Types.SummaryResult.Parser, new[]{ "Count", "Code", "Details" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Schedule), global::Google.Cloud.Dlp.V2.Schedule.Parser, new[]{ "RecurrencePeriodDuration" }, new[]{ "Option" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectTemplate), global::Google.Cloud.Dlp.V2.InspectTemplate.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "InspectConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyTemplate), global::Google.Cloud.Dlp.V2.DeidentifyTemplate.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "DeidentifyConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Error), global::Google.Cloud.Dlp.V2.Error.Parser, new[]{ "Details", "Timestamps" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.JobTrigger), global::Google.Cloud.Dlp.V2.JobTrigger.Parser, new[]{ "Name", "DisplayName", "Description", "InspectJob", "Triggers", "Errors", "CreateTime", "UpdateTime", "LastRunTime", "Status" }, new[]{ "Job" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.JobTrigger.Types.Trigger), global::Google.Cloud.Dlp.V2.JobTrigger.Types.Trigger.Parser, new[]{ "Schedule" }, new[]{ "Trigger" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action), global::Google.Cloud.Dlp.V2.Action.Parser, new[]{ "SaveFindings", "PubSub", "PublishSummaryToCscc", "PublishFindingsToCloudDataCatalog", "JobNotificationEmails", "PublishToStackdriver" }, new[]{ "Action" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.SaveFindings), global::Google.Cloud.Dlp.V2.Action.Types.SaveFindings.Parser, new[]{ "OutputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishToPubSub), global::Google.Cloud.Dlp.V2.Action.Types.PublishToPubSub.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishSummaryToCscc), global::Google.Cloud.Dlp.V2.Action.Types.PublishSummaryToCscc.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishFindingsToCloudDataCatalog), global::Google.Cloud.Dlp.V2.Action.Types.PublishFindingsToCloudDataCatalog.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.JobNotificationEmails), global::Google.Cloud.Dlp.V2.Action.Types.JobNotificationEmails.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishToStackdriver), global::Google.Cloud.Dlp.V2.Action.Types.PublishToStackdriver.Parser, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest), global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest.Parser, new[]{ "Parent", "InspectTemplate", "TemplateId", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest), global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest.Parser, new[]{ "Name", "InspectTemplate", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest), global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest), global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse), global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse.Parser, new[]{ "InspectTemplates", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest), global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest), global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest.Parser, new[]{ "Parent", "JobTrigger", "TriggerId", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest), global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest), global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest.Parser, new[]{ "Name", "JobTrigger", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest), global::Google.Cloud.Dlp.V2.GetJobTriggerRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest), global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser, new[]{ "Parent", "InspectJob", "RiskJob", "JobId", "LocationId" }, new[]{ "Job" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest), global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "Filter", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListJobTriggersResponse), global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser, new[]{ "JobTriggers", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest), global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectJobConfig), global::Google.Cloud.Dlp.V2.InspectJobConfig.Parser, new[]{ "StorageConfig", "InspectConfig", "InspectTemplateName", "Actions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DlpJob), global::Google.Cloud.Dlp.V2.DlpJob.Parser, new[]{ "Name", "Type", "State", "RiskDetails", "InspectDetails", "CreateTime", "StartTime", "EndTime", "JobTriggerName", "Errors" }, new[]{ "Details" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetDlpJobRequest), global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest), global::Google.Cloud.Dlp.V2.ListDlpJobsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "Type", "OrderBy", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDlpJobsResponse), global::Google.Cloud.Dlp.V2.ListDlpJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest), global::Google.Cloud.Dlp.V2.CancelDlpJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest), global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest.Parser, new[]{ "Parent", "DeidentifyTemplate", "TemplateId", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest.Parser, new[]{ "Name", "DeidentifyTemplate", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse.Parser, new[]{ "DeidentifyTemplates", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.LargeCustomDictionaryConfig), global::Google.Cloud.Dlp.V2.LargeCustomDictionaryConfig.Parser, new[]{ "OutputPath", "CloudStorageFileSet", "BigQueryField" }, new[]{ "Source" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.LargeCustomDictionaryStats), global::Google.Cloud.Dlp.V2.LargeCustomDictionaryStats.Parser, new[]{ "ApproxNumPhrases" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig), global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig.Parser, new[]{ "DisplayName", "Description", "LargeCustomDictionary" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeStats), global::Google.Cloud.Dlp.V2.StoredInfoTypeStats.Parser, new[]{ "LargeCustomDictionary" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion), global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion.Parser, new[]{ "Config", "CreateTime", "State", "Errors", "Stats" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoType), global::Google.Cloud.Dlp.V2.StoredInfoType.Parser, new[]{ "Name", "CurrentVersion", "PendingVersions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest.Parser, new[]{ "Parent", "Config", "StoredInfoTypeId", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest.Parser, new[]{ "Name", "Config", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser, new[]{ "StoredInfoTypes", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.RelationalOperator), typeof(global::Google.Cloud.Dlp.V2.MatchingType), typeof(global::Google.Cloud.Dlp.V2.ContentOption), typeof(global::Google.Cloud.Dlp.V2.InfoTypeSupportedBy), typeof(global::Google.Cloud.Dlp.V2.DlpJobType), typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ExcludeInfoTypes), global::Google.Cloud.Dlp.V2.ExcludeInfoTypes.Parser, new[]{ "InfoTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ExclusionRule), global::Google.Cloud.Dlp.V2.ExclusionRule.Parser, new[]{ "Dictionary", "Regex", "ExcludeInfoTypes", "MatchingType" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectionRule), global::Google.Cloud.Dlp.V2.InspectionRule.Parser, new[]{ "HotwordRule", "ExclusionRule" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectionRuleSet), global::Google.Cloud.Dlp.V2.InspectionRuleSet.Parser, new[]{ "InfoTypes", "Rules" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectConfig), global::Google.Cloud.Dlp.V2.InspectConfig.Parser, new[]{ "InfoTypes", "MinLikelihood", "Limits", "IncludeQuote", "ExcludeInfoTypes", "CustomInfoTypes", "ContentOptions", "RuleSet" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits), global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits.Parser, new[]{ "MaxFindingsPerItem", "MaxFindingsPerRequest", "MaxFindingsPerInfoType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits.Types.InfoTypeLimit), global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits.Types.InfoTypeLimit.Parser, new[]{ "InfoType", "MaxFindings" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ByteContentItem), global::Google.Cloud.Dlp.V2.ByteContentItem.Parser, new[]{ "Type", "Data" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ContentItem), global::Google.Cloud.Dlp.V2.ContentItem.Parser, new[]{ "Value", "Table", "ByteItem" }, new[]{ "DataItem" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Table), global::Google.Cloud.Dlp.V2.Table.Parser, new[]{ "Headers", "Rows" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Table.Types.Row), global::Google.Cloud.Dlp.V2.Table.Types.Row.Parser, new[]{ "Values" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectResult), global::Google.Cloud.Dlp.V2.InspectResult.Parser, new[]{ "Findings", "FindingsTruncated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Finding), global::Google.Cloud.Dlp.V2.Finding.Parser, new[]{ "Quote", "InfoType", "Likelihood", "Location", "CreateTime", "QuoteInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Location), global::Google.Cloud.Dlp.V2.Location.Parser, new[]{ "ByteRange", "CodepointRange", "ContentLocations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ContentLocation), global::Google.Cloud.Dlp.V2.ContentLocation.Parser, new[]{ "ContainerName", "RecordLocation", "ImageLocation", "DocumentLocation", "ContainerTimestamp", "ContainerVersion" }, new[]{ "Location" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DocumentLocation), global::Google.Cloud.Dlp.V2.DocumentLocation.Parser, new[]{ "FileOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordLocation), global::Google.Cloud.Dlp.V2.RecordLocation.Parser, new[]{ "RecordKey", "FieldId", "TableLocation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableLocation), global::Google.Cloud.Dlp.V2.TableLocation.Parser, new[]{ "RowIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Range), global::Google.Cloud.Dlp.V2.Range.Parser, new[]{ "Start", "End" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ImageLocation), global::Google.Cloud.Dlp.V2.ImageLocation.Parser, new[]{ "BoundingBoxes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BoundingBox), global::Google.Cloud.Dlp.V2.BoundingBox.Parser, new[]{ "Top", "Left", "Width", "Height" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactImageRequest), global::Google.Cloud.Dlp.V2.RedactImageRequest.Parser, new[]{ "Parent", "LocationId", "InspectConfig", "ImageRedactionConfigs", "IncludeFindings", "ByteItem" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactImageRequest.Types.ImageRedactionConfig), global::Google.Cloud.Dlp.V2.RedactImageRequest.Types.ImageRedactionConfig.Parser, new[]{ "InfoType", "RedactAllText", "RedactionColor" }, new[]{ "Target" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Color), global::Google.Cloud.Dlp.V2.Color.Parser, new[]{ "Red", "Green", "Blue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactImageResponse), global::Google.Cloud.Dlp.V2.RedactImageResponse.Parser, new[]{ "RedactedImage", "ExtractedText", "InspectResult" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest), global::Google.Cloud.Dlp.V2.DeidentifyContentRequest.Parser, new[]{ "Parent", "DeidentifyConfig", "InspectConfig", "Item", "InspectTemplateName", "DeidentifyTemplateName", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyContentResponse), global::Google.Cloud.Dlp.V2.DeidentifyContentResponse.Parser, new[]{ "Item", "Overview" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest), global::Google.Cloud.Dlp.V2.ReidentifyContentRequest.Parser, new[]{ "Parent", "ReidentifyConfig", "InspectConfig", "Item", "InspectTemplateName", "ReidentifyTemplateName", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReidentifyContentResponse), global::Google.Cloud.Dlp.V2.ReidentifyContentResponse.Parser, new[]{ "Item", "Overview" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectContentRequest), global::Google.Cloud.Dlp.V2.InspectContentRequest.Parser, new[]{ "Parent", "InspectConfig", "Item", "InspectTemplateName", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectContentResponse), global::Google.Cloud.Dlp.V2.InspectContentResponse.Parser, new[]{ "Result" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.OutputStorageConfig), global::Google.Cloud.Dlp.V2.OutputStorageConfig.Parser, new[]{ "Table", "OutputSchema" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeStats), global::Google.Cloud.Dlp.V2.InfoTypeStats.Parser, new[]{ "InfoType", "Count" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectDataSourceDetails), global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Parser, new[]{ "RequestedOptions", "Result" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions), global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions.Parser, new[]{ "SnapshotInspectTemplate", "JobConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result), global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result.Parser, new[]{ "ProcessedBytes", "TotalEstimatedBytes", "InfoTypeStats" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeDescription), global::Google.Cloud.Dlp.V2.InfoTypeDescription.Parser, new[]{ "Name", "DisplayName", "SupportedBy", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest), global::Google.Cloud.Dlp.V2.ListInfoTypesRequest.Parser, new[]{ "LanguageCode", "Filter", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInfoTypesResponse), global::Google.Cloud.Dlp.V2.ListInfoTypesResponse.Parser, new[]{ "InfoTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RiskAnalysisJobConfig), global::Google.Cloud.Dlp.V2.RiskAnalysisJobConfig.Parser, new[]{ "PrivacyMetric", "SourceTable", "Actions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.QuasiId), global::Google.Cloud.Dlp.V2.QuasiId.Parser, new[]{ "Field", "InfoType", "CustomTag", "Inferred" }, new[]{ "Tag" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StatisticalTable), global::Google.Cloud.Dlp.V2.StatisticalTable.Parser, new[]{ "Table", "QuasiIds", "RelativeFrequency" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StatisticalTable.Types.QuasiIdentifierField), global::Google.Cloud.Dlp.V2.StatisticalTable.Types.QuasiIdentifierField.Parser, new[]{ "Field", "CustomTag" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric), global::Google.Cloud.Dlp.V2.PrivacyMetric.Parser, new[]{ "NumericalStatsConfig", "CategoricalStatsConfig", "KAnonymityConfig", "LDiversityConfig", "KMapEstimationConfig", "DeltaPresenceEstimationConfig" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.NumericalStatsConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.NumericalStatsConfig.Parser, new[]{ "Field" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.CategoricalStatsConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.CategoricalStatsConfig.Parser, new[]{ "Field" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KAnonymityConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KAnonymityConfig.Parser, new[]{ "QuasiIds", "EntityId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.LDiversityConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.LDiversityConfig.Parser, new[]{ "QuasiIds", "SensitiveAttribute" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Parser, new[]{ "QuasiIds", "RegionCode", "AuxiliaryTables" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.TaggedField), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.TaggedField.Parser, new[]{ "Field", "InfoType", "CustomTag", "Inferred" }, new[]{ "Tag" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable.Parser, new[]{ "Table", "QuasiIds", "RelativeFrequency" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable.Types.QuasiIdField), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig.Types.AuxiliaryTable.Types.QuasiIdField.Parser, new[]{ "Field", "CustomTag" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.DeltaPresenceEstimationConfig), global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.DeltaPresenceEstimationConfig.Parser, new[]{ "QuasiIds", "RegionCode", "AuxiliaryTables" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Parser, new[]{ "RequestedPrivacyMetric", "RequestedSourceTable", "NumericalStatsResult", "CategoricalStatsResult", "KAnonymityResult", "LDiversityResult", "KMapEstimationResult", "DeltaPresenceEstimationResult" }, new[]{ "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.NumericalStatsResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.NumericalStatsResult.Parser, new[]{ "MinValue", "MaxValue", "QuantileValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult.Parser, new[]{ "ValueFrequencyHistogramBuckets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.Parser, new[]{ "ValueFrequencyLowerBound", "ValueFrequencyUpperBound", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Parser, new[]{ "EquivalenceClassHistogramBuckets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.Parser, new[]{ "QuasiIdsValues", "EquivalenceClassSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.Parser, new[]{ "EquivalenceClassSizeLowerBound", "EquivalenceClassSizeUpperBound", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Parser, new[]{ "SensitiveValueFrequencyHistogramBuckets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityEquivalenceClass), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityEquivalenceClass.Parser, new[]{ "QuasiIdsValues", "EquivalenceClassSize", "NumDistinctSensitiveValues", "TopSensitiveValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult.Types.LDiversityHistogramBucket.Parser, new[]{ "SensitiveValueFrequencyLowerBound", "SensitiveValueFrequencyUpperBound", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Parser, new[]{ "KMapEstimationHistogram" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationQuasiIdValues), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationQuasiIdValues.Parser, new[]{ "QuasiIdsValues", "EstimatedAnonymity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult.Types.KMapEstimationHistogramBucket.Parser, new[]{ "MinAnonymity", "MaxAnonymity", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Parser, new[]{ "DeltaPresenceEstimationHistogram" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationQuasiIdValues), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationQuasiIdValues.Parser, new[]{ "QuasiIdsValues", "EstimatedProbability" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationHistogramBucket), global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult.Types.DeltaPresenceEstimationHistogramBucket.Parser, new[]{ "MinProbability", "MaxProbability", "BucketSize", "BucketValues", "BucketValueCount" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ValueFrequency), global::Google.Cloud.Dlp.V2.ValueFrequency.Parser, new[]{ "Value", "Count" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Value), global::Google.Cloud.Dlp.V2.Value.Parser, new[]{ "IntegerValue", "FloatValue", "StringValue", "BooleanValue", "TimestampValue", "TimeValue", "DateValue", "DayOfWeekValue" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.QuoteInfo), global::Google.Cloud.Dlp.V2.QuoteInfo.Parser, new[]{ "DateTime" }, new[]{ "ParsedQuote" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DateTime), global::Google.Cloud.Dlp.V2.DateTime.Parser, new[]{ "Date", "DayOfWeek", "Time", "TimeZone" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone), global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone.Parser, new[]{ "OffsetMinutes" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyConfig), global::Google.Cloud.Dlp.V2.DeidentifyConfig.Parser, new[]{ "InfoTypeTransformations", "RecordTransformations" }, new[]{ "Transformation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PrimitiveTransformation), global::Google.Cloud.Dlp.V2.PrimitiveTransformation.Parser, new[]{ "ReplaceConfig", "RedactConfig", "CharacterMaskConfig", "CryptoReplaceFfxFpeConfig", "FixedSizeBucketingConfig", "BucketingConfig", "ReplaceWithInfoTypeConfig", "TimePartConfig", "CryptoHashConfig", "DateShiftConfig", "CryptoDeterministicConfig" }, new[]{ "Transformation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TimePartConfig), global::Google.Cloud.Dlp.V2.TimePartConfig.Parser, new[]{ "PartToExtract" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoHashConfig), global::Google.Cloud.Dlp.V2.CryptoHashConfig.Parser, new[]{ "CryptoKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoDeterministicConfig), global::Google.Cloud.Dlp.V2.CryptoDeterministicConfig.Parser, new[]{ "CryptoKey", "SurrogateInfoType", "Context" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReplaceValueConfig), global::Google.Cloud.Dlp.V2.ReplaceValueConfig.Parser, new[]{ "NewValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ReplaceWithInfoTypeConfig), global::Google.Cloud.Dlp.V2.ReplaceWithInfoTypeConfig.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RedactConfig), global::Google.Cloud.Dlp.V2.RedactConfig.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CharsToIgnore), global::Google.Cloud.Dlp.V2.CharsToIgnore.Parser, new[]{ "CharactersToSkip", "CommonCharactersToIgnore" }, new[]{ "Characters" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CharacterMaskConfig), global::Google.Cloud.Dlp.V2.CharacterMaskConfig.Parser, new[]{ "MaskingCharacter", "NumberToMask", "ReverseOrder", "CharactersToIgnore" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.FixedSizeBucketingConfig), global::Google.Cloud.Dlp.V2.FixedSizeBucketingConfig.Parser, new[]{ "LowerBound", "UpperBound", "BucketSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BucketingConfig), global::Google.Cloud.Dlp.V2.BucketingConfig.Parser, new[]{ "Buckets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BucketingConfig.Types.Bucket), global::Google.Cloud.Dlp.V2.BucketingConfig.Types.Bucket.Parser, new[]{ "Min", "Max", "ReplacementValue" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig), global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Parser, new[]{ "CryptoKey", "Context", "CommonAlphabet", "CustomAlphabet", "Radix", "SurrogateInfoType" }, new[]{ "Alphabet" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CryptoKey), global::Google.Cloud.Dlp.V2.CryptoKey.Parser, new[]{ "Transient", "Unwrapped", "KmsWrapped" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransientCryptoKey), global::Google.Cloud.Dlp.V2.TransientCryptoKey.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UnwrappedCryptoKey), global::Google.Cloud.Dlp.V2.UnwrappedCryptoKey.Parser, new[]{ "Key" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.KmsWrappedCryptoKey), global::Google.Cloud.Dlp.V2.KmsWrappedCryptoKey.Parser, new[]{ "WrappedKey", "CryptoKeyName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DateShiftConfig), global::Google.Cloud.Dlp.V2.DateShiftConfig.Parser, new[]{ "UpperBoundDays", "LowerBoundDays", "Context", "CryptoKey" }, new[]{ "Method" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeTransformations), global::Google.Cloud.Dlp.V2.InfoTypeTransformations.Parser, new[]{ "Transformations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoTypeTransformations.Types.InfoTypeTransformation), global::Google.Cloud.Dlp.V2.InfoTypeTransformations.Types.InfoTypeTransformation.Parser, new[]{ "InfoTypes", "PrimitiveTransformation" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.FieldTransformation), global::Google.Cloud.Dlp.V2.FieldTransformation.Parser, new[]{ "Fields", "Condition", "PrimitiveTransformation", "InfoTypeTransformations" }, new[]{ "Transformation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordTransformations), global::Google.Cloud.Dlp.V2.RecordTransformations.Parser, new[]{ "FieldTransformations", "RecordSuppressions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordSuppression), global::Google.Cloud.Dlp.V2.RecordSuppression.Parser, new[]{ "Condition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition), global::Google.Cloud.Dlp.V2.RecordCondition.Parser, new[]{ "Expressions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Condition), global::Google.Cloud.Dlp.V2.RecordCondition.Types.Condition.Parser, new[]{ "Field", "Operator", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Conditions), global::Google.Cloud.Dlp.V2.RecordCondition.Types.Conditions.Parser, new[]{ "Conditions_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions), global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Parser, new[]{ "LogicalOperator", "Conditions" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransformationOverview), global::Google.Cloud.Dlp.V2.TransformationOverview.Parser, new[]{ "TransformedBytes", "TransformationSummaries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransformationSummary), global::Google.Cloud.Dlp.V2.TransformationSummary.Parser, new[]{ "InfoType", "Field", "Transformation", "FieldTransformations", "RecordSuppress", "Results", "TransformedBytes" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TransformationSummary.Types.SummaryResult), global::Google.Cloud.Dlp.V2.TransformationSummary.Types.SummaryResult.Parser, new[]{ "Count", "Code", "Details" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Schedule), global::Google.Cloud.Dlp.V2.Schedule.Parser, new[]{ "RecurrencePeriodDuration" }, new[]{ "Option" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectTemplate), global::Google.Cloud.Dlp.V2.InspectTemplate.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "InspectConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeidentifyTemplate), global::Google.Cloud.Dlp.V2.DeidentifyTemplate.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "DeidentifyConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Error), global::Google.Cloud.Dlp.V2.Error.Parser, new[]{ "Details", "Timestamps" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.JobTrigger), global::Google.Cloud.Dlp.V2.JobTrigger.Parser, new[]{ "Name", "DisplayName", "Description", "InspectJob", "Triggers", "Errors", "CreateTime", "UpdateTime", "LastRunTime", "Status" }, new[]{ "Job" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.JobTrigger.Types.Trigger), global::Google.Cloud.Dlp.V2.JobTrigger.Types.Trigger.Parser, new[]{ "Schedule" }, new[]{ "Trigger" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action), global::Google.Cloud.Dlp.V2.Action.Parser, new[]{ "SaveFindings", "PubSub", "PublishSummaryToCscc", "PublishFindingsToCloudDataCatalog", "JobNotificationEmails", "PublishToStackdriver" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.SaveFindings), global::Google.Cloud.Dlp.V2.Action.Types.SaveFindings.Parser, new[]{ "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishToPubSub), global::Google.Cloud.Dlp.V2.Action.Types.PublishToPubSub.Parser, new[]{ "Topic" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishSummaryToCscc), global::Google.Cloud.Dlp.V2.Action.Types.PublishSummaryToCscc.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishFindingsToCloudDataCatalog), global::Google.Cloud.Dlp.V2.Action.Types.PublishFindingsToCloudDataCatalog.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.JobNotificationEmails), global::Google.Cloud.Dlp.V2.Action.Types.JobNotificationEmails.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Action.Types.PublishToStackdriver), global::Google.Cloud.Dlp.V2.Action.Types.PublishToStackdriver.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest), global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest.Parser, new[]{ "Parent", "InspectTemplate", "TemplateId", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest), global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest.Parser, new[]{ "Name", "InspectTemplate", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest), global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest), global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse), global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse.Parser, new[]{ "InspectTemplates", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest), global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest), global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest.Parser, new[]{ "Parent", "JobTrigger", "TriggerId", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest), global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest), global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest.Parser, new[]{ "Name", "JobTrigger", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest), global::Google.Cloud.Dlp.V2.GetJobTriggerRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest), global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser, new[]{ "Parent", "InspectJob", "RiskJob", "JobId", "LocationId" }, new[]{ "Job" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest), global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "Filter", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListJobTriggersResponse), global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser, new[]{ "JobTriggers", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest), global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InspectJobConfig), global::Google.Cloud.Dlp.V2.InspectJobConfig.Parser, new[]{ "StorageConfig", "InspectConfig", "InspectTemplateName", "Actions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DlpJob), global::Google.Cloud.Dlp.V2.DlpJob.Parser, new[]{ "Name", "Type", "State", "RiskDetails", "InspectDetails", "CreateTime", "StartTime", "EndTime", "JobTriggerName", "Errors" }, new[]{ "Details" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetDlpJobRequest), global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest), global::Google.Cloud.Dlp.V2.ListDlpJobsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "Type", "OrderBy", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDlpJobsResponse), global::Google.Cloud.Dlp.V2.ListDlpJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest), global::Google.Cloud.Dlp.V2.CancelDlpJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest), global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest.Parser, new[]{ "Parent", "DeidentifyTemplate", "TemplateId", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest.Parser, new[]{ "Name", "DeidentifyTemplate", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse), global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse.Parser, new[]{ "DeidentifyTemplates", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest), global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.LargeCustomDictionaryConfig), global::Google.Cloud.Dlp.V2.LargeCustomDictionaryConfig.Parser, new[]{ "OutputPath", "CloudStorageFileSet", "BigQueryField" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.LargeCustomDictionaryStats), global::Google.Cloud.Dlp.V2.LargeCustomDictionaryStats.Parser, new[]{ "ApproxNumPhrases" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig), global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig.Parser, new[]{ "DisplayName", "Description", "LargeCustomDictionary" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeStats), global::Google.Cloud.Dlp.V2.StoredInfoTypeStats.Parser, new[]{ "LargeCustomDictionary" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion), global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion.Parser, new[]{ "Config", "CreateTime", "State", "Errors", "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredInfoType), global::Google.Cloud.Dlp.V2.StoredInfoType.Parser, new[]{ "Name", "CurrentVersion", "PendingVersions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest.Parser, new[]{ "Parent", "Config", "StoredInfoTypeId", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest.Parser, new[]{ "Name", "Config", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "OrderBy", "LocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser, new[]{ "StoredInfoTypes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest), global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1431,7 +1431,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "matching_type" field.</summary>
     public const int MatchingTypeFieldNumber = 4;
-    private global::Google.Cloud.Dlp.V2.MatchingType matchingType_ = 0;
+    private global::Google.Cloud.Dlp.V2.MatchingType matchingType_ = global::Google.Cloud.Dlp.V2.MatchingType.Unspecified;
     /// <summary>
     /// How the rule is applied, see MatchingType documentation for details.
     /// </summary>
@@ -1490,7 +1490,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.Dictionary) hash ^= Dictionary.GetHashCode();
       if (typeCase_ == TypeOneofCase.Regex) hash ^= Regex.GetHashCode();
       if (typeCase_ == TypeOneofCase.ExcludeInfoTypes) hash ^= ExcludeInfoTypes.GetHashCode();
-      if (MatchingType != 0) hash ^= MatchingType.GetHashCode();
+      if (MatchingType != global::Google.Cloud.Dlp.V2.MatchingType.Unspecified) hash ^= MatchingType.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1517,7 +1517,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(ExcludeInfoTypes);
       }
-      if (MatchingType != 0) {
+      if (MatchingType != global::Google.Cloud.Dlp.V2.MatchingType.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) MatchingType);
       }
@@ -1538,7 +1538,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.ExcludeInfoTypes) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExcludeInfoTypes);
       }
-      if (MatchingType != 0) {
+      if (MatchingType != global::Google.Cloud.Dlp.V2.MatchingType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MatchingType);
       }
       if (_unknownFields != null) {
@@ -1552,7 +1552,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other == null) {
         return;
       }
-      if (other.MatchingType != 0) {
+      if (other.MatchingType != global::Google.Cloud.Dlp.V2.MatchingType.Unspecified) {
         MatchingType = other.MatchingType;
       }
       switch (other.TypeCase) {
@@ -2060,7 +2060,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "min_likelihood" field.</summary>
     public const int MinLikelihoodFieldNumber = 2;
-    private global::Google.Cloud.Dlp.V2.Likelihood minLikelihood_ = 0;
+    private global::Google.Cloud.Dlp.V2.Likelihood minLikelihood_ = global::Google.Cloud.Dlp.V2.Likelihood.Unspecified;
     /// <summary>
     /// Only returns findings equal or above this threshold. The default is
     /// POSSIBLE.
@@ -2188,7 +2188,7 @@ namespace Google.Cloud.Dlp.V2 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= infoTypes_.GetHashCode();
-      if (MinLikelihood != 0) hash ^= MinLikelihood.GetHashCode();
+      if (MinLikelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) hash ^= MinLikelihood.GetHashCode();
       if (limits_ != null) hash ^= Limits.GetHashCode();
       if (IncludeQuote != false) hash ^= IncludeQuote.GetHashCode();
       if (ExcludeInfoTypes != false) hash ^= ExcludeInfoTypes.GetHashCode();
@@ -2209,7 +2209,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
-      if (MinLikelihood != 0) {
+      if (MinLikelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) MinLikelihood);
       }
@@ -2237,7 +2237,7 @@ namespace Google.Cloud.Dlp.V2 {
     public int CalculateSize() {
       int size = 0;
       size += infoTypes_.CalculateSize(_repeated_infoTypes_codec);
-      if (MinLikelihood != 0) {
+      if (MinLikelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinLikelihood);
       }
       if (limits_ != null) {
@@ -2264,7 +2264,7 @@ namespace Google.Cloud.Dlp.V2 {
         return;
       }
       infoTypes_.Add(other.infoTypes_);
-      if (other.MinLikelihood != 0) {
+      if (other.MinLikelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         MinLikelihood = other.MinLikelihood;
       }
       if (other.limits_ != null) {
@@ -2759,7 +2759,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType type_ = 0;
+    private global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType type_ = global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified;
     /// <summary>
     /// The type of data stored in the bytes string. Default will be TEXT_UTF8.
     /// </summary>
@@ -2806,7 +2806,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified) hash ^= Type.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2821,7 +2821,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -2837,7 +2837,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Data.Length != 0) {
@@ -2854,7 +2854,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified) {
         Type = other.Type;
       }
       if (other.Data.Length != 0) {
@@ -3705,7 +3705,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "likelihood" field.</summary>
     public const int LikelihoodFieldNumber = 3;
-    private global::Google.Cloud.Dlp.V2.Likelihood likelihood_ = 0;
+    private global::Google.Cloud.Dlp.V2.Likelihood likelihood_ = global::Google.Cloud.Dlp.V2.Likelihood.Unspecified;
     /// <summary>
     /// Confidence of how likely it is that the `info_type` is correct.
     /// </summary>
@@ -3788,7 +3788,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (Quote.Length != 0) hash ^= Quote.GetHashCode();
       if (infoType_ != null) hash ^= InfoType.GetHashCode();
-      if (Likelihood != 0) hash ^= Likelihood.GetHashCode();
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) hash ^= Likelihood.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (quoteInfo_ != null) hash ^= QuoteInfo.GetHashCode();
@@ -3813,7 +3813,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(InfoType);
       }
-      if (Likelihood != 0) {
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Likelihood);
       }
@@ -3843,7 +3843,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (infoType_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
       }
-      if (Likelihood != 0) {
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Likelihood);
       }
       if (location_ != null) {
@@ -3875,7 +3875,7 @@ namespace Google.Cloud.Dlp.V2 {
         }
         InfoType.MergeFrom(other.InfoType);
       }
-      if (other.Likelihood != 0) {
+      if (other.Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         Likelihood = other.Likelihood;
       }
       if (other.location_ != null) {
@@ -8040,7 +8040,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "output_schema" field.</summary>
     public const int OutputSchemaFieldNumber = 3;
-    private global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema outputSchema_ = 0;
+    private global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema outputSchema_ = global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema.Unspecified;
     /// <summary>
     /// Schema used for writing the findings for Inspect jobs. This field is only
     /// used for Inspect and must be unspecified for Risk jobs. Columns are derived
@@ -8101,7 +8101,7 @@ namespace Google.Cloud.Dlp.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (typeCase_ == TypeOneofCase.Table) hash ^= Table.GetHashCode();
-      if (OutputSchema != 0) hash ^= OutputSchema.GetHashCode();
+      if (OutputSchema != global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema.Unspecified) hash ^= OutputSchema.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8120,7 +8120,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(Table);
       }
-      if (OutputSchema != 0) {
+      if (OutputSchema != global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) OutputSchema);
       }
@@ -8135,7 +8135,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.Table) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Table);
       }
-      if (OutputSchema != 0) {
+      if (OutputSchema != global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OutputSchema);
       }
       if (_unknownFields != null) {
@@ -8149,7 +8149,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other == null) {
         return;
       }
-      if (other.OutputSchema != 0) {
+      if (other.OutputSchema != global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema.Unspecified) {
         OutputSchema = other.OutputSchema;
       }
       switch (other.TypeCase) {
@@ -16143,7 +16143,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.DayOfWeek DayOfWeekValue {
-      get { return typeCase_ == TypeOneofCase.DayOfWeekValue ? (global::Google.Type.DayOfWeek) type_ : 0; }
+      get { return typeCase_ == TypeOneofCase.DayOfWeekValue ? (global::Google.Type.DayOfWeek) type_ : global::Google.Type.DayOfWeek.Unspecified; }
       set {
         type_ = value;
         typeCase_ = TypeOneofCase.DayOfWeekValue;
@@ -16630,7 +16630,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "day_of_week" field.</summary>
     public const int DayOfWeekFieldNumber = 2;
-    private global::Google.Type.DayOfWeek dayOfWeek_ = 0;
+    private global::Google.Type.DayOfWeek dayOfWeek_ = global::Google.Type.DayOfWeek.Unspecified;
     /// <summary>
     /// Day of week
     /// </summary>
@@ -16694,7 +16694,7 @@ namespace Google.Cloud.Dlp.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (date_ != null) hash ^= Date.GetHashCode();
-      if (DayOfWeek != 0) hash ^= DayOfWeek.GetHashCode();
+      if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) hash ^= DayOfWeek.GetHashCode();
       if (time_ != null) hash ^= Time.GetHashCode();
       if (timeZone_ != null) hash ^= TimeZone.GetHashCode();
       if (_unknownFields != null) {
@@ -16714,7 +16714,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (DayOfWeek != 0) {
+      if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) DayOfWeek);
       }
@@ -16737,7 +16737,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
-      if (DayOfWeek != 0) {
+      if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DayOfWeek);
       }
       if (time_ != null) {
@@ -16763,7 +16763,7 @@ namespace Google.Cloud.Dlp.V2 {
         }
         Date.MergeFrom(other.Date);
       }
-      if (other.DayOfWeek != 0) {
+      if (other.DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
         DayOfWeek = other.DayOfWeek;
       }
       if (other.time_ != null) {
@@ -17810,7 +17810,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "part_to_extract" field.</summary>
     public const int PartToExtractFieldNumber = 1;
-    private global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart partToExtract_ = 0;
+    private global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart partToExtract_ = global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified;
     /// <summary>
     /// The part of the time to keep.
     /// </summary>
@@ -17842,7 +17842,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PartToExtract != 0) hash ^= PartToExtract.GetHashCode();
+      if (PartToExtract != global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified) hash ^= PartToExtract.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -17856,7 +17856,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (PartToExtract != 0) {
+      if (PartToExtract != global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PartToExtract);
       }
@@ -17868,7 +17868,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PartToExtract != 0) {
+      if (PartToExtract != global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PartToExtract);
       }
       if (_unknownFields != null) {
@@ -17882,7 +17882,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other == null) {
         return;
       }
-      if (other.PartToExtract != 0) {
+      if (other.PartToExtract != global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified) {
         PartToExtract = other.PartToExtract;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -18778,7 +18778,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore CommonCharactersToIgnore {
-      get { return charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore ? (global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore) characters_ : 0; }
+      get { return charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore ? (global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore) characters_ : global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore.Unspecified; }
       set {
         characters_ = value;
         charactersCase_ = CharactersOneofCase.CommonCharactersToIgnore;
@@ -19890,7 +19890,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet CommonAlphabet {
-      get { return alphabetCase_ == AlphabetOneofCase.CommonAlphabet ? (global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) alphabet_ : 0; }
+      get { return alphabetCase_ == AlphabetOneofCase.CommonAlphabet ? (global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) alphabet_ : global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet.Unspecified; }
       set {
         alphabet_ = value;
         alphabetCase_ = AlphabetOneofCase.CommonAlphabet;
@@ -22297,7 +22297,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         /// <summary>Field number for the "operator" field.</summary>
         public const int OperatorFieldNumber = 3;
-        private global::Google.Cloud.Dlp.V2.RelationalOperator operator_ = 0;
+        private global::Google.Cloud.Dlp.V2.RelationalOperator operator_ = global::Google.Cloud.Dlp.V2.RelationalOperator.Unspecified;
         /// <summary>
         /// Required. Operator used to compare the field or infoType to the value.
         /// </summary>
@@ -22346,7 +22346,7 @@ namespace Google.Cloud.Dlp.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (field_ != null) hash ^= Field.GetHashCode();
-          if (Operator != 0) hash ^= Operator.GetHashCode();
+          if (Operator != global::Google.Cloud.Dlp.V2.RelationalOperator.Unspecified) hash ^= Operator.GetHashCode();
           if (value_ != null) hash ^= Value.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -22365,7 +22365,7 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
           }
-          if (Operator != 0) {
+          if (Operator != global::Google.Cloud.Dlp.V2.RelationalOperator.Unspecified) {
             output.WriteRawTag(24);
             output.WriteEnum((int) Operator);
           }
@@ -22384,7 +22384,7 @@ namespace Google.Cloud.Dlp.V2 {
           if (field_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
           }
-          if (Operator != 0) {
+          if (Operator != global::Google.Cloud.Dlp.V2.RelationalOperator.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operator);
           }
           if (value_ != null) {
@@ -22407,7 +22407,7 @@ namespace Google.Cloud.Dlp.V2 {
             }
             Field.MergeFrom(other.Field);
           }
-          if (other.Operator != 0) {
+          if (other.Operator != global::Google.Cloud.Dlp.V2.RelationalOperator.Unspecified) {
             Operator = other.Operator;
           }
           if (other.value_ != null) {
@@ -22623,7 +22623,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         /// <summary>Field number for the "logical_operator" field.</summary>
         public const int LogicalOperatorFieldNumber = 1;
-        private global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator logicalOperator_ = 0;
+        private global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator logicalOperator_ = global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified;
         /// <summary>
         /// The operator to apply to the result of conditions. Default and currently
         /// only supported value is `AND`.
@@ -22690,7 +22690,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (LogicalOperator != 0) hash ^= LogicalOperator.GetHashCode();
+          if (LogicalOperator != global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified) hash ^= LogicalOperator.GetHashCode();
           if (typeCase_ == TypeOneofCase.Conditions) hash ^= Conditions.GetHashCode();
           hash ^= (int) typeCase_;
           if (_unknownFields != null) {
@@ -22706,7 +22706,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (LogicalOperator != 0) {
+          if (LogicalOperator != global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) LogicalOperator);
           }
@@ -22722,7 +22722,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (LogicalOperator != 0) {
+          if (LogicalOperator != global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LogicalOperator);
           }
           if (typeCase_ == TypeOneofCase.Conditions) {
@@ -22739,7 +22739,7 @@ namespace Google.Cloud.Dlp.V2 {
           if (other == null) {
             return;
           }
-          if (other.LogicalOperator != 0) {
+          if (other.LogicalOperator != global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified) {
             LogicalOperator = other.LogicalOperator;
           }
           switch (other.TypeCase) {
@@ -23374,7 +23374,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         /// <summary>Field number for the "code" field.</summary>
         public const int CodeFieldNumber = 2;
-        private global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode code_ = 0;
+        private global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode code_ = global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode.Unspecified;
         /// <summary>
         /// Outcome of the transformation.
         /// </summary>
@@ -23424,7 +23424,7 @@ namespace Google.Cloud.Dlp.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (Count != 0L) hash ^= Count.GetHashCode();
-          if (Code != 0) hash ^= Code.GetHashCode();
+          if (Code != global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode.Unspecified) hash ^= Code.GetHashCode();
           if (Details.Length != 0) hash ^= Details.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -23443,7 +23443,7 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(8);
             output.WriteInt64(Count);
           }
-          if (Code != 0) {
+          if (Code != global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Code);
           }
@@ -23462,7 +23462,7 @@ namespace Google.Cloud.Dlp.V2 {
           if (Count != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
           }
-          if (Code != 0) {
+          if (Code != global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
           }
           if (Details.Length != 0) {
@@ -23482,7 +23482,7 @@ namespace Google.Cloud.Dlp.V2 {
           if (other.Count != 0L) {
             Count = other.Count;
           }
-          if (other.Code != 0) {
+          if (other.Code != global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode.Unspecified) {
             Code = other.Code;
           }
           if (other.Details.Length != 0) {
@@ -24678,7 +24678,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 10;
-    private global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status status_ = 0;
+    private global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status status_ = global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status.Unspecified;
     /// <summary>
     /// Required. A status for this trigger.
     /// </summary>
@@ -24747,7 +24747,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (lastRunTime_ != null) hash ^= LastRunTime.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status.Unspecified) hash ^= Status.GetHashCode();
       hash ^= (int) jobCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -24792,7 +24792,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(LastRunTime);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status.Unspecified) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Status);
       }
@@ -24827,7 +24827,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (lastRunTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastRunTime);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -24870,7 +24870,7 @@ namespace Google.Cloud.Dlp.V2 {
         }
         LastRunTime.MergeFrom(other.LastRunTime);
       }
-      if (other.Status != 0) {
+      if (other.Status != global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status.Unspecified) {
         Status = other.Status;
       }
       switch (other.JobCase) {
@@ -29388,7 +29388,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Google.Cloud.Dlp.V2.DlpJobType type_ = 0;
+    private global::Google.Cloud.Dlp.V2.DlpJobType type_ = global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified;
     /// <summary>
     /// The type of job.
     /// </summary>
@@ -29402,7 +29402,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState state_ = 0;
+    private global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState state_ = global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState.Unspecified;
     /// <summary>
     /// State of a job.
     /// </summary>
@@ -29562,8 +29562,8 @@ namespace Google.Cloud.Dlp.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) hash ^= Type.GetHashCode();
+      if (State != global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState.Unspecified) hash ^= State.GetHashCode();
       if (detailsCase_ == DetailsOneofCase.RiskDetails) hash ^= RiskDetails.GetHashCode();
       if (detailsCase_ == DetailsOneofCase.InspectDetails) hash ^= InspectDetails.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -29589,11 +29589,11 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
@@ -29633,10 +29633,10 @@ namespace Google.Cloud.Dlp.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (detailsCase_ == DetailsOneofCase.RiskDetails) {
@@ -29672,10 +29672,10 @@ namespace Google.Cloud.Dlp.V2 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
         Type = other.Type;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState.Unspecified) {
         State = other.State;
       }
       if (other.createTime_ != null) {
@@ -30091,7 +30091,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
-    private global::Google.Cloud.Dlp.V2.DlpJobType type_ = 0;
+    private global::Google.Cloud.Dlp.V2.DlpJobType type_ = global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified;
     /// <summary>
     /// The type of job. Defaults to `DlpJobType.INSPECT`
     /// </summary>
@@ -30174,7 +30174,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) hash ^= Type.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (LocationId.Length != 0) hash ^= LocationId.GetHashCode();
       if (_unknownFields != null) {
@@ -30206,7 +30206,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
@@ -30238,7 +30238,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (OrderBy.Length != 0) {
@@ -30270,7 +30270,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
         Type = other.Type;
       }
       if (other.OrderBy.Length != 0) {
@@ -32783,7 +32783,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Google.Cloud.Dlp.V2.StoredInfoTypeState state_ = 0;
+    private global::Google.Cloud.Dlp.V2.StoredInfoTypeState state_ = global::Google.Cloud.Dlp.V2.StoredInfoTypeState.Unspecified;
     /// <summary>
     /// Stored info type version state. Read-only, updated by the system
     /// during dictionary creation.
@@ -32861,7 +32861,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (config_ != null) hash ^= Config.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Dlp.V2.StoredInfoTypeState.Unspecified) hash ^= State.GetHashCode();
       hash ^= errors_.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (_unknownFields != null) {
@@ -32885,7 +32885,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(CreateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dlp.V2.StoredInfoTypeState.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
@@ -32908,7 +32908,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dlp.V2.StoredInfoTypeState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += errors_.CalculateSize(_repeated_errors_codec);
@@ -32938,7 +32938,7 @@ namespace Google.Cloud.Dlp.V2 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dlp.V2.StoredInfoTypeState.Unspecified) {
         State = other.State;
       }
       errors_.Add(other.errors_);
