@@ -17,6 +17,7 @@
 namespace Google.Cloud.BigQuery.DataTransfer.V1.SmokeTests
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using System;
 
     public class DataTransferServiceSmokeTest
@@ -36,7 +37,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.SmokeTests
             DataTransferServiceClient client = DataTransferServiceClient.Create();
 
             // Initialize request argument(s)
-            ParentName parent = ParentName.FromProjectLocation(projectId, "us-central1");
+            LocationName parent = LocationName.FromProjectLocation(projectId, "us-central1");
 
             // Call API method
             PagedEnumerable<ListDataSourcesResponse, DataSource> pagedResponse = client.ListDataSources(parent);
