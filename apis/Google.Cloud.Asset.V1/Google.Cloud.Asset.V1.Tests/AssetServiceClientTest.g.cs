@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -35,7 +36,7 @@ namespace Google.Cloud.Asset.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 AssetNames =
                 {
                     "asset_namese42cd316",
@@ -64,7 +65,7 @@ namespace Google.Cloud.Asset.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 AssetNames =
                 {
                     "asset_namese42cd316",
