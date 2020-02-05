@@ -36,29 +36,26 @@ namespace Google.Cloud.Bigtable.V2
         /// The default <c>BigtableClient.MutateRows</c> and <c>BigtableClient.MutateRowsAsync</c>
         /// <see cref="RetrySettings"/> are:
         /// <list type="bullet">
+        /// <item><description>Max attempts: 5</description></item>
         /// <item><description>Initial retry delay: 10 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes on individual mutations:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         /// <seealso cref="MutateRowsSettings"/>
         public RetrySettings MutateRowsRetrySettings { get; set; } =
-            new RetrySettings(
-                retryBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(10), maxDelay: TimeSpan.FromMilliseconds(60000), delayMultiplier: 2.0),
-                timeoutBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(20000), maxDelay: TimeSpan.FromMilliseconds(20000), delayMultiplier: 1.0),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable)
-            );
-        
+            RetrySettings.FromExponentialBackoff(
+                maxAttempts: 5,
+                initialBackoff: TimeSpan.FromMilliseconds(10),
+                maxBackoff: TimeSpan.FromMinutes(1),
+                backoffMultiplier: 2,
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable));
+
         /// <summary>
         /// <see cref="RetrySettings"/> for calls to <c>BigtableClient.ReadRows</c> when the stream
         /// of results ends prematurely.
@@ -66,28 +63,25 @@ namespace Google.Cloud.Bigtable.V2
         /// <remarks>
         /// The default <c>BigtableClient.ReadRows</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
+        /// <item><description>Max attempts: 5</description></item>
         /// <item><description>Initial retry delay: 10 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes on individual mutations:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         /// <seealso cref="ReadRowsSettings"/>
         public RetrySettings ReadRowsRetrySettings { get; set; } =
-            new RetrySettings(
-                retryBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(10), maxDelay: TimeSpan.FromMilliseconds(60000), delayMultiplier: 2.0),
-                timeoutBackoff: new BackoffSettings(delay: TimeSpan.FromMilliseconds(20000), maxDelay: TimeSpan.FromMilliseconds(20000), delayMultiplier: 1.0),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable)
-            );
+            RetrySettings.FromExponentialBackoff(
+                maxAttempts: 5,
+                initialBackoff: TimeSpan.FromMilliseconds(10),
+                maxBackoff: TimeSpan.FromMinutes(1),
+                backoffMultiplier: 2,
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable));
 
         /// <summary>
         /// This value specifies routing for replication. If not specified, the
