@@ -641,7 +641,7 @@ namespace Google.Cloud.OsLogin.Common
         /// </summary>
         public gcoc::PosixAccountName PosixAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::PosixAccountName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::PosixAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -653,7 +653,7 @@ namespace Google.Cloud.OsLogin.Common
         /// </summary>
         public gcoc::SshPublicKeyName SshPublicKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

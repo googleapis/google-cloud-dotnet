@@ -47,8 +47,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser, new[]{ "Name", "EnableAssetDiscovery", "AssetDiscoveryConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Parser, new[]{ "ProjectIds", "InclusionMode" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) }, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser, new[]{ "Name", "EnableAssetDiscovery", "AssetDiscoveryConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Parser, new[]{ "ProjectIds", "InclusionMode" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) }, null, null)})
           }));
     }
     #endregion
@@ -320,7 +320,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
         /// <summary>Field number for the "inclusion_mode" field.</summary>
         public const int InclusionModeFieldNumber = 2;
-        private global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode inclusionMode_ = 0;
+        private global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode inclusionMode_ = global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified;
         /// <summary>
         /// The mode to use for filtering asset discovery.
         /// </summary>
@@ -354,7 +354,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= projectIds_.GetHashCode();
-          if (InclusionMode != 0) hash ^= InclusionMode.GetHashCode();
+          if (InclusionMode != global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified) hash ^= InclusionMode.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -369,7 +369,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
           projectIds_.WriteTo(output, _repeated_projectIds_codec);
-          if (InclusionMode != 0) {
+          if (InclusionMode != global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) InclusionMode);
           }
@@ -382,7 +382,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public int CalculateSize() {
           int size = 0;
           size += projectIds_.CalculateSize(_repeated_projectIds_codec);
-          if (InclusionMode != 0) {
+          if (InclusionMode != global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InclusionMode);
           }
           if (_unknownFields != null) {
@@ -397,7 +397,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             return;
           }
           projectIds_.Add(other.projectIds_);
-          if (other.InclusionMode != 0) {
+          if (other.InclusionMode != global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified) {
             InclusionMode = other.InclusionMode;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

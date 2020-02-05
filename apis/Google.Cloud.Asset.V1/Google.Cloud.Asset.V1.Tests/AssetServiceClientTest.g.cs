@@ -14,7 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -36,7 +35,7 @@ namespace Google.Cloud.Asset.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Parent = "parent7858e4d0",
                 AssetNames =
                 {
                     "asset_namese42cd316",
@@ -65,7 +64,7 @@ namespace Google.Cloud.Asset.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                ParentAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Parent = "parent7858e4d0",
                 AssetNames =
                 {
                     "asset_namese42cd316",
@@ -342,7 +341,7 @@ namespace Google.Cloud.Asset.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetFeed_ResourceNames()
+        public void GetFeedResourceNames()
         {
             moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -372,7 +371,7 @@ namespace Google.Cloud.Asset.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetFeedAsync_ResourceNames()
+        public async stt::Task GetFeedResourceNamesAsync()
         {
             moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -662,7 +661,7 @@ namespace Google.Cloud.Asset.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteFeed_ResourceNames()
+        public void DeleteFeedResourceNames()
         {
             moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -678,7 +677,7 @@ namespace Google.Cloud.Asset.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteFeedAsync_ResourceNames()
+        public async stt::Task DeleteFeedResourceNamesAsync()
         {
             moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

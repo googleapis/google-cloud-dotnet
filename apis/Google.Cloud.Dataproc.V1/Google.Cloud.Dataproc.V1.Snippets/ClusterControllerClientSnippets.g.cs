@@ -27,7 +27,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
     public sealed class GeneratedClusterControllerClientSnippets
     {
         /// <summary>Snippet for CreateCluster</summary>
-        public void CreateCluster_RequestObject()
+        public void CreateClusterRequestObject()
         {
             // Snippet: CreateCluster(CreateClusterRequest, CallSettings)
             // Create client
@@ -62,7 +62,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for CreateClusterAsync</summary>
-        public async Task CreateClusterAsync_RequestObject()
+        public async Task CreateClusterRequestObjectAsync()
         {
             // Snippet: CreateClusterAsync(CreateClusterRequest, CallSettings)
             // Additional: CreateClusterAsync(CreateClusterRequest, CancellationToken)
@@ -161,7 +161,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCluster</summary>
-        public void UpdateCluster_RequestObject()
+        public void UpdateClusterRequestObject()
         {
             // Snippet: UpdateCluster(UpdateClusterRequest, CallSettings)
             // Create client
@@ -199,7 +199,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync_RequestObject()
+        public async Task UpdateClusterRequestObjectAsync()
         {
             // Snippet: UpdateClusterAsync(UpdateClusterRequest, CallSettings)
             // Additional: UpdateClusterAsync(UpdateClusterRequest, CancellationToken)
@@ -305,7 +305,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteCluster</summary>
-        public void DeleteCluster_RequestObject()
+        public void DeleteClusterRequestObject()
         {
             // Snippet: DeleteCluster(DeleteClusterRequest, CallSettings)
             // Create client
@@ -341,7 +341,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync_RequestObject()
+        public async Task DeleteClusterRequestObjectAsync()
         {
             // Snippet: DeleteClusterAsync(DeleteClusterRequest, CallSettings)
             // Additional: DeleteClusterAsync(DeleteClusterRequest, CancellationToken)
@@ -441,7 +441,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetCluster</summary>
-        public void GetCluster_RequestObject()
+        public void GetClusterRequestObject()
         {
             // Snippet: GetCluster(GetClusterRequest, CallSettings)
             // Create client
@@ -459,7 +459,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync_RequestObject()
+        public async Task GetClusterRequestObjectAsync()
         {
             // Snippet: GetClusterAsync(GetClusterRequest, CallSettings)
             // Additional: GetClusterAsync(GetClusterRequest, CancellationToken)
@@ -509,7 +509,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListClusters</summary>
-        public void ListClusters_RequestObject()
+        public void ListClustersRequestObject()
         {
             // Snippet: ListClusters(ListClustersRequest, CallSettings)
             // Create client
@@ -559,7 +559,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListClusters</summary>
-        public async Task ListClustersAsync_RequestObject()
+        public async Task ListClustersRequestObjectAsync()
         {
             // Snippet: ListClustersAsync(ListClustersRequest, CallSettings)
             // Create client
@@ -795,7 +795,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DiagnoseCluster</summary>
-        public void DiagnoseCluster_RequestObject()
+        public void DiagnoseClusterRequestObject()
         {
             // Snippet: DiagnoseCluster(DiagnoseClusterRequest, CallSettings)
             // Create client
@@ -829,7 +829,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for DiagnoseClusterAsync</summary>
-        public async Task DiagnoseClusterAsync_RequestObject()
+        public async Task DiagnoseClusterRequestObjectAsync()
         {
             // Snippet: DiagnoseClusterAsync(DiagnoseClusterRequest, CallSettings)
             // Additional: DiagnoseClusterAsync(DiagnoseClusterRequest, CancellationToken)

@@ -34,9 +34,9 @@ namespace Grafeas.V1 {
             "Z29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grafeas.V1.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.AttestationNote), global::Grafeas.V1.AttestationNote.Parser, new[]{ "Hint" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.AttestationNote.Types.Hint), global::Grafeas.V1.AttestationNote.Types.Hint.Parser, new[]{ "HumanReadableName" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.AttestationOccurrence), global::Grafeas.V1.AttestationOccurrence.Parser, new[]{ "SerializedPayload", "Signatures" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.AttestationNote), global::Grafeas.V1.AttestationNote.Parser, new[]{ "Hint" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.AttestationNote.Types.Hint), global::Grafeas.V1.AttestationNote.Types.Hint.Parser, new[]{ "HumanReadableName" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.AttestationOccurrence), global::Grafeas.V1.AttestationOccurrence.Parser, new[]{ "SerializedPayload", "Signatures" }, null, null, null, null)
           }));
     }
     #endregion

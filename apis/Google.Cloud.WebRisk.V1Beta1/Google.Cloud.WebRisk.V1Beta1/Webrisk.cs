@@ -102,18 +102,18 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
             "b2dsZVxDbG91ZFxXZWJSaXNrXFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.WebRisk.V1Beta1.ThreatType), typeof(global::Google.Cloud.WebRisk.V1Beta1.CompressionType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Parser, new[]{ "ThreatType", "VersionToken", "Constraints" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints.Parser, new[]{ "MaxDiffEntries", "MaxDatabaseEntries", "SupportedCompressions" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Parser, new[]{ "ResponseType", "Additions", "Removals", "NewVersionToken", "Checksum", "RecommendedNextDiff" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum.Parser, new[]{ "Sha256" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest.Parser, new[]{ "Uri", "ThreatTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Parser, new[]{ "Threat" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri.Parser, new[]{ "ThreatTypes", "ExpireTime" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest.Parser, new[]{ "HashPrefix", "ThreatTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Parser, new[]{ "Threats", "NegativeExpireTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Types.ThreatHash), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Types.ThreatHash.Parser, new[]{ "ThreatTypes", "Hash", "ExpireTime" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions), global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions.Parser, new[]{ "RawHashes", "RiceHashes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals), global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals.Parser, new[]{ "RawIndices", "RiceIndices" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.RawIndices), global::Google.Cloud.WebRisk.V1Beta1.RawIndices.Parser, new[]{ "Indices" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.RawHashes), global::Google.Cloud.WebRisk.V1Beta1.RawHashes.Parser, new[]{ "PrefixSize", "RawHashes_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding), global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding.Parser, new[]{ "FirstValue", "RiceParameter", "EntryCount", "EncodedData" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.WebRisk.V1Beta1.ThreatType), typeof(global::Google.Cloud.WebRisk.V1Beta1.CompressionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Parser, new[]{ "ThreatType", "VersionToken", "Constraints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints.Parser, new[]{ "MaxDiffEntries", "MaxDatabaseEntries", "SupportedCompressions" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Parser, new[]{ "ResponseType", "Additions", "Removals", "NewVersionToken", "Checksum", "RecommendedNextDiff" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum), global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum.Parser, new[]{ "Sha256" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest.Parser, new[]{ "Uri", "ThreatTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Parser, new[]{ "Threat" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri), global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri.Parser, new[]{ "ThreatTypes", "ExpireTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest.Parser, new[]{ "HashPrefix", "ThreatTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Parser, new[]{ "Threats", "NegativeExpireTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Types.ThreatHash), global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Types.ThreatHash.Parser, new[]{ "ThreatTypes", "Hash", "ExpireTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions), global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions.Parser, new[]{ "RawHashes", "RiceHashes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals), global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals.Parser, new[]{ "RawIndices", "RiceIndices" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.RawIndices), global::Google.Cloud.WebRisk.V1Beta1.RawIndices.Parser, new[]{ "Indices" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.RawHashes), global::Google.Cloud.WebRisk.V1Beta1.RawHashes.Parser, new[]{ "PrefixSize", "RawHashes_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding), global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding.Parser, new[]{ "FirstValue", "RiceParameter", "EntryCount", "EncodedData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -205,7 +205,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     /// <summary>Field number for the "threat_type" field.</summary>
     public const int ThreatTypeFieldNumber = 1;
-    private global::Google.Cloud.WebRisk.V1Beta1.ThreatType threatType_ = 0;
+    private global::Google.Cloud.WebRisk.V1Beta1.ThreatType threatType_ = global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified;
     /// <summary>
     /// The ThreatList to update.
     /// </summary>
@@ -268,7 +268,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ThreatType != 0) hash ^= ThreatType.GetHashCode();
+      if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) hash ^= ThreatType.GetHashCode();
       if (VersionToken.Length != 0) hash ^= VersionToken.GetHashCode();
       if (constraints_ != null) hash ^= Constraints.GetHashCode();
       if (_unknownFields != null) {
@@ -284,7 +284,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ThreatType != 0) {
+      if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ThreatType);
       }
@@ -304,7 +304,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ThreatType != 0) {
+      if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ThreatType);
       }
       if (VersionToken.Length != 0) {
@@ -324,7 +324,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (other == null) {
         return;
       }
-      if (other.ThreatType != 0) {
+      if (other.ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
         ThreatType = other.ThreatType;
       }
       if (other.VersionToken.Length != 0) {
@@ -610,7 +610,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     /// <summary>Field number for the "response_type" field.</summary>
     public const int ResponseTypeFieldNumber = 4;
-    private global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType responseType_ = 0;
+    private global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType responseType_ = global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified;
     /// <summary>
     /// The type of response. This may indicate that an action must be taken by the
     /// client when the response is received.
@@ -725,7 +725,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ResponseType != 0) hash ^= ResponseType.GetHashCode();
+      if (ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) hash ^= ResponseType.GetHashCode();
       if (additions_ != null) hash ^= Additions.GetHashCode();
       if (removals_ != null) hash ^= Removals.GetHashCode();
       if (NewVersionToken.Length != 0) hash ^= NewVersionToken.GetHashCode();
@@ -748,7 +748,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteMessage(RecommendedNextDiff);
       }
-      if (ResponseType != 0) {
+      if (ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ResponseType);
       }
@@ -776,7 +776,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ResponseType != 0) {
+      if (ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseType);
       }
       if (additions_ != null) {
@@ -805,7 +805,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (other == null) {
         return;
       }
-      if (other.ResponseType != 0) {
+      if (other.ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) {
         ResponseType = other.ResponseType;
       }
       if (other.additions_ != null) {

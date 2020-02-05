@@ -124,7 +124,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetBillingAccount_ResourceNames()
+        public void GetBillingAccountResourceNames()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
@@ -146,7 +146,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetBillingAccountAsync_ResourceNames()
+        public async stt::Task GetBillingAccountResourceNamesAsync()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             GetBillingAccountRequest request = new GetBillingAccountRequest
@@ -268,7 +268,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateBillingAccount_ResourceNames()
+        public void UpdateBillingAccountResourceNames()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
@@ -291,7 +291,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateBillingAccountAsync_ResourceNames()
+        public async stt::Task UpdateBillingAccountResourceNamesAsync()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
@@ -698,7 +698,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
@@ -722,7 +722,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
@@ -852,7 +852,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
@@ -877,7 +877,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
@@ -1038,7 +1038,7 @@ namespace Google.Cloud.Billing.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest

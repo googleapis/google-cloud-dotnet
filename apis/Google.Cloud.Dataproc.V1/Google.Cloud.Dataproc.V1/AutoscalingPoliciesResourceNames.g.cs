@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gcdv = Google.Cloud.Dataproc.V1;
 using sys = System;
 
@@ -604,7 +605,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public gcdv::AutoscalingPolicyName AutoscalingPolicyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::AutoscalingPolicyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::AutoscalingPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -612,11 +613,44 @@ namespace Google.Cloud.Dataproc.V1
     public partial class CreateAutoscalingPolicyRequest
     {
         /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public RegionOrLocationName ParentAsRegionOrLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
+                {
+                    return regionOrLocation;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -628,7 +662,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public gcdv::AutoscalingPolicyName AutoscalingPolicyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::AutoscalingPolicyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::AutoscalingPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -640,7 +674,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public gcdv::AutoscalingPolicyName AutoscalingPolicyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::AutoscalingPolicyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::AutoscalingPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -648,11 +682,44 @@ namespace Google.Cloud.Dataproc.V1
     public partial class ListAutoscalingPoliciesRequest
     {
         /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public RegionOrLocationName ParentAsRegionOrLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
+                {
+                    return regionOrLocation;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

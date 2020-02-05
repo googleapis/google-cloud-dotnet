@@ -80,10 +80,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job), global::Google.Cloud.Talent.V4Beta1.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "JobCategories" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions), global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions.Parser, new[]{ "DisableStreetAddressResolution", "HtmlSanitization" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job), global::Google.Cloud.Talent.V4Beta1.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "JobCategories" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions), global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions.Parser, new[]{ "DisableStreetAddressResolution", "HtmlSanitization" }, null, null, null, null),
             null, })
           }));
     }
@@ -340,7 +340,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "custom_attributes" field.</summary>
     public const int CustomAttributesFieldNumber = 10;
     private static readonly pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec _map_customAttributes_codec
-        = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser), 82);
+        = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser), 82);
     private readonly pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute> customAttributes_ = new pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute>();
     /// <summary>
     /// A map of fields to hold both filterable and non-filterable custom job
@@ -449,7 +449,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "job_level" field.</summary>
     public const int JobLevelFieldNumber = 16;
-    private global::Google.Cloud.Talent.V4Beta1.JobLevel jobLevel_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.JobLevel jobLevel_ = global::Google.Cloud.Talent.V4Beta1.JobLevel.Unspecified;
     /// <summary>
     /// The experience level associated with the job, such as "Entry Level".
     /// </summary>
@@ -525,7 +525,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "posting_region" field.</summary>
     public const int PostingRegionFieldNumber = 20;
-    private global::Google.Cloud.Talent.V4Beta1.PostingRegion postingRegion_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.PostingRegion postingRegion_ = global::Google.Cloud.Talent.V4Beta1.PostingRegion.Unspecified;
     /// <summary>
     /// The job [PostingRegion][google.cloud.talent.v4beta1.PostingRegion] (for example, state, country) throughout
     /// which the job is available. If this field is set, a [LocationFilter][google.cloud.talent.v4beta1.LocationFilter]
@@ -545,7 +545,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "visibility" field.</summary>
     public const int VisibilityFieldNumber = 21;
-    private global::Google.Cloud.Talent.V4Beta1.Visibility visibility_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Visibility visibility_ = global::Google.Cloud.Talent.V4Beta1.Visibility.Unspecified;
     /// <summary>
     /// Deprecated. The job is only visible to the owner.
     ///
@@ -796,12 +796,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= employmentTypes_.GetHashCode();
       if (Incentives.Length != 0) hash ^= Incentives.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
-      if (JobLevel != 0) hash ^= JobLevel.GetHashCode();
+      if (JobLevel != global::Google.Cloud.Talent.V4Beta1.JobLevel.Unspecified) hash ^= JobLevel.GetHashCode();
       if (PromotionValue != 0) hash ^= PromotionValue.GetHashCode();
       if (Qualifications.Length != 0) hash ^= Qualifications.GetHashCode();
       if (Responsibilities.Length != 0) hash ^= Responsibilities.GetHashCode();
-      if (PostingRegion != 0) hash ^= PostingRegion.GetHashCode();
-      if (Visibility != 0) hash ^= Visibility.GetHashCode();
+      if (PostingRegion != global::Google.Cloud.Talent.V4Beta1.PostingRegion.Unspecified) hash ^= PostingRegion.GetHashCode();
+      if (Visibility != global::Google.Cloud.Talent.V4Beta1.Visibility.Unspecified) hash ^= Visibility.GetHashCode();
       if (jobStartTime_ != null) hash ^= JobStartTime.GetHashCode();
       if (jobEndTime_ != null) hash ^= JobEndTime.GetHashCode();
       if (postingPublishTime_ != null) hash ^= PostingPublishTime.GetHashCode();
@@ -869,7 +869,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(122);
         output.WriteString(LanguageCode);
       }
-      if (JobLevel != 0) {
+      if (JobLevel != global::Google.Cloud.Talent.V4Beta1.JobLevel.Unspecified) {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) JobLevel);
       }
@@ -885,11 +885,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(154, 1);
         output.WriteString(Responsibilities);
       }
-      if (PostingRegion != 0) {
+      if (PostingRegion != global::Google.Cloud.Talent.V4Beta1.PostingRegion.Unspecified) {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) PostingRegion);
       }
-      if (Visibility != 0) {
+      if (Visibility != global::Google.Cloud.Talent.V4Beta1.Visibility.Unspecified) {
         output.WriteRawTag(168, 1);
         output.WriteEnum((int) Visibility);
       }
@@ -972,7 +972,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
-      if (JobLevel != 0) {
+      if (JobLevel != global::Google.Cloud.Talent.V4Beta1.JobLevel.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) JobLevel);
       }
       if (PromotionValue != 0) {
@@ -984,10 +984,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Responsibilities.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Responsibilities);
       }
-      if (PostingRegion != 0) {
+      if (PostingRegion != global::Google.Cloud.Talent.V4Beta1.PostingRegion.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PostingRegion);
       }
-      if (Visibility != 0) {
+      if (Visibility != global::Google.Cloud.Talent.V4Beta1.Visibility.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Visibility);
       }
       if (jobStartTime_ != null) {
@@ -1069,7 +1069,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      if (other.JobLevel != 0) {
+      if (other.JobLevel != global::Google.Cloud.Talent.V4Beta1.JobLevel.Unspecified) {
         JobLevel = other.JobLevel;
       }
       if (other.PromotionValue != 0) {
@@ -1081,10 +1081,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.Responsibilities.Length != 0) {
         Responsibilities = other.Responsibilities;
       }
-      if (other.PostingRegion != 0) {
+      if (other.PostingRegion != global::Google.Cloud.Talent.V4Beta1.PostingRegion.Unspecified) {
         PostingRegion = other.PostingRegion;
       }
-      if (other.Visibility != 0) {
+      if (other.Visibility != global::Google.Cloud.Talent.V4Beta1.Visibility.Unspecified) {
         Visibility = other.Visibility;
       }
       if (other.jobStartTime_ != null) {
@@ -1712,7 +1712,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
         /// <summary>Field number for the "html_sanitization" field.</summary>
         public const int HtmlSanitizationFieldNumber = 2;
-        private global::Google.Cloud.Talent.V4Beta1.HtmlSanitization htmlSanitization_ = 0;
+        private global::Google.Cloud.Talent.V4Beta1.HtmlSanitization htmlSanitization_ = global::Google.Cloud.Talent.V4Beta1.HtmlSanitization.Unspecified;
         /// <summary>
         /// Option for job HTML content sanitization. Applied fields are:
         ///
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public override int GetHashCode() {
           int hash = 1;
           if (DisableStreetAddressResolution != false) hash ^= DisableStreetAddressResolution.GetHashCode();
-          if (HtmlSanitization != 0) hash ^= HtmlSanitization.GetHashCode();
+          if (HtmlSanitization != global::Google.Cloud.Talent.V4Beta1.HtmlSanitization.Unspecified) hash ^= HtmlSanitization.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1775,7 +1775,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             output.WriteRawTag(8);
             output.WriteBool(DisableStreetAddressResolution);
           }
-          if (HtmlSanitization != 0) {
+          if (HtmlSanitization != global::Google.Cloud.Talent.V4Beta1.HtmlSanitization.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) HtmlSanitization);
           }
@@ -1790,7 +1790,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           if (DisableStreetAddressResolution != false) {
             size += 1 + 1;
           }
-          if (HtmlSanitization != 0) {
+          if (HtmlSanitization != global::Google.Cloud.Talent.V4Beta1.HtmlSanitization.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HtmlSanitization);
           }
           if (_unknownFields != null) {
@@ -1807,7 +1807,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
           if (other.DisableStreetAddressResolution != false) {
             DisableStreetAddressResolution = other.DisableStreetAddressResolution;
           }
-          if (other.HtmlSanitization != 0) {
+          if (other.HtmlSanitization != global::Google.Cloud.Talent.V4Beta1.HtmlSanitization.Unspecified) {
             HtmlSanitization = other.HtmlSanitization;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

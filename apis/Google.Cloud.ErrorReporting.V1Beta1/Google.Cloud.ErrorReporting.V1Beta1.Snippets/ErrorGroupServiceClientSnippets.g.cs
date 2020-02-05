@@ -22,7 +22,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
     public sealed class GeneratedErrorGroupServiceClientSnippets
     {
         /// <summary>Snippet for GetGroup</summary>
-        public void GetGroup_RequestObject()
+        public void GetGroupRequestObject()
         {
             // Snippet: GetGroup(GetGroupRequest, CallSettings)
             // Create client
@@ -38,7 +38,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetGroupAsync</summary>
-        public async Task GetGroupAsync_RequestObject()
+        public async Task GetGroupRequestObjectAsync()
         {
             // Snippet: GetGroupAsync(GetGroupRequest, CallSettings)
             // Additional: GetGroupAsync(GetGroupRequest, CancellationToken)
@@ -82,7 +82,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetGroup</summary>
-        public void GetGroup_ResourceNames()
+        public void GetGroupResourceNames()
         {
             // Snippet: GetGroup(ErrorGroupName, CallSettings)
             // Create client
@@ -95,7 +95,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetGroupAsync</summary>
-        public async Task GetGroupAsync_ResourceNames()
+        public async Task GetGroupResourceNamesAsync()
         {
             // Snippet: GetGroupAsync(ErrorGroupName, CallSettings)
             // Additional: GetGroupAsync(ErrorGroupName, CancellationToken)
@@ -109,7 +109,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateGroup</summary>
-        public void UpdateGroup_RequestObject()
+        public void UpdateGroupRequestObject()
         {
             // Snippet: UpdateGroup(UpdateGroupRequest, CallSettings)
             // Create client
@@ -125,7 +125,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateGroupAsync</summary>
-        public async Task UpdateGroupAsync_RequestObject()
+        public async Task UpdateGroupRequestObjectAsync()
         {
             // Snippet: UpdateGroupAsync(UpdateGroupRequest, CallSettings)
             // Additional: UpdateGroupAsync(UpdateGroupRequest, CancellationToken)

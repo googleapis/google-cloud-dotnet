@@ -144,21 +144,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "QWRtaW5cSW5zdGFuY2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Parser, new[]{ "Location", "Type", "DefaultLeaderLocation" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser, new[]{ "Name", "DisplayName", "Replicas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "State", "Labels", "EndpointUris" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser, new[]{ "InstanceConfigs", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser, new[]{ "Instance", "FieldMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Parser, new[]{ "Location", "Type", "DefaultLeaderLocation" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser, new[]{ "Name", "DisplayName", "Replicas" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "State", "Labels", "EndpointUris" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser, new[]{ "InstanceConfigs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser, new[]{ "Instance", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -217,7 +217,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType type_ = 0;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType type_ = global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType.TypeUnspecified;
     /// <summary>
     /// The type of replica.
     /// </summary>
@@ -269,7 +269,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Location.Length != 0) hash ^= Location.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType.TypeUnspecified) hash ^= Type.GetHashCode();
       if (DefaultLeaderLocation != false) hash ^= DefaultLeaderLocation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -288,7 +288,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(10);
         output.WriteString(Location);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType.TypeUnspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -307,7 +307,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (Location.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType.TypeUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (DefaultLeaderLocation != false) {
@@ -327,7 +327,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType.TypeUnspecified) {
         Type = other.Type;
       }
       if (other.DefaultLeaderLocation != false) {
@@ -716,7 +716,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 6;
-    private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State state_ = 0;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State state_ = global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified;
     /// <summary>
     /// Output only. The current instance state. For
     /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance], the state must be
@@ -735,7 +735,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Cloud Labels are a flexible and lightweight mechanism for organizing cloud
@@ -815,7 +815,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (Config.Length != 0) hash ^= Config.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (NodeCount != 0) hash ^= NodeCount.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= endpointUris_.GetHashCode();
       if (_unknownFields != null) {
@@ -847,7 +847,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(NodeCount);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) State);
       }
@@ -873,7 +873,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (NodeCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeCount);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += labels_.CalculateSize(_map_labels_codec);
@@ -901,7 +901,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.NodeCount != 0) {
         NodeCount = other.NodeCount;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         State = other.State;
       }
       labels_.Add(other.labels_);

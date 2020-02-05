@@ -74,13 +74,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.TenantReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest), global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest.Parser, new[]{ "Parent", "Tenant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetTenantRequest), global::Google.Cloud.Talent.V4Beta1.GetTenantRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest), global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest.Parser, new[]{ "Tenant", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest), global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest), global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse), global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse.Parser, new[]{ "Tenants", "NextPageToken", "Metadata" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest), global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest.Parser, new[]{ "Parent", "Tenant" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetTenantRequest), global::Google.Cloud.Talent.V4Beta1.GetTenantRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest), global::Google.Cloud.Talent.V4Beta1.UpdateTenantRequest.Parser, new[]{ "Tenant", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest), global::Google.Cloud.Talent.V4Beta1.DeleteTenantRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest), global::Google.Cloud.Talent.V4Beta1.ListTenantsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse), global::Google.Cloud.Talent.V4Beta1.ListTenantsResponse.Parser, new[]{ "Tenants", "NextPageToken", "Metadata" }, null, null, null, null)
           }));
     }
     #endregion

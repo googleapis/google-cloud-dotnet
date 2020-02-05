@@ -27,12 +27,12 @@ namespace Grafeas.V1.Snippets
     public sealed class GeneratedGrafeasClientSnippets
     {
         /// <summary>Snippet for GetOccurrence</summary>
-        public void GetOccurrence_RequestObject()
+        public void GetOccurrenceRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrence(GetOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             GetOccurrenceRequest request = new GetOccurrenceRequest
             {
@@ -44,13 +44,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrenceAsync</summary>
-        public async Task GetOccurrenceAsync_RequestObject()
+        public async Task GetOccurrenceRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceAsync(GetOccurrenceRequest, CallSettings)
             // Additional: GetOccurrenceAsync(GetOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             GetOccurrenceRequest request = new GetOccurrenceRequest
             {
@@ -64,10 +64,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for GetOccurrence</summary>
         public void GetOccurrence()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrence(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -78,11 +78,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for GetOccurrenceAsync</summary>
         public async Task GetOccurrenceAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceAsync(string, CallSettings)
             // Additional: GetOccurrenceAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -91,12 +91,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrence</summary>
-        public void GetOccurrence_ResourceNames()
+        public void GetOccurrenceResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrence(OccurrenceName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -105,13 +105,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrenceAsync</summary>
-        public async Task GetOccurrenceAsync_ResourceNames()
+        public async Task GetOccurrenceResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceAsync(OccurrenceName, CallSettings)
             // Additional: GetOccurrenceAsync(OccurrenceName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -120,12 +120,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListOccurrences</summary>
-        public void ListOccurrences_RequestObject()
+        public void ListOccurrencesRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListOccurrences(ListOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ListOccurrencesRequest request = new ListOccurrencesRequest
             {
@@ -170,12 +170,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListOccurrences</summary>
-        public async Task ListOccurrencesAsync_RequestObject()
+        public async Task ListOccurrencesRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListOccurrencesAsync(ListOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ListOccurrencesRequest request = new ListOccurrencesRequest
             {
@@ -222,10 +222,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for ListOccurrences</summary>
         public void ListOccurrences()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListOccurrences(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -269,10 +269,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for ListOccurrences</summary>
         public async Task ListOccurrencesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListOccurrencesAsync(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -314,12 +314,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListOccurrences</summary>
-        public void ListOccurrences_ResourceNames()
+        public void ListOccurrencesResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListOccurrences(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -361,12 +361,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListOccurrences</summary>
-        public async Task ListOccurrencesAsync_ResourceNames()
+        public async Task ListOccurrencesResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListOccurrencesAsync(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -408,12 +408,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteOccurrence</summary>
-        public void DeleteOccurrence_RequestObject()
+        public void DeleteOccurrenceRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteOccurrence(DeleteOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
             {
@@ -425,13 +425,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteOccurrenceAsync</summary>
-        public async Task DeleteOccurrenceAsync_RequestObject()
+        public async Task DeleteOccurrenceRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteOccurrenceAsync(DeleteOccurrenceRequest, CallSettings)
             // Additional: DeleteOccurrenceAsync(DeleteOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
             {
@@ -445,10 +445,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for DeleteOccurrence</summary>
         public void DeleteOccurrence()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteOccurrence(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -459,11 +459,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for DeleteOccurrenceAsync</summary>
         public async Task DeleteOccurrenceAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteOccurrenceAsync(string, CallSettings)
             // Additional: DeleteOccurrenceAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -472,12 +472,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteOccurrence</summary>
-        public void DeleteOccurrence_ResourceNames()
+        public void DeleteOccurrenceResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteOccurrence(OccurrenceName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -486,13 +486,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteOccurrenceAsync</summary>
-        public async Task DeleteOccurrenceAsync_ResourceNames()
+        public async Task DeleteOccurrenceResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteOccurrenceAsync(OccurrenceName, CallSettings)
             // Additional: DeleteOccurrenceAsync(OccurrenceName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -501,12 +501,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateOccurrence</summary>
-        public void CreateOccurrence_RequestObject()
+        public void CreateOccurrenceRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateOccurrence(CreateOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
@@ -519,13 +519,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateOccurrenceAsync</summary>
-        public async Task CreateOccurrenceAsync_RequestObject()
+        public async Task CreateOccurrenceRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateOccurrenceAsync(CreateOccurrenceRequest, CallSettings)
             // Additional: CreateOccurrenceAsync(CreateOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
@@ -540,10 +540,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for CreateOccurrence</summary>
         public void CreateOccurrence()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateOccurrence(string, Occurrence, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             Occurrence occurrence = new Occurrence();
@@ -555,11 +555,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for CreateOccurrenceAsync</summary>
         public async Task CreateOccurrenceAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateOccurrenceAsync(string, Occurrence, CallSettings)
             // Additional: CreateOccurrenceAsync(string, Occurrence, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             Occurrence occurrence = new Occurrence();
@@ -569,12 +569,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateOccurrence</summary>
-        public void CreateOccurrence_ResourceNames()
+        public void CreateOccurrenceResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateOccurrence(ProjectName, Occurrence, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             Occurrence occurrence = new Occurrence();
@@ -584,13 +584,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateOccurrenceAsync</summary>
-        public async Task CreateOccurrenceAsync_ResourceNames()
+        public async Task CreateOccurrenceResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateOccurrenceAsync(ProjectName, Occurrence, CallSettings)
             // Additional: CreateOccurrenceAsync(ProjectName, Occurrence, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             Occurrence occurrence = new Occurrence();
@@ -600,12 +600,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateOccurrences</summary>
-        public void BatchCreateOccurrences_RequestObject()
+        public void BatchCreateOccurrencesRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateOccurrences(BatchCreateOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
@@ -618,13 +618,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateOccurrencesAsync</summary>
-        public async Task BatchCreateOccurrencesAsync_RequestObject()
+        public async Task BatchCreateOccurrencesRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateOccurrencesAsync(BatchCreateOccurrencesRequest, CallSettings)
             // Additional: BatchCreateOccurrencesAsync(BatchCreateOccurrencesRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
@@ -639,10 +639,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for BatchCreateOccurrences</summary>
         public void BatchCreateOccurrences()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateOccurrences(string, IEnumerable<Occurrence>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -654,11 +654,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for BatchCreateOccurrencesAsync</summary>
         public async Task BatchCreateOccurrencesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateOccurrencesAsync(string, IEnumerable<Occurrence>, CallSettings)
             // Additional: BatchCreateOccurrencesAsync(string, IEnumerable<Occurrence>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -668,12 +668,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateOccurrences</summary>
-        public void BatchCreateOccurrences_ResourceNames()
+        public void BatchCreateOccurrencesResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateOccurrences(ProjectName, IEnumerable<Occurrence>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -683,13 +683,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateOccurrencesAsync</summary>
-        public async Task BatchCreateOccurrencesAsync_ResourceNames()
+        public async Task BatchCreateOccurrencesResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateOccurrencesAsync(ProjectName, IEnumerable<Occurrence>, CallSettings)
             // Additional: BatchCreateOccurrencesAsync(ProjectName, IEnumerable<Occurrence>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -699,12 +699,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateOccurrence</summary>
-        public void UpdateOccurrence_RequestObject()
+        public void UpdateOccurrenceRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateOccurrence(UpdateOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
             {
@@ -718,13 +718,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateOccurrenceAsync</summary>
-        public async Task UpdateOccurrenceAsync_RequestObject()
+        public async Task UpdateOccurrenceRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateOccurrenceAsync(UpdateOccurrenceRequest, CallSettings)
             // Additional: UpdateOccurrenceAsync(UpdateOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
             {
@@ -740,10 +740,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for UpdateOccurrence</summary>
         public void UpdateOccurrence()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateOccurrence(string, Occurrence, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             Occurrence occurrence = new Occurrence();
@@ -756,11 +756,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for UpdateOccurrenceAsync</summary>
         public async Task UpdateOccurrenceAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateOccurrenceAsync(string, Occurrence, FieldMask, CallSettings)
             // Additional: UpdateOccurrenceAsync(string, Occurrence, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             Occurrence occurrence = new Occurrence();
@@ -771,12 +771,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateOccurrence</summary>
-        public void UpdateOccurrence_ResourceNames()
+        public void UpdateOccurrenceResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateOccurrence(OccurrenceName, Occurrence, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             Occurrence occurrence = new Occurrence();
@@ -787,13 +787,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateOccurrenceAsync</summary>
-        public async Task UpdateOccurrenceAsync_ResourceNames()
+        public async Task UpdateOccurrenceResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateOccurrenceAsync(OccurrenceName, Occurrence, FieldMask, CallSettings)
             // Additional: UpdateOccurrenceAsync(OccurrenceName, Occurrence, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             Occurrence occurrence = new Occurrence();
@@ -804,12 +804,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrenceNote</summary>
-        public void GetOccurrenceNote_RequestObject()
+        public void GetOccurrenceNoteRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceNote(GetOccurrenceNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
             {
@@ -821,13 +821,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrenceNoteAsync</summary>
-        public async Task GetOccurrenceNoteAsync_RequestObject()
+        public async Task GetOccurrenceNoteRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceNoteAsync(GetOccurrenceNoteRequest, CallSettings)
             // Additional: GetOccurrenceNoteAsync(GetOccurrenceNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
             {
@@ -841,10 +841,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for GetOccurrenceNote</summary>
         public void GetOccurrenceNote()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceNote(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -855,11 +855,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for GetOccurrenceNoteAsync</summary>
         public async Task GetOccurrenceNoteAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceNoteAsync(string, CallSettings)
             // Additional: GetOccurrenceNoteAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -868,12 +868,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrenceNote</summary>
-        public void GetOccurrenceNote_ResourceNames()
+        public void GetOccurrenceNoteResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceNote(OccurrenceName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -882,13 +882,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetOccurrenceNoteAsync</summary>
-        public async Task GetOccurrenceNoteAsync_ResourceNames()
+        public async Task GetOccurrenceNoteResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetOccurrenceNoteAsync(OccurrenceName, CallSettings)
             // Additional: GetOccurrenceNoteAsync(OccurrenceName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -897,12 +897,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetNote</summary>
-        public void GetNote_RequestObject()
+        public void GetNoteRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetNote(GetNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             GetNoteRequest request = new GetNoteRequest
             {
@@ -914,13 +914,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetNoteAsync</summary>
-        public async Task GetNoteAsync_RequestObject()
+        public async Task GetNoteRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetNoteAsync(GetNoteRequest, CallSettings)
             // Additional: GetNoteAsync(GetNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             GetNoteRequest request = new GetNoteRequest
             {
@@ -934,10 +934,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for GetNote</summary>
         public void GetNote()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetNote(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -948,11 +948,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for GetNoteAsync</summary>
         public async Task GetNoteAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetNoteAsync(string, CallSettings)
             // Additional: GetNoteAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -961,12 +961,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetNote</summary>
-        public void GetNote_ResourceNames()
+        public void GetNoteResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetNote(NoteName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -975,13 +975,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for GetNoteAsync</summary>
-        public async Task GetNoteAsync_ResourceNames()
+        public async Task GetNoteResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: GetNoteAsync(NoteName, CallSettings)
             // Additional: GetNoteAsync(NoteName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -990,12 +990,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNotes</summary>
-        public void ListNotes_RequestObject()
+        public void ListNotesRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNotes(ListNotesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ListNotesRequest request = new ListNotesRequest
             {
@@ -1040,12 +1040,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNotes</summary>
-        public async Task ListNotesAsync_RequestObject()
+        public async Task ListNotesRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNotesAsync(ListNotesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ListNotesRequest request = new ListNotesRequest
             {
@@ -1092,10 +1092,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for ListNotes</summary>
         public void ListNotes()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNotes(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -1139,10 +1139,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for ListNotes</summary>
         public async Task ListNotesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNotesAsync(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -1184,12 +1184,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNotes</summary>
-        public void ListNotes_ResourceNames()
+        public void ListNotesResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNotes(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -1231,12 +1231,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNotes</summary>
-        public async Task ListNotesAsync_ResourceNames()
+        public async Task ListNotesResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNotesAsync(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -1278,12 +1278,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNote</summary>
-        public void DeleteNote_RequestObject()
+        public void DeleteNoteRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteNote(DeleteNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
@@ -1295,13 +1295,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNoteAsync</summary>
-        public async Task DeleteNoteAsync_RequestObject()
+        public async Task DeleteNoteRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteNoteAsync(DeleteNoteRequest, CallSettings)
             // Additional: DeleteNoteAsync(DeleteNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
@@ -1315,10 +1315,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for DeleteNote</summary>
         public void DeleteNote()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteNote(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -1329,11 +1329,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for DeleteNoteAsync</summary>
         public async Task DeleteNoteAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteNoteAsync(string, CallSettings)
             // Additional: DeleteNoteAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -1342,12 +1342,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNote</summary>
-        public void DeleteNote_ResourceNames()
+        public void DeleteNoteResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteNote(NoteName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -1356,13 +1356,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNoteAsync</summary>
-        public async Task DeleteNoteAsync_ResourceNames()
+        public async Task DeleteNoteResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: DeleteNoteAsync(NoteName, CallSettings)
             // Additional: DeleteNoteAsync(NoteName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -1371,12 +1371,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNote</summary>
-        public void CreateNote_RequestObject()
+        public void CreateNoteRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateNote(CreateNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             CreateNoteRequest request = new CreateNoteRequest
             {
@@ -1390,13 +1390,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNoteAsync</summary>
-        public async Task CreateNoteAsync_RequestObject()
+        public async Task CreateNoteRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateNoteAsync(CreateNoteRequest, CallSettings)
             // Additional: CreateNoteAsync(CreateNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             CreateNoteRequest request = new CreateNoteRequest
             {
@@ -1412,10 +1412,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for CreateNote</summary>
         public void CreateNote()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateNote(string, string, Note, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string noteId = "";
@@ -1428,11 +1428,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for CreateNoteAsync</summary>
         public async Task CreateNoteAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateNoteAsync(string, string, Note, CallSettings)
             // Additional: CreateNoteAsync(string, string, Note, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string noteId = "";
@@ -1443,12 +1443,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNote</summary>
-        public void CreateNote_ResourceNames()
+        public void CreateNoteResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateNote(ProjectName, string, Note, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string noteId = "";
@@ -1459,13 +1459,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNoteAsync</summary>
-        public async Task CreateNoteAsync_ResourceNames()
+        public async Task CreateNoteResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: CreateNoteAsync(ProjectName, string, Note, CallSettings)
             // Additional: CreateNoteAsync(ProjectName, string, Note, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string noteId = "";
@@ -1476,12 +1476,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateNotes</summary>
-        public void BatchCreateNotes_RequestObject()
+        public void BatchCreateNotesRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateNotes(BatchCreateNotesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
@@ -1494,13 +1494,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateNotesAsync</summary>
-        public async Task BatchCreateNotesAsync_RequestObject()
+        public async Task BatchCreateNotesRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateNotesAsync(BatchCreateNotesRequest, CallSettings)
             // Additional: BatchCreateNotesAsync(BatchCreateNotesRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
@@ -1515,10 +1515,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for BatchCreateNotes</summary>
         public void BatchCreateNotes()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateNotes(string, IDictionary<string,Note>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1530,11 +1530,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for BatchCreateNotesAsync</summary>
         public async Task BatchCreateNotesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateNotesAsync(string, IDictionary<string,Note>, CallSettings)
             // Additional: BatchCreateNotesAsync(string, IDictionary<string,Note>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1544,12 +1544,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateNotes</summary>
-        public void BatchCreateNotes_ResourceNames()
+        public void BatchCreateNotesResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateNotes(ProjectName, IDictionary<string,Note>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1559,13 +1559,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateNotesAsync</summary>
-        public async Task BatchCreateNotesAsync_ResourceNames()
+        public async Task BatchCreateNotesResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: BatchCreateNotesAsync(ProjectName, IDictionary<string,Note>, CallSettings)
             // Additional: BatchCreateNotesAsync(ProjectName, IDictionary<string,Note>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1575,12 +1575,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateNote</summary>
-        public void UpdateNote_RequestObject()
+        public void UpdateNoteRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateNote(UpdateNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             UpdateNoteRequest request = new UpdateNoteRequest
             {
@@ -1594,13 +1594,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateNoteAsync</summary>
-        public async Task UpdateNoteAsync_RequestObject()
+        public async Task UpdateNoteRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateNoteAsync(UpdateNoteRequest, CallSettings)
             // Additional: UpdateNoteAsync(UpdateNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             UpdateNoteRequest request = new UpdateNoteRequest
             {
@@ -1616,10 +1616,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for UpdateNote</summary>
         public void UpdateNote()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateNote(string, Note, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             Note note = new Note();
@@ -1632,11 +1632,11 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for UpdateNoteAsync</summary>
         public async Task UpdateNoteAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateNoteAsync(string, Note, FieldMask, CallSettings)
             // Additional: UpdateNoteAsync(string, Note, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             Note note = new Note();
@@ -1647,12 +1647,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateNote</summary>
-        public void UpdateNote_ResourceNames()
+        public void UpdateNoteResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateNote(NoteName, Note, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             Note note = new Note();
@@ -1663,13 +1663,13 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateNoteAsync</summary>
-        public async Task UpdateNoteAsync_ResourceNames()
+        public async Task UpdateNoteResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: UpdateNoteAsync(NoteName, Note, FieldMask, CallSettings)
             // Additional: UpdateNoteAsync(NoteName, Note, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             Note note = new Note();
@@ -1680,12 +1680,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNoteOccurrences</summary>
-        public void ListNoteOccurrences_RequestObject()
+        public void ListNoteOccurrencesRequestObject()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNoteOccurrences(ListNoteOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
@@ -1730,12 +1730,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNoteOccurrences</summary>
-        public async Task ListNoteOccurrencesAsync_RequestObject()
+        public async Task ListNoteOccurrencesRequestObjectAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNoteOccurrencesAsync(ListNoteOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
@@ -1782,10 +1782,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for ListNoteOccurrences</summary>
         public void ListNoteOccurrences()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNoteOccurrences(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             string filter = "";
@@ -1829,10 +1829,10 @@ namespace Grafeas.V1.Snippets
         /// <summary>Snippet for ListNoteOccurrences</summary>
         public async Task ListNoteOccurrencesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNoteOccurrencesAsync(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             string filter = "";
@@ -1874,12 +1874,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNoteOccurrences</summary>
-        public void ListNoteOccurrences_ResourceNames()
+        public void ListNoteOccurrencesResourceNames()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNoteOccurrences(NoteName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             string filter = "";
@@ -1921,12 +1921,12 @@ namespace Grafeas.V1.Snippets
         }
 
         /// <summary>Snippet for ListNoteOccurrences</summary>
-        public async Task ListNoteOccurrencesAsync_ResourceNames()
+        public async Task ListNoteOccurrencesResourceNamesAsync()
         {
-            global::Grpc.Core.Channel channel = null;
+            string endpoint = "";
             // Snippet: ListNoteOccurrencesAsync(NoteName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create(channel);
+            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             string filter = "";

@@ -61,13 +61,13 @@ namespace Google.Cloud.Scheduler.V1 {
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Scheduler.V1.HttpMethod), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.HttpTarget), global::Google.Cloud.Scheduler.V1.HttpTarget.Parser, new[]{ "Uri", "HttpMethod", "Headers", "Body", "OauthToken", "OidcToken" }, new[]{ "AuthorizationHeader" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget), global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget.Parser, new[]{ "HttpMethod", "AppEngineRouting", "RelativeUri", "Headers", "Body" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.PubsubTarget), global::Google.Cloud.Scheduler.V1.PubsubTarget.Parser, new[]{ "TopicName", "Data", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineRouting), global::Google.Cloud.Scheduler.V1.AppEngineRouting.Parser, new[]{ "Service", "Version", "Instance", "Host" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.OAuthToken), global::Google.Cloud.Scheduler.V1.OAuthToken.Parser, new[]{ "ServiceAccountEmail", "Scope" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.OidcToken), global::Google.Cloud.Scheduler.V1.OidcToken.Parser, new[]{ "ServiceAccountEmail", "Audience" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Scheduler.V1.HttpMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.HttpTarget), global::Google.Cloud.Scheduler.V1.HttpTarget.Parser, new[]{ "Uri", "HttpMethod", "Headers", "Body", "OauthToken", "OidcToken" }, new[]{ "AuthorizationHeader" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget), global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget.Parser, new[]{ "HttpMethod", "AppEngineRouting", "RelativeUri", "Headers", "Body" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.PubsubTarget), global::Google.Cloud.Scheduler.V1.PubsubTarget.Parser, new[]{ "TopicName", "Data", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineRouting), global::Google.Cloud.Scheduler.V1.AppEngineRouting.Parser, new[]{ "Service", "Version", "Instance", "Host" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.OAuthToken), global::Google.Cloud.Scheduler.V1.OAuthToken.Parser, new[]{ "ServiceAccountEmail", "Scope" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.OidcToken), global::Google.Cloud.Scheduler.V1.OidcToken.Parser, new[]{ "ServiceAccountEmail", "Audience" }, null, null, null, null)
           }));
     }
     #endregion
@@ -190,7 +190,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     /// <summary>Field number for the "http_method" field.</summary>
     public const int HttpMethodFieldNumber = 2;
-    private global::Google.Cloud.Scheduler.V1.HttpMethod httpMethod_ = 0;
+    private global::Google.Cloud.Scheduler.V1.HttpMethod httpMethod_ = global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified;
     /// <summary>
     /// Which HTTP method to use for the request.
     /// </summary>
@@ -205,7 +205,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// <summary>Field number for the "headers" field.</summary>
     public const int HeadersFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_headers_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The user can specify HTTP request headers to send with the job's
@@ -332,7 +332,7 @@ namespace Google.Cloud.Scheduler.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
-      if (HttpMethod != 0) hash ^= HttpMethod.GetHashCode();
+      if (HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) hash ^= HttpMethod.GetHashCode();
       hash ^= Headers.GetHashCode();
       if (Body.Length != 0) hash ^= Body.GetHashCode();
       if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) hash ^= OauthToken.GetHashCode();
@@ -355,7 +355,7 @@ namespace Google.Cloud.Scheduler.V1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (HttpMethod != 0) {
+      if (HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) HttpMethod);
       }
@@ -383,7 +383,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (Uri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
-      if (HttpMethod != 0) {
+      if (HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HttpMethod);
       }
       size += headers_.CalculateSize(_map_headers_codec);
@@ -410,7 +410,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.Uri.Length != 0) {
         Uri = other.Uri;
       }
-      if (other.HttpMethod != 0) {
+      if (other.HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         HttpMethod = other.HttpMethod;
       }
       headers_.Add(other.headers_);
@@ -534,7 +534,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     /// <summary>Field number for the "http_method" field.</summary>
     public const int HttpMethodFieldNumber = 1;
-    private global::Google.Cloud.Scheduler.V1.HttpMethod httpMethod_ = 0;
+    private global::Google.Cloud.Scheduler.V1.HttpMethod httpMethod_ = global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified;
     /// <summary>
     /// The HTTP method to use for the request. PATCH and OPTIONS are not
     /// permitted.
@@ -583,7 +583,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// <summary>Field number for the "headers" field.</summary>
     public const int HeadersFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_headers_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
     /// <summary>
     /// HTTP request headers.
@@ -666,7 +666,7 @@ namespace Google.Cloud.Scheduler.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (HttpMethod != 0) hash ^= HttpMethod.GetHashCode();
+      if (HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) hash ^= HttpMethod.GetHashCode();
       if (appEngineRouting_ != null) hash ^= AppEngineRouting.GetHashCode();
       if (RelativeUri.Length != 0) hash ^= RelativeUri.GetHashCode();
       hash ^= Headers.GetHashCode();
@@ -684,7 +684,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (HttpMethod != 0) {
+      if (HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) HttpMethod);
       }
@@ -709,7 +709,7 @@ namespace Google.Cloud.Scheduler.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (HttpMethod != 0) {
+      if (HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HttpMethod);
       }
       if (appEngineRouting_ != null) {
@@ -733,7 +733,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other == null) {
         return;
       }
-      if (other.HttpMethod != 0) {
+      if (other.HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         HttpMethod = other.HttpMethod;
       }
       if (other.appEngineRouting_ != null) {
@@ -869,7 +869,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// <summary>Field number for the "attributes" field.</summary>
     public const int AttributesFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_attributes_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Attributes for PubsubMessage.

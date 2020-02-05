@@ -57,9 +57,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "MeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset), global::Google.Cloud.SecurityCenter.V1.Asset.Parser, new[]{ "Name", "SecurityCenterProperties", "ResourceProperties", "SecurityMarks", "CreateTime", "UpdateTime", "IamPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties), global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties.Parser, new[]{ "ResourceName", "ResourceType", "ResourceParent", "ResourceProject", "ResourceOwners", "ResourceDisplayName", "ResourceParentDisplayName", "ResourceProjectDisplayName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy), global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy.Parser, new[]{ "PolicyBlob" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset), global::Google.Cloud.SecurityCenter.V1.Asset.Parser, new[]{ "Name", "SecurityCenterProperties", "ResourceProperties", "SecurityMarks", "CreateTime", "UpdateTime", "IamPolicy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties), global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties.Parser, new[]{ "ResourceName", "ResourceType", "ResourceParent", "ResourceProject", "ResourceOwners", "ResourceDisplayName", "ResourceParentDisplayName", "ResourceProjectDisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy), global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy.Parser, new[]{ "PolicyBlob" }, null, null, null, null),
             null, })
           }));
     }
@@ -150,7 +150,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>Field number for the "resource_properties" field.</summary>
     public const int ResourcePropertiesFieldNumber = 7;
     private static readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec _map_resourceProperties_codec
-        = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 58);
+        = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 58);
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> resourceProperties_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
     /// Resource managed properties. These properties are managed and defined by

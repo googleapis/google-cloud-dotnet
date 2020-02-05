@@ -53,10 +53,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Zmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookRequest), global::Google.Cloud.Dialogflow.V2.WebhookRequest.Parser, new[]{ "Session", "ResponseId", "QueryResult", "OriginalDetectIntentRequest" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookResponse), global::Google.Cloud.Dialogflow.V2.WebhookResponse.Parser, new[]{ "FulfillmentText", "FulfillmentMessages", "Source", "Payload", "OutputContexts", "FollowupEventInput", "SessionEntityTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest), global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest.Parser, new[]{ "Source", "Version", "Payload" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookRequest), global::Google.Cloud.Dialogflow.V2.WebhookRequest.Parser, new[]{ "Session", "ResponseId", "QueryResult", "OriginalDetectIntentRequest" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookResponse), global::Google.Cloud.Dialogflow.V2.WebhookResponse.Parser, new[]{ "FulfillmentText", "FulfillmentMessages", "Source", "Payload", "OutputContexts", "FollowupEventInput", "SessionEntityTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest), global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest.Parser, new[]{ "Source", "Version", "Payload" }, null, null, null, null)
           }));
     }
     #endregion

@@ -27,7 +27,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
     public sealed class GeneratedCloudSchedulerClientSnippets
     {
         /// <summary>Snippet for ListJobs</summary>
-        public void ListJobs_RequestObject()
+        public void ListJobsRequestObject()
         {
             // Snippet: ListJobs(ListJobsRequest, CallSettings)
             // Create client
@@ -75,7 +75,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobs</summary>
-        public async Task ListJobsAsync_RequestObject()
+        public async Task ListJobsRequestObjectAsync()
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
             // Create client
@@ -213,7 +213,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobs</summary>
-        public void ListJobs_ResourceNames()
+        public void ListJobsResourceNames()
         {
             // Snippet: ListJobs(LocationName, string, int?, CallSettings)
             // Create client
@@ -258,7 +258,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobs</summary>
-        public async Task ListJobsAsync_ResourceNames()
+        public async Task ListJobsResourceNamesAsync()
         {
             // Snippet: ListJobsAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -303,7 +303,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for GetJob</summary>
-        public void GetJob_RequestObject()
+        public void GetJobRequestObject()
         {
             // Snippet: GetJob(GetJobRequest, CallSettings)
             // Create client
@@ -319,7 +319,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for GetJobAsync</summary>
-        public async Task GetJobAsync_RequestObject()
+        public async Task GetJobRequestObjectAsync()
         {
             // Snippet: GetJobAsync(GetJobRequest, CallSettings)
             // Additional: GetJobAsync(GetJobRequest, CancellationToken)
@@ -363,7 +363,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for GetJob</summary>
-        public void GetJob_ResourceNames()
+        public void GetJobResourceNames()
         {
             // Snippet: GetJob(JobName, CallSettings)
             // Create client
@@ -376,7 +376,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for GetJobAsync</summary>
-        public async Task GetJobAsync_ResourceNames()
+        public async Task GetJobResourceNamesAsync()
         {
             // Snippet: GetJobAsync(JobName, CallSettings)
             // Additional: GetJobAsync(JobName, CancellationToken)
@@ -390,7 +390,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for CreateJob</summary>
-        public void CreateJob_RequestObject()
+        public void CreateJobRequestObject()
         {
             // Snippet: CreateJob(CreateJobRequest, CallSettings)
             // Create client
@@ -407,7 +407,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for CreateJobAsync</summary>
-        public async Task CreateJobAsync_RequestObject()
+        public async Task CreateJobRequestObjectAsync()
         {
             // Snippet: CreateJobAsync(CreateJobRequest, CallSettings)
             // Additional: CreateJobAsync(CreateJobRequest, CancellationToken)
@@ -454,7 +454,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for CreateJob</summary>
-        public void CreateJob_ResourceNames()
+        public void CreateJobResourceNames()
         {
             // Snippet: CreateJob(LocationName, Job, CallSettings)
             // Create client
@@ -468,7 +468,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for CreateJobAsync</summary>
-        public async Task CreateJobAsync_ResourceNames()
+        public async Task CreateJobResourceNamesAsync()
         {
             // Snippet: CreateJobAsync(LocationName, Job, CallSettings)
             // Additional: CreateJobAsync(LocationName, Job, CancellationToken)
@@ -483,7 +483,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateJob</summary>
-        public void UpdateJob_RequestObject()
+        public void UpdateJobRequestObject()
         {
             // Snippet: UpdateJob(UpdateJobRequest, CallSettings)
             // Create client
@@ -500,7 +500,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateJobAsync</summary>
-        public async Task UpdateJobAsync_RequestObject()
+        public async Task UpdateJobRequestObjectAsync()
         {
             // Snippet: UpdateJobAsync(UpdateJobRequest, CallSettings)
             // Additional: UpdateJobAsync(UpdateJobRequest, CancellationToken)
@@ -547,7 +547,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteJob</summary>
-        public void DeleteJob_RequestObject()
+        public void DeleteJobRequestObject()
         {
             // Snippet: DeleteJob(DeleteJobRequest, CallSettings)
             // Create client
@@ -563,7 +563,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteJobAsync</summary>
-        public async Task DeleteJobAsync_RequestObject()
+        public async Task DeleteJobRequestObjectAsync()
         {
             // Snippet: DeleteJobAsync(DeleteJobRequest, CallSettings)
             // Additional: DeleteJobAsync(DeleteJobRequest, CancellationToken)
@@ -607,7 +607,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteJob</summary>
-        public void DeleteJob_ResourceNames()
+        public void DeleteJobResourceNames()
         {
             // Snippet: DeleteJob(JobName, CallSettings)
             // Create client
@@ -620,7 +620,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteJobAsync</summary>
-        public async Task DeleteJobAsync_ResourceNames()
+        public async Task DeleteJobResourceNamesAsync()
         {
             // Snippet: DeleteJobAsync(JobName, CallSettings)
             // Additional: DeleteJobAsync(JobName, CancellationToken)
@@ -634,7 +634,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for PauseJob</summary>
-        public void PauseJob_RequestObject()
+        public void PauseJobRequestObject()
         {
             // Snippet: PauseJob(PauseJobRequest, CallSettings)
             // Create client
@@ -650,7 +650,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for PauseJobAsync</summary>
-        public async Task PauseJobAsync_RequestObject()
+        public async Task PauseJobRequestObjectAsync()
         {
             // Snippet: PauseJobAsync(PauseJobRequest, CallSettings)
             // Additional: PauseJobAsync(PauseJobRequest, CancellationToken)
@@ -694,7 +694,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for PauseJob</summary>
-        public void PauseJob_ResourceNames()
+        public void PauseJobResourceNames()
         {
             // Snippet: PauseJob(JobName, CallSettings)
             // Create client
@@ -707,7 +707,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for PauseJobAsync</summary>
-        public async Task PauseJobAsync_ResourceNames()
+        public async Task PauseJobResourceNamesAsync()
         {
             // Snippet: PauseJobAsync(JobName, CallSettings)
             // Additional: PauseJobAsync(JobName, CancellationToken)
@@ -721,7 +721,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ResumeJob</summary>
-        public void ResumeJob_RequestObject()
+        public void ResumeJobRequestObject()
         {
             // Snippet: ResumeJob(ResumeJobRequest, CallSettings)
             // Create client
@@ -737,7 +737,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ResumeJobAsync</summary>
-        public async Task ResumeJobAsync_RequestObject()
+        public async Task ResumeJobRequestObjectAsync()
         {
             // Snippet: ResumeJobAsync(ResumeJobRequest, CallSettings)
             // Additional: ResumeJobAsync(ResumeJobRequest, CancellationToken)
@@ -781,7 +781,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ResumeJob</summary>
-        public void ResumeJob_ResourceNames()
+        public void ResumeJobResourceNames()
         {
             // Snippet: ResumeJob(JobName, CallSettings)
             // Create client
@@ -794,7 +794,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for ResumeJobAsync</summary>
-        public async Task ResumeJobAsync_ResourceNames()
+        public async Task ResumeJobResourceNamesAsync()
         {
             // Snippet: ResumeJobAsync(JobName, CallSettings)
             // Additional: ResumeJobAsync(JobName, CancellationToken)
@@ -808,7 +808,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for RunJob</summary>
-        public void RunJob_RequestObject()
+        public void RunJobRequestObject()
         {
             // Snippet: RunJob(RunJobRequest, CallSettings)
             // Create client
@@ -824,7 +824,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for RunJobAsync</summary>
-        public async Task RunJobAsync_RequestObject()
+        public async Task RunJobRequestObjectAsync()
         {
             // Snippet: RunJobAsync(RunJobRequest, CallSettings)
             // Additional: RunJobAsync(RunJobRequest, CancellationToken)
@@ -868,7 +868,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for RunJob</summary>
-        public void RunJob_ResourceNames()
+        public void RunJobResourceNames()
         {
             // Snippet: RunJob(JobName, CallSettings)
             // Create client
@@ -881,7 +881,7 @@ namespace Google.Cloud.Scheduler.V1.Snippets
         }
 
         /// <summary>Snippet for RunJobAsync</summary>
-        public async Task RunJobAsync_ResourceNames()
+        public async Task RunJobResourceNamesAsync()
         {
             // Snippet: RunJobAsync(JobName, CallSettings)
             // Additional: RunJobAsync(JobName, CancellationToken)

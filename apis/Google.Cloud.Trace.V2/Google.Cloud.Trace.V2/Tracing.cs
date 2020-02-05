@@ -50,8 +50,8 @@ namespace Google.Cloud.Trace.V2 {
             "VHJhY2UuVjLKAhVHb29nbGVcQ2xvdWRcVHJhY2VcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Trace.V2.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.BatchWriteSpansRequest), global::Google.Cloud.Trace.V2.BatchWriteSpansRequest.Parser, new[]{ "Name", "Spans" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V2.BatchWriteSpansRequest), global::Google.Cloud.Trace.V2.BatchWriteSpansRequest.Parser, new[]{ "Name", "Spans" }, null, null, null, null)
           }));
     }
     #endregion

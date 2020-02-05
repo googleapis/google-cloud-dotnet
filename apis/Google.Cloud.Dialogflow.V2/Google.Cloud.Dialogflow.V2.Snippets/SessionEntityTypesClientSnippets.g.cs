@@ -26,7 +26,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     public sealed class GeneratedSessionEntityTypesClientSnippets
     {
         /// <summary>Snippet for ListSessionEntityTypes</summary>
-        public void ListSessionEntityTypes_RequestObject()
+        public void ListSessionEntityTypesRequestObject()
         {
             // Snippet: ListSessionEntityTypes(ListSessionEntityTypesRequest, CallSettings)
             // Create client
@@ -71,7 +71,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListSessionEntityTypes</summary>
-        public async Task ListSessionEntityTypesAsync_RequestObject()
+        public async Task ListSessionEntityTypesRequestObjectAsync()
         {
             // Snippet: ListSessionEntityTypesAsync(ListSessionEntityTypesRequest, CallSettings)
             // Create client
@@ -206,7 +206,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetSessionEntityType</summary>
-        public void GetSessionEntityType_RequestObject()
+        public void GetSessionEntityTypeRequestObject()
         {
             // Snippet: GetSessionEntityType(GetSessionEntityTypeRequest, CallSettings)
             // Create client
@@ -222,7 +222,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetSessionEntityTypeAsync</summary>
-        public async Task GetSessionEntityTypeAsync_RequestObject()
+        public async Task GetSessionEntityTypeRequestObjectAsync()
         {
             // Snippet: GetSessionEntityTypeAsync(GetSessionEntityTypeRequest, CallSettings)
             // Additional: GetSessionEntityTypeAsync(GetSessionEntityTypeRequest, CancellationToken)
@@ -239,7 +239,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateSessionEntityType</summary>
-        public void CreateSessionEntityType_RequestObject()
+        public void CreateSessionEntityTypeRequestObject()
         {
             // Snippet: CreateSessionEntityType(CreateSessionEntityTypeRequest, CallSettings)
             // Create client
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateSessionEntityTypeAsync</summary>
-        public async Task CreateSessionEntityTypeAsync_RequestObject()
+        public async Task CreateSessionEntityTypeRequestObjectAsync()
         {
             // Snippet: CreateSessionEntityTypeAsync(CreateSessionEntityTypeRequest, CallSettings)
             // Additional: CreateSessionEntityTypeAsync(CreateSessionEntityTypeRequest, CancellationToken)
@@ -303,7 +303,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateSessionEntityType</summary>
-        public void UpdateSessionEntityType_RequestObject()
+        public void UpdateSessionEntityTypeRequestObject()
         {
             // Snippet: UpdateSessionEntityType(UpdateSessionEntityTypeRequest, CallSettings)
             // Create client
@@ -320,7 +320,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateSessionEntityTypeAsync</summary>
-        public async Task UpdateSessionEntityTypeAsync_RequestObject()
+        public async Task UpdateSessionEntityTypeRequestObjectAsync()
         {
             // Snippet: UpdateSessionEntityTypeAsync(UpdateSessionEntityTypeRequest, CallSettings)
             // Additional: UpdateSessionEntityTypeAsync(UpdateSessionEntityTypeRequest, CancellationToken)
@@ -365,7 +365,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteSessionEntityType</summary>
-        public void DeleteSessionEntityType_RequestObject()
+        public void DeleteSessionEntityTypeRequestObject()
         {
             // Snippet: DeleteSessionEntityType(DeleteSessionEntityTypeRequest, CallSettings)
             // Create client
@@ -381,7 +381,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteSessionEntityTypeAsync</summary>
-        public async Task DeleteSessionEntityTypeAsync_RequestObject()
+        public async Task DeleteSessionEntityTypeRequestObjectAsync()
         {
             // Snippet: DeleteSessionEntityTypeAsync(DeleteSessionEntityTypeRequest, CallSettings)
             // Additional: DeleteSessionEntityTypeAsync(DeleteSessionEntityTypeRequest, CancellationToken)
@@ -425,7 +425,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteSessionEntityType</summary>
-        public void DeleteSessionEntityType_ResourceNames()
+        public void DeleteSessionEntityTypeResourceNames()
         {
             // Snippet: DeleteSessionEntityType(ContextName, CallSettings)
             // Create client
@@ -438,7 +438,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteSessionEntityTypeAsync</summary>
-        public async Task DeleteSessionEntityTypeAsync_ResourceNames()
+        public async Task DeleteSessionEntityTypeResourceNamesAsync()
         {
             // Snippet: DeleteSessionEntityTypeAsync(ContextName, CallSettings)
             // Additional: DeleteSessionEntityTypeAsync(ContextName, CancellationToken)

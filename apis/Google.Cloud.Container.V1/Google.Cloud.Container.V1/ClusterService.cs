@@ -579,87 +579,87 @@ namespace Google.Cloud.Container.V1 {
             "dGFpbmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeConfig), global::Google.Cloud.Container.V1.NodeConfig.Parser, new[]{ "MachineType", "DiskSizeGb", "OauthScopes", "ServiceAccount", "Metadata", "ImageType", "Labels", "LocalSsdCount", "Tags", "Preemptible", "Accelerators", "DiskType", "MinCpuPlatform", "Taints", "ShieldedInstanceConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ShieldedInstanceConfig), global::Google.Cloud.Container.V1.ShieldedInstanceConfig.Parser, new[]{ "EnableSecureBoot", "EnableIntegrityMonitoring" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeTaint), global::Google.Cloud.Container.V1.NodeTaint.Parser, new[]{ "Key", "Value", "Effect" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NodeTaint.Types.Effect) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuth), global::Google.Cloud.Container.V1.MasterAuth.Parser, new[]{ "Username", "Password", "ClientCertificateConfig", "ClusterCaCertificate", "ClientCertificate", "ClientKey" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClientCertificateConfig), global::Google.Cloud.Container.V1.ClientCertificateConfig.Parser, new[]{ "IssueClientCertificate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AddonsConfig), global::Google.Cloud.Container.V1.AddonsConfig.Parser, new[]{ "HttpLoadBalancing", "HorizontalPodAutoscaling", "KubernetesDashboard", "NetworkPolicyConfig", "CloudRunConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.HttpLoadBalancing), global::Google.Cloud.Container.V1.HttpLoadBalancing.Parser, new[]{ "Disabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.HorizontalPodAutoscaling), global::Google.Cloud.Container.V1.HorizontalPodAutoscaling.Parser, new[]{ "Disabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.KubernetesDashboard), global::Google.Cloud.Container.V1.KubernetesDashboard.Parser, new[]{ "Disabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkPolicyConfig), global::Google.Cloud.Container.V1.NetworkPolicyConfig.Parser, new[]{ "Disabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.PrivateClusterConfig), global::Google.Cloud.Container.V1.PrivateClusterConfig.Parser, new[]{ "EnablePrivateNodes", "EnablePrivateEndpoint", "MasterIpv4CidrBlock", "PrivateEndpoint", "PublicEndpoint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AuthenticatorGroupsConfig), global::Google.Cloud.Container.V1.AuthenticatorGroupsConfig.Parser, new[]{ "Enabled", "SecurityGroup" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CloudRunConfig), global::Google.Cloud.Container.V1.CloudRunConfig.Parser, new[]{ "Disabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig), global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Parser, new[]{ "Enabled", "CidrBlocks" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Types.CidrBlock), global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Types.CidrBlock.Parser, new[]{ "DisplayName", "CidrBlock_" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.LegacyAbac), global::Google.Cloud.Container.V1.LegacyAbac.Parser, new[]{ "Enabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkPolicy), global::Google.Cloud.Container.V1.NetworkPolicy.Parser, new[]{ "Provider", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.BinaryAuthorization), global::Google.Cloud.Container.V1.BinaryAuthorization.Parser, new[]{ "Enabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.IPAllocationPolicy), global::Google.Cloud.Container.V1.IPAllocationPolicy.Parser, new[]{ "UseIpAliases", "CreateSubnetwork", "SubnetworkName", "ClusterIpv4Cidr", "NodeIpv4Cidr", "ServicesIpv4Cidr", "ClusterSecondaryRangeName", "ServicesSecondaryRangeName", "ClusterIpv4CidrBlock", "NodeIpv4CidrBlock", "ServicesIpv4CidrBlock", "TpuIpv4CidrBlock" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Cluster), global::Google.Cloud.Container.V1.Cluster.Parser, new[]{ "Name", "Description", "InitialNodeCount", "NodeConfig", "MasterAuth", "LoggingService", "MonitoringService", "Network", "ClusterIpv4Cidr", "AddonsConfig", "Subnetwork", "NodePools", "Locations", "EnableKubernetesAlpha", "ResourceLabels", "LabelFingerprint", "LegacyAbac", "NetworkPolicy", "IpAllocationPolicy", "MasterAuthorizedNetworksConfig", "MaintenancePolicy", "BinaryAuthorization", "Autoscaling", "NetworkConfig", "DefaultMaxPodsConstraint", "ResourceUsageExportConfig", "AuthenticatorGroupsConfig", "PrivateClusterConfig", "DatabaseEncryption", "VerticalPodAutoscaling", "SelfLink", "Zone", "Endpoint", "InitialClusterVersion", "CurrentMasterVersion", "CurrentNodeVersion", "CreateTime", "Status", "StatusMessage", "NodeIpv4CidrSize", "ServicesIpv4Cidr", "InstanceGroupUrls", "CurrentNodeCount", "ExpireTime", "Location", "EnableTpu", "TpuIpv4CidrBlock", "Conditions" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Cluster.Types.Status) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClusterUpdate), global::Google.Cloud.Container.V1.ClusterUpdate.Parser, new[]{ "DesiredNodeVersion", "DesiredMonitoringService", "DesiredAddonsConfig", "DesiredNodePoolId", "DesiredImageType", "DesiredDatabaseEncryption", "DesiredNodePoolAutoscaling", "DesiredLocations", "DesiredMasterAuthorizedNetworksConfig", "DesiredClusterAutoscaling", "DesiredBinaryAuthorization", "DesiredLoggingService", "DesiredResourceUsageExportConfig", "DesiredVerticalPodAutoscaling", "DesiredIntraNodeVisibilityConfig", "DesiredMasterVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Operation), global::Google.Cloud.Container.V1.Operation.Parser, new[]{ "Name", "Zone", "OperationType", "Status", "Detail", "StatusMessage", "SelfLink", "TargetLink", "Location", "StartTime", "EndTime", "ClusterConditions", "NodepoolConditions" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Operation.Types.Status), typeof(global::Google.Cloud.Container.V1.Operation.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateClusterRequest), global::Google.Cloud.Container.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "Cluster", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetClusterRequest), global::Google.Cloud.Container.V1.GetClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateClusterRequest), global::Google.Cloud.Container.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Update", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateNodePoolRequest), global::Google.Cloud.Container.V1.UpdateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeVersion", "ImageType", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest), global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Autoscaling", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLoggingServiceRequest), global::Google.Cloud.Container.V1.SetLoggingServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "LoggingService", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest), global::Google.Cloud.Container.V1.SetMonitoringServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MonitoringService", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetAddonsConfigRequest), global::Google.Cloud.Container.V1.SetAddonsConfigRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "AddonsConfig", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLocationsRequest), global::Google.Cloud.Container.V1.SetLocationsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Locations", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateMasterRequest), global::Google.Cloud.Container.V1.UpdateMasterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MasterVersion", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest), global::Google.Cloud.Container.V1.SetMasterAuthRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Action", "Update", "Name" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteClusterRequest), global::Google.Cloud.Container.V1.DeleteClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersRequest), global::Google.Cloud.Container.V1.ListClustersRequest.Parser, new[]{ "ProjectId", "Zone", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersResponse), global::Google.Cloud.Container.V1.ListClustersResponse.Parser, new[]{ "Clusters", "MissingZones" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetOperationRequest), global::Google.Cloud.Container.V1.GetOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsRequest), global::Google.Cloud.Container.V1.ListOperationsRequest.Parser, new[]{ "ProjectId", "Zone", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CancelOperationRequest), global::Google.Cloud.Container.V1.CancelOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsResponse), global::Google.Cloud.Container.V1.ListOperationsResponse.Parser, new[]{ "Operations", "MissingZones" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetServerConfigRequest), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser, new[]{ "ProjectId", "Zone", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ServerConfig), global::Google.Cloud.Container.V1.ServerConfig.Parser, new[]{ "DefaultClusterVersion", "ValidNodeVersions", "DefaultImageType", "ValidImageTypes", "ValidMasterVersions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateNodePoolRequest), global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePool", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteNodePoolRequest), global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsRequest), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetNodePoolRequest), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodePool), global::Google.Cloud.Container.V1.NodePool.Parser, new[]{ "Name", "Config", "InitialNodeCount", "SelfLink", "Version", "InstanceGroupUrls", "Status", "StatusMessage", "Autoscaling", "Management", "MaxPodsConstraint", "Conditions", "PodIpv4CidrSize" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NodePool.Types.Status) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeManagement), global::Google.Cloud.Container.V1.NodeManagement.Parser, new[]{ "AutoUpgrade", "AutoRepair", "UpgradeOptions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AutoUpgradeOptions), global::Google.Cloud.Container.V1.AutoUpgradeOptions.Parser, new[]{ "AutoUpgradeStartTime", "Description" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaintenancePolicy), global::Google.Cloud.Container.V1.MaintenancePolicy.Parser, new[]{ "Window", "ResourceVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaintenanceWindow), global::Google.Cloud.Container.V1.MaintenanceWindow.Parser, new[]{ "DailyMaintenanceWindow", "RecurringWindow", "MaintenanceExclusions" }, new[]{ "Policy" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.TimeWindow), global::Google.Cloud.Container.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.RecurringTimeWindow), global::Google.Cloud.Container.V1.RecurringTimeWindow.Parser, new[]{ "Window", "Recurrence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DailyMaintenanceWindow), global::Google.Cloud.Container.V1.DailyMaintenanceWindow.Parser, new[]{ "StartTime", "Duration" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest), global::Google.Cloud.Container.V1.SetNodePoolManagementRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Management", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeCount", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest), global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsResponse), global::Google.Cloud.Container.V1.ListNodePoolsResponse.Parser, new[]{ "NodePools" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClusterAutoscaling), global::Google.Cloud.Container.V1.ClusterAutoscaling.Parser, new[]{ "EnableNodeAutoprovisioning", "ResourceLimits", "AutoprovisioningNodePoolDefaults", "AutoprovisioningLocations" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AutoprovisioningNodePoolDefaults), global::Google.Cloud.Container.V1.AutoprovisioningNodePoolDefaults.Parser, new[]{ "OauthScopes", "ServiceAccount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceLimit), global::Google.Cloud.Container.V1.ResourceLimit.Parser, new[]{ "ResourceType", "Minimum", "Maximum" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodePoolAutoscaling), global::Google.Cloud.Container.V1.NodePoolAutoscaling.Parser, new[]{ "Enabled", "MinNodeCount", "MaxNodeCount", "Autoprovisioned" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLabelsRequest), global::Google.Cloud.Container.V1.SetLabelsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "ResourceLabels", "LabelFingerprint", "Name" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLegacyAbacRequest), global::Google.Cloud.Container.V1.SetLegacyAbacRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Enabled", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.StartIPRotationRequest), global::Google.Cloud.Container.V1.StartIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name", "RotateCredentials" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CompleteIPRotationRequest), global::Google.Cloud.Container.V1.CompleteIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AcceleratorConfig), global::Google.Cloud.Container.V1.AcceleratorConfig.Parser, new[]{ "AcceleratorCount", "AcceleratorType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NetworkPolicy", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MaintenancePolicy", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.StatusCondition), global::Google.Cloud.Container.V1.StatusCondition.Parser, new[]{ "Code", "Message" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.StatusCondition.Types.Code) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkConfig), global::Google.Cloud.Container.V1.NetworkConfig.Parser, new[]{ "Network", "Subnetwork", "EnableIntraNodeVisibility" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.IntraNodeVisibilityConfig), global::Google.Cloud.Container.V1.IntraNodeVisibilityConfig.Parser, new[]{ "Enabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaxPodsConstraint), global::Google.Cloud.Container.V1.MaxPodsConstraint.Parser, new[]{ "MaxPodsPerNode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DatabaseEncryption), global::Google.Cloud.Container.V1.DatabaseEncryption.Parser, new[]{ "State", "KeyName" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest), global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse), global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse.Parser, new[]{ "Subnetworks", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange), global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Parser, new[]{ "RangeName", "IpCidrRange", "Status" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UsableSubnetwork), global::Google.Cloud.Container.V1.UsableSubnetwork.Parser, new[]{ "Subnetwork", "Network", "IpCidrRange", "SecondaryIpRanges", "StatusMessage" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceUsageExportConfig), global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Parser, new[]{ "BigqueryDestination", "EnableNetworkEgressMetering", "ConsumptionMeteringConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.BigQueryDestination), global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.BigQueryDestination.Parser, new[]{ "DatasetId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.ConsumptionMeteringConfig), global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.ConsumptionMeteringConfig.Parser, new[]{ "Enabled" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.VerticalPodAutoscaling), global::Google.Cloud.Container.V1.VerticalPodAutoscaling.Parser, new[]{ "Enabled" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeConfig), global::Google.Cloud.Container.V1.NodeConfig.Parser, new[]{ "MachineType", "DiskSizeGb", "OauthScopes", "ServiceAccount", "Metadata", "ImageType", "Labels", "LocalSsdCount", "Tags", "Preemptible", "Accelerators", "DiskType", "MinCpuPlatform", "Taints", "ShieldedInstanceConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ShieldedInstanceConfig), global::Google.Cloud.Container.V1.ShieldedInstanceConfig.Parser, new[]{ "EnableSecureBoot", "EnableIntegrityMonitoring" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeTaint), global::Google.Cloud.Container.V1.NodeTaint.Parser, new[]{ "Key", "Value", "Effect" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NodeTaint.Types.Effect) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuth), global::Google.Cloud.Container.V1.MasterAuth.Parser, new[]{ "Username", "Password", "ClientCertificateConfig", "ClusterCaCertificate", "ClientCertificate", "ClientKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClientCertificateConfig), global::Google.Cloud.Container.V1.ClientCertificateConfig.Parser, new[]{ "IssueClientCertificate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AddonsConfig), global::Google.Cloud.Container.V1.AddonsConfig.Parser, new[]{ "HttpLoadBalancing", "HorizontalPodAutoscaling", "KubernetesDashboard", "NetworkPolicyConfig", "CloudRunConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.HttpLoadBalancing), global::Google.Cloud.Container.V1.HttpLoadBalancing.Parser, new[]{ "Disabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.HorizontalPodAutoscaling), global::Google.Cloud.Container.V1.HorizontalPodAutoscaling.Parser, new[]{ "Disabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.KubernetesDashboard), global::Google.Cloud.Container.V1.KubernetesDashboard.Parser, new[]{ "Disabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkPolicyConfig), global::Google.Cloud.Container.V1.NetworkPolicyConfig.Parser, new[]{ "Disabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.PrivateClusterConfig), global::Google.Cloud.Container.V1.PrivateClusterConfig.Parser, new[]{ "EnablePrivateNodes", "EnablePrivateEndpoint", "MasterIpv4CidrBlock", "PrivateEndpoint", "PublicEndpoint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AuthenticatorGroupsConfig), global::Google.Cloud.Container.V1.AuthenticatorGroupsConfig.Parser, new[]{ "Enabled", "SecurityGroup" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CloudRunConfig), global::Google.Cloud.Container.V1.CloudRunConfig.Parser, new[]{ "Disabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig), global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Parser, new[]{ "Enabled", "CidrBlocks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Types.CidrBlock), global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Types.CidrBlock.Parser, new[]{ "DisplayName", "CidrBlock_" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.LegacyAbac), global::Google.Cloud.Container.V1.LegacyAbac.Parser, new[]{ "Enabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkPolicy), global::Google.Cloud.Container.V1.NetworkPolicy.Parser, new[]{ "Provider", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.BinaryAuthorization), global::Google.Cloud.Container.V1.BinaryAuthorization.Parser, new[]{ "Enabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.IPAllocationPolicy), global::Google.Cloud.Container.V1.IPAllocationPolicy.Parser, new[]{ "UseIpAliases", "CreateSubnetwork", "SubnetworkName", "ClusterIpv4Cidr", "NodeIpv4Cidr", "ServicesIpv4Cidr", "ClusterSecondaryRangeName", "ServicesSecondaryRangeName", "ClusterIpv4CidrBlock", "NodeIpv4CidrBlock", "ServicesIpv4CidrBlock", "TpuIpv4CidrBlock" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Cluster), global::Google.Cloud.Container.V1.Cluster.Parser, new[]{ "Name", "Description", "InitialNodeCount", "NodeConfig", "MasterAuth", "LoggingService", "MonitoringService", "Network", "ClusterIpv4Cidr", "AddonsConfig", "Subnetwork", "NodePools", "Locations", "EnableKubernetesAlpha", "ResourceLabels", "LabelFingerprint", "LegacyAbac", "NetworkPolicy", "IpAllocationPolicy", "MasterAuthorizedNetworksConfig", "MaintenancePolicy", "BinaryAuthorization", "Autoscaling", "NetworkConfig", "DefaultMaxPodsConstraint", "ResourceUsageExportConfig", "AuthenticatorGroupsConfig", "PrivateClusterConfig", "DatabaseEncryption", "VerticalPodAutoscaling", "SelfLink", "Zone", "Endpoint", "InitialClusterVersion", "CurrentMasterVersion", "CurrentNodeVersion", "CreateTime", "Status", "StatusMessage", "NodeIpv4CidrSize", "ServicesIpv4Cidr", "InstanceGroupUrls", "CurrentNodeCount", "ExpireTime", "Location", "EnableTpu", "TpuIpv4CidrBlock", "Conditions" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Cluster.Types.Status) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClusterUpdate), global::Google.Cloud.Container.V1.ClusterUpdate.Parser, new[]{ "DesiredNodeVersion", "DesiredMonitoringService", "DesiredAddonsConfig", "DesiredNodePoolId", "DesiredImageType", "DesiredDatabaseEncryption", "DesiredNodePoolAutoscaling", "DesiredLocations", "DesiredMasterAuthorizedNetworksConfig", "DesiredClusterAutoscaling", "DesiredBinaryAuthorization", "DesiredLoggingService", "DesiredResourceUsageExportConfig", "DesiredVerticalPodAutoscaling", "DesiredIntraNodeVisibilityConfig", "DesiredMasterVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Operation), global::Google.Cloud.Container.V1.Operation.Parser, new[]{ "Name", "Zone", "OperationType", "Status", "Detail", "StatusMessage", "SelfLink", "TargetLink", "Location", "StartTime", "EndTime", "ClusterConditions", "NodepoolConditions" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Operation.Types.Status), typeof(global::Google.Cloud.Container.V1.Operation.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateClusterRequest), global::Google.Cloud.Container.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "Cluster", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetClusterRequest), global::Google.Cloud.Container.V1.GetClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateClusterRequest), global::Google.Cloud.Container.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Update", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateNodePoolRequest), global::Google.Cloud.Container.V1.UpdateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeVersion", "ImageType", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest), global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Autoscaling", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLoggingServiceRequest), global::Google.Cloud.Container.V1.SetLoggingServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "LoggingService", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest), global::Google.Cloud.Container.V1.SetMonitoringServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MonitoringService", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetAddonsConfigRequest), global::Google.Cloud.Container.V1.SetAddonsConfigRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "AddonsConfig", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLocationsRequest), global::Google.Cloud.Container.V1.SetLocationsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Locations", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateMasterRequest), global::Google.Cloud.Container.V1.UpdateMasterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MasterVersion", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest), global::Google.Cloud.Container.V1.SetMasterAuthRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Action", "Update", "Name" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteClusterRequest), global::Google.Cloud.Container.V1.DeleteClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersRequest), global::Google.Cloud.Container.V1.ListClustersRequest.Parser, new[]{ "ProjectId", "Zone", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersResponse), global::Google.Cloud.Container.V1.ListClustersResponse.Parser, new[]{ "Clusters", "MissingZones" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetOperationRequest), global::Google.Cloud.Container.V1.GetOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsRequest), global::Google.Cloud.Container.V1.ListOperationsRequest.Parser, new[]{ "ProjectId", "Zone", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CancelOperationRequest), global::Google.Cloud.Container.V1.CancelOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsResponse), global::Google.Cloud.Container.V1.ListOperationsResponse.Parser, new[]{ "Operations", "MissingZones" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetServerConfigRequest), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser, new[]{ "ProjectId", "Zone", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ServerConfig), global::Google.Cloud.Container.V1.ServerConfig.Parser, new[]{ "DefaultClusterVersion", "ValidNodeVersions", "DefaultImageType", "ValidImageTypes", "ValidMasterVersions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateNodePoolRequest), global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePool", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteNodePoolRequest), global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsRequest), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetNodePoolRequest), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodePool), global::Google.Cloud.Container.V1.NodePool.Parser, new[]{ "Name", "Config", "InitialNodeCount", "SelfLink", "Version", "InstanceGroupUrls", "Status", "StatusMessage", "Autoscaling", "Management", "MaxPodsConstraint", "Conditions", "PodIpv4CidrSize" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NodePool.Types.Status) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeManagement), global::Google.Cloud.Container.V1.NodeManagement.Parser, new[]{ "AutoUpgrade", "AutoRepair", "UpgradeOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AutoUpgradeOptions), global::Google.Cloud.Container.V1.AutoUpgradeOptions.Parser, new[]{ "AutoUpgradeStartTime", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaintenancePolicy), global::Google.Cloud.Container.V1.MaintenancePolicy.Parser, new[]{ "Window", "ResourceVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaintenanceWindow), global::Google.Cloud.Container.V1.MaintenanceWindow.Parser, new[]{ "DailyMaintenanceWindow", "RecurringWindow", "MaintenanceExclusions" }, new[]{ "Policy" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.TimeWindow), global::Google.Cloud.Container.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.RecurringTimeWindow), global::Google.Cloud.Container.V1.RecurringTimeWindow.Parser, new[]{ "Window", "Recurrence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DailyMaintenanceWindow), global::Google.Cloud.Container.V1.DailyMaintenanceWindow.Parser, new[]{ "StartTime", "Duration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest), global::Google.Cloud.Container.V1.SetNodePoolManagementRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Management", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeCount", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest), global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsResponse), global::Google.Cloud.Container.V1.ListNodePoolsResponse.Parser, new[]{ "NodePools" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClusterAutoscaling), global::Google.Cloud.Container.V1.ClusterAutoscaling.Parser, new[]{ "EnableNodeAutoprovisioning", "ResourceLimits", "AutoprovisioningNodePoolDefaults", "AutoprovisioningLocations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AutoprovisioningNodePoolDefaults), global::Google.Cloud.Container.V1.AutoprovisioningNodePoolDefaults.Parser, new[]{ "OauthScopes", "ServiceAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceLimit), global::Google.Cloud.Container.V1.ResourceLimit.Parser, new[]{ "ResourceType", "Minimum", "Maximum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodePoolAutoscaling), global::Google.Cloud.Container.V1.NodePoolAutoscaling.Parser, new[]{ "Enabled", "MinNodeCount", "MaxNodeCount", "Autoprovisioned" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLabelsRequest), global::Google.Cloud.Container.V1.SetLabelsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "ResourceLabels", "LabelFingerprint", "Name" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLegacyAbacRequest), global::Google.Cloud.Container.V1.SetLegacyAbacRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Enabled", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.StartIPRotationRequest), global::Google.Cloud.Container.V1.StartIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name", "RotateCredentials" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CompleteIPRotationRequest), global::Google.Cloud.Container.V1.CompleteIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AcceleratorConfig), global::Google.Cloud.Container.V1.AcceleratorConfig.Parser, new[]{ "AcceleratorCount", "AcceleratorType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NetworkPolicy", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MaintenancePolicy", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.StatusCondition), global::Google.Cloud.Container.V1.StatusCondition.Parser, new[]{ "Code", "Message" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.StatusCondition.Types.Code) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkConfig), global::Google.Cloud.Container.V1.NetworkConfig.Parser, new[]{ "Network", "Subnetwork", "EnableIntraNodeVisibility" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.IntraNodeVisibilityConfig), global::Google.Cloud.Container.V1.IntraNodeVisibilityConfig.Parser, new[]{ "Enabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaxPodsConstraint), global::Google.Cloud.Container.V1.MaxPodsConstraint.Parser, new[]{ "MaxPodsPerNode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DatabaseEncryption), global::Google.Cloud.Container.V1.DatabaseEncryption.Parser, new[]{ "State", "KeyName" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest), global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse), global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse.Parser, new[]{ "Subnetworks", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange), global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Parser, new[]{ "RangeName", "IpCidrRange", "Status" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UsableSubnetwork), global::Google.Cloud.Container.V1.UsableSubnetwork.Parser, new[]{ "Subnetwork", "Network", "IpCidrRange", "SecondaryIpRanges", "StatusMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceUsageExportConfig), global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Parser, new[]{ "BigqueryDestination", "EnableNetworkEgressMetering", "ConsumptionMeteringConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.BigQueryDestination), global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.BigQueryDestination.Parser, new[]{ "DatasetId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.ConsumptionMeteringConfig), global::Google.Cloud.Container.V1.ResourceUsageExportConfig.Types.ConsumptionMeteringConfig.Parser, new[]{ "Enabled" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.VerticalPodAutoscaling), global::Google.Cloud.Container.V1.VerticalPodAutoscaling.Parser, new[]{ "Enabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -797,7 +797,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>Field number for the "metadata" field.</summary>
     public const int MetadataFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_metadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The metadata key/value pairs assigned to instances in the cluster.
@@ -855,7 +855,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 6;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 50);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The map of Kubernetes labels (key/value pairs) to be applied to each node.
@@ -1524,7 +1524,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "effect" field.</summary>
     public const int EffectFieldNumber = 3;
-    private global::Google.Cloud.Container.V1.NodeTaint.Types.Effect effect_ = 0;
+    private global::Google.Cloud.Container.V1.NodeTaint.Types.Effect effect_ = global::Google.Cloud.Container.V1.NodeTaint.Types.Effect.Unspecified;
     /// <summary>
     /// Effect for taint.
     /// </summary>
@@ -1560,7 +1560,7 @@ namespace Google.Cloud.Container.V1 {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
       if (Value.Length != 0) hash ^= Value.GetHashCode();
-      if (Effect != 0) hash ^= Effect.GetHashCode();
+      if (Effect != global::Google.Cloud.Container.V1.NodeTaint.Types.Effect.Unspecified) hash ^= Effect.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1582,7 +1582,7 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
-      if (Effect != 0) {
+      if (Effect != global::Google.Cloud.Container.V1.NodeTaint.Types.Effect.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Effect);
       }
@@ -1600,7 +1600,7 @@ namespace Google.Cloud.Container.V1 {
       if (Value.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
-      if (Effect != 0) {
+      if (Effect != global::Google.Cloud.Container.V1.NodeTaint.Types.Effect.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Effect);
       }
       if (_unknownFields != null) {
@@ -1620,7 +1620,7 @@ namespace Google.Cloud.Container.V1 {
       if (other.Value.Length != 0) {
         Value = other.Value;
       }
-      if (other.Effect != 0) {
+      if (other.Effect != global::Google.Cloud.Container.V1.NodeTaint.Types.Effect.Unspecified) {
         Effect = other.Effect;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4056,7 +4056,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "provider" field.</summary>
     public const int ProviderFieldNumber = 1;
-    private global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider provider_ = 0;
+    private global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider provider_ = global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider.Unspecified;
     /// <summary>
     /// The selected network policy provider.
     /// </summary>
@@ -4103,7 +4103,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Provider != 0) hash ^= Provider.GetHashCode();
+      if (Provider != global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider.Unspecified) hash ^= Provider.GetHashCode();
       if (Enabled != false) hash ^= Enabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4118,7 +4118,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Provider != 0) {
+      if (Provider != global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Provider);
       }
@@ -4134,7 +4134,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Provider != 0) {
+      if (Provider != global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Provider);
       }
       if (Enabled != false) {
@@ -4151,7 +4151,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      if (other.Provider != 0) {
+      if (other.Provider != global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider.Unspecified) {
         Provider = other.Provider;
       }
       if (other.Enabled != false) {
@@ -5230,7 +5230,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>Field number for the "resource_labels" field.</summary>
     public const int ResourceLabelsFieldNumber = 15;
     private static readonly pbc::MapField<string, string>.Codec _map_resourceLabels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 122);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 122);
     private readonly pbc::MapField<string, string> resourceLabels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The resource labels for the cluster to use to annotate any related
@@ -5581,7 +5581,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 107;
-    private global::Google.Cloud.Container.V1.Cluster.Types.Status status_ = 0;
+    private global::Google.Cloud.Container.V1.Cluster.Types.Status status_ = global::Google.Cloud.Container.V1.Cluster.Types.Status.Unspecified;
     /// <summary>
     /// [Output only] The current status of this cluster.
     /// </summary>
@@ -5852,7 +5852,7 @@ namespace Google.Cloud.Container.V1 {
       if (CurrentMasterVersion.Length != 0) hash ^= CurrentMasterVersion.GetHashCode();
       if (CurrentNodeVersion.Length != 0) hash ^= CurrentNodeVersion.GetHashCode();
       if (CreateTime.Length != 0) hash ^= CreateTime.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::Google.Cloud.Container.V1.Cluster.Types.Status.Unspecified) hash ^= Status.GetHashCode();
       if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
       if (NodeIpv4CidrSize != 0) hash ^= NodeIpv4CidrSize.GetHashCode();
       if (ServicesIpv4Cidr.Length != 0) hash ^= ServicesIpv4Cidr.GetHashCode();
@@ -6015,7 +6015,7 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(210, 6);
         output.WriteString(CreateTime);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.Cluster.Types.Status.Unspecified) {
         output.WriteRawTag(216, 6);
         output.WriteEnum((int) Status);
       }
@@ -6166,7 +6166,7 @@ namespace Google.Cloud.Container.V1 {
       if (CreateTime.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(CreateTime);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.Cluster.Types.Status.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (StatusMessage.Length != 0) {
@@ -6362,7 +6362,7 @@ namespace Google.Cloud.Container.V1 {
       if (other.CreateTime.Length != 0) {
         CreateTime = other.CreateTime;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::Google.Cloud.Container.V1.Cluster.Types.Status.Unspecified) {
         Status = other.Status;
       }
       if (other.StatusMessage.Length != 0) {
@@ -7473,7 +7473,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "operation_type" field.</summary>
     public const int OperationTypeFieldNumber = 3;
-    private global::Google.Cloud.Container.V1.Operation.Types.Type operationType_ = 0;
+    private global::Google.Cloud.Container.V1.Operation.Types.Type operationType_ = global::Google.Cloud.Container.V1.Operation.Types.Type.Unspecified;
     /// <summary>
     /// The operation type.
     /// </summary>
@@ -7487,7 +7487,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 4;
-    private global::Google.Cloud.Container.V1.Operation.Types.Status status_ = 0;
+    private global::Google.Cloud.Container.V1.Operation.Types.Status status_ = global::Google.Cloud.Container.V1.Operation.Types.Status.Unspecified;
     /// <summary>
     /// The current status of the operation.
     /// </summary>
@@ -7662,8 +7662,8 @@ namespace Google.Cloud.Container.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
-      if (OperationType != 0) hash ^= OperationType.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (OperationType != global::Google.Cloud.Container.V1.Operation.Types.Type.Unspecified) hash ^= OperationType.GetHashCode();
+      if (Status != global::Google.Cloud.Container.V1.Operation.Types.Status.Unspecified) hash ^= Status.GetHashCode();
       if (Detail.Length != 0) hash ^= Detail.GetHashCode();
       if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
       if (SelfLink.Length != 0) hash ^= SelfLink.GetHashCode();
@@ -7694,11 +7694,11 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(18);
         output.WriteString(Zone);
       }
-      if (OperationType != 0) {
+      if (OperationType != global::Google.Cloud.Container.V1.Operation.Types.Type.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) OperationType);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.Operation.Types.Status.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
@@ -7746,10 +7746,10 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
       }
-      if (OperationType != 0) {
+      if (OperationType != global::Google.Cloud.Container.V1.Operation.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperationType);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.Operation.Types.Status.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (Detail.Length != 0) {
@@ -7792,10 +7792,10 @@ namespace Google.Cloud.Container.V1 {
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
       }
-      if (other.OperationType != 0) {
+      if (other.OperationType != global::Google.Cloud.Container.V1.Operation.Types.Type.Unspecified) {
         OperationType = other.OperationType;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::Google.Cloud.Container.V1.Operation.Types.Status.Unspecified) {
         Status = other.Status;
       }
       if (other.Detail.Length != 0) {
@@ -10869,7 +10869,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "action" field.</summary>
     public const int ActionFieldNumber = 4;
-    private global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action action_ = 0;
+    private global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action action_ = global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action.Unknown;
     /// <summary>
     /// Required. The exact form of action to be taken on the master auth.
     /// </summary>
@@ -10938,7 +10938,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
-      if (Action != 0) hash ^= Action.GetHashCode();
+      if (Action != global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action.Unknown) hash ^= Action.GetHashCode();
       if (update_ != null) hash ^= Update.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
@@ -10966,7 +10966,7 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(ClusterId);
       }
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action.Unknown) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Action);
       }
@@ -10995,7 +10995,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
       }
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (update_ != null) {
@@ -11024,7 +11024,7 @@ namespace Google.Cloud.Container.V1 {
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
       }
-      if (other.Action != 0) {
+      if (other.Action != global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action.Unknown) {
         Action = other.Action;
       }
       if (other.update_ != null) {
@@ -14180,7 +14180,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 103;
-    private global::Google.Cloud.Container.V1.NodePool.Types.Status status_ = 0;
+    private global::Google.Cloud.Container.V1.NodePool.Types.Status status_ = global::Google.Cloud.Container.V1.NodePool.Types.Status.Unspecified;
     /// <summary>
     /// [Output only] The status of the nodes in this pool instance.
     /// </summary>
@@ -14316,7 +14316,7 @@ namespace Google.Cloud.Container.V1 {
       if (SelfLink.Length != 0) hash ^= SelfLink.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
       hash ^= instanceGroupUrls_.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::Google.Cloud.Container.V1.NodePool.Types.Status.Unspecified) hash ^= Status.GetHashCode();
       if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
       if (autoscaling_ != null) hash ^= Autoscaling.GetHashCode();
       if (management_ != null) hash ^= Management.GetHashCode();
@@ -14373,7 +14373,7 @@ namespace Google.Cloud.Container.V1 {
         output.WriteString(Version);
       }
       instanceGroupUrls_.WriteTo(output, _repeated_instanceGroupUrls_codec);
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.NodePool.Types.Status.Unspecified) {
         output.WriteRawTag(184, 6);
         output.WriteEnum((int) Status);
       }
@@ -14406,7 +14406,7 @@ namespace Google.Cloud.Container.V1 {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Version);
       }
       size += instanceGroupUrls_.CalculateSize(_repeated_instanceGroupUrls_codec);
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.NodePool.Types.Status.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (StatusMessage.Length != 0) {
@@ -14455,7 +14455,7 @@ namespace Google.Cloud.Container.V1 {
         Version = other.Version;
       }
       instanceGroupUrls_.Add(other.instanceGroupUrls_);
-      if (other.Status != 0) {
+      if (other.Status != global::Google.Cloud.Container.V1.NodePool.Types.Status.Unspecified) {
         Status = other.Status;
       }
       if (other.StatusMessage.Length != 0) {
@@ -15246,7 +15246,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>Field number for the "maintenance_exclusions" field.</summary>
     public const int MaintenanceExclusionsFieldNumber = 4;
     private static readonly pbc::MapField<string, global::Google.Cloud.Container.V1.TimeWindow>.Codec _map_maintenanceExclusions_codec
-        = new pbc::MapField<string, global::Google.Cloud.Container.V1.TimeWindow>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Container.V1.TimeWindow.Parser), 34);
+        = new pbc::MapField<string, global::Google.Cloud.Container.V1.TimeWindow>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Container.V1.TimeWindow.Parser), 34);
     private readonly pbc::MapField<string, global::Google.Cloud.Container.V1.TimeWindow> maintenanceExclusions_ = new pbc::MapField<string, global::Google.Cloud.Container.V1.TimeWindow>();
     /// <summary>
     /// Exceptions to maintenance window. Non-emergency maintenance should not
@@ -17881,7 +17881,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>Field number for the "resource_labels" field.</summary>
     public const int ResourceLabelsFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_resourceLabels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> resourceLabels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Required. The labels to set for that cluster.
@@ -19614,7 +19614,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "code" field.</summary>
     public const int CodeFieldNumber = 1;
-    private global::Google.Cloud.Container.V1.StatusCondition.Types.Code code_ = 0;
+    private global::Google.Cloud.Container.V1.StatusCondition.Types.Code code_ = global::Google.Cloud.Container.V1.StatusCondition.Types.Code.Unknown;
     /// <summary>
     /// Machine-friendly representation of the condition
     /// </summary>
@@ -19661,7 +19661,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Code != 0) hash ^= Code.GetHashCode();
+      if (Code != global::Google.Cloud.Container.V1.StatusCondition.Types.Code.Unknown) hash ^= Code.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -19676,7 +19676,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Code != 0) {
+      if (Code != global::Google.Cloud.Container.V1.StatusCondition.Types.Code.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Code);
       }
@@ -19692,7 +19692,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Code != 0) {
+      if (Code != global::Google.Cloud.Container.V1.StatusCondition.Types.Code.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
       }
       if (Message.Length != 0) {
@@ -19709,7 +19709,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      if (other.Code != 0) {
+      if (other.Code != global::Google.Cloud.Container.V1.StatusCondition.Types.Code.Unknown) {
         Code = other.Code;
       }
       if (other.Message.Length != 0) {
@@ -20294,7 +20294,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 2;
-    private global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State state_ = 0;
+    private global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State state_ = global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State.Unknown;
     /// <summary>
     /// Denotes the state of etcd encryption.
     /// </summary>
@@ -20342,7 +20342,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State.Unknown) hash ^= State.GetHashCode();
       if (KeyName.Length != 0) hash ^= KeyName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -20361,7 +20361,7 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(10);
         output.WriteString(KeyName);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -20373,7 +20373,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (KeyName.Length != 0) {
@@ -20390,7 +20390,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Container.V1.DatabaseEncryption.Types.State.Unknown) {
         State = other.State;
       }
       if (other.KeyName.Length != 0) {
@@ -20916,7 +20916,7 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 3;
-    private global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status status_ = 0;
+    private global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status status_ = global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status.Unknown;
     /// <summary>
     /// This field is to determine the status of the secondary range programmably.
     /// </summary>
@@ -20952,7 +20952,7 @@ namespace Google.Cloud.Container.V1 {
       int hash = 1;
       if (RangeName.Length != 0) hash ^= RangeName.GetHashCode();
       if (IpCidrRange.Length != 0) hash ^= IpCidrRange.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status.Unknown) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -20974,7 +20974,7 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(18);
         output.WriteString(IpCidrRange);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
@@ -20992,7 +20992,7 @@ namespace Google.Cloud.Container.V1 {
       if (IpCidrRange.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IpCidrRange);
       }
-      if (Status != 0) {
+      if (Status != global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -21012,7 +21012,7 @@ namespace Google.Cloud.Container.V1 {
       if (other.IpCidrRange.Length != 0) {
         IpCidrRange = other.IpCidrRange;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::Google.Cloud.Container.V1.UsableSubnetworkSecondaryRange.Types.Status.Unknown) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

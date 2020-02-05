@@ -22,7 +22,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
     public sealed class GeneratedController2ClientSnippets
     {
         /// <summary>Snippet for RegisterDebuggee</summary>
-        public void RegisterDebuggee_RequestObject()
+        public void RegisterDebuggeeRequestObject()
         {
             // Snippet: RegisterDebuggee(RegisterDebuggeeRequest, CallSettings)
             // Create client
@@ -38,7 +38,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for RegisterDebuggeeAsync</summary>
-        public async Task RegisterDebuggeeAsync_RequestObject()
+        public async Task RegisterDebuggeeRequestObjectAsync()
         {
             // Snippet: RegisterDebuggeeAsync(RegisterDebuggeeRequest, CallSettings)
             // Additional: RegisterDebuggeeAsync(RegisterDebuggeeRequest, CancellationToken)
@@ -82,7 +82,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for ListActiveBreakpoints</summary>
-        public void ListActiveBreakpoints_RequestObject()
+        public void ListActiveBreakpointsRequestObject()
         {
             // Snippet: ListActiveBreakpoints(ListActiveBreakpointsRequest, CallSettings)
             // Create client
@@ -100,7 +100,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
-        public async Task ListActiveBreakpointsAsync_RequestObject()
+        public async Task ListActiveBreakpointsRequestObjectAsync()
         {
             // Snippet: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest, CallSettings)
             // Additional: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest, CancellationToken)
@@ -146,7 +146,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateActiveBreakpoint</summary>
-        public void UpdateActiveBreakpoint_RequestObject()
+        public void UpdateActiveBreakpointRequestObject()
         {
             // Snippet: UpdateActiveBreakpoint(UpdateActiveBreakpointRequest, CallSettings)
             // Create client
@@ -163,7 +163,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
-        public async Task UpdateActiveBreakpointAsync_RequestObject()
+        public async Task UpdateActiveBreakpointRequestObjectAsync()
         {
             // Snippet: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest, CallSettings)
             // Additional: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest, CancellationToken)

@@ -26,7 +26,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
     public sealed class GeneratedBigtableServiceApiClientSnippets
     {
         /// <summary>Snippet for ReadRows</summary>
-        public async Task ReadRows_RequestObject()
+        public async Task ReadRowsRequestObject()
         {
             // Snippet: ReadRows(ReadRowsRequest, CallSettings)
             // Create client
@@ -79,7 +79,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadRows</summary>
-        public async Task ReadRows1_ResourceNames()
+        public async Task ReadRows1ResourceNames()
         {
             // Snippet: ReadRows(TableName, CallSettings)
             // Create client
@@ -126,7 +126,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadRows</summary>
-        public async Task ReadRows2_ResourceNames()
+        public async Task ReadRows2ResourceNames()
         {
             // Snippet: ReadRows(TableName, string, CallSettings)
             // Create client
@@ -150,7 +150,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for SampleRowKeys</summary>
-        public async Task SampleRowKeys_RequestObject()
+        public async Task SampleRowKeysRequestObject()
         {
             // Snippet: SampleRowKeys(SampleRowKeysRequest, CallSettings)
             // Create client
@@ -200,7 +200,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for SampleRowKeys</summary>
-        public async Task SampleRowKeys1_ResourceNames()
+        public async Task SampleRowKeys1ResourceNames()
         {
             // Snippet: SampleRowKeys(TableName, CallSettings)
             // Create client
@@ -247,7 +247,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for SampleRowKeys</summary>
-        public async Task SampleRowKeys2_ResourceNames()
+        public async Task SampleRowKeys2ResourceNames()
         {
             // Snippet: SampleRowKeys(TableName, string, CallSettings)
             // Create client
@@ -271,7 +271,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRow</summary>
-        public void MutateRow_RequestObject()
+        public void MutateRowRequestObject()
         {
             // Snippet: MutateRow(MutateRowRequest, CallSettings)
             // Create client
@@ -290,7 +290,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRowAsync</summary>
-        public async Task MutateRowAsync_RequestObject()
+        public async Task MutateRowRequestObjectAsync()
         {
             // Snippet: MutateRowAsync(MutateRowRequest, CallSettings)
             // Additional: MutateRowAsync(MutateRowRequest, CancellationToken)
@@ -341,7 +341,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRow</summary>
-        public void MutateRow1_ResourceNames()
+        public void MutateRow1ResourceNames()
         {
             // Snippet: MutateRow(TableName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
@@ -356,7 +356,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRowAsync</summary>
-        public async Task MutateRow1Async_ResourceNames()
+        public async Task MutateRow1ResourceNamesAsync()
         {
             // Snippet: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Additional: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, CancellationToken)
@@ -405,7 +405,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRow</summary>
-        public void MutateRow2_ResourceNames()
+        public void MutateRow2ResourceNames()
         {
             // Snippet: MutateRow(TableName, ByteString, IEnumerable<Mutation>, string, CallSettings)
             // Create client
@@ -421,7 +421,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRowAsync</summary>
-        public async Task MutateRow2Async_ResourceNames()
+        public async Task MutateRow2ResourceNamesAsync()
         {
             // Snippet: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, string, CallSettings)
             // Additional: MutateRowAsync(TableName, ByteString, IEnumerable<Mutation>, string, CancellationToken)
@@ -438,7 +438,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRows</summary>
-        public async Task MutateRows_RequestObject()
+        public async Task MutateRowsRequestObject()
         {
             // Snippet: MutateRows(MutateRowsRequest, CallSettings)
             // Create client
@@ -496,7 +496,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRows</summary>
-        public async Task MutateRows1_ResourceNames()
+        public async Task MutateRows1ResourceNames()
         {
             // Snippet: MutateRows(TableName, IEnumerable<MutateRowsRequest.Types.Entry>, CallSettings)
             // Create client
@@ -551,7 +551,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for MutateRows</summary>
-        public async Task MutateRows2_ResourceNames()
+        public async Task MutateRows2ResourceNames()
         {
             // Snippet: MutateRows(TableName, IEnumerable<MutateRowsRequest.Types.Entry>, string, CallSettings)
             // Create client
@@ -579,7 +579,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRow</summary>
-        public void CheckAndMutateRow_RequestObject()
+        public void CheckAndMutateRowRequestObject()
         {
             // Snippet: CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)
             // Create client
@@ -600,7 +600,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRowAsync</summary>
-        public async Task CheckAndMutateRowAsync_RequestObject()
+        public async Task CheckAndMutateRowRequestObjectAsync()
         {
             // Snippet: CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)
             // Additional: CheckAndMutateRowAsync(CheckAndMutateRowRequest, CancellationToken)
@@ -657,7 +657,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRow</summary>
-        public void CheckAndMutateRow1_ResourceNames()
+        public void CheckAndMutateRow1ResourceNames()
         {
             // Snippet: CheckAndMutateRow(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CallSettings)
             // Create client
@@ -674,7 +674,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRowAsync</summary>
-        public async Task CheckAndMutateRow1Async_ResourceNames()
+        public async Task CheckAndMutateRow1ResourceNamesAsync()
         {
             // Snippet: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CallSettings)
             // Additional: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, CancellationToken)
@@ -729,7 +729,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRow</summary>
-        public void CheckAndMutateRow2_ResourceNames()
+        public void CheckAndMutateRow2ResourceNames()
         {
             // Snippet: CheckAndMutateRow(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CallSettings)
             // Create client
@@ -747,7 +747,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for CheckAndMutateRowAsync</summary>
-        public async Task CheckAndMutateRow2Async_ResourceNames()
+        public async Task CheckAndMutateRow2ResourceNamesAsync()
         {
             // Snippet: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CallSettings)
             // Additional: CheckAndMutateRowAsync(TableName, ByteString, RowFilter, IEnumerable<Mutation>, IEnumerable<Mutation>, string, CancellationToken)
@@ -766,7 +766,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRow</summary>
-        public void ReadModifyWriteRow_RequestObject()
+        public void ReadModifyWriteRowRequestObject()
         {
             // Snippet: ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)
             // Create client
@@ -788,7 +788,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
-        public async Task ReadModifyWriteRowAsync_RequestObject()
+        public async Task ReadModifyWriteRowRequestObjectAsync()
         {
             // Snippet: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)
             // Additional: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CancellationToken)
@@ -848,7 +848,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRow</summary>
-        public void ReadModifyWriteRow1_ResourceNames()
+        public void ReadModifyWriteRow1ResourceNames()
         {
             // Snippet: ReadModifyWriteRow(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
             // Create client
@@ -866,7 +866,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
-        public async Task ReadModifyWriteRow1Async_ResourceNames()
+        public async Task ReadModifyWriteRow1ResourceNamesAsync()
         {
             // Snippet: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
             // Additional: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CancellationToken)
@@ -924,7 +924,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRow</summary>
-        public void ReadModifyWriteRow2_ResourceNames()
+        public void ReadModifyWriteRow2ResourceNames()
         {
             // Snippet: ReadModifyWriteRow(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, string, CallSettings)
             // Create client
@@ -943,7 +943,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         }
 
         /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
-        public async Task ReadModifyWriteRow2Async_ResourceNames()
+        public async Task ReadModifyWriteRow2ResourceNamesAsync()
         {
             // Snippet: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, string, CallSettings)
             // Additional: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, string, CancellationToken)

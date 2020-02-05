@@ -26,7 +26,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -38,7 +38,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public KeyRingName ParentAsKeyRingName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -50,7 +50,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public KeyRingName ParentAsKeyRingName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -62,7 +62,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public KeyRingName ParentAsKeyRingName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -74,7 +74,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::KeyRingName KeyRingName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::KeyRingName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::KeyRingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -86,7 +86,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyName CryptoKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -98,7 +98,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyVersionName CryptoKeyVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -110,7 +110,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyVersionName CryptoKeyVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -122,7 +122,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::ImportJobName ImportJobName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::ImportJobName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::ImportJobName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -134,7 +134,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -146,7 +146,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public KeyRingName ParentAsKeyRingName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -158,7 +158,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public CryptoKeyName ParentAsCryptoKeyName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -170,7 +170,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public CryptoKeyName ParentAsCryptoKeyName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -182,7 +182,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public KeyRingName ParentAsKeyRingName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -194,7 +194,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyName CryptoKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -206,7 +206,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyName CryptoKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -218,7 +218,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyVersionName CryptoKeyVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -230,7 +230,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyVersionName CryptoKeyVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -242,7 +242,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyName CryptoKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -254,7 +254,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyVersionName CryptoKeyVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -266,7 +266,7 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public gckv::CryptoKeyVersionName CryptoKeyVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

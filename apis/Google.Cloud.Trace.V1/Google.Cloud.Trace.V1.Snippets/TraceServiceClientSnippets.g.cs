@@ -26,7 +26,7 @@ namespace Google.Cloud.Trace.V1.Snippets
     public sealed class GeneratedTraceServiceClientSnippets
     {
         /// <summary>Snippet for ListTraces</summary>
-        public void ListTraces_RequestObject()
+        public void ListTracesRequestObject()
         {
             // Snippet: ListTraces(ListTracesRequest, CallSettings)
             // Create client
@@ -79,7 +79,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         }
 
         /// <summary>Snippet for ListTraces</summary>
-        public async Task ListTracesAsync_RequestObject()
+        public async Task ListTracesRequestObjectAsync()
         {
             // Snippet: ListTracesAsync(ListTracesRequest, CallSettings)
             // Create client
@@ -222,7 +222,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         }
 
         /// <summary>Snippet for GetTrace</summary>
-        public void GetTrace_RequestObject()
+        public void GetTraceRequestObject()
         {
             // Snippet: GetTrace(GetTraceRequest, CallSettings)
             // Create client
@@ -239,7 +239,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         }
 
         /// <summary>Snippet for GetTraceAsync</summary>
-        public async Task GetTraceAsync_RequestObject()
+        public async Task GetTraceRequestObjectAsync()
         {
             // Snippet: GetTraceAsync(GetTraceRequest, CallSettings)
             // Additional: GetTraceAsync(GetTraceRequest, CancellationToken)
@@ -286,7 +286,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         }
 
         /// <summary>Snippet for PatchTraces</summary>
-        public void PatchTraces_RequestObject()
+        public void PatchTracesRequestObject()
         {
             // Snippet: PatchTraces(PatchTracesRequest, CallSettings)
             // Create client
@@ -303,7 +303,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         }
 
         /// <summary>Snippet for PatchTracesAsync</summary>
-        public async Task PatchTracesAsync_RequestObject()
+        public async Task PatchTracesRequestObjectAsync()
         {
             // Snippet: PatchTracesAsync(PatchTracesRequest, CallSettings)
             // Additional: PatchTracesAsync(PatchTracesRequest, CancellationToken)

@@ -284,14 +284,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::ApplicationName ApplicationName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::ApplicationName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::ApplicationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
 
         /// <summary><see cref="JobName"/>-typed view over the <see cref="Job"/> resource name property.</summary>
         public JobName JobAsJobName
         {
-            get => string.IsNullOrEmpty(Job) ? null : JobName.Parse(Job);
+            get => string.IsNullOrEmpty(Job) ? null : JobName.Parse(Job, allowUnparsed: true);
             set => Job = value?.ToString() ?? "";
         }
 
@@ -300,7 +300,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public CompanyName CompanyAsCompanyName
         {
-            get => string.IsNullOrEmpty(Company) ? null : CompanyName.Parse(Company);
+            get => string.IsNullOrEmpty(Company) ? null : CompanyName.Parse(Company, allowUnparsed: true);
             set => Company = value?.ToString() ?? "";
         }
     }

@@ -28,7 +28,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     public sealed class GeneratedIntentsClientSnippets
     {
         /// <summary>Snippet for ListIntents</summary>
-        public void ListIntents_RequestObject()
+        public void ListIntentsRequestObject()
         {
             // Snippet: ListIntents(ListIntentsRequest, CallSettings)
             // Create client
@@ -78,7 +78,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListIntents</summary>
-        public async Task ListIntentsAsync_RequestObject()
+        public async Task ListIntentsRequestObjectAsync()
         {
             // Snippet: ListIntentsAsync(ListIntentsRequest, CallSettings)
             // Create client
@@ -218,7 +218,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListIntents</summary>
-        public void ListIntents1_ResourceNames()
+        public void ListIntents1ResourceNames()
         {
             // Snippet: ListIntents(AgentName, string, int?, CallSettings)
             // Create client
@@ -263,7 +263,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListIntents</summary>
-        public async Task ListIntents1Async_ResourceNames()
+        public async Task ListIntents1ResourceNamesAsync()
         {
             // Snippet: ListIntentsAsync(AgentName, string, int?, CallSettings)
             // Create client
@@ -400,7 +400,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListIntents</summary>
-        public void ListIntents2_ResourceNames()
+        public void ListIntents2ResourceNames()
         {
             // Snippet: ListIntents(AgentName, string, string, int?, CallSettings)
             // Create client
@@ -446,7 +446,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListIntents</summary>
-        public async Task ListIntents2Async_ResourceNames()
+        public async Task ListIntents2ResourceNamesAsync()
         {
             // Snippet: ListIntentsAsync(AgentName, string, string, int?, CallSettings)
             // Create client
@@ -492,7 +492,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntent</summary>
-        public void GetIntent_RequestObject()
+        public void GetIntentRequestObject()
         {
             // Snippet: GetIntent(GetIntentRequest, CallSettings)
             // Create client
@@ -510,7 +510,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntentAsync</summary>
-        public async Task GetIntentAsync_RequestObject()
+        public async Task GetIntentRequestObjectAsync()
         {
             // Snippet: GetIntentAsync(GetIntentRequest, CallSettings)
             // Additional: GetIntentAsync(GetIntentRequest, CancellationToken)
@@ -556,7 +556,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntent</summary>
-        public void GetIntent1_ResourceNames()
+        public void GetIntent1ResourceNames()
         {
             // Snippet: GetIntent(IntentName, CallSettings)
             // Create client
@@ -569,7 +569,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntentAsync</summary>
-        public async Task GetIntent1Async_ResourceNames()
+        public async Task GetIntent1ResourceNamesAsync()
         {
             // Snippet: GetIntentAsync(IntentName, CallSettings)
             // Additional: GetIntentAsync(IntentName, CancellationToken)
@@ -612,7 +612,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntent</summary>
-        public void GetIntent2_ResourceNames()
+        public void GetIntent2ResourceNames()
         {
             // Snippet: GetIntent(IntentName, string, CallSettings)
             // Create client
@@ -626,7 +626,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetIntentAsync</summary>
-        public async Task GetIntent2Async_ResourceNames()
+        public async Task GetIntent2ResourceNamesAsync()
         {
             // Snippet: GetIntentAsync(IntentName, string, CallSettings)
             // Additional: GetIntentAsync(IntentName, string, CancellationToken)
@@ -641,7 +641,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntent</summary>
-        public void CreateIntent_RequestObject()
+        public void CreateIntentRequestObject()
         {
             // Snippet: CreateIntent(CreateIntentRequest, CallSettings)
             // Create client
@@ -660,7 +660,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntentAsync</summary>
-        public async Task CreateIntentAsync_RequestObject()
+        public async Task CreateIntentRequestObjectAsync()
         {
             // Snippet: CreateIntentAsync(CreateIntentRequest, CallSettings)
             // Additional: CreateIntentAsync(CreateIntentRequest, CancellationToken)
@@ -709,7 +709,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntent</summary>
-        public void CreateIntent1_ResourceNames()
+        public void CreateIntent1ResourceNames()
         {
             // Snippet: CreateIntent(AgentName, Intent, CallSettings)
             // Create client
@@ -723,7 +723,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntentAsync</summary>
-        public async Task CreateIntent1Async_ResourceNames()
+        public async Task CreateIntent1ResourceNamesAsync()
         {
             // Snippet: CreateIntentAsync(AgentName, Intent, CallSettings)
             // Additional: CreateIntentAsync(AgentName, Intent, CancellationToken)
@@ -769,7 +769,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntent</summary>
-        public void CreateIntent2_ResourceNames()
+        public void CreateIntent2ResourceNames()
         {
             // Snippet: CreateIntent(AgentName, Intent, string, CallSettings)
             // Create client
@@ -784,7 +784,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateIntentAsync</summary>
-        public async Task CreateIntent2Async_ResourceNames()
+        public async Task CreateIntent2ResourceNamesAsync()
         {
             // Snippet: CreateIntentAsync(AgentName, Intent, string, CallSettings)
             // Additional: CreateIntentAsync(AgentName, Intent, string, CancellationToken)
@@ -800,7 +800,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateIntent</summary>
-        public void UpdateIntent_RequestObject()
+        public void UpdateIntentRequestObject()
         {
             // Snippet: UpdateIntent(UpdateIntentRequest, CallSettings)
             // Create client
@@ -819,7 +819,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateIntentAsync</summary>
-        public async Task UpdateIntentAsync_RequestObject()
+        public async Task UpdateIntentRequestObjectAsync()
         {
             // Snippet: UpdateIntentAsync(UpdateIntentRequest, CallSettings)
             // Additional: UpdateIntentAsync(UpdateIntentRequest, CancellationToken)
@@ -899,7 +899,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteIntent</summary>
-        public void DeleteIntent_RequestObject()
+        public void DeleteIntentRequestObject()
         {
             // Snippet: DeleteIntent(DeleteIntentRequest, CallSettings)
             // Create client
@@ -915,7 +915,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteIntentAsync</summary>
-        public async Task DeleteIntentAsync_RequestObject()
+        public async Task DeleteIntentRequestObjectAsync()
         {
             // Snippet: DeleteIntentAsync(DeleteIntentRequest, CallSettings)
             // Additional: DeleteIntentAsync(DeleteIntentRequest, CancellationToken)
@@ -959,7 +959,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteIntent</summary>
-        public void DeleteIntent_ResourceNames()
+        public void DeleteIntentResourceNames()
         {
             // Snippet: DeleteIntent(IntentName, CallSettings)
             // Create client
@@ -972,7 +972,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteIntentAsync</summary>
-        public async Task DeleteIntentAsync_ResourceNames()
+        public async Task DeleteIntentResourceNamesAsync()
         {
             // Snippet: DeleteIntentAsync(IntentName, CallSettings)
             // Additional: DeleteIntentAsync(IntentName, CancellationToken)
@@ -986,7 +986,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateIntents</summary>
-        public void BatchUpdateIntents_RequestObject()
+        public void BatchUpdateIntentsRequestObject()
         {
             // Snippet: BatchUpdateIntents(BatchUpdateIntentsRequest, CallSettings)
             // Create client
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
-        public async Task BatchUpdateIntentsAsync_RequestObject()
+        public async Task BatchUpdateIntentsRequestObjectAsync()
         {
             // Snippet: BatchUpdateIntentsAsync(BatchUpdateIntentsRequest, CallSettings)
             // Additional: BatchUpdateIntentsAsync(BatchUpdateIntentsRequest, CancellationToken)
@@ -1061,7 +1061,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteIntents</summary>
-        public void BatchDeleteIntents_RequestObject()
+        public void BatchDeleteIntentsRequestObject()
         {
             // Snippet: BatchDeleteIntents(BatchDeleteIntentsRequest, CallSettings)
             // Create client
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
-        public async Task BatchDeleteIntentsAsync_RequestObject()
+        public async Task BatchDeleteIntentsRequestObjectAsync()
         {
             // Snippet: BatchDeleteIntentsAsync(BatchDeleteIntentsRequest, CallSettings)
             // Additional: BatchDeleteIntentsAsync(BatchDeleteIntentsRequest, CancellationToken)
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteIntents</summary>
-        public void BatchDeleteIntents_ResourceNames()
+        public void BatchDeleteIntentsResourceNames()
         {
             // Snippet: BatchDeleteIntents(AgentName, IEnumerable<Intent>, CallSettings)
             // Create client
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for BatchDeleteIntentsAsync</summary>
-        public async Task BatchDeleteIntentsAsync_ResourceNames()
+        public async Task BatchDeleteIntentsResourceNamesAsync()
         {
             // Snippet: BatchDeleteIntentsAsync(AgentName, IEnumerable<Intent>, CallSettings)
             // Additional: BatchDeleteIntentsAsync(AgentName, IEnumerable<Intent>, CancellationToken)

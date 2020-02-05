@@ -62,12 +62,12 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Secret), global::Google.Cloud.SecretManager.V1Beta1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretVersion), global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication), global::Google.Cloud.SecretManager.V1Beta1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretPayload), global::Google.Cloud.SecretManager.V1Beta1.SecretPayload.Parser, new[]{ "Data" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Secret), global::Google.Cloud.SecretManager.V1Beta1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretVersion), global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication), global::Google.Cloud.SecretManager.V1Beta1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.Automatic.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1Beta1.SecretPayload), global::Google.Cloud.SecretManager.V1Beta1.SecretPayload.Parser, new[]{ "Data" }, null, null, null, null)
           }));
     }
     #endregion
@@ -165,7 +165,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The labels assigned to this Secret.
@@ -412,7 +412,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 4;
-    private global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State state_ = 0;
+    private global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State state_ = global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State.Unspecified;
     /// <summary>
     /// Output only. The current state of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
     /// </summary>
@@ -450,7 +450,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (destroyTime_ != null) hash ^= DestroyTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -476,7 +476,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(DestroyTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) State);
       }
@@ -497,7 +497,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       if (destroyTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestroyTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
@@ -526,7 +526,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         }
         DestroyTime.MergeFrom(other.DestroyTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State.Unspecified) {
         State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

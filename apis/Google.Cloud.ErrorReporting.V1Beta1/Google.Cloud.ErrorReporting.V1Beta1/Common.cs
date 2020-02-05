@@ -58,14 +58,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "ZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue), global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext), global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext.Parser, new[]{ "Method", "Url", "UserAgent", "Referrer", "ResponseStatusCode", "RemoteIp" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation), global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation.Parser, new[]{ "FilePath", "LineNumber", "FunctionName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue), global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext), global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext.Parser, new[]{ "Method", "Url", "UserAgent", "Referrer", "ResponseStatusCode", "RemoteIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation), global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation.Parser, new[]{ "FilePath", "LineNumber", "FunctionName" }, null, null, null, null)
           }));
     }
     #endregion

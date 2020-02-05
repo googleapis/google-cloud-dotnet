@@ -221,38 +221,38 @@ namespace Google.Cloud.Vision.V1 {
             "Q1ZOYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Product), global::Google.Cloud.Vision.V1.Product.Parser, new[]{ "Name", "DisplayName", "Description", "ProductCategory", "ProductLabels" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Product.Types.KeyValue), global::Google.Cloud.Vision.V1.Product.Types.KeyValue.Parser, new[]{ "Key", "Value" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSet), global::Google.Cloud.Vision.V1.ProductSet.Parser, new[]{ "Name", "DisplayName", "IndexTime", "IndexError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ReferenceImage), global::Google.Cloud.Vision.V1.ReferenceImage.Parser, new[]{ "Name", "Uri", "BoundingPolys" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CreateProductRequest), global::Google.Cloud.Vision.V1.CreateProductRequest.Parser, new[]{ "Parent", "Product", "ProductId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsRequest), global::Google.Cloud.Vision.V1.ListProductsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsResponse), global::Google.Cloud.Vision.V1.ListProductsResponse.Parser, new[]{ "Products", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GetProductRequest), global::Google.Cloud.Vision.V1.GetProductRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.UpdateProductRequest), global::Google.Cloud.Vision.V1.UpdateProductRequest.Parser, new[]{ "Product", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DeleteProductRequest), global::Google.Cloud.Vision.V1.DeleteProductRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CreateProductSetRequest), global::Google.Cloud.Vision.V1.CreateProductSetRequest.Parser, new[]{ "Parent", "ProductSet", "ProductSetId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductSetsRequest), global::Google.Cloud.Vision.V1.ListProductSetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductSetsResponse), global::Google.Cloud.Vision.V1.ListProductSetsResponse.Parser, new[]{ "ProductSets", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GetProductSetRequest), global::Google.Cloud.Vision.V1.GetProductSetRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.UpdateProductSetRequest), global::Google.Cloud.Vision.V1.UpdateProductSetRequest.Parser, new[]{ "ProductSet", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DeleteProductSetRequest), global::Google.Cloud.Vision.V1.DeleteProductSetRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest), global::Google.Cloud.Vision.V1.CreateReferenceImageRequest.Parser, new[]{ "Parent", "ReferenceImage", "ReferenceImageId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest), global::Google.Cloud.Vision.V1.ListReferenceImagesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListReferenceImagesResponse), global::Google.Cloud.Vision.V1.ListReferenceImagesResponse.Parser, new[]{ "ReferenceImages", "PageSize", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GetReferenceImageRequest), global::Google.Cloud.Vision.V1.GetReferenceImageRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest), global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest), global::Google.Cloud.Vision.V1.AddProductToProductSetRequest.Parser, new[]{ "Name", "Product" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest), global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest.Parser, new[]{ "Name", "Product" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest), global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest.Parser, new[]{ "Name", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse), global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse.Parser, new[]{ "Products", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsGcsSource), global::Google.Cloud.Vision.V1.ImportProductSetsGcsSource.Parser, new[]{ "CsvFileUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsInputConfig), global::Google.Cloud.Vision.V1.ImportProductSetsInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsRequest), global::Google.Cloud.Vision.V1.ImportProductSetsRequest.Parser, new[]{ "Parent", "InputConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsResponse), global::Google.Cloud.Vision.V1.ImportProductSetsResponse.Parser, new[]{ "ReferenceImages", "Statuses" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchOperationMetadata), global::Google.Cloud.Vision.V1.BatchOperationMetadata.Parser, new[]{ "State", "SubmitTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSetPurgeConfig), global::Google.Cloud.Vision.V1.ProductSetPurgeConfig.Parser, new[]{ "ProductSetId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.PurgeProductsRequest), global::Google.Cloud.Vision.V1.PurgeProductsRequest.Parser, new[]{ "ProductSetPurgeConfig", "DeleteOrphanProducts", "Parent", "Force" }, new[]{ "Target" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Product), global::Google.Cloud.Vision.V1.Product.Parser, new[]{ "Name", "DisplayName", "Description", "ProductCategory", "ProductLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Product.Types.KeyValue), global::Google.Cloud.Vision.V1.Product.Types.KeyValue.Parser, new[]{ "Key", "Value" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSet), global::Google.Cloud.Vision.V1.ProductSet.Parser, new[]{ "Name", "DisplayName", "IndexTime", "IndexError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ReferenceImage), global::Google.Cloud.Vision.V1.ReferenceImage.Parser, new[]{ "Name", "Uri", "BoundingPolys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CreateProductRequest), global::Google.Cloud.Vision.V1.CreateProductRequest.Parser, new[]{ "Parent", "Product", "ProductId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsRequest), global::Google.Cloud.Vision.V1.ListProductsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsResponse), global::Google.Cloud.Vision.V1.ListProductsResponse.Parser, new[]{ "Products", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GetProductRequest), global::Google.Cloud.Vision.V1.GetProductRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.UpdateProductRequest), global::Google.Cloud.Vision.V1.UpdateProductRequest.Parser, new[]{ "Product", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DeleteProductRequest), global::Google.Cloud.Vision.V1.DeleteProductRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CreateProductSetRequest), global::Google.Cloud.Vision.V1.CreateProductSetRequest.Parser, new[]{ "Parent", "ProductSet", "ProductSetId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductSetsRequest), global::Google.Cloud.Vision.V1.ListProductSetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductSetsResponse), global::Google.Cloud.Vision.V1.ListProductSetsResponse.Parser, new[]{ "ProductSets", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GetProductSetRequest), global::Google.Cloud.Vision.V1.GetProductSetRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.UpdateProductSetRequest), global::Google.Cloud.Vision.V1.UpdateProductSetRequest.Parser, new[]{ "ProductSet", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DeleteProductSetRequest), global::Google.Cloud.Vision.V1.DeleteProductSetRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest), global::Google.Cloud.Vision.V1.CreateReferenceImageRequest.Parser, new[]{ "Parent", "ReferenceImage", "ReferenceImageId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest), global::Google.Cloud.Vision.V1.ListReferenceImagesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListReferenceImagesResponse), global::Google.Cloud.Vision.V1.ListReferenceImagesResponse.Parser, new[]{ "ReferenceImages", "PageSize", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.GetReferenceImageRequest), global::Google.Cloud.Vision.V1.GetReferenceImageRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest), global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest), global::Google.Cloud.Vision.V1.AddProductToProductSetRequest.Parser, new[]{ "Name", "Product" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest), global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest.Parser, new[]{ "Name", "Product" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest), global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest.Parser, new[]{ "Name", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse), global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse.Parser, new[]{ "Products", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsGcsSource), global::Google.Cloud.Vision.V1.ImportProductSetsGcsSource.Parser, new[]{ "CsvFileUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsInputConfig), global::Google.Cloud.Vision.V1.ImportProductSetsInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsRequest), global::Google.Cloud.Vision.V1.ImportProductSetsRequest.Parser, new[]{ "Parent", "InputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImportProductSetsResponse), global::Google.Cloud.Vision.V1.ImportProductSetsResponse.Parser, new[]{ "ReferenceImages", "Statuses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchOperationMetadata), global::Google.Cloud.Vision.V1.BatchOperationMetadata.Parser, new[]{ "State", "SubmitTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSetPurgeConfig), global::Google.Cloud.Vision.V1.ProductSetPurgeConfig.Parser, new[]{ "ProductSetId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.PurgeProductsRequest), global::Google.Cloud.Vision.V1.PurgeProductsRequest.Parser, new[]{ "ProductSetPurgeConfig", "DeleteOrphanProducts", "Parent", "Force" }, new[]{ "Target" }, null, null, null)
           }));
     }
     #endregion
@@ -5546,7 +5546,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State state_ = 0;
+    private global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State state_ = global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State.Unspecified;
     /// <summary>
     /// The current state of the batch operation.
     /// </summary>
@@ -5609,7 +5609,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (submitTime_ != null) hash ^= SubmitTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (_unknownFields != null) {
@@ -5625,7 +5625,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -5645,7 +5645,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (submitTime_ != null) {
@@ -5665,7 +5665,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Vision.V1.BatchOperationMetadata.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.submitTime_ != null) {

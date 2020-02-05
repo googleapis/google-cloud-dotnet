@@ -33,9 +33,9 @@ namespace Grafeas.V1 {
             "ZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grafeas.V1.ProvenanceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildNote), global::Grafeas.V1.BuildNote.Parser, new[]{ "BuilderVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildOccurrence), global::Grafeas.V1.BuildOccurrence.Parser, new[]{ "Provenance", "ProvenanceBytes" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildNote), global::Grafeas.V1.BuildNote.Parser, new[]{ "BuilderVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildOccurrence), global::Grafeas.V1.BuildOccurrence.Parser, new[]{ "Provenance", "ProvenanceBytes" }, null, null, null, null)
           }));
     }
     #endregion

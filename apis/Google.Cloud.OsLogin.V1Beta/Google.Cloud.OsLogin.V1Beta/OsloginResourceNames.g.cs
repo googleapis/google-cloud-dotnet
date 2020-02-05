@@ -25,7 +25,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public gcoc::PosixAccountName PosixAccountName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::PosixAccountName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::PosixAccountName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -37,7 +37,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public gcoc::SshPublicKeyName SshPublicKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -49,7 +49,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public gcoc::UserName UserName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::UserName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::UserName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -61,7 +61,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public gcoc::SshPublicKeyName SshPublicKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -73,7 +73,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public gcoc::UserName ParentAsUserName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gcoc::UserName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gcoc::UserName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -85,7 +85,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public gcoc::SshPublicKeyName SshPublicKeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcoc::SshPublicKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

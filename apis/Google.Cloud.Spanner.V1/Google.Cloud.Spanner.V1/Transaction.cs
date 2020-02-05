@@ -52,12 +52,12 @@ namespace Google.Cloud.Spanner.V1 {
             "U3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionSelector), global::Google.Cloud.Spanner.V1.TransactionSelector.Parser, new[]{ "SingleUse", "Id", "Begin" }, new[]{ "Selector" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionSelector), global::Google.Cloud.Spanner.V1.TransactionSelector.Parser, new[]{ "SingleUse", "Id", "Begin" }, new[]{ "Selector" }, null, null, null)
           }));
     }
     #endregion

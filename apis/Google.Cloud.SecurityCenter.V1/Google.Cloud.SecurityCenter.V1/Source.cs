@@ -38,8 +38,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Source), global::Google.Cloud.SecurityCenter.V1.Source.Parser, new[]{ "Name", "DisplayName", "Description" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Source), global::Google.Cloud.SecurityCenter.V1.Source.Parser, new[]{ "Name", "DisplayName", "Description" }, null, null, null, null)
           }));
     }
     #endregion

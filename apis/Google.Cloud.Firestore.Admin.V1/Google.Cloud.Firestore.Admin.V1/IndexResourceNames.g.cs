@@ -282,7 +282,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </summary>
         public gcfav::IndexName IndexName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcfav::IndexName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::IndexName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

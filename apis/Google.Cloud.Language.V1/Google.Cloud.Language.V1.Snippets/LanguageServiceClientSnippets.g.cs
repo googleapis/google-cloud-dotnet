@@ -22,7 +22,7 @@ namespace Google.Cloud.Language.V1.Snippets
     public sealed class GeneratedLanguageServiceClientSnippets
     {
         /// <summary>Snippet for AnalyzeSentiment</summary>
-        public void AnalyzeSentiment_RequestObject()
+        public void AnalyzeSentimentRequestObject()
         {
             // Snippet: AnalyzeSentiment(AnalyzeSentimentRequest, CallSettings)
             // Create client
@@ -39,7 +39,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeSentimentAsync</summary>
-        public async Task AnalyzeSentimentAsync_RequestObject()
+        public async Task AnalyzeSentimentRequestObjectAsync()
         {
             // Snippet: AnalyzeSentimentAsync(AnalyzeSentimentRequest, CallSettings)
             // Additional: AnalyzeSentimentAsync(AnalyzeSentimentRequest, CancellationToken)
@@ -113,7 +113,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeEntities</summary>
-        public void AnalyzeEntities_RequestObject()
+        public void AnalyzeEntitiesRequestObject()
         {
             // Snippet: AnalyzeEntities(AnalyzeEntitiesRequest, CallSettings)
             // Create client
@@ -130,7 +130,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeEntitiesAsync</summary>
-        public async Task AnalyzeEntitiesAsync_RequestObject()
+        public async Task AnalyzeEntitiesRequestObjectAsync()
         {
             // Snippet: AnalyzeEntitiesAsync(AnalyzeEntitiesRequest, CallSettings)
             // Additional: AnalyzeEntitiesAsync(AnalyzeEntitiesRequest, CancellationToken)
@@ -204,7 +204,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeEntitySentiment</summary>
-        public void AnalyzeEntitySentiment_RequestObject()
+        public void AnalyzeEntitySentimentRequestObject()
         {
             // Snippet: AnalyzeEntitySentiment(AnalyzeEntitySentimentRequest, CallSettings)
             // Create client
@@ -221,7 +221,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeEntitySentimentAsync</summary>
-        public async Task AnalyzeEntitySentimentAsync_RequestObject()
+        public async Task AnalyzeEntitySentimentRequestObjectAsync()
         {
             // Snippet: AnalyzeEntitySentimentAsync(AnalyzeEntitySentimentRequest, CallSettings)
             // Additional: AnalyzeEntitySentimentAsync(AnalyzeEntitySentimentRequest, CancellationToken)
@@ -295,7 +295,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeSyntax</summary>
-        public void AnalyzeSyntax_RequestObject()
+        public void AnalyzeSyntaxRequestObject()
         {
             // Snippet: AnalyzeSyntax(AnalyzeSyntaxRequest, CallSettings)
             // Create client
@@ -312,7 +312,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnalyzeSyntaxAsync</summary>
-        public async Task AnalyzeSyntaxAsync_RequestObject()
+        public async Task AnalyzeSyntaxRequestObjectAsync()
         {
             // Snippet: AnalyzeSyntaxAsync(AnalyzeSyntaxRequest, CallSettings)
             // Additional: AnalyzeSyntaxAsync(AnalyzeSyntaxRequest, CancellationToken)
@@ -386,7 +386,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for ClassifyText</summary>
-        public void ClassifyText_RequestObject()
+        public void ClassifyTextRequestObject()
         {
             // Snippet: ClassifyText(ClassifyTextRequest, CallSettings)
             // Create client
@@ -402,7 +402,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for ClassifyTextAsync</summary>
-        public async Task ClassifyTextAsync_RequestObject()
+        public async Task ClassifyTextRequestObjectAsync()
         {
             // Snippet: ClassifyTextAsync(ClassifyTextRequest, CallSettings)
             // Additional: ClassifyTextAsync(ClassifyTextRequest, CancellationToken)
@@ -446,7 +446,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnnotateText</summary>
-        public void AnnotateText_RequestObject()
+        public void AnnotateTextRequestObject()
         {
             // Snippet: AnnotateText(AnnotateTextRequest, CallSettings)
             // Create client
@@ -464,7 +464,7 @@ namespace Google.Cloud.Language.V1.Snippets
         }
 
         /// <summary>Snippet for AnnotateTextAsync</summary>
-        public async Task AnnotateTextAsync_RequestObject()
+        public async Task AnnotateTextRequestObjectAsync()
         {
             // Snippet: AnnotateTextAsync(AnnotateTextRequest, CallSettings)
             // Additional: AnnotateTextAsync(AnnotateTextRequest, CancellationToken)

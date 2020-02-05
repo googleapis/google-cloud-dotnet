@@ -29,7 +29,7 @@ namespace Google.Cloud.Billing.V1.Snippets
     public sealed class GeneratedCloudBillingClientSnippets
     {
         /// <summary>Snippet for GetBillingAccount</summary>
-        public void GetBillingAccount_RequestObject()
+        public void GetBillingAccountRequestObject()
         {
             // Snippet: GetBillingAccount(GetBillingAccountRequest, CallSettings)
             // Create client
@@ -45,7 +45,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetBillingAccountAsync</summary>
-        public async Task GetBillingAccountAsync_RequestObject()
+        public async Task GetBillingAccountRequestObjectAsync()
         {
             // Snippet: GetBillingAccountAsync(GetBillingAccountRequest, CallSettings)
             // Additional: GetBillingAccountAsync(GetBillingAccountRequest, CancellationToken)
@@ -89,7 +89,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetBillingAccount</summary>
-        public void GetBillingAccount_ResourceNames()
+        public void GetBillingAccountResourceNames()
         {
             // Snippet: GetBillingAccount(BillingAccountName, CallSettings)
             // Create client
@@ -102,7 +102,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetBillingAccountAsync</summary>
-        public async Task GetBillingAccountAsync_ResourceNames()
+        public async Task GetBillingAccountResourceNamesAsync()
         {
             // Snippet: GetBillingAccountAsync(BillingAccountName, CallSettings)
             // Additional: GetBillingAccountAsync(BillingAccountName, CancellationToken)
@@ -116,7 +116,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListBillingAccounts</summary>
-        public void ListBillingAccounts_RequestObject()
+        public void ListBillingAccountsRequestObject()
         {
             // Snippet: ListBillingAccounts(ListBillingAccountsRequest, CallSettings)
             // Create client
@@ -161,7 +161,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListBillingAccounts</summary>
-        public async Task ListBillingAccountsAsync_RequestObject()
+        public async Task ListBillingAccountsRequestObjectAsync()
         {
             // Snippet: ListBillingAccountsAsync(ListBillingAccountsRequest, CallSettings)
             // Create client
@@ -292,7 +292,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateBillingAccount</summary>
-        public void UpdateBillingAccount_RequestObject()
+        public void UpdateBillingAccountRequestObject()
         {
             // Snippet: UpdateBillingAccount(UpdateBillingAccountRequest, CallSettings)
             // Create client
@@ -310,7 +310,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateBillingAccountAsync</summary>
-        public async Task UpdateBillingAccountAsync_RequestObject()
+        public async Task UpdateBillingAccountRequestObjectAsync()
         {
             // Snippet: UpdateBillingAccountAsync(UpdateBillingAccountRequest, CallSettings)
             // Additional: UpdateBillingAccountAsync(UpdateBillingAccountRequest, CancellationToken)
@@ -358,7 +358,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateBillingAccount</summary>
-        public void UpdateBillingAccount_ResourceNames()
+        public void UpdateBillingAccountResourceNames()
         {
             // Snippet: UpdateBillingAccount(BillingAccountName, BillingAccount, CallSettings)
             // Create client
@@ -372,7 +372,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateBillingAccountAsync</summary>
-        public async Task UpdateBillingAccountAsync_ResourceNames()
+        public async Task UpdateBillingAccountResourceNamesAsync()
         {
             // Snippet: UpdateBillingAccountAsync(BillingAccountName, BillingAccount, CallSettings)
             // Additional: UpdateBillingAccountAsync(BillingAccountName, BillingAccount, CancellationToken)
@@ -387,7 +387,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for CreateBillingAccount</summary>
-        public void CreateBillingAccount_RequestObject()
+        public void CreateBillingAccountRequestObject()
         {
             // Snippet: CreateBillingAccount(CreateBillingAccountRequest, CallSettings)
             // Create client
@@ -403,7 +403,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for CreateBillingAccountAsync</summary>
-        public async Task CreateBillingAccountAsync_RequestObject()
+        public async Task CreateBillingAccountRequestObjectAsync()
         {
             // Snippet: CreateBillingAccountAsync(CreateBillingAccountRequest, CallSettings)
             // Additional: CreateBillingAccountAsync(CreateBillingAccountRequest, CancellationToken)
@@ -447,7 +447,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListProjectBillingInfo</summary>
-        public void ListProjectBillingInfo_RequestObject()
+        public void ListProjectBillingInfoRequestObject()
         {
             // Snippet: ListProjectBillingInfo(ListProjectBillingInfoRequest, CallSettings)
             // Create client
@@ -495,7 +495,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListProjectBillingInfo</summary>
-        public async Task ListProjectBillingInfoAsync_RequestObject()
+        public async Task ListProjectBillingInfoRequestObjectAsync()
         {
             // Snippet: ListProjectBillingInfoAsync(ListProjectBillingInfoRequest, CallSettings)
             // Create client
@@ -633,7 +633,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListProjectBillingInfo</summary>
-        public void ListProjectBillingInfo_ResourceNames()
+        public void ListProjectBillingInfoResourceNames()
         {
             // Snippet: ListProjectBillingInfo(BillingAccountName, string, int?, CallSettings)
             // Create client
@@ -678,7 +678,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for ListProjectBillingInfo</summary>
-        public async Task ListProjectBillingInfoAsync_ResourceNames()
+        public async Task ListProjectBillingInfoResourceNamesAsync()
         {
             // Snippet: ListProjectBillingInfoAsync(BillingAccountName, string, int?, CallSettings)
             // Create client
@@ -723,7 +723,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetProjectBillingInfo</summary>
-        public void GetProjectBillingInfo_RequestObject()
+        public void GetProjectBillingInfoRequestObject()
         {
             // Snippet: GetProjectBillingInfo(GetProjectBillingInfoRequest, CallSettings)
             // Create client
@@ -736,7 +736,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetProjectBillingInfoAsync</summary>
-        public async Task GetProjectBillingInfoAsync_RequestObject()
+        public async Task GetProjectBillingInfoRequestObjectAsync()
         {
             // Snippet: GetProjectBillingInfoAsync(GetProjectBillingInfoRequest, CallSettings)
             // Additional: GetProjectBillingInfoAsync(GetProjectBillingInfoRequest, CancellationToken)
@@ -777,7 +777,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateProjectBillingInfo</summary>
-        public void UpdateProjectBillingInfo_RequestObject()
+        public void UpdateProjectBillingInfoRequestObject()
         {
             // Snippet: UpdateProjectBillingInfo(UpdateProjectBillingInfoRequest, CallSettings)
             // Create client
@@ -794,7 +794,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateProjectBillingInfoAsync</summary>
-        public async Task UpdateProjectBillingInfoAsync_RequestObject()
+        public async Task UpdateProjectBillingInfoRequestObjectAsync()
         {
             // Snippet: UpdateProjectBillingInfoAsync(UpdateProjectBillingInfoRequest, CallSettings)
             // Additional: UpdateProjectBillingInfoAsync(UpdateProjectBillingInfoRequest, CancellationToken)
@@ -841,7 +841,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicyRequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
@@ -858,7 +858,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
@@ -903,7 +903,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
@@ -916,7 +916,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_ResourceNames()
+        public async Task GetIamPolicyResourceNamesAsync()
         {
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
@@ -930,7 +930,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicyRequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
@@ -947,7 +947,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
@@ -994,7 +994,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
@@ -1008,7 +1008,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_ResourceNames()
+        public async Task SetIamPolicyResourceNamesAsync()
         {
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissionsRequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
@@ -1040,7 +1040,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
+        public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
@@ -1087,7 +1087,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.Billing.V1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_ResourceNames()
+        public async Task TestIamPermissionsResourceNamesAsync()
         {
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)

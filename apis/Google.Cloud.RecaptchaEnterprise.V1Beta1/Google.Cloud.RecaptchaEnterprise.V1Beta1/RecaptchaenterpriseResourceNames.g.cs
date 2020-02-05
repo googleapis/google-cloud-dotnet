@@ -444,7 +444,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -456,7 +456,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gcrv::AssessmentName AssessmentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::AssessmentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::AssessmentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -468,7 +468,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gcrv::AssessmentName AssessmentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::AssessmentName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::AssessmentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -480,7 +480,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -492,7 +492,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -504,7 +504,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gcrv::KeyName KeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -516,7 +516,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gcrv::KeyName KeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -528,7 +528,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         public gcrv::KeyName KeyName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

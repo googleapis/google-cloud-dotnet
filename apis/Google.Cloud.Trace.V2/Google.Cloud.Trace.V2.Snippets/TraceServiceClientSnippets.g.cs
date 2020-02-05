@@ -26,7 +26,7 @@ namespace Google.Cloud.Trace.V2.Snippets
     public sealed class GeneratedTraceServiceClientSnippets
     {
         /// <summary>Snippet for BatchWriteSpans</summary>
-        public void BatchWriteSpans_RequestObject()
+        public void BatchWriteSpansRequestObject()
         {
             // Snippet: BatchWriteSpans(BatchWriteSpansRequest, CallSettings)
             // Create client
@@ -43,7 +43,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         }
 
         /// <summary>Snippet for BatchWriteSpansAsync</summary>
-        public async Task BatchWriteSpansAsync_RequestObject()
+        public async Task BatchWriteSpansRequestObjectAsync()
         {
             // Snippet: BatchWriteSpansAsync(BatchWriteSpansRequest, CallSettings)
             // Additional: BatchWriteSpansAsync(BatchWriteSpansRequest, CancellationToken)
@@ -90,7 +90,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         }
 
         /// <summary>Snippet for BatchWriteSpans</summary>
-        public void BatchWriteSpans_ResourceNames()
+        public void BatchWriteSpansResourceNames()
         {
             // Snippet: BatchWriteSpans(ProjectName, IEnumerable<Span>, CallSettings)
             // Create client
@@ -104,7 +104,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         }
 
         /// <summary>Snippet for BatchWriteSpansAsync</summary>
-        public async Task BatchWriteSpansAsync_ResourceNames()
+        public async Task BatchWriteSpansResourceNamesAsync()
         {
             // Snippet: BatchWriteSpansAsync(ProjectName, IEnumerable<Span>, CallSettings)
             // Additional: BatchWriteSpansAsync(ProjectName, IEnumerable<Span>, CancellationToken)
@@ -119,7 +119,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         }
 
         /// <summary>Snippet for CreateSpan</summary>
-        public void CreateSpan_RequestObject()
+        public void CreateSpanRequestObject()
         {
             // Snippet: CreateSpan(Span, CallSettings)
             // Create client
@@ -147,7 +147,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         }
 
         /// <summary>Snippet for CreateSpanAsync</summary>
-        public async Task CreateSpanAsync_RequestObject()
+        public async Task CreateSpanRequestObjectAsync()
         {
             // Snippet: CreateSpanAsync(Span, CallSettings)
             // Additional: CreateSpanAsync(Span, CancellationToken)

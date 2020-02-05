@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public TenantOrProjectName ParentAsTenantOrProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

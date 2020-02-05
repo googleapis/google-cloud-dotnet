@@ -90,15 +90,15 @@ namespace Google.Cloud.OsLogin.V1 {
             "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.LoginProfile), global::Google.Cloud.OsLogin.V1.LoginProfile.Parser, new[]{ "Name", "PosixAccounts", "SshPublicKeys" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest), global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser, new[]{ "Name", "ProjectId", "SystemId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest.Parser, new[]{ "Name", "SshPublicKey", "UpdateMask" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.LoginProfile), global::Google.Cloud.OsLogin.V1.LoginProfile.Parser, new[]{ "Name", "PosixAccounts", "SshPublicKeys" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest), global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser, new[]{ "Name", "ProjectId", "SystemId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest.Parser, new[]{ "Name", "SshPublicKey", "UpdateMask" }, null, null, null, null)
           }));
     }
     #endregion
@@ -175,7 +175,7 @@ namespace Google.Cloud.OsLogin.V1 {
     /// <summary>Field number for the "ssh_public_keys" field.</summary>
     public const int SshPublicKeysFieldNumber = 3;
     private static readonly pbc::MapField<string, global::Google.Cloud.OsLogin.Common.SshPublicKey>.Codec _map_sshPublicKeys_codec
-        = new pbc::MapField<string, global::Google.Cloud.OsLogin.Common.SshPublicKey>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser), 26);
+        = new pbc::MapField<string, global::Google.Cloud.OsLogin.Common.SshPublicKey>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.OsLogin.Common.SshPublicKey> sshPublicKeys_ = new pbc::MapField<string, global::Google.Cloud.OsLogin.Common.SshPublicKey>();
     /// <summary>
     /// A map from SSH public key fingerprint to the associated key object.

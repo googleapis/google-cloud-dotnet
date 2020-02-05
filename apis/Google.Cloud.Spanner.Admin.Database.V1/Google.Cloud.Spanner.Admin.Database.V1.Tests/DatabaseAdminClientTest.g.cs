@@ -121,7 +121,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetDatabase_ResourceNames()
+        public void GetDatabaseResourceNames()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -142,7 +142,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetDatabaseAsync_ResourceNames()
+        public async stt::Task GetDatabaseResourceNamesAsync()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -231,7 +231,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DropDatabase_ResourceNames()
+        public void DropDatabaseResourceNames()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -247,7 +247,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DropDatabaseAsync_ResourceNames()
+        public async stt::Task DropDatabaseResourceNamesAsync()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -360,7 +360,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetDatabaseDdl_ResourceNames()
+        public void GetDatabaseDdlResourceNames()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -383,7 +383,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetDatabaseDdlAsync_ResourceNames()
+        public async stt::Task GetDatabaseDdlResourceNamesAsync()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -516,7 +516,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -542,7 +542,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -676,7 +676,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -701,7 +701,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -840,7 +840,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -867,7 +867,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
