@@ -23,6 +23,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using BclType = System.Type;
+using DateTime = System.DateTime;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Converters
