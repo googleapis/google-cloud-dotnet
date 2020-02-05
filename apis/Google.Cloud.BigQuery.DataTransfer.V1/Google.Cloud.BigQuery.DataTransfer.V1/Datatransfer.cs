@@ -247,30 +247,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             "YVRyYW5zZmVyXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter), global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Parser, new[]{ "ParamId", "DisplayName", "Description", "Type", "Required", "Repeated", "ValidationRegex", "AllowedValues", "MinValue", "MaxValue", "Fields", "ValidationDescription", "ValidationHelpUrl", "Immutable", "Recurse", "Deprecated" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource), global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Parser, new[]{ "Name", "DataSourceId", "DisplayName", "Description", "ClientId", "Scopes", "TransferType", "SupportsMultipleTransfers", "UpdateDeadlineSeconds", "DefaultSchedule", "SupportsCustomSchedule", "Parameters", "HelpUrl", "AuthorizationType", "DataRefreshType", "DefaultDataRefreshWindowDays", "ManualRunsDisabled", "MinimumScheduleInterval" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse.Parser, new[]{ "DataSources", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest.Parser, new[]{ "Parent", "TransferConfig", "AuthorizationCode", "VersionInfo", "ServiceAccountName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest.Parser, new[]{ "TransferConfig", "AuthorizationCode", "UpdateMask", "VersionInfo", "ServiceAccountName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest.Parser, new[]{ "Parent", "DataSourceIds", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse.Parser, new[]{ "TransferConfigs", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Parser, new[]{ "Parent", "States", "PageToken", "PageSize", "RunAttempt" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse.Parser, new[]{ "TransferRuns", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "MessageTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.Parser, new[]{ "TransferMessages", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.Parser, new[]{ "HasValidCreds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest.Parser, new[]{ "Parent", "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse.Parser, new[]{ "Runs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Parser, new[]{ "Parent", "RequestedTimeRange", "RequestedRunTime" }, new[]{ "Time" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Types.TimeRange), global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Types.TimeRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse.Parser, new[]{ "Runs" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter), global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Parser, new[]{ "ParamId", "DisplayName", "Description", "Type", "Required", "Repeated", "ValidationRegex", "AllowedValues", "MinValue", "MaxValue", "Fields", "ValidationDescription", "ValidationHelpUrl", "Immutable", "Recurse", "Deprecated" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource), global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Parser, new[]{ "Name", "DataSourceId", "DisplayName", "Description", "ClientId", "Scopes", "TransferType", "SupportsMultipleTransfers", "UpdateDeadlineSeconds", "DefaultSchedule", "SupportsCustomSchedule", "Parameters", "HelpUrl", "AuthorizationType", "DataRefreshType", "DefaultDataRefreshWindowDays", "ManualRunsDisabled", "MinimumScheduleInterval" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse.Parser, new[]{ "DataSources", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest.Parser, new[]{ "Parent", "TransferConfig", "AuthorizationCode", "VersionInfo", "ServiceAccountName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest.Parser, new[]{ "TransferConfig", "AuthorizationCode", "UpdateMask", "VersionInfo", "ServiceAccountName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest.Parser, new[]{ "Parent", "DataSourceIds", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse.Parser, new[]{ "TransferConfigs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Parser, new[]{ "Parent", "States", "PageToken", "PageSize", "RunAttempt" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse.Parser, new[]{ "TransferRuns", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "MessageTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.Parser, new[]{ "TransferMessages", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.Parser, new[]{ "HasValidCreds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest.Parser, new[]{ "Parent", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse.Parser, new[]{ "Runs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest), global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Parser, new[]{ "Parent", "RequestedTimeRange", "RequestedRunTime" }, new[]{ "Time" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Types.TimeRange), global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Types.TimeRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse), global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse.Parser, new[]{ "Runs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -378,7 +378,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type type_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type type_ = global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.Unspecified;
     /// <summary>
     /// Parameter type.
     /// </summary>
@@ -600,7 +600,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (ParamId.Length != 0) hash ^= ParamId.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (Required != false) hash ^= Required.GetHashCode();
       if (Repeated != false) hash ^= Repeated.GetHashCode();
       if (ValidationRegex.Length != 0) hash ^= ValidationRegex.GetHashCode();
@@ -638,7 +638,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -699,7 +699,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Required != false) {
@@ -754,7 +754,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.Unspecified) {
         Type = other.Type;
       }
       if (other.Required != false) {
@@ -1064,7 +1064,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "transfer_type" field.</summary>
     public const int TransferTypeFieldNumber = 7;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType transferType_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType transferType_ = global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType.Unspecified;
     /// <summary>
     /// Deprecated. This field has no effect.
     /// </summary>
@@ -1170,7 +1170,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "authorization_type" field.</summary>
     public const int AuthorizationTypeFieldNumber = 14;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType authorizationType_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType authorizationType_ = global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.Unspecified;
     /// <summary>
     /// Indicates the type of authorization.
     /// </summary>
@@ -1184,7 +1184,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "data_refresh_type" field.</summary>
     public const int DataRefreshTypeFieldNumber = 15;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType dataRefreshType_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType dataRefreshType_ = global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.Unspecified;
     /// <summary>
     /// Specifies whether the data source supports automatic data refresh for the
     /// past few days, and how it's supported.
@@ -1286,15 +1286,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
       hash ^= scopes_.GetHashCode();
-      if (TransferType != 0) hash ^= TransferType.GetHashCode();
+      if (TransferType != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType.Unspecified) hash ^= TransferType.GetHashCode();
       if (SupportsMultipleTransfers != false) hash ^= SupportsMultipleTransfers.GetHashCode();
       if (UpdateDeadlineSeconds != 0) hash ^= UpdateDeadlineSeconds.GetHashCode();
       if (DefaultSchedule.Length != 0) hash ^= DefaultSchedule.GetHashCode();
       if (SupportsCustomSchedule != false) hash ^= SupportsCustomSchedule.GetHashCode();
       hash ^= parameters_.GetHashCode();
       if (HelpUrl.Length != 0) hash ^= HelpUrl.GetHashCode();
-      if (AuthorizationType != 0) hash ^= AuthorizationType.GetHashCode();
-      if (DataRefreshType != 0) hash ^= DataRefreshType.GetHashCode();
+      if (AuthorizationType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.Unspecified) hash ^= AuthorizationType.GetHashCode();
+      if (DataRefreshType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.Unspecified) hash ^= DataRefreshType.GetHashCode();
       if (DefaultDataRefreshWindowDays != 0) hash ^= DefaultDataRefreshWindowDays.GetHashCode();
       if (ManualRunsDisabled != false) hash ^= ManualRunsDisabled.GetHashCode();
       if (minimumScheduleInterval_ != null) hash ^= MinimumScheduleInterval.GetHashCode();
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteString(ClientId);
       }
       scopes_.WriteTo(output, _repeated_scopes_codec);
-      if (TransferType != 0) {
+      if (TransferType != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) TransferType);
       }
@@ -1357,11 +1357,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(106);
         output.WriteString(HelpUrl);
       }
-      if (AuthorizationType != 0) {
+      if (AuthorizationType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.Unspecified) {
         output.WriteRawTag(112);
         output.WriteEnum((int) AuthorizationType);
       }
-      if (DataRefreshType != 0) {
+      if (DataRefreshType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.Unspecified) {
         output.WriteRawTag(120);
         output.WriteEnum((int) DataRefreshType);
       }
@@ -1401,7 +1401,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
       }
       size += scopes_.CalculateSize(_repeated_scopes_codec);
-      if (TransferType != 0) {
+      if (TransferType != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TransferType);
       }
       if (SupportsMultipleTransfers != false) {
@@ -1420,10 +1420,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (HelpUrl.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HelpUrl);
       }
-      if (AuthorizationType != 0) {
+      if (AuthorizationType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AuthorizationType);
       }
-      if (DataRefreshType != 0) {
+      if (DataRefreshType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataRefreshType);
       }
       if (DefaultDataRefreshWindowDays != 0) {
@@ -1462,7 +1462,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         ClientId = other.ClientId;
       }
       scopes_.Add(other.scopes_);
-      if (other.TransferType != 0) {
+      if (other.TransferType != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType.Unspecified) {
         TransferType = other.TransferType;
       }
       if (other.SupportsMultipleTransfers != false) {
@@ -1481,10 +1481,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.HelpUrl.Length != 0) {
         HelpUrl = other.HelpUrl;
       }
-      if (other.AuthorizationType != 0) {
+      if (other.AuthorizationType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.Unspecified) {
         AuthorizationType = other.AuthorizationType;
       }
-      if (other.DataRefreshType != 0) {
+      if (other.DataRefreshType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.Unspecified) {
         DataRefreshType = other.DataRefreshType;
       }
       if (other.DefaultDataRefreshWindowDays != 0) {
@@ -3776,7 +3776,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "run_attempt" field.</summary>
     public const int RunAttemptFieldNumber = 5;
-    private global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt runAttempt_ = 0;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt runAttempt_ = global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.Unspecified;
     /// <summary>
     /// Indicates how run attempts are to be pulled.
     /// </summary>
@@ -3816,7 +3816,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       hash ^= states_.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (RunAttempt != 0) hash ^= RunAttempt.GetHashCode();
+      if (RunAttempt != global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.Unspecified) hash ^= RunAttempt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3843,7 +3843,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(PageSize);
       }
-      if (RunAttempt != 0) {
+      if (RunAttempt != global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) RunAttempt);
       }
@@ -3865,7 +3865,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
-      if (RunAttempt != 0) {
+      if (RunAttempt != global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RunAttempt);
       }
       if (_unknownFields != null) {
@@ -3889,7 +3889,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
       }
-      if (other.RunAttempt != 0) {
+      if (other.RunAttempt != global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.Unspecified) {
         RunAttempt = other.RunAttempt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

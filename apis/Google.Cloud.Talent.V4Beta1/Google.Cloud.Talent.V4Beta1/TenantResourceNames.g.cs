@@ -491,7 +491,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::TenantName TenantName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::TenantName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::TenantName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

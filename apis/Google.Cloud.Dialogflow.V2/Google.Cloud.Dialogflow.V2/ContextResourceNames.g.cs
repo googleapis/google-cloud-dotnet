@@ -263,7 +263,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::ContextName ContextName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -275,7 +275,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::ContextName ContextName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -287,7 +287,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public gcdv::ContextName ContextName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

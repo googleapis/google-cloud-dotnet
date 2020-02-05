@@ -147,7 +147,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetEntityType1_ResourceNames()
+        public void GetEntityType1ResourceNames()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -175,7 +175,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetEntityType1Async_ResourceNames()
+        public async stt::Task GetEntityType1ResourceNamesAsync()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -265,7 +265,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetEntityType2_ResourceNames()
+        public void GetEntityType2ResourceNames()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -294,7 +294,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetEntityType2Async_ResourceNames()
+        public async stt::Task GetEntityType2ResourceNamesAsync()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -447,7 +447,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateEntityType1_ResourceNames()
+        public void CreateEntityType1ResourceNames()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -476,7 +476,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateEntityType1Async_ResourceNames()
+        public async stt::Task CreateEntityType1ResourceNamesAsync()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -569,7 +569,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateEntityType2_ResourceNames()
+        public void CreateEntityType2ResourceNames()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -599,7 +599,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateEntityType2Async_ResourceNames()
+        public async stt::Task CreateEntityType2ResourceNamesAsync()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -877,7 +877,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteEntityType_ResourceNames()
+        public void DeleteEntityTypeResourceNames()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -893,7 +893,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteEntityTypeAsync_ResourceNames()
+        public async stt::Task DeleteEntityTypeResourceNamesAsync()
         {
             moq::Mock<EntityTypes.EntityTypesClient> mockGrpcClient = new moq::Mock<EntityTypes.EntityTypesClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

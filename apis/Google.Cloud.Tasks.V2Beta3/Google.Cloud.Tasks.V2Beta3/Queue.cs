@@ -56,11 +56,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "djJiZXRhMzt0YXNrc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Queue), global::Google.Cloud.Tasks.V2Beta3.Queue.Parser, new[]{ "Name", "AppEngineHttpQueue", "RateLimits", "RetryConfig", "State", "PurgeTime", "StackdriverLoggingConfig" }, new[]{ "QueueType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RateLimits), global::Google.Cloud.Tasks.V2Beta3.RateLimits.Parser, new[]{ "MaxDispatchesPerSecond", "MaxBurstSize", "MaxConcurrentDispatches" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RetryConfig), global::Google.Cloud.Tasks.V2Beta3.RetryConfig.Parser, new[]{ "MaxAttempts", "MaxRetryDuration", "MinBackoff", "MaxBackoff", "MaxDoublings" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig), global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig.Parser, new[]{ "SamplingRatio" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Queue), global::Google.Cloud.Tasks.V2Beta3.Queue.Parser, new[]{ "Name", "AppEngineHttpQueue", "RateLimits", "RetryConfig", "State", "PurgeTime", "StackdriverLoggingConfig" }, new[]{ "QueueType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RateLimits), global::Google.Cloud.Tasks.V2Beta3.RateLimits.Parser, new[]{ "MaxDispatchesPerSecond", "MaxBurstSize", "MaxConcurrentDispatches" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RetryConfig), global::Google.Cloud.Tasks.V2Beta3.RetryConfig.Parser, new[]{ "MaxAttempts", "MaxRetryDuration", "MinBackoff", "MaxBackoff", "MaxDoublings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig), global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig.Parser, new[]{ "SamplingRatio" }, null, null, null, null)
           }));
     }
     #endregion
@@ -227,7 +227,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 6;
-    private global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State state_ = 0;
+    private global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State state_ = global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified;
     /// <summary>
     /// Output only. The state of the queue.
     ///
@@ -334,7 +334,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (queueTypeCase_ == QueueTypeOneofCase.AppEngineHttpQueue) hash ^= AppEngineHttpQueue.GetHashCode();
       if (rateLimits_ != null) hash ^= RateLimits.GetHashCode();
       if (retryConfig_ != null) hash ^= RetryConfig.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (purgeTime_ != null) hash ^= PurgeTime.GetHashCode();
       if (stackdriverLoggingConfig_ != null) hash ^= StackdriverLoggingConfig.GetHashCode();
       hash ^= (int) queueTypeCase_;
@@ -367,7 +367,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(42);
         output.WriteMessage(RetryConfig);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) State);
       }
@@ -399,7 +399,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (retryConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetryConfig);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (purgeTime_ != null) {
@@ -434,7 +434,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         }
         RetryConfig.MergeFrom(other.RetryConfig);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.purgeTime_ != null) {

@@ -81,15 +81,15 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Z2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Context), global::Google.Cloud.Dialogflow.V2.Context.Parser, new[]{ "Name", "LifespanCount", "Parameters" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListContextsRequest), global::Google.Cloud.Dialogflow.V2.ListContextsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListContextsResponse), global::Google.Cloud.Dialogflow.V2.ListContextsResponse.Parser, new[]{ "Contexts", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetContextRequest), global::Google.Cloud.Dialogflow.V2.GetContextRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateContextRequest), global::Google.Cloud.Dialogflow.V2.CreateContextRequest.Parser, new[]{ "Parent", "Context" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateContextRequest), global::Google.Cloud.Dialogflow.V2.UpdateContextRequest.Parser, new[]{ "Context", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteContextRequest), global::Google.Cloud.Dialogflow.V2.DeleteContextRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest), global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest.Parser, new[]{ "Parent" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Context), global::Google.Cloud.Dialogflow.V2.Context.Parser, new[]{ "Name", "LifespanCount", "Parameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListContextsRequest), global::Google.Cloud.Dialogflow.V2.ListContextsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListContextsResponse), global::Google.Cloud.Dialogflow.V2.ListContextsResponse.Parser, new[]{ "Contexts", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetContextRequest), global::Google.Cloud.Dialogflow.V2.GetContextRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CreateContextRequest), global::Google.Cloud.Dialogflow.V2.CreateContextRequest.Parser, new[]{ "Parent", "Context" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.UpdateContextRequest), global::Google.Cloud.Dialogflow.V2.UpdateContextRequest.Parser, new[]{ "Context", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteContextRequest), global::Google.Cloud.Dialogflow.V2.DeleteContextRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest), global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest.Parser, new[]{ "Parent" }, null, null, null, null)
           }));
     }
     #endregion

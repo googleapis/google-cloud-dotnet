@@ -78,16 +78,16 @@ namespace Google.Cloud.Firestore.V1 {
             "aXJlc3RvcmVcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery), global::Google.Cloud.Firestore.V1.StructuredQuery.Parser, new[]{ "Select", "From", "Where", "OrderBy", "StartAt", "EndAt", "Offset", "Limit" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector.Parser, new[]{ "CollectionId", "AllDescendants" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter.Parser, new[]{ "CompositeFilter", "FieldFilter", "UnaryFilter" }, new[]{ "FilterType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Parser, new[]{ "Field", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Parser, new[]{ "Op", "Field" }, new[]{ "OperandType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Cursor), global::Google.Cloud.Firestore.V1.Cursor.Parser, new[]{ "Values", "Before" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery), global::Google.Cloud.Firestore.V1.StructuredQuery.Parser, new[]{ "Select", "From", "Where", "OrderBy", "StartAt", "EndAt", "Offset", "Limit" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector.Parser, new[]{ "CollectionId", "AllDescendants" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter.Parser, new[]{ "CompositeFilter", "FieldFilter", "UnaryFilter" }, new[]{ "FilterType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Parser, new[]{ "Field", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Parser, new[]{ "Op", "Field" }, new[]{ "OperandType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Cursor), global::Google.Cloud.Firestore.V1.Cursor.Parser, new[]{ "Values", "Before" }, null, null, null, null)
           }));
     }
     #endregion
@@ -967,7 +967,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         /// <summary>Field number for the "op" field.</summary>
         public const int OpFieldNumber = 1;
-        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator op_ = 0;
+        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator op_ = global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified;
         /// <summary>
         /// The operator for combining multiple filters.
         /// </summary>
@@ -1014,7 +1014,7 @@ namespace Google.Cloud.Firestore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Op != 0) hash ^= Op.GetHashCode();
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
           hash ^= filters_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1029,7 +1029,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Op != 0) {
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Op);
           }
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Firestore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Op != 0) {
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
           }
           size += filters_.CalculateSize(_repeated_filters_codec);
@@ -1057,7 +1057,7 @@ namespace Google.Cloud.Firestore.V1 {
           if (other == null) {
             return;
           }
-          if (other.Op != 0) {
+          if (other.Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) {
             Op = other.Op;
           }
           filters_.Add(other.filters_);
@@ -1162,7 +1162,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         /// <summary>Field number for the "op" field.</summary>
         public const int OpFieldNumber = 2;
-        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator op_ = 0;
+        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator op_ = global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator.Unspecified;
         /// <summary>
         /// The operator to filter by.
         /// </summary>
@@ -1211,7 +1211,7 @@ namespace Google.Cloud.Firestore.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (field_ != null) hash ^= Field.GetHashCode();
-          if (Op != 0) hash ^= Op.GetHashCode();
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
           if (value_ != null) hash ^= Value.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1230,7 +1230,7 @@ namespace Google.Cloud.Firestore.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
           }
-          if (Op != 0) {
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Op);
           }
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.Firestore.V1 {
           if (field_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
           }
-          if (Op != 0) {
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
           }
           if (value_ != null) {
@@ -1272,7 +1272,7 @@ namespace Google.Cloud.Firestore.V1 {
             }
             Field.MergeFrom(other.Field);
           }
-          if (other.Op != 0) {
+          if (other.Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator.Unspecified) {
             Op = other.Op;
           }
           if (other.value_ != null) {
@@ -1413,7 +1413,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         /// <summary>Field number for the "op" field.</summary>
         public const int OpFieldNumber = 1;
-        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator op_ = 0;
+        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator op_ = global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified;
         /// <summary>
         /// The unary operator to apply.
         /// </summary>
@@ -1479,7 +1479,7 @@ namespace Google.Cloud.Firestore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Op != 0) hash ^= Op.GetHashCode();
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
           if (operandTypeCase_ == OperandTypeOneofCase.Field) hash ^= Field.GetHashCode();
           hash ^= (int) operandTypeCase_;
           if (_unknownFields != null) {
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Op != 0) {
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Op);
           }
@@ -1511,7 +1511,7 @@ namespace Google.Cloud.Firestore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Op != 0) {
+          if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
           }
           if (operandTypeCase_ == OperandTypeOneofCase.Field) {
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.Firestore.V1 {
           if (other == null) {
             return;
           }
-          if (other.Op != 0) {
+          if (other.Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) {
             Op = other.Op;
           }
           switch (other.OperandTypeCase) {
@@ -1649,7 +1649,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         /// <summary>Field number for the "direction" field.</summary>
         public const int DirectionFieldNumber = 2;
-        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction direction_ = 0;
+        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction direction_ = global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction.Unspecified;
         /// <summary>
         /// The direction to order by. Defaults to `ASCENDING`.
         /// </summary>
@@ -1683,7 +1683,7 @@ namespace Google.Cloud.Firestore.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (field_ != null) hash ^= Field.GetHashCode();
-          if (Direction != 0) hash ^= Direction.GetHashCode();
+          if (Direction != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction.Unspecified) hash ^= Direction.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1701,7 +1701,7 @@ namespace Google.Cloud.Firestore.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
           }
-          if (Direction != 0) {
+          if (Direction != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Direction);
           }
@@ -1716,7 +1716,7 @@ namespace Google.Cloud.Firestore.V1 {
           if (field_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
           }
-          if (Direction != 0) {
+          if (Direction != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Direction);
           }
           if (_unknownFields != null) {
@@ -1736,7 +1736,7 @@ namespace Google.Cloud.Firestore.V1 {
             }
             Field.MergeFrom(other.Field);
           }
-          if (other.Direction != 0) {
+          if (other.Direction != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction.Unspecified) {
             Direction = other.Direction;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

@@ -27,7 +27,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     public sealed class GeneratedTenantServiceClientSnippets
     {
         /// <summary>Snippet for CreateTenant</summary>
-        public void CreateTenant_RequestObject()
+        public void CreateTenantRequestObject()
         {
             // Snippet: CreateTenant(CreateTenantRequest, CallSettings)
             // Create client
@@ -44,7 +44,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateTenantAsync</summary>
-        public async Task CreateTenantAsync_RequestObject()
+        public async Task CreateTenantRequestObjectAsync()
         {
             // Snippet: CreateTenantAsync(CreateTenantRequest, CallSettings)
             // Additional: CreateTenantAsync(CreateTenantRequest, CancellationToken)
@@ -91,7 +91,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateTenant</summary>
-        public void CreateTenant_ResourceNames()
+        public void CreateTenantResourceNames()
         {
             // Snippet: CreateTenant(ProjectName, Tenant, CallSettings)
             // Create client
@@ -105,7 +105,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateTenantAsync</summary>
-        public async Task CreateTenantAsync_ResourceNames()
+        public async Task CreateTenantResourceNamesAsync()
         {
             // Snippet: CreateTenantAsync(ProjectName, Tenant, CallSettings)
             // Additional: CreateTenantAsync(ProjectName, Tenant, CancellationToken)
@@ -120,7 +120,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetTenant</summary>
-        public void GetTenant_RequestObject()
+        public void GetTenantRequestObject()
         {
             // Snippet: GetTenant(GetTenantRequest, CallSettings)
             // Create client
@@ -136,7 +136,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetTenantAsync</summary>
-        public async Task GetTenantAsync_RequestObject()
+        public async Task GetTenantRequestObjectAsync()
         {
             // Snippet: GetTenantAsync(GetTenantRequest, CallSettings)
             // Additional: GetTenantAsync(GetTenantRequest, CancellationToken)
@@ -180,7 +180,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetTenant</summary>
-        public void GetTenant_ResourceNames()
+        public void GetTenantResourceNames()
         {
             // Snippet: GetTenant(TenantName, CallSettings)
             // Create client
@@ -193,7 +193,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetTenantAsync</summary>
-        public async Task GetTenantAsync_ResourceNames()
+        public async Task GetTenantResourceNamesAsync()
         {
             // Snippet: GetTenantAsync(TenantName, CallSettings)
             // Additional: GetTenantAsync(TenantName, CancellationToken)
@@ -207,7 +207,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateTenant</summary>
-        public void UpdateTenant_RequestObject()
+        public void UpdateTenantRequestObject()
         {
             // Snippet: UpdateTenant(UpdateTenantRequest, CallSettings)
             // Create client
@@ -224,7 +224,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateTenantAsync</summary>
-        public async Task UpdateTenantAsync_RequestObject()
+        public async Task UpdateTenantRequestObjectAsync()
         {
             // Snippet: UpdateTenantAsync(UpdateTenantRequest, CallSettings)
             // Additional: UpdateTenantAsync(UpdateTenantRequest, CancellationToken)
@@ -269,7 +269,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteTenant</summary>
-        public void DeleteTenant_RequestObject()
+        public void DeleteTenantRequestObject()
         {
             // Snippet: DeleteTenant(DeleteTenantRequest, CallSettings)
             // Create client
@@ -285,7 +285,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteTenantAsync</summary>
-        public async Task DeleteTenantAsync_RequestObject()
+        public async Task DeleteTenantRequestObjectAsync()
         {
             // Snippet: DeleteTenantAsync(DeleteTenantRequest, CallSettings)
             // Additional: DeleteTenantAsync(DeleteTenantRequest, CancellationToken)
@@ -329,7 +329,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteTenant</summary>
-        public void DeleteTenant_ResourceNames()
+        public void DeleteTenantResourceNames()
         {
             // Snippet: DeleteTenant(TenantName, CallSettings)
             // Create client
@@ -342,7 +342,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteTenantAsync</summary>
-        public async Task DeleteTenantAsync_ResourceNames()
+        public async Task DeleteTenantResourceNamesAsync()
         {
             // Snippet: DeleteTenantAsync(TenantName, CallSettings)
             // Additional: DeleteTenantAsync(TenantName, CancellationToken)
@@ -356,7 +356,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListTenants</summary>
-        public void ListTenants_RequestObject()
+        public void ListTenantsRequestObject()
         {
             // Snippet: ListTenants(ListTenantsRequest, CallSettings)
             // Create client
@@ -404,7 +404,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListTenants</summary>
-        public async Task ListTenantsAsync_RequestObject()
+        public async Task ListTenantsRequestObjectAsync()
         {
             // Snippet: ListTenantsAsync(ListTenantsRequest, CallSettings)
             // Create client
@@ -542,7 +542,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListTenants</summary>
-        public void ListTenants_ResourceNames()
+        public void ListTenantsResourceNames()
         {
             // Snippet: ListTenants(ProjectName, string, int?, CallSettings)
             // Create client
@@ -587,7 +587,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListTenants</summary>
-        public async Task ListTenantsAsync_ResourceNames()
+        public async Task ListTenantsResourceNamesAsync()
         {
             // Snippet: ListTenantsAsync(ProjectName, string, int?, CallSettings)
             // Create client

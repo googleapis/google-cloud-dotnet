@@ -137,24 +137,24 @@ namespace Google.Cloud.Speech.V1 {
             "c3BlZWNo+AEBogIDR0NTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeRequest), global::Google.Cloud.Speech.V1.RecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeRequest), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionConfig), global::Google.Cloud.Speech.V1.StreamingRecognitionConfig.Parser, new[]{ "Config", "SingleUtterance", "InterimResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionConfig), global::Google.Cloud.Speech.V1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRateHertz", "AudioChannelCount", "EnableSeparateRecognitionPerChannel", "LanguageCode", "MaxAlternatives", "ProfanityFilter", "SpeechContexts", "EnableWordTimeOffsets", "EnableAutomaticPunctuation", "DiarizationConfig", "Metadata", "Model", "UseEnhanced" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeakerDiarizationConfig), global::Google.Cloud.Speech.V1.SpeakerDiarizationConfig.Parser, new[]{ "EnableSpeakerDiarization", "MinSpeakerCount", "MaxSpeakerCount", "SpeakerTag" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata), global::Google.Cloud.Speech.V1.RecognitionMetadata.Parser, new[]{ "InteractionType", "IndustryNaicsCodeOfAudio", "MicrophoneDistance", "OriginalMediaType", "RecordingDeviceType", "RecordingDeviceName", "OriginalMimeType", "AudioTopic" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechContext), global::Google.Cloud.Speech.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionAudio), global::Google.Cloud.Speech.V1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeResponse), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse), global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata), global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "SpeechEventType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability", "ResultEndTime", "ChannelTag", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser, new[]{ "Alternatives", "ChannelTag" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative), global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.WordInfo), global::Google.Cloud.Speech.V1.WordInfo.Parser, new[]{ "StartTime", "EndTime", "Word", "SpeakerTag" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeRequest), global::Google.Cloud.Speech.V1.RecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeRequest), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionConfig), global::Google.Cloud.Speech.V1.StreamingRecognitionConfig.Parser, new[]{ "Config", "SingleUtterance", "InterimResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionConfig), global::Google.Cloud.Speech.V1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRateHertz", "AudioChannelCount", "EnableSeparateRecognitionPerChannel", "LanguageCode", "MaxAlternatives", "ProfanityFilter", "SpeechContexts", "EnableWordTimeOffsets", "EnableAutomaticPunctuation", "DiarizationConfig", "Metadata", "Model", "UseEnhanced" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeakerDiarizationConfig), global::Google.Cloud.Speech.V1.SpeakerDiarizationConfig.Parser, new[]{ "EnableSpeakerDiarization", "MinSpeakerCount", "MaxSpeakerCount", "SpeakerTag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata), global::Google.Cloud.Speech.V1.RecognitionMetadata.Parser, new[]{ "InteractionType", "IndustryNaicsCodeOfAudio", "MicrophoneDistance", "OriginalMediaType", "RecordingDeviceType", "RecordingDeviceName", "OriginalMimeType", "AudioTopic" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechContext), global::Google.Cloud.Speech.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionAudio), global::Google.Cloud.Speech.V1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeResponse), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser, new[]{ "Results" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse), global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Parser, new[]{ "Results" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata), global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "SpeechEventType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability", "ResultEndTime", "ChannelTag", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser, new[]{ "Alternatives", "ChannelTag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative), global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.WordInfo), global::Google.Cloud.Speech.V1.WordInfo.Parser, new[]{ "StartTime", "EndTime", "Word", "SpeakerTag" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.Speech.V1 {
 
     /// <summary>Field number for the "encoding" field.</summary>
     public const int EncodingFieldNumber = 1;
-    private global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding encoding_ = 0;
+    private global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding encoding_ = global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified;
     /// <summary>
     /// Encoding of audio data sent in all `RecognitionAudio` messages.
     /// This field is optional for `FLAC` and `WAV` audio files and required
@@ -1327,7 +1327,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Encoding != 0) hash ^= Encoding.GetHashCode();
+      if (Encoding != global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified) hash ^= Encoding.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
       if (AudioChannelCount != 0) hash ^= AudioChannelCount.GetHashCode();
       if (EnableSeparateRecognitionPerChannel != false) hash ^= EnableSeparateRecognitionPerChannel.GetHashCode();
@@ -1354,7 +1354,7 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Encoding != 0) {
+      if (Encoding != global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Encoding);
       }
@@ -1415,7 +1415,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Encoding != 0) {
+      if (Encoding != global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Encoding);
       }
       if (SampleRateHertz != 0) {
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.Speech.V1 {
       if (other == null) {
         return;
       }
-      if (other.Encoding != 0) {
+      if (other.Encoding != global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified) {
         Encoding = other.Encoding;
       }
       if (other.SampleRateHertz != 0) {
@@ -1957,7 +1957,7 @@ namespace Google.Cloud.Speech.V1 {
 
     /// <summary>Field number for the "interaction_type" field.</summary>
     public const int InteractionTypeFieldNumber = 1;
-    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType interactionType_ = 0;
+    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType interactionType_ = global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType.Unspecified;
     /// <summary>
     /// The use case most closely describing the audio content to be recognized.
     /// </summary>
@@ -1988,7 +1988,7 @@ namespace Google.Cloud.Speech.V1 {
 
     /// <summary>Field number for the "microphone_distance" field.</summary>
     public const int MicrophoneDistanceFieldNumber = 4;
-    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance microphoneDistance_ = 0;
+    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance microphoneDistance_ = global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance.Unspecified;
     /// <summary>
     /// The audio type that most closely describes the audio being recognized.
     /// </summary>
@@ -2002,7 +2002,7 @@ namespace Google.Cloud.Speech.V1 {
 
     /// <summary>Field number for the "original_media_type" field.</summary>
     public const int OriginalMediaTypeFieldNumber = 5;
-    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType originalMediaType_ = 0;
+    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType originalMediaType_ = global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType.Unspecified;
     /// <summary>
     /// The original media the speech was recorded on.
     /// </summary>
@@ -2016,7 +2016,7 @@ namespace Google.Cloud.Speech.V1 {
 
     /// <summary>Field number for the "recording_device_type" field.</summary>
     public const int RecordingDeviceTypeFieldNumber = 6;
-    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType recordingDeviceType_ = 0;
+    private global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType recordingDeviceType_ = global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType.Unspecified;
     /// <summary>
     /// The type of device the speech was recorded with.
     /// </summary>
@@ -2103,11 +2103,11 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (InteractionType != 0) hash ^= InteractionType.GetHashCode();
+      if (InteractionType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType.Unspecified) hash ^= InteractionType.GetHashCode();
       if (IndustryNaicsCodeOfAudio != 0) hash ^= IndustryNaicsCodeOfAudio.GetHashCode();
-      if (MicrophoneDistance != 0) hash ^= MicrophoneDistance.GetHashCode();
-      if (OriginalMediaType != 0) hash ^= OriginalMediaType.GetHashCode();
-      if (RecordingDeviceType != 0) hash ^= RecordingDeviceType.GetHashCode();
+      if (MicrophoneDistance != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance.Unspecified) hash ^= MicrophoneDistance.GetHashCode();
+      if (OriginalMediaType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType.Unspecified) hash ^= OriginalMediaType.GetHashCode();
+      if (RecordingDeviceType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType.Unspecified) hash ^= RecordingDeviceType.GetHashCode();
       if (RecordingDeviceName.Length != 0) hash ^= RecordingDeviceName.GetHashCode();
       if (OriginalMimeType.Length != 0) hash ^= OriginalMimeType.GetHashCode();
       if (AudioTopic.Length != 0) hash ^= AudioTopic.GetHashCode();
@@ -2124,7 +2124,7 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (InteractionType != 0) {
+      if (InteractionType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) InteractionType);
       }
@@ -2132,15 +2132,15 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(24);
         output.WriteUInt32(IndustryNaicsCodeOfAudio);
       }
-      if (MicrophoneDistance != 0) {
+      if (MicrophoneDistance != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) MicrophoneDistance);
       }
-      if (OriginalMediaType != 0) {
+      if (OriginalMediaType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) OriginalMediaType);
       }
-      if (RecordingDeviceType != 0) {
+      if (RecordingDeviceType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) RecordingDeviceType);
       }
@@ -2164,19 +2164,19 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (InteractionType != 0) {
+      if (InteractionType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InteractionType);
       }
       if (IndustryNaicsCodeOfAudio != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IndustryNaicsCodeOfAudio);
       }
-      if (MicrophoneDistance != 0) {
+      if (MicrophoneDistance != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MicrophoneDistance);
       }
-      if (OriginalMediaType != 0) {
+      if (OriginalMediaType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OriginalMediaType);
       }
-      if (RecordingDeviceType != 0) {
+      if (RecordingDeviceType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RecordingDeviceType);
       }
       if (RecordingDeviceName.Length != 0) {
@@ -2199,19 +2199,19 @@ namespace Google.Cloud.Speech.V1 {
       if (other == null) {
         return;
       }
-      if (other.InteractionType != 0) {
+      if (other.InteractionType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType.Unspecified) {
         InteractionType = other.InteractionType;
       }
       if (other.IndustryNaicsCodeOfAudio != 0) {
         IndustryNaicsCodeOfAudio = other.IndustryNaicsCodeOfAudio;
       }
-      if (other.MicrophoneDistance != 0) {
+      if (other.MicrophoneDistance != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance.Unspecified) {
         MicrophoneDistance = other.MicrophoneDistance;
       }
-      if (other.OriginalMediaType != 0) {
+      if (other.OriginalMediaType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType.Unspecified) {
         OriginalMediaType = other.OriginalMediaType;
       }
-      if (other.RecordingDeviceType != 0) {
+      if (other.RecordingDeviceType != global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType.Unspecified) {
         RecordingDeviceType = other.RecordingDeviceType;
       }
       if (other.RecordingDeviceName.Length != 0) {
@@ -3346,7 +3346,7 @@ namespace Google.Cloud.Speech.V1 {
 
     /// <summary>Field number for the "speech_event_type" field.</summary>
     public const int SpeechEventTypeFieldNumber = 4;
-    private global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType speechEventType_ = 0;
+    private global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType speechEventType_ = global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified;
     /// <summary>
     /// Indicates the type of speech event.
     /// </summary>
@@ -3382,7 +3382,7 @@ namespace Google.Cloud.Speech.V1 {
       int hash = 1;
       if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= results_.GetHashCode();
-      if (SpeechEventType != 0) hash ^= SpeechEventType.GetHashCode();
+      if (SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) hash ^= SpeechEventType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3401,7 +3401,7 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteMessage(Error);
       }
       results_.WriteTo(output, _repeated_results_codec);
-      if (SpeechEventType != 0) {
+      if (SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) SpeechEventType);
       }
@@ -3417,7 +3417,7 @@ namespace Google.Cloud.Speech.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
       }
       size += results_.CalculateSize(_repeated_results_codec);
-      if (SpeechEventType != 0) {
+      if (SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpeechEventType);
       }
       if (_unknownFields != null) {
@@ -3438,7 +3438,7 @@ namespace Google.Cloud.Speech.V1 {
         Error.MergeFrom(other.Error);
       }
       results_.Add(other.results_);
-      if (other.SpeechEventType != 0) {
+      if (other.SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) {
         SpeechEventType = other.SpeechEventType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

@@ -40,8 +40,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "b2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Parser, new[]{ "State", "Duration" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Parser, new[]{ "State", "Duration" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -88,7 +88,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State state_ = 0;
+    private global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State state_ = global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State.Unspecified;
     /// <summary>
     /// The state of an asset discovery run.
     /// </summary>
@@ -135,7 +135,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (duration_ != null) hash ^= Duration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -150,7 +150,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -166,7 +166,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (duration_ != null) {
@@ -183,7 +183,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.duration_ != null) {

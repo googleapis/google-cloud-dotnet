@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -302,7 +303,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <inheritdoc/>
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => DataTransferServiceClient.DefaultEndpoint;
+        protected override string GetDefaultEndpoint() => DataTransferServiceClient.DefaultEndpoint;
 
         /// <inheritdoc/>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => DataTransferServiceClient.DefaultScopes;
@@ -318,7 +319,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// The default endpoint for the DataTransferService service, which is a host of
         /// "bigquerydatatransfer.googleapis.com" and a port of 443.
         /// </summary>
-        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("bigquerydatatransfer.googleapis.com", 443);
+        public static string DefaultEndpoint { get; } = "bigquerydatatransfer.googleapis.com:443";
 
         /// <summary>The default DataTransferService scopes.</summary>
         /// <remarks>
@@ -335,96 +336,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="DataTransferServiceClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Asynchronously creates a <see cref="DataTransferServiceClient"/> using the default credentials, endpoint and
+        /// settings. To specify custom credentials or other settings, use
+        /// <see cref="DataTransferServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = await ImageAnnotatorClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="DataTransferServiceSettings"/>.</param>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
         /// <returns>The task representing the created <see cref="DataTransferServiceClient"/>.</returns>
-        public static async stt::Task<DataTransferServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, DataTransferServiceSettings settings = null)
-        {
-            grpccore::Channel channel = await ChannelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
+        public static stt::Task<DataTransferServiceClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new DataTransferServiceClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="DataTransferServiceClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Synchronously creates a <see cref="DataTransferServiceClient"/> using the default credentials, endpoint and
+        /// settings. To specify custom credentials or other settings, use
+        /// <see cref="DataTransferServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// channel.ShutdownAsync().Wait();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="DataTransferServiceSettings"/>.</param>
         /// <returns>The created <see cref="DataTransferServiceClient"/>.</returns>
-        public static DataTransferServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, DataTransferServiceSettings settings = null)
-        {
-            grpccore::Channel channel = ChannelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="DataTransferServiceClient"/> which uses the specified channel for remote operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="DataTransferServiceSettings"/>.</param>
-        /// <returns>The created <see cref="DataTransferServiceClient"/>.</returns>
-        public static DataTransferServiceClient Create(grpccore::Channel channel, DataTransferServiceSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        public static DataTransferServiceClient Create() => new DataTransferServiceClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="DataTransferServiceClient"/> which uses the specified call invoker for remote
@@ -435,7 +364,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="settings">Optional <see cref="DataTransferServiceSettings"/>.</param>
         /// <returns>The created <see cref="DataTransferServiceClient"/>.</returns>
-        public static DataTransferServiceClient Create(grpccore::CallInvoker callInvoker, DataTransferServiceSettings settings = null)
+        internal static DataTransferServiceClient Create(grpccore::CallInvoker callInvoker, DataTransferServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -448,16 +377,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by
-        /// <see cref="Create(grpccore::CallInvoker,DataTransferServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,DataTransferServiceSettings)"/>. Channels which weren't
-        /// automatically created are not affected.
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
         /// </summary>
         /// <remarks>
-        /// After calling this method, further calls to
-        /// <see cref="Create(grpccore::CallInvoker,DataTransferServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,DataTransferServiceSettings)"/> will create new channels,
-        /// which could in turn be shut down by another call to this method.
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
@@ -684,10 +611,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(ParentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListDataSources(new ListDataSourcesRequest
             {
-                ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -711,10 +638,64 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(ParentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListDataSourcesAsync(new ListDataSourcesRequest
             {
-                ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists supported data sources and returns their settings,
+        /// which can be used for UI rendering.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id for which data sources should be returned.
+        /// Must be in the form: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDataSources(new ListDataSourcesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists supported data sources and returns their settings,
+        /// which can be used for UI rendering.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id for which data sources should be returned.
+        /// Must be in the form: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDataSourcesAsync(new ListDataSourcesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -819,10 +800,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual TransferConfig CreateTransferConfig(ParentName parent, TransferConfig transferConfig, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual TransferConfig CreateTransferConfig(gagr::ProjectName parent, TransferConfig transferConfig, gaxgrpc::CallSettings callSettings = null) =>
             CreateTransferConfig(new CreateTransferConfigRequest
             {
-                ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 TransferConfig = gax::GaxPreconditions.CheckNotNull(transferConfig, nameof(transferConfig)),
             }, callSettings);
 
@@ -840,10 +821,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<TransferConfig> CreateTransferConfigAsync(ParentName parent, TransferConfig transferConfig, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<TransferConfig> CreateTransferConfigAsync(gagr::ProjectName parent, TransferConfig transferConfig, gaxgrpc::CallSettings callSettings = null) =>
             CreateTransferConfigAsync(new CreateTransferConfigRequest
             {
-                ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 TransferConfig = gax::GaxPreconditions.CheckNotNull(transferConfig, nameof(transferConfig)),
             }, callSettings);
 
@@ -861,7 +842,66 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<TransferConfig> CreateTransferConfigAsync(ParentName parent, TransferConfig transferConfig, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<TransferConfig> CreateTransferConfigAsync(gagr::ProjectName parent, TransferConfig transferConfig, st::CancellationToken cancellationToken) =>
+            CreateTransferConfigAsync(parent, transferConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new data transfer configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id where the transfer configuration should be created.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
+        /// </param>
+        /// <param name="transferConfig">
+        /// Required. Data transfer configuration to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TransferConfig CreateTransferConfig(gagr::LocationName parent, TransferConfig transferConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTransferConfig(new CreateTransferConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TransferConfig = gax::GaxPreconditions.CheckNotNull(transferConfig, nameof(transferConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new data transfer configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id where the transfer configuration should be created.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
+        /// </param>
+        /// <param name="transferConfig">
+        /// Required. Data transfer configuration to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TransferConfig> CreateTransferConfigAsync(gagr::LocationName parent, TransferConfig transferConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTransferConfigAsync(new CreateTransferConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TransferConfig = gax::GaxPreconditions.CheckNotNull(transferConfig, nameof(transferConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new data transfer configuration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id where the transfer configuration should be created.
+        /// Must be in the format projects/{project_id}/locations/{location_id} or
+        /// projects/{project_id}. If specified location and location of the
+        /// destination bigquery dataset do not match - the request will fail.
+        /// </param>
+        /// <param name="transferConfig">
+        /// Required. Data transfer configuration to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TransferConfig> CreateTransferConfigAsync(gagr::LocationName parent, TransferConfig transferConfig, st::CancellationToken cancellationToken) =>
             CreateTransferConfigAsync(parent, transferConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1278,10 +1318,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(ParentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListTransferConfigs(new ListTransferConfigsRequest
             {
-                ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -1304,10 +1344,62 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(ParentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListTransferConfigsAsync(new ListTransferConfigsRequest
             {
-                ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about all data transfers in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id for which data sources
+        /// should be returned: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TransferConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTransferConfigs(new ListTransferConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about all data transfers in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BigQuery project id for which data sources
+        /// should be returned: `projects/{project_id}` or
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TransferConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTransferConfigsAsync(new ListTransferConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);

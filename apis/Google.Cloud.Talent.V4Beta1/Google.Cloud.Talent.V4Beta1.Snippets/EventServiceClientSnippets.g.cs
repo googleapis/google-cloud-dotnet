@@ -22,7 +22,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     public sealed class GeneratedEventServiceClientSnippets
     {
         /// <summary>Snippet for CreateClientEvent</summary>
-        public void CreateClientEvent_RequestObject()
+        public void CreateClientEventRequestObject()
         {
             // Snippet: CreateClientEvent(CreateClientEventRequest, CallSettings)
             // Create client
@@ -39,7 +39,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateClientEventAsync</summary>
-        public async Task CreateClientEventAsync_RequestObject()
+        public async Task CreateClientEventRequestObjectAsync()
         {
             // Snippet: CreateClientEventAsync(CreateClientEventRequest, CallSettings)
             // Additional: CreateClientEventAsync(CreateClientEventRequest, CancellationToken)
@@ -86,7 +86,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateClientEvent</summary>
-        public void CreateClientEvent_ResourceNames()
+        public void CreateClientEventResourceNames()
         {
             // Snippet: CreateClientEvent(TenantOrProjectName, ClientEvent, CallSettings)
             // Create client
@@ -100,7 +100,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateClientEventAsync</summary>
-        public async Task CreateClientEventAsync_ResourceNames()
+        public async Task CreateClientEventResourceNamesAsync()
         {
             // Snippet: CreateClientEventAsync(TenantOrProjectName, ClientEvent, CallSettings)
             // Additional: CreateClientEventAsync(TenantOrProjectName, ClientEvent, CancellationToken)

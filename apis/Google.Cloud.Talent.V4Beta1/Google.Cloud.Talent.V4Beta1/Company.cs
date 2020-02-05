@@ -48,8 +48,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "b3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -164,7 +164,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "size" field.</summary>
     public const int SizeFieldNumber = 4;
-    private global::Google.Cloud.Talent.V4Beta1.CompanySize size_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.CompanySize size_ = global::Google.Cloud.Talent.V4Beta1.CompanySize.Unspecified;
     /// <summary>
     /// The employer's company size.
     /// </summary>
@@ -357,7 +357,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
-      if (Size != 0) hash ^= Size.GetHashCode();
+      if (Size != global::Google.Cloud.Talent.V4Beta1.CompanySize.Unspecified) hash ^= Size.GetHashCode();
       if (HeadquartersAddress.Length != 0) hash ^= HeadquartersAddress.GetHashCode();
       if (HiringAgency != false) hash ^= HiringAgency.GetHashCode();
       if (EeoText.Length != 0) hash ^= EeoText.GetHashCode();
@@ -392,7 +392,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(26);
         output.WriteString(ExternalId);
       }
-      if (Size != 0) {
+      if (Size != global::Google.Cloud.Talent.V4Beta1.CompanySize.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Size);
       }
@@ -446,7 +446,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (ExternalId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
       }
-      if (Size != 0) {
+      if (Size != global::Google.Cloud.Talent.V4Beta1.CompanySize.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Size);
       }
       if (HeadquartersAddress.Length != 0) {
@@ -494,7 +494,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.ExternalId.Length != 0) {
         ExternalId = other.ExternalId;
       }
-      if (other.Size != 0) {
+      if (other.Size != global::Google.Cloud.Talent.V4Beta1.CompanySize.Unspecified) {
         Size = other.Size;
       }
       if (other.HeadquartersAddress.Length != 0) {

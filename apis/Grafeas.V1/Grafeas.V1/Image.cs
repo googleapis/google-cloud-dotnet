@@ -37,11 +37,11 @@ namespace Grafeas.V1 {
             "Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Layer), global::Grafeas.V1.Layer.Parser, new[]{ "Directive", "Arguments" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Fingerprint), global::Grafeas.V1.Fingerprint.Parser, new[]{ "V1Name", "V2Blob", "V2Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageNote), global::Grafeas.V1.ImageNote.Parser, new[]{ "ResourceUrl", "Fingerprint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageOccurrence), global::Grafeas.V1.ImageOccurrence.Parser, new[]{ "Fingerprint", "Distance", "LayerInfo", "BaseResourceUrl" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Layer), global::Grafeas.V1.Layer.Parser, new[]{ "Directive", "Arguments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Fingerprint), global::Grafeas.V1.Fingerprint.Parser, new[]{ "V1Name", "V2Blob", "V2Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageNote), global::Grafeas.V1.ImageNote.Parser, new[]{ "ResourceUrl", "Fingerprint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageOccurrence), global::Grafeas.V1.ImageOccurrence.Parser, new[]{ "Fingerprint", "Distance", "LayerInfo", "BaseResourceUrl" }, null, null, null, null)
           }));
     }
     #endregion

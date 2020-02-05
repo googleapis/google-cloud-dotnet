@@ -260,21 +260,41 @@ namespace Grafeas.V1
         public GrafeasSettings Clone() => new GrafeasSettings(this);
     }
 
+    /// <summary>
+    /// Builder class for <see cref="GrafeasClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class GrafeasClientBuilder : gaxgrpc::ClientBuilderBase<GrafeasClient>
+    {
+        /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
+        public GrafeasSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override GrafeasClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return GrafeasClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc/>
+        public override async stt::Task<GrafeasClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return GrafeasClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc/>
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GrafeasClient.DefaultScopes;
+    }
+
     /// <summary>Grafeas client wrapper, for convenient use.</summary>
     public abstract partial class GrafeasClient
     {
 
-        /// <summary>
-        /// Creates a <see cref="GrafeasClient"/> which uses the specified channel for remote operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="GrafeasSettings"/>.</param>
-        /// <returns>The created <see cref="GrafeasClient"/>.</returns>
-        public static GrafeasClient Create(grpccore::Channel channel, GrafeasSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        /// <summary>The default Grafeas scopes.</summary>
+        /// <remarks>The default Grafeas scopes are:<list type="bullet"></list></remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
         /// <summary>
         /// Creates a <see cref="GrafeasClient"/> which uses the specified call invoker for remote operations.
@@ -284,7 +304,7 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="settings">Optional <see cref="GrafeasSettings"/>.</param>
         /// <returns>The created <see cref="GrafeasClient"/>.</returns>
-        public static GrafeasClient Create(grpccore::CallInvoker callInvoker, GrafeasSettings settings = null)
+        internal static GrafeasClient Create(grpccore::CallInvoker callInvoker, GrafeasSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;

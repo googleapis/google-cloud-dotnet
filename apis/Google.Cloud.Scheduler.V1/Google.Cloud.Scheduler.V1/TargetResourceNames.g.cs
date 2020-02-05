@@ -233,7 +233,7 @@ namespace Google.Cloud.Scheduler.V1
         /// </summary>
         public gcsv::TopicName TopicNameAsTopicName
         {
-            get => string.IsNullOrEmpty(TopicName) ? null : gcsv::TopicName.Parse(TopicName);
+            get => string.IsNullOrEmpty(TopicName) ? null : gcsv::TopicName.Parse(TopicName, allowUnparsed: true);
             set => TopicName = value?.ToString() ?? "";
         }
     }

@@ -24,7 +24,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary><see cref="SourceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public SourceName ParentAsSourceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -36,7 +36,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gagr::OrganizationName ParentAsOrganizationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -48,7 +48,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::OrganizationSettingsName OrganizationSettingsName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::OrganizationSettingsName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::OrganizationSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -60,7 +60,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::SourceName SourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SourceName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SourceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -72,7 +72,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gagr::OrganizationName ParentAsOrganizationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -82,7 +82,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary><see cref="SourceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public SourceName ParentAsSourceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -94,7 +94,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gagr::OrganizationName ParentAsOrganizationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -106,7 +106,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gagr::OrganizationName ParentAsOrganizationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -116,7 +116,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary><see cref="SourceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public SourceName ParentAsSourceName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -128,7 +128,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::FindingName FindingName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::FindingName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::FindingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -140,7 +140,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gagr::OrganizationName ParentAsOrganizationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

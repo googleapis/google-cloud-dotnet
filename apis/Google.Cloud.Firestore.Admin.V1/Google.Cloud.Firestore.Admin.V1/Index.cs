@@ -51,8 +51,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "VjHKAh9Hb29nbGVcQ2xvdWRcRmlyZXN0b3JlXEFkbWluXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "Fields", "State" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "Fields", "State" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, null)})
           }));
     }
     #endregion
@@ -119,7 +119,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     /// <summary>Field number for the "query_scope" field.</summary>
     public const int QueryScopeFieldNumber = 2;
-    private global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope queryScope_ = 0;
+    private global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope queryScope_ = global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified;
     /// <summary>
     /// Indexes with a collection query scope specified allow queries
     /// against a collection that is the child of a specific document, specified at
@@ -162,7 +162,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 4;
-    private global::Google.Cloud.Firestore.Admin.V1.Index.Types.State state_ = 0;
+    private global::Google.Cloud.Firestore.Admin.V1.Index.Types.State state_ = global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified;
     /// <summary>
     /// Output only. The serving state of the index.
     /// </summary>
@@ -198,9 +198,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (QueryScope != 0) hash ^= QueryScope.GetHashCode();
+      if (QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) hash ^= QueryScope.GetHashCode();
       hash ^= fields_.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -218,12 +218,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (QueryScope != 0) {
+      if (QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) QueryScope);
       }
       fields_.WriteTo(output, _repeated_fields_codec);
-      if (State != 0) {
+      if (State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) State);
       }
@@ -238,11 +238,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (QueryScope != 0) {
+      if (QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) QueryScope);
       }
       size += fields_.CalculateSize(_repeated_fields_codec);
-      if (State != 0) {
+      if (State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
@@ -259,11 +259,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.QueryScope != 0) {
+      if (other.QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) {
         QueryScope = other.QueryScope;
       }
       fields_.Add(other.fields_);
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) {
         State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -433,7 +433,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order Order {
-          get { return valueModeCase_ == ValueModeOneofCase.Order ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order) valueMode_ : 0; }
+          get { return valueModeCase_ == ValueModeOneofCase.Order ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order.Unspecified; }
           set {
             valueMode_ = value;
             valueModeCase_ = ValueModeOneofCase.Order;
@@ -447,7 +447,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig ArrayConfig {
-          get { return valueModeCase_ == ValueModeOneofCase.ArrayConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) valueMode_ : 0; }
+          get { return valueModeCase_ == ValueModeOneofCase.ArrayConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig.Unspecified; }
           set {
             valueMode_ = value;
             valueModeCase_ = ValueModeOneofCase.ArrayConfig;

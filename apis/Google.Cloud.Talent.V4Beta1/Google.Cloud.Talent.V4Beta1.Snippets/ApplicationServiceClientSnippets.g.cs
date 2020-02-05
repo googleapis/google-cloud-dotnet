@@ -26,7 +26,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     public sealed class GeneratedApplicationServiceClientSnippets
     {
         /// <summary>Snippet for CreateApplication</summary>
-        public void CreateApplication_RequestObject()
+        public void CreateApplicationRequestObject()
         {
             // Snippet: CreateApplication(CreateApplicationRequest, CallSettings)
             // Create client
@@ -43,7 +43,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateApplicationAsync</summary>
-        public async Task CreateApplicationAsync_RequestObject()
+        public async Task CreateApplicationRequestObjectAsync()
         {
             // Snippet: CreateApplicationAsync(CreateApplicationRequest, CallSettings)
             // Additional: CreateApplicationAsync(CreateApplicationRequest, CancellationToken)
@@ -90,7 +90,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateApplication</summary>
-        public void CreateApplication_ResourceNames()
+        public void CreateApplicationResourceNames()
         {
             // Snippet: CreateApplication(ProfileName, Application, CallSettings)
             // Create client
@@ -104,7 +104,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateApplicationAsync</summary>
-        public async Task CreateApplicationAsync_ResourceNames()
+        public async Task CreateApplicationResourceNamesAsync()
         {
             // Snippet: CreateApplicationAsync(ProfileName, Application, CallSettings)
             // Additional: CreateApplicationAsync(ProfileName, Application, CancellationToken)
@@ -119,7 +119,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetApplication</summary>
-        public void GetApplication_RequestObject()
+        public void GetApplicationRequestObject()
         {
             // Snippet: GetApplication(GetApplicationRequest, CallSettings)
             // Create client
@@ -135,7 +135,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetApplicationAsync</summary>
-        public async Task GetApplicationAsync_RequestObject()
+        public async Task GetApplicationRequestObjectAsync()
         {
             // Snippet: GetApplicationAsync(GetApplicationRequest, CallSettings)
             // Additional: GetApplicationAsync(GetApplicationRequest, CancellationToken)
@@ -179,7 +179,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetApplication</summary>
-        public void GetApplication_ResourceNames()
+        public void GetApplicationResourceNames()
         {
             // Snippet: GetApplication(ApplicationName, CallSettings)
             // Create client
@@ -192,7 +192,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for GetApplicationAsync</summary>
-        public async Task GetApplicationAsync_ResourceNames()
+        public async Task GetApplicationResourceNamesAsync()
         {
             // Snippet: GetApplicationAsync(ApplicationName, CallSettings)
             // Additional: GetApplicationAsync(ApplicationName, CancellationToken)
@@ -206,7 +206,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateApplication</summary>
-        public void UpdateApplication_RequestObject()
+        public void UpdateApplicationRequestObject()
         {
             // Snippet: UpdateApplication(UpdateApplicationRequest, CallSettings)
             // Create client
@@ -223,7 +223,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateApplicationAsync</summary>
-        public async Task UpdateApplicationAsync_RequestObject()
+        public async Task UpdateApplicationRequestObjectAsync()
         {
             // Snippet: UpdateApplicationAsync(UpdateApplicationRequest, CallSettings)
             // Additional: UpdateApplicationAsync(UpdateApplicationRequest, CancellationToken)
@@ -268,7 +268,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteApplication</summary>
-        public void DeleteApplication_RequestObject()
+        public void DeleteApplicationRequestObject()
         {
             // Snippet: DeleteApplication(DeleteApplicationRequest, CallSettings)
             // Create client
@@ -284,7 +284,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteApplicationAsync</summary>
-        public async Task DeleteApplicationAsync_RequestObject()
+        public async Task DeleteApplicationRequestObjectAsync()
         {
             // Snippet: DeleteApplicationAsync(DeleteApplicationRequest, CallSettings)
             // Additional: DeleteApplicationAsync(DeleteApplicationRequest, CancellationToken)
@@ -328,7 +328,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteApplication</summary>
-        public void DeleteApplication_ResourceNames()
+        public void DeleteApplicationResourceNames()
         {
             // Snippet: DeleteApplication(ApplicationName, CallSettings)
             // Create client
@@ -341,7 +341,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteApplicationAsync</summary>
-        public async Task DeleteApplicationAsync_ResourceNames()
+        public async Task DeleteApplicationResourceNamesAsync()
         {
             // Snippet: DeleteApplicationAsync(ApplicationName, CallSettings)
             // Additional: DeleteApplicationAsync(ApplicationName, CancellationToken)
@@ -355,7 +355,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListApplications</summary>
-        public void ListApplications_RequestObject()
+        public void ListApplicationsRequestObject()
         {
             // Snippet: ListApplications(ListApplicationsRequest, CallSettings)
             // Create client
@@ -403,7 +403,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListApplications</summary>
-        public async Task ListApplicationsAsync_RequestObject()
+        public async Task ListApplicationsRequestObjectAsync()
         {
             // Snippet: ListApplicationsAsync(ListApplicationsRequest, CallSettings)
             // Create client
@@ -541,7 +541,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListApplications</summary>
-        public void ListApplications_ResourceNames()
+        public void ListApplicationsResourceNames()
         {
             // Snippet: ListApplications(ProfileName, string, int?, CallSettings)
             // Create client
@@ -586,7 +586,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListApplications</summary>
-        public async Task ListApplicationsAsync_ResourceNames()
+        public async Task ListApplicationsResourceNamesAsync()
         {
             // Snippet: ListApplicationsAsync(ProfileName, string, int?, CallSettings)
             // Create client

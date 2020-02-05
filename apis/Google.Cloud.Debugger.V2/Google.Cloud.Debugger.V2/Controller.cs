@@ -68,13 +68,13 @@ namespace Google.Cloud.Debugger.V2 {
             "ci5WMsoCGEdvb2dsZVxDbG91ZFxEZWJ1Z2dlclxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Debugger.V2.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest), global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.Parser, new[]{ "Debuggee" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse), global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.Parser, new[]{ "Debuggee" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.Parser, new[]{ "DebuggeeId", "WaitToken", "SuccessOnTimeout" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.Parser, new[]{ "Breakpoints", "NextWaitToken", "WaitExpired" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.Parser, new[]{ "DebuggeeId", "Breakpoint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest), global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.Parser, new[]{ "Debuggee" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse), global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.Parser, new[]{ "Debuggee" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.Parser, new[]{ "DebuggeeId", "WaitToken", "SuccessOnTimeout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse), global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.Parser, new[]{ "Breakpoints", "NextWaitToken", "WaitExpired" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.Parser, new[]{ "DebuggeeId", "Breakpoint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse), global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion

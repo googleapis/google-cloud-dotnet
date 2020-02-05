@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public TenantName ParentAsTenantName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -35,7 +35,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::ProfileName ProfileName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::ProfileName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::ProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -47,7 +47,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         public gctv::ProfileName ProfileName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gctv::ProfileName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gctv::ProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -57,7 +57,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public TenantName ParentAsTenantName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

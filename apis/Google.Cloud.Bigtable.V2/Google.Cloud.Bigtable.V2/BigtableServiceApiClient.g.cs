@@ -149,7 +149,7 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc/>
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => BigtableServiceApiClient.DefaultEndpoint;
+        protected override string GetDefaultEndpoint() => BigtableServiceApiClient.DefaultEndpoint;
 
         /// <inheritdoc/>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableServiceApiClient.DefaultScopes;
@@ -162,7 +162,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The default endpoint for the BigtableServiceApi service, which is a host of "bigtable.googleapis.com" and a
         /// port of 443.
         /// </summary>
-        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("bigtable.googleapis.com", 443);
+        public static string DefaultEndpoint { get; } = "bigtable.googleapis.com:443";
 
         /// <summary>The default BigtableServiceApi scopes.</summary>
         /// <remarks>
@@ -189,96 +189,24 @@ namespace Google.Cloud.Bigtable.V2
         internal static gaxgrpcgcp::GcpCallInvokerPool CallInvokerPool { get; } = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Asynchronously creates a <see cref="BigtableServiceApiClient"/> using the default credentials, endpoint and
+        /// settings. To specify custom credentials or other settings, use <see cref="BigtableServiceApiClientBuilder"/>
+        /// .
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = await ImageAnnotatorClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
         /// <returns>The task representing the created <see cref="BigtableServiceApiClient"/>.</returns>
-        public static async stt::Task<BigtableServiceApiClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
-        {
-            grpccore::CallInvoker callInvoker = await CallInvokerPool.GetCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
-            return Create(callInvoker, settings);
-        }
+        public static stt::Task<BigtableServiceApiClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new BigtableServiceApiClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Synchronously creates a <see cref="BigtableServiceApiClient"/> using the default credentials, endpoint and
+        /// settings. To specify custom credentials or other settings, use <see cref="BigtableServiceApiClientBuilder"/>
+        /// .
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// channel.ShutdownAsync().Wait();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
         /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
-        public static BigtableServiceApiClient Create(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
-        {
-            grpccore::CallInvoker callInvoker = CallInvokerPool.GetCallInvoker(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions());
-            return Create(callInvoker, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="BigtableServiceApiClient"/> which uses the specified channel for remote operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
-        /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
-        public static BigtableServiceApiClient Create(grpccore::Channel channel, BigtableServiceApiSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        public static BigtableServiceApiClient Create() => new BigtableServiceApiClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="BigtableServiceApiClient"/> which uses the specified call invoker for remote
@@ -289,7 +217,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
         /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
-        public static BigtableServiceApiClient Create(grpccore::CallInvoker callInvoker, BigtableServiceApiSettings settings = null)
+        internal static BigtableServiceApiClient Create(grpccore::CallInvoker callInvoker, BigtableServiceApiSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -302,16 +230,14 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by
-        /// <see cref="Create(grpccore::CallInvoker,BigtableServiceApiSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,BigtableServiceApiSettings)"/>. Channels which weren't
-        /// automatically created are not affected.
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
         /// </summary>
         /// <remarks>
-        /// After calling this method, further calls to
-        /// <see cref="Create(grpccore::CallInvoker,BigtableServiceApiSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,BigtableServiceApiSettings)"/> will create new channels,
-        /// which could in turn be shut down by another call to this method.
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => CallInvokerPool.ShutdownChannelsAsync();

@@ -43,8 +43,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "L3t0ZW5hbnR9EhJwcm9qZWN0cy97cHJvamVjdH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null, null)
           }));
     }
     #endregion
@@ -132,7 +132,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "usage_type" field.</summary>
     public const int UsageTypeFieldNumber = 3;
-    private global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType usageType_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType usageType_ = global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType.Unspecified;
     /// <summary>
     /// Indicates whether data owned by this tenant may be used to provide product
     /// improvements across other tenants.
@@ -190,7 +190,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
-      if (UsageType != 0) hash ^= UsageType.GetHashCode();
+      if (UsageType != global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType.Unspecified) hash ^= UsageType.GetHashCode();
       hash ^= keywordSearchableProfileCustomAttributes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -213,7 +213,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(18);
         output.WriteString(ExternalId);
       }
-      if (UsageType != 0) {
+      if (UsageType != global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) UsageType);
       }
@@ -232,7 +232,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (ExternalId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
       }
-      if (UsageType != 0) {
+      if (UsageType != global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UsageType);
       }
       size += keywordSearchableProfileCustomAttributes_.CalculateSize(_repeated_keywordSearchableProfileCustomAttributes_codec);
@@ -253,7 +253,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.ExternalId.Length != 0) {
         ExternalId = other.ExternalId;
       }
-      if (other.UsageType != 0) {
+      if (other.UsageType != global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType.Unspecified) {
         UsageType = other.UsageType;
       }
       keywordSearchableProfileCustomAttributes_.Add(other.keywordSearchableProfileCustomAttributes_);

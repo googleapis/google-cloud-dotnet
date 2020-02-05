@@ -125,7 +125,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetInstanceConfig_ResourceNames()
+        public void GetInstanceConfigResourceNames()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetInstanceConfigAsync_ResourceNames()
+        public async stt::Task GetInstanceConfigResourceNamesAsync()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -317,7 +317,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetInstance_ResourceNames()
+        public void GetInstanceResourceNames()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -352,7 +352,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetInstanceAsync_ResourceNames()
+        public async stt::Task GetInstanceResourceNamesAsync()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -455,7 +455,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteInstance_ResourceNames()
+        public void DeleteInstanceResourceNames()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -471,7 +471,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteInstanceAsync_ResourceNames()
+        public async stt::Task DeleteInstanceResourceNamesAsync()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -596,7 +596,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -622,7 +622,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -756,7 +756,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -781,7 +781,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -920,7 +920,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -947,7 +947,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<InstanceAdmin.InstanceAdminClient> mockGrpcClient = new moq::Mock<InstanceAdmin.InstanceAdminClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);

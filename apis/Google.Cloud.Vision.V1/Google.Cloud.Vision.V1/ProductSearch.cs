@@ -54,11 +54,11 @@ namespace Google.Cloud.Vision.V1 {
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchParams), global::Google.Cloud.Vision.V1.ProductSearchParams.Parser, new[]{ "BoundingPoly", "ProductSet", "ProductCategories", "Filter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults), global::Google.Cloud.Vision.V1.ProductSearchResults.Parser, new[]{ "IndexTime", "Results", "ProductGroupedResults" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result.Parser, new[]{ "Product", "Score", "Image" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation.Parser, new[]{ "Mid", "LanguageCode", "Name", "Score" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult.Parser, new[]{ "BoundingPoly", "Results", "ObjectAnnotations" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchParams), global::Google.Cloud.Vision.V1.ProductSearchParams.Parser, new[]{ "BoundingPoly", "ProductSet", "ProductCategories", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults), global::Google.Cloud.Vision.V1.ProductSearchResults.Parser, new[]{ "IndexTime", "Results", "ProductGroupedResults" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result.Parser, new[]{ "Product", "Score", "Image" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.ObjectAnnotation.Parser, new[]{ "Mid", "LanguageCode", "Name", "Score" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.GroupedResult.Parser, new[]{ "BoundingPoly", "Results", "ObjectAnnotations" }, null, null, null, null)})
           }));
     }
     #endregion

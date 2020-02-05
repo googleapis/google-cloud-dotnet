@@ -92,13 +92,13 @@ namespace Google.Cloud.Recommender.V1 {
             "b2dsZS5DbG91ZC5SZWNvbW1lbmRlci5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ListRecommendationsRequest), global::Google.Cloud.Recommender.V1.ListRecommendationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ListRecommendationsResponse), global::Google.Cloud.Recommender.V1.ListRecommendationsResponse.Parser, new[]{ "Recommendations", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.GetRecommendationRequest), global::Google.Cloud.Recommender.V1.GetRecommendationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest), global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest.Parser, new[]{ "Name", "StateMetadata", "Etag" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest), global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser, new[]{ "Name", "StateMetadata", "Etag" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest), global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest.Parser, new[]{ "Name", "StateMetadata", "Etag" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ListRecommendationsRequest), global::Google.Cloud.Recommender.V1.ListRecommendationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ListRecommendationsResponse), global::Google.Cloud.Recommender.V1.ListRecommendationsResponse.Parser, new[]{ "Recommendations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.GetRecommendationRequest), global::Google.Cloud.Recommender.V1.GetRecommendationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest), global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest.Parser, new[]{ "Name", "StateMetadata", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest), global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser, new[]{ "Name", "StateMetadata", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest), global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest.Parser, new[]{ "Name", "StateMetadata", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -697,7 +697,7 @@ namespace Google.Cloud.Recommender.V1 {
     /// <summary>Field number for the "state_metadata" field.</summary>
     public const int StateMetadataFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_stateMetadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> stateMetadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// State properties to include with this state. Overwrites any existing
@@ -889,7 +889,7 @@ namespace Google.Cloud.Recommender.V1 {
     /// <summary>Field number for the "state_metadata" field.</summary>
     public const int StateMetadataFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_stateMetadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> stateMetadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// State properties to include with this state. Overwrites any existing
@@ -1081,7 +1081,7 @@ namespace Google.Cloud.Recommender.V1 {
     /// <summary>Field number for the "state_metadata" field.</summary>
     public const int StateMetadataFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_stateMetadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> stateMetadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// State properties to include with this state. Overwrites any existing

@@ -26,7 +26,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     public sealed class GeneratedContextsClientSnippets
     {
         /// <summary>Snippet for ListContexts</summary>
-        public void ListContexts_RequestObject()
+        public void ListContextsRequestObject()
         {
             // Snippet: ListContexts(ListContextsRequest, CallSettings)
             // Create client
@@ -71,7 +71,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ListContexts</summary>
-        public async Task ListContextsAsync_RequestObject()
+        public async Task ListContextsRequestObjectAsync()
         {
             // Snippet: ListContextsAsync(ListContextsRequest, CallSettings)
             // Create client
@@ -206,7 +206,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetContext</summary>
-        public void GetContext_RequestObject()
+        public void GetContextRequestObject()
         {
             // Snippet: GetContext(GetContextRequest, CallSettings)
             // Create client
@@ -222,7 +222,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetContextAsync</summary>
-        public async Task GetContextAsync_RequestObject()
+        public async Task GetContextRequestObjectAsync()
         {
             // Snippet: GetContextAsync(GetContextRequest, CallSettings)
             // Additional: GetContextAsync(GetContextRequest, CancellationToken)
@@ -239,7 +239,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateContext</summary>
-        public void CreateContext_RequestObject()
+        public void CreateContextRequestObject()
         {
             // Snippet: CreateContext(CreateContextRequest, CallSettings)
             // Create client
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for CreateContextAsync</summary>
-        public async Task CreateContextAsync_RequestObject()
+        public async Task CreateContextRequestObjectAsync()
         {
             // Snippet: CreateContextAsync(CreateContextRequest, CallSettings)
             // Additional: CreateContextAsync(CreateContextRequest, CancellationToken)
@@ -274,7 +274,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateContext</summary>
-        public void UpdateContext_RequestObject()
+        public void UpdateContextRequestObject()
         {
             // Snippet: UpdateContext(UpdateContextRequest, CallSettings)
             // Create client
@@ -291,7 +291,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateContextAsync</summary>
-        public async Task UpdateContextAsync_RequestObject()
+        public async Task UpdateContextRequestObjectAsync()
         {
             // Snippet: UpdateContextAsync(UpdateContextRequest, CallSettings)
             // Additional: UpdateContextAsync(UpdateContextRequest, CancellationToken)
@@ -309,7 +309,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteContext</summary>
-        public void DeleteContext_RequestObject()
+        public void DeleteContextRequestObject()
         {
             // Snippet: DeleteContext(DeleteContextRequest, CallSettings)
             // Create client
@@ -325,7 +325,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteContextAsync</summary>
-        public async Task DeleteContextAsync_RequestObject()
+        public async Task DeleteContextRequestObjectAsync()
         {
             // Snippet: DeleteContextAsync(DeleteContextRequest, CallSettings)
             // Additional: DeleteContextAsync(DeleteContextRequest, CancellationToken)
@@ -342,7 +342,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAllContexts</summary>
-        public void DeleteAllContexts_RequestObject()
+        public void DeleteAllContextsRequestObject()
         {
             // Snippet: DeleteAllContexts(DeleteAllContextsRequest, CallSettings)
             // Create client
@@ -355,7 +355,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAllContextsAsync</summary>
-        public async Task DeleteAllContextsAsync_RequestObject()
+        public async Task DeleteAllContextsRequestObjectAsync()
         {
             // Snippet: DeleteAllContextsAsync(DeleteAllContextsRequest, CallSettings)
             // Additional: DeleteAllContextsAsync(DeleteAllContextsRequest, CancellationToken)

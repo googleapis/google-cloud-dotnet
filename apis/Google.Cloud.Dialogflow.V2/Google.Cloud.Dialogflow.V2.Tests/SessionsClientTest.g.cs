@@ -34,7 +34,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                Session = "session0cf4d621",
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
@@ -61,7 +61,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                Session = "session0cf4d621",
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
@@ -90,7 +90,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                Session = "session0cf4d621",
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
@@ -114,7 +114,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                Session = "session0cf4d621",
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
@@ -130,6 +130,56 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             DetectIntentResponse responseCallSettings = await client.DetectIntentAsync(request.Session, request.QueryInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DetectIntentResponse responseCancellationToken = await client.DetectIntentAsync(request.Session, request.QueryInput, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DetectIntentResourceNames()
+        {
+            moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                QueryInput = new QueryInput(),
+            };
+            DetectIntentResponse expectedResponse = new DetectIntentResponse
+            {
+                ResponseId = "response_id17f822e1",
+                QueryResult = new QueryResult(),
+                WebhookStatus = new gr::Status(),
+                OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
+                OutputAudioConfig = new OutputAudioConfig(),
+            };
+            mockGrpcClient.Setup(x => x.DetectIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            DetectIntentResponse response = client.DetectIntent(request.SessionAsSessionName, request.QueryInput);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DetectIntentResourceNamesAsync()
+        {
+            moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                QueryInput = new QueryInput(),
+            };
+            DetectIntentResponse expectedResponse = new DetectIntentResponse
+            {
+                ResponseId = "response_id17f822e1",
+                QueryResult = new QueryResult(),
+                WebhookStatus = new gr::Status(),
+                OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
+                OutputAudioConfig = new OutputAudioConfig(),
+            };
+            mockGrpcClient.Setup(x => x.DetectIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
+            DetectIntentResponse responseCallSettings = await client.DetectIntentAsync(request.SessionAsSessionName, request.QueryInput, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DetectIntentResponse responseCancellationToken = await client.DetectIntentAsync(request.SessionAsSessionName, request.QueryInput, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

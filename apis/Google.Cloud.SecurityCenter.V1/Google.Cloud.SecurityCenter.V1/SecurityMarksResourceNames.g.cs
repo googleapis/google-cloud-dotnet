@@ -320,7 +320,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::SecurityMarksName SecurityMarksName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecurityMarksName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecurityMarksName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

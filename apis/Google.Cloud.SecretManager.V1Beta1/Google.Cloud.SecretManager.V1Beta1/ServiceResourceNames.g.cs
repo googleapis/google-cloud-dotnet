@@ -26,7 +26,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -38,7 +38,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -48,7 +48,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary><see cref="SecretName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public SecretName ParentAsSecretName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : SecretName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : SecretName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -60,7 +60,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretName SecretName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -70,7 +70,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary><see cref="SecretName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public SecretName ParentAsSecretName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : SecretName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : SecretName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -82,7 +82,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretVersionName SecretVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -94,7 +94,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretVersionName SecretVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -106,7 +106,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretVersionName SecretVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -118,7 +118,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretName SecretName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -130,7 +130,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretVersionName SecretVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -142,7 +142,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretVersionName SecretVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -154,7 +154,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </summary>
         public gcsv::SecretVersionName SecretVersionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecretVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

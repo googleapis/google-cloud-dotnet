@@ -22,7 +22,7 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
     public sealed class GeneratedTextToSpeechClientSnippets
     {
         /// <summary>Snippet for ListVoices</summary>
-        public void ListVoices_RequestObject()
+        public void ListVoicesRequestObject()
         {
             // Snippet: ListVoices(ListVoicesRequest, CallSettings)
             // Create client
@@ -35,7 +35,7 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         }
 
         /// <summary>Snippet for ListVoicesAsync</summary>
-        public async Task ListVoicesAsync_RequestObject()
+        public async Task ListVoicesRequestObjectAsync()
         {
             // Snippet: ListVoicesAsync(ListVoicesRequest, CallSettings)
             // Additional: ListVoicesAsync(ListVoicesRequest, CancellationToken)
@@ -76,7 +76,7 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         }
 
         /// <summary>Snippet for SynthesizeSpeech</summary>
-        public void SynthesizeSpeech_RequestObject()
+        public void SynthesizeSpeechRequestObject()
         {
             // Snippet: SynthesizeSpeech(SynthesizeSpeechRequest, CallSettings)
             // Create client
@@ -94,7 +94,7 @@ namespace Google.Cloud.TextToSpeech.V1.Snippets
         }
 
         /// <summary>Snippet for SynthesizeSpeechAsync</summary>
-        public async Task SynthesizeSpeechAsync_RequestObject()
+        public async Task SynthesizeSpeechRequestObjectAsync()
         {
             // Snippet: SynthesizeSpeechAsync(SynthesizeSpeechRequest, CallSettings)
             // Additional: SynthesizeSpeechAsync(SynthesizeSpeechRequest, CancellationToken)

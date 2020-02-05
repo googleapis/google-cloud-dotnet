@@ -164,7 +164,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetOccurrence_ResourceNames()
+        public void GetOccurrenceResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             GetOccurrenceRequest request = new GetOccurrenceRequest
@@ -197,7 +197,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetOccurrenceAsync_ResourceNames()
+        public async stt::Task GetOccurrenceResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             GetOccurrenceRequest request = new GetOccurrenceRequest
@@ -294,7 +294,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteOccurrence_ResourceNames()
+        public void DeleteOccurrenceResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
@@ -309,7 +309,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteOccurrenceAsync_ResourceNames()
+        public async stt::Task DeleteOccurrenceResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
@@ -465,7 +465,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateOccurrence_ResourceNames()
+        public void CreateOccurrenceResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
@@ -499,7 +499,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateOccurrenceAsync_ResourceNames()
+        public async stt::Task CreateOccurrenceResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
@@ -619,7 +619,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void BatchCreateOccurrences_ResourceNames()
+        public void BatchCreateOccurrencesResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
@@ -639,7 +639,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task BatchCreateOccurrencesAsync_ResourceNames()
+        public async stt::Task BatchCreateOccurrencesResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
@@ -805,7 +805,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateOccurrence_ResourceNames()
+        public void UpdateOccurrenceResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
@@ -840,7 +840,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateOccurrenceAsync_ResourceNames()
+        public async stt::Task UpdateOccurrenceResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
@@ -1033,7 +1033,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetOccurrenceNote_ResourceNames()
+        public void GetOccurrenceNoteResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
@@ -1071,7 +1071,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetOccurrenceNoteAsync_ResourceNames()
+        public async stt::Task GetOccurrenceNoteResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
@@ -1267,7 +1267,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetNote_ResourceNames()
+        public void GetNoteResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             GetNoteRequest request = new GetNoteRequest
@@ -1305,7 +1305,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetNoteAsync_ResourceNames()
+        public async stt::Task GetNoteResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             GetNoteRequest request = new GetNoteRequest
@@ -1407,7 +1407,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteNote_ResourceNames()
+        public void DeleteNoteResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             DeleteNoteRequest request = new DeleteNoteRequest
@@ -1422,7 +1422,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteNoteAsync_ResourceNames()
+        public async stt::Task DeleteNoteResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             DeleteNoteRequest request = new DeleteNoteRequest
@@ -1602,7 +1602,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateNote_ResourceNames()
+        public void CreateNoteResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
@@ -1642,7 +1642,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateNoteAsync_ResourceNames()
+        public async stt::Task CreateNoteResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             CreateNoteRequest request = new CreateNoteRequest
@@ -1780,7 +1780,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void BatchCreateNotes_ResourceNames()
+        public void BatchCreateNotesResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
@@ -1803,7 +1803,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task BatchCreateNotesAsync_ResourceNames()
+        public async stt::Task BatchCreateNotesResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
@@ -1992,7 +1992,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateNote_ResourceNames()
+        public void UpdateNoteResourceNames()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             UpdateNoteRequest request = new UpdateNoteRequest
@@ -2032,7 +2032,7 @@ namespace Grafeas.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateNoteAsync_ResourceNames()
+        public async stt::Task UpdateNoteResourceNamesAsync()
         {
             moq::Mock<Grafeas.GrafeasClient> mockGrpcClient = new moq::Mock<Grafeas.GrafeasClient>(moq::MockBehavior.Strict);
             UpdateNoteRequest request = new UpdateNoteRequest

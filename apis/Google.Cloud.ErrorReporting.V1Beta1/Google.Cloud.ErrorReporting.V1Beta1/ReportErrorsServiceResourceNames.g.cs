@@ -25,7 +25,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public gagr::ProjectName ProjectNameAsProjectName
         {
-            get => string.IsNullOrEmpty(ProjectName) ? null : gagr::ProjectName.Parse(ProjectName);
+            get => string.IsNullOrEmpty(ProjectName) ? null : gagr::ProjectName.Parse(ProjectName, allowUnparsed: true);
             set => ProjectName = value?.ToString() ?? "";
         }
     }

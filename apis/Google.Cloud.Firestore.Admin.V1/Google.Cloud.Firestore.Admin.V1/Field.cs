@@ -42,8 +42,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "b2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field), global::Google.Cloud.Firestore.Admin.V1.Field.Parser, new[]{ "Name", "IndexConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig.Parser, new[]{ "Indexes", "UsesAncestorConfig", "AncestorField", "Reverting" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field), global::Google.Cloud.Firestore.Admin.V1.Field.Parser, new[]{ "Name", "IndexConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig.Parser, new[]{ "Indexes", "UsesAncestorConfig", "AncestorField", "Reverting" }, null, null, null, null)})
           }));
     }
     #endregion

@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -257,7 +258,7 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <inheritdoc/>
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => JobServiceClient.DefaultEndpoint;
+        protected override string GetDefaultEndpoint() => JobServiceClient.DefaultEndpoint;
 
         /// <inheritdoc/>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => JobServiceClient.DefaultScopes;
@@ -272,7 +273,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>
         /// The default endpoint for the JobService service, which is a host of "jobs.googleapis.com" and a port of 443.
         /// </summary>
-        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("jobs.googleapis.com", 443);
+        public static string DefaultEndpoint { get; } = "jobs.googleapis.com:443";
 
         /// <summary>The default JobService scopes.</summary>
         /// <remarks>
@@ -291,96 +292,22 @@ namespace Google.Cloud.Talent.V4Beta1
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="JobServiceClient"/>, applying defaults for all unspecified settings, and
-        /// creating a channel connecting to the given endpoint with application default credentials where necessary.
-        /// See the example for how to use custom credentials.
+        /// Asynchronously creates a <see cref="JobServiceClient"/> using the default credentials, endpoint and
+        /// settings. To specify custom credentials or other settings, use <see cref="JobServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = await ImageAnnotatorClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="JobServiceSettings"/>.</param>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
         /// <returns>The task representing the created <see cref="JobServiceClient"/>.</returns>
-        public static async stt::Task<JobServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, JobServiceSettings settings = null)
-        {
-            grpccore::Channel channel = await ChannelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
+        public static stt::Task<JobServiceClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new JobServiceClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="JobServiceClient"/>, applying defaults for all unspecified settings, and
-        /// creating a channel connecting to the given endpoint with application default credentials where necessary.
-        /// See the example for how to use custom credentials.
+        /// Synchronously creates a <see cref="JobServiceClient"/> using the default credentials, endpoint and settings.
+        /// To specify custom credentials or other settings, use <see cref="JobServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// channel.ShutdownAsync().Wait();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="JobServiceSettings"/>.</param>
         /// <returns>The created <see cref="JobServiceClient"/>.</returns>
-        public static JobServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, JobServiceSettings settings = null)
-        {
-            grpccore::Channel channel = ChannelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="JobServiceClient"/> which uses the specified channel for remote operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="JobServiceSettings"/>.</param>
-        /// <returns>The created <see cref="JobServiceClient"/>.</returns>
-        public static JobServiceClient Create(grpccore::Channel channel, JobServiceSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        public static JobServiceClient Create() => new JobServiceClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="JobServiceClient"/> which uses the specified call invoker for remote operations.
@@ -390,7 +317,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="settings">Optional <see cref="JobServiceSettings"/>.</param>
         /// <returns>The created <see cref="JobServiceClient"/>.</returns>
-        public static JobServiceClient Create(grpccore::CallInvoker callInvoker, JobServiceSettings settings = null)
+        internal static JobServiceClient Create(grpccore::CallInvoker callInvoker, JobServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -403,15 +330,14 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by
-        /// <see cref="Create(grpccore::CallInvoker,JobServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,JobServiceSettings)"/>. Channels which weren't automatically
-        /// created are not affected.
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
         /// </summary>
         /// <remarks>
-        /// After calling this method, further calls to <see cref="Create(grpccore::CallInvoker,JobServiceSettings)"/>
-        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,JobServiceSettings)"/> will create new channels, which
-        /// could in turn be shut down by another call to this method.
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
@@ -524,6 +450,148 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Job> CreateJobAsync(string parent, Job job, st::CancellationToken cancellationToken) =>
+            CreateJobAsync(parent, job, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new job.
+        /// 
+        /// Typically, the job becomes searchable within 10 seconds, but it may take
+        /// up to 5 minutes.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="job">
+        /// Required. The Job to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Job CreateJob(gagr::ProjectName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
+            CreateJob(new CreateJobRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new job.
+        /// 
+        /// Typically, the job becomes searchable within 10 seconds, but it may take
+        /// up to 5 minutes.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="job">
+        /// Required. The Job to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> CreateJobAsync(gagr::ProjectName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
+            CreateJobAsync(new CreateJobRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new job.
+        /// 
+        /// Typically, the job becomes searchable within 10 seconds, but it may take
+        /// up to 5 minutes.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="job">
+        /// Required. The Job to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> CreateJobAsync(gagr::ProjectName parent, Job job, st::CancellationToken cancellationToken) =>
+            CreateJobAsync(parent, job, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new job.
+        /// 
+        /// Typically, the job becomes searchable within 10 seconds, but it may take
+        /// up to 5 minutes.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="job">
+        /// Required. The Job to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Job CreateJob(TenantName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
+            CreateJob(new CreateJobRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new job.
+        /// 
+        /// Typically, the job becomes searchable within 10 seconds, but it may take
+        /// up to 5 minutes.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="job">
+        /// Required. The Job to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> CreateJobAsync(TenantName parent, Job job, gaxgrpc::CallSettings callSettings = null) =>
+            CreateJobAsync(new CreateJobRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new job.
+        /// 
+        /// Typically, the job becomes searchable within 10 seconds, but it may take
+        /// up to 5 minutes.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="job">
+        /// Required. The Job to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Job> CreateJobAsync(TenantName parent, Job job, st::CancellationToken cancellationToken) =>
             CreateJobAsync(parent, job, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -716,6 +784,142 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(string parent, scg::IEnumerable<Job> jobs, st::CancellationToken cancellationToken) =>
+            BatchCreateJobsAsync(parent, jobs, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchCreateJobs(gagr::ProjectName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateJobs(new BatchCreateJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(gagr::ProjectName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateJobsAsync(new BatchCreateJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(gagr::ProjectName parent, scg::IEnumerable<Job> jobs, st::CancellationToken cancellationToken) =>
+            BatchCreateJobsAsync(parent, jobs, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchCreateJobs(TenantName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateJobs(new BatchCreateJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(TenantName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateJobsAsync(new BatchCreateJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(TenantName parent, scg::IEnumerable<Job> jobs, st::CancellationToken cancellationToken) =>
             BatchCreateJobsAsync(parent, jobs, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1162,6 +1366,142 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchUpdateJobs(gagr::ProjectName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateJobs(new BatchUpdateJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(gagr::ProjectName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateJobsAsync(new BatchUpdateJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(gagr::ProjectName parent, scg::IEnumerable<Job> jobs, st::CancellationToken cancellationToken) =>
+            BatchUpdateJobsAsync(parent, jobs, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchUpdateJobs(TenantName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateJobs(new BatchUpdateJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(TenantName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateJobsAsync(new BatchUpdateJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Jobs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(TenantName parent, scg::IEnumerable<Job> jobs, st::CancellationToken cancellationToken) =>
+            BatchUpdateJobsAsync(parent, jobs, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="jobs">
+        /// Required. The jobs to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchUpdateJobs(TenantOrProjectName parent, scg::IEnumerable<Job> jobs, gaxgrpc::CallSettings callSettings = null) =>
             BatchUpdateJobs(new BatchUpdateJobsRequest
             {
@@ -1533,6 +1873,190 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteJobs(gagr::ProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteJobs(new BatchDeleteJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of [Job][google.cloud.talent.v4beta1.Job]s by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be deleted.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId` (Required)
+        /// 
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteJobsAsync(gagr::ProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteJobsAsync(new BatchDeleteJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of [Job][google.cloud.talent.v4beta1.Job]s by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be deleted.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId` (Required)
+        /// 
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteJobsAsync(gagr::ProjectName parent, string filter, st::CancellationToken cancellationToken) =>
+            BatchDeleteJobsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a list of [Job][google.cloud.talent.v4beta1.Job]s by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be deleted.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId` (Required)
+        /// 
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteJobs(TenantName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteJobs(new BatchDeleteJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of [Job][google.cloud.talent.v4beta1.Job]s by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be deleted.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId` (Required)
+        /// 
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteJobsAsync(TenantName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteJobsAsync(new BatchDeleteJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of [Job][google.cloud.talent.v4beta1.Job]s by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be deleted.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId` (Required)
+        /// 
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteJobsAsync(TenantName parent, string filter, st::CancellationToken cancellationToken) =>
+            BatchDeleteJobsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a list of [Job][google.cloud.talent.v4beta1.Job]s by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be deleted.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId` (Required)
+        /// 
+        /// Sample Query: companyName = "projects/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual void BatchDeleteJobs(TenantOrProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
             BatchDeleteJobs(new BatchDeleteJobsRequest
             {
@@ -1711,6 +2235,202 @@ namespace Google.Cloud.Talent.V4Beta1
             ListJobsAsync(new ListJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists jobs by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be enumerated.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// OPEN if no value is specified.
+        /// 
+        /// Sample Query:
+        /// 
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// requisitionId = "req-1"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// status = "EXPIRED"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(gagr::ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobs(new ListJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists jobs by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be enumerated.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// OPEN if no value is specified.
+        /// 
+        /// Sample Query:
+        /// 
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// requisitionId = "req-1"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// status = "EXPIRED"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(gagr::ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobsAsync(new ListJobsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists jobs by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be enumerated.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// OPEN if no value is specified.
+        /// 
+        /// Sample Query:
+        /// 
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// requisitionId = "req-1"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// status = "EXPIRED"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(TenantName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobs(new ListJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists jobs by filter.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the job is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created. For example, "projects/foo".
+        /// </param>
+        /// <param name="filter">
+        /// Required. The filter string specifies the jobs to be enumerated.
+        /// 
+        /// Supported operator: =, AND
+        /// 
+        /// The fields eligible for filtering are:
+        /// 
+        /// * `companyName` (Required)
+        /// * `requisitionId`
+        /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// OPEN if no value is specified.
+        /// 
+        /// Sample Query:
+        /// 
+        /// * companyName = "projects/foo/tenants/bar/companies/baz"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// requisitionId = "req-1"
+        /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
+        /// status = "EXPIRED"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(TenantName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListJobsAsync(new ListJobsRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,

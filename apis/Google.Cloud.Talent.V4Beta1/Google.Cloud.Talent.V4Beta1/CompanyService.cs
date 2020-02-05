@@ -81,13 +81,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CompanyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest), global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser, new[]{ "Parent", "Company" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest), global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest), global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser, new[]{ "Company", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest), global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest), global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "RequireOpenJobs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse), global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser, new[]{ "Companies", "NextPageToken", "Metadata" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest), global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser, new[]{ "Parent", "Company" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest), global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest), global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser, new[]{ "Company", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest), global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest), global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "RequireOpenJobs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse), global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser, new[]{ "Companies", "NextPageToken", "Metadata" }, null, null, null, null)
           }));
     }
     #endregion

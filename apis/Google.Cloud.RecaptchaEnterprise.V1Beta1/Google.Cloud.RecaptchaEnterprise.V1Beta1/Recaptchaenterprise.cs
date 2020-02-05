@@ -145,23 +145,23 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "bnRlcnByaXNlXFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser, new[]{ "Parent", "Assessment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser, new[]{ "Name", "Annotation" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser, new[]{ "Name", "Event", "Score", "TokenProperties", "Reasons" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Types.ClassificationReason) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event.Parser, new[]{ "Token", "SiteKey", "UserAgent", "UserIpAddress", "ExpectedAction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Parser, new[]{ "Valid", "InvalidReason", "CreateTime", "Hostname", "Action" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest.Parser, new[]{ "Parent", "Key" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse.Parser, new[]{ "Keys", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest.Parser, new[]{ "Key", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key.Parser, new[]{ "Name", "DisplayName", "WebSettings", "AndroidSettings", "IosSettings" }, new[]{ "PlatformSettings" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Parser, new[]{ "EnforceAllowedDomains", "AllowedDomains", "AllowAmpTraffic", "IntegrationType", "ChallengeSecurityPreference" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType), typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings.Parser, new[]{ "AllowedPackageNames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings.Parser, new[]{ "AllowedBundleIds" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser, new[]{ "Parent", "Assessment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser, new[]{ "Name", "Annotation" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser, new[]{ "Name", "Event", "Score", "TokenProperties", "Reasons" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Types.ClassificationReason) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event.Parser, new[]{ "Token", "SiteKey", "UserAgent", "UserIpAddress", "ExpectedAction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Parser, new[]{ "Valid", "InvalidReason", "CreateTime", "Hostname", "Action" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest.Parser, new[]{ "Parent", "Key" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse.Parser, new[]{ "Keys", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest.Parser, new[]{ "Key", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key.Parser, new[]{ "Name", "DisplayName", "WebSettings", "AndroidSettings", "IosSettings" }, new[]{ "PlatformSettings" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Parser, new[]{ "EnforceAllowedDomains", "AllowedDomains", "AllowAmpTraffic", "IntegrationType", "ChallengeSecurityPreference" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType), typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AndroidKeySettings.Parser, new[]{ "AllowedPackageNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.IOSKeySettings.Parser, new[]{ "AllowedBundleIds" }, null, null, null, null)
           }));
     }
     #endregion
@@ -396,7 +396,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     /// <summary>Field number for the "annotation" field.</summary>
     public const int AnnotationFieldNumber = 2;
-    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation annotation_ = 0;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation annotation_ = global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified;
     /// <summary>
     /// Required. The annotation that will be assigned to the Event.
     /// </summary>
@@ -430,7 +430,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Annotation != 0) hash ^= Annotation.GetHashCode();
+      if (Annotation != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified) hash ^= Annotation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -448,7 +448,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Annotation != 0) {
+      if (Annotation != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Annotation);
       }
@@ -463,7 +463,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Annotation != 0) {
+      if (Annotation != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Annotation);
       }
       if (_unknownFields != null) {
@@ -480,7 +480,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Annotation != 0) {
+      if (other.Annotation != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified) {
         Annotation = other.Annotation;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1259,7 +1259,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     /// <summary>Field number for the "invalid_reason" field.</summary>
     public const int InvalidReasonFieldNumber = 2;
-    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason invalidReason_ = 0;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason invalidReason_ = global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason.Unspecified;
     /// <summary>
     /// Reason associated with the response when valid = false.
     /// </summary>
@@ -1338,7 +1338,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Valid != false) hash ^= Valid.GetHashCode();
-      if (InvalidReason != 0) hash ^= InvalidReason.GetHashCode();
+      if (InvalidReason != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason.Unspecified) hash ^= InvalidReason.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
       if (Action.Length != 0) hash ^= Action.GetHashCode();
@@ -1359,7 +1359,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(8);
         output.WriteBool(Valid);
       }
-      if (InvalidReason != 0) {
+      if (InvalidReason != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) InvalidReason);
       }
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (Valid != false) {
         size += 1 + 1;
       }
-      if (InvalidReason != 0) {
+      if (InvalidReason != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InvalidReason);
       }
       if (createTime_ != null) {
@@ -1412,7 +1412,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (other.Valid != false) {
         Valid = other.Valid;
       }
-      if (other.InvalidReason != 0) {
+      if (other.InvalidReason != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason.Unspecified) {
         InvalidReason = other.InvalidReason;
       }
       if (other.createTime_ != null) {
@@ -2901,7 +2901,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     /// <summary>Field number for the "integration_type" field.</summary>
     public const int IntegrationTypeFieldNumber = 4;
-    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType integrationType_ = 0;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType integrationType_ = global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType.Unspecified;
     /// <summary>
     /// Required. Describes how this key is integrated with the website.
     /// </summary>
@@ -2915,7 +2915,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     /// <summary>Field number for the "challenge_security_preference" field.</summary>
     public const int ChallengeSecurityPreferenceFieldNumber = 5;
-    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference challengeSecurityPreference_ = 0;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference challengeSecurityPreference_ = global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference.Unspecified;
     /// <summary>
     /// Settings for the frequency and difficulty at which this key triggers
     /// captcha challenges. This should only be specified for IntegrationTypes
@@ -2956,8 +2956,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (EnforceAllowedDomains != false) hash ^= EnforceAllowedDomains.GetHashCode();
       hash ^= allowedDomains_.GetHashCode();
       if (AllowAmpTraffic != false) hash ^= AllowAmpTraffic.GetHashCode();
-      if (IntegrationType != 0) hash ^= IntegrationType.GetHashCode();
-      if (ChallengeSecurityPreference != 0) hash ^= ChallengeSecurityPreference.GetHashCode();
+      if (IntegrationType != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType.Unspecified) hash ^= IntegrationType.GetHashCode();
+      if (ChallengeSecurityPreference != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference.Unspecified) hash ^= ChallengeSecurityPreference.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2980,11 +2980,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(24);
         output.WriteBool(EnforceAllowedDomains);
       }
-      if (IntegrationType != 0) {
+      if (IntegrationType != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) IntegrationType);
       }
-      if (ChallengeSecurityPreference != 0) {
+      if (ChallengeSecurityPreference != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) ChallengeSecurityPreference);
       }
@@ -3003,10 +3003,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (AllowAmpTraffic != false) {
         size += 1 + 1;
       }
-      if (IntegrationType != 0) {
+      if (IntegrationType != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntegrationType);
       }
-      if (ChallengeSecurityPreference != 0) {
+      if (ChallengeSecurityPreference != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChallengeSecurityPreference);
       }
       if (_unknownFields != null) {
@@ -3027,10 +3027,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (other.AllowAmpTraffic != false) {
         AllowAmpTraffic = other.AllowAmpTraffic;
       }
-      if (other.IntegrationType != 0) {
+      if (other.IntegrationType != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.IntegrationType.Unspecified) {
         IntegrationType = other.IntegrationType;
       }
-      if (other.ChallengeSecurityPreference != 0) {
+      if (other.ChallengeSecurityPreference != global::Google.Cloud.RecaptchaEnterprise.V1Beta1.WebKeySettings.Types.ChallengeSecurityPreference.Unspecified) {
         ChallengeSecurityPreference = other.ChallengeSecurityPreference;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

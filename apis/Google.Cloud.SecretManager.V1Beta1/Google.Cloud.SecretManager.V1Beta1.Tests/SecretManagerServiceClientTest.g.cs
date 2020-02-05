@@ -156,7 +156,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateSecret_ResourceNames()
+        public void CreateSecretResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             CreateSecretRequest request = new CreateSecretRequest
@@ -186,7 +186,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateSecretAsync_ResourceNames()
+        public async stt::Task CreateSecretResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             CreateSecretRequest request = new CreateSecretRequest
@@ -314,7 +314,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AddSecretVersion_ResourceNames()
+        public void AddSecretVersionResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             AddSecretVersionRequest request = new AddSecretVersionRequest
@@ -337,7 +337,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task AddSecretVersionAsync_ResourceNames()
+        public async stt::Task AddSecretVersionResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             AddSecretVersionRequest request = new AddSecretVersionRequest
@@ -478,7 +478,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSecret_ResourceNames()
+        public void GetSecretResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             GetSecretRequest request = new GetSecretRequest
@@ -506,7 +506,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSecretAsync_ResourceNames()
+        public async stt::Task GetSecretResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             GetSecretRequest request = new GetSecretRequest
@@ -718,7 +718,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteSecret_ResourceNames()
+        public void DeleteSecretResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             DeleteSecretRequest request = new DeleteSecretRequest
@@ -733,7 +733,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteSecretAsync_ResourceNames()
+        public async stt::Task DeleteSecretResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             DeleteSecretRequest request = new DeleteSecretRequest
@@ -841,7 +841,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSecretVersion_ResourceNames()
+        public void GetSecretVersionResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             GetSecretVersionRequest request = new GetSecretVersionRequest
@@ -863,7 +863,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSecretVersionAsync_ResourceNames()
+        public async stt::Task GetSecretVersionResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             GetSecretVersionRequest request = new GetSecretVersionRequest
@@ -971,7 +971,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AccessSecretVersion_ResourceNames()
+        public void AccessSecretVersionResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             AccessSecretVersionRequest request = new AccessSecretVersionRequest
@@ -991,7 +991,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task AccessSecretVersionAsync_ResourceNames()
+        public async stt::Task AccessSecretVersionResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             AccessSecretVersionRequest request = new AccessSecretVersionRequest
@@ -1105,7 +1105,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DisableSecretVersion_ResourceNames()
+        public void DisableSecretVersionResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             DisableSecretVersionRequest request = new DisableSecretVersionRequest
@@ -1127,7 +1127,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DisableSecretVersionAsync_ResourceNames()
+        public async stt::Task DisableSecretVersionResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             DisableSecretVersionRequest request = new DisableSecretVersionRequest
@@ -1243,7 +1243,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void EnableSecretVersion_ResourceNames()
+        public void EnableSecretVersionResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             EnableSecretVersionRequest request = new EnableSecretVersionRequest
@@ -1265,7 +1265,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task EnableSecretVersionAsync_ResourceNames()
+        public async stt::Task EnableSecretVersionResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             EnableSecretVersionRequest request = new EnableSecretVersionRequest
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DestroySecretVersion_ResourceNames()
+        public void DestroySecretVersionResourceNames()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             DestroySecretVersionRequest request = new DestroySecretVersionRequest
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DestroySecretVersionAsync_ResourceNames()
+        public async stt::Task DestroySecretVersionResourceNamesAsync()
         {
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             DestroySecretVersionRequest request = new DestroySecretVersionRequest

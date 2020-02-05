@@ -139,22 +139,22 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "YTM7dGFza3OiAgVUQVNLU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TaskReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest), global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse), global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse.Parser, new[]{ "Queues", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest), global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest), global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest.Parser, new[]{ "Parent", "Queue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest), global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest.Parser, new[]{ "Queue", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest), global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest), global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest), global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest), global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest), global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest.Parser, new[]{ "Parent", "ResponseView", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse), global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest), global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest), global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser, new[]{ "Parent", "Task", "ResponseView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest), global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest), global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest), global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse), global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse.Parser, new[]{ "Queues", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest), global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest), global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest.Parser, new[]{ "Parent", "Queue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest), global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest.Parser, new[]{ "Queue", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest), global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest), global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest), global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest), global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest), global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest.Parser, new[]{ "Parent", "ResponseView", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse), global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest), global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest), global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser, new[]{ "Parent", "Task", "ResponseView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest), global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest), global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1681,7 +1681,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Field number for the "response_view" field.</summary>
     public const int ResponseViewFieldNumber = 2;
-    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = 0;
+    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
     /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
     /// returned.
@@ -1771,7 +1771,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (ResponseView != 0) hash ^= ResponseView.GetHashCode();
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) hash ^= ResponseView.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ResponseView);
       }
@@ -1814,7 +1814,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseView);
       }
       if (PageSize != 0) {
@@ -1837,7 +1837,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
-      if (other.ResponseView != 0) {
+      if (other.ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         ResponseView = other.ResponseView;
       }
       if (other.PageSize != 0) {
@@ -2098,7 +2098,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Field number for the "response_view" field.</summary>
     public const int ResponseViewFieldNumber = 2;
-    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = 0;
+    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
     /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
     /// returned.
@@ -2143,7 +2143,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (ResponseView != 0) hash ^= ResponseView.GetHashCode();
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) hash ^= ResponseView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2161,7 +2161,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ResponseView);
       }
@@ -2176,7 +2176,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseView);
       }
       if (_unknownFields != null) {
@@ -2193,7 +2193,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.ResponseView != 0) {
+      if (other.ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         ResponseView = other.ResponseView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2325,7 +2325,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Field number for the "response_view" field.</summary>
     public const int ResponseViewFieldNumber = 3;
-    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = 0;
+    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
     /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
     /// returned.
@@ -2372,7 +2372,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (task_ != null) hash ^= Task.GetHashCode();
-      if (ResponseView != 0) hash ^= ResponseView.GetHashCode();
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) hash ^= ResponseView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2394,7 +2394,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(18);
         output.WriteMessage(Task);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) ResponseView);
       }
@@ -2412,7 +2412,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (task_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Task);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseView);
       }
       if (_unknownFields != null) {
@@ -2435,7 +2435,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         }
         Task.MergeFrom(other.Task);
       }
-      if (other.ResponseView != 0) {
+      if (other.ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         ResponseView = other.ResponseView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2663,7 +2663,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Field number for the "response_view" field.</summary>
     public const int ResponseViewFieldNumber = 2;
-    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = 0;
+    private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
     /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
     /// returned.
@@ -2708,7 +2708,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (ResponseView != 0) hash ^= ResponseView.GetHashCode();
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) hash ^= ResponseView.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2726,7 +2726,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ResponseView);
       }
@@ -2741,7 +2741,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (ResponseView != 0) {
+      if (ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseView);
       }
       if (_unknownFields != null) {
@@ -2758,7 +2758,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.ResponseView != 0) {
+      if (other.ResponseView != global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified) {
         ResponseView = other.ResponseView;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

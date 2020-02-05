@@ -29,7 +29,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     public sealed class GeneratedAgentsClientSnippets
     {
         /// <summary>Snippet for GetAgent</summary>
-        public void GetAgent_RequestObject()
+        public void GetAgentRequestObject()
         {
             // Snippet: GetAgent(GetAgentRequest, CallSettings)
             // Create client
@@ -45,7 +45,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetAgentAsync</summary>
-        public async Task GetAgentAsync_RequestObject()
+        public async Task GetAgentRequestObjectAsync()
         {
             // Snippet: GetAgentAsync(GetAgentRequest, CallSettings)
             // Additional: GetAgentAsync(GetAgentRequest, CancellationToken)
@@ -89,7 +89,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetAgent</summary>
-        public void GetAgent_ResourceNames()
+        public void GetAgentResourceNames()
         {
             // Snippet: GetAgent(ProjectName, CallSettings)
             // Create client
@@ -102,7 +102,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetAgentAsync</summary>
-        public async Task GetAgentAsync_ResourceNames()
+        public async Task GetAgentResourceNamesAsync()
         {
             // Snippet: GetAgentAsync(ProjectName, CallSettings)
             // Additional: GetAgentAsync(ProjectName, CancellationToken)
@@ -116,7 +116,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SetAgent</summary>
-        public void SetAgent_RequestObject()
+        public void SetAgentRequestObject()
         {
             // Snippet: SetAgent(SetAgentRequest, CallSettings)
             // Create client
@@ -133,7 +133,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SetAgentAsync</summary>
-        public async Task SetAgentAsync_RequestObject()
+        public async Task SetAgentRequestObjectAsync()
         {
             // Snippet: SetAgentAsync(SetAgentRequest, CallSettings)
             // Additional: SetAgentAsync(SetAgentRequest, CancellationToken)
@@ -178,7 +178,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAgent</summary>
-        public void DeleteAgent_RequestObject()
+        public void DeleteAgentRequestObject()
         {
             // Snippet: DeleteAgent(DeleteAgentRequest, CallSettings)
             // Create client
@@ -194,7 +194,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAgentAsync</summary>
-        public async Task DeleteAgentAsync_RequestObject()
+        public async Task DeleteAgentRequestObjectAsync()
         {
             // Snippet: DeleteAgentAsync(DeleteAgentRequest, CallSettings)
             // Additional: DeleteAgentAsync(DeleteAgentRequest, CancellationToken)
@@ -238,7 +238,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAgent</summary>
-        public void DeleteAgent_ResourceNames()
+        public void DeleteAgentResourceNames()
         {
             // Snippet: DeleteAgent(ProjectName, CallSettings)
             // Create client
@@ -251,7 +251,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAgentAsync</summary>
-        public async Task DeleteAgentAsync_ResourceNames()
+        public async Task DeleteAgentResourceNamesAsync()
         {
             // Snippet: DeleteAgentAsync(ProjectName, CallSettings)
             // Additional: DeleteAgentAsync(ProjectName, CancellationToken)
@@ -265,7 +265,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SearchAgents</summary>
-        public void SearchAgents_RequestObject()
+        public void SearchAgentsRequestObject()
         {
             // Snippet: SearchAgents(SearchAgentsRequest, CallSettings)
             // Create client
@@ -313,7 +313,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SearchAgents</summary>
-        public async Task SearchAgentsAsync_RequestObject()
+        public async Task SearchAgentsRequestObjectAsync()
         {
             // Snippet: SearchAgentsAsync(SearchAgentsRequest, CallSettings)
             // Create client
@@ -451,7 +451,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SearchAgents</summary>
-        public void SearchAgents_ResourceNames()
+        public void SearchAgentsResourceNames()
         {
             // Snippet: SearchAgents(ProjectName, string, int?, CallSettings)
             // Create client
@@ -496,7 +496,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SearchAgents</summary>
-        public async Task SearchAgentsAsync_ResourceNames()
+        public async Task SearchAgentsResourceNamesAsync()
         {
             // Snippet: SearchAgentsAsync(ProjectName, string, int?, CallSettings)
             // Create client
@@ -541,7 +541,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for TrainAgent</summary>
-        public void TrainAgent_RequestObject()
+        public void TrainAgentRequestObject()
         {
             // Snippet: TrainAgent(TrainAgentRequest, CallSettings)
             // Create client
@@ -573,7 +573,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for TrainAgentAsync</summary>
-        public async Task TrainAgentAsync_RequestObject()
+        public async Task TrainAgentRequestObjectAsync()
         {
             // Snippet: TrainAgentAsync(TrainAgentRequest, CallSettings)
             // Additional: TrainAgentAsync(TrainAgentRequest, CancellationToken)
@@ -665,7 +665,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for TrainAgent</summary>
-        public void TrainAgent_ResourceNames()
+        public void TrainAgentResourceNames()
         {
             // Snippet: TrainAgent(ProjectName, CallSettings)
             // Create client
@@ -694,7 +694,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for TrainAgentAsync</summary>
-        public async Task TrainAgentAsync_ResourceNames()
+        public async Task TrainAgentResourceNamesAsync()
         {
             // Snippet: TrainAgentAsync(ProjectName, CallSettings)
             // Additional: TrainAgentAsync(ProjectName, CancellationToken)
@@ -724,7 +724,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ExportAgent</summary>
-        public void ExportAgent_RequestObject()
+        public void ExportAgentRequestObject()
         {
             // Snippet: ExportAgent(ExportAgentRequest, CallSettings)
             // Create client
@@ -757,7 +757,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ExportAgentAsync</summary>
-        public async Task ExportAgentAsync_RequestObject()
+        public async Task ExportAgentRequestObjectAsync()
         {
             // Snippet: ExportAgentAsync(ExportAgentRequest, CallSettings)
             // Additional: ExportAgentAsync(ExportAgentRequest, CancellationToken)
@@ -850,7 +850,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ExportAgent</summary>
-        public void ExportAgent_ResourceNames()
+        public void ExportAgentResourceNames()
         {
             // Snippet: ExportAgent(ProjectName, CallSettings)
             // Create client
@@ -879,7 +879,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ExportAgentAsync</summary>
-        public async Task ExportAgentAsync_ResourceNames()
+        public async Task ExportAgentResourceNamesAsync()
         {
             // Snippet: ExportAgentAsync(ProjectName, CallSettings)
             // Additional: ExportAgentAsync(ProjectName, CancellationToken)
@@ -909,7 +909,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ImportAgent</summary>
-        public void ImportAgent_RequestObject()
+        public void ImportAgentRequestObject()
         {
             // Snippet: ImportAgent(ImportAgentRequest, CallSettings)
             // Create client
@@ -943,7 +943,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ImportAgentAsync</summary>
-        public async Task ImportAgentAsync_RequestObject()
+        public async Task ImportAgentRequestObjectAsync()
         {
             // Snippet: ImportAgentAsync(ImportAgentRequest, CallSettings)
             // Additional: ImportAgentAsync(ImportAgentRequest, CancellationToken)
@@ -978,7 +978,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for RestoreAgent</summary>
-        public void RestoreAgent_RequestObject()
+        public void RestoreAgentRequestObject()
         {
             // Snippet: RestoreAgent(RestoreAgentRequest, CallSettings)
             // Create client
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for RestoreAgentAsync</summary>
-        public async Task RestoreAgentAsync_RequestObject()
+        public async Task RestoreAgentRequestObjectAsync()
         {
             // Snippet: RestoreAgentAsync(RestoreAgentRequest, CallSettings)
             // Additional: RestoreAgentAsync(RestoreAgentRequest, CancellationToken)

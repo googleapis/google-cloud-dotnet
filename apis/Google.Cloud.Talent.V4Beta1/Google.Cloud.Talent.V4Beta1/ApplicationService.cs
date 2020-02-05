@@ -80,13 +80,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "MTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ApplicationReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest), global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest.Parser, new[]{ "Parent", "Application" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest), global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest), global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest.Parser, new[]{ "Application", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest), global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest), global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse), global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse.Parser, new[]{ "Applications", "NextPageToken", "Metadata" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest), global::Google.Cloud.Talent.V4Beta1.CreateApplicationRequest.Parser, new[]{ "Parent", "Application" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest), global::Google.Cloud.Talent.V4Beta1.GetApplicationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest), global::Google.Cloud.Talent.V4Beta1.UpdateApplicationRequest.Parser, new[]{ "Application", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest), global::Google.Cloud.Talent.V4Beta1.DeleteApplicationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest), global::Google.Cloud.Talent.V4Beta1.ListApplicationsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse), global::Google.Cloud.Talent.V4Beta1.ListApplicationsResponse.Parser, new[]{ "Applications", "NextPageToken", "Metadata" }, null, null, null, null)
           }));
     }
     #endregion

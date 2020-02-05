@@ -31,7 +31,7 @@ namespace Google.Cloud.Container.V1.Snippets
     public sealed class GeneratedClusterManagerClientSnippets
     {
         /// <summary>Snippet for ListClusters</summary>
-        public void ListClusters_RequestObject()
+        public void ListClustersRequestObject()
         {
             // Snippet: ListClusters(ListClustersRequest, CallSettings)
             // Create client
@@ -44,7 +44,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync_RequestObject()
+        public async Task ListClustersRequestObjectAsync()
         {
             // Snippet: ListClustersAsync(ListClustersRequest, CallSettings)
             // Additional: ListClustersAsync(ListClustersRequest, CancellationToken)
@@ -114,7 +114,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetCluster</summary>
-        public void GetCluster_RequestObject()
+        public void GetClusterRequestObject()
         {
             // Snippet: GetCluster(GetClusterRequest, CallSettings)
             // Create client
@@ -127,7 +127,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync_RequestObject()
+        public async Task GetClusterRequestObjectAsync()
         {
             // Snippet: GetClusterAsync(GetClusterRequest, CallSettings)
             // Additional: GetClusterAsync(GetClusterRequest, CancellationToken)
@@ -199,7 +199,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCluster</summary>
-        public void CreateCluster_RequestObject()
+        public void CreateClusterRequestObject()
         {
             // Snippet: CreateCluster(CreateClusterRequest, CallSettings)
             // Create client
@@ -216,7 +216,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateClusterAsync</summary>
-        public async Task CreateClusterAsync_RequestObject()
+        public async Task CreateClusterRequestObjectAsync()
         {
             // Snippet: CreateClusterAsync(CreateClusterRequest, CallSettings)
             // Additional: CreateClusterAsync(CreateClusterRequest, CancellationToken)
@@ -294,7 +294,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCluster</summary>
-        public void UpdateCluster_RequestObject()
+        public void UpdateClusterRequestObject()
         {
             // Snippet: UpdateCluster(UpdateClusterRequest, CallSettings)
             // Create client
@@ -311,7 +311,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync_RequestObject()
+        public async Task UpdateClusterRequestObjectAsync()
         {
             // Snippet: UpdateClusterAsync(UpdateClusterRequest, CallSettings)
             // Additional: UpdateClusterAsync(UpdateClusterRequest, CancellationToken)
@@ -391,7 +391,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateNodePool</summary>
-        public void UpdateNodePool_RequestObject()
+        public void UpdateNodePoolRequestObject()
         {
             // Snippet: UpdateNodePool(UpdateNodePoolRequest, CallSettings)
             // Create client
@@ -409,7 +409,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateNodePoolAsync</summary>
-        public async Task UpdateNodePoolAsync_RequestObject()
+        public async Task UpdateNodePoolRequestObjectAsync()
         {
             // Snippet: UpdateNodePoolAsync(UpdateNodePoolRequest, CallSettings)
             // Additional: UpdateNodePoolAsync(UpdateNodePoolRequest, CancellationToken)
@@ -428,7 +428,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNodePoolAutoscaling</summary>
-        public void SetNodePoolAutoscaling_RequestObject()
+        public void SetNodePoolAutoscalingRequestObject()
         {
             // Snippet: SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest, CallSettings)
             // Create client
@@ -445,7 +445,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNodePoolAutoscalingAsync</summary>
-        public async Task SetNodePoolAutoscalingAsync_RequestObject()
+        public async Task SetNodePoolAutoscalingRequestObjectAsync()
         {
             // Snippet: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest, CallSettings)
             // Additional: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest, CancellationToken)
@@ -463,7 +463,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLoggingService</summary>
-        public void SetLoggingService_RequestObject()
+        public void SetLoggingServiceRequestObject()
         {
             // Snippet: SetLoggingService(SetLoggingServiceRequest, CallSettings)
             // Create client
@@ -481,7 +481,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLoggingServiceAsync</summary>
-        public async Task SetLoggingServiceAsync_RequestObject()
+        public async Task SetLoggingServiceRequestObjectAsync()
         {
             // Snippet: SetLoggingServiceAsync(SetLoggingServiceRequest, CallSettings)
             // Additional: SetLoggingServiceAsync(SetLoggingServiceRequest, CancellationToken)
@@ -562,7 +562,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMonitoringService</summary>
-        public void SetMonitoringService_RequestObject()
+        public void SetMonitoringServiceRequestObject()
         {
             // Snippet: SetMonitoringService(SetMonitoringServiceRequest, CallSettings)
             // Create client
@@ -579,7 +579,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMonitoringServiceAsync</summary>
-        public async Task SetMonitoringServiceAsync_RequestObject()
+        public async Task SetMonitoringServiceRequestObjectAsync()
         {
             // Snippet: SetMonitoringServiceAsync(SetMonitoringServiceRequest, CallSettings)
             // Additional: SetMonitoringServiceAsync(SetMonitoringServiceRequest, CancellationToken)
@@ -659,7 +659,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetAddonsConfig</summary>
-        public void SetAddonsConfig_RequestObject()
+        public void SetAddonsConfigRequestObject()
         {
             // Snippet: SetAddonsConfig(SetAddonsConfigRequest, CallSettings)
             // Create client
@@ -676,7 +676,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetAddonsConfigAsync</summary>
-        public async Task SetAddonsConfigAsync_RequestObject()
+        public async Task SetAddonsConfigRequestObjectAsync()
         {
             // Snippet: SetAddonsConfigAsync(SetAddonsConfigRequest, CallSettings)
             // Additional: SetAddonsConfigAsync(SetAddonsConfigRequest, CancellationToken)
@@ -756,7 +756,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLocations</summary>
-        public void SetLocations_RequestObject()
+        public void SetLocationsRequestObject()
         {
             // Snippet: SetLocations(SetLocationsRequest, CallSettings)
             // Create client
@@ -773,7 +773,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLocationsAsync</summary>
-        public async Task SetLocationsAsync_RequestObject()
+        public async Task SetLocationsRequestObjectAsync()
         {
             // Snippet: SetLocationsAsync(SetLocationsRequest, CallSettings)
             // Additional: SetLocationsAsync(SetLocationsRequest, CancellationToken)
@@ -853,7 +853,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateMaster</summary>
-        public void UpdateMaster_RequestObject()
+        public void UpdateMasterRequestObject()
         {
             // Snippet: UpdateMaster(UpdateMasterRequest, CallSettings)
             // Create client
@@ -870,7 +870,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateMasterAsync</summary>
-        public async Task UpdateMasterAsync_RequestObject()
+        public async Task UpdateMasterRequestObjectAsync()
         {
             // Snippet: UpdateMasterAsync(UpdateMasterRequest, CallSettings)
             // Additional: UpdateMasterAsync(UpdateMasterRequest, CancellationToken)
@@ -950,7 +950,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMasterAuth</summary>
-        public void SetMasterAuth_RequestObject()
+        public void SetMasterAuthRequestObject()
         {
             // Snippet: SetMasterAuth(SetMasterAuthRequest, CallSettings)
             // Create client
@@ -968,7 +968,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMasterAuthAsync</summary>
-        public async Task SetMasterAuthAsync_RequestObject()
+        public async Task SetMasterAuthRequestObjectAsync()
         {
             // Snippet: SetMasterAuthAsync(SetMasterAuthRequest, CallSettings)
             // Additional: SetMasterAuthAsync(SetMasterAuthRequest, CancellationToken)
@@ -987,7 +987,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteCluster</summary>
-        public void DeleteCluster_RequestObject()
+        public void DeleteClusterRequestObject()
         {
             // Snippet: DeleteCluster(DeleteClusterRequest, CallSettings)
             // Create client
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync_RequestObject()
+        public async Task DeleteClusterRequestObjectAsync()
         {
             // Snippet: DeleteClusterAsync(DeleteClusterRequest, CallSettings)
             // Additional: DeleteClusterAsync(DeleteClusterRequest, CancellationToken)
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListOperations</summary>
-        public void ListOperations_RequestObject()
+        public void ListOperationsRequestObject()
         {
             // Snippet: ListOperations(ListOperationsRequest, CallSettings)
             // Create client
@@ -1085,7 +1085,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync_RequestObject()
+        public async Task ListOperationsRequestObjectAsync()
         {
             // Snippet: ListOperationsAsync(ListOperationsRequest, CallSettings)
             // Additional: ListOperationsAsync(ListOperationsRequest, CancellationToken)
@@ -1128,7 +1128,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetOperation</summary>
-        public void GetOperation_RequestObject()
+        public void GetOperationRequestObject()
         {
             // Snippet: GetOperation(GetOperationRequest, CallSettings)
             // Create client
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync_RequestObject()
+        public async Task GetOperationRequestObjectAsync()
         {
             // Snippet: GetOperationAsync(GetOperationRequest, CallSettings)
             // Additional: GetOperationAsync(GetOperationRequest, CancellationToken)
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CancelOperation</summary>
-        public void CancelOperation_RequestObject()
+        public void CancelOperationRequestObject()
         {
             // Snippet: CancelOperation(CancelOperationRequest, CallSettings)
             // Create client
@@ -1199,7 +1199,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync_RequestObject()
+        public async Task CancelOperationRequestObjectAsync()
         {
             // Snippet: CancelOperationAsync(CancelOperationRequest, CallSettings)
             // Additional: CancelOperationAsync(CancelOperationRequest, CancellationToken)
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetServerConfig</summary>
-        public void GetServerConfig_RequestObject()
+        public void GetServerConfigRequestObject()
         {
             // Snippet: GetServerConfig(GetServerConfigRequest, CallSettings)
             // Create client
@@ -1284,7 +1284,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetServerConfigAsync</summary>
-        public async Task GetServerConfigAsync_RequestObject()
+        public async Task GetServerConfigRequestObjectAsync()
         {
             // Snippet: GetServerConfigAsync(GetServerConfigRequest, CallSettings)
             // Additional: GetServerConfigAsync(GetServerConfigRequest, CancellationToken)
@@ -1354,7 +1354,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListNodePools</summary>
-        public void ListNodePools_RequestObject()
+        public void ListNodePoolsRequestObject()
         {
             // Snippet: ListNodePools(ListNodePoolsRequest, CallSettings)
             // Create client
@@ -1367,7 +1367,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListNodePoolsAsync</summary>
-        public async Task ListNodePoolsAsync_RequestObject()
+        public async Task ListNodePoolsRequestObjectAsync()
         {
             // Snippet: ListNodePoolsAsync(ListNodePoolsRequest, CallSettings)
             // Additional: ListNodePoolsAsync(ListNodePoolsRequest, CancellationToken)
@@ -1439,7 +1439,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetNodePool</summary>
-        public void GetNodePool_RequestObject()
+        public void GetNodePoolRequestObject()
         {
             // Snippet: GetNodePool(GetNodePoolRequest, CallSettings)
             // Create client
@@ -1452,7 +1452,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetNodePoolAsync</summary>
-        public async Task GetNodePoolAsync_RequestObject()
+        public async Task GetNodePoolRequestObjectAsync()
         {
             // Snippet: GetNodePoolAsync(GetNodePoolRequest, CallSettings)
             // Additional: GetNodePoolAsync(GetNodePoolRequest, CancellationToken)
@@ -1526,7 +1526,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNodePool</summary>
-        public void CreateNodePool_RequestObject()
+        public void CreateNodePoolRequestObject()
         {
             // Snippet: CreateNodePool(CreateNodePoolRequest, CallSettings)
             // Create client
@@ -1543,7 +1543,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNodePoolAsync</summary>
-        public async Task CreateNodePoolAsync_RequestObject()
+        public async Task CreateNodePoolRequestObjectAsync()
         {
             // Snippet: CreateNodePoolAsync(CreateNodePoolRequest, CallSettings)
             // Additional: CreateNodePoolAsync(CreateNodePoolRequest, CancellationToken)
@@ -1623,7 +1623,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNodePool</summary>
-        public void DeleteNodePool_RequestObject()
+        public void DeleteNodePoolRequestObject()
         {
             // Snippet: DeleteNodePool(DeleteNodePoolRequest, CallSettings)
             // Create client
@@ -1636,7 +1636,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNodePoolAsync</summary>
-        public async Task DeleteNodePoolAsync_RequestObject()
+        public async Task DeleteNodePoolRequestObjectAsync()
         {
             // Snippet: DeleteNodePoolAsync(DeleteNodePoolRequest, CallSettings)
             // Additional: DeleteNodePoolAsync(DeleteNodePoolRequest, CancellationToken)
@@ -1710,7 +1710,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
-        public void RollbackNodePoolUpgrade_RequestObject()
+        public void RollbackNodePoolUpgradeRequestObject()
         {
             // Snippet: RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest, CallSettings)
             // Create client
@@ -1723,7 +1723,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
-        public async Task RollbackNodePoolUpgradeAsync_RequestObject()
+        public async Task RollbackNodePoolUpgradeRequestObjectAsync()
         {
             // Snippet: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest, CallSettings)
             // Additional: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest, CancellationToken)
@@ -1797,7 +1797,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNodePoolManagement</summary>
-        public void SetNodePoolManagement_RequestObject()
+        public void SetNodePoolManagementRequestObject()
         {
             // Snippet: SetNodePoolManagement(SetNodePoolManagementRequest, CallSettings)
             // Create client
@@ -1814,7 +1814,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNodePoolManagementAsync</summary>
-        public async Task SetNodePoolManagementAsync_RequestObject()
+        public async Task SetNodePoolManagementRequestObjectAsync()
         {
             // Snippet: SetNodePoolManagementAsync(SetNodePoolManagementRequest, CallSettings)
             // Additional: SetNodePoolManagementAsync(SetNodePoolManagementRequest, CancellationToken)
@@ -1832,7 +1832,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLabels</summary>
-        public void SetLabels_RequestObject()
+        public void SetLabelsRequestObject()
         {
             // Snippet: SetLabels(SetLabelsRequest, CallSettings)
             // Create client
@@ -1850,7 +1850,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLabelsAsync</summary>
-        public async Task SetLabelsAsync_RequestObject()
+        public async Task SetLabelsRequestObjectAsync()
         {
             // Snippet: SetLabelsAsync(SetLabelsRequest, CallSettings)
             // Additional: SetLabelsAsync(SetLabelsRequest, CancellationToken)
@@ -1869,7 +1869,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLegacyAbac</summary>
-        public void SetLegacyAbac_RequestObject()
+        public void SetLegacyAbacRequestObject()
         {
             // Snippet: SetLegacyAbac(SetLegacyAbacRequest, CallSettings)
             // Create client
@@ -1886,7 +1886,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLegacyAbacAsync</summary>
-        public async Task SetLegacyAbacAsync_RequestObject()
+        public async Task SetLegacyAbacRequestObjectAsync()
         {
             // Snippet: SetLegacyAbacAsync(SetLegacyAbacRequest, CallSettings)
             // Additional: SetLegacyAbacAsync(SetLegacyAbacRequest, CancellationToken)
@@ -1966,7 +1966,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for StartIPRotation</summary>
-        public void StartIPRotation_RequestObject()
+        public void StartIPRotationRequestObject()
         {
             // Snippet: StartIPRotation(StartIPRotationRequest, CallSettings)
             // Create client
@@ -1983,7 +1983,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for StartIPRotationAsync</summary>
-        public async Task StartIPRotationAsync_RequestObject()
+        public async Task StartIPRotationRequestObjectAsync()
         {
             // Snippet: StartIPRotationAsync(StartIPRotationRequest, CallSettings)
             // Additional: StartIPRotationAsync(StartIPRotationRequest, CancellationToken)
@@ -2059,7 +2059,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CompleteIPRotation</summary>
-        public void CompleteIPRotation_RequestObject()
+        public void CompleteIPRotationRequestObject()
         {
             // Snippet: CompleteIPRotation(CompleteIPRotationRequest, CallSettings)
             // Create client
@@ -2072,7 +2072,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CompleteIPRotationAsync</summary>
-        public async Task CompleteIPRotationAsync_RequestObject()
+        public async Task CompleteIPRotationRequestObjectAsync()
         {
             // Snippet: CompleteIPRotationAsync(CompleteIPRotationRequest, CallSettings)
             // Additional: CompleteIPRotationAsync(CompleteIPRotationRequest, CancellationToken)
@@ -2144,7 +2144,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNodePoolSize</summary>
-        public void SetNodePoolSize_RequestObject()
+        public void SetNodePoolSizeRequestObject()
         {
             // Snippet: SetNodePoolSize(SetNodePoolSizeRequest, CallSettings)
             // Create client
@@ -2161,7 +2161,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNodePoolSizeAsync</summary>
-        public async Task SetNodePoolSizeAsync_RequestObject()
+        public async Task SetNodePoolSizeRequestObjectAsync()
         {
             // Snippet: SetNodePoolSizeAsync(SetNodePoolSizeRequest, CallSettings)
             // Additional: SetNodePoolSizeAsync(SetNodePoolSizeRequest, CancellationToken)
@@ -2179,7 +2179,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNetworkPolicy</summary>
-        public void SetNetworkPolicy_RequestObject()
+        public void SetNetworkPolicyRequestObject()
         {
             // Snippet: SetNetworkPolicy(SetNetworkPolicyRequest, CallSettings)
             // Create client
@@ -2196,7 +2196,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNetworkPolicyAsync</summary>
-        public async Task SetNetworkPolicyAsync_RequestObject()
+        public async Task SetNetworkPolicyRequestObjectAsync()
         {
             // Snippet: SetNetworkPolicyAsync(SetNetworkPolicyRequest, CallSettings)
             // Additional: SetNetworkPolicyAsync(SetNetworkPolicyRequest, CancellationToken)
@@ -2276,7 +2276,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMaintenancePolicy</summary>
-        public void SetMaintenancePolicy_RequestObject()
+        public void SetMaintenancePolicyRequestObject()
         {
             // Snippet: SetMaintenancePolicy(SetMaintenancePolicyRequest, CallSettings)
             // Create client
@@ -2296,7 +2296,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
-        public async Task SetMaintenancePolicyAsync_RequestObject()
+        public async Task SetMaintenancePolicyRequestObjectAsync()
         {
             // Snippet: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest, CallSettings)
             // Additional: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest, CancellationToken)
@@ -2379,7 +2379,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListUsableSubnetworks</summary>
-        public void ListUsableSubnetworks_RequestObject()
+        public void ListUsableSubnetworksRequestObject()
         {
             // Snippet: ListUsableSubnetworks(ListUsableSubnetworksRequest, CallSettings)
             // Create client
@@ -2428,7 +2428,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListUsableSubnetworks</summary>
-        public async Task ListUsableSubnetworksAsync_RequestObject()
+        public async Task ListUsableSubnetworksRequestObjectAsync()
         {
             // Snippet: ListUsableSubnetworksAsync(ListUsableSubnetworksRequest, CallSettings)
             // Create client

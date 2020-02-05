@@ -24,7 +24,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
     public sealed class GeneratedDatastoreClientSnippets
     {
         /// <summary>Snippet for Lookup</summary>
-        public void Lookup_RequestObject()
+        public void LookupRequestObject()
         {
             // Snippet: Lookup(LookupRequest, CallSettings)
             // Create client
@@ -42,7 +42,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for LookupAsync</summary>
-        public async Task LookupAsync_RequestObject()
+        public async Task LookupRequestObjectAsync()
         {
             // Snippet: LookupAsync(LookupRequest, CallSettings)
             // Additional: LookupAsync(LookupRequest, CancellationToken)
@@ -92,7 +92,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for RunQuery</summary>
-        public void RunQuery_RequestObject()
+        public void RunQueryRequestObject()
         {
             // Snippet: RunQuery(RunQueryRequest, CallSettings)
             // Create client
@@ -112,7 +112,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for RunQueryAsync</summary>
-        public async Task RunQueryAsync_RequestObject()
+        public async Task RunQueryRequestObjectAsync()
         {
             // Snippet: RunQueryAsync(RunQueryRequest, CallSettings)
             // Additional: RunQueryAsync(RunQueryRequest, CancellationToken)
@@ -133,7 +133,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransaction</summary>
-        public void BeginTransaction_RequestObject()
+        public void BeginTransactionRequestObject()
         {
             // Snippet: BeginTransaction(BeginTransactionRequest, CallSettings)
             // Create client
@@ -150,7 +150,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for BeginTransactionAsync</summary>
-        public async Task BeginTransactionAsync_RequestObject()
+        public async Task BeginTransactionRequestObjectAsync()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest, CallSettings)
             // Additional: BeginTransactionAsync(BeginTransactionRequest, CancellationToken)
@@ -195,7 +195,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for Commit</summary>
-        public void Commit_RequestObject()
+        public void CommitRequestObject()
         {
             // Snippet: Commit(CommitRequest, CallSettings)
             // Create client
@@ -214,7 +214,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for CommitAsync</summary>
-        public async Task CommitAsync_RequestObject()
+        public async Task CommitRequestObjectAsync()
         {
             // Snippet: CommitAsync(CommitRequest, CallSettings)
             // Additional: CommitAsync(CommitRequest, CancellationToken)
@@ -298,7 +298,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for Rollback</summary>
-        public void Rollback_RequestObject()
+        public void RollbackRequestObject()
         {
             // Snippet: Rollback(RollbackRequest, CallSettings)
             // Create client
@@ -315,7 +315,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackAsync</summary>
-        public async Task RollbackAsync_RequestObject()
+        public async Task RollbackRequestObjectAsync()
         {
             // Snippet: RollbackAsync(RollbackRequest, CallSettings)
             // Additional: RollbackAsync(RollbackRequest, CancellationToken)
@@ -362,7 +362,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for AllocateIds</summary>
-        public void AllocateIds_RequestObject()
+        public void AllocateIdsRequestObject()
         {
             // Snippet: AllocateIds(AllocateIdsRequest, CallSettings)
             // Create client
@@ -379,7 +379,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for AllocateIdsAsync</summary>
-        public async Task AllocateIdsAsync_RequestObject()
+        public async Task AllocateIdsRequestObjectAsync()
         {
             // Snippet: AllocateIdsAsync(AllocateIdsRequest, CallSettings)
             // Additional: AllocateIdsAsync(AllocateIdsRequest, CancellationToken)
@@ -426,7 +426,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for ReserveIds</summary>
-        public void ReserveIds_RequestObject()
+        public void ReserveIdsRequestObject()
         {
             // Snippet: ReserveIds(ReserveIdsRequest, CallSettings)
             // Create client
@@ -444,7 +444,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         /// <summary>Snippet for ReserveIdsAsync</summary>
-        public async Task ReserveIdsAsync_RequestObject()
+        public async Task ReserveIdsRequestObjectAsync()
         {
             // Snippet: ReserveIdsAsync(ReserveIdsRequest, CallSettings)
             // Additional: ReserveIdsAsync(ReserveIdsRequest, CancellationToken)

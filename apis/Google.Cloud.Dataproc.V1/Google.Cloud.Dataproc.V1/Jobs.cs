@@ -191,28 +191,28 @@ namespace Google.Cloud.Dataproc.V1 {
             "ZGF0YXByb2NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.LoggingConfig), global::Google.Cloud.Dataproc.V1.LoggingConfig.Parser, new[]{ "DriverLogLevels" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.HadoopJob), global::Google.Cloud.Dataproc.V1.HadoopJob.Parser, new[]{ "MainJarFileUri", "MainClass", "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, new[]{ "Driver" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkJob), global::Google.Cloud.Dataproc.V1.SparkJob.Parser, new[]{ "MainJarFileUri", "MainClass", "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, new[]{ "Driver" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PySparkJob), global::Google.Cloud.Dataproc.V1.PySparkJob.Parser, new[]{ "MainPythonFileUri", "Args", "PythonFileUris", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.QueryList), global::Google.Cloud.Dataproc.V1.QueryList.Parser, new[]{ "Queries" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.HiveJob), global::Google.Cloud.Dataproc.V1.HiveJob.Parser, new[]{ "QueryFileUri", "QueryList", "ContinueOnFailure", "ScriptVariables", "Properties", "JarFileUris" }, new[]{ "Queries" }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkSqlJob), global::Google.Cloud.Dataproc.V1.SparkSqlJob.Parser, new[]{ "QueryFileUri", "QueryList", "ScriptVariables", "Properties", "JarFileUris", "LoggingConfig" }, new[]{ "Queries" }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PigJob), global::Google.Cloud.Dataproc.V1.PigJob.Parser, new[]{ "QueryFileUri", "QueryList", "ContinueOnFailure", "ScriptVariables", "Properties", "JarFileUris", "LoggingConfig" }, new[]{ "Queries" }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobPlacement), global::Google.Cloud.Dataproc.V1.JobPlacement.Parser, new[]{ "ClusterName", "ClusterUuid" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobStatus), global::Google.Cloud.Dataproc.V1.JobStatus.Parser, new[]{ "State", "Details", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobReference), global::Google.Cloud.Dataproc.V1.JobReference.Parser, new[]{ "ProjectId", "JobId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.YarnApplication), global::Google.Cloud.Dataproc.V1.YarnApplication.Parser, new[]{ "Name", "State", "Progress", "TrackingUrl" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkSqlJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid" }, new[]{ "TypeJob" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobScheduling), global::Google.Cloud.Dataproc.V1.JobScheduling.Parser, new[]{ "MaxFailuresPerHour" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SubmitJobRequest), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser, new[]{ "ProjectId", "Region", "Job", "RequestId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetJobRequest), global::Google.Cloud.Dataproc.V1.GetJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest), global::Google.Cloud.Dataproc.V1.ListJobsRequest.Parser, new[]{ "ProjectId", "Region", "PageSize", "PageToken", "ClusterName", "JobStateMatcher", "Filter" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateJobRequest), global::Google.Cloud.Dataproc.V1.UpdateJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId", "Job", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsResponse), global::Google.Cloud.Dataproc.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CancelJobRequest), global::Google.Cloud.Dataproc.V1.CancelJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteJobRequest), global::Google.Cloud.Dataproc.V1.DeleteJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.LoggingConfig), global::Google.Cloud.Dataproc.V1.LoggingConfig.Parser, new[]{ "DriverLogLevels" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.HadoopJob), global::Google.Cloud.Dataproc.V1.HadoopJob.Parser, new[]{ "MainJarFileUri", "MainClass", "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, new[]{ "Driver" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkJob), global::Google.Cloud.Dataproc.V1.SparkJob.Parser, new[]{ "MainJarFileUri", "MainClass", "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, new[]{ "Driver" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PySparkJob), global::Google.Cloud.Dataproc.V1.PySparkJob.Parser, new[]{ "MainPythonFileUri", "Args", "PythonFileUris", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.QueryList), global::Google.Cloud.Dataproc.V1.QueryList.Parser, new[]{ "Queries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.HiveJob), global::Google.Cloud.Dataproc.V1.HiveJob.Parser, new[]{ "QueryFileUri", "QueryList", "ContinueOnFailure", "ScriptVariables", "Properties", "JarFileUris" }, new[]{ "Queries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkSqlJob), global::Google.Cloud.Dataproc.V1.SparkSqlJob.Parser, new[]{ "QueryFileUri", "QueryList", "ScriptVariables", "Properties", "JarFileUris", "LoggingConfig" }, new[]{ "Queries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PigJob), global::Google.Cloud.Dataproc.V1.PigJob.Parser, new[]{ "QueryFileUri", "QueryList", "ContinueOnFailure", "ScriptVariables", "Properties", "JarFileUris", "LoggingConfig" }, new[]{ "Queries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobPlacement), global::Google.Cloud.Dataproc.V1.JobPlacement.Parser, new[]{ "ClusterName", "ClusterUuid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobStatus), global::Google.Cloud.Dataproc.V1.JobStatus.Parser, new[]{ "State", "Details", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobReference), global::Google.Cloud.Dataproc.V1.JobReference.Parser, new[]{ "ProjectId", "JobId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.YarnApplication), global::Google.Cloud.Dataproc.V1.YarnApplication.Parser, new[]{ "Name", "State", "Progress", "TrackingUrl" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkSqlJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid" }, new[]{ "TypeJob" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobScheduling), global::Google.Cloud.Dataproc.V1.JobScheduling.Parser, new[]{ "MaxFailuresPerHour" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SubmitJobRequest), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser, new[]{ "ProjectId", "Region", "Job", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetJobRequest), global::Google.Cloud.Dataproc.V1.GetJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest), global::Google.Cloud.Dataproc.V1.ListJobsRequest.Parser, new[]{ "ProjectId", "Region", "PageSize", "PageToken", "ClusterName", "JobStateMatcher", "Filter" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateJobRequest), global::Google.Cloud.Dataproc.V1.UpdateJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId", "Job", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsResponse), global::Google.Cloud.Dataproc.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CancelJobRequest), global::Google.Cloud.Dataproc.V1.CancelJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteJobRequest), global::Google.Cloud.Dataproc.V1.DeleteJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -259,7 +259,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "driver_log_levels" field.</summary>
     public const int DriverLogLevelsFieldNumber = 2;
     private static readonly pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level>.Codec _map_driverLogLevels_codec
-        = new pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level) x), 18);
+        = new pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level) x, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level.Unspecified), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level> driverLogLevels_ = new pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level>();
     /// <summary>
     /// The per-package log levels for the driver. This may include
@@ -551,7 +551,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Hadoop.
@@ -911,7 +911,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Spark.
@@ -1265,7 +1265,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure PySpark.
@@ -1689,7 +1689,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "script_variables" field.</summary>
     public const int ScriptVariablesFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_scriptVariables_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> scriptVariables_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Mapping of query variable names to values (equivalent to the
@@ -1703,7 +1703,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names and values, used to configure Hive.
@@ -1987,7 +1987,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "script_variables" field.</summary>
     public const int ScriptVariablesFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_scriptVariables_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> scriptVariables_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Mapping of query variable names to values (equivalent to the
@@ -2001,7 +2001,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure
@@ -2319,7 +2319,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "script_variables" field.</summary>
     public const int ScriptVariablesFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_scriptVariables_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> scriptVariables_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Mapping of query variable names to values (equivalent to the Pig
@@ -2333,7 +2333,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Pig.
@@ -2780,7 +2780,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Dataproc.V1.JobStatus.Types.State state_ = 0;
+    private global::Google.Cloud.Dataproc.V1.JobStatus.Types.State state_ = global::Google.Cloud.Dataproc.V1.JobStatus.Types.State.Unspecified;
     /// <summary>
     /// Output only. A state message specifying the overall job state.
     /// </summary>
@@ -2823,7 +2823,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "substate" field.</summary>
     public const int SubstateFieldNumber = 7;
-    private global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate substate_ = 0;
+    private global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate substate_ = global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate.Unspecified;
     /// <summary>
     /// Output only. Additional state information, which includes
     /// status reported by the agent.
@@ -2859,10 +2859,10 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Dataproc.V1.JobStatus.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Details.Length != 0) hash ^= Details.GetHashCode();
       if (stateStartTime_ != null) hash ^= StateStartTime.GetHashCode();
-      if (Substate != 0) hash ^= Substate.GetHashCode();
+      if (Substate != global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate.Unspecified) hash ^= Substate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2876,7 +2876,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.JobStatus.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -2888,7 +2888,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(StateStartTime);
       }
-      if (Substate != 0) {
+      if (Substate != global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Substate);
       }
@@ -2900,7 +2900,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.JobStatus.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (Details.Length != 0) {
@@ -2909,7 +2909,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (stateStartTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StateStartTime);
       }
-      if (Substate != 0) {
+      if (Substate != global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Substate);
       }
       if (_unknownFields != null) {
@@ -2923,7 +2923,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dataproc.V1.JobStatus.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.Details.Length != 0) {
@@ -2935,7 +2935,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         StateStartTime.MergeFrom(other.StateStartTime);
       }
-      if (other.Substate != 0) {
+      if (other.Substate != global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate.Unspecified) {
         Substate = other.Substate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3296,7 +3296,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 2;
-    private global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State state_ = 0;
+    private global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State state_ = global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State.Unspecified;
     /// <summary>
     /// Required. The application state.
     /// </summary>
@@ -3363,7 +3363,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Progress != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Progress);
       if (TrackingUrl.Length != 0) hash ^= TrackingUrl.GetHashCode();
       if (_unknownFields != null) {
@@ -3383,7 +3383,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
@@ -3406,7 +3406,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (Progress != 0F) {
@@ -3429,7 +3429,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.Progress != 0F) {
@@ -3783,7 +3783,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 18;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 146);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 146);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. The labels to associate with this job.
@@ -4935,7 +4935,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "job_state_matcher" field.</summary>
     public const int JobStateMatcherFieldNumber = 5;
-    private global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher jobStateMatcher_ = 0;
+    private global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher jobStateMatcher_ = global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher.All;
     /// <summary>
     /// Optional. Specifies enumerated categories of jobs to list.
     /// (default = match ALL jobs).
@@ -5008,7 +5008,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
-      if (JobStateMatcher != 0) hash ^= JobStateMatcher.GetHashCode();
+      if (JobStateMatcher != global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher.All) hash ^= JobStateMatcher.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5039,7 +5039,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(34);
         output.WriteString(ClusterName);
       }
-      if (JobStateMatcher != 0) {
+      if (JobStateMatcher != global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher.All) {
         output.WriteRawTag(40);
         output.WriteEnum((int) JobStateMatcher);
       }
@@ -5074,7 +5074,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ClusterName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterName);
       }
-      if (JobStateMatcher != 0) {
+      if (JobStateMatcher != global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher.All) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JobStateMatcher);
       }
       if (Filter.Length != 0) {
@@ -5106,7 +5106,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ClusterName.Length != 0) {
         ClusterName = other.ClusterName;
       }
-      if (other.JobStateMatcher != 0) {
+      if (other.JobStateMatcher != global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher.All) {
         JobStateMatcher = other.JobStateMatcher;
       }
       if (other.Filter.Length != 0) {

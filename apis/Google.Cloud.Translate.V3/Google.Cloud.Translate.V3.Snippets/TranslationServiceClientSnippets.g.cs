@@ -28,7 +28,7 @@ namespace Google.Cloud.Translate.V3.Snippets
     public sealed class GeneratedTranslationServiceClientSnippets
     {
         /// <summary>Snippet for TranslateText</summary>
-        public void TranslateText_RequestObject()
+        public void TranslateTextRequestObject()
         {
             // Snippet: TranslateText(TranslateTextRequest, CallSettings)
             // Create client
@@ -51,7 +51,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for TranslateTextAsync</summary>
-        public async Task TranslateTextAsync_RequestObject()
+        public async Task TranslateTextRequestObjectAsync()
         {
             // Snippet: TranslateTextAsync(TranslateTextRequest, CallSettings)
             // Additional: TranslateTextAsync(TranslateTextRequest, CancellationToken)
@@ -106,7 +106,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for TranslateText</summary>
-        public void TranslateText1_ResourceNames()
+        public void TranslateText1ResourceNames()
         {
             // Snippet: TranslateText(LocationName, string, IEnumerable<string>, CallSettings)
             // Create client
@@ -121,7 +121,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for TranslateTextAsync</summary>
-        public async Task TranslateText1Async_ResourceNames()
+        public async Task TranslateText1ResourceNamesAsync()
         {
             // Snippet: TranslateTextAsync(LocationName, string, IEnumerable<string>, CallSettings)
             // Additional: TranslateTextAsync(LocationName, string, IEnumerable<string>, CancellationToken)
@@ -174,7 +174,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for TranslateText</summary>
-        public void TranslateText2_ResourceNames()
+        public void TranslateText2ResourceNames()
         {
             // Snippet: TranslateText(LocationName, string, string, string, string, IEnumerable<string>, CallSettings)
             // Create client
@@ -192,7 +192,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for TranslateTextAsync</summary>
-        public async Task TranslateText2Async_ResourceNames()
+        public async Task TranslateText2ResourceNamesAsync()
         {
             // Snippet: TranslateTextAsync(LocationName, string, string, string, string, IEnumerable<string>, CallSettings)
             // Additional: TranslateTextAsync(LocationName, string, string, string, string, IEnumerable<string>, CancellationToken)
@@ -211,7 +211,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DetectLanguage</summary>
-        public void DetectLanguage_RequestObject()
+        public void DetectLanguageRequestObject()
         {
             // Snippet: DetectLanguage(DetectLanguageRequest, CallSettings)
             // Create client
@@ -231,7 +231,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DetectLanguageAsync</summary>
-        public async Task DetectLanguageAsync_RequestObject()
+        public async Task DetectLanguageRequestObjectAsync()
         {
             // Snippet: DetectLanguageAsync(DetectLanguageRequest, CallSettings)
             // Additional: DetectLanguageAsync(DetectLanguageRequest, CancellationToken)
@@ -285,7 +285,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DetectLanguage</summary>
-        public void DetectLanguage_ResourceNames()
+        public void DetectLanguageResourceNames()
         {
             // Snippet: DetectLanguage(LocationName, string, string, string, CallSettings)
             // Create client
@@ -301,7 +301,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DetectLanguageAsync</summary>
-        public async Task DetectLanguageAsync_ResourceNames()
+        public async Task DetectLanguageResourceNamesAsync()
         {
             // Snippet: DetectLanguageAsync(LocationName, string, string, string, CallSettings)
             // Additional: DetectLanguageAsync(LocationName, string, string, string, CancellationToken)
@@ -318,7 +318,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetSupportedLanguages</summary>
-        public void GetSupportedLanguages_RequestObject()
+        public void GetSupportedLanguagesRequestObject()
         {
             // Snippet: GetSupportedLanguages(GetSupportedLanguagesRequest, CallSettings)
             // Create client
@@ -336,7 +336,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetSupportedLanguagesAsync</summary>
-        public async Task GetSupportedLanguagesAsync_RequestObject()
+        public async Task GetSupportedLanguagesRequestObjectAsync()
         {
             // Snippet: GetSupportedLanguagesAsync(GetSupportedLanguagesRequest, CallSettings)
             // Additional: GetSupportedLanguagesAsync(GetSupportedLanguagesRequest, CancellationToken)
@@ -386,7 +386,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetSupportedLanguages</summary>
-        public void GetSupportedLanguages_ResourceNames()
+        public void GetSupportedLanguagesResourceNames()
         {
             // Snippet: GetSupportedLanguages(LocationName, string, string, CallSettings)
             // Create client
@@ -401,7 +401,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetSupportedLanguagesAsync</summary>
-        public async Task GetSupportedLanguagesAsync_ResourceNames()
+        public async Task GetSupportedLanguagesResourceNamesAsync()
         {
             // Snippet: GetSupportedLanguagesAsync(LocationName, string, string, CallSettings)
             // Additional: GetSupportedLanguagesAsync(LocationName, string, string, CancellationToken)
@@ -417,7 +417,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for BatchTranslateText</summary>
-        public void BatchTranslateText_RequestObject()
+        public void BatchTranslateTextRequestObject()
         {
             // Snippet: BatchTranslateText(BatchTranslateTextRequest, CallSettings)
             // Create client
@@ -462,7 +462,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for BatchTranslateTextAsync</summary>
-        public async Task BatchTranslateTextAsync_RequestObject()
+        public async Task BatchTranslateTextRequestObjectAsync()
         {
             // Snippet: BatchTranslateTextAsync(BatchTranslateTextRequest, CallSettings)
             // Additional: BatchTranslateTextAsync(BatchTranslateTextRequest, CancellationToken)
@@ -508,7 +508,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for CreateGlossary</summary>
-        public void CreateGlossary_RequestObject()
+        public void CreateGlossaryRequestObject()
         {
             // Snippet: CreateGlossary(CreateGlossaryRequest, CallSettings)
             // Create client
@@ -541,7 +541,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for CreateGlossaryAsync</summary>
-        public async Task CreateGlossaryAsync_RequestObject()
+        public async Task CreateGlossaryRequestObjectAsync()
         {
             // Snippet: CreateGlossaryAsync(CreateGlossaryRequest, CallSettings)
             // Additional: CreateGlossaryAsync(CreateGlossaryRequest, CancellationToken)
@@ -636,7 +636,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for CreateGlossary</summary>
-        public void CreateGlossary_ResourceNames()
+        public void CreateGlossaryResourceNames()
         {
             // Snippet: CreateGlossary(LocationName, Glossary, CallSettings)
             // Create client
@@ -666,7 +666,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for CreateGlossaryAsync</summary>
-        public async Task CreateGlossaryAsync_ResourceNames()
+        public async Task CreateGlossaryResourceNamesAsync()
         {
             // Snippet: CreateGlossaryAsync(LocationName, Glossary, CallSettings)
             // Additional: CreateGlossaryAsync(LocationName, Glossary, CancellationToken)
@@ -697,7 +697,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for ListGlossaries</summary>
-        public void ListGlossaries_RequestObject()
+        public void ListGlossariesRequestObject()
         {
             // Snippet: ListGlossaries(ListGlossariesRequest, CallSettings)
             // Create client
@@ -746,7 +746,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for ListGlossaries</summary>
-        public async Task ListGlossariesAsync_RequestObject()
+        public async Task ListGlossariesRequestObjectAsync()
         {
             // Snippet: ListGlossariesAsync(ListGlossariesRequest, CallSettings)
             // Create client
@@ -885,7 +885,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for ListGlossaries</summary>
-        public void ListGlossaries_ResourceNames()
+        public void ListGlossariesResourceNames()
         {
             // Snippet: ListGlossaries(LocationName, string, int?, CallSettings)
             // Create client
@@ -930,7 +930,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for ListGlossaries</summary>
-        public async Task ListGlossariesAsync_ResourceNames()
+        public async Task ListGlossariesResourceNamesAsync()
         {
             // Snippet: ListGlossariesAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -975,7 +975,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetGlossary</summary>
-        public void GetGlossary_RequestObject()
+        public void GetGlossaryRequestObject()
         {
             // Snippet: GetGlossary(GetGlossaryRequest, CallSettings)
             // Create client
@@ -991,7 +991,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetGlossaryAsync</summary>
-        public async Task GetGlossaryAsync_RequestObject()
+        public async Task GetGlossaryRequestObjectAsync()
         {
             // Snippet: GetGlossaryAsync(GetGlossaryRequest, CallSettings)
             // Additional: GetGlossaryAsync(GetGlossaryRequest, CancellationToken)
@@ -1035,7 +1035,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetGlossary</summary>
-        public void GetGlossary_ResourceNames()
+        public void GetGlossaryResourceNames()
         {
             // Snippet: GetGlossary(GlossaryName, CallSettings)
             // Create client
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for GetGlossaryAsync</summary>
-        public async Task GetGlossaryAsync_ResourceNames()
+        public async Task GetGlossaryResourceNamesAsync()
         {
             // Snippet: GetGlossaryAsync(GlossaryName, CallSettings)
             // Additional: GetGlossaryAsync(GlossaryName, CancellationToken)
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DeleteGlossary</summary>
-        public void DeleteGlossary_RequestObject()
+        public void DeleteGlossaryRequestObject()
         {
             // Snippet: DeleteGlossary(DeleteGlossaryRequest, CallSettings)
             // Create client
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DeleteGlossaryAsync</summary>
-        public async Task DeleteGlossaryAsync_RequestObject()
+        public async Task DeleteGlossaryRequestObjectAsync()
         {
             // Snippet: DeleteGlossaryAsync(DeleteGlossaryRequest, CallSettings)
             // Additional: DeleteGlossaryAsync(DeleteGlossaryRequest, CancellationToken)
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DeleteGlossary</summary>
-        public void DeleteGlossary_ResourceNames()
+        public void DeleteGlossaryResourceNames()
         {
             // Snippet: DeleteGlossary(GlossaryName, CallSettings)
             // Create client
@@ -1215,7 +1215,7 @@ namespace Google.Cloud.Translate.V3.Snippets
         }
 
         /// <summary>Snippet for DeleteGlossaryAsync</summary>
-        public async Task DeleteGlossaryAsync_ResourceNames()
+        public async Task DeleteGlossaryResourceNamesAsync()
         {
             // Snippet: DeleteGlossaryAsync(GlossaryName, CallSettings)
             // Additional: DeleteGlossaryAsync(GlossaryName, CancellationToken)

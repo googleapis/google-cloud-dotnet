@@ -244,7 +244,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         public gcsv::OrganizationSettingsName OrganizationSettingsName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcsv::OrganizationSettingsName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::OrganizationSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

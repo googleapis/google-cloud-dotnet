@@ -56,12 +56,12 @@ namespace Google.Cloud.Datastore.V1 {
             "R29vZ2xlXENsb3VkXERhdGFzdG9yZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PartitionId), global::Google.Cloud.Datastore.V1.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Key), global::Google.Cloud.Datastore.V1.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Key.Types.PathElement), global::Google.Cloud.Datastore.V1.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ArrayValue), global::Google.Cloud.Datastore.V1.ArrayValue.Parser, new[]{ "Values" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Value), global::Google.Cloud.Datastore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "KeyValue", "StringValue", "BlobValue", "GeoPointValue", "EntityValue", "ArrayValue", "Meaning", "ExcludeFromIndexes" }, new[]{ "ValueType" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Entity), global::Google.Cloud.Datastore.V1.Entity.Parser, new[]{ "Key", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PartitionId), global::Google.Cloud.Datastore.V1.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Key), global::Google.Cloud.Datastore.V1.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Key.Types.PathElement), global::Google.Cloud.Datastore.V1.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ArrayValue), global::Google.Cloud.Datastore.V1.ArrayValue.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Value), global::Google.Cloud.Datastore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "KeyValue", "StringValue", "BlobValue", "GeoPointValue", "EntityValue", "ArrayValue", "Meaning", "ExcludeFromIndexes" }, new[]{ "ValueType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Entity), global::Google.Cloud.Datastore.V1.Entity.Parser, new[]{ "Key", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -894,7 +894,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : 0; }
+      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NullValue; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.NullValue;
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 3;
     private static readonly pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value>.Codec _map_properties_codec
-        = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.Value.Parser), 26);
+        = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.Value.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value> properties_ = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value>();
     /// <summary>
     /// The entity's properties.

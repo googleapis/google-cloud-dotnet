@@ -79,14 +79,14 @@ namespace Google.Cloud.Trace.V1 {
             "cmFjZS5WMcoCFUdvb2dsZVxDbG91ZFxUcmFjZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Trace), global::Google.Cloud.Trace.V1.Trace.Parser, new[]{ "ProjectId", "TraceId", "Spans" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Traces), global::Google.Cloud.Trace.V1.Traces.Parser, new[]{ "Traces_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.TraceSpan), global::Google.Cloud.Trace.V1.TraceSpan.Parser, new[]{ "SpanId", "Kind", "Name", "StartTime", "EndTime", "ParentSpanId", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.ListTracesRequest), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser, new[]{ "ProjectId", "View", "PageSize", "PageToken", "StartTime", "EndTime", "Filter", "OrderBy" }, null, new[]{ typeof(global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.ListTracesResponse), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser, new[]{ "Traces", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.GetTraceRequest), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser, new[]{ "ProjectId", "TraceId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.PatchTracesRequest), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser, new[]{ "ProjectId", "Traces" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Trace), global::Google.Cloud.Trace.V1.Trace.Parser, new[]{ "ProjectId", "TraceId", "Spans" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Traces), global::Google.Cloud.Trace.V1.Traces.Parser, new[]{ "Traces_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.TraceSpan), global::Google.Cloud.Trace.V1.TraceSpan.Parser, new[]{ "SpanId", "Kind", "Name", "StartTime", "EndTime", "ParentSpanId", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.ListTracesRequest), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser, new[]{ "ProjectId", "View", "PageSize", "PageToken", "StartTime", "EndTime", "Filter", "OrderBy" }, null, new[]{ typeof(global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.ListTracesResponse), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser, new[]{ "Traces", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.GetTraceRequest), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser, new[]{ "ProjectId", "TraceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.PatchTracesRequest), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser, new[]{ "ProjectId", "Traces" }, null, null, null, null)
           }));
     }
     #endregion
@@ -477,7 +477,7 @@ namespace Google.Cloud.Trace.V1 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 2;
-    private global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind kind_ = 0;
+    private global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind kind_ = global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.Unspecified;
     /// <summary>
     /// Distinguishes between spans generated in a particular context. For example,
     /// two spans with the same name may be distinguished using `RPC_CLIENT`
@@ -556,7 +556,7 @@ namespace Google.Cloud.Trace.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Collection of labels associated with the span. Label keys must be less than
@@ -627,7 +627,7 @@ namespace Google.Cloud.Trace.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (SpanId != 0UL) hash ^= SpanId.GetHashCode();
-      if (Kind != 0) hash ^= Kind.GetHashCode();
+      if (Kind != global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.Unspecified) hash ^= Kind.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
@@ -650,7 +650,7 @@ namespace Google.Cloud.Trace.V1 {
         output.WriteRawTag(9);
         output.WriteFixed64(SpanId);
       }
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Kind);
       }
@@ -682,7 +682,7 @@ namespace Google.Cloud.Trace.V1 {
       if (SpanId != 0UL) {
         size += 1 + 8;
       }
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (Name.Length != 0) {
@@ -712,7 +712,7 @@ namespace Google.Cloud.Trace.V1 {
       if (other.SpanId != 0UL) {
         SpanId = other.SpanId;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.Unspecified) {
         Kind = other.Kind;
       }
       if (other.Name.Length != 0) {
@@ -874,7 +874,7 @@ namespace Google.Cloud.Trace.V1 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 2;
-    private global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType view_ = 0;
+    private global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType view_ = global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType.Unspecified;
     /// <summary>
     /// Optional. Type of data returned for traces in the list. Default is
     /// `MINIMAL`.
@@ -1045,7 +1045,7 @@ namespace Google.Cloud.Trace.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
-      if (View != 0) hash ^= View.GetHashCode();
+      if (View != global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType.Unspecified) hash ^= View.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -1069,7 +1069,7 @@ namespace Google.Cloud.Trace.V1 {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) View);
       }
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Trace.V1 {
       if (ProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (PageSize != 0) {
@@ -1143,7 +1143,7 @@ namespace Google.Cloud.Trace.V1 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      if (other.View != 0) {
+      if (other.View != global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType.Unspecified) {
         View = other.View;
       }
       if (other.PageSize != 0) {

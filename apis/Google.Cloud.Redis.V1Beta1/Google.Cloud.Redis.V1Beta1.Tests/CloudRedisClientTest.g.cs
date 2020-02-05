@@ -233,7 +233,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetInstance_ResourceNames()
+        public void GetInstanceResourceNames()
         {
             moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -283,7 +283,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetInstanceAsync_ResourceNames()
+        public async stt::Task GetInstanceResourceNamesAsync()
         {
             moq::Mock<CloudRedis.CloudRedisClient> mockGrpcClient = new moq::Mock<CloudRedis.CloudRedisClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
