@@ -17,6 +17,7 @@ using Google.Protobuf;
 using Google.Type;
 using System;
 using wkt = Google.Protobuf.WellKnownTypes;
+using DateTime = System.DateTime;
 
 namespace Google.Cloud.Firestore.Converters
 {
