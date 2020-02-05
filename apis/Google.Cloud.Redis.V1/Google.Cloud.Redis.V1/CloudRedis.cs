@@ -30,7 +30,7 @@ namespace Google.Cloud.Redis.V1 {
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
             "I2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGiBnb29nbGUv",
             "cHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byLGCAoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEC",
+            "bWVzdGFtcC5wcm90byLrCQoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEC",
             "EhQKDGRpc3BsYXlfbmFtZRgCIAEoCRI7CgZsYWJlbHMYAyADKAsyKy5nb29n",
             "bGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuTGFiZWxzRW50cnkSGAoLbG9j",
             "YXRpb25faWQYBCABKAlCA+BBARIkChdhbHRlcm5hdGl2ZV9sb2NhdGlvbl9p",
@@ -45,109 +45,112 @@ namespace Google.Cloud.Redis.V1 {
             "QgPgQQESNwoEdGllchgRIAEoDjIkLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5J",
             "bnN0YW5jZS5UaWVyQgPgQQISGwoObWVtb3J5X3NpemVfZ2IYEiABKAVCA+BB",
             "AhIfChJhdXRob3JpemVkX25ldHdvcmsYFCABKAlCA+BBARIlChhwZXJzaXN0",
-            "ZW5jZV9pYW1faWRlbnRpdHkYFSABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjMKEVJlZGlzQ29uZmln",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEilAEKBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVS",
-            "RUFEWRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJ",
-            "TkcQBRIPCgtNQUlOVEVOQU5DRRAGEg0KCUlNUE9SVElORxAIEhAKDEZBSUxJ",
-            "TkdfT1ZFUhAJIjgKBFRpZXISFAoQVElFUl9VTlNQRUNJRklFRBAAEgkKBUJB",
-            "U0lDEAESDwoLU1RBTkRBUkRfSEEQAzpg6kFdCh1yZWRpcy5nb29nbGVhcGlz",
-            "LmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9IngKFExpc3RJbnN0YW5j",
-            "ZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMu",
-            "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIK",
-            "CnBhZ2VfdG9rZW4YAyABKAkieQoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEjIK",
-            "CWluc3RhbmNlcxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0",
-            "YW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUY",
-            "AyADKAkiSQoSR2V0SW5zdGFuY2VSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBB",
-            "AvpBHwodcmVkaXMuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2UipAEKFUNyZWF0",
-            "ZUluc3RhbmNlUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9j",
-            "YXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhgKC2luc3RhbmNlX2lk",
-            "GAIgASgJQgPgQQISNgoIaW5zdGFuY2UYAyABKAsyHy5nb29nbGUuY2xvdWQu",
-            "cmVkaXMudjEuSW5zdGFuY2VCA+BBAiKFAQoVVXBkYXRlSW5zdGFuY2VSZXF1",
-            "ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFza0ID4EECEjYKCGluc3RhbmNlGAIgASgLMh8uZ29vZ2xlLmNsb3Vk",
-            "LnJlZGlzLnYxLkluc3RhbmNlQgPgQQIiTAoVRGVsZXRlSW5zdGFuY2VSZXF1",
-            "ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodcmVkaXMuZ29vZ2xlYXBpcy5j",
-            "b20vSW5zdGFuY2UiHQoJR2NzU291cmNlEhAKA3VyaRgBIAEoCUID4EECIk8K",
-            "C0lucHV0Q29uZmlnEjYKCmdjc19zb3VyY2UYASABKAsyIC5nb29nbGUuY2xv",
-            "dWQucmVkaXMudjEuR2NzU291cmNlSABCCAoGc291cmNlImkKFUltcG9ydElu",
-            "c3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISPQoMaW5wdXRfY29u",
-            "ZmlnGAMgASgLMiIuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLklucHV0Q29uZmln",
-            "QgPgQQIiIgoOR2NzRGVzdGluYXRpb24SEAoDdXJpGAEgASgJQgPgQQIiXwoM",
-            "T3V0cHV0Q29uZmlnEkAKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIlLmdvb2ds",
-            "ZS5jbG91ZC5yZWRpcy52MS5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0",
-            "aW9uImsKFUV4cG9ydEluc3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPg",
-            "QQISPwoNb3V0cHV0X2NvbmZpZxgDIAEoCzIjLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MS5PdXRwdXRDb25maWdCA+BBAiKcAgoXRmFpbG92ZXJJbnN0YW5jZVJl",
-            "cXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlz",
-            "LmNvbS9JbnN0YW5jZRJkChRkYXRhX3Byb3RlY3Rpb25fbW9kZRgCIAEoDjJB",
-            "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MS5GYWlsb3Zlckluc3RhbmNlUmVxdWVz",
-            "dC5EYXRhUHJvdGVjdGlvbk1vZGVCA+BBASJmChJEYXRhUHJvdGVjdGlvbk1v",
-            "ZGUSJAogREFUQV9QUk9URUNUSU9OX01PREVfVU5TUEVDSUZJRUQQABIVChFM",
-            "SU1JVEVEX0RBVEFfTE9TUxABEhMKD0ZPUkNFX0RBVEFfTE9TUxACItYBChFP",
-            "cGVyYXRpb25NZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2ZXJi",
-            "GAQgASgJEhUKDXN0YXR1c19kZXRhaWwYBSABKAkSGAoQY2FuY2VsX3JlcXVl",
-            "c3RlZBgGIAEoCBITCgthcGlfdmVyc2lvbhgHIAEoCSLJAQoQTG9jYXRpb25N",
-            "ZXRhZGF0YRJZCg9hdmFpbGFibGVfem9uZXMYASADKAsyOy5nb29nbGUuY2xv",
-            "dWQucmVkaXMudjEuTG9jYXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25lc0Vu",
-            "dHJ5QgPgQQMaWgoTQXZhaWxhYmxlWm9uZXNFbnRyeRILCgNrZXkYASABKAkS",
-            "MgoFdmFsdWUYAiABKAsyIy5nb29nbGUuY2xvdWQucmVkaXMudjEuWm9uZU1l",
-            "dGFkYXRhOgI4ASIOCgxab25lTWV0YWRhdGEyrQ8KCkNsb3VkUmVkaXMSqgEK",
-            "DUxpc3RJbnN0YW5jZXMSKy5nb29nbGUuY2xvdWQucmVkaXMudjEuTGlzdElu",
-            "c3RhbmNlc1JlcXVlc3QaLC5nb29nbGUuY2xvdWQucmVkaXMudjEuTGlzdElu",
-            "c3RhbmNlc1Jlc3BvbnNlIj6C0+STAi8SLS92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2luc3RhbmNlc9pBBnBhcmVudBKXAQoLR2V0SW5z",
-            "dGFuY2USKS5nb29nbGUuY2xvdWQucmVkaXMudjEuR2V0SW5zdGFuY2VSZXF1",
-            "ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlIjyC0+STAi8S",
-            "LS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8q",
-            "fdpBBG5hbWUSiQIKDkNyZWF0ZUluc3RhbmNlEiwuZ29vZ2xlLmNsb3VkLnJl",
-            "ZGlzLnYxLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iqQGC0+STAjkiLS92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2luc3RhbmNlczoIaW5zdGFuY2XaQRtwYXJlbnQs",
-            "aW5zdGFuY2VfaWQsaW5zdGFuY2XKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52",
-            "MS5JbnN0YW5jZRInZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1l",
-            "dGFkYXRhEosCCg5VcGRhdGVJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MS5VcGRhdGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIqsBgtPkkwJCMjYvdjEve2luc3RhbmNlLm5hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06CGluc3RhbmNl2kEU",
-            "dXBkYXRlX21hc2ssaW5zdGFuY2XKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52",
-            "MS5JbnN0YW5jZRInZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1l",
-            "dGFkYXRhEv8BCg5JbXBvcnRJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MS5JbXBvcnRJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIp8BgtPkkwI5IjQvdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06aW1wb3J0OgEq2kERbmFtZSxpbnB1",
-            "dF9jb25maWfKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRIn",
-            "Z29vZ2xlLmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhEoACCg5F",
-            "eHBvcnRJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5FeHBvcnRJ",
-            "bnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "IqABgtPkkwI5IjQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9p",
-            "bnN0YW5jZXMvKn06ZXhwb3J0OgEq2kESbmFtZSxvdXRwdXRfY29uZmlnykFJ",
-            "Ch5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2USJ2dvb2dsZS5jbG91",
-            "ZC5yZWRpcy52MS5PcGVyYXRpb25NZXRhZGF0YRKNAgoQRmFpbG92ZXJJbnN0",
-            "YW5jZRIuLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5GYWlsb3Zlckluc3RhbmNl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iqQGC0+ST",
-            "AjsiNi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNl",
-            "cy8qfTpmYWlsb3ZlcjoBKtpBGW5hbWUsZGF0YV9wcm90ZWN0aW9uX21vZGXK",
-            "QUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRInZ29vZ2xlLmNs",
-            "b3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhEt4BCg5EZWxldGVJbnN0",
-            "YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5EZWxldGVJbnN0YW5jZVJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIn+C0+STAi8q",
-            "LS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8q",
-            "fdpBBG5hbWXKQUAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRInZ29vZ2xlLmNs",
-            "b3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhGkjKQRRyZWRpcy5nb29n",
-            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm1CcwoZY29tLmdvb2dsZS5jbG91ZC5yZWRpcy52MUIY",
-            "Q2xvdWRSZWRpc1NlcnZpY2VWMVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmVkaXMvdjE7cmVkaXNiBnBy",
-            "b3RvMw=="));
+            "ZW5jZV9pYW1faWRlbnRpdHkYFSABKAlCA+BBAxJGCgxjb25uZWN0X21vZGUY",
+            "FiABKA4yKy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuQ29ubmVj",
+            "dE1vZGVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBGjMKEVJlZGlzQ29uZmlnc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5H",
+            "EAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJTkcQBRIPCgtNQUlOVEVOQU5D",
+            "RRAGEg0KCUlNUE9SVElORxAIEhAKDEZBSUxJTkdfT1ZFUhAJIjgKBFRpZXIS",
+            "FAoQVElFUl9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDwoLU1RBTkRBUkRf",
+            "SEEQAyJbCgtDb25uZWN0TW9kZRIcChhDT05ORUNUX01PREVfVU5TUEVDSUZJ",
+            "RUQQABISCg5ESVJFQ1RfUEVFUklORxABEhoKFlBSSVZBVEVfU0VSVklDRV9B",
+            "Q0NFU1MQAjpg6kFdCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3Rh",
+            "bmNlcy97aW5zdGFuY2V9IngKFExpc3RJbnN0YW5jZXNSZXF1ZXN0EjkKBnBh",
+            "cmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
+            "TG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
+            "KAkieQoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEjIKCWluc3RhbmNlcxgBIAMo",
+            "CzIfLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiSQoSR2V0SW5z",
+            "dGFuY2VSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodcmVkaXMuZ29v",
+            "Z2xlYXBpcy5jb20vSW5zdGFuY2UipAEKFUNyZWF0ZUluc3RhbmNlUmVxdWVz",
+            "dBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFw",
+            "aXMuY29tL0xvY2F0aW9uEhgKC2luc3RhbmNlX2lkGAIgASgJQgPgQQISNgoI",
+            "aW5zdGFuY2UYAyABKAsyHy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFu",
+            "Y2VCA+BBAiKFAQoVVXBkYXRlSW5zdGFuY2VSZXF1ZXN0EjQKC3VwZGF0ZV9t",
+            "YXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEjYK",
+            "CGluc3RhbmNlGAIgASgLMh8uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3Rh",
+            "bmNlQgPgQQIiTAoVRGVsZXRlSW5zdGFuY2VSZXF1ZXN0EjMKBG5hbWUYASAB",
+            "KAlCJeBBAvpBHwodcmVkaXMuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2UiHQoJ",
+            "R2NzU291cmNlEhAKA3VyaRgBIAEoCUID4EECIk8KC0lucHV0Q29uZmlnEjYK",
+            "Cmdjc19zb3VyY2UYASABKAsyIC5nb29nbGUuY2xvdWQucmVkaXMudjEuR2Nz",
+            "U291cmNlSABCCAoGc291cmNlImkKFUltcG9ydEluc3RhbmNlUmVxdWVzdBIR",
+            "CgRuYW1lGAEgASgJQgPgQQISPQoMaW5wdXRfY29uZmlnGAMgASgLMiIuZ29v",
+            "Z2xlLmNsb3VkLnJlZGlzLnYxLklucHV0Q29uZmlnQgPgQQIiIgoOR2NzRGVz",
+            "dGluYXRpb24SEAoDdXJpGAEgASgJQgPgQQIiXwoMT3V0cHV0Q29uZmlnEkAK",
+            "D2djc19kZXN0aW5hdGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5yZWRpcy52",
+            "MS5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uImsKFUV4cG9ydElu",
+            "c3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISPwoNb3V0cHV0X2Nv",
+            "bmZpZxgDIAEoCzIjLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5PdXRwdXRDb25m",
+            "aWdCA+BBAiKcAgoXRmFpbG92ZXJJbnN0YW5jZVJlcXVlc3QSMwoEbmFtZRgB",
+            "IAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRJk",
+            "ChRkYXRhX3Byb3RlY3Rpb25fbW9kZRgCIAEoDjJBLmdvb2dsZS5jbG91ZC5y",
+            "ZWRpcy52MS5GYWlsb3Zlckluc3RhbmNlUmVxdWVzdC5EYXRhUHJvdGVjdGlv",
+            "bk1vZGVCA+BBASJmChJEYXRhUHJvdGVjdGlvbk1vZGUSJAogREFUQV9QUk9U",
+            "RUNUSU9OX01PREVfVU5TUEVDSUZJRUQQABIVChFMSU1JVEVEX0RBVEFfTE9T",
+            "UxABEhMKD0ZPUkNFX0RBVEFfTE9TUxACItYBChFPcGVyYXRpb25NZXRhZGF0",
+            "YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2ZXJiGAQgASgJEhUKDXN0YXR1",
+            "c19kZXRhaWwYBSABKAkSGAoQY2FuY2VsX3JlcXVlc3RlZBgGIAEoCBITCgth",
+            "cGlfdmVyc2lvbhgHIAEoCSLJAQoQTG9jYXRpb25NZXRhZGF0YRJZCg9hdmFp",
+            "bGFibGVfem9uZXMYASADKAsyOy5nb29nbGUuY2xvdWQucmVkaXMudjEuTG9j",
+            "YXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25lc0VudHJ5QgPgQQMaWgoTQXZh",
+            "aWxhYmxlWm9uZXNFbnRyeRILCgNrZXkYASABKAkSMgoFdmFsdWUYAiABKAsy",
+            "Iy5nb29nbGUuY2xvdWQucmVkaXMudjEuWm9uZU1ldGFkYXRhOgI4ASIOCgxa",
+            "b25lTWV0YWRhdGEyrQ8KCkNsb3VkUmVkaXMSqgEKDUxpc3RJbnN0YW5jZXMS",
+            "Ky5nb29nbGUuY2xvdWQucmVkaXMudjEuTGlzdEluc3RhbmNlc1JlcXVlc3Qa",
+            "LC5nb29nbGUuY2xvdWQucmVkaXMudjEuTGlzdEluc3RhbmNlc1Jlc3BvbnNl",
+            "Ij6C0+STAi8SLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L2luc3RhbmNlc9pBBnBhcmVudBKXAQoLR2V0SW5zdGFuY2USKS5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjEuR2V0SW5zdGFuY2VSZXF1ZXN0Gh8uZ29vZ2xlLmNs",
+            "b3VkLnJlZGlzLnYxLkluc3RhbmNlIjyC0+STAi8SLS92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5hbWUSiQIKDkNy",
+            "ZWF0ZUluc3RhbmNlEiwuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkNyZWF0ZUlu",
+            "c3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "qQGC0+STAjkiLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L2luc3RhbmNlczoIaW5zdGFuY2XaQRtwYXJlbnQsaW5zdGFuY2VfaWQsaW5z",
+            "dGFuY2XKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRInZ29v",
+            "Z2xlLmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhEosCCg5VcGRh",
+            "dGVJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5VcGRhdGVJbnN0",
+            "YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqsB",
+            "gtPkkwJCMjYvdjEve2luc3RhbmNlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9pbnN0YW5jZXMvKn06CGluc3RhbmNl2kEUdXBkYXRlX21hc2ssaW5z",
+            "dGFuY2XKQUkKHmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRInZ29v",
+            "Z2xlLmNsb3VkLnJlZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhEv8BCg5JbXBv",
+            "cnRJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5JbXBvcnRJbnN0",
+            "YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIp8B",
+            "gtPkkwI5IjQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
+            "YW5jZXMvKn06aW1wb3J0OgEq2kERbmFtZSxpbnB1dF9jb25maWfKQUkKHmdv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZRInZ29vZ2xlLmNsb3VkLnJl",
+            "ZGlzLnYxLk9wZXJhdGlvbk1ldGFkYXRhEoACCg5FeHBvcnRJbnN0YW5jZRIs",
+            "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MS5FeHBvcnRJbnN0YW5jZVJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqABgtPkkwI5IjQvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06ZXhw",
+            "b3J0OgEq2kESbmFtZSxvdXRwdXRfY29uZmlnykFJCh5nb29nbGUuY2xvdWQu",
+            "cmVkaXMudjEuSW5zdGFuY2USJ2dvb2dsZS5jbG91ZC5yZWRpcy52MS5PcGVy",
+            "YXRpb25NZXRhZGF0YRKNAgoQRmFpbG92ZXJJbnN0YW5jZRIuLmdvb2dsZS5j",
+            "bG91ZC5yZWRpcy52MS5GYWlsb3Zlckluc3RhbmNlUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iqQGC0+STAjsiNi92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpmYWlsb3ZlcjoB",
+            "KtpBGW5hbWUsZGF0YV9wcm90ZWN0aW9uX21vZGXKQUkKHmdvb2dsZS5jbG91",
+            "ZC5yZWRpcy52MS5JbnN0YW5jZRInZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLk9w",
+            "ZXJhdGlvbk1ldGFkYXRhEt4BCg5EZWxldGVJbnN0YW5jZRIsLmdvb2dsZS5j",
+            "bG91ZC5yZWRpcy52MS5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIn+C0+STAi8qLS92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5hbWXKQUAKFWdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRInZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLk9w",
+            "ZXJhdGlvbk1ldGFkYXRhGkjKQRRyZWRpcy5nb29nbGVhcGlzLmNvbdJBLmh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
+            "cwoZY29tLmdvb2dsZS5jbG91ZC5yZWRpcy52MUIYQ2xvdWRSZWRpc1NlcnZp",
+            "Y2VWMVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvcmVkaXMvdjE7cmVkaXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.Instance), global::Google.Cloud.Redis.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1.Instance.Types.Tier) }, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.Instance), global::Google.Cloud.Redis.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1.Instance.Types.ConnectMode) }, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesRequest), global::Google.Cloud.Redis.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesResponse), global::Google.Cloud.Redis.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.GetInstanceRequest), global::Google.Cloud.Redis.V1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -216,6 +219,7 @@ namespace Google.Cloud.Redis.V1 {
       memorySizeGb_ = other.memorySizeGb_;
       authorizedNetwork_ = other.authorizedNetwork_;
       persistenceIamIdentity_ = other.persistenceIamIdentity_;
+      connectMode_ = other.connectMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -235,8 +239,8 @@ namespace Google.Cloud.Redis.V1 {
     /// Note: Redis instances are managed and addressed at regional level so
     /// location_id here refers to a GCP region; however, users may choose which
     /// specific zone (or collection of zones for cross-zone instances) an instance
-    /// should be provisioned in. Refer to [location_id] and
-    /// [alternative_location_id] fields for more details.
+    /// should be provisioned in. Refer to [location_id][google.cloud.redis.v1.Instance.location_id] and
+    /// [alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id] fields for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -280,8 +284,8 @@ namespace Google.Cloud.Redis.V1 {
     /// Optional. The zone where the instance will be provisioned. If not provided,
     /// the service will choose a zone for the instance. For STANDARD_HA tier,
     /// instances will be created across two zones for protection against zonal
-    /// failures. If [alternative_location_id] is also provided, it must be
-    /// different from [location_id].
+    /// failures. If [alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id] is also provided, it must be
+    /// different from [location_id][google.cloud.redis.v1.Instance.location_id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LocationId {
@@ -297,7 +301,7 @@ namespace Google.Cloud.Redis.V1 {
     /// <summary>
     /// Optional. Only applicable to STANDARD_HA tier which protects the instance
     /// against zonal failures by provisioning it across two zones. If provided, it
-    /// must be a different zone from the one provided in [location_id].
+    /// must be a different zone from the one provided in [location_id][google.cloud.redis.v1.Instance.location_id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AlternativeLocationId {
@@ -312,9 +316,8 @@ namespace Google.Cloud.Redis.V1 {
     private string redisVersion_ = "";
     /// <summary>
     /// Optional. The version of Redis software.
-    /// If not provided, latest supported version will be used. Updating the
-    /// version will perform an upgrade/downgrade to the new version. Currently,
-    /// the supported values are:
+    /// If not provided, latest supported version will be used. Currently, the
+    /// supported values are:
     ///
     ///  *   `REDIS_4_0` for Redis 4.0 compatibility (default)
     ///  *   `REDIS_3_2` for Redis 3.2 compatibility
@@ -378,9 +381,9 @@ namespace Google.Cloud.Redis.V1 {
     private string currentLocationId_ = "";
     /// <summary>
     /// Output only. The current zone where the Redis endpoint is placed. For Basic
-    /// Tier instances, this will always be the same as the [location_id]
+    /// Tier instances, this will always be the same as the [location_id][google.cloud.redis.v1.Instance.location_id]
     /// provided by the user at creation time. For Standard Tier instances,
-    /// this can be either [location_id] or [alternative_location_id] and can
+    /// this can be either [location_id][google.cloud.redis.v1.Instance.location_id] or [alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id] and can
     /// change after a failover event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -523,6 +526,22 @@ namespace Google.Cloud.Redis.V1 {
       }
     }
 
+    /// <summary>Field number for the "connect_mode" field.</summary>
+    public const int ConnectModeFieldNumber = 22;
+    private global::Google.Cloud.Redis.V1.Instance.Types.ConnectMode connectMode_ = 0;
+    /// <summary>
+    /// Optional. The connect mode of Redis instance.
+    /// If not provided, default one will be used.
+    /// Current default: DIRECT_PEERING.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1.Instance.Types.ConnectMode ConnectMode {
+      get { return connectMode_; }
+      set {
+        connectMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Instance);
@@ -554,6 +573,7 @@ namespace Google.Cloud.Redis.V1 {
       if (MemorySizeGb != other.MemorySizeGb) return false;
       if (AuthorizedNetwork != other.AuthorizedNetwork) return false;
       if (PersistenceIamIdentity != other.PersistenceIamIdentity) return false;
+      if (ConnectMode != other.ConnectMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -578,6 +598,7 @@ namespace Google.Cloud.Redis.V1 {
       if (MemorySizeGb != 0) hash ^= MemorySizeGb.GetHashCode();
       if (AuthorizedNetwork.Length != 0) hash ^= AuthorizedNetwork.GetHashCode();
       if (PersistenceIamIdentity.Length != 0) hash ^= PersistenceIamIdentity.GetHashCode();
+      if (ConnectMode != 0) hash ^= ConnectMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -657,6 +678,10 @@ namespace Google.Cloud.Redis.V1 {
         output.WriteRawTag(170, 1);
         output.WriteString(PersistenceIamIdentity);
       }
+      if (ConnectMode != 0) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) ConnectMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -714,6 +739,9 @@ namespace Google.Cloud.Redis.V1 {
       }
       if (PersistenceIamIdentity.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PersistenceIamIdentity);
+      }
+      if (ConnectMode != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ConnectMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -778,6 +806,9 @@ namespace Google.Cloud.Redis.V1 {
       }
       if (other.PersistenceIamIdentity.Length != 0) {
         PersistenceIamIdentity = other.PersistenceIamIdentity;
+      }
+      if (other.ConnectMode != 0) {
+        ConnectMode = other.ConnectMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -865,6 +896,10 @@ namespace Google.Cloud.Redis.V1 {
             PersistenceIamIdentity = input.ReadString();
             break;
           }
+          case 176: {
+            ConnectMode = (global::Google.Cloud.Redis.V1.Instance.Types.ConnectMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -933,6 +968,25 @@ namespace Google.Cloud.Redis.V1 {
         /// STANDARD_HA tier: highly available primary/replica instances
         /// </summary>
         [pbr::OriginalName("STANDARD_HA")] StandardHa = 3,
+      }
+
+      /// <summary>
+      /// Available connection modes.
+      /// </summary>
+      public enum ConnectMode {
+        /// <summary>
+        /// Not set.
+        /// </summary>
+        [pbr::OriginalName("CONNECT_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Connect via directly peering with memorystore redis hosted service.
+        /// </summary>
+        [pbr::OriginalName("DIRECT_PEERING")] DirectPeering = 1,
+        /// <summary>
+        /// Connect with google via private service access and share connection
+        /// across google managed services.
+        /// </summary>
+        [pbr::OriginalName("PRIVATE_SERVICE_ACCESS")] PrivateServiceAccess = 2,
       }
 
     }
@@ -1004,7 +1058,7 @@ namespace Google.Cloud.Redis.V1 {
     /// If not specified, a default value of 1000 will be used by the service.
     /// Regardless of the page_size value, the response may include a partial list
     /// and a caller should only rely on response's
-    /// [next_page_token][CloudRedis.ListInstancesResponse.next_page_token]
+    /// [`next_page_token`][google.cloud.redis.v1.ListInstancesResponse.next_page_token]
     /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1019,8 +1073,8 @@ namespace Google.Cloud.Redis.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The next_page_token value returned from a previous List request,
-    /// if any.
+    /// The `next_page_token` value returned from a previous
+    /// [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances] request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1197,10 +1251,10 @@ namespace Google.Cloud.Redis.V1 {
     /// If the `location_id` in the parent field of the request is "-", all regions
     /// available to the project are queried, and the results aggregated.
     /// If in such an aggregated query a location is unavailable, a dummy Redis
-    /// entry is included in the response with the "name" field set to a value of
-    /// the form projects/{project_id}/locations/{location_id}/instances/- and the
-    /// "status" field set to ERROR and "status_message" field set to "location not
-    /// available for ListInstances".
+    /// entry is included in the response with the `name` field set to a value of
+    /// the form `projects/{project_id}/locations/{location_id}/instances/`- and
+    /// the `status` field set to ERROR and `status_message` field set to "location
+    /// not available for ListInstances".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Redis.V1.Instance> Instances {
@@ -1730,7 +1784,7 @@ namespace Google.Cloud.Redis.V1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. The elements of the repeated paths field may only include these
-    /// fields from [Instance][CloudRedis.Instance]:
+    /// fields from [Instance][google.cloud.redis.v1.Instance]:
     ///
     ///  *   `displayName`
     ///  *   `labels`
@@ -3141,6 +3195,9 @@ namespace Google.Cloud.Redis.V1 {
     /// <summary>Container for nested types declared in the FailoverInstanceRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
+      /// <summary>
+      /// Specifies different modes of operation in relation to the data retention.
+      /// </summary>
       public enum DataProtectionMode {
         /// <summary>
         /// Defaults to LIMITED_DATA_LOSS if a data protection mode is not

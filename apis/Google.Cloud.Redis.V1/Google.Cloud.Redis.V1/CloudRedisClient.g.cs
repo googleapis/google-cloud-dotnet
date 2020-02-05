@@ -424,6 +424,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -440,6 +441,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -456,6 +458,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -489,6 +492,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -522,6 +526,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -555,6 +560,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -1103,7 +1109,7 @@ namespace Google.Cloud.Redis.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. The elements of the repeated paths field may only include these
-        /// fields from [Instance][CloudRedis.Instance]:
+        /// fields from [Instance][google.cloud.redis.v1.Instance]:
         /// 
         /// *   `displayName`
         /// *   `labels`
@@ -1133,7 +1139,7 @@ namespace Google.Cloud.Redis.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. The elements of the repeated paths field may only include these
-        /// fields from [Instance][CloudRedis.Instance]:
+        /// fields from [Instance][google.cloud.redis.v1.Instance]:
         /// 
         /// *   `displayName`
         /// *   `labels`
@@ -1163,7 +1169,7 @@ namespace Google.Cloud.Redis.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. The elements of the repeated paths field may only include these
-        /// fields from [Instance][CloudRedis.Instance]:
+        /// fields from [Instance][google.cloud.redis.v1.Instance]:
         /// 
         /// *   `displayName`
         /// *   `labels`
@@ -1908,6 +1914,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
@@ -1927,6 +1934,7 @@ namespace Google.Cloud.Redis.V1
         /// location (region) or all locations.
         /// 
         /// The location should have the following format:
+        /// 
         /// * `projects/{project_id}/locations/{location_id}`
         /// 
         /// If `location_id` is specified as `-` (wildcard), then all regions
