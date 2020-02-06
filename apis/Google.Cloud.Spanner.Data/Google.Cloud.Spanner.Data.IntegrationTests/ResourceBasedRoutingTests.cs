@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Admin.Instance.V1;
+using Google.Cloud.Spanner.Common.V1;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -29,10 +30,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void Should_Override_Endpoint()
         {
-            string resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName);
+            string resourceBasedRoutingFlag = Environment.GetEnvironmentVariable(InstanceHostManager.ResourceBasedRoutingVariableName);
 
             //enable Resource based routing
-            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName, "true");
+            Environment.SetEnvironmentVariable(InstanceHostManager.ResourceBasedRoutingVariableName, "true");
 
             //default endpoint
             string expectedHost = InstanceAdminClient.DefaultEndpoint.Host;
@@ -41,7 +42,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (SpannerCommand command = new SpannerCommand(connection))
                 {
-                    string instanceEndpointUri = Task.Run(() => InstanceHostManager.Default.GetHostAsync(connection.Project, connection.SpannerInstance)).ResultWithUnwrappedExceptions();
+                    string instanceEndpointUri = InstanceHostManager.Default.GetHost(new InstanceName(connection.Project, connection.SpannerInstance));
                     if (!string.IsNullOrWhiteSpace(instanceEndpointUri))
                     {
                         expectedHost = instanceEndpointUri;
@@ -51,7 +52,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 connection.Open();
                 Assert.Equal(expectedHost, connection.Builder.Host);
             }
-            Environment.SetEnvironmentVariable(SpannerConstants.ResourceBasedRoutingVariableName, resourceBasedRoutingFlag);
+            Environment.SetEnvironmentVariable(InstanceHostManager.ResourceBasedRoutingVariableName, resourceBasedRoutingFlag);
         }
     }
 }

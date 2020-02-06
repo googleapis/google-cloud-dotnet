@@ -155,7 +155,7 @@ namespace Google.Cloud.Spanner.Data
         /// <remarks>
         /// This property defaults to <see cref="InstanceHostManager.Default"/>
         /// </remarks>
-        public InstanceHostManager InstanceHostManager
+        internal InstanceHostManager InstanceHostManager
         {
             get => _instanceHostManager;
             set => _instanceHostManager = GaxPreconditions.CheckNotNull(value, nameof(value));
@@ -171,8 +171,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 try
                 {
-                    return GetOrAddValue(nameof(Host), () => Task.Run(() =>
-                InstanceHostManager.GetHostAsync(Project, SpannerInstance)).ResultWithUnwrappedExceptions() ?? SpannerClient.DefaultEndpoint.Host);
+                    InstanceName instance = _instanceName ?? new InstanceName(_databaseName.ProjectId, _databaseName.InstanceId);
+                    return GetOrAddValue(nameof(Host), () => InstanceHostManager.GetHost(instance) ?? SpannerClient.DefaultEndpoint.Host);
                 }
                 catch (RpcException gRpcException) when (gRpcException.StatusCode == StatusCode.PermissionDenied)
                 {
@@ -365,10 +365,26 @@ can get an instance-specific endpoint and efficiently route requests.");
         /// <param name="credentials">The credential to use for the connection. May be null.</param>
         /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager)
+             : this(connectionString, credentials, sessionPoolManager, InstanceHostManager.Default)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
+        /// connection string, optional credential, and session pool manager.
+        /// </summary>
+        /// <param name="connectionString">>A connection string of the form
+        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
+        /// Must not be null.</param>
+        /// <param name="credentials">The credential to use for the connection. May be null.</param>
+        /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
+        /// <param name="instanceHostManager">The instance host manager to use. Must not be null.</param>
+        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager, InstanceHostManager instanceHostManager)
         {
             ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
             CredentialOverride = credentials;
             SessionPoolManager = GaxPreconditions.CheckNotNull(sessionPoolManager, nameof(sessionPoolManager));
+            InstanceHostManager = GaxPreconditions.CheckNotNull(instanceHostManager, nameof(instanceHostManager));
         }
 
         /// <summary>
@@ -377,10 +393,10 @@ can get an instance-specific endpoint and efficiently route requests.");
         public SpannerConnectionStringBuilder() { }
 
 
-        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager);
+        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager, InstanceHostManager);
 
         internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) =>
-            new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager) { DataSource = dataSource };
+            new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager, InstanceHostManager) { DataSource = dataSource };
 
         /// <summary>
         /// Returns a new instance of a <see cref="SpannerConnectionStringBuilder"/> with the database

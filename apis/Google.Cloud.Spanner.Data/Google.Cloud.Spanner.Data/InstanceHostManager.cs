@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +29,25 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class InstanceHostManager
     {
-        private ConcurrentDictionary<string, IList<string>> _instanceEndpointMapping =
-            new ConcurrentDictionary<string, IList<string>>();
+        private ConcurrentDictionary<InstanceName, IList<string>> _instanceEndpointMapping =
+            new ConcurrentDictionary<InstanceName, IList<string>>();
+
+        /// <summary>
+        /// Resource based routing environment variable name.
+        /// </summary>
+        public static string ResourceBasedRoutingVariableName = "GOOGLE_CLOUD_SPANNER_ENABLE_RESOURCE_BASED_ROUTING";
+
+        /// <summary>
+        /// Resource based routing flag.
+        /// </summary>
+        public static bool IsResourceBasedRoutingEnabled
+        {
+            get
+            {
+                string resourceBaseRoutingFlagValue = Environment.GetEnvironmentVariable(ResourceBasedRoutingVariableName);
+                return StringComparer.InvariantCultureIgnoreCase.Equals(resourceBaseRoutingFlagValue, "true");
+            }
+        }
 
         /// <summary>
         /// The default instance host manager.
@@ -37,35 +56,28 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Gets a host for the given instance.
-        /// If resource based routing is enabled (environment variable "GOOGLE_CLOUD_SPANNER_ENABLE_RESOURCE_BASED_ROUTING"),
+        /// If resource based routing is enabled,
         /// this method will attempt to get the given instance endpointUris and return the first one.
-        /// The returning endpointUri will be cached to be used in future inquiries.
+        /// The returned endpointUri will be cached to be used in future requests.
         /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceName">Resource name for the <see cref="InstanceName"/> resource.</param>
         /// <returns>The host for the given instance if found else null.</returns>
-        public async Task<string> GetHostAsync(string projectId, string instanceId)
+        public string GetHost(InstanceName instanceName)
         {
-            if (SpannerConstants.IsResourceBasedRoutingEnabled)
+            if (IsResourceBasedRoutingEnabled)
             {
-                if (!_instanceEndpointMapping.ContainsKey(instanceId))
-                {
-                    var instanceEndpointUris = await GetInstanceEndpointUrisAsync(projectId, instanceId).ConfigureAwait(false);
-                    _instanceEndpointMapping[instanceId] = instanceEndpointUris;
-                }
-                return _instanceEndpointMapping[instanceId].FirstOrDefault();
+                return _instanceEndpointMapping.GetOrAdd(instanceName, GetInstanceEndpointUris).FirstOrDefault();
             }
             return null;
         }
 
-        private async Task<List<string>> GetInstanceEndpointUrisAsync(string projectId, string instanceId)
+        private List<string> GetInstanceEndpointUris(InstanceName instanceName)
         {
-            InstanceAdminClient instanceAdminClient =
-                    await InstanceAdminClient.CreateAsync().ConfigureAwait(false);
+            InstanceAdminClient instanceAdminClient = Task.Run(() => InstanceAdminClient.CreateAsync()).ResultWithUnwrappedExceptions();
             // Create request for instance with endpointUris.
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName(projectId, instanceId),
+                InstanceName = instanceName,
                 FieldMask = new FieldMask { Paths = { "endpoint_uris" } }
             };
             // Get list of available endpointUris from GetInstance.
