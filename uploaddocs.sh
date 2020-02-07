@@ -46,7 +46,7 @@ do
     
     # TODO: Product page
     echo "Generating metadata"
-    python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository https://github.com/googleapis/google-cloud-dotnet
+    python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage"
     python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
