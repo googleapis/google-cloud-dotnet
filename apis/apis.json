@@ -586,6 +586,23 @@
   },
 
   {
+    "id": "Google.Cloud.ManagedIdentities.V1",
+    "generator": "micro",
+    "protoPath": "google/cloud/managedidentities/v1",
+    "productName": "Managed Service for Microsoft Active Directory",
+    "productUrl": "https://cloud.google.com/managed-microsoft-ad/",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Managed Identities API.",
+    "tags": [ "Identities", "ActiveDirectory", "Active Directory" ],
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Google.LongRunning": "1.1.0",
+      "Grpc.Core": "1.22.1"
+    }
+  },
+
+  {
     "id": "Google.Cloud.Metadata.V1",
     "productName": "Google Compute Engine Metadata Server",
     "productUrl": "https://cloud.google.com/compute/docs/storing-retrieving-metadata",
