@@ -241,7 +241,7 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
             clients = clients.Select(client => $"[{client}](obj/api/{api.Id}.{client}.yml)").ToList(); // Markdown link to API doc
             switch (clients.Count)
             {
-                case 0: return "FIXME"; // No automatic templating for this API
+                case 0: throw new InvalidOperationException("Couldn't find any clients for {{client-classes}} expansion.");
                 case 1: return $"All operations are performed through {clients[0]}.";
                 default:
                     var list = string.Join("\r\n", clients.Select(client => $"- {client}"));
@@ -258,11 +258,11 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
             }
             var layout = DirectoryLayout.ForApi(api.Id);
             var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
-            var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs");
+            var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs").Concat(Directory.GetFiles(packageSource, "*Client.g.cs"));
             return sourceFiles
                 .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client
                 .Select(file => Path.GetFileName(file))             // Just the file name, not full path
-                .Select(file => file.Substring(0, file.Length - 3)) // Trim .cs
+                .Select(file => file.Split('.')[0]) // Trim .cs or .g.cs
                 .OrderBy(client => client)
                 .ToList();
         }
