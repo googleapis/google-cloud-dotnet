@@ -60,16 +60,6 @@ namespace Google.Cloud.Bigtable.V2
             new BigtableClientImpl(GaxPreconditions.CheckNotNull(client, nameof(client)));
 
         /// <summary>
-        /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
-        /// using the specified <see cref="CallInvoker"/> for API requests.
-        /// </summary>
-        /// <param name="callInvoker">The <see cref="CallInvoker"/> which performs API requests. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
-        /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(CallInvoker callInvoker, BigtableServiceApiSettings settings = null) =>
-            Create(BigtableServiceApiClient.Create(GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker)), settings));
-
-        /// <summary>
         /// Gets the value which specifies routing for replication.
         /// If null or empty, the "default" application profile will be used by the server.
         /// </summary>
