@@ -55,6 +55,11 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Interface
     namespace ParamInOutChanged2.A { public interface I { void A(ref string s); } }
     namespace ParamInOutChanged2.B { public interface I { void A(out string s); } }
 
+    public interface I2 { void M(); }
+
+    namespace AddInterfaceMethodExists.A { public class C { public void M() { } } }
+    namespace AddInterfaceMethodExists.B { public class C : I2 { public void M() { } } }
+
     public class InterfaceTest : TestBase
     {
         [Fact] public void NoChange() => TestNone();
@@ -69,5 +74,8 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Interface
         [Fact] public void ParamNameChanged() => TestMajor(Cause.MethodParameterNameChanged);
         [Fact] public void ParamInOutChanged1() => TestMajor(Cause.MethodParameterInOutChanged);
         [Fact] public void ParamInOutChanged2() => TestMajor(Cause.MethodParameterInOutChanged);
+        [Fact] public void AddInterfaceMethodExists() => Test()(
+            (Level.Minor, Cause.TypeImplementedInterfaceAdded),
+            (Level.Minor, Cause.MethodModifierChanged));
     }
 }

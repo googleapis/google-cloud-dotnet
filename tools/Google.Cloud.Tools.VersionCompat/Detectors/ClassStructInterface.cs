@@ -41,7 +41,14 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 .ToImmutableHashSet(SameTypeComparer.Instance);
             foreach (var added in nExportedInterfaces.Except(oExportedInterfaces))
             {
-                yield return Diff.Major(Cause.TypeImplementedInterfaceAdded, $"{_n.TypeType()} '{_n}' implemented interface added '{added}'");
+                if (_n.TypeType() == TypeType.Interface)
+                {
+                    yield return Diff.Major(Cause.TypeImplementedInterfaceAdded, $"{_n.TypeType()} '{_n}' implemented interface added '{added}'");
+                }
+                else
+                {
+                    yield return Diff.Minor(Cause.TypeImplementedInterfaceAdded, $"{_n.TypeType()} '{_n}' implemented interface added '{added}'");
+                }
             }
             foreach (var removed in oExportedInterfaces.Except(nExportedInterfaces))
             {
@@ -90,7 +97,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         {
             if ((o.IsVirtual && !n.IsVirtual) ||
                 (!o.IsAbstract && n.IsAbstract) ||
-                (!o.IsFinal && n.IsFinal))
+                (!o.IsFinal && n.IsFinal && o.IsVirtual))
             {
                 yield return Diff.Major(cause, $"{prefix} modifiers changed from '{o.ShowModifiers()}' to '{n.ShowModifiers()}'.");
             }

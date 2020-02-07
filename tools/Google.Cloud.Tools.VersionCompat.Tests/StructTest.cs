@@ -75,7 +75,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
     public class StructTest : TestBase
     {
         [Fact] public void NoChange() => TestNone();
-        [Fact] public void InterfaceAdded() => TestMajor(Cause.TypeImplementedInterfaceAdded);
+        [Fact] public void InterfaceAdded() => TestMinor(Cause.TypeImplementedInterfaceAdded);
         [Fact] public void InterfaceRemoved() => TestMajor(Cause.TypeImplementedInterfaceRemoved);
         [Fact] public void NonExportedInterfaceAdded() => TestNone();
         [Fact] public void NonExportedInterfaceRemoved() => TestNone();
