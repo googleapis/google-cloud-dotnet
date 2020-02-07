@@ -262,16 +262,15 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsAsync2()
         {
-            // Snippet: ListJobsAsync(string,string,string,string,int?,CallSettings)
+            // Snippet: ListJobsAsync(string,string,string,int?,CallSettings)
             // Create client
             JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
-            string filter = "";
             // Make the request
             PagedAsyncEnumerable<ListJobsResponse, Job> response =
-                jobControllerClient.ListJobsAsync(projectId: projectId, region: region, filter: filter);
+                jobControllerClient.ListJobsAsync(projectId, region);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Job item) =>
@@ -308,16 +307,15 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobs2()
         {
-            // Snippet: ListJobs(string,string,string,string,int?,CallSettings)
+            // Snippet: ListJobs(string,string,string,int?,CallSettings)
             // Create client
             JobControllerClient jobControllerClient = JobControllerClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             string region = "";
-            string filter = "";
             // Make the request
             PagedEnumerable<ListJobsResponse, Job> response =
-                jobControllerClient.ListJobs(projectId: projectId, region: region, filter: filter);
+                jobControllerClient.ListJobs(projectId, region);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Job item in response)

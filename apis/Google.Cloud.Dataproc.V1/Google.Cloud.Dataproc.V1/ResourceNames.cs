@@ -21,6 +21,113 @@ using linq = System.Linq;
 namespace Google.Cloud.Dataproc.V1
 {
     /// <summary>
+    /// Resource name for the 'autoscaling_policy' resource.
+    /// </summary>
+    public sealed partial class AutoscalingPolicyName : gax::IResourceName, sys::IEquatable<AutoscalingPolicyName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}");
+
+        /// <summary>
+        /// Parses the given autoscaling_policy resource name in string form into a new
+        /// <see cref="AutoscalingPolicyName"/> instance.
+        /// </summary>
+        /// <param name="autoscalingPolicyName">The autoscaling_policy resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AutoscalingPolicyName"/> if successful.</returns>
+        public static AutoscalingPolicyName Parse(string autoscalingPolicyName)
+        {
+            gax::GaxPreconditions.CheckNotNull(autoscalingPolicyName, nameof(autoscalingPolicyName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(autoscalingPolicyName);
+            return new AutoscalingPolicyName(resourceName[0], resourceName[1], resourceName[2]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given autoscaling_policy resource name in string form into a new
+        /// <see cref="AutoscalingPolicyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="autoscalingPolicyName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="autoscalingPolicyName">The autoscaling_policy resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="AutoscalingPolicyName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string autoscalingPolicyName, out AutoscalingPolicyName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(autoscalingPolicyName, nameof(autoscalingPolicyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(autoscalingPolicyName, out resourceName))
+            {
+                result = new AutoscalingPolicyName(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>Formats the IDs into the string representation of the <see cref="AutoscalingPolicyName"/>.</summary>
+        /// <param name="projectId">The <c>project</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="regionId">The <c>region</c> ID. Must not be <c>null</c>.</param>
+        /// <param name="autoscalingPolicyId">The <c>autoscalingPolicy</c> ID. Must not be <c>null</c>.</param>
+        /// <returns>The string representation of the <see cref="AutoscalingPolicyName"/>.</returns>
+        public static string Format(string projectId, string regionId, string autoscalingPolicyId) =>
+            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(regionId, nameof(regionId)), gax::GaxPreconditions.CheckNotNull(autoscalingPolicyId, nameof(autoscalingPolicyId)));
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="AutoscalingPolicyName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="regionId">The region ID. Must not be <c>null</c>.</param>
+        /// <param name="autoscalingPolicyId">The autoscalingPolicy ID. Must not be <c>null</c>.</param>
+        public AutoscalingPolicyName(string projectId, string regionId, string autoscalingPolicyId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            RegionId = gax::GaxPreconditions.CheckNotNull(regionId, nameof(regionId));
+            AutoscalingPolicyId = gax::GaxPreconditions.CheckNotNull(autoscalingPolicyId, nameof(autoscalingPolicyId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The region ID. Never <c>null</c>.
+        /// </summary>
+        public string RegionId { get; }
+
+        /// <summary>
+        /// The autoscalingPolicy ID. Never <c>null</c>.
+        /// </summary>
+        public string AutoscalingPolicyId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, RegionId, AutoscalingPolicyId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as AutoscalingPolicyName);
+
+        /// <inheritdoc />
+        public bool Equals(AutoscalingPolicyName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(AutoscalingPolicyName a, AutoscalingPolicyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(AutoscalingPolicyName a, AutoscalingPolicyName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'region' resource.
     /// </summary>
     public sealed partial class RegionName : gax::IResourceName, sys::IEquatable<RegionName>
