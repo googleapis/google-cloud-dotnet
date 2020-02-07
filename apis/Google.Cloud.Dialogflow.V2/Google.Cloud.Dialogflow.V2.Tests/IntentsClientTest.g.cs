@@ -561,7 +561,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
             };
             Intent expectedResponse = new Intent
             {
@@ -592,7 +591,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
             };
             Intent expectedResponse = new Intent
             {

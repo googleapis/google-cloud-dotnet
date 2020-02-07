@@ -559,7 +559,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "",
             };
             // Make the request
             Intent response = await intentsClient.UpdateIntentAsync(request);
@@ -576,7 +575,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "",
             };
             // Make the request
             Intent response = intentsClient.UpdateIntent(request);
@@ -653,7 +651,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
             {
                 ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                LanguageCode = "",
             };
             // Make the request
             Operation<BatchUpdateIntentsResponse, Struct> response =
@@ -689,7 +686,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
             {
                 ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                LanguageCode = "",
             };
             // Make the request
             Operation<BatchUpdateIntentsResponse, Struct> response =
