@@ -58,6 +58,7 @@ The following libraries are available at a [GA](#versioning) quality level:
   * The [V1Beta1 API package](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1Beta1/latest) is also available (beta)
 * [Google Cloud Scheduler](https://cloud.google.com/scheduler/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Scheduler.V1/latest) (GA)
 * [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1/latest) (GA)
+  * The [V1P1Beta1 API package](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1P1Beta1/latest) is also available (beta)
 * [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all GA:
   * [Google.Cloud.Spanner.Data](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Data/latest): ADO.NET provider for Google Cloud Spanner (recommended)
   * [Google.Cloud.Spanner.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.V1/latest): Low-level access to Spanner API
