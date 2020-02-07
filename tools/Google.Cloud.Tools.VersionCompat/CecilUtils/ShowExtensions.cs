@@ -83,7 +83,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static string ShowModifiers(this MethodDefinition method)
         {
-            var oav = method.IsReuseSlot ? "override" :
+            var oav = method.IsReuseSlot && method.IsVirtual ? "override" :
                 method.IsAbstract ? "abstract" :
                 method.IsVirtual ? "virtual" :
                 "<none>";
