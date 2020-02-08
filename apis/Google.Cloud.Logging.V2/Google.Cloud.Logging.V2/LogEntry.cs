@@ -63,10 +63,10 @@ namespace Google.Cloud.Logging.V2 {
             "Z2dpbmdcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null, null)
           }));
     }
     #endregion
@@ -279,7 +279,7 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Field number for the "severity" field.</summary>
     public const int SeverityFieldNumber = 10;
-    private global::Google.Cloud.Logging.Type.LogSeverity severity_ = 0;
+    private global::Google.Cloud.Logging.Type.LogSeverity severity_ = global::Google.Cloud.Logging.Type.LogSeverity.Default;
     /// <summary>
     /// Optional. The severity of the log entry. The default value is
     /// `LogSeverity.DEFAULT`.
@@ -334,7 +334,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 11;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 90);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A set of user-defined (key, value) data that provides additional
@@ -517,7 +517,7 @@ namespace Google.Cloud.Logging.V2 {
       if (payloadCase_ == PayloadOneofCase.JsonPayload) hash ^= JsonPayload.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (receiveTimestamp_ != null) hash ^= ReceiveTimestamp.GetHashCode();
-      if (Severity != 0) hash ^= Severity.GetHashCode();
+      if (Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) hash ^= Severity.GetHashCode();
       if (InsertId.Length != 0) hash ^= InsertId.GetHashCode();
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
       hash ^= Labels.GetHashCode();
@@ -569,7 +569,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(Timestamp);
       }
-      if (Severity != 0) {
+      if (Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Severity);
       }
@@ -635,7 +635,7 @@ namespace Google.Cloud.Logging.V2 {
       if (receiveTimestamp_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReceiveTimestamp);
       }
-      if (Severity != 0) {
+      if (Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (InsertId.Length != 0) {
@@ -695,7 +695,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         ReceiveTimestamp.MergeFrom(other.ReceiveTimestamp);
       }
-      if (other.Severity != 0) {
+      if (other.Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) {
         Severity = other.Severity;
       }
       if (other.InsertId.Length != 0) {

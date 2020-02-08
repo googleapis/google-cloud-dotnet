@@ -14,384 +14,735 @@
 
 // Generated code. DO NOT EDIT!
 
+using ga = Google.Api;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Logging.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Logging.V2;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedMetricsServiceV2ClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedMetricsServiceV2ClientTest
     {
-        [Fact]
-        public void GetLogMetric()
+        [xunit::FactAttribute]
+        public void GetLogMetricRequestObject()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            GetLogMetricRequest expectedRequest = new GetLogMetricRequest
-            {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-            };
-            LogMetric expectedResponse = new LogMetric
-            {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
-            };
-            mockGrpcClient.Setup(x => x.GetLogMetric(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
-            LogMetric response = client.GetLogMetric(metricName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetLogMetricAsync()
-        {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            GetLogMetricRequest expectedRequest = new GetLogMetricRequest
-            {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-            };
-            LogMetric expectedResponse = new LogMetric
-            {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
-            };
-            mockGrpcClient.Setup(x => x.GetLogMetricAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogMetric>(Task.FromResult(expectedResponse), null, null, null, null));
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
-            LogMetric response = await client.GetLogMetricAsync(metricName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetLogMetric2()
-        {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetLogMetric(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogMetric response = client.GetLogMetric(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetLogMetricAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetLogMetricRequestObjectAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogMetric>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric response = await client.GetLogMetricAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogMetric responseCallSettings = await client.GetLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.GetLogMetricAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateLogMetric()
+        [xunit::FactAttribute]
+        public void GetLogMetric()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            CreateLogMetricRequest expectedRequest = new CreateLogMetricRequest
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            GetLogMetricRequest request = new GetLogMetricRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                Metric = new LogMetric(),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateLogMetric(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            LogMetric metric = new LogMetric();
-            LogMetric response = client.CreateLogMetric(parent, metric);
-            Assert.Same(expectedResponse, response);
+            LogMetric response = client.GetLogMetric(request.MetricName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateLogMetricAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetLogMetricAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            CreateLogMetricRequest expectedRequest = new CreateLogMetricRequest
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            GetLogMetricRequest request = new GetLogMetricRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                Metric = new LogMetric(),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateLogMetricAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogMetric>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            LogMetric metric = new LogMetric();
-            LogMetric response = await client.CreateLogMetricAsync(parent, metric);
-            Assert.Same(expectedResponse, response);
+            LogMetric responseCallSettings = await client.GetLogMetricAsync(request.MetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.GetLogMetricAsync(request.MetricName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateLogMetric2()
+        [xunit::FactAttribute]
+        public void GetLogMetricResourceNames()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            GetLogMetricRequest request = new GetLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric response = client.GetLogMetric(request.MetricNameAsMetricName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetLogMetricResourceNamesAsync()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            GetLogMetricRequest request = new GetLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric responseCallSettings = await client.GetLogMetricAsync(request.MetricNameAsMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.GetLogMetricAsync(request.MetricNameAsMetricName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateLogMetricRequestObject()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateLogMetric(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogMetric response = client.CreateLogMetric(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateLogMetricAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateLogMetricRequestObjectAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogMetric>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric response = await client.CreateLogMetricAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogMetric responseCallSettings = await client.CreateLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateLogMetric()
+        [xunit::FactAttribute]
+        public void CreateLogMetric()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            UpdateLogMetricRequest expectedRequest = new UpdateLogMetricRequest
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateLogMetric(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
-            LogMetric metric = new LogMetric();
-            LogMetric response = client.UpdateLogMetric(metricName, metric);
-            Assert.Same(expectedResponse, response);
+            LogMetric response = client.CreateLogMetric(request.Parent, request.Metric);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateLogMetricAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateLogMetricAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            UpdateLogMetricRequest expectedRequest = new UpdateLogMetricRequest
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogMetric>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
-            LogMetric metric = new LogMetric();
-            LogMetric response = await client.UpdateLogMetricAsync(metricName, metric);
-            Assert.Same(expectedResponse, response);
+            LogMetric responseCallSettings = await client.CreateLogMetricAsync(request.Parent, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request.Parent, request.Metric, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateLogMetric2()
+        [xunit::FactAttribute]
+        public void CreateLogMetricResourceNames()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            CreateLogMetricRequest request = new CreateLogMetricRequest
+            {
+                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Metric = new LogMetric(),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric response = client.CreateLogMetric(request.ParentAsMetricName, request.Metric);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateLogMetricResourceNamesAsync()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            CreateLogMetricRequest request = new CreateLogMetricRequest
+            {
+                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Metric = new LogMetric(),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric responseCallSettings = await client.CreateLogMetricAsync(request.ParentAsMetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request.ParentAsMetricName, request.Metric, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateLogMetricRequestObject()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateLogMetric(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogMetric response = client.UpdateLogMetric(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateLogMetricAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateLogMetricRequestObjectAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                ValueExtractor = "valueExtractor2047672534",
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogMetric>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric response = await client.UpdateLogMetricAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteLogMetric()
+        [xunit::FactAttribute]
+        public void UpdateLogMetric()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            DeleteLogMetricRequest expectedRequest = new DeleteLogMetricRequest
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Metric = new LogMetric(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLogMetric(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
-            client.DeleteLogMetric(metricName);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteLogMetricAsync()
-        {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
-            DeleteLogMetricRequest expectedRequest = new DeleteLogMetricRequest
+            LogMetric expectedResponse = new LogMetric
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
-            await client.DeleteLogMetricAsync(metricName);
+            LogMetric response = client.UpdateLogMetric(request.MetricName, request.Metric);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteLogMetric2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateLogMetricAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateLogMetricRequest request = new UpdateLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Metric = new LogMetric(),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request.MetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request.MetricName, request.Metric, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateLogMetricResourceNames()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateLogMetricRequest request = new UpdateLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Metric = new LogMetric(),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric response = client.UpdateLogMetric(request.MetricNameAsMetricName, request.Metric);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateLogMetricResourceNamesAsync()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateLogMetricRequest request = new UpdateLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Metric = new LogMetric(),
+            };
+            LogMetric expectedResponse = new LogMetric
+            {
+                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ValueExtractor = "value_extractor09b994a6",
+                LabelExtractors =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                BucketOptions = new ga::Distribution.Types.BucketOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request.MetricNameAsMetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request.MetricNameAsMetricName, request.Metric, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteLogMetricRequestObject()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLogMetric(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
             client.DeleteLogMetric(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteLogMetricAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogMetricRequestObjectAsync()
         {
-            Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new Mock<MetricsServiceV2.MetricsServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteLogMetricAsync(request);
+            await client.DeleteLogMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogMetricAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteLogMetric()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogMetricRequest request = new DeleteLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteLogMetric(request.MetricName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogMetricAsync()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogMetricRequest request = new DeleteLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteLogMetricAsync(request.MetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogMetricAsync(request.MetricName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteLogMetricResourceNames()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogMetricRequest request = new DeleteLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteLogMetric(request.MetricNameAsMetricName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogMetricResourceNamesAsync()
+        {
+            moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogMetricRequest request = new DeleteLogMetricRequest
+            {
+                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteLogMetricAsync(request.MetricNameAsMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogMetricAsync(request.MetricNameAsMetricName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
