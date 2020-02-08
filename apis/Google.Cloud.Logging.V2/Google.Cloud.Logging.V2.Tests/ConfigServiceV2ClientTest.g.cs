@@ -46,6 +46,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -71,6 +73,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -96,6 +100,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -120,6 +126,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -145,6 +153,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -172,6 +182,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -199,6 +211,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -224,6 +238,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -250,6 +266,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -279,6 +297,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -307,6 +327,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -334,6 +356,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -361,6 +385,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -386,6 +412,8 @@ namespace Google.Cloud.Logging.V2.Tests
                 Name = "name3373707",
                 DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
+                Description = "description-1724546052",
+                Disabled = true,
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
             };
@@ -826,6 +854,82 @@ namespace Google.Cloud.Logging.V2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             await client.DeleteExclusionAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetCmekSettings()
+        {
+            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest();
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name3373707",
+                KmsKeyName = "kmsKeyName2094986649",
+                ServiceAccountId = "serviceAccountId-111486921",
+            };
+            mockGrpcClient.Setup(x => x.GetCmekSettings(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings response = client.GetCmekSettings(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetCmekSettingsAsync()
+        {
+            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest();
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name3373707",
+                KmsKeyName = "kmsKeyName2094986649",
+                ServiceAccountId = "serviceAccountId-111486921",
+            };
+            mockGrpcClient.Setup(x => x.GetCmekSettingsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CmekSettings>(Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings response = await client.GetCmekSettingsAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateCmekSettings()
+        {
+            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest();
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name3373707",
+                KmsKeyName = "kmsKeyName2094986649",
+                ServiceAccountId = "serviceAccountId-111486921",
+            };
+            mockGrpcClient.Setup(x => x.UpdateCmekSettings(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings response = client.UpdateCmekSettings(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateCmekSettingsAsync()
+        {
+            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest();
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name3373707",
+                KmsKeyName = "kmsKeyName2094986649",
+                ServiceAccountId = "serviceAccountId-111486921",
+            };
+            mockGrpcClient.Setup(x => x.UpdateCmekSettingsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CmekSettings>(Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings response = await client.UpdateCmekSettingsAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

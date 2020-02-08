@@ -46,6 +46,9 @@ namespace Google.Cloud.Logging.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateExclusionRequest> __Marshaller_google_logging_v2_CreateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateExclusionRequest> __Marshaller_google_logging_v2_UpdateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteExclusionRequest> __Marshaller_google_logging_v2_DeleteExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetCmekSettingsRequest> __Marshaller_google_logging_v2_GetCmekSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetCmekSettingsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CmekSettings> __Marshaller_google_logging_v2_CmekSettings = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CmekSettings.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest> __Marshaller_google_logging_v2_UpdateCmekSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse> __Method_ListSinks = new grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(
         grpc::MethodType.Unary,
@@ -116,6 +119,20 @@ namespace Google.Cloud.Logging.V2 {
         "DeleteExclusion",
         __Marshaller_google_logging_v2_DeleteExclusionRequest,
         __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings> __Method_GetCmekSettings = new grpc::Method<global::Google.Cloud.Logging.V2.GetCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCmekSettings",
+        __Marshaller_google_logging_v2_GetCmekSettingsRequest,
+        __Marshaller_google_logging_v2_CmekSettings);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings> __Method_UpdateCmekSettings = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCmekSettings",
+        __Marshaller_google_logging_v2_UpdateCmekSettingsRequest,
+        __Marshaller_google_logging_v2_CmekSettings);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -243,6 +260,48 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExclusion(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.CmekSettings> GetCmekSettings(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.CmekSettings> UpdateCmekSettings(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -752,6 +811,174 @@ namespace Google.Cloud.Logging.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExclusion, null, options, request);
       }
+      /// <summary>
+      /// Gets the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.CmekSettings GetCmekSettings(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCmekSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.CmekSettings GetCmekSettings(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCmekSettings, null, options, request);
+      }
+      /// <summary>
+      /// Gets the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.CmekSettings> GetCmekSettingsAsync(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCmekSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.CmekSettings> GetCmekSettingsAsync(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCmekSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.CmekSettings UpdateCmekSettings(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCmekSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.CmekSettings UpdateCmekSettings(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCmekSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.CmekSettings> UpdateCmekSettingsAsync(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCmekSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Logs Router CMEK settings for the given resource.
+      ///
+      /// Note: CMEK for the Logs Router can currently only be configured for GCP
+      /// organizations. Once configured, it applies to all projects and folders in
+      /// the GCP organization.
+      ///
+      /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+      /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+      /// account does not have the required
+      /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+      /// 3) access to the key is disabled.
+      ///
+      /// See [Enabling CMEK for Logs
+      /// Router](/logging/docs/routing/managed-encryption) for more information.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.CmekSettings> UpdateCmekSettingsAsync(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCmekSettings, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ConfigServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
@@ -773,7 +1000,9 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_GetExclusion, serviceImpl.GetExclusion)
           .AddMethod(__Method_CreateExclusion, serviceImpl.CreateExclusion)
           .AddMethod(__Method_UpdateExclusion, serviceImpl.UpdateExclusion)
-          .AddMethod(__Method_DeleteExclusion, serviceImpl.DeleteExclusion).Build();
+          .AddMethod(__Method_DeleteExclusion, serviceImpl.DeleteExclusion)
+          .AddMethod(__Method_GetCmekSettings, serviceImpl.GetCmekSettings)
+          .AddMethod(__Method_UpdateCmekSettings, serviceImpl.UpdateCmekSettings).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -792,6 +1021,8 @@ namespace Google.Cloud.Logging.V2 {
       serviceBinder.AddMethod(__Method_CreateExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(serviceImpl.CreateExclusion));
       serviceBinder.AddMethod(__Method_UpdateExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(serviceImpl.UpdateExclusion));
       serviceBinder.AddMethod(__Method_DeleteExclusion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExclusion));
+      serviceBinder.AddMethod(__Method_GetCmekSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings>(serviceImpl.GetCmekSettings));
+      serviceBinder.AddMethod(__Method_UpdateCmekSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest, global::Google.Cloud.Logging.V2.CmekSettings>(serviceImpl.UpdateCmekSettings));
     }
 
   }

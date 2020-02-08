@@ -25,61 +25,72 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX21ldHJpY3MucHJvdG8SEWdv",
-            "b2dsZS5sb2dnaW5nLnYyGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90",
-            "bxoXZ29vZ2xlL2FwaS9tZXRyaWMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9l",
-            "bXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvIpME",
-            "CglMb2dNZXRyaWMSDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEo",
-            "CRIOCgZmaWx0ZXIYAyABKAkSNwoRbWV0cmljX2Rlc2NyaXB0b3IYBSABKAsy",
-            "HC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3ISFwoPdmFsdWVfZXh0cmFj",
-            "dG9yGAYgASgJEksKEGxhYmVsX2V4dHJhY3RvcnMYByADKAsyMS5nb29nbGUu",
-            "bG9nZ2luZy52Mi5Mb2dNZXRyaWMuTGFiZWxFeHRyYWN0b3JzRW50cnkSPgoO",
-            "YnVja2V0X29wdGlvbnMYCCABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlv",
-            "bi5CdWNrZXRPcHRpb25zEi8KC2NyZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgKIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPAoHdmVyc2lvbhgEIAEoDjInLmdv",
-            "b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5BcGlWZXJzaW9uQgIYARo2ChRM",
-            "YWJlbEV4dHJhY3RvcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBIhwKCkFwaVZlcnNpb24SBgoCVjIQABIGCgJWMRABIk4KFUxpc3RM",
-            "b2dNZXRyaWNzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90b2tl",
-            "bhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlzdExvZ01ldHJpY3NS",
-            "ZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "TG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIqChNHZXRMb2dN",
-            "ZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJIlYKFkNyZWF0ZUxv",
-            "Z01ldHJpY1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEiwKBm1ldHJpYxgCIAEo",
-            "CzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyJbChZVcGRhdGVMb2dN",
-            "ZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJEiwKBm1ldHJpYxgC",
-            "IAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyItChZEZWxldGVM",
-            "b2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJMuQHChBNZXRy",
-            "aWNzU2VydmljZVYyEo4BCg5MaXN0TG9nTWV0cmljcxIoLmdvb2dsZS5sb2dn",
-            "aW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5n",
-            "LnYyLkxpc3RMb2dNZXRyaWNzUmVzcG9uc2UiJ4LT5JMCIRIfL3YyL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vbWV0cmljcxKEAQoMR2V0TG9nTWV0cmljEiYuZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuR2V0TG9nTWV0cmljUmVxdWVzdBocLmdvb2dsZS5s",
-            "b2dnaW5nLnYyLkxvZ01ldHJpYyIugtPkkwIoEiYvdjIve21ldHJpY19uYW1l",
-            "PXByb2plY3RzLyovbWV0cmljcy8qfRKLAQoPQ3JlYXRlTG9nTWV0cmljEiku",
-            "Z29vZ2xlLmxvZ2dpbmcudjIuQ3JlYXRlTG9nTWV0cmljUmVxdWVzdBocLmdv",
-            "b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyIvgtPkkwIpIh8vdjIve3BhcmVu",
-            "dD1wcm9qZWN0cy8qfS9tZXRyaWNzOgZtZXRyaWMSkgEKD1VwZGF0ZUxvZ01l",
-            "dHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZUxvZ01ldHJpY1JlcXVl",
-            "c3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRyaWMiNoLT5JMCMBomL3Yy",
-            "L3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn06Bm1ldHJpYxKE",
-            "AQoPRGVsZXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRl",
-            "TG9nTWV0cmljUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIugtPk",
-            "kwIoKiYvdjIve21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8qfRqN",
-            "AspBFmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb23SQfABaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seSxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xvZ2dpbmcuYWRtaW4s",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLnJlYWQs",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLndyaXRl",
-            "Qp8BChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCE0xvZ2dpbmdNZXRyaWNzUHJv",
-            "dG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9s",
-            "b2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5W",
-            "MsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
+            "b2dsZS5sb2dnaW5nLnYyGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxodZ29v",
+            "Z2xlL2FwaS9kaXN0cmlidXRpb24ucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aF2dvb2dsZS9hcGkvbWV0cmljLnByb3RvGhlnb29n",
+            "bGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRp",
+            "b24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xl",
+            "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
+            "3AQKCUxvZ01ldHJpYxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIg",
+            "ASgJEg4KBmZpbHRlchgDIAEoCRI3ChFtZXRyaWNfZGVzY3JpcHRvchgFIAEo",
+            "CzIcLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvchIXCg92YWx1ZV9leHRy",
+            "YWN0b3IYBiABKAkSSwoQbGFiZWxfZXh0cmFjdG9ycxgHIAMoCzIxLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5MYWJlbEV4dHJhY3RvcnNFbnRyeRI+",
+            "Cg5idWNrZXRfb3B0aW9ucxgIIAEoCzImLmdvb2dsZS5hcGkuRGlzdHJpYnV0",
+            "aW9uLkJ1Y2tldE9wdGlvbnMSLwoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAogASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8Cgd2ZXJzaW9uGAQgASgOMicu",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljLkFwaVZlcnNpb25CAhgBGjYK",
+            "FExhYmVsRXh0cmFjdG9yc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiHAoKQXBpVmVyc2lvbhIGCgJWMhAAEgYKAlYxEAE6R+pBRAod",
+            "bG9nZ2luZy5nb29nbGVhcGlzLmNvbS9NZXRyaWMSI3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9tZXRyaWNzL3ttZXRyaWN9IoMBChVMaXN0TG9nTWV0cmljc1JlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEgoKcGFnZV90b2tlbhgCIAEo",
+            "CRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlzdExvZ01ldHJpY3NSZXNwb25z",
+            "ZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0",
+            "cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChNHZXRMb2dNZXRyaWNS",
+            "ZXF1ZXN0EjoKC21ldHJpY19uYW1lGAEgASgJQiXgQQL6QR8KHWxvZ2dpbmcu",
+            "Z29vZ2xlYXBpcy5jb20vTWV0cmljIo8BChZDcmVhdGVMb2dNZXRyaWNSZXF1",
+            "ZXN0EkIKBnBhcmVudBgBIAEoCUIy4EEC+kEsCipjbG91ZHJlc291cmNlbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9NZXRyaWMSMQoGbWV0cmljGAIgASgLMhwu",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljQgPgQQIihwEKFlVwZGF0ZUxv",
+            "Z01ldHJpY1JlcXVlc3QSOgoLbWV0cmljX25hbWUYASABKAlCJeBBAvpBHwod",
+            "bG9nZ2luZy5nb29nbGVhcGlzLmNvbS9NZXRyaWMSMQoGbWV0cmljGAIgASgL",
+            "MhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljQgPgQQIiVAoWRGVsZXRl",
+            "TG9nTWV0cmljUmVxdWVzdBI6CgttZXRyaWNfbmFtZRgBIAEoCUIl4EEC+kEf",
+            "Ch1sb2dnaW5nLmdvb2dsZWFwaXMuY29tL01ldHJpYzKuCAoQTWV0cmljc1Nl",
+            "cnZpY2VWMhKXAQoOTGlzdExvZ01ldHJpY3MSKC5nb29nbGUubG9nZ2luZy52",
+            "Mi5MaXN0TG9nTWV0cmljc1JlcXVlc3QaKS5nb29nbGUubG9nZ2luZy52Mi5M",
+            "aXN0TG9nTWV0cmljc1Jlc3BvbnNlIjCC0+STAiESHy92Mi97cGFyZW50PXBy",
+            "b2plY3RzLyp9L21ldHJpY3PaQQZwYXJlbnQSkgEKDEdldExvZ01ldHJpYxIm",
+            "Lmdvb2dsZS5sb2dnaW5nLnYyLkdldExvZ01ldHJpY1JlcXVlc3QaHC5nb29n",
+            "bGUubG9nZ2luZy52Mi5Mb2dNZXRyaWMiPILT5JMCKBImL3YyL3ttZXRyaWNf",
+            "bmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn3aQQttZXRyaWNfbmFtZRKbAQoP",
+            "Q3JlYXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuQ3JlYXRlTG9n",
+            "TWV0cmljUmVxdWVzdBocLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyI/",
+            "gtPkkwIpIh8vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRyaWNzOgZtZXRy",
+            "aWPaQQ1wYXJlbnQsbWV0cmljEqcBCg9VcGRhdGVMb2dNZXRyaWMSKS5nb29n",
+            "bGUubG9nZ2luZy52Mi5VcGRhdGVMb2dNZXRyaWNSZXF1ZXN0GhwuZ29vZ2xl",
+            "LmxvZ2dpbmcudjIuTG9nTWV0cmljIkuC0+STAjAaJi92Mi97bWV0cmljX25h",
+            "bWU9cHJvamVjdHMvKi9tZXRyaWNzLyp9OgZtZXRyaWPaQRJtZXRyaWNfbmFt",
+            "ZSxtZXRyaWMSkgEKD0RlbGV0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dnaW5n",
+            "LnYyLkRlbGV0ZUxvZ01ldHJpY1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiPILT5JMCKComL3YyL3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21l",
+            "dHJpY3MvKn3aQQttZXRyaWNfbmFtZRqNAspBFmxvZ2dpbmcuZ29vZ2xlYXBp",
+            "cy5jb23SQfABaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
+            "b3VkLXBsYXRmb3JtLnJlYWQtb25seSxodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2xvZ2dpbmcuYWRtaW4saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9sb2dnaW5nLnJlYWQsaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9sb2dnaW5nLndyaXRlQp8BChVjb20uZ29vZ2xlLmxvZ2dp",
+            "bmcudjJCE0xvZ2dpbmdNZXRyaWNzUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGq",
+            "AhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dn",
+            "aW5nXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "CreateTime", "UpdateTime", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsRequest), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
@@ -1034,7 +1045,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    /// The resource name of the desired metric:
+    /// Required. The resource name of the desired metric:
     ///
     ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>
@@ -1172,7 +1183,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The resource name of the project in which to create the metric:
+    /// Required. The resource name of the project in which to create the metric:
     ///
     ///     "projects/[PROJECT_ID]"
     ///
@@ -1190,7 +1201,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Cloud.Logging.V2.LogMetric metric_;
     /// <summary>
-    /// The new logs-based metric, which must not have an identifier that
+    /// Required. The new logs-based metric, which must not have an identifier that
     /// already exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1349,7 +1360,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    /// The resource name of the metric to update:
+    /// Required. The resource name of the metric to update:
     ///
     ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     ///
@@ -1369,7 +1380,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Cloud.Logging.V2.LogMetric metric_;
     /// <summary>
-    /// The updated metric.
+    /// Required. The updated metric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogMetric Metric {
@@ -1526,7 +1537,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    /// The resource name of the metric to delete:
+    /// Required. The resource name of the metric to delete:
     ///
     ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>

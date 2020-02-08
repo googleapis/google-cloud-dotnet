@@ -528,10 +528,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
@@ -563,10 +563,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
@@ -595,10 +595,10 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
@@ -627,10 +627,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
@@ -662,10 +662,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
@@ -694,10 +694,10 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
@@ -726,10 +726,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -748,10 +748,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -769,10 +769,10 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1414,7 +1414,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries in
         /// the resources listed in `resource_names`. Referencing a parent resource
         /// that is not listed in `resource_names` will cause the filter to return no
@@ -1479,7 +1479,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries in
         /// the resources listed in `resource_names`. Referencing a parent resource
         /// that is not listed in `resource_names` will cause the filter to return no
@@ -1544,7 +1544,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries in
         /// the resources listed in `resource_names`. Referencing a parent resource
         /// that is not listed in `resource_names` will cause the filter to return no
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries in
         /// the resources listed in `resource_names`. Referencing a parent resource
         /// that is not listed in `resource_names` will cause the filter to return no
@@ -2011,10 +2011,10 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_ListLogsRequest(ref ListLogsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2034,10 +2034,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes all the log entries in a log.
-        /// The log reappears if it receives new entries.
-        /// Log entries written shortly before the delete operation might not be
-        /// deleted.
+        /// Deletes all the log entries in a log. The log reappears if it receives new
+        /// entries. Log entries written shortly before the delete operation might not
+        /// be deleted. Entries received after the delete operation with a timestamp
+        /// before the operation will be deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
