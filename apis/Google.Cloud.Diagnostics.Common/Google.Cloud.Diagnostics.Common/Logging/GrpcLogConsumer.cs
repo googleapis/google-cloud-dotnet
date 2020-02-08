@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return;
             }
-            _client.WriteLogEntries(null, null, null, logs);
+            _client.WriteLogEntries((LogName) null, null, null, logs);
         }
 
         /// <inheritdoc />
@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return CommonUtils.CompletedTask;
             }
-            return _client.WriteLogEntriesAsync(null, null, null, logs, cancellationToken);
+            return _client.WriteLogEntriesAsync((LogName) null, null, null, logs, cancellationToken);
         }
 
         /// <inheritdoc />

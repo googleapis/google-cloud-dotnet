@@ -123,7 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 JsonPayload = new Struct { Fields = { ["message"] = Value.ForString(id) } }
             };
 
-            _client.WriteLogEntries(null, null, null, new[] { entry });
+            _client.WriteLogEntries((LogName) null, null, null, new[] { entry });
 
             var request = BuildRequest(startTime);
             request.Filter += $" AND jsonPayload.message:\"{id}\"";
