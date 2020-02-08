@@ -193,25 +193,25 @@ namespace Google.Cloud.Logging.V2 {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "Description", "Disabled", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "BigqueryOptions", "CreateTime", "UpdateTime", "StartTime", "EndTime" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.BigQueryOptions), global::Google.Cloud.Logging.V2.BigQueryOptions.Parser, new[]{ "UsePartitionedTables", "UsesTimestampColumnPartitioning" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksResponse), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateSinkRequest), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateSinkRequest), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled", "CreateTime", "UpdateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsRequest), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsResponse), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser, new[]{ "Exclusions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetExclusionRequest), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateExclusionRequest), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser, new[]{ "Parent", "Exclusion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateExclusionRequest), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser, new[]{ "Name", "Exclusion", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteExclusionRequest), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest), global::Google.Cloud.Logging.V2.GetCmekSettingsRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest), global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest.Parser, new[]{ "Name", "CmekSettings", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CmekSettings), global::Google.Cloud.Logging.V2.CmekSettings.Parser, new[]{ "Name", "KmsKeyName", "ServiceAccountId" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "Description", "Disabled", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "BigqueryOptions", "CreateTime", "UpdateTime", "StartTime", "EndTime" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.BigQueryOptions), global::Google.Cloud.Logging.V2.BigQueryOptions.Parser, new[]{ "UsePartitionedTables", "UsesTimestampColumnPartitioning" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksResponse), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateSinkRequest), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateSinkRequest), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled", "CreateTime", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsRequest), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsResponse), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser, new[]{ "Exclusions", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetExclusionRequest), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateExclusionRequest), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser, new[]{ "Parent", "Exclusion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateExclusionRequest), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser, new[]{ "Name", "Exclusion", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteExclusionRequest), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest), global::Google.Cloud.Logging.V2.GetCmekSettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest), global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest.Parser, new[]{ "Name", "CmekSettings", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CmekSettings), global::Google.Cloud.Logging.V2.CmekSettings.Parser, new[]{ "Name", "KmsKeyName", "ServiceAccountId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -367,7 +367,7 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Field number for the "output_version_format" field.</summary>
     public const int OutputVersionFormatFieldNumber = 6;
-    private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
+    private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified;
     /// <summary>
     /// Deprecated. The log entry format to use for this sink's exported log
     /// entries. The v2 format is used by default and cannot be changed.
@@ -566,7 +566,7 @@ namespace Google.Cloud.Logging.V2 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
-      if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
+      if (OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) hash ^= OutputVersionFormat.GetHashCode();
       if (WriterIdentity.Length != 0) hash ^= WriterIdentity.GetHashCode();
       if (IncludeChildren != false) hash ^= IncludeChildren.GetHashCode();
       if (optionsCase_ == OptionsOneofCase.BigqueryOptions) hash ^= BigqueryOptions.GetHashCode();
@@ -600,7 +600,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(42);
         output.WriteString(Filter);
       }
-      if (OutputVersionFormat != 0) {
+      if (OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) OutputVersionFormat);
       }
@@ -663,7 +663,7 @@ namespace Google.Cloud.Logging.V2 {
       if (Disabled != false) {
         size += 2 + 1;
       }
-      if (OutputVersionFormat != 0) {
+      if (OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OutputVersionFormat);
       }
       if (WriterIdentity.Length != 0) {
@@ -713,7 +713,7 @@ namespace Google.Cloud.Logging.V2 {
       if (other.Disabled != false) {
         Disabled = other.Disabled;
       }
-      if (other.OutputVersionFormat != 0) {
+      if (other.OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) {
         OutputVersionFormat = other.OutputVersionFormat;
       }
       if (other.WriterIdentity.Length != 0) {

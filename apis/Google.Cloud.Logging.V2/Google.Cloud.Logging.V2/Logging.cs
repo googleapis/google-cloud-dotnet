@@ -25,14 +25,14 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nLnByb3RvEhFnb29nbGUubG9n",
-            "Z2luZy52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xl",
-            "L2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8aI2dvb2dsZS9hcGkvbW9uaXRvcmVkX3Jlc291cmNlLnByb3RvGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUvbG9nZ2luZy92Mi9s",
-            "b2dfZW50cnkucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3YyL2xvZ2dpbmdfY29u",
-            "ZmlnLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aG2dv",
-            "b2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iSAoQRGVs",
+            "Z2luZy52MhoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkv",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aI2dvb2dsZS9hcGkvbW9uaXRvcmVkX3Jl",
+            "c291cmNlLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29n",
+            "bGUvbG9nZ2luZy92Mi9sb2dfZW50cnkucHJvdG8aJmdvb2dsZS9sb2dnaW5n",
+            "L3YyL2xvZ2dpbmdfY29uZmlnLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
+            "YXRpb24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0",
+            "dXMucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iSAoQRGVs",
             "ZXRlTG9nUmVxdWVzdBI0Cghsb2dfbmFtZRgBIAEoCUIi4EEC+kEcEhpsb2dn",
             "aW5nLmdvb2dsZWFwaXMuY29tL0xvZyLPAgoWV3JpdGVMb2dFbnRyaWVzUmVx",
             "dWVzdBIxCghsb2dfbmFtZRgBIAEoCUIf+kEcChpsb2dnaW5nLmdvb2dsZWFw",
@@ -62,7 +62,7 @@ namespace Google.Cloud.Logging.V2 {
             "IAEoCUIf+kEcEhpsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZxIRCglwYWdl",
             "X3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSI+ChBMaXN0TG9nc1Jl",
             "c3BvbnNlEhEKCWxvZ19uYW1lcxgDIAMoCRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAky3QoKEExvZ2dpbmdTZXJ2aWNlVjISkwIKCURlbGV0ZUxvZxIjLmdv",
+            "AiABKAkyvAoKEExvZ2dpbmdTZXJ2aWNlVjISkwIKCURlbGV0ZUxvZxIjLmdv",
             "b2dsZS5sb2dnaW5nLnYyLkRlbGV0ZUxvZ1JlcXVlc3QaFi5nb29nbGUucHJv",
             "dG9idWYuRW1wdHkiyAGC0+STArYBKiAvdjIve2xvZ19uYW1lPXByb2plY3Rz",
             "LyovbG9ncy8qfVobKhkvdjIve2xvZ19uYW1lPSovKi9sb2dzLyp9WicqJS92",
@@ -72,44 +72,43 @@ namespace Google.Cloud.Logging.V2 {
             "b2dFbnRyaWVzEikuZ29vZ2xlLmxvZ2dpbmcudjIuV3JpdGVMb2dFbnRyaWVz",
             "UmVxdWVzdBoqLmdvb2dsZS5sb2dnaW5nLnYyLldyaXRlTG9nRW50cmllc1Jl",
             "c3BvbnNlIj+C0+STAhYiES92Mi9lbnRyaWVzOndyaXRlOgEq2kEgbG9nX25h",
-            "bWUscmVzb3VyY2UsbGFiZWxzLGVudHJpZXMSowEKDkxpc3RMb2dFbnRyaWVz",
+            "bWUscmVzb3VyY2UsbGFiZWxzLGVudHJpZXMSggEKDkxpc3RMb2dFbnRyaWVz",
             "EiguZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXF1ZXN0Giku",
-            "Z29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXNwb25zZSI8gtPk",
-            "kwIVIhAvdjIvZW50cmllczpsaXN0OgEq2kEecmVzb3VyY2VfbmFtZXMsZmls",
-            "dGVyLG9yZGVyX2J5EsUBCiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlw",
-            "dG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJj",
-            "ZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RN",
-            "b25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiKILT5JMCIhIg",
-            "L3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnMSiAIKCExpc3RMb2dz",
-            "EiIuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ3NSZXF1ZXN0GiMuZ29vZ2xl",
-            "LmxvZ2dpbmcudjIuTGlzdExvZ3NSZXNwb25zZSKyAYLT5JMCogESFS92Mi97",
-            "cGFyZW50PSovKn0vbG9nc1oeEhwvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9s",
-            "b2dzWiMSIS92Mi97cGFyZW50PW9yZ2FuaXphdGlvbnMvKn0vbG9nc1odEhsv",
-            "djIve3BhcmVudD1mb2xkZXJzLyp9L2xvZ3NaJRIjL3YyL3twYXJlbnQ9Ymls",
-            "bGluZ0FjY291bnRzLyp9L2xvZ3PaQQZwYXJlbnQajQLKQRZsb2dnaW5nLmdv",
-            "b2dsZWFwaXMuY29t0kHwAWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFkLW9ubHksaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLmFkbWluLGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy5yZWFkLGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy53cml0ZUKYAQoVY29tLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGq",
-            "AhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dn",
-            "aW5nXFYyYgZwcm90bzM="));
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXNwb25zZSIbgtPk",
+            "kwIVIhAvdjIvZW50cmllczpsaXN0OgEqEsUBCiBMaXN0TW9uaXRvcmVkUmVz",
+            "b3VyY2VEZXNjcmlwdG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25p",
+            "dG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9u",
+            "c2UiKILT5JMCIhIgL3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnMS",
+            "iAIKCExpc3RMb2dzEiIuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ3NSZXF1",
+            "ZXN0GiMuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ3NSZXNwb25zZSKyAYLT",
+            "5JMCogESFS92Mi97cGFyZW50PSovKn0vbG9nc1oeEhwvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9sb2dzWiMSIS92Mi97cGFyZW50PW9yZ2FuaXphdGlvbnMv",
+            "Kn0vbG9nc1odEhsvdjIve3BhcmVudD1mb2xkZXJzLyp9L2xvZ3NaJRIjL3Yy",
+            "L3twYXJlbnQ9YmlsbGluZ0FjY291bnRzLyp9L2xvZ3PaQQZwYXJlbnQajQLK",
+            "QRZsb2dnaW5nLmdvb2dsZWFwaXMuY29t0kHwAWh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFkLW9ubHksaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLmFkbWluLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy5yZWFkLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy53cml0ZUKY",
+            "AQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAVo4Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3Yy",
+            "O2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMsoCF0dvb2ds",
+            "ZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor, global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogRequest), global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest), global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries", "PartialSuccess", "DryRun" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesResponse), global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors), global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors.Parser, new[]{ "LogEntryErrors" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesRequest), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "ResourceNames", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesResponse), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsResponse), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser, new[]{ "LogNames", "NextPageToken" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor, global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogRequest), global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest), global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries", "PartialSuccess", "DryRun" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesResponse), global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors), global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors.Parser, new[]{ "LogEntryErrors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesRequest), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "ResourceNames", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesResponse), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsResponse), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser, new[]{ "LogNames", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -358,7 +357,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Default labels that are added to the `labels` field of all log
@@ -741,7 +740,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "log_entry_errors" field.</summary>
     public const int LogEntryErrorsFieldNumber = 1;
     private static readonly pbc::MapField<int, global::Google.Rpc.Status>.Codec _map_logEntryErrors_codec
-        = new pbc::MapField<int, global::Google.Rpc.Status>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser), 10);
+        = new pbc::MapField<int, global::Google.Rpc.Status>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser), 10);
     private readonly pbc::MapField<int, global::Google.Rpc.Status> logEntryErrors_ = new pbc::MapField<int, global::Google.Rpc.Status>();
     /// <summary>
     /// When `WriteLogEntriesRequest.partial_success` is true, records the error
