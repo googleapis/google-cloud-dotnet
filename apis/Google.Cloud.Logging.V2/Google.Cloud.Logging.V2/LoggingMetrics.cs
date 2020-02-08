@@ -91,14 +91,14 @@ namespace Google.Cloud.Logging.V2 {
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "CreateTime", "UpdateTime", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsRequest), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsResponse), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetLogMetricRequest), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateLogMetricRequest), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "Parent", "Metric" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "CreateTime", "UpdateTime", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsRequest), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsResponse), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetLogMetricRequest), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateLogMetricRequest), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "Parent", "Metric" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -287,7 +287,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "label_extractors" field.</summary>
     public const int LabelExtractorsFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_labelExtractors_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> labelExtractors_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A map from a label key string to an extractor expression which is
@@ -360,7 +360,7 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 4;
-    private global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion version_ = 0;
+    private global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion version_ = global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2;
     /// <summary>
     /// Deprecated. The API version that created or updated this metric.
     /// The v2 format is used by default and cannot be changed.
@@ -412,7 +412,7 @@ namespace Google.Cloud.Logging.V2 {
       if (bucketOptions_ != null) hash ^= BucketOptions.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (Version != 0) hash ^= Version.GetHashCode();
+      if (Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -438,7 +438,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(26);
         output.WriteString(Filter);
       }
-      if (Version != 0) {
+      if (Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Version);
       }
@@ -496,7 +496,7 @@ namespace Google.Cloud.Logging.V2 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (Version != 0) {
+      if (Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Version);
       }
       if (_unknownFields != null) {
@@ -547,7 +547,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.Version != 0) {
+      if (other.Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) {
         Version = other.Version;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
