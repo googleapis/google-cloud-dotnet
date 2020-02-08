@@ -45,7 +45,7 @@ namespace Google.Cloud.Logging.V2.SmokeTests
             LoggingServiceV2Client client = LoggingServiceV2Client.Create();
 
             // Initialize request argument(s)
-            LogNameOneof logName = LogNameOneof.From(new LogName(projectId, $"test-{Guid.NewGuid()}"));
+            LogName logName = LogName.FromProjectLog(projectId, $"test-{Guid.NewGuid()}");
             MonitoredResource resource = new MonitoredResource();
             IDictionary<string, string> labels = new Dictionary<string, string>();
             IEnumerable<LogEntry> entries = new List<LogEntry>();
