@@ -81,9 +81,9 @@ namespace Google.Cloud.Diagnostics.Common
             switch (Kind)
             {
                 case LogTargetKind.Project:
-                    return new LogName(ProjectId, name).ToString();
+                    return LogName.FromProjectLog(ProjectId, name).ToString();
                 case LogTargetKind.Organization:
-                    return new OrganizationLogName(OrganizationId, name).ToString();
+                    return LogName.FromOrganizationLog(OrganizationId, name).ToString();
                 default:
                     Debug.Assert(false, $"Unsupported location {Kind}");
                     return null;
