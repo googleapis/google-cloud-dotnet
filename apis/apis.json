@@ -623,9 +623,8 @@
   },
   {
     "id": "Google.Cloud.Logging.V2",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/logging/v2",
-    "serviceYaml": "logging.yaml",
     "productName": "Stackdriver Logging",
     "productUrl": "https://cloud.google.com/logging/",
     "version": "3.0.0-alpha00",
