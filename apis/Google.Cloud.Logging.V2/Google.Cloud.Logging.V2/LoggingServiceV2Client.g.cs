@@ -1258,6 +1258,576 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<string> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntries(new ListLogEntriesRequest
+            {
+                ResourceNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<string> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntriesAsync(new ListLogEntriesRequest
+            {
+                ResourceNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::ProjectName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntries(new ListLogEntriesRequest
+            {
+                ResourceNamesAsProjectNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::ProjectName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntriesAsync(new ListLogEntriesRequest
+            {
+                ResourceNamesAsProjectNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::OrganizationName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntries(new ListLogEntriesRequest
+            {
+                ResourceNamesAsOrganizationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::OrganizationName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntriesAsync(new ListLogEntriesRequest
+            {
+                ResourceNamesAsOrganizationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::FolderName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntries(new ListLogEntriesRequest
+            {
+                ResourceNamesAsFolderNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::FolderName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntriesAsync(new ListLogEntriesRequest
+            {
+                ResourceNamesAsFolderNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(scg::IEnumerable<gagr::BillingAccountName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntries(new ListLogEntriesRequest
+            {
+                ResourceNamesAsBillingAccountNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists log entries.  Use this method to retrieve log entries that originated
+        /// from a project/folder/organization/billing account.  For ways to export log
+        /// entries, see [Exporting Logs](/logging/docs/export).
+        /// </summary>
+        /// <param name="resourceNames">
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
+        /// 
+        /// "projects/[PROJECT_ID]"
+        /// "organizations/[ORGANIZATION_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]"
+        /// "folders/[FOLDER_ID]"
+        /// 
+        /// 
+        /// Projects listed in the `project_ids` field are added to this list.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
+        /// The maximum length of the filter is 20000 characters.
+        /// </param>
+        /// <param name="orderBy">
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of their `insert_id` values.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(scg::IEnumerable<gagr::BillingAccountName> resourceNames, string filter, string orderBy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLogEntriesAsync(new ListLogEntriesRequest
+            {
+                ResourceNamesAsBillingAccountNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)),
+                },
+                Filter = filter ?? "",
+                OrderBy = orderBy ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Lists the descriptors for monitored resource types used by Logging.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
