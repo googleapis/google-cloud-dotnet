@@ -88,10 +88,10 @@ namespace Google.Cloud.Logging.V2 {
     public abstract partial class LoggingServiceV2Base
     {
       /// <summary>
-      /// Deletes all the log entries in a log.
-      /// The log reappears if it receives new entries.
-      /// Log entries written shortly before the delete operation might not be
-      /// deleted.
+      /// Deletes all the log entries in a log. The log reappears if it receives new
+      /// entries. Log entries written shortly before the delete operation might not
+      /// be deleted. Entries received after the delete operation with a timestamp
+      /// before the operation will be deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -180,10 +180,10 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Deletes all the log entries in a log.
-      /// The log reappears if it receives new entries.
-      /// Log entries written shortly before the delete operation might not be
-      /// deleted.
+      /// Deletes all the log entries in a log. The log reappears if it receives new
+      /// entries. Log entries written shortly before the delete operation might not
+      /// be deleted. Entries received after the delete operation with a timestamp
+      /// before the operation will be deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -195,10 +195,10 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteLog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes all the log entries in a log.
-      /// The log reappears if it receives new entries.
-      /// Log entries written shortly before the delete operation might not be
-      /// deleted.
+      /// Deletes all the log entries in a log. The log reappears if it receives new
+      /// entries. Log entries written shortly before the delete operation might not
+      /// be deleted. Entries received after the delete operation with a timestamp
+      /// before the operation will be deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -208,10 +208,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      /// Deletes all the log entries in a log.
-      /// The log reappears if it receives new entries.
-      /// Log entries written shortly before the delete operation might not be
-      /// deleted.
+      /// Deletes all the log entries in a log. The log reappears if it receives new
+      /// entries. Log entries written shortly before the delete operation might not
+      /// be deleted. Entries received after the delete operation with a timestamp
+      /// before the operation will be deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -223,10 +223,10 @@ namespace Google.Cloud.Logging.V2 {
         return DeleteLogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes all the log entries in a log.
-      /// The log reappears if it receives new entries.
-      /// Log entries written shortly before the delete operation might not be
-      /// deleted.
+      /// Deletes all the log entries in a log. The log reappears if it receives new
+      /// entries. Log entries written shortly before the delete operation might not
+      /// be deleted. Entries received after the delete operation with a timestamp
+      /// before the operation will be deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
