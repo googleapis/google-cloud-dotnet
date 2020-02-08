@@ -26,42 +26,47 @@ namespace Google.Cloud.Logging.V2 {
           string.Concat(
             "CiFnb29nbGUvbG9nZ2luZy92Mi9sb2dfZW50cnkucHJvdG8SEWdvb2dsZS5s",
             "b2dnaW5nLnYyGiNnb29nbGUvYXBpL21vbml0b3JlZF9yZXNvdXJjZS5wcm90",
-            "bxomZ29vZ2xlL2xvZ2dpbmcvdHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdv",
-            "b2dsZS9sb2dnaW5nL3R5cGUvbG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUv",
-            "cHJvdG9idWYvYW55LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUv",
-            "cnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
-            "byKOBgoITG9nRW50cnkSEAoIbG9nX25hbWUYDCABKAkSLwoIcmVzb3VyY2UY",
-            "CCABKAsyHS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlEi0KDXByb3Rv",
-            "X3BheWxvYWQYAiABKAsyFC5nb29nbGUucHJvdG9idWYuQW55SAASFgoMdGV4",
-            "dF9wYXlsb2FkGAMgASgJSAASLwoManNvbl9wYXlsb2FkGAYgASgLMhcuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cnVjdEgAEi0KCXRpbWVzdGFtcBgJIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNQoRcmVjZWl2ZV90aW1lc3RhbXAY",
-            "GCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjIKCHNldmVyaXR5",
-            "GAogASgOMiAuZ29vZ2xlLmxvZ2dpbmcudHlwZS5Mb2dTZXZlcml0eRIRCglp",
-            "bnNlcnRfaWQYBCABKAkSNgoMaHR0cF9yZXF1ZXN0GAcgASgLMiAuZ29vZ2xl",
-            "LmxvZ2dpbmcudHlwZS5IdHRwUmVxdWVzdBI3CgZsYWJlbHMYCyADKAsyJy5n",
-            "b29nbGUubG9nZ2luZy52Mi5Mb2dFbnRyeS5MYWJlbHNFbnRyeRI7CghtZXRh",
-            "ZGF0YRgZIAEoCzIlLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2VNZXRh",
-            "ZGF0YUICGAESNwoJb3BlcmF0aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcu",
-            "djIuTG9nRW50cnlPcGVyYXRpb24SDQoFdHJhY2UYFiABKAkSDwoHc3Bhbl9p",
-            "ZBgbIAEoCRIVCg10cmFjZV9zYW1wbGVkGB4gASgIEkIKD3NvdXJjZV9sb2Nh",
-            "dGlvbhgXIAEoCzIpLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5U291cmNl",
-            "TG9jYXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4AUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0aW9uEgoK",
-            "AmlkGAEgASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMgASgIEgwK",
-            "BGxhc3QYBCABKAgiRgoWTG9nRW50cnlTb3VyY2VMb2NhdGlvbhIMCgRmaWxl",
-            "GAEgASgJEgwKBGxpbmUYAiABKAMSEAoIZnVuY3Rpb24YAyABKAlCmQEKFWNv",
-            "bS5nb29nbGUubG9nZ2luZy52MkINTG9nRW50cnlQcm90b1ABWjhnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2xvZ2dpbmcvdjI7bG9n",
-            "Z2luZ/gBAaoCF0dvb2dsZS5DbG91ZC5Mb2dnaW5nLlYyygIXR29vZ2xlXENs",
-            "b3VkXExvZ2dpbmdcVjJiBnByb3RvMw=="));
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xlL2xvZ2dpbmcv",
+            "dHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5cGUv",
+            "bG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3Rv",
+            "Ghxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLOBwoITG9nRW50cnkSEAoI",
+            "bG9nX25hbWUYDCABKAkSLwoIcmVzb3VyY2UYCCABKAsyHS5nb29nbGUuYXBp",
+            "Lk1vbml0b3JlZFJlc291cmNlEi0KDXByb3RvX3BheWxvYWQYAiABKAsyFC5n",
+            "b29nbGUucHJvdG9idWYuQW55SAASFgoMdGV4dF9wYXlsb2FkGAMgASgJSAAS",
+            "LwoManNvbl9wYXlsb2FkGAYgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
+            "dEgAEi0KCXRpbWVzdGFtcBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASNQoRcmVjZWl2ZV90aW1lc3RhbXAYGCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEjIKCHNldmVyaXR5GAogASgOMiAuZ29vZ2xlLmxv",
+            "Z2dpbmcudHlwZS5Mb2dTZXZlcml0eRIRCglpbnNlcnRfaWQYBCABKAkSNgoM",
+            "aHR0cF9yZXF1ZXN0GAcgASgLMiAuZ29vZ2xlLmxvZ2dpbmcudHlwZS5IdHRw",
+            "UmVxdWVzdBI3CgZsYWJlbHMYCyADKAsyJy5nb29nbGUubG9nZ2luZy52Mi5M",
+            "b2dFbnRyeS5MYWJlbHNFbnRyeRI7CghtZXRhZGF0YRgZIAEoCzIlLmdvb2ds",
+            "ZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2VNZXRhZGF0YUICGAESNwoJb3BlcmF0",
+            "aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnlPcGVyYXRp",
+            "b24SDQoFdHJhY2UYFiABKAkSDwoHc3Bhbl9pZBgbIAEoCRIVCg10cmFjZV9z",
+            "YW1wbGVkGB4gASgIEkIKD3NvdXJjZV9sb2NhdGlvbhgXIAEoCzIpLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLkxvZ0VudHJ5U291cmNlTG9jYXRpb24aLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATq9AepBuQEK",
+            "GmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nEh1wcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9ncy97bG9nfRInb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9s",
+            "b2dzL3tsb2d9Ehtmb2xkZXJzL3tmb2xkZXJ9L2xvZ3Mve2xvZ30SLGJpbGxp",
+            "bmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9sb2dzL3tsb2d9Gghsb2df",
+            "bmFtZUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0aW9uEgoKAmlkGAEg",
+            "ASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMgASgIEgwKBGxhc3QY",
+            "BCABKAgiRgoWTG9nRW50cnlTb3VyY2VMb2NhdGlvbhIMCgRmaWxlGAEgASgJ",
+            "EgwKBGxpbmUYAiABKAMSEAoIZnVuY3Rpb24YAyABKAlCmQEKFWNvbS5nb29n",
+            "bGUubG9nZ2luZy52MkINTG9nRW50cnlQcm90b1ABWjhnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2xvZ2dpbmcvdjI7bG9nZ2luZ/gB",
+            "AaoCF0dvb2dsZS5DbG91ZC5Mb2dnaW5nLlYyygIXR29vZ2xlXENsb3VkXExv",
+            "Z2dpbmdcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null, null)
           }));
     }
     #endregion
@@ -274,7 +279,7 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Field number for the "severity" field.</summary>
     public const int SeverityFieldNumber = 10;
-    private global::Google.Cloud.Logging.Type.LogSeverity severity_ = 0;
+    private global::Google.Cloud.Logging.Type.LogSeverity severity_ = global::Google.Cloud.Logging.Type.LogSeverity.Default;
     /// <summary>
     /// Optional. The severity of the log entry. The default value is
     /// `LogSeverity.DEFAULT`.
@@ -293,10 +298,15 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>
     /// Optional. A unique identifier for the log entry. If you provide a value,
     /// then Logging considers other log entries in the same project, with the same
-    /// `timestamp`, and with the same `insert_id` to be duplicates which can be
-    /// removed. If omitted in new log entries, then Logging assigns its own unique
-    /// identifier. The `insert_id` is also used to order log entries that have the
-    /// same `timestamp` value.
+    /// `timestamp`, and with the same `insert_id` to be duplicates which are
+    /// removed in a single query result. However, there are no guarantees of
+    /// de-duplication in the export of logs.
+    ///
+    /// If the `insert_id` is omitted when writing a log entry, the Logging API
+    ///  assigns its own unique identifier in this field.
+    ///
+    /// In queries, the `insert_id` is also used to order log entries that have
+    /// the same `log_name` and `timestamp` values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InsertId {
@@ -324,7 +334,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 11;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 90);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A set of user-defined (key, value) data that provides additional
@@ -507,7 +517,7 @@ namespace Google.Cloud.Logging.V2 {
       if (payloadCase_ == PayloadOneofCase.JsonPayload) hash ^= JsonPayload.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (receiveTimestamp_ != null) hash ^= ReceiveTimestamp.GetHashCode();
-      if (Severity != 0) hash ^= Severity.GetHashCode();
+      if (Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) hash ^= Severity.GetHashCode();
       if (InsertId.Length != 0) hash ^= InsertId.GetHashCode();
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
       hash ^= Labels.GetHashCode();
@@ -559,7 +569,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(Timestamp);
       }
-      if (Severity != 0) {
+      if (Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Severity);
       }
@@ -625,7 +635,7 @@ namespace Google.Cloud.Logging.V2 {
       if (receiveTimestamp_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReceiveTimestamp);
       }
-      if (Severity != 0) {
+      if (Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (InsertId.Length != 0) {
@@ -685,7 +695,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         ReceiveTimestamp.MergeFrom(other.ReceiveTimestamp);
       }
-      if (other.Severity != 0) {
+      if (other.Severity != global::Google.Cloud.Logging.Type.LogSeverity.Default) {
         Severity = other.Severity;
       }
       if (other.InsertId.Length != 0) {

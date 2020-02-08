@@ -25,69 +25,80 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX21ldHJpY3MucHJvdG8SEWdv",
-            "b2dsZS5sb2dnaW5nLnYyGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90",
-            "bxoXZ29vZ2xlL2FwaS9tZXRyaWMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9l",
-            "bXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvIpME",
-            "CglMb2dNZXRyaWMSDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEo",
-            "CRIOCgZmaWx0ZXIYAyABKAkSNwoRbWV0cmljX2Rlc2NyaXB0b3IYBSABKAsy",
-            "HC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3ISFwoPdmFsdWVfZXh0cmFj",
-            "dG9yGAYgASgJEksKEGxhYmVsX2V4dHJhY3RvcnMYByADKAsyMS5nb29nbGUu",
-            "bG9nZ2luZy52Mi5Mb2dNZXRyaWMuTGFiZWxFeHRyYWN0b3JzRW50cnkSPgoO",
-            "YnVja2V0X29wdGlvbnMYCCABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlv",
-            "bi5CdWNrZXRPcHRpb25zEi8KC2NyZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgKIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPAoHdmVyc2lvbhgEIAEoDjInLmdv",
-            "b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5BcGlWZXJzaW9uQgIYARo2ChRM",
-            "YWJlbEV4dHJhY3RvcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBIhwKCkFwaVZlcnNpb24SBgoCVjIQABIGCgJWMRABIk4KFUxpc3RM",
-            "b2dNZXRyaWNzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90b2tl",
-            "bhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlzdExvZ01ldHJpY3NS",
-            "ZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "TG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIqChNHZXRMb2dN",
-            "ZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJIlYKFkNyZWF0ZUxv",
-            "Z01ldHJpY1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEiwKBm1ldHJpYxgCIAEo",
-            "CzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyJbChZVcGRhdGVMb2dN",
-            "ZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJEiwKBm1ldHJpYxgC",
-            "IAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyItChZEZWxldGVM",
-            "b2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJMuQHChBNZXRy",
-            "aWNzU2VydmljZVYyEo4BCg5MaXN0TG9nTWV0cmljcxIoLmdvb2dsZS5sb2dn",
-            "aW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5n",
-            "LnYyLkxpc3RMb2dNZXRyaWNzUmVzcG9uc2UiJ4LT5JMCIRIfL3YyL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vbWV0cmljcxKEAQoMR2V0TG9nTWV0cmljEiYuZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuR2V0TG9nTWV0cmljUmVxdWVzdBocLmdvb2dsZS5s",
-            "b2dnaW5nLnYyLkxvZ01ldHJpYyIugtPkkwIoEiYvdjIve21ldHJpY19uYW1l",
-            "PXByb2plY3RzLyovbWV0cmljcy8qfRKLAQoPQ3JlYXRlTG9nTWV0cmljEiku",
-            "Z29vZ2xlLmxvZ2dpbmcudjIuQ3JlYXRlTG9nTWV0cmljUmVxdWVzdBocLmdv",
-            "b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyIvgtPkkwIpIh8vdjIve3BhcmVu",
-            "dD1wcm9qZWN0cy8qfS9tZXRyaWNzOgZtZXRyaWMSkgEKD1VwZGF0ZUxvZ01l",
-            "dHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZUxvZ01ldHJpY1JlcXVl",
-            "c3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRyaWMiNoLT5JMCMBomL3Yy",
-            "L3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn06Bm1ldHJpYxKE",
-            "AQoPRGVsZXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRl",
-            "TG9nTWV0cmljUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIugtPk",
-            "kwIoKiYvdjIve21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8qfRqN",
-            "AspBFmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb23SQfABaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seSxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xvZ2dpbmcuYWRtaW4s",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLnJlYWQs",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLndyaXRl",
-            "Qp8BChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCE0xvZ2dpbmdNZXRyaWNzUHJv",
-            "dG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9s",
-            "b2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5W",
-            "MsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
+            "b2dsZS5sb2dnaW5nLnYyGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxodZ29v",
+            "Z2xlL2FwaS9kaXN0cmlidXRpb24ucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aF2dvb2dsZS9hcGkvbWV0cmljLnByb3RvGhlnb29n",
+            "bGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRp",
+            "b24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xl",
+            "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
+            "3AQKCUxvZ01ldHJpYxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIg",
+            "ASgJEg4KBmZpbHRlchgDIAEoCRI3ChFtZXRyaWNfZGVzY3JpcHRvchgFIAEo",
+            "CzIcLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvchIXCg92YWx1ZV9leHRy",
+            "YWN0b3IYBiABKAkSSwoQbGFiZWxfZXh0cmFjdG9ycxgHIAMoCzIxLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5MYWJlbEV4dHJhY3RvcnNFbnRyeRI+",
+            "Cg5idWNrZXRfb3B0aW9ucxgIIAEoCzImLmdvb2dsZS5hcGkuRGlzdHJpYnV0",
+            "aW9uLkJ1Y2tldE9wdGlvbnMSLwoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAogASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8Cgd2ZXJzaW9uGAQgASgOMicu",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljLkFwaVZlcnNpb25CAhgBGjYK",
+            "FExhYmVsRXh0cmFjdG9yc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiHAoKQXBpVmVyc2lvbhIGCgJWMhAAEgYKAlYxEAE6R+pBRAod",
+            "bG9nZ2luZy5nb29nbGVhcGlzLmNvbS9NZXRyaWMSI3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9tZXRyaWNzL3ttZXRyaWN9IoMBChVMaXN0TG9nTWV0cmljc1JlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEgoKcGFnZV90b2tlbhgCIAEo",
+            "CRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlzdExvZ01ldHJpY3NSZXNwb25z",
+            "ZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0",
+            "cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChNHZXRMb2dNZXRyaWNS",
+            "ZXF1ZXN0EjoKC21ldHJpY19uYW1lGAEgASgJQiXgQQL6QR8KHWxvZ2dpbmcu",
+            "Z29vZ2xlYXBpcy5jb20vTWV0cmljIoIBChZDcmVhdGVMb2dNZXRyaWNSZXF1",
+            "ZXN0EjUKBnBhcmVudBgBIAEoCUIl4EEC+kEfCh1sb2dnaW5nLmdvb2dsZWFw",
+            "aXMuY29tL01ldHJpYxIxCgZtZXRyaWMYAiABKAsyHC5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5Mb2dNZXRyaWNCA+BBAiKHAQoWVXBkYXRlTG9nTWV0cmljUmVxdWVz",
+            "dBI6CgttZXRyaWNfbmFtZRgBIAEoCUIl4EEC+kEfCh1sb2dnaW5nLmdvb2ds",
+            "ZWFwaXMuY29tL01ldHJpYxIxCgZtZXRyaWMYAiABKAsyHC5nb29nbGUubG9n",
+            "Z2luZy52Mi5Mb2dNZXRyaWNCA+BBAiJUChZEZWxldGVMb2dNZXRyaWNSZXF1",
+            "ZXN0EjoKC21ldHJpY19uYW1lGAEgASgJQiXgQQL6QR8KHWxvZ2dpbmcuZ29v",
+            "Z2xlYXBpcy5jb20vTWV0cmljMq4IChBNZXRyaWNzU2VydmljZVYyEpcBCg5M",
+            "aXN0TG9nTWV0cmljcxIoLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRy",
+            "aWNzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNz",
+            "UmVzcG9uc2UiMILT5JMCIRIfL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vbWV0",
+            "cmljc9pBBnBhcmVudBKSAQoMR2V0TG9nTWV0cmljEiYuZ29vZ2xlLmxvZ2dp",
+            "bmcudjIuR2V0TG9nTWV0cmljUmVxdWVzdBocLmdvb2dsZS5sb2dnaW5nLnYy",
+            "LkxvZ01ldHJpYyI8gtPkkwIoEiYvdjIve21ldHJpY19uYW1lPXByb2plY3Rz",
+            "LyovbWV0cmljcy8qfdpBC21ldHJpY19uYW1lEpsBCg9DcmVhdGVMb2dNZXRy",
+            "aWMSKS5nb29nbGUubG9nZ2luZy52Mi5DcmVhdGVMb2dNZXRyaWNSZXF1ZXN0",
+            "GhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljIj+C0+STAikiHy92Mi97",
+            "cGFyZW50PXByb2plY3RzLyp9L21ldHJpY3M6Bm1ldHJpY9pBDXBhcmVudCxt",
+            "ZXRyaWMSpwEKD1VwZGF0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYy",
+            "LlVwZGF0ZUxvZ01ldHJpY1JlcXVlc3QaHC5nb29nbGUubG9nZ2luZy52Mi5M",
+            "b2dNZXRyaWMiS4LT5JMCMBomL3YyL3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8q",
+            "L21ldHJpY3MvKn06Bm1ldHJpY9pBEm1ldHJpY19uYW1lLG1ldHJpYxKSAQoP",
+            "RGVsZXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlTG9n",
+            "TWV0cmljUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI8gtPkkwIo",
+            "KiYvdjIve21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8qfdpBC21l",
+            "dHJpY19uYW1lGo0CykEWbG9nZ2luZy5nb29nbGVhcGlzLmNvbdJB8AFodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0u",
+            "cmVhZC1vbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9n",
+            "Z2luZy5hZG1pbixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xv",
+            "Z2dpbmcucmVhZCxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xv",
+            "Z2dpbmcud3JpdGVCnwEKFWNvbS5nb29nbGUubG9nZ2luZy52MkITTG9nZ2lu",
+            "Z01ldHJpY3NQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2xvZ2dpbmcvdjI7bG9nZ2luZ/gBAaoCF0dvb2dsZS5DbG91",
+            "ZC5Mb2dnaW5nLlYyygIXR29vZ2xlXENsb3VkXExvZ2dpbmdcVjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "CreateTime", "UpdateTime", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsRequest), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsResponse), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetLogMetricRequest), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateLogMetricRequest), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "Parent", "Metric" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogMetric), global::Google.Cloud.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "MetricDescriptor", "ValueExtractor", "LabelExtractors", "BucketOptions", "CreateTime", "UpdateTime", "Version" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsRequest), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogMetricsResponse), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetLogMetricRequest), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateLogMetricRequest), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "Parent", "Metric" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -276,7 +287,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "label_extractors" field.</summary>
     public const int LabelExtractorsFieldNumber = 7;
     private static readonly pbc::MapField<string, string>.Codec _map_labelExtractors_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> labelExtractors_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A map from a label key string to an extractor expression which is
@@ -349,7 +360,7 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 4;
-    private global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion version_ = 0;
+    private global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion version_ = global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2;
     /// <summary>
     /// Deprecated. The API version that created or updated this metric.
     /// The v2 format is used by default and cannot be changed.
@@ -401,7 +412,7 @@ namespace Google.Cloud.Logging.V2 {
       if (bucketOptions_ != null) hash ^= BucketOptions.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (Version != 0) hash ^= Version.GetHashCode();
+      if (Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -427,7 +438,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(26);
         output.WriteString(Filter);
       }
-      if (Version != 0) {
+      if (Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Version);
       }
@@ -485,7 +496,7 @@ namespace Google.Cloud.Logging.V2 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (Version != 0) {
+      if (Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Version);
       }
       if (_unknownFields != null) {
@@ -536,7 +547,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.Version != 0) {
+      if (other.Version != global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2) {
         Version = other.Version;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1034,7 +1045,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    /// The resource name of the desired metric:
+    /// Required. The resource name of the desired metric:
     ///
     ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>
@@ -1172,7 +1183,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The resource name of the project in which to create the metric:
+    /// Required. The resource name of the project in which to create the metric:
     ///
     ///     "projects/[PROJECT_ID]"
     ///
@@ -1190,7 +1201,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Cloud.Logging.V2.LogMetric metric_;
     /// <summary>
-    /// The new logs-based metric, which must not have an identifier that
+    /// Required. The new logs-based metric, which must not have an identifier that
     /// already exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1349,7 +1360,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    /// The resource name of the metric to update:
+    /// Required. The resource name of the metric to update:
     ///
     ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     ///
@@ -1369,7 +1380,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Cloud.Logging.V2.LogMetric metric_;
     /// <summary>
-    /// The updated metric.
+    /// Required. The updated metric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogMetric Metric {
@@ -1526,7 +1537,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    /// The resource name of the metric to delete:
+    /// Required. The resource name of the metric to delete:
     ///
     ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>

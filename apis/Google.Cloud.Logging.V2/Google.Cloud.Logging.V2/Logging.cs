@@ -25,84 +25,90 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nLnByb3RvEhFnb29nbGUubG9n",
-            "Z2luZy52MhojZ29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8a",
-            "IWdvb2dsZS9sb2dnaW5nL3YyL2xvZ19lbnRyeS5wcm90bxomZ29vZ2xlL2xv",
-            "Z2dpbmcvdjIvbG9nZ2luZ19jb25maWcucHJvdG8aHmdvb2dsZS9wcm90b2J1",
-            "Zi9kdXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBj",
-            "L3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoX",
-            "Z29vZ2xlL2FwaS9jbGllbnQucHJvdG8iJAoQRGVsZXRlTG9nUmVxdWVzdBIQ",
-            "Cghsb2dfbmFtZRgBIAEoCSKpAgoWV3JpdGVMb2dFbnRyaWVzUmVxdWVzdBIQ",
-            "Cghsb2dfbmFtZRgBIAEoCRIvCghyZXNvdXJjZRgCIAEoCzIdLmdvb2dsZS5h",
-            "cGkuTW9uaXRvcmVkUmVzb3VyY2USRQoGbGFiZWxzGAMgAygLMjUuZ29vZ2xl",
-            "LmxvZ2dpbmcudjIuV3JpdGVMb2dFbnRyaWVzUmVxdWVzdC5MYWJlbHNFbnRy",
-            "eRIsCgdlbnRyaWVzGAQgAygLMhsuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50",
-            "cnkSFwoPcGFydGlhbF9zdWNjZXNzGAUgASgIEg8KB2RyeV9ydW4YBiABKAga",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASIZChdXcml0ZUxvZ0VudHJpZXNSZXNwb25zZSLIAQocV3JpdGVMb2dFbnRy",
-            "aWVzUGFydGlhbEVycm9ycxJdChBsb2dfZW50cnlfZXJyb3JzGAEgAygLMkMu",
-            "Z29vZ2xlLmxvZ2dpbmcudjIuV3JpdGVMb2dFbnRyaWVzUGFydGlhbEVycm9y",
-            "cy5Mb2dFbnRyeUVycm9yc0VudHJ5GkkKE0xvZ0VudHJ5RXJyb3JzRW50cnkS",
-            "CwoDa2V5GAEgASgFEiEKBXZhbHVlGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
-            "dXM6AjgBIpEBChVMaXN0TG9nRW50cmllc1JlcXVlc3QSFwoLcHJvamVjdF9p",
-            "ZHMYASADKAlCAhgBEhYKDnJlc291cmNlX25hbWVzGAggAygJEg4KBmZpbHRl",
-            "chgCIAEoCRIQCghvcmRlcl9ieRgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUS",
-            "EgoKcGFnZV90b2tlbhgFIAEoCSJfChZMaXN0TG9nRW50cmllc1Jlc3BvbnNl",
-            "EiwKB2VudHJpZXMYASADKAsyGy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFbnRy",
-            "eRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiUAonTGlzdE1vbml0b3JlZFJl",
-            "c291cmNlRGVzY3JpcHRvcnNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRIS",
-            "CgpwYWdlX3Rva2VuGAIgASgJIooBCihMaXN0TW9uaXRvcmVkUmVzb3VyY2VE",
-            "ZXNjcmlwdG9yc1Jlc3BvbnNlEkUKFHJlc291cmNlX2Rlc2NyaXB0b3JzGAEg",
-            "AygLMicuZ29vZ2xlLmFwaS5Nb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3IS",
-            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkgKD0xpc3RMb2dzUmVxdWVzdBIO",
-            "CgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9r",
-            "ZW4YAyABKAkiPgoQTGlzdExvZ3NSZXNwb25zZRIRCglsb2dfbmFtZXMYAyAD",
-            "KAkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMoUKChBMb2dnaW5nU2Vydmlj",
-            "ZVYyEogCCglEZWxldGVMb2cSIy5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVM",
-            "b2dSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ir0BgtPkkwK2ASog",
-            "L3YyL3tsb2dfbmFtZT1wcm9qZWN0cy8qL2xvZ3MvKn1aGyoZL3YyL3tsb2df",
-            "bmFtZT0qLyovbG9ncy8qfVonKiUvdjIve2xvZ19uYW1lPW9yZ2FuaXphdGlv",
-            "bnMvKi9sb2dzLyp9WiEqHy92Mi97bG9nX25hbWU9Zm9sZGVycy8qL2xvZ3Mv",
-            "Kn1aKSonL3YyL3tsb2dfbmFtZT1iaWxsaW5nQWNjb3VudHMvKi9sb2dzLyp9",
-            "EoYBCg9Xcml0ZUxvZ0VudHJpZXMSKS5nb29nbGUubG9nZ2luZy52Mi5Xcml0",
-            "ZUxvZ0VudHJpZXNSZXF1ZXN0GiouZ29vZ2xlLmxvZ2dpbmcudjIuV3JpdGVM",
-            "b2dFbnRyaWVzUmVzcG9uc2UiHILT5JMCFiIRL3YyL2VudHJpZXM6d3JpdGU6",
-            "ASoSggEKDkxpc3RMb2dFbnRyaWVzEiguZ29vZ2xlLmxvZ2dpbmcudjIuTGlz",
-            "dExvZ0VudHJpZXNSZXF1ZXN0GikuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExv",
-            "Z0VudHJpZXNSZXNwb25zZSIbgtPkkwIVIhAvdjIvZW50cmllczpsaXN0OgEq",
-            "EsUBCiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9ycxI6Lmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3Jz",
-            "UmVxdWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNv",
-            "dXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiKILT5JMCIhIgL3YyL21vbml0b3Jl",
-            "ZFJlc291cmNlRGVzY3JpcHRvcnMS/wEKCExpc3RMb2dzEiIuZ29vZ2xlLmxv",
-            "Z2dpbmcudjIuTGlzdExvZ3NSZXF1ZXN0GiMuZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "TGlzdExvZ3NSZXNwb25zZSKpAYLT5JMCogESFS92Mi97cGFyZW50PSovKn0v",
-            "bG9nc1oeEhwvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9sb2dzWiMSIS92Mi97",
-            "cGFyZW50PW9yZ2FuaXphdGlvbnMvKn0vbG9nc1odEhsvdjIve3BhcmVudD1m",
-            "b2xkZXJzLyp9L2xvZ3NaJRIjL3YyL3twYXJlbnQ9YmlsbGluZ0FjY291bnRz",
-            "Lyp9L2xvZ3MajQLKQRZsb2dnaW5nLmdvb2dsZWFwaXMuY29t0kHwAWh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5y",
-            "ZWFkLW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dn",
-            "aW5nLmFkbWluLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9n",
-            "Z2luZy5yZWFkLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9n",
-            "Z2luZy53cml0ZUKYAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQgxMb2dnaW5n",
-            "UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2lu",
-            "Zy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
+            "Z2luZy52MhoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkv",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aI2dvb2dsZS9hcGkvbW9uaXRvcmVkX3Jl",
+            "c291cmNlLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29n",
+            "bGUvbG9nZ2luZy92Mi9sb2dfZW50cnkucHJvdG8aJmdvb2dsZS9sb2dnaW5n",
+            "L3YyL2xvZ2dpbmdfY29uZmlnLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
+            "YXRpb24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0",
+            "dXMucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iSAoQRGVs",
+            "ZXRlTG9nUmVxdWVzdBI0Cghsb2dfbmFtZRgBIAEoCUIi4EEC+kEcEhpsb2dn",
+            "aW5nLmdvb2dsZWFwaXMuY29tL0xvZyLPAgoWV3JpdGVMb2dFbnRyaWVzUmVx",
+            "dWVzdBIxCghsb2dfbmFtZRgBIAEoCUIf+kEcChpsb2dnaW5nLmdvb2dsZWFw",
+            "aXMuY29tL0xvZxIvCghyZXNvdXJjZRgCIAEoCzIdLmdvb2dsZS5hcGkuTW9u",
+            "aXRvcmVkUmVzb3VyY2USRQoGbGFiZWxzGAMgAygLMjUuZ29vZ2xlLmxvZ2dp",
+            "bmcudjIuV3JpdGVMb2dFbnRyaWVzUmVxdWVzdC5MYWJlbHNFbnRyeRIxCgdl",
+            "bnRyaWVzGAQgAygLMhsuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnlCA+BB",
+            "AhIXCg9wYXJ0aWFsX3N1Y2Nlc3MYBSABKAgSDwoHZHJ5X3J1bhgGIAEoCBot",
+            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IhkKF1dyaXRlTG9nRW50cmllc1Jlc3BvbnNlIsgBChxXcml0ZUxvZ0VudHJp",
+            "ZXNQYXJ0aWFsRXJyb3JzEl0KEGxvZ19lbnRyeV9lcnJvcnMYASADKAsyQy5n",
+            "b29nbGUubG9nZ2luZy52Mi5Xcml0ZUxvZ0VudHJpZXNQYXJ0aWFsRXJyb3Jz",
+            "LkxvZ0VudHJ5RXJyb3JzRW50cnkaSQoTTG9nRW50cnlFcnJvcnNFbnRyeRIL",
+            "CgNrZXkYASABKAUSIQoFdmFsdWUYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1",
+            "czoCOAEitQEKFUxpc3RMb2dFbnRyaWVzUmVxdWVzdBIXCgtwcm9qZWN0X2lk",
+            "cxgBIAMoCUICGAESOgoOcmVzb3VyY2VfbmFtZXMYCCADKAlCIuBBAvpBHBIa",
+            "bG9nZ2luZy5nb29nbGVhcGlzLmNvbS9Mb2cSDgoGZmlsdGVyGAIgASgJEhAK",
+            "CG9yZGVyX2J5GAMgASgJEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rv",
+            "a2VuGAUgASgJIl8KFkxpc3RMb2dFbnRyaWVzUmVzcG9uc2USLAoHZW50cmll",
+            "cxgBIAMoCzIbLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5EhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCSJQCidMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNj",
+            "cmlwdG9yc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9r",
+            "ZW4YAiABKAkiigEKKExpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3Jz",
+            "UmVzcG9uc2USRQoUcmVzb3VyY2VfZGVzY3JpcHRvcnMYASADKAsyJy5nb29n",
+            "bGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvchIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkiaQoPTGlzdExvZ3NSZXF1ZXN0Ei8KBnBhcmVudBgB",
+            "IAEoCUIf+kEcEhpsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZxIRCglwYWdl",
+            "X3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSI+ChBMaXN0TG9nc1Jl",
+            "c3BvbnNlEhEKCWxvZ19uYW1lcxgDIAMoCRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkyvAoKEExvZ2dpbmdTZXJ2aWNlVjISkwIKCURlbGV0ZUxvZxIjLmdv",
+            "b2dsZS5sb2dnaW5nLnYyLkRlbGV0ZUxvZ1JlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiyAGC0+STArYBKiAvdjIve2xvZ19uYW1lPXByb2plY3Rz",
+            "LyovbG9ncy8qfVobKhkvdjIve2xvZ19uYW1lPSovKi9sb2dzLyp9WicqJS92",
+            "Mi97bG9nX25hbWU9b3JnYW5pemF0aW9ucy8qL2xvZ3MvKn1aISofL3YyL3ts",
+            "b2dfbmFtZT1mb2xkZXJzLyovbG9ncy8qfVopKicvdjIve2xvZ19uYW1lPWJp",
+            "bGxpbmdBY2NvdW50cy8qL2xvZ3MvKn3aQQhsb2dfbmFtZRKpAQoPV3JpdGVM",
+            "b2dFbnRyaWVzEikuZ29vZ2xlLmxvZ2dpbmcudjIuV3JpdGVMb2dFbnRyaWVz",
+            "UmVxdWVzdBoqLmdvb2dsZS5sb2dnaW5nLnYyLldyaXRlTG9nRW50cmllc1Jl",
+            "c3BvbnNlIj+C0+STAhYiES92Mi9lbnRyaWVzOndyaXRlOgEq2kEgbG9nX25h",
+            "bWUscmVzb3VyY2UsbGFiZWxzLGVudHJpZXMSggEKDkxpc3RMb2dFbnRyaWVz",
+            "EiguZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXF1ZXN0Giku",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXNwb25zZSIbgtPk",
+            "kwIVIhAvdjIvZW50cmllczpsaXN0OgEqEsUBCiBMaXN0TW9uaXRvcmVkUmVz",
+            "b3VyY2VEZXNjcmlwdG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25p",
+            "dG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9u",
+            "c2UiKILT5JMCIhIgL3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnMS",
+            "iAIKCExpc3RMb2dzEiIuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ3NSZXF1",
+            "ZXN0GiMuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ3NSZXNwb25zZSKyAYLT",
+            "5JMCogESFS92Mi97cGFyZW50PSovKn0vbG9nc1oeEhwvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9sb2dzWiMSIS92Mi97cGFyZW50PW9yZ2FuaXphdGlvbnMv",
+            "Kn0vbG9nc1odEhsvdjIve3BhcmVudD1mb2xkZXJzLyp9L2xvZ3NaJRIjL3Yy",
+            "L3twYXJlbnQ9YmlsbGluZ0FjY291bnRzLyp9L2xvZ3PaQQZwYXJlbnQajQLK",
+            "QRZsb2dnaW5nLmdvb2dsZWFwaXMuY29t0kHwAWh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFkLW9ubHksaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5nLmFkbWluLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy5yZWFkLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy53cml0ZUKY",
+            "AQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAVo4Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3Yy",
+            "O2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMsoCF0dvb2ds",
+            "ZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor, global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogRequest), global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest), global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries", "PartialSuccess", "DryRun" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesResponse), global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors), global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors.Parser, new[]{ "LogEntryErrors" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesRequest), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "ResourceNames", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesResponse), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsResponse), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser, new[]{ "LogNames", "NextPageToken" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor, global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteLogRequest), global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest), global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries", "PartialSuccess", "DryRun" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesResponse), global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors), global::Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors.Parser, new[]{ "LogEntryErrors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesRequest), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "ResourceNames", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesResponse), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsResponse), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser, new[]{ "LogNames", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -351,7 +357,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Default labels that are added to the `labels` field of all log
@@ -734,7 +740,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "log_entry_errors" field.</summary>
     public const int LogEntryErrorsFieldNumber = 1;
     private static readonly pbc::MapField<int, global::Google.Rpc.Status>.Codec _map_logEntryErrors_codec
-        = new pbc::MapField<int, global::Google.Rpc.Status>.Codec(pb::FieldCodec.ForInt32(8), pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser), 10);
+        = new pbc::MapField<int, global::Google.Rpc.Status>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser), 10);
     private readonly pbc::MapField<int, global::Google.Rpc.Status> logEntryErrors_ = new pbc::MapField<int, global::Google.Rpc.Status>();
     /// <summary>
     /// When `WriteLogEntriesRequest.partial_success` is true, records the error
@@ -910,7 +916,7 @@ namespace Google.Cloud.Logging.V2 {
     private string filter_ = "";
     /// <summary>
     /// Optional. A filter that chooses which log entries to return.  See [Advanced
-    /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+    /// Logs Queries](/logging/docs/view/advanced-queries).  Only log entries that
     /// match the filter are returned.  An empty filter matches all log entries in
     /// the resources listed in `resource_names`. Referencing a parent resource
     /// that is not listed in `resource_names` will cause the filter to return no

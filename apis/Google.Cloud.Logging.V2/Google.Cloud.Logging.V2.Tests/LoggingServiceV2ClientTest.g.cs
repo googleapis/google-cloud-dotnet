@@ -14,173 +14,365 @@
 
 // Generated code. DO NOT EDIT!
 
+using ga = Google.Api;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Logging.V2.Tests
 {
-    using Google.Api;
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Logging.V2;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedLoggingServiceV2ClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedLoggingServiceV2ClientTest
     {
-        [Fact]
-        public void DeleteLog()
+        [xunit::FactAttribute]
+        public void DeleteLogRequestObject()
         {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
-            DeleteLogRequest expectedRequest = new DeleteLogRequest
-            {
-                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLog(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
-            client.DeleteLog(logName);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteLogAsync()
-        {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
-            DeleteLogRequest expectedRequest = new DeleteLogRequest
-            {
-                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLogAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
-            await client.DeleteLogAsync(logName);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteLog2()
-        {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogRequest request = new DeleteLogRequest
             {
-                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLog(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
             client.DeleteLog(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteLogAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogRequestObjectAsync()
         {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogRequest request = new DeleteLogRequest
             {
-                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteLogAsync(request);
+            await client.DeleteLogAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void WriteLogEntries()
+        [xunit::FactAttribute]
+        public void DeleteLog()
         {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
-            WriteLogEntriesRequest expectedRequest = new WriteLogEntriesRequest
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
             {
-                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
-                Resource = new MonitoredResource(),
-                Labels = { },
-                Entries = { },
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse();
-            mockGrpcClient.Setup(x => x.WriteLogEntries(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
-            MonitoredResource resource = new MonitoredResource();
-            IDictionary<string, string> labels = new Dictionary<string, string>();
-            IEnumerable<LogEntry> entries = new List<LogEntry>();
-            WriteLogEntriesResponse response = client.WriteLogEntries(logName, resource, labels, entries);
-            Assert.Same(expectedResponse, response);
+            client.DeleteLog(request.LogName);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task WriteLogEntriesAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogAsync()
         {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
-            WriteLogEntriesRequest expectedRequest = new WriteLogEntriesRequest
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
             {
-                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
-                Resource = new MonitoredResource(),
-                Labels = { },
-                Entries = { },
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse();
-            mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WriteLogEntriesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
-            MonitoredResource resource = new MonitoredResource();
-            IDictionary<string, string> labels = new Dictionary<string, string>();
-            IEnumerable<LogEntry> entries = new List<LogEntry>();
-            WriteLogEntriesResponse response = await client.WriteLogEntriesAsync(logName, resource, labels, entries);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteLogAsync(request.LogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogAsync(request.LogName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void WriteLogEntries2()
+        [xunit::FactAttribute]
+        public void DeleteLogResourceNames1()
         {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteLog(request.LogNameAsProjectName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogResourceNames1Async()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteLogAsync(request.LogNameAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogAsync(request.LogNameAsProjectName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteLogResourceNames2()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteLog(request.LogNameAsOrganizationName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogResourceNames2Async()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteLogAsync(request.LogNameAsOrganizationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogAsync(request.LogNameAsOrganizationName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteLogResourceNames3()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteLog(request.LogNameAsFolderName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogResourceNames3Async()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteLogAsync(request.LogNameAsFolderName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogAsync(request.LogNameAsFolderName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteLogResourceNames4()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLog(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteLog(request.LogNameAsBillingAccountName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteLogResourceNames4Async()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteLogAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteLogAsync(request.LogNameAsBillingAccountName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogAsync(request.LogNameAsBillingAccountName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void WriteLogEntriesRequestObject()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
             WriteLogEntriesRequest request = new WriteLogEntriesRequest
             {
-                Entries = { },
+                LogNameAsLogName = LogName.FromProjectLog("[PROJECT]", "[LOG]"),
+                Resource = new ga::MonitoredResource(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Entries = { new LogEntry(), },
+                PartialSuccess = false,
+                DryRun = true,
             };
-            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse();
-            mockGrpcClient.Setup(x => x.WriteLogEntries(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
+            mockGrpcClient.Setup(x => x.WriteLogEntries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
             WriteLogEntriesResponse response = client.WriteLogEntries(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task WriteLogEntriesAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task WriteLogEntriesRequestObjectAsync()
         {
-            Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new Mock<LoggingServiceV2.LoggingServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
             WriteLogEntriesRequest request = new WriteLogEntriesRequest
             {
-                Entries = { },
+                LogNameAsLogName = LogName.FromProjectLog("[PROJECT]", "[LOG]"),
+                Resource = new ga::MonitoredResource(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Entries = { new LogEntry(), },
+                PartialSuccess = false,
+                DryRun = true,
             };
-            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse();
-            mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<WriteLogEntriesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
+            mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteLogEntriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
-            WriteLogEntriesResponse response = await client.WriteLogEntriesAsync(request);
-            Assert.Same(expectedResponse, response);
+            WriteLogEntriesResponse responseCallSettings = await client.WriteLogEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WriteLogEntriesResponse responseCancellationToken = await client.WriteLogEntriesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void WriteLogEntries()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                LogNameAsLogName = LogName.FromProjectLog("[PROJECT]", "[LOG]"),
+                Resource = new ga::MonitoredResource(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Entries = { new LogEntry(), },
+            };
+            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
+            mockGrpcClient.Setup(x => x.WriteLogEntries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            WriteLogEntriesResponse response = client.WriteLogEntries(request.LogName, request.Resource, request.Labels, request.Entries);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task WriteLogEntriesAsync()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                LogNameAsLogName = LogName.FromProjectLog("[PROJECT]", "[LOG]"),
+                Resource = new ga::MonitoredResource(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Entries = { new LogEntry(), },
+            };
+            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
+            mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteLogEntriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            WriteLogEntriesResponse responseCallSettings = await client.WriteLogEntriesAsync(request.LogName, request.Resource, request.Labels, request.Entries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WriteLogEntriesResponse responseCancellationToken = await client.WriteLogEntriesAsync(request.LogName, request.Resource, request.Labels, request.Entries, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void WriteLogEntriesResourceNames()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                LogNameAsLogName = LogName.FromProjectLog("[PROJECT]", "[LOG]"),
+                Resource = new ga::MonitoredResource(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Entries = { new LogEntry(), },
+            };
+            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
+            mockGrpcClient.Setup(x => x.WriteLogEntries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            WriteLogEntriesResponse response = client.WriteLogEntries(request.LogNameAsLogName, request.Resource, request.Labels, request.Entries);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task WriteLogEntriesResourceNamesAsync()
+        {
+            moq::Mock<LoggingServiceV2.LoggingServiceV2Client> mockGrpcClient = new moq::Mock<LoggingServiceV2.LoggingServiceV2Client>(moq::MockBehavior.Strict);
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                LogNameAsLogName = LogName.FromProjectLog("[PROJECT]", "[LOG]"),
+                Resource = new ga::MonitoredResource(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Entries = { new LogEntry(), },
+            };
+            WriteLogEntriesResponse expectedResponse = new WriteLogEntriesResponse { };
+            mockGrpcClient.Setup(x => x.WriteLogEntriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteLogEntriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            LoggingServiceV2Client client = new LoggingServiceV2ClientImpl(mockGrpcClient.Object, null);
+            WriteLogEntriesResponse responseCallSettings = await client.WriteLogEntriesAsync(request.LogNameAsLogName, request.Resource, request.Labels, request.Entries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            WriteLogEntriesResponse responseCancellationToken = await client.WriteLogEntriesAsync(request.LogNameAsLogName, request.Resource, request.Labels, request.Entries, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

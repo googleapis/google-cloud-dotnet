@@ -14,820 +14,1765 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Logging.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Logging.V2;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedConfigServiceV2ClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedConfigServiceV2ClientTest
     {
-        [Fact]
-        public void GetSink()
+        [xunit::FactAttribute]
+        public void GetSinkRequestObject()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            GetSinkRequest expectedRequest = new GetSinkRequest
-            {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
-            };
-            LogSink expectedResponse = new LogSink
-            {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
-                IncludeChildren = true,
-            };
-            mockGrpcClient.Setup(x => x.GetSink(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            LogSink response = client.GetSink(sinkName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetSinkAsync()
-        {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            GetSinkRequest expectedRequest = new GetSinkRequest
-            {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
-            };
-            LogSink expectedResponse = new LogSink
-            {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
-                IncludeChildren = true,
-            };
-            mockGrpcClient.Setup(x => x.GetSinkAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            LogSink response = await client.GetSinkAsync(sinkName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetSink2()
-        {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.GetSink(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogSink response = client.GetSink(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetSinkAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetSinkRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.GetSinkAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink response = await client.GetSinkAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogSink responseCallSettings = await client.GetSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.GetSinkAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateSink()
+        [xunit::FactAttribute]
+        public void GetSink()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            CreateSinkRequest expectedRequest = new CreateSinkRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetSinkRequest request = new GetSinkRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                Sink = new LogSink(),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateSink(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            LogSink sink = new LogSink();
-            LogSink response = client.CreateSink(parent, sink);
-            Assert.Same(expectedResponse, response);
+            LogSink response = client.GetSink(request.SinkName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateSinkAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetSinkAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            CreateSinkRequest expectedRequest = new CreateSinkRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetSinkRequest request = new GetSinkRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                Sink = new LogSink(),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateSinkAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            LogSink sink = new LogSink();
-            LogSink response = await client.CreateSinkAsync(parent, sink);
-            Assert.Same(expectedResponse, response);
+            LogSink responseCallSettings = await client.GetSinkAsync(request.SinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.GetSinkAsync(request.SinkName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateSink2()
+        [xunit::FactAttribute]
+        public void GetSinkResourceNames()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetSinkRequest request = new GetSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.GetSink(request.SinkNameAsSinkName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSinkResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetSinkRequest request = new GetSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.GetSinkAsync(request.SinkNameAsSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.GetSinkAsync(request.SinkNameAsSinkName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSinkRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             CreateSinkRequest request = new CreateSinkRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Sink = new LogSink(),
+                UniqueWriterIdentity = false,
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateSink(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogSink response = client.CreateSink(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateSinkAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSinkRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             CreateSinkRequest request = new CreateSinkRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+                UniqueWriterIdentity = false,
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.CreateSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.CreateSinkAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSink()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink response = await client.CreateSinkAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogSink response = client.CreateSink(request.Parent, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateSink()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSinkAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            UpdateSinkRequest expectedRequest = new UpdateSinkRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
-                Sink = new LogSink(),
-                UpdateMask = new FieldMask(),
-            };
-            LogSink expectedResponse = new LogSink
-            {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
-                IncludeChildren = true,
-            };
-            mockGrpcClient.Setup(x => x.UpdateSink(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            LogSink sink = new LogSink();
-            FieldMask updateMask = new FieldMask();
-            LogSink response = client.UpdateSink(sinkName, sink, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateSinkAsync()
-        {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            UpdateSinkRequest expectedRequest = new UpdateSinkRequest
-            {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
-                Sink = new LogSink(),
-                UpdateMask = new FieldMask(),
-            };
-            LogSink expectedResponse = new LogSink
-            {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
-                IncludeChildren = true,
-            };
-            mockGrpcClient.Setup(x => x.UpdateSinkAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            LogSink sink = new LogSink();
-            FieldMask updateMask = new FieldMask();
-            LogSink response = await client.UpdateSinkAsync(sinkName, sink, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateSink2()
-        {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            UpdateSinkRequest expectedRequest = new UpdateSinkRequest
-            {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateSink(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            LogSink sink = new LogSink();
-            LogSink response = client.UpdateSink(sinkName, sink);
-            Assert.Same(expectedResponse, response);
+            LogSink responseCallSettings = await client.CreateSinkAsync(request.Parent, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.CreateSinkAsync(request.Parent, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateSinkAsync2()
+        [xunit::FactAttribute]
+        public void CreateSinkResourceNames1()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            UpdateSinkRequest expectedRequest = new UpdateSinkRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateSinkAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            LogSink sink = new LogSink();
-            LogSink response = await client.UpdateSinkAsync(sinkName, sink);
-            Assert.Same(expectedResponse, response);
+            LogSink response = client.CreateSink(request.ParentAsProjectName, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateSink3()
+        [xunit::FactAttribute]
+        public async stt::Task CreateSinkResourceNames1Async()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsProjectName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsProjectName, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSinkResourceNames2()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.CreateSink(request.ParentAsOrganizationName, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateSinkResourceNames2Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsOrganizationName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsOrganizationName, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSinkResourceNames3()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.CreateSink(request.ParentAsFolderName, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateSinkResourceNames3Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsFolderName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsFolderName, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateSinkResourceNames4()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.CreateSink(request.ParentAsBillingAccountName, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateSinkResourceNames4Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.CreateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.CreateSinkAsync(request.ParentAsBillingAccountName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.CreateSinkAsync(request.ParentAsBillingAccountName, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSinkRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
+                UniqueWriterIdentity = false,
+                UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateSink(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogSink response = client.UpdateSink(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateSinkAsync3()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSinkRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+                UniqueWriterIdentity = false,
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSink1()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.UpdateSink(request.SinkName, request.Sink, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSink1Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkName, request.Sink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkName, request.Sink, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSink1ResourceNames()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.UpdateSink(request.SinkNameAsSinkName, request.Sink, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSink1ResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSink2()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                Name = "name3373707",
-                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
-                Filter = "filter-1274492040",
-                WriterIdentity = "writerIdentity775638794",
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink response = await client.UpdateSinkAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogSink response = client.UpdateSink(request.SinkName, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSink()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSink2Async()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            DeleteSinkRequest expectedRequest = new DeleteSinkRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSink(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            client.DeleteSink(sinkName);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteSinkAsync()
-        {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            DeleteSinkRequest expectedRequest = new DeleteSinkRequest
+            LogSink expectedResponse = new LogSink
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSinkAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
-            await client.DeleteSinkAsync(sinkName);
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkName, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteSink2()
+        [xunit::FactAttribute]
+        public void UpdateSink2ResourceNames()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink response = client.UpdateSink(request.SinkNameAsSinkName, request.Sink);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSink2ResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                Sink = new LogSink(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Filter = "filtere47ac9b2",
+                WriterIdentity = "writer_identityfa497f32",
+                IncludeChildren = true,
+                BigqueryOptions = new BigQueryOptions(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Description = "description2cf9da67",
+                Disabled = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteSinkRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSink(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             client.DeleteSink(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteSinkAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSinkRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteSinkAsync(request);
+            await client.DeleteSinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSinkAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetExclusion()
+        [xunit::FactAttribute]
+        public void DeleteSink()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            GetExclusionRequest expectedRequest = new GetExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteSinkRequest request = new DeleteSinkRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
-            LogExclusion expectedResponse = new LogExclusion
-            {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
-            };
-            mockGrpcClient.Setup(x => x.GetExclusion(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
-            LogExclusion response = client.GetExclusion(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteSink(request.SinkName);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetExclusionAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSinkAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            GetExclusionRequest expectedRequest = new GetExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteSinkRequest request = new DeleteSinkRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
-            LogExclusion expectedResponse = new LogExclusion
-            {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
-            };
-            mockGrpcClient.Setup(x => x.GetExclusionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogExclusion>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
-            LogExclusion response = await client.GetExclusionAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteSinkAsync(request.SinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSinkAsync(request.SinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetExclusion2()
+        [xunit::FactAttribute]
+        public void DeleteSinkResourceNames()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteSinkRequest request = new DeleteSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSink(request.SinkNameAsSinkName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteSinkResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteSinkRequest request = new DeleteSinkRequest
+            {
+                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSinkAsync(request.SinkNameAsSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSinkAsync(request.SinkNameAsSinkName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetExclusionRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetExclusion(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogExclusion response = client.GetExclusion(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetExclusionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetExclusionRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetExclusionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogExclusion>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion response = await client.GetExclusionAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogExclusion responseCallSettings = await client.GetExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.GetExclusionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateExclusion()
+        [xunit::FactAttribute]
+        public void GetExclusion()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            CreateExclusionRequest expectedRequest = new CreateExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetExclusionRequest request = new GetExclusionRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                Exclusion = new LogExclusion(),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateExclusion(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            LogExclusion exclusion = new LogExclusion();
-            LogExclusion response = client.CreateExclusion(parent, exclusion);
-            Assert.Same(expectedResponse, response);
+            LogExclusion response = client.GetExclusion(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateExclusionAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetExclusionAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            CreateExclusionRequest expectedRequest = new CreateExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetExclusionRequest request = new GetExclusionRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
-                Exclusion = new LogExclusion(),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateExclusionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogExclusion>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
-            LogExclusion exclusion = new LogExclusion();
-            LogExclusion response = await client.CreateExclusionAsync(parent, exclusion);
-            Assert.Same(expectedResponse, response);
+            LogExclusion responseCallSettings = await client.GetExclusionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.GetExclusionAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateExclusion2()
+        [xunit::FactAttribute]
+        public void GetExclusionResourceNames()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetExclusionRequest request = new GetExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion response = client.GetExclusion(request.ExclusionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetExclusionResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetExclusionRequest request = new GetExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.GetExclusionAsync(request.ExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.GetExclusionAsync(request.ExclusionName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateExclusionRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Exclusion = new LogExclusion(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateExclusion(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogExclusion response = client.CreateExclusion(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateExclusionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateExclusionRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             CreateExclusionRequest request = new CreateExclusionRequest
             {
-                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Exclusion = new LogExclusion(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name3373707",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogExclusion>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion response = await client.CreateExclusionAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogExclusion responseCallSettings = await client.CreateExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateExclusion()
+        [xunit::FactAttribute]
+        public void CreateExclusion()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            UpdateExclusionRequest expectedRequest = new UpdateExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Exclusion = new LogExclusion(),
-                UpdateMask = new FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateExclusion(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
-            LogExclusion exclusion = new LogExclusion();
-            FieldMask updateMask = new FieldMask();
-            LogExclusion response = client.UpdateExclusion(name, exclusion, updateMask);
-            Assert.Same(expectedResponse, response);
+            LogExclusion response = client.CreateExclusion(request.Parent, request.Exclusion);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateExclusionAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateExclusionAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            UpdateExclusionRequest expectedRequest = new UpdateExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Exclusion = new LogExclusion(),
-                UpdateMask = new FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateExclusionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogExclusion>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
-            LogExclusion exclusion = new LogExclusion();
-            FieldMask updateMask = new FieldMask();
-            LogExclusion response = await client.UpdateExclusionAsync(name, exclusion, updateMask);
-            Assert.Same(expectedResponse, response);
+            LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.Parent, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.Parent, request.Exclusion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateExclusion2()
+        [xunit::FactAttribute]
+        public void CreateExclusionResourceNames1()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion response = client.CreateExclusion(request.ParentAsProjectName, request.Exclusion);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateExclusionResourceNames1Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsProjectName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsProjectName, request.Exclusion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateExclusionResourceNames2()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion response = client.CreateExclusion(request.ParentAsOrganizationName, request.Exclusion);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateExclusionResourceNames2Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsOrganizationName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsOrganizationName, request.Exclusion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateExclusionResourceNames3()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion response = client.CreateExclusion(request.ParentAsFolderName, request.Exclusion);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateExclusionResourceNames3Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsFolderName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsFolderName, request.Exclusion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateExclusionResourceNames4()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion response = client.CreateExclusion(request.ParentAsBillingAccountName, request.Exclusion);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateExclusionResourceNames4Async()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Exclusion = new LogExclusion(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CreateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.CreateExclusionAsync(request.ParentAsBillingAccountName, request.Exclusion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.CreateExclusionAsync(request.ParentAsBillingAccountName, request.Exclusion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateExclusionRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateExclusion(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             LogExclusion response = client.UpdateExclusion(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateExclusionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateExclusionRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                Name = "name2-1052831874",
-                Description = "description-1724546052",
-                Filter = "filter-1274492040",
-                Disabled = true,
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<LogExclusion>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion response = await client.UpdateExclusionAsync(request);
-            Assert.Same(expectedResponse, response);
+            LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteExclusion()
+        [xunit::FactAttribute]
+        public void UpdateExclusion()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            DeleteExclusionRequest expectedRequest = new DeleteExclusionRequest
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Exclusion = new LogExclusion(),
+                UpdateMask = new wkt::FieldMask(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteExclusion(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
-            client.DeleteExclusion(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteExclusionAsync()
-        {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
-            DeleteExclusionRequest expectedRequest = new DeleteExclusionRequest
+            LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteExclusionAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
-            await client.DeleteExclusionAsync(name);
+            LogExclusion response = client.UpdateExclusion(request.Name, request.Exclusion, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteExclusion2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateExclusionAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateExclusionRequest request = new UpdateExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Exclusion = new LogExclusion(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request.Name, request.Exclusion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request.Name, request.Exclusion, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateExclusionResourceNames()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateExclusionRequest request = new UpdateExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Exclusion = new LogExclusion(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion response = client.UpdateExclusion(request.ExclusionName, request.Exclusion, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateExclusionResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateExclusionRequest request = new UpdateExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Exclusion = new LogExclusion(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogExclusion expectedResponse = new LogExclusion
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                Disabled = false,
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request.ExclusionName, request.Exclusion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request.ExclusionName, request.Exclusion, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteExclusionRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteExclusion(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
             client.DeleteExclusion(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteExclusionAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteExclusionRequestObjectAsync()
         {
-            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteExclusionAsync(request);
+            await client.DeleteExclusionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteExclusionAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteExclusion()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteExclusionRequest request = new DeleteExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteExclusion(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteExclusionAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteExclusionRequest request = new DeleteExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteExclusionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteExclusionAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteExclusionResourceNames()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteExclusionRequest request = new DeleteExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteExclusion(request.ExclusionName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteExclusionResourceNamesAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteExclusionRequest request = new DeleteExclusionRequest
+            {
+                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteExclusionAsync(request.ExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteExclusionAsync(request.ExclusionName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCmekSettingsRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest
+            {
+                Name = "name1c9368b0",
+            };
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name1c9368b0",
+                KmsKeyName = "kms_key_name06bd122b",
+                ServiceAccountId = "service_account_idc0b71d2a",
+            };
+            mockGrpcClient.Setup(x => x.GetCmekSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings response = client.GetCmekSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCmekSettingsRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest
+            {
+                Name = "name1c9368b0",
+            };
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name1c9368b0",
+                KmsKeyName = "kms_key_name06bd122b",
+                ServiceAccountId = "service_account_idc0b71d2a",
+            };
+            mockGrpcClient.Setup(x => x.GetCmekSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CmekSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings responseCallSettings = await client.GetCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CmekSettings responseCancellationToken = await client.GetCmekSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCmekSettingsRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest
+            {
+                Name = "name1c9368b0",
+                CmekSettings = new CmekSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name1c9368b0",
+                KmsKeyName = "kms_key_name06bd122b",
+                ServiceAccountId = "service_account_idc0b71d2a",
+            };
+            mockGrpcClient.Setup(x => x.UpdateCmekSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings response = client.UpdateCmekSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCmekSettingsRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest
+            {
+                Name = "name1c9368b0",
+                CmekSettings = new CmekSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CmekSettings expectedResponse = new CmekSettings
+            {
+                Name = "name1c9368b0",
+                KmsKeyName = "kms_key_name06bd122b",
+                ServiceAccountId = "service_account_idc0b71d2a",
+            };
+            mockGrpcClient.Setup(x => x.UpdateCmekSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CmekSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            CmekSettings responseCallSettings = await client.UpdateCmekSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CmekSettings responseCancellationToken = await client.UpdateCmekSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

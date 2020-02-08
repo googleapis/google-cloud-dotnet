@@ -25,149 +25,193 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX2NvbmZpZy5wcm90bxIRZ29v",
-            "Z2xlLmxvZ2dpbmcudjIaHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
-            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
-            "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xl",
-            "L2FwaS9jbGllbnQucHJvdG8ikAQKB0xvZ1NpbmsSDAoEbmFtZRgBIAEoCRIT",
-            "CgtkZXN0aW5hdGlvbhgDIAEoCRIOCgZmaWx0ZXIYBSABKAkSSwoVb3V0cHV0",
-            "X3ZlcnNpb25fZm9ybWF0GAYgASgOMiguZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
-            "U2luay5WZXJzaW9uRm9ybWF0QgIYARIXCg93cml0ZXJfaWRlbnRpdHkYCCAB",
-            "KAkSGAoQaW5jbHVkZV9jaGlsZHJlbhgJIAEoCBI+ChBiaWdxdWVyeV9vcHRp",
-            "b25zGAwgASgLMiIuZ29vZ2xlLmxvZ2dpbmcudjIuQmlnUXVlcnlPcHRpb25z",
-            "SAASLwoLY3JlYXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIyCgpzdGFydF90aW1lGAogASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEICGAESMAoIZW5kX3RpbWUYCyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgIYASI/Cg1WZXJzaW9uRm9ybWF0Eh4KGlZF",
-            "UlNJT05fRk9STUFUX1VOU1BFQ0lGSUVEEAASBgoCVjIQARIGCgJWMRACQgkK",
-            "B29wdGlvbnMiMQoPQmlnUXVlcnlPcHRpb25zEh4KFnVzZV9wYXJ0aXRpb25l",
-            "ZF90YWJsZXMYASABKAgiSQoQTGlzdFNpbmtzUmVxdWVzdBIOCgZwYXJlbnQY",
-            "ASABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUi",
-            "VwoRTGlzdFNpbmtzUmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29nbGUu",
-            "bG9nZ2luZy52Mi5Mb2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIj",
-            "Cg5HZXRTaW5rUmVxdWVzdBIRCglzaW5rX25hbWUYASABKAkibQoRQ3JlYXRl",
-            "U2lua1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEigKBHNpbmsYAiABKAsyGi5n",
-            "b29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rEh4KFnVuaXF1ZV93cml0ZXJfaWRl",
-            "bnRpdHkYAyABKAgioQEKEVVwZGF0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFt",
-            "ZRgBIAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
-            "U2luaxIeChZ1bmlxdWVfd3JpdGVyX2lkZW50aXR5GAMgASgIEi8KC3VwZGF0",
-            "ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayImChFE",
-            "ZWxldGVTaW5rUmVxdWVzdBIRCglzaW5rX25hbWUYASABKAkitQEKDExvZ0V4",
-            "Y2x1c2lvbhIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEg4K",
-            "BmZpbHRlchgDIAEoCRIQCghkaXNhYmxlZBgEIAEoCBIvCgtjcmVhdGVfdGlt",
-            "ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRl",
-            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk4KFUxp",
-            "c3RFeGNsdXNpb25zUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90",
-            "b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiZgoWTGlzdEV4Y2x1c2lv",
-            "bnNSZXNwb25zZRIzCgpleGNsdXNpb25zGAEgAygLMh8uZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuTG9nRXhjbHVzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIj",
-            "ChNHZXRFeGNsdXNpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiXAoWQ3JlYXRl",
-            "RXhjbHVzaW9uUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSMgoJZXhjbHVzaW9u",
-            "GAIgASgLMh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uIosBChZV",
-            "cGRhdGVFeGNsdXNpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSMgoJZXhjbHVz",
-            "aW9uGAIgASgLMh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uEi8K",
-            "C3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
-            "ayImChZEZWxldGVFeGNsdXNpb25SZXF1ZXN0EgwKBG5hbWUYASABKAky9hoK",
-            "D0NvbmZpZ1NlcnZpY2VWMhKHAgoJTGlzdFNpbmtzEiMuZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuTGlzdFNpbmtzUmVxdWVzdBokLmdvb2dsZS5sb2dnaW5nLnYyLkxp",
-            "c3RTaW5rc1Jlc3BvbnNlIq4BgtPkkwKnARIWL3YyL3twYXJlbnQ9Ki8qfS9z",
-            "aW5rc1ofEh0vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9zaW5rc1okEiIvdjIv",
-            "e3BhcmVudD1vcmdhbml6YXRpb25zLyp9L3NpbmtzWh4SHC92Mi97cGFyZW50",
-            "PWZvbGRlcnMvKn0vc2lua3NaJhIkL3YyL3twYXJlbnQ9YmlsbGluZ0FjY291",
-            "bnRzLyp9L3NpbmtzEpICCgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "R2V0U2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIscB",
-            "gtPkkwLAARIbL3YyL3tzaW5rX25hbWU9Ki8qL3NpbmtzLyp9WiQSIi92Mi97",
-            "c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn1aKRInL3YyL3tzaW5rX25h",
-            "bWU9b3JnYW5pemF0aW9ucy8qL3NpbmtzLyp9WiMSIS92Mi97c2lua19uYW1l",
-            "PWZvbGRlcnMvKi9zaW5rcy8qfVorEikvdjIve3NpbmtfbmFtZT1iaWxsaW5n",
-            "QWNjb3VudHMvKi9zaW5rcy8qfRKdAgoKQ3JlYXRlU2luaxIkLmdvb2dsZS5s",
+            "Z2xlLmxvZ2dpbmcudjIaF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29n",
+            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
+            "cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aG2dv",
+            "b2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2Zp",
+            "ZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
+            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ijQYKB0xvZ1NpbmsS",
+            "DAoEbmFtZRgBIAEoCRIbCgtkZXN0aW5hdGlvbhgDIAEoCUIG+kEDCgEqEg4K",
+            "BmZpbHRlchgFIAEoCRITCgtkZXNjcmlwdGlvbhgSIAEoCRIQCghkaXNhYmxl",
+            "ZBgTIAEoCBJLChVvdXRwdXRfdmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29n",
+            "bGUubG9nZ2luZy52Mi5Mb2dTaW5rLlZlcnNpb25Gb3JtYXRCAhgBEhwKD3dy",
+            "aXRlcl9pZGVudGl0eRgIIAEoCUID4EEDEhgKEGluY2x1ZGVfY2hpbGRyZW4Y",
+            "CSABKAgSPgoQYmlncXVlcnlfb3B0aW9ucxgMIAEoCzIiLmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkJpZ1F1ZXJ5T3B0aW9uc0gAEjQKC2NyZWF0ZV90aW1lGA0gASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
+            "aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjIK",
+            "CnN0YXJ0X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgIYARIwCghlbmRfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCAhgBIj8KDVZlcnNpb25Gb3JtYXQSHgoaVkVSU0lPTl9GT1JNQVRf",
+            "VU5TUEVDSUZJRUQQABIGCgJWMhABEgYKAlYxEAI6vAHqQbgBChtsb2dnaW5n",
+            "Lmdvb2dsZWFwaXMuY29tL1NpbmsSH3Byb2plY3RzL3twcm9qZWN0fS9zaW5r",
+            "cy97c2lua30SKW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc2lua3Mv",
+            "e3Npbmt9Eh1mb2xkZXJzL3tmb2xkZXJ9L3NpbmtzL3tzaW5rfRIuYmlsbGlu",
+            "Z0FjY291bnRzL3tiaWxsaW5nX2FjY291bnR9L3NpbmtzL3tzaW5rfUIJCgdv",
+            "cHRpb25zImIKD0JpZ1F1ZXJ5T3B0aW9ucxIeChZ1c2VfcGFydGl0aW9uZWRf",
+            "dGFibGVzGAEgASgIEi8KInVzZXNfdGltZXN0YW1wX2NvbHVtbl9wYXJ0aXRp",
+            "b25pbmcYAyABKAhCA+BBAyJuChBMaXN0U2lua3NSZXF1ZXN0EjMKBnBhcmVu",
+            "dBgBIAEoCUIj4EEC+kEdEhtsb2dnaW5nLmdvb2dsZWFwaXMuY29tL1NpbmsS",
+            "EgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiVwoRTGlz",
+            "dFNpbmtzUmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5Mb2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJICg5HZXRT",
+            "aW5rUmVxdWVzdBI2CglzaW5rX25hbWUYASABKAlCI+BBAvpBHQobbG9nZ2lu",
+            "Zy5nb29nbGVhcGlzLmNvbS9TaW5rIpcBChFDcmVhdGVTaW5rUmVxdWVzdBIz",
+            "CgZwYXJlbnQYASABKAlCI+BBAvpBHRIbbG9nZ2luZy5nb29nbGVhcGlzLmNv",
+            "bS9TaW5rEi0KBHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
+            "aW5rQgPgQQISHgoWdW5pcXVlX3dyaXRlcl9pZGVudGl0eRgDIAEoCCLLAQoR",
+            "VXBkYXRlU2lua1JlcXVlc3QSNgoJc2lua19uYW1lGAEgASgJQiPgQQL6QR0K",
+            "G2xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vU2luaxItCgRzaW5rGAIgASgLMhou",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nU2lua0ID4EECEh4KFnVuaXF1ZV93cml0",
+            "ZXJfaWRlbnRpdHkYAyABKAgSLwoLdXBkYXRlX21hc2sYBCABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrIksKEURlbGV0ZVNpbmtSZXF1ZXN0EjYK",
+            "CXNpbmtfbmFtZRgBIAEoCUIj4EEC+kEdChtsb2dnaW5nLmdvb2dsZWFwaXMu",
+            "Y29tL1NpbmsioQMKDExvZ0V4Y2x1c2lvbhIMCgRuYW1lGAEgASgJEhMKC2Rl",
+            "c2NyaXB0aW9uGAIgASgJEg4KBmZpbHRlchgDIAEoCRIQCghkaXNhYmxlZBgE",
+            "IAEoCBIvCgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wOukB6kHlAQogbG9nZ2luZy5nb29nbGVhcGlzLmNvbS9F",
+            "eGNsdXNpb24SKXByb2plY3RzL3twcm9qZWN0fS9leGNsdXNpb25zL3tleGNs",
+            "dXNpb259EjNvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2V4Y2x1c2lv",
+            "bnMve2V4Y2x1c2lvbn0SJ2ZvbGRlcnMve2ZvbGRlcn0vZXhjbHVzaW9ucy97",
+            "ZXhjbHVzaW9ufRI4YmlsbGluZ0FjY291bnRzL3tiaWxsaW5nX2FjY291bnR9",
+            "L2V4Y2x1c2lvbnMve2V4Y2x1c2lvbn0ieAoVTGlzdEV4Y2x1c2lvbnNSZXF1",
+            "ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiEiBsb2dnaW5nLmdvb2dsZWFw",
+            "aXMuY29tL0V4Y2x1c2lvbhISCgpwYWdlX3Rva2VuGAIgASgJEhEKCXBhZ2Vf",
+            "c2l6ZRgDIAEoBSJmChZMaXN0RXhjbHVzaW9uc1Jlc3BvbnNlEjMKCmV4Y2x1",
+            "c2lvbnMYASADKAsyHy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFeGNsdXNpb24S",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIk0KE0dldEV4Y2x1c2lvblJlcXVl",
+            "c3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBsb2dnaW5nLmdvb2dsZWFwaXMu",
+            "Y29tL0V4Y2x1c2lvbiKGAQoWQ3JlYXRlRXhjbHVzaW9uUmVxdWVzdBI4CgZw",
+            "YXJlbnQYASABKAlCKOBBAvpBIhIgbG9nZ2luZy5nb29nbGVhcGlzLmNvbS9F",
+            "eGNsdXNpb24SMgoJZXhjbHVzaW9uGAIgASgLMh8uZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuTG9nRXhjbHVzaW9uIr8BChZVcGRhdGVFeGNsdXNpb25SZXF1ZXN0EjYK",
+            "BG5hbWUYASABKAlCKOBBAvpBIgogbG9nZ2luZy5nb29nbGVhcGlzLmNvbS9F",
+            "eGNsdXNpb24SNwoJZXhjbHVzaW9uGAIgASgLMh8uZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuTG9nRXhjbHVzaW9uQgPgQQISNAoLdXBkYXRlX21hc2sYAyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiUAoWRGVsZXRlRXhjbHVz",
+            "aW9uUmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6QSIKIGxvZ2dpbmcuZ29v",
+            "Z2xlYXBpcy5jb20vRXhjbHVzaW9uIiYKFkdldENtZWtTZXR0aW5nc1JlcXVl",
+            "c3QSDAoEbmFtZRgBIAEoCSKSAQoZVXBkYXRlQ21la1NldHRpbmdzUmVxdWVz",
+            "dBIMCgRuYW1lGAEgASgJEjYKDWNtZWtfc2V0dGluZ3MYAiABKAsyHy5nb29n",
+            "bGUubG9nZ2luZy52Mi5DbWVrU2V0dGluZ3MSLwoLdXBkYXRlX21hc2sYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIk4KDENtZWtTZXR0aW5n",
+            "cxIMCgRuYW1lGAEgASgJEhQKDGttc19rZXlfbmFtZRgCIAEoCRIaChJzZXJ2",
+            "aWNlX2FjY291bnRfaWQYAyABKAkynh8KD0NvbmZpZ1NlcnZpY2VWMhKQAgoJ",
+            "TGlzdFNpbmtzEiMuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtzUmVxdWVz",
+            "dBokLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RTaW5rc1Jlc3BvbnNlIrcBgtPk",
+            "kwKnARIWL3YyL3twYXJlbnQ9Ki8qfS9zaW5rc1ofEh0vdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9zaW5rc1okEiIvdjIve3BhcmVudD1vcmdhbml6YXRpb25z",
+            "Lyp9L3NpbmtzWh4SHC92Mi97cGFyZW50PWZvbGRlcnMvKn0vc2lua3NaJhIk",
+            "L3YyL3twYXJlbnQ9YmlsbGluZ0FjY291bnRzLyp9L3Npbmtz2kEGcGFyZW50",
+            "Ep4CCgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0U2lua1JlcXVl",
+            "c3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rItMBgtPkkwLAARIbL3Yy",
+            "L3tzaW5rX25hbWU9Ki8qL3NpbmtzLyp9WiQSIi92Mi97c2lua19uYW1lPXBy",
+            "b2plY3RzLyovc2lua3MvKn1aKRInL3YyL3tzaW5rX25hbWU9b3JnYW5pemF0",
+            "aW9ucy8qL3NpbmtzLyp9WiMSIS92Mi97c2lua19uYW1lPWZvbGRlcnMvKi9z",
+            "aW5rcy8qfVorEikvdjIve3NpbmtfbmFtZT1iaWxsaW5nQWNjb3VudHMvKi9z",
+            "aW5rcy8qfdpBCXNpbmtfbmFtZRKrAgoKQ3JlYXRlU2luaxIkLmdvb2dsZS5s",
             "b2dnaW5nLnYyLkNyZWF0ZVNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dpbmcu",
-            "djIuTG9nU2luayLMAYLT5JMCxQEiFi92Mi97cGFyZW50PSovKn0vc2lua3M6",
+            "djIuTG9nU2luayLaAYLT5JMCxQEiFi92Mi97cGFyZW50PSovKn0vc2lua3M6",
             "BHNpbmtaJSIdL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vc2lua3M6BHNpbmta",
             "KiIiL3YyL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfS9zaW5rczoEc2lua1ok",
             "IhwvdjIve3BhcmVudD1mb2xkZXJzLyp9L3NpbmtzOgRzaW5rWiwiJC92Mi97",
-            "cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9zaW5rczoEc2luaxLxAwoKVXBk",
-            "YXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZVNpbmtSZXF1ZXN0",
-            "GhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luayKgA4LT5JMCmQMaGy92Mi97",
-            "c2lua19uYW1lPSovKi9zaW5rcy8qfToEc2lua1oqGiIvdjIve3NpbmtfbmFt",
-            "ZT1wcm9qZWN0cy8qL3NpbmtzLyp9OgRzaW5rWi8aJy92Mi97c2lua19uYW1l",
-            "PW9yZ2FuaXphdGlvbnMvKi9zaW5rcy8qfToEc2lua1opGiEvdjIve3Npbmtf",
-            "bmFtZT1mb2xkZXJzLyovc2lua3MvKn06BHNpbmtaMRopL3YyL3tzaW5rX25h",
-            "bWU9YmlsbGluZ0FjY291bnRzLyovc2lua3MvKn06BHNpbmtaKjIiL3YyL3tz",
-            "aW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfToEc2lua1ovMicvdjIve3Np",
-            "bmtfbmFtZT1vcmdhbml6YXRpb25zLyovc2lua3MvKn06BHNpbmtaKTIhL3Yy",
-            "L3tzaW5rX25hbWU9Zm9sZGVycy8qL3NpbmtzLyp9OgRzaW5rWjEyKS92Mi97",
-            "c2lua19uYW1lPWJpbGxpbmdBY2NvdW50cy8qL3NpbmtzLyp9OgRzaW5rEpQC",
-            "CgpEZWxldGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1Jl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkixwGC0+STAsABKhsvdjIv",
-            "e3NpbmtfbmFtZT0qLyovc2lua3MvKn1aJCoiL3YyL3tzaW5rX25hbWU9cHJv",
-            "amVjdHMvKi9zaW5rcy8qfVopKicvdjIve3NpbmtfbmFtZT1vcmdhbml6YXRp",
-            "b25zLyovc2lua3MvKn1aIyohL3YyL3tzaW5rX25hbWU9Zm9sZGVycy8qL3Np",
-            "bmtzLyp9WisqKS92Mi97c2lua19uYW1lPWJpbGxpbmdBY2NvdW50cy8qL3Np",
-            "bmtzLyp9Eq8CCg5MaXN0RXhjbHVzaW9ucxIoLmdvb2dsZS5sb2dnaW5nLnYy",
-            "Lkxpc3RFeGNsdXNpb25zUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxp",
-            "c3RFeGNsdXNpb25zUmVzcG9uc2UixwGC0+STAsABEhsvdjIve3BhcmVudD0q",
-            "Lyp9L2V4Y2x1c2lvbnNaJBIiL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vZXhj",
-            "bHVzaW9uc1opEicvdjIve3BhcmVudD1vcmdhbml6YXRpb25zLyp9L2V4Y2x1",
-            "c2lvbnNaIxIhL3YyL3twYXJlbnQ9Zm9sZGVycy8qfS9leGNsdXNpb25zWisS",
-            "KS92Mi97cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9leGNsdXNpb25zEqEC",
-            "CgxHZXRFeGNsdXNpb24SJi5nb29nbGUubG9nZ2luZy52Mi5HZXRFeGNsdXNp",
-            "b25SZXF1ZXN0Gh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uIscB",
-            "gtPkkwLAARIbL3YyL3tuYW1lPSovKi9leGNsdXNpb25zLyp9WiQSIi92Mi97",
-            "bmFtZT1wcm9qZWN0cy8qL2V4Y2x1c2lvbnMvKn1aKRInL3YyL3tuYW1lPW9y",
-            "Z2FuaXphdGlvbnMvKi9leGNsdXNpb25zLyp9WiMSIS92Mi97bmFtZT1mb2xk",
-            "ZXJzLyovZXhjbHVzaW9ucy8qfVorEikvdjIve25hbWU9YmlsbGluZ0FjY291",
-            "bnRzLyovZXhjbHVzaW9ucy8qfRLeAgoPQ3JlYXRlRXhjbHVzaW9uEikuZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuQ3JlYXRlRXhjbHVzaW9uUmVxdWVzdBofLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLkxvZ0V4Y2x1c2lvbiL+AYLT5JMC9wEiGy92Mi97cGFy",
-            "ZW50PSovKn0vZXhjbHVzaW9uczoJZXhjbHVzaW9uWi8iIi92Mi97cGFyZW50",
-            "PXByb2plY3RzLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvblo0IicvdjIve3Bh",
-            "cmVudD1vcmdhbml6YXRpb25zLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvblou",
-            "IiEvdjIve3BhcmVudD1mb2xkZXJzLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lv",
-            "blo2IikvdjIve3BhcmVudD1iaWxsaW5nQWNjb3VudHMvKn0vZXhjbHVzaW9u",
-            "czoJZXhjbHVzaW9uEt4CCg9VcGRhdGVFeGNsdXNpb24SKS5nb29nbGUubG9n",
-            "Z2luZy52Mi5VcGRhdGVFeGNsdXNpb25SZXF1ZXN0Gh8uZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuTG9nRXhjbHVzaW9uIv4BgtPkkwL3ATIbL3YyL3tuYW1lPSovKi9l",
-            "eGNsdXNpb25zLyp9OglleGNsdXNpb25aLzIiL3YyL3tuYW1lPXByb2plY3Rz",
-            "LyovZXhjbHVzaW9ucy8qfToJZXhjbHVzaW9uWjQyJy92Mi97bmFtZT1vcmdh",
-            "bml6YXRpb25zLyovZXhjbHVzaW9ucy8qfToJZXhjbHVzaW9uWi4yIS92Mi97",
-            "bmFtZT1mb2xkZXJzLyovZXhjbHVzaW9ucy8qfToJZXhjbHVzaW9uWjYyKS92",
-            "Mi97bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9leGNsdXNpb25zLyp9OglleGNs",
-            "dXNpb24SngIKD0RlbGV0ZUV4Y2x1c2lvbhIpLmdvb2dsZS5sb2dnaW5nLnYy",
-            "LkRlbGV0ZUV4Y2x1c2lvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkixwGC0+STAsABKhsvdjIve25hbWU9Ki8qL2V4Y2x1c2lvbnMvKn1aJCoi",
-            "L3YyL3tuYW1lPXByb2plY3RzLyovZXhjbHVzaW9ucy8qfVopKicvdjIve25h",
-            "bWU9b3JnYW5pemF0aW9ucy8qL2V4Y2x1c2lvbnMvKn1aIyohL3YyL3tuYW1l",
-            "PWZvbGRlcnMvKi9leGNsdXNpb25zLyp9WisqKS92Mi97bmFtZT1iaWxsaW5n",
-            "QWNjb3VudHMvKi9leGNsdXNpb25zLyp9Gt8BykEWbG9nZ2luZy5nb29nbGVh",
-            "cGlzLmNvbdJBwgFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
-            "b3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvbG9nZ2luZy5hZG1pbixodHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2xvZ2dpbmcucmVhZEKeAQoVY29tLmdvb2dsZS5sb2dn",
-            "aW5nLnYyQhJMb2dnaW5nQ29uZmlnUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGq",
-            "AhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dn",
-            "aW5nXFYyYgZwcm90bzM="));
+            "cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9zaW5rczoEc2lua9pBC3BhcmVu",
+            "dCxzaW5rEp8ECgpVcGRhdGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuVXBk",
+            "YXRlU2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIs4D",
+            "gtPkkwKZAxobL3YyL3tzaW5rX25hbWU9Ki8qL3NpbmtzLyp9OgRzaW5rWioa",
+            "Ii92Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn06BHNpbmtaLxon",
+            "L3YyL3tzaW5rX25hbWU9b3JnYW5pemF0aW9ucy8qL3NpbmtzLyp9OgRzaW5r",
+            "WikaIS92Mi97c2lua19uYW1lPWZvbGRlcnMvKi9zaW5rcy8qfToEc2lua1ox",
+            "GikvdjIve3NpbmtfbmFtZT1iaWxsaW5nQWNjb3VudHMvKi9zaW5rcy8qfToE",
+            "c2lua1oqMiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8qL3NpbmtzLyp9OgRz",
+            "aW5rWi8yJy92Mi97c2lua19uYW1lPW9yZ2FuaXphdGlvbnMvKi9zaW5rcy8q",
+            "fToEc2lua1opMiEvdjIve3NpbmtfbmFtZT1mb2xkZXJzLyovc2lua3MvKn06",
+            "BHNpbmtaMTIpL3YyL3tzaW5rX25hbWU9YmlsbGluZ0FjY291bnRzLyovc2lu",
+            "a3MvKn06BHNpbmvaQRpzaW5rX25hbWUsc2luayx1cGRhdGVfbWFza9pBDnNp",
+            "bmtfbmFtZSxzaW5rEqACCgpEZWxldGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuRGVsZXRlU2lua1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "0wGC0+STAsABKhsvdjIve3NpbmtfbmFtZT0qLyovc2lua3MvKn1aJCoiL3Yy",
+            "L3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfVopKicvdjIve3Npbmtf",
+            "bmFtZT1vcmdhbml6YXRpb25zLyovc2lua3MvKn1aIyohL3YyL3tzaW5rX25h",
+            "bWU9Zm9sZGVycy8qL3NpbmtzLyp9WisqKS92Mi97c2lua19uYW1lPWJpbGxp",
+            "bmdBY2NvdW50cy8qL3NpbmtzLyp92kEJc2lua19uYW1lErgCCg5MaXN0RXhj",
+            "bHVzaW9ucxIoLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RFeGNsdXNpb25zUmVx",
+            "dWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RFeGNsdXNpb25zUmVzcG9u",
+            "c2Ui0AGC0+STAsABEhsvdjIve3BhcmVudD0qLyp9L2V4Y2x1c2lvbnNaJBIi",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vZXhjbHVzaW9uc1opEicvdjIve3Bh",
+            "cmVudD1vcmdhbml6YXRpb25zLyp9L2V4Y2x1c2lvbnNaIxIhL3YyL3twYXJl",
+            "bnQ9Zm9sZGVycy8qfS9leGNsdXNpb25zWisSKS92Mi97cGFyZW50PWJpbGxp",
+            "bmdBY2NvdW50cy8qfS9leGNsdXNpb25z2kEGcGFyZW50EqgCCgxHZXRFeGNs",
+            "dXNpb24SJi5nb29nbGUubG9nZ2luZy52Mi5HZXRFeGNsdXNpb25SZXF1ZXN0",
+            "Gh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uIs4BgtPkkwLAARIb",
+            "L3YyL3tuYW1lPSovKi9leGNsdXNpb25zLyp9WiQSIi92Mi97bmFtZT1wcm9q",
+            "ZWN0cy8qL2V4Y2x1c2lvbnMvKn1aKRInL3YyL3tuYW1lPW9yZ2FuaXphdGlv",
+            "bnMvKi9leGNsdXNpb25zLyp9WiMSIS92Mi97bmFtZT1mb2xkZXJzLyovZXhj",
+            "bHVzaW9ucy8qfVorEikvdjIve25hbWU9YmlsbGluZ0FjY291bnRzLyovZXhj",
+            "bHVzaW9ucy8qfdpBBG5hbWUS8QIKD0NyZWF0ZUV4Y2x1c2lvbhIpLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLkNyZWF0ZUV4Y2x1c2lvblJlcXVlc3QaHy5nb29nbGUu",
+            "bG9nZ2luZy52Mi5Mb2dFeGNsdXNpb24ikQKC0+STAvcBIhsvdjIve3BhcmVu",
+            "dD0qLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvblovIiIvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9leGNsdXNpb25zOglleGNsdXNpb25aNCInL3YyL3twYXJl",
+            "bnQ9b3JnYW5pemF0aW9ucy8qfS9leGNsdXNpb25zOglleGNsdXNpb25aLiIh",
+            "L3YyL3twYXJlbnQ9Zm9sZGVycy8qfS9leGNsdXNpb25zOglleGNsdXNpb25a",
+            "NiIpL3YyL3twYXJlbnQ9YmlsbGluZ0FjY291bnRzLyp9L2V4Y2x1c2lvbnM6",
+            "CWV4Y2x1c2lvbtpBEHBhcmVudCxleGNsdXNpb24S+wIKD1VwZGF0ZUV4Y2x1",
+            "c2lvbhIpLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZUV4Y2x1c2lvblJlcXVl",
+            "c3QaHy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFeGNsdXNpb24imwKC0+STAvcB",
+            "MhsvdjIve25hbWU9Ki8qL2V4Y2x1c2lvbnMvKn06CWV4Y2x1c2lvblovMiIv",
+            "djIve25hbWU9cHJvamVjdHMvKi9leGNsdXNpb25zLyp9OglleGNsdXNpb25a",
+            "NDInL3YyL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9leGNsdXNpb25zLyp9Ogll",
+            "eGNsdXNpb25aLjIhL3YyL3tuYW1lPWZvbGRlcnMvKi9leGNsdXNpb25zLyp9",
+            "OglleGNsdXNpb25aNjIpL3YyL3tuYW1lPWJpbGxpbmdBY2NvdW50cy8qL2V4",
+            "Y2x1c2lvbnMvKn06CWV4Y2x1c2lvbtpBGm5hbWUsZXhjbHVzaW9uLHVwZGF0",
+            "ZV9tYXNrEqUCCg9EZWxldGVFeGNsdXNpb24SKS5nb29nbGUubG9nZ2luZy52",
+            "Mi5EZWxldGVFeGNsdXNpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5Is4BgtPkkwLAASobL3YyL3tuYW1lPSovKi9leGNsdXNpb25zLyp9WiQq",
+            "Ii92Mi97bmFtZT1wcm9qZWN0cy8qL2V4Y2x1c2lvbnMvKn1aKSonL3YyL3tu",
+            "YW1lPW9yZ2FuaXphdGlvbnMvKi9leGNsdXNpb25zLyp9WiMqIS92Mi97bmFt",
+            "ZT1mb2xkZXJzLyovZXhjbHVzaW9ucy8qfVorKikvdjIve25hbWU9YmlsbGlu",
+            "Z0FjY291bnRzLyovZXhjbHVzaW9ucy8qfdpBBG5hbWUSrQEKD0dldENtZWtT",
+            "ZXR0aW5ncxIpLmdvb2dsZS5sb2dnaW5nLnYyLkdldENtZWtTZXR0aW5nc1Jl",
+            "cXVlc3QaHy5nb29nbGUubG9nZ2luZy52Mi5DbWVrU2V0dGluZ3MiToLT5JMC",
+            "SBIbL3YyL3tuYW1lPSovKn0vY21la1NldHRpbmdzWikSJy92Mi97bmFtZT1v",
+            "cmdhbml6YXRpb25zLyp9L2NtZWtTZXR0aW5ncxLRAQoSVXBkYXRlQ21la1Nl",
+            "dHRpbmdzEiwuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRlQ21la1NldHRpbmdz",
+            "UmVxdWVzdBofLmdvb2dsZS5sb2dnaW5nLnYyLkNtZWtTZXR0aW5ncyJsgtPk",
+            "kwJmMhsvdjIve25hbWU9Ki8qfS9jbWVrU2V0dGluZ3M6DWNtZWtfc2V0dGlu",
+            "Z3NaODInL3YyL3tuYW1lPW9yZ2FuaXphdGlvbnMvKn0vY21la1NldHRpbmdz",
+            "Og1jbWVrX3NldHRpbmdzGt8BykEWbG9nZ2luZy5nb29nbGVhcGlzLmNvbdJB",
+            "wgFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm0ucmVhZC1vbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvbG9nZ2luZy5hZG1pbixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2xvZ2dpbmcucmVhZEKeAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQhJM",
+            "b2dnaW5nQ29uZmlnUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUu",
+            "Q2xvdWQuTG9nZ2luZy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "BigqueryOptions", "CreateTime", "UpdateTime", "StartTime", "EndTime" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.BigQueryOptions), global::Google.Cloud.Logging.V2.BigQueryOptions.Parser, new[]{ "UsePartitionedTables" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksResponse), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateSinkRequest), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateSinkRequest), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled", "CreateTime", "UpdateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsRequest), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsResponse), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser, new[]{ "Exclusions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetExclusionRequest), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateExclusionRequest), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser, new[]{ "Parent", "Exclusion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateExclusionRequest), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser, new[]{ "Name", "Exclusion", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteExclusionRequest), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "Description", "Disabled", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "BigqueryOptions", "CreateTime", "UpdateTime", "StartTime", "EndTime" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.BigQueryOptions), global::Google.Cloud.Logging.V2.BigQueryOptions.Parser, new[]{ "UsePartitionedTables", "UsesTimestampColumnPartitioning" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksResponse), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateSinkRequest), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateSinkRequest), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled", "CreateTime", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsRequest), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsResponse), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser, new[]{ "Exclusions", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetExclusionRequest), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateExclusionRequest), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser, new[]{ "Parent", "Exclusion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateExclusionRequest), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser, new[]{ "Name", "Exclusion", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteExclusionRequest), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetCmekSettingsRequest), global::Google.Cloud.Logging.V2.GetCmekSettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest), global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest.Parser, new[]{ "Name", "CmekSettings", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CmekSettings), global::Google.Cloud.Logging.V2.CmekSettings.Parser, new[]{ "Name", "KmsKeyName", "ServiceAccountId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -209,6 +253,8 @@ namespace Google.Cloud.Logging.V2 {
       name_ = other.name_;
       destination_ = other.destination_;
       filter_ = other.filter_;
+      description_ = other.description_;
+      disabled_ = other.disabled_;
       outputVersionFormat_ = other.outputVersionFormat_;
       writerIdentity_ = other.writerIdentity_;
       includeChildren_ = other.includeChildren_;
@@ -238,7 +284,7 @@ namespace Google.Cloud.Logging.V2 {
     /// project. Example: `"my-syslog-errors-to-pubsub"`. Sink identifiers are
     /// limited to 100 characters and can include only the following characters:
     /// upper and lower-case alphanumeric characters, underscores, hyphens, and
-    /// periods.
+    /// periods. First character has to be alphanumeric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -289,9 +335,39 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 18;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. A description of this sink.
+    /// The maximum length of the description is 8000 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "disabled" field.</summary>
+    public const int DisabledFieldNumber = 19;
+    private bool disabled_;
+    /// <summary>
+    /// Optional. If set to True, then this sink is disabled and it does not
+    /// export any log entries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Disabled {
+      get { return disabled_; }
+      set {
+        disabled_ = value;
+      }
+    }
+
     /// <summary>Field number for the "output_version_format" field.</summary>
     public const int OutputVersionFormatFieldNumber = 6;
-    private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
+    private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified;
     /// <summary>
     /// Deprecated. The log entry format to use for this sink's exported log
     /// entries. The v2 format is used by default and cannot be changed.
@@ -468,6 +544,8 @@ namespace Google.Cloud.Logging.V2 {
       if (Name != other.Name) return false;
       if (Destination != other.Destination) return false;
       if (Filter != other.Filter) return false;
+      if (Description != other.Description) return false;
+      if (Disabled != other.Disabled) return false;
       if (OutputVersionFormat != other.OutputVersionFormat) return false;
       if (WriterIdentity != other.WriterIdentity) return false;
       if (IncludeChildren != other.IncludeChildren) return false;
@@ -486,7 +564,9 @@ namespace Google.Cloud.Logging.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Destination.Length != 0) hash ^= Destination.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
-      if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Disabled != false) hash ^= Disabled.GetHashCode();
+      if (OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) hash ^= OutputVersionFormat.GetHashCode();
       if (WriterIdentity.Length != 0) hash ^= WriterIdentity.GetHashCode();
       if (IncludeChildren != false) hash ^= IncludeChildren.GetHashCode();
       if (optionsCase_ == OptionsOneofCase.BigqueryOptions) hash ^= BigqueryOptions.GetHashCode();
@@ -520,7 +600,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(42);
         output.WriteString(Filter);
       }
-      if (OutputVersionFormat != 0) {
+      if (OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) OutputVersionFormat);
       }
@@ -552,6 +632,14 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(114);
         output.WriteMessage(UpdateTime);
       }
+      if (Description.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(Description);
+      }
+      if (Disabled != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(Disabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -569,7 +657,13 @@ namespace Google.Cloud.Logging.V2 {
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
       }
-      if (OutputVersionFormat != 0) {
+      if (Description.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Disabled != false) {
+        size += 2 + 1;
+      }
+      if (OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OutputVersionFormat);
       }
       if (WriterIdentity.Length != 0) {
@@ -613,7 +707,13 @@ namespace Google.Cloud.Logging.V2 {
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
       }
-      if (other.OutputVersionFormat != 0) {
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Disabled != false) {
+        Disabled = other.Disabled;
+      }
+      if (other.OutputVersionFormat != global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified) {
         OutputVersionFormat = other.OutputVersionFormat;
       }
       if (other.WriterIdentity.Length != 0) {
@@ -727,6 +827,14 @@ namespace Google.Cloud.Logging.V2 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 146: {
+            Description = input.ReadString();
+            break;
+          }
+          case 152: {
+            Disabled = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -789,6 +897,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BigQueryOptions(BigQueryOptions other) : this() {
       usePartitionedTables_ = other.usePartitionedTables_;
+      usesTimestampColumnPartitioning_ = other.usesTimestampColumnPartitioning_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -817,6 +926,25 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "uses_timestamp_column_partitioning" field.</summary>
+    public const int UsesTimestampColumnPartitioningFieldNumber = 3;
+    private bool usesTimestampColumnPartitioning_;
+    /// <summary>
+    /// Output only. True if new timestamp column based partitioning is in use,
+    /// false if legacy ingestion-time partitioning is in use.
+    /// All new sinks will have this field set true and will use timestamp column
+    /// based partitioning. If use_partitioned_tables is false, this value has no
+    /// meaning and will be false. Legacy sinks using partitioned tables will have
+    /// this field set to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool UsesTimestampColumnPartitioning {
+      get { return usesTimestampColumnPartitioning_; }
+      set {
+        usesTimestampColumnPartitioning_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BigQueryOptions);
@@ -831,6 +959,7 @@ namespace Google.Cloud.Logging.V2 {
         return true;
       }
       if (UsePartitionedTables != other.UsePartitionedTables) return false;
+      if (UsesTimestampColumnPartitioning != other.UsesTimestampColumnPartitioning) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -838,6 +967,7 @@ namespace Google.Cloud.Logging.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (UsePartitionedTables != false) hash ^= UsePartitionedTables.GetHashCode();
+      if (UsesTimestampColumnPartitioning != false) hash ^= UsesTimestampColumnPartitioning.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -855,6 +985,10 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(8);
         output.WriteBool(UsePartitionedTables);
       }
+      if (UsesTimestampColumnPartitioning != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UsesTimestampColumnPartitioning);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -864,6 +998,9 @@ namespace Google.Cloud.Logging.V2 {
     public int CalculateSize() {
       int size = 0;
       if (UsePartitionedTables != false) {
+        size += 1 + 1;
+      }
+      if (UsesTimestampColumnPartitioning != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -880,6 +1017,9 @@ namespace Google.Cloud.Logging.V2 {
       if (other.UsePartitionedTables != false) {
         UsePartitionedTables = other.UsePartitionedTables;
       }
+      if (other.UsesTimestampColumnPartitioning != false) {
+        UsesTimestampColumnPartitioning = other.UsesTimestampColumnPartitioning;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -893,6 +1033,10 @@ namespace Google.Cloud.Logging.V2 {
             break;
           case 8: {
             UsePartitionedTables = input.ReadBool();
+            break;
+          }
+          case 24: {
+            UsesTimestampColumnPartitioning = input.ReadBool();
             break;
           }
         }
@@ -2100,6 +2244,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Required. A client-assigned identifier, such as
     /// `"load-balancer-exclusion"`. Identifiers are limited to 100 characters and
     /// can include only letters, digits, underscores, hyphens, and periods.
+    /// First character has to be alphanumeric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3415,6 +3560,625 @@ namespace Google.Cloud.Logging.V2 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to
+  /// [GetCmekSettings][google.logging.v2.ConfigServiceV2.GetCmekSettings].
+  ///
+  /// See [Enabling CMEK for Logs Router](/logging/docs/routing/managed-encryption)
+  /// for more information.
+  /// </summary>
+  public sealed partial class GetCmekSettingsRequest : pb::IMessage<GetCmekSettingsRequest> {
+    private static readonly pb::MessageParser<GetCmekSettingsRequest> _parser = new pb::MessageParser<GetCmekSettingsRequest>(() => new GetCmekSettingsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetCmekSettingsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetCmekSettingsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetCmekSettingsRequest(GetCmekSettingsRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetCmekSettingsRequest Clone() {
+      return new GetCmekSettingsRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource for which to retrieve CMEK settings.
+    ///
+    ///     "projects/[PROJECT_ID]/cmekSettings"
+    ///     "organizations/[ORGANIZATION_ID]/cmekSettings"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    ///     "folders/[FOLDER_ID]/cmekSettings"
+    ///
+    /// Example: `"organizations/12345/cmekSettings"`.
+    ///
+    /// Note: CMEK for the Logs Router can currently only be configured for GCP
+    /// organizations. Once configured, it applies to all projects and folders in
+    /// the GCP organization.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetCmekSettingsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetCmekSettingsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetCmekSettingsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to
+  /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings].
+  ///
+  /// See [Enabling CMEK for Logs Router](/logging/docs/routing/managed-encryption)
+  /// for more information.
+  /// </summary>
+  public sealed partial class UpdateCmekSettingsRequest : pb::IMessage<UpdateCmekSettingsRequest> {
+    private static readonly pb::MessageParser<UpdateCmekSettingsRequest> _parser = new pb::MessageParser<UpdateCmekSettingsRequest>(() => new UpdateCmekSettingsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateCmekSettingsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateCmekSettingsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateCmekSettingsRequest(UpdateCmekSettingsRequest other) : this() {
+      name_ = other.name_;
+      cmekSettings_ = other.cmekSettings_ != null ? other.cmekSettings_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateCmekSettingsRequest Clone() {
+      return new UpdateCmekSettingsRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name for the CMEK settings to update.
+    ///
+    ///     "projects/[PROJECT_ID]/cmekSettings"
+    ///     "organizations/[ORGANIZATION_ID]/cmekSettings"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    ///     "folders/[FOLDER_ID]/cmekSettings"
+    ///
+    /// Example: `"organizations/12345/cmekSettings"`.
+    ///
+    /// Note: CMEK for the Logs Router can currently only be configured for GCP
+    /// organizations. Once configured, it applies to all projects and folders in
+    /// the GCP organization.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cmek_settings" field.</summary>
+    public const int CmekSettingsFieldNumber = 2;
+    private global::Google.Cloud.Logging.V2.CmekSettings cmekSettings_;
+    /// <summary>
+    /// Required. The CMEK settings to update.
+    ///
+    /// See [Enabling CMEK for Logs
+    /// Router](/logging/docs/routing/managed-encryption) for more information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Logging.V2.CmekSettings CmekSettings {
+      get { return cmekSettings_; }
+      set {
+        cmekSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. Field mask identifying which fields from `cmek_settings` should
+    /// be updated. A field will be overwritten if and only if it is in the update
+    /// mask. Output only fields cannot be updated.
+    ///
+    /// See [FieldMask][google.protobuf.FieldMask] for more information.
+    ///
+    /// Example: `"updateMask=kmsKeyName"`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateCmekSettingsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateCmekSettingsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CmekSettings, other.CmekSettings)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (cmekSettings_ != null) hash ^= CmekSettings.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (cmekSettings_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CmekSettings);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (cmekSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CmekSettings);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateCmekSettingsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.cmekSettings_ != null) {
+        if (cmekSettings_ == null) {
+          CmekSettings = new global::Google.Cloud.Logging.V2.CmekSettings();
+        }
+        CmekSettings.MergeFrom(other.CmekSettings);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (cmekSettings_ == null) {
+              CmekSettings = new global::Google.Cloud.Logging.V2.CmekSettings();
+            }
+            input.ReadMessage(CmekSettings);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Describes the customer-managed encryption key (CMEK) settings associated with
+  /// a project, folder, organization, billing account, or flexible resource.
+  ///
+  /// Note: CMEK for the Logs Router can currently only be configured for GCP
+  /// organizations. Once configured, it applies to all projects and folders in the
+  /// GCP organization.
+  ///
+  /// See [Enabling CMEK for Logs Router](/logging/docs/routing/managed-encryption)
+  /// for more information.
+  /// </summary>
+  public sealed partial class CmekSettings : pb::IMessage<CmekSettings> {
+    private static readonly pb::MessageParser<CmekSettings> _parser = new pb::MessageParser<CmekSettings>(() => new CmekSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CmekSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CmekSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CmekSettings(CmekSettings other) : this() {
+      name_ = other.name_;
+      kmsKeyName_ = other.kmsKeyName_;
+      serviceAccountId_ = other.serviceAccountId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CmekSettings Clone() {
+      return new CmekSettings(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output Only. The resource name of the CMEK settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 2;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// The resource name for the configured Cloud KMS key.
+    ///
+    /// KMS key name format:
+    ///     "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]"
+    ///
+    /// For example:
+    ///     `"projects/my-project-id/locations/my-region/keyRings/key-ring-name/cryptoKeys/key-name"`
+    ///
+    /// To enable CMEK for the Logs Router, set this field to a valid
+    /// `kms_key_name` for which the associated service account has the required
+    /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key.
+    ///
+    /// The Cloud KMS key used by the Log Router can be updated by changing the
+    /// `kms_key_name` to a new valid key name. Encryption operations that are in
+    /// progress will be completed with the key that was in use when they started.
+    /// Decryption operations will be completed using the key that was used at the
+    /// time of encryption unless access to that key has been revoked.
+    ///
+    /// To disable CMEK for the Logs Router, set this field to an empty string.
+    ///
+    /// See [Enabling CMEK for Logs
+    /// Router](/logging/docs/routing/managed-encryption) for more information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service_account_id" field.</summary>
+    public const int ServiceAccountIdFieldNumber = 3;
+    private string serviceAccountId_ = "";
+    /// <summary>
+    /// Output Only. The service account that will be used by the Logs Router to
+    /// access your Cloud KMS key.
+    ///
+    /// Before enabling CMEK for Logs Router, you must first assign the role
+    /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` to the service account that
+    /// the Logs Router will use to access your Cloud KMS key. Use
+    /// [GetCmekSettings][google.logging.v2.ConfigServiceV2.GetCmekSettings] to
+    /// obtain the service account ID.
+    ///
+    /// See [Enabling CMEK for Logs
+    /// Router](/logging/docs/routing/managed-encryption) for more information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ServiceAccountId {
+      get { return serviceAccountId_; }
+      set {
+        serviceAccountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CmekSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CmekSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (KmsKeyName != other.KmsKeyName) return false;
+      if (ServiceAccountId != other.ServiceAccountId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (ServiceAccountId.Length != 0) hash ^= ServiceAccountId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKeyName);
+      }
+      if (ServiceAccountId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ServiceAccountId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (KmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (ServiceAccountId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CmekSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
+      }
+      if (other.ServiceAccountId.Length != 0) {
+        ServiceAccountId = other.ServiceAccountId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ServiceAccountId = input.ReadString();
             break;
           }
         }
