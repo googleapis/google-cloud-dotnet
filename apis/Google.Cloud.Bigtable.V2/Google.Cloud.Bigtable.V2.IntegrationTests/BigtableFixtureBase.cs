@@ -117,8 +117,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             }
             else
             {
-                TableAdminClient = BigtableTableAdminClient.Create(EmulatorCallInvoker);
-                TableClient = BigtableClient.Create(EmulatorCallInvoker);
+                TableAdminClient = new BigtableTableAdminClientBuilder { CallInvoker = EmulatorCallInvoker }.Build();
+                TableClient = new BigtableClientBuilder { CallInvoker = EmulatorCallInvoker }.Build();
             }
 
             TableName = await CreateTable();

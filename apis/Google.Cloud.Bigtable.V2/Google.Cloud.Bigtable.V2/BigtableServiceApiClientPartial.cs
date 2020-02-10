@@ -97,9 +97,8 @@ namespace Google.Cloud.Bigtable.V2
         /// Note that channels are managed and shared amongst <see cref="BigtableClient"/> instances using the same
         /// endpoint and channel options and which use the default credentials. So this property will have no bearing
         /// across clients using different options. To create a custom grouping of channels to be managed, create a
-        /// <see cref="GcpCallInvoker"/> manually and use the
-        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings)">BigtableClient.Create</see>
-        /// overload taking a <see cref="CallInvoker"/> to create clients from it.
+        /// <see cref="GcpCallInvoker"/> manually and set the <see cref="ClientBuilderBase{BigtableClient}.CallInvoker" />
+        /// property on a <see cref="BigtableClientBuilder" />, then build the client.
         /// </para>
         /// </remarks>
         public uint MaxChannels { get; set; } = 16;
@@ -113,9 +112,8 @@ namespace Google.Cloud.Bigtable.V2
         /// Note that channels are managed and shared amongst <see cref="BigtableClient"/> instances using the same
         /// endpoint and channel options and which use the default credentials. So this property will have no bearing
         /// across clients using different options. To create a custom grouping of channels to be managed, create a
-        /// <see cref="GcpCallInvoker"/> manually and use the
-        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings)">BigtableClient.Create</see>
-        /// overload taking a <see cref="CallInvoker"/> to create clients from it.
+        /// <see cref="GcpCallInvoker"/> manually and set the <see cref="ClientBuilderBase{BigtableClient}.CallInvoker" />
+        /// property on a <see cref="BigtableClientBuilder" />, then build the client.
         /// </para>
         /// </remarks>
         public uint PreferredMaxStreamsPerChannel { get; set; } = 5;
