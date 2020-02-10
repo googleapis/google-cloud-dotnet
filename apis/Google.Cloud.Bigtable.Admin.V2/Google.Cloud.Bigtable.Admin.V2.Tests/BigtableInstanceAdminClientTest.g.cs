@@ -14,1110 +14,1857 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Bigtable.Admin.V2.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
-    using apis = Google.Cloud.Bigtable.Admin.V2;
-    using Google.Cloud.Iam.V1;
-    using Google.LongRunning;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedBigtableInstanceAdminClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedBigtableInstanceAdminClientTest
     {
-        [Fact]
-        public void GetInstance()
+        [xunit::FactAttribute]
+        public void GetInstanceRequestObject()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceRequest expectedRequest = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-            };
-            Instance expectedResponse = new Instance
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetInstance(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            Instance response = client.GetInstance(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetInstanceAsync()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetInstanceRequest expectedRequest = new GetInstanceRequest
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-            };
-            Instance expectedResponse = new Instance
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            Instance response = await client.GetInstanceAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetInstance2()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.GetInstance(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             Instance response = client.GetInstance(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetInstanceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "displayName1615086568",
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Instance response = await client.GetInstanceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Instance responseCallSettings = await client.GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListInstances()
+        [xunit::FactAttribute]
+        public void GetInstance()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            ListInstancesRequest expectedRequest = new ListInstancesRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            ListInstancesResponse expectedResponse = new ListInstancesResponse
+            Instance expectedResponse = new Instance
             {
-                NextPageToken = "nextPageToken-1530815211",
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.ListInstances(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            ListInstancesResponse response = client.ListInstances(parent);
-            Assert.Same(expectedResponse, response);
+            Instance response = client.GetInstance(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListInstancesAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            ListInstancesRequest expectedRequest = new ListInstancesRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            ListInstancesResponse expectedResponse = new ListInstancesResponse
+            Instance expectedResponse = new Instance
             {
-                NextPageToken = "nextPageToken-1530815211",
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            mockGrpcClient.Setup(x => x.ListInstancesAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListInstancesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            ListInstancesResponse response = await client.ListInstancesAsync(parent);
-            Assert.Same(expectedResponse, response);
+            Instance responseCallSettings = await client.GetInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListInstances2()
+        [xunit::FactAttribute]
+        public void GetInstanceResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance response = client.GetInstance(request.InstanceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInstanceResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetInstanceRequest request = new GetInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance responseCallSettings = await client.GetInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.GetInstanceAsync(request.InstanceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListInstancesRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListInstancesRequest request = new ListInstancesRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                PageToken = "page_tokenf09e5538",
             };
             ListInstancesResponse expectedResponse = new ListInstancesResponse
             {
-                NextPageToken = "nextPageToken-1530815211",
+                Instances = { new Instance(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
             };
-            mockGrpcClient.Setup(x => x.ListInstances(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListInstances(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             ListInstancesResponse response = client.ListInstances(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListInstancesAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ListInstancesRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListInstancesRequest request = new ListInstancesRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                PageToken = "page_tokenf09e5538",
             };
             ListInstancesResponse expectedResponse = new ListInstancesResponse
             {
-                NextPageToken = "nextPageToken-1530815211",
+                Instances = { new Instance(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
             };
-            mockGrpcClient.Setup(x => x.ListInstancesAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListInstancesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListInstancesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListInstancesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ListInstancesResponse response = await client.ListInstancesAsync(request);
-            Assert.Same(expectedResponse, response);
+            ListInstancesResponse responseCallSettings = await client.ListInstancesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListInstancesResponse responseCancellationToken = await client.ListInstancesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteInstance()
+        [xunit::FactAttribute]
+        public void ListInstances()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteInstanceRequest expectedRequest = new DeleteInstanceRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListInstancesRequest request = new ListInstancesRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstance(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            client.DeleteInstance(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteInstanceAsync()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteInstanceRequest expectedRequest = new DeleteInstanceRequest
+            ListInstancesResponse expectedResponse = new ListInstancesResponse
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                Instances = { new Instance(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListInstances(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            await client.DeleteInstanceAsync(name);
+            ListInstancesResponse response = client.ListInstances(request.Parent);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteInstance2()
+        [xunit::FactAttribute]
+        public async stt::Task ListInstancesAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListInstancesResponse expectedResponse = new ListInstancesResponse
+            {
+                Instances = { new Instance(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
+            };
+            mockGrpcClient.Setup(x => x.ListInstancesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListInstancesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            ListInstancesResponse responseCallSettings = await client.ListInstancesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListInstancesResponse responseCancellationToken = await client.ListInstancesAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListInstancesResourceNames()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListInstancesResponse expectedResponse = new ListInstancesResponse
+            {
+                Instances = { new Instance(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
+            };
+            mockGrpcClient.Setup(x => x.ListInstances(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            ListInstancesResponse response = client.ListInstances(request.ParentAsProjectName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ListInstancesResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListInstancesRequest request = new ListInstancesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListInstancesResponse expectedResponse = new ListInstancesResponse
+            {
+                Instances = { new Instance(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
+            };
+            mockGrpcClient.Setup(x => x.ListInstancesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListInstancesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            ListInstancesResponse responseCallSettings = await client.ListInstancesAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListInstancesResponse responseCancellationToken = await client.ListInstancesAsync(request.ParentAsProjectName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateInstanceRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            Instance request = new Instance
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance response = client.UpdateInstance(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateInstanceRequestObjectAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            Instance request = new Instance
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "display_name137f65c2",
+                State = Instance.Types.State.NotKnown,
+                Type = Instance.Types.Type.Unspecified,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance responseCallSettings = await client.UpdateInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Instance responseCancellationToken = await client.UpdateInstanceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteInstanceRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstance(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             client.DeleteInstance(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteInstanceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteInstanceRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteInstanceAsync(request);
+            await client.DeleteInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteInstanceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetCluster()
+        [xunit::FactAttribute]
+        public void DeleteInstance()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetClusterRequest expectedRequest = new GetClusterRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            Cluster expectedResponse = new Cluster
-            {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
-                ServeNodes = 1288838783,
-            };
-            mockGrpcClient.Setup(x => x.GetCluster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ClusterName name = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
-            Cluster response = client.GetCluster(name);
-            Assert.Same(expectedResponse, response);
+            client.DeleteInstance(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetClusterAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteInstanceAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetClusterRequest expectedRequest = new GetClusterRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            Cluster expectedResponse = new Cluster
-            {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
-                ServeNodes = 1288838783,
-            };
-            mockGrpcClient.Setup(x => x.GetClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ClusterName name = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
-            Cluster response = await client.GetClusterAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteInstanceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteInstanceAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetCluster2()
+        [xunit::FactAttribute]
+        public void DeleteInstanceResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteInstance(request.InstanceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteInstanceResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteInstanceAsync(request.InstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteInstanceAsync(request.InstanceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetClusterRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetClusterRequest request = new GetClusterRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
             Cluster expectedResponse = new Cluster
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
-                ServeNodes = 1288838783,
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                State = Cluster.Types.State.Resizing,
+                ServeNodes = -1708916177,
+                DefaultStorageType = StorageType.Ssd,
             };
-            mockGrpcClient.Setup(x => x.GetCluster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             Cluster response = client.GetCluster(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetClusterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetClusterRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetClusterRequest request = new GetClusterRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
             Cluster expectedResponse = new Cluster
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new V2.LocationName("[PROJECT]", "[LOCATION]"),
-                ServeNodes = 1288838783,
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                State = Cluster.Types.State.Resizing,
+                ServeNodes = -1708916177,
+                DefaultStorageType = StorageType.Ssd,
             };
-            mockGrpcClient.Setup(x => x.GetClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Cluster response = await client.GetClusterAsync(request);
-            Assert.Same(expectedResponse, response);
+            Cluster responseCallSettings = await client.GetClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Cluster responseCancellationToken = await client.GetClusterAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListClusters()
+        [xunit::FactAttribute]
+        public void GetCluster()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            ListClustersRequest expectedRequest = new ListClustersRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetClusterRequest request = new GetClusterRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
-            ListClustersResponse expectedResponse = new ListClustersResponse
+            Cluster expectedResponse = new Cluster
             {
-                NextPageToken = "nextPageToken-1530815211",
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                State = Cluster.Types.State.Resizing,
+                ServeNodes = -1708916177,
+                DefaultStorageType = StorageType.Ssd,
             };
-            mockGrpcClient.Setup(x => x.ListClusters(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
-            ListClustersResponse response = client.ListClusters(parent);
-            Assert.Same(expectedResponse, response);
+            Cluster response = client.GetCluster(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListClustersAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetClusterAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            ListClustersRequest expectedRequest = new ListClustersRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetClusterRequest request = new GetClusterRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
-            ListClustersResponse expectedResponse = new ListClustersResponse
+            Cluster expectedResponse = new Cluster
             {
-                NextPageToken = "nextPageToken-1530815211",
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                State = Cluster.Types.State.Resizing,
+                ServeNodes = -1708916177,
+                DefaultStorageType = StorageType.Ssd,
             };
-            mockGrpcClient.Setup(x => x.ListClustersAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListClustersResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
-            ListClustersResponse response = await client.ListClustersAsync(parent);
-            Assert.Same(expectedResponse, response);
+            Cluster responseCallSettings = await client.GetClusterAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Cluster responseCancellationToken = await client.GetClusterAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void ListClusters2()
+        [xunit::FactAttribute]
+        public void GetClusterResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            Cluster expectedResponse = new Cluster
+            {
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                State = Cluster.Types.State.Resizing,
+                ServeNodes = -1708916177,
+                DefaultStorageType = StorageType.Ssd,
+            };
+            mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Cluster response = client.GetCluster(request.ClusterName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetClusterResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetClusterRequest request = new GetClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            Cluster expectedResponse = new Cluster
+            {
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                State = Cluster.Types.State.Resizing,
+                ServeNodes = -1708916177,
+                DefaultStorageType = StorageType.Ssd,
+            };
+            mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Cluster responseCallSettings = await client.GetClusterAsync(request.ClusterName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Cluster responseCancellationToken = await client.GetClusterAsync(request.ClusterName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListClustersRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                PageToken = "page_tokenf09e5538",
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
             {
-                NextPageToken = "nextPageToken-1530815211",
+                Clusters = { new Cluster(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
             };
-            mockGrpcClient.Setup(x => x.ListClusters(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListClusters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             ListClustersResponse response = client.ListClusters(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task ListClustersAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task ListClustersRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListClustersRequest request = new ListClustersRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                PageToken = "page_tokenf09e5538",
             };
             ListClustersResponse expectedResponse = new ListClustersResponse
             {
-                NextPageToken = "nextPageToken-1530815211",
+                Clusters = { new Cluster(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
             };
-            mockGrpcClient.Setup(x => x.ListClustersAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListClustersResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListClustersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListClustersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ListClustersResponse response = await client.ListClustersAsync(request);
-            Assert.Same(expectedResponse, response);
+            ListClustersResponse responseCallSettings = await client.ListClustersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListClustersResponse responseCancellationToken = await client.ListClustersAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteCluster()
+        [xunit::FactAttribute]
+        public void ListClusters()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteClusterRequest expectedRequest = new DeleteClusterRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListClustersRequest request = new ListClustersRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteCluster(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ClusterName name = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
-            client.DeleteCluster(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteClusterAsync()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteClusterRequest expectedRequest = new DeleteClusterRequest
+            ListClustersResponse expectedResponse = new ListClustersResponse
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                Clusters = { new Cluster(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.ListClusters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            ClusterName name = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
-            await client.DeleteClusterAsync(name);
+            ListClustersResponse response = client.ListClusters(request.Parent);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteCluster2()
+        [xunit::FactAttribute]
+        public async stt::Task ListClustersAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            ListClustersResponse expectedResponse = new ListClustersResponse
+            {
+                Clusters = { new Cluster(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
+            };
+            mockGrpcClient.Setup(x => x.ListClustersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListClustersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            ListClustersResponse responseCallSettings = await client.ListClustersAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListClustersResponse responseCancellationToken = await client.ListClustersAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListClustersResourceNames()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            ListClustersResponse expectedResponse = new ListClustersResponse
+            {
+                Clusters = { new Cluster(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
+            };
+            mockGrpcClient.Setup(x => x.ListClusters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            ListClustersResponse response = client.ListClusters(request.ParentAsInstanceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ListClustersResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListClustersRequest request = new ListClustersRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            ListClustersResponse expectedResponse = new ListClustersResponse
+            {
+                Clusters = { new Cluster(), },
+                FailedLocations =
+                {
+                    "failed_locations8c4c58ba",
+                },
+                NextPageToken = "next_page_tokendbee0940",
+            };
+            mockGrpcClient.Setup(x => x.ListClustersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListClustersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            ListClustersResponse responseCallSettings = await client.ListClustersAsync(request.ParentAsInstanceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListClustersResponse responseCancellationToken = await client.ListClustersAsync(request.ParentAsInstanceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteClusterRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteClusterRequest request = new DeleteClusterRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteCluster(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             client.DeleteCluster(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteClusterAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteClusterRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteClusterRequest request = new DeleteClusterRequest
             {
-                ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteClusterAsync(request);
+            await client.DeleteClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteClusterAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateAppProfile()
+        [xunit::FactAttribute]
+        public void DeleteCluster()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateAppProfileRequest expectedRequest = new CreateAppProfileRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteClusterRequest request = new DeleteClusterRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                AppProfileId = "appProfileId1262094415",
-                AppProfile = new AppProfile(),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name3373707",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.CreateAppProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
-            string appProfileId = "appProfileId1262094415";
-            AppProfile appProfile = new AppProfile();
-            AppProfile response = client.CreateAppProfile(parent, appProfileId, appProfile);
-            Assert.Same(expectedResponse, response);
+            client.DeleteCluster(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateAppProfileAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteClusterAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateAppProfileRequest expectedRequest = new CreateAppProfileRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteClusterRequest request = new DeleteClusterRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                AppProfileId = "appProfileId1262094415",
-                AppProfile = new AppProfile(),
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
             };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name3373707",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.CreateAppProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AppProfile>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
-            string appProfileId = "appProfileId1262094415";
-            AppProfile appProfile = new AppProfile();
-            AppProfile response = await client.CreateAppProfileAsync(parent, appProfileId, appProfile);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteClusterAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteClusterAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateAppProfile2()
+        [xunit::FactAttribute]
+        public void DeleteClusterResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteClusterRequest request = new DeleteClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteCluster(request.ClusterName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteClusterResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteClusterRequest request = new DeleteClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteClusterAsync(request.ClusterName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteClusterAsync(request.ClusterName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAppProfileRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateAppProfileRequest request = new CreateAppProfileRequest
             {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                AppProfileId = "appProfileId1262094415",
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
                 AppProfile = new AppProfile(),
-            };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name3373707",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.CreateAppProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfile response = client.CreateAppProfile(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateAppProfileAsync2()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateAppProfileRequest request = new CreateAppProfileRequest
-            {
-                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                AppProfileId = "appProfileId1262094415",
-                AppProfile = new AppProfile(),
-            };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name3373707",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.CreateAppProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AppProfile>(Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfile response = await client.CreateAppProfileAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetAppProfile()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetAppProfileRequest expectedRequest = new GetAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
-            };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name2-1052831874",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetAppProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
-            AppProfile response = client.GetAppProfile(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetAppProfileAsync()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetAppProfileRequest expectedRequest = new GetAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
-            };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name2-1052831874",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetAppProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AppProfile>(Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
-            AppProfile response = await client.GetAppProfileAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetAppProfile2()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetAppProfileRequest request = new GetAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
-            };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name2-1052831874",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetAppProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfile response = client.GetAppProfile(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetAppProfileAsync2()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetAppProfileRequest request = new GetAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
-            };
-            AppProfile expectedResponse = new AppProfile
-            {
-                Name = "name2-1052831874",
-                Etag = "etag3123477",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetAppProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AppProfile>(Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfile response = await client.GetAppProfileAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteAppProfile()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteAppProfileRequest expectedRequest = new DeleteAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAppProfile(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
-            client.DeleteAppProfile(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteAppProfileAsync()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteAppProfileRequest expectedRequest = new DeleteAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAppProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
-            await client.DeleteAppProfileAsync(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteAppProfile2()
-        {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteAppProfileRequest request = new DeleteAppProfileRequest
-            {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
                 IgnoreWarnings = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAppProfile(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile response = client.CreateAppProfile(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAppProfileRequestObjectAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+                AppProfile = new AppProfile(),
+                IgnoreWarnings = true,
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AppProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile responseCallSettings = await client.CreateAppProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AppProfile responseCancellationToken = await client.CreateAppProfileAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAppProfile()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+                AppProfile = new AppProfile(),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile response = client.CreateAppProfile(request.Parent, request.AppProfileId, request.AppProfile);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAppProfileAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+                AppProfile = new AppProfile(),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AppProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile responseCallSettings = await client.CreateAppProfileAsync(request.Parent, request.AppProfileId, request.AppProfile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AppProfile responseCancellationToken = await client.CreateAppProfileAsync(request.Parent, request.AppProfileId, request.AppProfile, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAppProfileResourceNames()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+                AppProfile = new AppProfile(),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile response = client.CreateAppProfile(request.ParentAsInstanceName, request.AppProfileId, request.AppProfile);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAppProfileResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "app_profile_id57fb0442",
+                AppProfile = new AppProfile(),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AppProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile responseCallSettings = await client.CreateAppProfileAsync(request.ParentAsInstanceName, request.AppProfileId, request.AppProfile, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AppProfile responseCancellationToken = await client.CreateAppProfileAsync(request.ParentAsInstanceName, request.AppProfileId, request.AppProfile, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAppProfileRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.GetAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile response = client.GetAppProfile(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAppProfileRequestObjectAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.GetAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AppProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile responseCallSettings = await client.GetAppProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AppProfile responseCancellationToken = await client.GetAppProfileAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAppProfile()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.GetAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile response = client.GetAppProfile(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAppProfileAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.GetAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AppProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile responseCallSettings = await client.GetAppProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AppProfile responseCancellationToken = await client.GetAppProfileAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAppProfileResourceNames()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.GetAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile response = client.GetAppProfile(request.AppProfileName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAppProfileResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            AppProfile expectedResponse = new AppProfile
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                Etag = "etage8ad7218",
+                Description = "description2cf9da67",
+                MultiClusterRoutingUseAny = new AppProfile.Types.MultiClusterRoutingUseAny(),
+                SingleClusterRouting = new AppProfile.Types.SingleClusterRouting(),
+            };
+            mockGrpcClient.Setup(x => x.GetAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AppProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            AppProfile responseCallSettings = await client.GetAppProfileAsync(request.AppProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AppProfile responseCancellationToken = await client.GetAppProfileAsync(request.AppProfileName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAppProfileRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                IgnoreWarnings = true,
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
             client.DeleteAppProfile(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteAppProfileAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAppProfileRequestObjectAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteAppProfileRequest request = new DeleteAppProfileRequest
             {
-                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
                 IgnoreWarnings = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAppProfileAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteAppProfileAsync(request);
+            await client.DeleteAppProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAppProfileAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void DeleteAppProfile()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAppProfile(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAppProfileAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAppProfileAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAppProfileAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAppProfileResourceNames()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAppProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAppProfile(request.AppProfileName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAppProfileResourceNamesAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAppProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAppProfileAsync(request.AppProfileName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAppProfileAsync(request.AppProfileName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIamPolicyRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.GetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Options = new gciv::GetPolicyOptions(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicy()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy response = client.GetIamPolicy(formattedResource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.Resource);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy response = await client.GetIamPolicyAsync(formattedResource);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetIamPolicy2()
+        [xunit::FactAttribute]
+        public void GetIamPolicyResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.GetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetIamPolicyRequest request = new GetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.GetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void SetIamPolicyRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.SetIamPolicy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyRequestObjectAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetIamPolicy()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy policy = new Policy();
-            Policy response = client.SetIamPolicy(formattedResource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            Policy policy = new Policy();
-            Policy response = await client.SetIamPolicyAsync(formattedResource, policy);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SetIamPolicy2()
+        [xunit::FactAttribute]
+        public void SetIamPolicyResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = client.SetIamPolicy(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SetIamPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            SetIamPolicyRequest request = new SetIamPolicyRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Policy = new Policy(),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
             };
-            Policy expectedResponse = new Policy
+            gciv::Policy expectedResponse = new gciv::Policy
             {
-                Version = 351608024,
-                Etag = ByteString.CopyFromUtf8("etag3123477"),
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
             };
-            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            Policy response = await client.SetIamPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void TestIamPermissionsRequestObject()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsRequestObjectAsync()
+        {
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void TestIamPermissions()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = client.TestIamPermissions(formattedResource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.Resource, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
-            IEnumerable<string> permissions = new List<string>();
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(formattedResource, permissions);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.Resource, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void TestIamPermissions2()
+        [xunit::FactAttribute]
+        public void TestIamPermissionsResourceNames()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = client.TestIamPermissions(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse response = client.TestIamPermissions(request.ResourceAsResourceName, request.Permissions);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task TestIamPermissionsAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
-            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new moq::Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
-                Permissions = { },
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
             };
-            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            gciv::TestIamPermissionsResponse expectedResponse = new gciv::TestIamPermissionsResponse
+            {
+                Permissions =
+                {
+                    "permissions535a2741",
+                },
+            };
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::TestIamPermissionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
-            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(request);
-            Assert.Same(expectedResponse, response);
+            gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }

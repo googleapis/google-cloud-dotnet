@@ -1,0 +1,174 @@
+// Copyright 2020 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+using gcbav = Google.Cloud.Bigtable.Admin.V2;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
+
+namespace Google.Cloud.Bigtable.Admin.V2
+{
+    public partial class CreateTableRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateTableFromSnapshotRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="SourceSnapshot"/> resource name property.
+        /// </summary>
+        public SnapshotName SourceSnapshotAsSnapshotName
+        {
+            get => string.IsNullOrEmpty(SourceSnapshot) ? null : SnapshotName.Parse(SourceSnapshot, allowUnparsed: true);
+            set => SourceSnapshot = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DropRowRangeRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListTablesRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetTableRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteTableRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ModifyColumnFamiliesRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateConsistencyTokenRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CheckConsistencyRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSnapshotRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::SnapshotName SnapshotName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::SnapshotName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSnapshotsRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSnapshotRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::SnapshotName SnapshotName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::SnapshotName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+}
