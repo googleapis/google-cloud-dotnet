@@ -124,9 +124,17 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             GcpCallInvoker callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
 
             // These will share the same set of channels to the Bigtable service.
-            BigtableClient client1 = BigtableClient.Create(callInvoker, settings);
+            BigtableClient client1 = new BigtableClientBuilder
+            {
+                CallInvoker = callInvoker,
+                Settings = settings
+            }.Build();
             // ...
-            BigtableClient client2 = BigtableClient.Create(callInvoker, settings);
+            BigtableClient client2 = new BigtableClientBuilder
+            {
+                CallInvoker = callInvoker,
+                Settings = settings
+            }.Build();
             // ...
 
             await callInvoker.ShutdownAsync();
@@ -137,7 +145,11 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // and will just act as if the default settings were specified.
             settings = null;
             callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
-            BigtableClient client3 = BigtableClient.Create(callInvoker, settings);
+            BigtableClient client3 = new BigtableClientBuilder
+            {
+                CallInvoker = callInvoker,
+                Settings = settings
+            }.Build();
             // ...
 
             await callInvoker.ShutdownAsync();

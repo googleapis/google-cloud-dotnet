@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using Google.Rpc;
 using Grpc.Core;
@@ -191,9 +192,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var settings = new BigtableServiceApiSettings();
             // Don't allow for any time to retry.
-            settings.MutateRowsRetrySettings =
-                settings.MutateRowsRetrySettings.WithTotalExpiration(
-                    Expiration.FromTimeout(TimeSpan.Zero));
+            settings.MutateRowsSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.Zero));
 
             var request = new MutateRowsRequest
             {

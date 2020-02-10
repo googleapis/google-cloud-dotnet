@@ -12,18 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
-using Google.Cloud.Bigtable.Common.V2;
-using Google.Cloud.Bigtable.V2.IntegrationTests;
 using Google.Cloud.ClientTesting;
-using Grpc.Core;
-using Grpc.Gcp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.Snippets
@@ -48,24 +37,24 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // client2 and client4 will share a different GcpCallInvoker, since they both
             // use the same custom MaxChannels/PreferredMaxStreamsPerChannel settings.
             BigtableServiceApiSettings settings1 = BigtableServiceApiSettings.GetDefault();
-            BigtableClient client1 = BigtableClient.Create(settings: settings1);
+            BigtableClient client1 = new BigtableClientBuilder { Settings = settings1 }.Build();
 
             BigtableServiceApiSettings settings2 = new BigtableServiceApiSettings
             {
                 MaxChannels = 10,
                 PreferredMaxStreamsPerChannel = 4
             };
-            BigtableClient client2 = BigtableClient.Create(settings: settings2);
+            BigtableClient client2 = new BigtableClientBuilder { Settings = settings2 }.Build();
 
             BigtableServiceApiSettings settings3 = BigtableServiceApiSettings.GetDefault();
-            BigtableClient client3 = BigtableClient.Create(settings: settings3);
+            BigtableClient client3 = new BigtableClientBuilder { Settings = settings3 }.Build();
 
             BigtableServiceApiSettings settings4 = new BigtableServiceApiSettings
             {
                 MaxChannels = 10,
                 PreferredMaxStreamsPerChannel = 4
             };
-            BigtableClient client4 = BigtableClient.Create(settings: settings4);
+            BigtableClient client4 = new BigtableClientBuilder { Settings = settings4 }.Build();
 
             // client5 will not share a GcpCallInvoker with any of the other clients, since
             // its MaxChannels/PreferredMaxStreamsPerChannel settings differ from the others.
@@ -74,7 +63,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 MaxChannels = 15,
                 PreferredMaxStreamsPerChannel = 4
             };
-            BigtableClient client5 = BigtableClient.Create(settings: settings5);
+            BigtableClient client5 = new BigtableClientBuilder { Settings = settings5 }.Build();
             // End sample
         }
     }
