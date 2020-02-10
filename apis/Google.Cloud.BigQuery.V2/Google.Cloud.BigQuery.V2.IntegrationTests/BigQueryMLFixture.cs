@@ -28,7 +28,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         public BigQueryMLFixture()
         {
-            DatasetId = IdGenerator.FromDateTime(prefix: "test_");
+            DatasetId = IdGenerator.FromDateTime(prefix: "testml_");
             ModelId = CreateModelId();
 
             CreateData();
