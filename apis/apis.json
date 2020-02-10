@@ -77,9 +77,8 @@
   },
   {
     "id": "Google.Cloud.Bigtable.Admin.V2",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/bigtable/admin/v2",
-    "serviceYaml": "bigtableadmin.yaml",
     "productName": "Google Cloud Bigtable Administration",
     "productUrl": "https://cloud.google.com/bigtable/",
     "version": "2.0.0-alpha00",
