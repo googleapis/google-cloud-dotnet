@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
-using Google.Protobuf;
 using System.Threading;
 using System.Threading.Tasks;
 
