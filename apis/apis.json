@@ -721,6 +721,7 @@
       "Grpc.Core": "1.22.1"
     },
     "testDependencies": {
+      "Google.Apis.CloudResourceManager.v1": "1.43.0.1847",
       "System.ValueTuple": "4.4.0"
     },
     "tags": [ "PubSub" ]
