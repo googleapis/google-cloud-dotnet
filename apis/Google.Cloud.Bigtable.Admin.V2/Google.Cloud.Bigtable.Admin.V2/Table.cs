@@ -76,13 +76,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser, new[]{ "Name", "ClusterStates", "ColumnFamilies", "Granularity" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity), typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState), global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser, new[]{ "ReplicationState" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) }, null),
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser, new[]{ "Name", "ClusterStates", "ColumnFamilies", "Granularity" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity), typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState), global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser, new[]{ "ReplicationState" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) }, null, null),
             null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily), global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser, new[]{ "GcRule" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Parser, new[]{ "MaxNumVersions", "MaxAge", "Intersection", "Union" }, new[]{ "Rule" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection.Parser, new[]{ "Rules" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.Parser, new[]{ "Rules" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser, new[]{ "Name", "SourceTable", "DataSizeBytes", "CreateTime", "DeleteTime", "State", "Description" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily), global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser, new[]{ "GcRule" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Parser, new[]{ "MaxNumVersions", "MaxAge", "Intersection", "Union" }, new[]{ "Rule" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection.Parser, new[]{ "Rules" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.Parser, new[]{ "Rules" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser, new[]{ "Name", "SourceTable", "DataSizeBytes", "CreateTime", "DeleteTime", "State", "Description" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -149,7 +149,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>Field number for the "cluster_states" field.</summary>
     public const int ClusterStatesFieldNumber = 2;
     private static readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>.Codec _map_clusterStates_codec
-        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser), 18);
+        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState> clusterStates_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>();
     /// <summary>
     /// Output only. Map from cluster ID to per-cluster table state.
@@ -166,7 +166,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>Field number for the "column_families" field.</summary>
     public const int ColumnFamiliesFieldNumber = 3;
     private static readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily>.Codec _map_columnFamilies_codec
-        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser), 26);
+        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily> columnFamilies_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily>();
     /// <summary>
     /// (`CreationOnly`)
@@ -180,7 +180,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "granularity" field.</summary>
     public const int GranularityFieldNumber = 4;
-    private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity granularity_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity granularity_ = global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified;
     /// <summary>
     /// (`CreationOnly`)
     /// The granularity (i.e. `MILLIS`) at which timestamps are stored in
@@ -222,7 +222,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= ClusterStates.GetHashCode();
       hash ^= ColumnFamilies.GetHashCode();
-      if (Granularity != 0) hash ^= Granularity.GetHashCode();
+      if (Granularity != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified) hash ^= Granularity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -242,7 +242,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       clusterStates_.WriteTo(output, _map_clusterStates_codec);
       columnFamilies_.WriteTo(output, _map_columnFamilies_codec);
-      if (Granularity != 0) {
+      if (Granularity != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Granularity);
       }
@@ -259,7 +259,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       size += clusterStates_.CalculateSize(_map_clusterStates_codec);
       size += columnFamilies_.CalculateSize(_map_columnFamilies_codec);
-      if (Granularity != 0) {
+      if (Granularity != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Granularity);
       }
       if (_unknownFields != null) {
@@ -278,7 +278,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       clusterStates_.Add(other.clusterStates_);
       columnFamilies_.Add(other.columnFamilies_);
-      if (other.Granularity != 0) {
+      if (other.Granularity != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified) {
         Granularity = other.Granularity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -398,7 +398,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         /// <summary>Field number for the "replication_state" field.</summary>
         public const int ReplicationStateFieldNumber = 1;
-        private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState replicationState_ = 0;
+        private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState replicationState_ = global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown;
         /// <summary>
         /// Output only. The state of replication for the table in this cluster.
         /// </summary>
@@ -430,7 +430,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (ReplicationState != 0) hash ^= ReplicationState.GetHashCode();
+          if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) hash ^= ReplicationState.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -444,7 +444,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (ReplicationState != 0) {
+          if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
             output.WriteRawTag(8);
             output.WriteEnum((int) ReplicationState);
           }
@@ -456,7 +456,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (ReplicationState != 0) {
+          if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplicationState);
           }
           if (_unknownFields != null) {
@@ -470,7 +470,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (other == null) {
             return;
           }
-          if (other.ReplicationState != 0) {
+          if (other.ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
             ReplicationState = other.ReplicationState;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 6;
-    private global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State state_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State state_ = global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.NotKnown;
     /// <summary>
     /// Output only. The current state of the snapshot.
     /// </summary>
@@ -1420,7 +1420,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (DataSizeBytes != 0L) hash ^= DataSizeBytes.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.NotKnown) hash ^= State.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1455,7 +1455,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(DeleteTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.NotKnown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) State);
       }
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.NotKnown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (Description.Length != 0) {
@@ -1527,7 +1527,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.NotKnown) {
         State = other.State;
       }
       if (other.Description.Length != 0) {
