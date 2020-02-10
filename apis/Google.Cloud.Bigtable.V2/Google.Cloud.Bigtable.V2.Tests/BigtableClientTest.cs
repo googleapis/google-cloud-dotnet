@@ -35,10 +35,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var callInvoker = new GcpCallInvoker(
                 target: BigtableServiceApiClient.DefaultEndpoint.ToString(),
                 credentials: ChannelCredentials.Insecure);
-            var client = BigtableClient.Create(callInvoker);
+            var client = CreateClient(callInvoker, null);
             Assert.Null(client.AppProfileId);
 
-            client = BigtableClient.Create(callInvoker, new BigtableServiceApiSettings { AppProfileId = "xyz" });
+            client = CreateClient(callInvoker, "xyz");
             Assert.Equal("xyz", client.AppProfileId);
         }
 
@@ -79,12 +79,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             {
                 TableNameAsTableName = new TableName("project", "instance", "table"),
                 RowKey = ByteString.CopyFromUtf8("abc"),
-                FalseMutations = {new Mutation()},
-                TrueMutations = {new Mutation()}
+                FalseMutations = { new Mutation() },
+                TrueMutations = { new Mutation() }
             };
             var request2 = new CheckAndMutateRowRequest(request);
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.CheckAndMutateRow(request));
             await Assert.ThrowsAsync<NotImplementedException>(() => client.CheckAndMutateRowAsync(request2));
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
@@ -104,8 +103,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 TrueMutations = { new Mutation() },
                 AppProfileId = appProfileIdOnRequest
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.CheckAndMutateRow(requestWithAppProfileId));
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
@@ -236,8 +234,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 TableNameAsTableName = new TableName("project", "instance", "table")
             };
             var request2 = new MutateRowRequest(request);
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.MutateRow(request));
             await Assert.ThrowsAsync<NotImplementedException>(() => client.MutateRowAsync(request2));
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
@@ -256,8 +253,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 TableNameAsTableName = new TableName("project", "instance", "table"),
                 AppProfileId = appProfileIdOnRequest
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.MutateRow(requestWithAppProfileId));
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
@@ -340,8 +336,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Entries = { Mutations.CreateEntry("abc", new Mutation()) },
                 TableNameAsTableName = new TableName("project", "instance", "table")
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             await Assert.ThrowsAsync<NotImplementedException>(() => client.MutateRowsAsync(request));
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
         }
@@ -357,8 +352,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 TableNameAsTableName = new TableName("project", "instance", "table"),
                 AppProfileId = appProfileIdOnRequest
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             await Assert.ThrowsAsync<NotImplementedException>(() => client.MutateRowsAsync(requestWithAppProfileId));
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
@@ -428,8 +422,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Rules = { ReadModifyWriteRules.Append("familyName", "CQ1", "Append") }
             };
             var request2 = new ReadModifyWriteRowRequest(request);
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.ReadModifyWriteRow(request));
             await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadModifyWriteRowAsync(request2));
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
@@ -448,8 +441,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Rules = { ReadModifyWriteRules.Append("familyName", "CQ1", "Append") },
                 AppProfileId = appProfileIdOnRequest
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.ReadModifyWriteRow(requestWithAppProfileId));
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
@@ -656,8 +648,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var appProfileIdOnClient = "csharp";
             var request =
                 new ReadRowsRequest { TableNameAsTableName = new TableName("project", "instance", "table") };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadRows(request).ToListAsync().AsTask());
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
         }
@@ -672,8 +663,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 TableNameAsTableName = new TableName("project", "instance", "table"),
                 AppProfileId = appProfileIdOnRequest
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             await Assert.ThrowsAsync<NotImplementedException>(() => client.ReadRows(requestWithAppProfileId).ToListAsync().AsTask());
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
@@ -737,8 +727,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var appProfileIdOnClient = "csharp";
             var request =
                 new SampleRowKeysRequest { TableNameAsTableName = new TableName("project", "instance", "table") };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.SampleRowKeys(request));
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
         }
@@ -753,8 +742,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 TableNameAsTableName = new TableName("project", "instance", "table"),
                 AppProfileId = appProfileIdOnRequest
             };
-            var client = BigtableClient.Create(NotImplementedCallInvoker.Instance,
-                new BigtableServiceApiSettings { AppProfileId = appProfileIdOnClient });
+            var client = CreateClient(NotImplementedCallInvoker.Instance, appProfileIdOnClient);
             Assert.Throws<NotImplementedException>(() => client.SampleRowKeys(requestWithAppProfileId));
             Assert.NotEqual(appProfileIdOnClient, requestWithAppProfileId.AppProfileId);
             Assert.Equal(appProfileIdOnRequest, requestWithAppProfileId.AppProfileId);
@@ -766,5 +754,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new MockBigtableClient();
             Assert.Throws<ArgumentNullException>(() => client.SampleRowKeys((TableName)null));
         }
+
+        private static BigtableClient CreateClient(CallInvoker callInvoker, string appProfileId) =>
+            new BigtableClientBuilder
+            {
+                CallInvoker = callInvoker,
+                    Settings = new BigtableServiceApiSettings { AppProfileId = appProfileId }
+            }.Build();
     }
 }
