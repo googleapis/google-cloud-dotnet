@@ -26,42 +26,51 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           string.Concat(
             "Cidnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvaW5zdGFuY2UucHJvdG8SGGdv",
             "b2dsZS5iaWd0YWJsZS5hZG1pbi52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxolZ29vZ2xlL2JpZ3RhYmxlL2FkbWluL3YyL2NvbW1vbi5wcm90",
-            "byKDAwoISW5zdGFuY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUY",
-            "AiABKAkSNwoFc3RhdGUYAyABKA4yKC5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuSW5zdGFuY2UuU3RhdGUSNQoEdHlwZRgEIAEoDjInLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5UeXBlEj4KBmxhYmVscxgFIAMoCzIu",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5MYWJlbHNFbnRy",
-            "eRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIjUKBVN0YXRlEhMKD1NUQVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAES",
-            "DAoIQ1JFQVRJTkcQAiI9CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIO",
-            "CgpQUk9EVUNUSU9OEAESDwoLREVWRUxPUE1FTlQQAiKOAgoHQ2x1c3RlchIM",
-            "CgRuYW1lGAEgASgJEhAKCGxvY2F0aW9uGAIgASgJEjYKBXN0YXRlGAMgASgO",
-            "MicuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIuU3RhdGUSEwoL",
-            "c2VydmVfbm9kZXMYBCABKAUSQwoUZGVmYXVsdF9zdG9yYWdlX3R5cGUYBSAB",
-            "KA4yJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuU3RvcmFnZVR5cGUiUQoF",
-            "U3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASCQoFUkVBRFkQARIMCghDUkVB",
-            "VElORxACEgwKCFJFU0laSU5HEAMSDAoIRElTQUJMRUQQBCKCAwoKQXBwUHJv",
-            "ZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkSEwoLZGVzY3JpcHRp",
-            "b24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9yb3V0aW5nX3VzZV9hbnkYBSAB",
-            "KAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5NdWx0",
-            "aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoWc2luZ2xlX2NsdXN0ZXJfcm91",
-            "dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
-            "aWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAaGwoZTXVsdGlDbHVzdGVyUm91",
-            "dGluZ1VzZUFueRpOChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVy",
-            "X2lkGAEgASgJEiIKGmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgI",
-            "QhAKDnJvdXRpbmdfcG9saWN5QrABChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFk",
-            "bWluLnYyQg1JbnN0YW5jZVByb3RvUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvYWRtaW4vdjI7YWRtaW6qAh5H",
-            "b29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVcQ2xvdWRc",
-            "QmlndGFibGVcQWRtaW5cVjJiBnByb3RvMw=="));
+            "cy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29v",
+            "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxolZ29vZ2xlL2JpZ3RhYmxlL2FkbWlu",
+            "L3YyL2NvbW1vbi5wcm90byLdAwoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID",
+            "4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEjcKBXN0YXRlGAMgASgO",
+            "MiguZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkluc3RhbmNlLlN0YXRlEjUK",
+            "BHR5cGUYBCABKA4yJy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuSW5zdGFu",
+            "Y2UuVHlwZRI+CgZsYWJlbHMYBSADKAsyLi5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuSW5zdGFuY2UuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI1CgVTdGF0ZRITCg9TVEFU",
+            "RV9OT1RfS05PV04QABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAIiPQoEVHlw",
+            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDgoKUFJPRFVDVElPThABEg8KC0RF",
+            "VkVMT1BNRU5UEAI6TupBSwogYmlndGFibGUuZ29vZ2xlYXBpcy5jb20vSW5z",
+            "dGFuY2USJ3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNl",
+            "fSKnAwoHQ2x1c3RlchIRCgRuYW1lGAEgASgJQgPgQQMSOAoIbG9jYXRpb24Y",
+            "AiABKAlCJvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9u",
+            "EjsKBXN0YXRlGAMgASgOMicuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNs",
+            "dXN0ZXIuU3RhdGVCA+BBAxIYCgtzZXJ2ZV9ub2RlcxgEIAEoBUID4EECEkMK",
+            "FGRlZmF1bHRfc3RvcmFnZV90eXBlGAUgASgOMiUuZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLlN0b3JhZ2VUeXBlIlEKBVN0YXRlEhMKD1NUQVRFX05PVF9L",
+            "Tk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghSRVNJWklORxAD",
+            "EgwKCERJU0FCTEVEEAQ6YOpBXQofYmlndGFibGUuZ29vZ2xlYXBpcy5jb20v",
+            "Q2x1c3RlchI6cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFu",
+            "Y2V9L2NsdXN0ZXJzL3tjbHVzdGVyfSLuAwoKQXBwUHJvZmlsZRIMCgRuYW1l",
+            "GAEgASgJEgwKBGV0YWcYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSZwod",
+            "bXVsdGlfY2x1c3Rlcl9yb3V0aW5nX3VzZV9hbnkYBSABKAsyPi5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0",
+            "aW5nVXNlQW55SAASWwoWc2luZ2xlX2NsdXN0ZXJfcm91dGluZxgGIAEoCzI5",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlLlNpbmdsZUNs",
+            "dXN0ZXJSb3V0aW5nSAAaGwoZTXVsdGlDbHVzdGVyUm91dGluZ1VzZUFueRpO",
+            "ChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVyX2lkGAEgASgJEiIK",
+            "GmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgIOmrqQWcKImJpZ3Rh",
+            "YmxlLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGUSQXByb2plY3RzL3twcm9q",
+            "ZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9hcHBQcm9maWxlcy97YXBwX3By",
+            "b2ZpbGV9QhAKDnJvdXRpbmdfcG9saWN5QrABChxjb20uZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyQg1JbnN0YW5jZVByb3RvUAFaPWdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvYWRtaW4vdjI7YWRt",
+            "aW6qAh5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVc",
+            "Q2xvdWRcQmlndGFibGVcQWRtaW5cVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null)})
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -71,8 +80,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// A collection of Bigtable [Tables][google.bigtable.admin.v2.Table] and
   /// the resources that serve them.
-  /// All tables in an instance are served from a single
-  /// [Cluster][google.bigtable.admin.v2.Cluster].
+  /// All tables in an instance are served from all
+  /// [Clusters][google.bigtable.admin.v2.Cluster] in the instance.
   /// </summary>
   public sealed partial class Instance : pb::IMessage<Instance> {
     private static readonly pb::MessageParser<Instance> _parser = new pb::MessageParser<Instance>(() => new Instance());
@@ -116,9 +125,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// (`OutputOnly`)
     /// The unique name of the instance. Values are of the form
-    /// `projects/&lt;project>/instances/[a-z][a-z0-9\\-]+[a-z0-9]`.
+    /// `projects/{project}/instances/[a-z][a-z0-9\\-]+[a-z0-9]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -132,7 +140,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The descriptive name for this instance as it appears in UIs.
+    /// Required. The descriptive name for this instance as it appears in UIs.
     /// Can be changed at any time, but should be kept globally unique
     /// to avoid confusion.
     /// </summary>
@@ -146,7 +154,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State state_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State state_ = global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown;
     /// <summary>
     /// (`OutputOnly`)
     /// The current state of the instance.
@@ -161,7 +169,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type type_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type type_ = global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified;
     /// <summary>
     /// The type of the instance. Defaults to `PRODUCTION`.
     /// </summary>
@@ -176,7 +184,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels are a flexible and lightweight mechanism for organizing cloud
@@ -222,8 +230,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) hash ^= State.GetHashCode();
+      if (Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -246,11 +254,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -269,10 +277,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += labels_.CalculateSize(_map_labels_codec);
@@ -293,10 +301,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) {
         State = other.State;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         Type = other.Type;
       }
       labels_.Add(other.labels_);
@@ -438,9 +446,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// (`OutputOnly`)
     /// The unique name of the cluster. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/clusters/[a-z][-a-z0-9]*`.
+    /// `projects/{project}/instances/{instance}/clusters/[a-z][-a-z0-9]*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -458,7 +465,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// The location where this cluster's nodes and storage reside. For best
     /// performance, clients should be located as close as possible to this
     /// cluster. Currently only zones are supported, so values should be of the
-    /// form `projects/&lt;project>/locations/&lt;zone>`.
+    /// form `projects/{project}/locations/{zone}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Location {
@@ -470,9 +477,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State state_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State state_ = global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown;
     /// <summary>
-    /// (`OutputOnly`)
     /// The current state of the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -487,7 +493,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ServeNodesFieldNumber = 4;
     private int serveNodes_;
     /// <summary>
-    /// The number of nodes allocated to this cluster. More nodes enable higher
+    /// Required. The number of nodes allocated to this cluster. More nodes enable higher
     /// throughput and more consistent performance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -500,7 +506,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "default_storage_type" field.</summary>
     public const int DefaultStorageTypeFieldNumber = 5;
-    private global::Google.Cloud.Bigtable.Admin.V2.StorageType defaultStorageType_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.StorageType defaultStorageType_ = global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified;
     /// <summary>
     /// (`CreationOnly`)
     /// The type of storage used by this cluster to serve its
@@ -540,9 +546,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) hash ^= State.GetHashCode();
       if (ServeNodes != 0) hash ^= ServeNodes.GetHashCode();
-      if (DefaultStorageType != 0) hash ^= DefaultStorageType.GetHashCode();
+      if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) hash ^= DefaultStorageType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -564,7 +570,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(Location);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
@@ -572,7 +578,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(32);
         output.WriteInt32(ServeNodes);
       }
-      if (DefaultStorageType != 0) {
+      if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) DefaultStorageType);
       }
@@ -590,13 +596,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Location.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (ServeNodes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ServeNodes);
       }
-      if (DefaultStorageType != 0) {
+      if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultStorageType);
       }
       if (_unknownFields != null) {
@@ -616,13 +622,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) {
         State = other.State;
       }
       if (other.ServeNodes != 0) {
         ServeNodes = other.ServeNodes;
       }
-      if (other.DefaultStorageType != 0) {
+      if (other.DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         DefaultStorageType = other.DefaultStorageType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -805,7 +811,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>Field number for the "multi_cluster_routing_use_any" field.</summary>
     public const int MultiClusterRoutingUseAnyFieldNumber = 5;
     /// <summary>
-    /// Use a multi-cluster routing policy that may pick any cluster.
+    /// Use a multi-cluster routing policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny MultiClusterRoutingUseAny {
@@ -1021,10 +1027,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Read/write requests may be routed to any cluster in the instance, and will
-      /// fail over to another cluster in the event of transient errors or delays.
-      /// Choosing this option sacrifices read-your-writes consistency to improve
-      /// availability.
+      /// Read/write requests are routed to the nearest cluster in the instance, and
+      /// will fail over to the nearest cluster that is available in the event of
+      /// transient errors or delays. Clusters in a region are considered
+      /// equidistant. Choosing this option sacrifices read-your-writes consistency
+      /// to improve availability.
       /// </summary>
       public sealed partial class MultiClusterRoutingUseAny : pb::IMessage<MultiClusterRoutingUseAny> {
         private static readonly pb::MessageParser<MultiClusterRoutingUseAny> _parser = new pb::MessageParser<MultiClusterRoutingUseAny>(() => new MultiClusterRoutingUseAny());
@@ -1129,7 +1136,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       /// <summary>
       /// Unconditionally routes all read/write requests to a specific cluster.
-      /// This option preserves read-your-writes consistency, but does not improve
+      /// This option preserves read-your-writes consistency but does not improve
       /// availability.
       /// </summary>
       public sealed partial class SingleClusterRouting : pb::IMessage<SingleClusterRouting> {
