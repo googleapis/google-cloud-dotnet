@@ -363,10 +363,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         }
 
         /// <summary>
-        /// Constructs a SecurityMarksNameOneOf with an expected type and a resource name.
+        /// Constructs a new instance of <see cref="SecurityMarksNameOneOf"/> with an expected type and a resource name.
         /// </summary>
         /// <param name="type">The expected type of this oneof.</param>
-        /// <param name="name">The resource name represented by this oneof.</param>
+        /// <param name="name">The resource name represented by this oneof. Must not be <c>null</c>.</param>
         public SecurityMarksNameOneOf(OneofType type, gax::IResourceName name)
         {
             Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));

@@ -40,7 +40,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "Z2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MXAxYmV0YTE7c2VjdXJp",
             "dHljZW50ZXKqAiVHb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjFQMUJl",
             "dGExygIlR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYxcDFiZXRhMeoC",
-            "KEdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMXAxQmV0YTFiBnBy",
+            "KEdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMXAxYmV0YTFiBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
