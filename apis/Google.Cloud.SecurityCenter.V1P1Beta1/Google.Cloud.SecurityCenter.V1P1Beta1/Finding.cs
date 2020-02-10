@@ -51,7 +51,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxcDFiZXRhMTtz",
             "ZWN1cml0eWNlbnRlcqoCJUdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
             "MVAxQmV0YTHKAiVHb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjFwMWJl",
-            "dGEx6gIoR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxcDFCZXRh",
+            "dGEx6gIoR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxcDFiZXRh",
             "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },

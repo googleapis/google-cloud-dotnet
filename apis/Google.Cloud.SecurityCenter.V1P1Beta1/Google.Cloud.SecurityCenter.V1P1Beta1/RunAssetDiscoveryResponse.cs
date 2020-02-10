@@ -38,7 +38,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "b2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExO3NlY3Vy",
             "aXR5Y2VudGVyqgIlR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxUDFC",
             "ZXRhMcoCJUdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMXAxYmV0YTHq",
-            "AihHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6VjFwMUJldGExYgZw",
+            "AihHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6VjFwMWJldGExYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },

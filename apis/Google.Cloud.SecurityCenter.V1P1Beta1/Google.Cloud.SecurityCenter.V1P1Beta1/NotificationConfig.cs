@@ -46,7 +46,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "ZC9zZWN1cml0eWNlbnRlci92MXAxYmV0YTE7c2VjdXJpdHljZW50ZXKqAiVH",
             "b29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjFQMUJldGExygIlR29vZ2xl",
             "XENsb3VkXFNlY3VyaXR5Q2VudGVyXFYxcDFiZXRhMeoCKEdvb2dsZTo6Q2xv",
-            "dWQ6OlNlY3VyaXR5Q2VudGVyOjpWMXAxQmV0YTHqQUAKG3B1YnN1Yi5nb29n",
+            "dWQ6OlNlY3VyaXR5Q2VudGVyOjpWMXAxYmV0YTHqQUAKG3B1YnN1Yi5nb29n",
             "bGVhcGlzLmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3RvcGljcy97",
             "dG9waWN9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
