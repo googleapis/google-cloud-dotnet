@@ -26,164 +26,198 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           string.Concat(
             "CjZnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvYmlndGFibGVfaW5zdGFuY2Vf",
             "YWRtaW4ucHJvdG8SGGdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MhocZ29vZ2xl",
-            "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxonZ29vZ2xlL2JpZ3RhYmxlL2FkbWlu",
-            "L3YyL2luc3RhbmNlLnByb3RvGh5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3ku",
-            "cHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGiNnb29nbGUvbG9u",
-            "Z3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
-            "cHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKXAgoVQ3JlYXRlSW5z",
-            "dGFuY2VSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRITCgtpbnN0YW5jZV9pZBgC",
-            "IAEoCRI0CghpbnN0YW5jZRgDIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS5hZG1p",
-            "bi52Mi5JbnN0YW5jZRJPCghjbHVzdGVycxgEIAMoCzI9Lmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52Mi5DcmVhdGVJbnN0YW5jZVJlcXVlc3QuQ2x1c3RlcnNF",
-            "bnRyeRpSCg1DbHVzdGVyc0VudHJ5EgsKA2tleRgBIAEoCRIwCgV2YWx1ZRgC",
-            "IAEoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVyOgI4ASIi",
-            "ChJHZXRJbnN0YW5jZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSI6ChRMaXN0SW5z",
-            "dGFuY2VzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90b2tlbhgC",
-            "IAEoCSKBAQoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEjUKCWluc3RhbmNlcxgB",
-            "IAMoCzIiLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZRIYChBm",
+            "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJv",
+            "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
+            "cGkvcmVzb3VyY2UucHJvdG8aJ2dvb2dsZS9iaWd0YWJsZS9hZG1pbi92Mi9p",
+            "bnN0YW5jZS5wcm90bxoeZ29vZ2xlL2lhbS92MS9pYW1fcG9saWN5LnByb3Rv",
+            "Ghpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxojZ29vZ2xlL2xvbmdydW5u",
+            "aW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5w",
+            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i2wIKFUNyZWF0ZUluc3RhbmNl",
+            "UmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJj",
+            "ZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIYCgtpbnN0YW5jZV9p",
+            "ZBgCIAEoCUID4EECEjkKCGluc3RhbmNlGAMgASgLMiIuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyLkluc3RhbmNlQgPgQQISVAoIY2x1c3RlcnMYBCADKAsy",
+            "PS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRlSW5zdGFuY2VSZXF1",
+            "ZXN0LkNsdXN0ZXJzRW50cnlCA+BBAhpSCg1DbHVzdGVyc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRIwCgV2YWx1ZRgCIAEoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1p",
+            "bi52Mi5DbHVzdGVyOgI4ASJMChJHZXRJbnN0YW5jZVJlcXVlc3QSNgoEbmFt",
+            "ZRgBIAEoCUIo4EEC+kEiCiBiaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9JbnN0",
+            "YW5jZSJvChRMaXN0SW5zdGFuY2VzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlC",
+            "M+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "UHJvamVjdBISCgpwYWdlX3Rva2VuGAIgASgJIoEBChVMaXN0SW5zdGFuY2Vz",
+            "UmVzcG9uc2USNQoJaW5zdGFuY2VzGAEgAygLMiIuZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLkluc3RhbmNlEhgKEGZhaWxlZF9sb2NhdGlvbnMYAiADKAkS",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIo8BChxQYXJ0aWFsVXBkYXRlSW5z",
+            "dGFuY2VSZXF1ZXN0EjkKCGluc3RhbmNlGAEgASgLMiIuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyLkluc3RhbmNlQgPgQQISNAoLdXBkYXRlX21hc2sYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiTwoVRGVsZXRl",
+            "SW5zdGFuY2VSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogYmlndGFi",
+            "bGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2UiogEKFENyZWF0ZUNsdXN0ZXJS",
+            "ZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBiaWd0YWJsZS5nb29n",
+            "bGVhcGlzLmNvbS9JbnN0YW5jZRIXCgpjbHVzdGVyX2lkGAIgASgJQgPgQQIS",
+            "NwoHY2x1c3RlchgDIAEoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5D",
+            "bHVzdGVyQgPgQQIiSgoRR2V0Q2x1c3RlclJlcXVlc3QSNQoEbmFtZRgBIAEo",
+            "CUIn4EEC+kEhCh9iaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9DbHVzdGVyImMK",
+            "E0xpc3RDbHVzdGVyc1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIK",
+            "IGJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhIKCnBhZ2VfdG9r",
+            "ZW4YAiABKAkifgoUTGlzdENsdXN0ZXJzUmVzcG9uc2USMwoIY2x1c3RlcnMY",
+            "ASADKAsyIS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlchIYChBm",
             "YWlsZWRfbG9jYXRpb25zGAIgAygJEhcKD25leHRfcGFnZV90b2tlbhgDIAEo",
-            "CSKFAQocUGFydGlhbFVwZGF0ZUluc3RhbmNlUmVxdWVzdBI0CghpbnN0YW5j",
-            "ZRgBIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZRIv",
-            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2siJQoVRGVsZXRlSW5zdGFuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkibgoU",
-            "Q3JlYXRlQ2x1c3RlclJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhIKCmNsdXN0",
-            "ZXJfaWQYAiABKAkSMgoHY2x1c3RlchgDIAEoCzIhLmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5DbHVzdGVyIiEKEUdldENsdXN0ZXJSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkiOQoTTGlzdENsdXN0ZXJzUmVxdWVzdBIOCgZwYXJlbnQYASAB",
-            "KAkSEgoKcGFnZV90b2tlbhgCIAEoCSJ+ChRMaXN0Q2x1c3RlcnNSZXNwb25z",
-            "ZRIzCghjbHVzdGVycxgBIAMoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
-            "Mi5DbHVzdGVyEhgKEGZhaWxlZF9sb2NhdGlvbnMYAiADKAkSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAMgASgJIiQKFERlbGV0ZUNsdXN0ZXJSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkixgEKFkNyZWF0ZUluc3RhbmNlTWV0YWRhdGESSQoQb3JpZ2lu",
-            "YWxfcmVxdWVzdBgBIAEoCzIvLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5D",
-            "cmVhdGVJbnN0YW5jZVJlcXVlc3QSMAoMcmVxdWVzdF90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtmaW5pc2hfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAizQEKFlVwZGF0ZUluc3Rh",
-            "bmNlTWV0YWRhdGESUAoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzI2Lmdvb2ds",
-            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5QYXJ0aWFsVXBkYXRlSW5zdGFuY2VSZXF1",
-            "ZXN0EjAKDHJlcXVlc3RfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLwoLZmluaXNoX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wIsQBChVDcmVhdGVDbHVzdGVyTWV0YWRhdGESSAoQb3Jp",
-            "Z2luYWxfcmVxdWVzdBgBIAEoCzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
-            "Mi5DcmVhdGVDbHVzdGVyUmVxdWVzdBIwCgxyZXF1ZXN0X3RpbWUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2ZpbmlzaF90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCK3AQoVVXBkYXRlQ2x1",
-            "c3Rlck1ldGFkYXRhEjsKEG9yaWdpbmFsX3JlcXVlc3QYASABKAsyIS5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlchIwCgxyZXF1ZXN0X3RpbWUY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2ZpbmlzaF90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKVAQoXQ3Jl",
-            "YXRlQXBwUHJvZmlsZVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhYKDmFwcF9w",
-            "cm9maWxlX2lkGAIgASgJEjkKC2FwcF9wcm9maWxlGAMgASgLMiQuZ29vZ2xl",
-            "LmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUSFwoPaWdub3JlX3dhcm5p",
-            "bmdzGAQgASgIIiQKFEdldEFwcFByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASAB",
-            "KAkiTwoWTGlzdEFwcFByb2ZpbGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
-            "EQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiiAEKF0xp",
-            "c3RBcHBQcm9maWxlc1Jlc3BvbnNlEjoKDGFwcF9wcm9maWxlcxgBIAMoCzIk",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlEhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCRIYChBmYWlsZWRfbG9jYXRpb25zGAMgAygJIp4B",
-            "ChdVcGRhdGVBcHBQcm9maWxlUmVxdWVzdBI5CgthcHBfcHJvZmlsZRgBIAEo",
-            "CzIkLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlEi8KC3Vw",
-            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIX",
-            "Cg9pZ25vcmVfd2FybmluZ3MYAyABKAgiQAoXRGVsZXRlQXBwUHJvZmlsZVJl",
-            "cXVlc3QSDAoEbmFtZRgBIAEoCRIXCg9pZ25vcmVfd2FybmluZ3MYAiABKAgi",
-            "GgoYVXBkYXRlQXBwUHJvZmlsZU1ldGFkYXRhMqoXChVCaWd0YWJsZUluc3Rh",
-            "bmNlQWRtaW4SjgEKDkNyZWF0ZUluc3RhbmNlEi8uZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iLILT5JMCJiIhL3YyL3twYXJlbnQ9cHJvamVj",
-            "dHMvKn0vaW5zdGFuY2VzOgEqEooBCgtHZXRJbnN0YW5jZRIsLmdvb2dsZS5i",
-            "aWd0YWJsZS5hZG1pbi52Mi5HZXRJbnN0YW5jZVJlcXVlc3QaIi5nb29nbGUu",
-            "YmlndGFibGUuYWRtaW4udjIuSW5zdGFuY2UiKYLT5JMCIxIhL3YyL3tuYW1l",
-            "PXByb2plY3RzLyovaW5zdGFuY2VzLyp9EpsBCg1MaXN0SW5zdGFuY2VzEi4u",
-            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RJbnN0YW5jZXNSZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RJbnN0YW5jZXNSZXNw",
-            "b25zZSIpgtPkkwIjEiEvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9pbnN0YW5j",
-            "ZXMShgEKDlVwZGF0ZUluc3RhbmNlEiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLkluc3RhbmNlGiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkluc3Rh",
-            "bmNlIiyC0+STAiYaIS92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "fToBKhKsAQoVUGFydGlhbFVwZGF0ZUluc3RhbmNlEjYuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLmFkbWluLnYyLlBhcnRpYWxVcGRhdGVJbnN0YW5jZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIjyC0+STAjYyKi92Mi97aW5z",
-            "dGFuY2UubmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfToIaW5zdGFuY2US",
-            "hAEKDkRlbGV0ZUluc3RhbmNlEi8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
-            "LkRlbGV0ZUluc3RhbmNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSIpgtPkkwIjKiEvdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0S",
-            "nQEKDUNyZWF0ZUNsdXN0ZXISLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
-            "Q3JlYXRlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIj2C0+STAjciLC92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFu",
-            "Y2VzLyp9L2NsdXN0ZXJzOgdjbHVzdGVyEpIBCgpHZXRDbHVzdGVyEisuZ29v",
-            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdldENsdXN0ZXJSZXF1ZXN0GiEuZ29v",
-            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIiNILT5JMCLhIsL3YyL3tu",
-            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn0SowEKDExp",
-            "c3RDbHVzdGVycxItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0Q2x1",
-            "c3RlcnNSZXF1ZXN0Gi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RD",
-            "bHVzdGVyc1Jlc3BvbnNlIjSC0+STAi4SLC92Mi97cGFyZW50PXByb2plY3Rz",
-            "LyovaW5zdGFuY2VzLyp9L2NsdXN0ZXJzEooBCg1VcGRhdGVDbHVzdGVyEiEu",
-            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIjeC0+STAjEaLC92Mi97bmFtZT1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp9OgEqEo0BCg1EZWxldGVDbHVz",
-            "dGVyEi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkRlbGV0ZUNsdXN0ZXJS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjSC0+STAi4qLC92Mi97",
-            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp9ErEBChBD",
-            "cmVhdGVBcHBQcm9maWxlEjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNy",
-            "ZWF0ZUFwcFByb2ZpbGVSZXF1ZXN0GiQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLkFwcFByb2ZpbGUiRILT5JMCPiIvL3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKn0vYXBwUHJvZmlsZXM6C2FwcF9wcm9maWxlEp4BCg1H",
-            "ZXRBcHBQcm9maWxlEi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdldEFw",
-            "cFByb2ZpbGVSZXF1ZXN0GiQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFw",
-            "cFByb2ZpbGUiN4LT5JMCMRIvL3YyL3tuYW1lPXByb2plY3RzLyovaW5zdGFu",
-            "Y2VzLyovYXBwUHJvZmlsZXMvKn0SrwEKD0xpc3RBcHBQcm9maWxlcxIwLmdv",
-            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0QXBwUHJvZmlsZXNSZXF1ZXN0",
-            "GjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RBcHBQcm9maWxlc1Jl",
-            "c3BvbnNlIjeC0+STAjESLy92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFu",
-            "Y2VzLyp9L2FwcFByb2ZpbGVzErYBChBVcGRhdGVBcHBQcm9maWxlEjEuZ29v",
-            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLlVwZGF0ZUFwcFByb2ZpbGVSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJQgtPkkwJKMjsvdjIv",
-            "e2FwcF9wcm9maWxlLm5hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9hcHBQ",
-            "cm9maWxlcy8qfToLYXBwX3Byb2ZpbGUSlgEKEERlbGV0ZUFwcFByb2ZpbGUS",
-            "MS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRGVsZXRlQXBwUHJvZmlsZVJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiN4LT5JMCMSovL3YyL3tu",
-            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovYXBwUHJvZmlsZXMvKn0SiAEK",
-            "DEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVx",
-            "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ij2C0+STAjciMi92Mi97cmVz",
-            "b3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06Z2V0SWFtUG9saWN5OgEq",
-            "EogBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGlj",
-            "eVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSI9gtPkkwI3IjIvdjIv",
-            "e3Jlc291cmNlPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OnNldElhbVBvbGlj",
-            "eToBKhKuAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5U",
-            "ZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0",
-            "SWFtUGVybWlzc2lvbnNSZXNwb25zZSJDgtPkkwI9IjgvdjIve3Jlc291cmNl",
-            "PXByb2plY3RzLyovaW5zdGFuY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
-            "KkK9AQocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkIaQmlndGFibGVJ",
-            "bnN0YW5jZUFkbWluUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS9hZG1pbi92MjthZG1pbqoCHkdvb2ds",
-            "ZS5DbG91ZC5CaWd0YWJsZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91ZFxCaWd0",
-            "YWJsZVxBZG1pblxWMmIGcHJvdG8z"));
+            "CSJNChREZWxldGVDbHVzdGVyUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6",
+            "QSEKH2JpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXIixgEKFkNyZWF0",
+            "ZUluc3RhbmNlTWV0YWRhdGESSQoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzIv",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVJbnN0YW5jZVJlcXVl",
+            "c3QSMAoMcmVxdWVzdF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBIvCgtmaW5pc2hfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXAizQEKFlVwZGF0ZUluc3RhbmNlTWV0YWRhdGESUAoQb3Jp",
+            "Z2luYWxfcmVxdWVzdBgBIAEoCzI2Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "Mi5QYXJ0aWFsVXBkYXRlSW5zdGFuY2VSZXF1ZXN0EjAKDHJlcXVlc3RfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLZmluaXNo",
+            "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIsQBChVD",
+            "cmVhdGVDbHVzdGVyTWV0YWRhdGESSAoQb3JpZ2luYWxfcmVxdWVzdBgBIAEo",
+            "CzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVDbHVzdGVyUmVx",
+            "dWVzdBIwCgxyZXF1ZXN0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEi8KC2ZpbmlzaF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcCK3AQoVVXBkYXRlQ2x1c3Rlck1ldGFkYXRhEjsKEG9y",
+            "aWdpbmFsX3JlcXVlc3QYASABKAsyIS5nb29nbGUuYmlndGFibGUuYWRtaW4u",
+            "djIuQ2x1c3RlchIwCgxyZXF1ZXN0X3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEi8KC2ZpbmlzaF90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcCLJAQoXQ3JlYXRlQXBwUHJvZmlsZVJlcXVl",
+            "c3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGJpZ3RhYmxlLmdvb2dsZWFw",
+            "aXMuY29tL0luc3RhbmNlEhsKDmFwcF9wcm9maWxlX2lkGAIgASgJQgPgQQIS",
+            "PgoLYXBwX3Byb2ZpbGUYAyABKAsyJC5nb29nbGUuYmlndGFibGUuYWRtaW4u",
+            "djIuQXBwUHJvZmlsZUID4EECEhcKD2lnbm9yZV93YXJuaW5ncxgEIAEoCCJQ",
+            "ChRHZXRBcHBQcm9maWxlUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQK",
+            "ImJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGUieQoWTGlzdEFw",
+            "cFByb2ZpbGVzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYmln",
+            "dGFibGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEQoJcGFnZV9zaXplGAMg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiiAEKF0xpc3RBcHBQcm9maWxlc1Jl",
+            "c3BvbnNlEjoKDGFwcF9wcm9maWxlcxgBIAMoCzIkLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5BcHBQcm9maWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CRIYChBmYWlsZWRfbG9jYXRpb25zGAMgAygJIqgBChdVcGRhdGVBcHBQcm9m",
+            "aWxlUmVxdWVzdBI+CgthcHBfcHJvZmlsZRgBIAEoCzIkLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlQgPgQQISNAoLdXBkYXRlX21hc2sY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISFwoPaWdu",
+            "b3JlX3dhcm5pbmdzGAMgASgIImwKF0RlbGV0ZUFwcFByb2ZpbGVSZXF1ZXN0",
+            "EjgKBG5hbWUYASABKAlCKuBBAvpBJAoiYmlndGFibGUuZ29vZ2xlYXBpcy5j",
+            "b20vQXBwUHJvZmlsZRIXCg9pZ25vcmVfd2FybmluZ3MYAiABKAgiGgoYVXBk",
+            "YXRlQXBwUHJvZmlsZU1ldGFkYXRhMpIeChVCaWd0YWJsZUluc3RhbmNlQWRt",
+            "aW4S2gEKDkNyZWF0ZUluc3RhbmNlEi8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24ieILT5JMCJiIhL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0v",
+            "aW5zdGFuY2VzOgEq2kEkcGFyZW50LGluc3RhbmNlX2lkLGluc3RhbmNlLGNs",
+            "dXN0ZXJzykEiCghJbnN0YW5jZRIWQ3JlYXRlSW5zdGFuY2VNZXRhZGF0YRKR",
+            "AQoLR2V0SW5zdGFuY2USLC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2V0",
+            "SW5zdGFuY2VSZXF1ZXN0GiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLklu",
+            "c3RhbmNlIjCC0+STAiMSIS92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNl",
+            "cy8qfdpBBG5hbWUSpAEKDUxpc3RJbnN0YW5jZXMSLi5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuTGlzdEluc3RhbmNlc1JlcXVlc3QaLy5nb29nbGUuYmln",
+            "dGFibGUuYWRtaW4udjIuTGlzdEluc3RhbmNlc1Jlc3BvbnNlIjKC0+STAiMS",
+            "IS92Mi97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlc9pBBnBhcmVudBKG",
+            "AQoOVXBkYXRlSW5zdGFuY2USIi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "SW5zdGFuY2UaIi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuSW5zdGFuY2Ui",
+            "LILT5JMCJhohL3YyL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OgEq",
+            "EugBChVQYXJ0aWFsVXBkYXRlSW5zdGFuY2USNi5nb29nbGUuYmlndGFibGUu",
+            "YWRtaW4udjIuUGFydGlhbFVwZGF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ieILT5JMCNjIqL3YyL3tpbnN0YW5j",
+            "ZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZdpBFGlu",
+            "c3RhbmNlLHVwZGF0ZV9tYXNrykEiCghJbnN0YW5jZRIWVXBkYXRlSW5zdGFu",
+            "Y2VNZXRhZGF0YRKLAQoORGVsZXRlSW5zdGFuY2USLy5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IjCC0+STAiMqIS92Mi97bmFtZT1wcm9qZWN0cy8qL2lu",
+            "c3RhbmNlcy8qfdpBBG5hbWUS3AEKDUNyZWF0ZUNsdXN0ZXISLi5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuQ3JlYXRlQ2x1c3RlclJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInyC0+STAjciLC92Mi97cGFyZW50",
+            "PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2NsdXN0ZXJzOgdjbHVzdGVy2kEZ",
+            "cGFyZW50LGNsdXN0ZXJfaWQsY2x1c3RlcspBIAoHQ2x1c3RlchIVQ3JlYXRl",
+            "Q2x1c3Rlck1ldGFkYXRhEpkBCgpHZXRDbHVzdGVyEisuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyLkdldENsdXN0ZXJSZXF1ZXN0GiEuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyLkNsdXN0ZXIiO4LT5JMCLhIsL3YyL3tuYW1lPXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn3aQQRuYW1lEqwBCgxMaXN0",
+            "Q2x1c3RlcnMSLS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdENsdXN0",
+            "ZXJzUmVxdWVzdBouLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0Q2x1",
+            "c3RlcnNSZXNwb25zZSI9gtPkkwIuEiwvdjIve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2luc3RhbmNlcy8qfS9jbHVzdGVyc9pBBnBhcmVudBKtAQoNVXBkYXRlQ2x1",
+            "c3RlchIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVyGh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJagtPkkwIxGiwvdjIve25hbWU9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9jbHVzdGVycy8qfToBKspBIAoHQ2x1",
+            "c3RlchIVVXBkYXRlQ2x1c3Rlck1ldGFkYXRhEpQBCg1EZWxldGVDbHVzdGVy",
+            "Ei4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkRlbGV0ZUNsdXN0ZXJSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjuC0+STAi4qLC92Mi97bmFt",
+            "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp92kEEbmFtZRLV",
+            "AQoQQ3JlYXRlQXBwUHJvZmlsZRIxLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "Mi5DcmVhdGVBcHBQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5BcHBQcm9maWxlImiC0+STAj4iLy92Mi97cGFyZW50PXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyp9L2FwcFByb2ZpbGVzOgthcHBfcHJvZmlsZdpB",
+            "IXBhcmVudCxhcHBfcHJvZmlsZV9pZCxhcHBfcHJvZmlsZRKlAQoNR2V0QXBw",
+            "UHJvZmlsZRIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HZXRBcHBQcm9m",
+            "aWxlUmVxdWVzdBokLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
+            "aWxlIj6C0+STAjESLy92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "L2FwcFByb2ZpbGVzLyp92kEEbmFtZRK4AQoPTGlzdEFwcFByb2ZpbGVzEjAu",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RBcHBQcm9maWxlc1JlcXVl",
+            "c3QaMS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEFwcFByb2ZpbGVz",
+            "UmVzcG9uc2UiQILT5JMCMRIvL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0",
+            "YW5jZXMvKn0vYXBwUHJvZmlsZXPaQQZwYXJlbnQS+gEKEFVwZGF0ZUFwcFBy",
+            "b2ZpbGUSMS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVXBkYXRlQXBwUHJv",
+            "ZmlsZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpMB",
+            "gtPkkwJKMjsvdjIve2FwcF9wcm9maWxlLm5hbWU9cHJvamVjdHMvKi9pbnN0",
+            "YW5jZXMvKi9hcHBQcm9maWxlcy8qfToLYXBwX3Byb2ZpbGXaQRdhcHBfcHJv",
+            "ZmlsZSx1cGRhdGVfbWFza8pBJgoKQXBwUHJvZmlsZRIYVXBkYXRlQXBwUHJv",
+            "ZmlsZU1ldGFkYXRhEp0BChBEZWxldGVBcHBQcm9maWxlEjEuZ29vZ2xlLmJp",
+            "Z3RhYmxlLmFkbWluLnYyLkRlbGV0ZUFwcFByb2ZpbGVSZXF1ZXN0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5Ij6C0+STAjEqLy92Mi97bmFtZT1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qL2FwcFByb2ZpbGVzLyp92kEEbmFtZRKTAQoMR2V0",
+            "SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0",
+            "GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiSILT5JMCNyIyL3YyL3tyZXNvdXJj",
+            "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfTpnZXRJYW1Qb2xpY3k6ASraQQhy",
+            "ZXNvdXJjZRKaAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJ",
+            "YW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiT4LT5JMC",
+            "NyIyL3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfTpzZXRJ",
+            "YW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kSxQEKElRlc3RJYW1QZXJt",
+            "aXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVx",
+            "dWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9u",
+            "c2UiWoLT5JMCPSI4L3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2luc3RhbmNl",
+            "cy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASraQRRyZXNvdXJjZSxwZXJtaXNz",
+            "aW9ucxqaA8pBHGJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb23SQfcCaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWd0YWJsZS5hZG1pbixo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3RhYmxlLmFkbWlu",
+            "LmNsdXN0ZXIsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWd0",
+            "YWJsZS5hZG1pbi5pbnN0YW5jZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLWJpZ3RhYmxlLmFkbWluLGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtYmlndGFibGUuYWRtaW4uY2x1c3Rlcixo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm0ucmVhZC1vbmx5Qr0BChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
+            "QhpCaWd0YWJsZUluc3RhbmNlQWRtaW5Qcm90b1ABWj1nb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2Fk",
+            "bWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xl",
+            "XENsb3VkXEJpZ3RhYmxlXEFkbWluXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance", "Clusters" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.Parser, new[]{ "Instances", "FailedLocations", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.Parser, new[]{ "Instance", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.Parser, new[]{ "Parent", "ClusterId", "Cluster" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest), global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse), global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser, new[]{ "Clusters", "FailedLocations", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser, new[]{ "Parent", "AppProfileId", "AppProfile", "IgnoreWarnings" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser, new[]{ "AppProfiles", "NextPageToken", "FailedLocations" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser, new[]{ "AppProfile", "UpdateMask", "IgnoreWarnings" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser, new[]{ "Name", "IgnoreWarnings" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata.Parser, null, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance", "Clusters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.Parser, new[]{ "Instances", "FailedLocations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.Parser, new[]{ "Instance", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.Parser, new[]{ "Parent", "ClusterId", "Cluster" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest), global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse), global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser, new[]{ "Clusters", "FailedLocations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser, new[]{ "Parent", "AppProfileId", "AppProfile", "IgnoreWarnings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser, new[]{ "AppProfiles", "NextPageToken", "FailedLocations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser, new[]{ "AppProfile", "UpdateMask", "IgnoreWarnings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser, new[]{ "Name", "IgnoreWarnings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -234,8 +268,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique name of the project in which to create the new instance.
-    /// Values are of the form `projects/&lt;project>`.
+    /// Required. The unique name of the project in which to create the new instance.
+    /// Values are of the form `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -249,7 +283,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int InstanceIdFieldNumber = 2;
     private string instanceId_ = "";
     /// <summary>
-    /// The ID to be used when referring to the new instance within its project,
+    /// Required. The ID to be used when referring to the new instance within its project,
     /// e.g., just `myinstance` rather than
     /// `projects/myproject/instances/myinstance`.
     /// </summary>
@@ -265,7 +299,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int InstanceFieldNumber = 3;
     private global::Google.Cloud.Bigtable.Admin.V2.Instance instance_;
     /// <summary>
-    /// The instance to create.
+    /// Required. The instance to create.
     /// Fields marked `OutputOnly` must be left blank.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -279,14 +313,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>Field number for the "clusters" field.</summary>
     public const int ClustersFieldNumber = 4;
     private static readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster>.Codec _map_clusters_codec
-        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser), 34);
+        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser), 34);
     private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster> clusters_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster>();
     /// <summary>
-    /// The clusters to be created within the instance, mapped by desired
+    /// Required. The clusters to be created within the instance, mapped by desired
     /// cluster ID, e.g., just `mycluster` rather than
     /// `projects/myproject/instances/myinstance/clusters/mycluster`.
     /// Fields marked `OutputOnly` must be left blank.
-    /// Currently, at most two clusters can be specified.
+    /// Currently, at most four clusters can be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster> Clusters {
@@ -465,8 +499,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique name of the requested instance. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// Required. The unique name of the requested instance. Values are of the form
+    /// `projects/{project}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -602,8 +636,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique name of the project for which a list of instances is requested.
-    /// Values are of the form `projects/&lt;project>`.
+    /// Required. The unique name of the project for which a list of instances is requested.
+    /// Values are of the form `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -955,7 +989,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int InstanceFieldNumber = 1;
     private global::Google.Cloud.Bigtable.Admin.V2.Instance instance_;
     /// <summary>
-    /// The Instance which will (partially) replace the current value.
+    /// Required. The Instance which will (partially) replace the current value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Bigtable.Admin.V2.Instance Instance {
@@ -969,7 +1003,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// The subset of Instance fields which should be replaced.
+    /// Required. The subset of Instance fields which should be replaced.
     /// Must be explicitly set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1133,8 +1167,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique name of the instance to be deleted.
-    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// Required. The unique name of the instance to be deleted.
+    /// Values are of the form `projects/{project}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1271,9 +1305,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique name of the instance in which to create the new cluster.
+    /// Required. The unique name of the instance in which to create the new cluster.
     /// Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// `projects/{project}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1287,7 +1321,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ClusterIdFieldNumber = 2;
     private string clusterId_ = "";
     /// <summary>
-    /// The ID to be used when referring to the new cluster within its instance,
+    /// Required. The ID to be used when referring to the new cluster within its instance,
     /// e.g., just `mycluster` rather than
     /// `projects/myproject/instances/myinstance/clusters/mycluster`.
     /// </summary>
@@ -1303,7 +1337,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ClusterFieldNumber = 3;
     private global::Google.Cloud.Bigtable.Admin.V2.Cluster cluster_;
     /// <summary>
-    /// The cluster to be created.
+    /// Required. The cluster to be created.
     /// Fields marked `OutputOnly` must be left blank.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1477,8 +1511,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique name of the requested cluster. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/clusters/&lt;cluster>`.
+    /// Required. The unique name of the requested cluster. Values are of the form
+    /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1614,9 +1648,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique name of the instance for which a list of clusters is requested.
-    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
-    /// Use `&lt;instance> = '-'` to list Clusters for all Instances in a project,
+    /// Required. The unique name of the instance for which a list of clusters is requested.
+    /// Values are of the form `projects/{project}/instances/{instance}`.
+    /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
     /// e.g., `projects/myproject/instances/-`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1967,8 +2001,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique name of the cluster to be deleted. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/clusters/&lt;cluster>`.
+    /// Required. The unique name of the cluster to be deleted. Values are of the form
+    /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2966,9 +3000,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique name of the instance in which to create the new app profile.
+    /// Required. The unique name of the instance in which to create the new app profile.
     /// Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// `projects/{project}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2982,7 +3016,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int AppProfileIdFieldNumber = 2;
     private string appProfileId_ = "";
     /// <summary>
-    /// The ID to be used when referring to the new app profile within its
+    /// Required. The ID to be used when referring to the new app profile within its
     /// instance, e.g., just `myprofile` rather than
     /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
     /// </summary>
@@ -2998,7 +3032,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int AppProfileFieldNumber = 3;
     private global::Google.Cloud.Bigtable.Admin.V2.AppProfile appProfile_;
     /// <summary>
-    /// The app profile to be created.
+    /// Required. The app profile to be created.
     /// Fields marked `OutputOnly` will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3202,8 +3236,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique name of the requested app profile. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/appProfiles/&lt;app_profile>`.
+    /// Required. The unique name of the requested app profile. Values are of the form
+    /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3340,10 +3374,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The unique name of the instance for which a list of app profiles is
+    /// Required. The unique name of the instance for which a list of app profiles is
     /// requested. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>`.
-    /// Use `&lt;instance> = '-'` to list AppProfiles for all Instances in a project,
+    /// `projects/{project}/instances/{instance}`.
+    /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
     /// e.g., `projects/myproject/instances/-`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3359,7 +3393,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     private int pageSize_;
     /// <summary>
     /// Maximum number of results per page.
-    /// CURRENTLY UNIMPLEMENTED AND IGNORED.
+    ///
+    /// A page_size of zero lets the server choose the number of items to return.
+    /// A page_size which is strictly positive will return at most that many items.
+    /// A negative page_size will cause an error.
+    ///
+    /// Following the first request, subsequent paginated calls are not required
+    /// to pass a page_size. If a page_size is set in subsequent calls, it must
+    /// match the page_size given in the first request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -3728,7 +3769,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int AppProfileFieldNumber = 1;
     private global::Google.Cloud.Bigtable.Admin.V2.AppProfile appProfile_;
     /// <summary>
-    /// The app profile which will (partially) replace the current value.
+    /// Required. The app profile which will (partially) replace the current value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Bigtable.Admin.V2.AppProfile AppProfile {
@@ -3742,7 +3783,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// The subset of app profile fields which should be replaced.
+    /// Required. The subset of app profile fields which should be replaced.
     /// If unset, all fields will be replaced.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3937,8 +3978,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The unique name of the app profile to be deleted. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/appProfiles/&lt;app_profile>`.
+    /// Required. The unique name of the app profile to be deleted. Values are of the form
+    /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
