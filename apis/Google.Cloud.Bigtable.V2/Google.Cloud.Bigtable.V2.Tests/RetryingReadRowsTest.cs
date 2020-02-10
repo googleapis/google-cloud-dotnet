@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
 using Grpc.Core;
@@ -448,9 +449,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var settings = new BigtableServiceApiSettings();
             // Don't allow for any time to retry.
-            settings.ReadRowsRetrySettings =
-                settings.ReadRowsRetrySettings.WithTotalExpiration(
-                    Expiration.FromTimeout(TimeSpan.Zero));
+            settings.ReadRowsSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.Zero));
 
             var request = new ReadRowsRequest
             {
