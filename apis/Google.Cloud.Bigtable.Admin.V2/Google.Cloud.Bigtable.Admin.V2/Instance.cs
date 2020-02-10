@@ -66,11 +66,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "Q2xvdWRcQmlndGFibGVcQWRtaW5cVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -154,7 +154,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State state_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State state_ = global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown;
     /// <summary>
     /// (`OutputOnly`)
     /// The current state of the instance.
@@ -169,7 +169,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type type_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type type_ = global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified;
     /// <summary>
     /// The type of the instance. Defaults to `PRODUCTION`.
     /// </summary>
@@ -184,7 +184,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels are a flexible and lightweight mechanism for organizing cloud
@@ -230,8 +230,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) hash ^= State.GetHashCode();
+      if (Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -254,11 +254,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -277,10 +277,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
-      if (Type != 0) {
+      if (Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += labels_.CalculateSize(_map_labels_codec);
@@ -301,10 +301,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State.NotKnown) {
         State = other.State;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         Type = other.Type;
       }
       labels_.Add(other.labels_);
@@ -477,7 +477,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
-    private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State state_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State state_ = global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown;
     /// <summary>
     /// The current state of the cluster.
     /// </summary>
@@ -506,7 +506,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "default_storage_type" field.</summary>
     public const int DefaultStorageTypeFieldNumber = 5;
-    private global::Google.Cloud.Bigtable.Admin.V2.StorageType defaultStorageType_ = 0;
+    private global::Google.Cloud.Bigtable.Admin.V2.StorageType defaultStorageType_ = global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified;
     /// <summary>
     /// (`CreationOnly`)
     /// The type of storage used by this cluster to serve its
@@ -546,9 +546,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) hash ^= State.GetHashCode();
       if (ServeNodes != 0) hash ^= ServeNodes.GetHashCode();
-      if (DefaultStorageType != 0) hash ^= DefaultStorageType.GetHashCode();
+      if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) hash ^= DefaultStorageType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -570,7 +570,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(Location);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
@@ -578,7 +578,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(32);
         output.WriteInt32(ServeNodes);
       }
-      if (DefaultStorageType != 0) {
+      if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) DefaultStorageType);
       }
@@ -596,13 +596,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Location.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (ServeNodes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ServeNodes);
       }
-      if (DefaultStorageType != 0) {
+      if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultStorageType);
       }
       if (_unknownFields != null) {
@@ -622,13 +622,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) {
         State = other.State;
       }
       if (other.ServeNodes != 0) {
         ServeNodes = other.ServeNodes;
       }
-      if (other.DefaultStorageType != 0) {
+      if (other.DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         DefaultStorageType = other.DefaultStorageType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
