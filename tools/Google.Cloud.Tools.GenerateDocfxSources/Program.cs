@@ -212,7 +212,8 @@ The credentials will automatically be used to authenticate. See the [Getting Sta
 Authentication](https://cloud.google.com/docs/authentication/getting-started) guide for more details.";
 
             var clients = GetClientClasses(api);
-            string clientClasses = CreateClientClassesDocumentation(api, clients);
+            string clientClasses = text.Contains("{{client-classes}}") ?
+                CreateClientClassesDocumentation(api, clients) : "no client classes needed";
 
             var exampleClient = clients.FirstOrDefault();
             string clientConstruction =
