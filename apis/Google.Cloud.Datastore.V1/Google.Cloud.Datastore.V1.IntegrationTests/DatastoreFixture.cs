@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
@@ -94,7 +95,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             {
                 ProjectId = ProjectId,
                 NamespaceId = effectiveNamespace,
-                EmulatorDetection = EmulatorDetection.ProductionOrEmulator
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
             };
             return builder.Build();
         }
