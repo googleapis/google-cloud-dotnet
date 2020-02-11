@@ -28,6 +28,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.V2/latest) (GA)
 * [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.V2/latest) (GA)
   * Also the Bigtable admin API - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Admin.V2/latest) (GA)
+* [Billing](https://cloud.google.com/billing/docs/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/latest) (GA)
 * [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Container.V1/latest) (GA)
 * [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Dataproc.V1/latest) (GA)
 * [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Datastore.V1/latest) (GA)
@@ -56,6 +57,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/latest) (GA)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1/latest) (GA)
   * The [V1Beta1 API package](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1Beta1/latest) is also available (beta)
+* [Recommender](https://cloud.google.com/recommender/docs/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/latest) (GA)
 * [Google Cloud Scheduler](https://cloud.google.com/scheduler/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Scheduler.V1/latest) (GA)
 * [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1/latest) (GA)
   * The [V1P1Beta1 API package](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1P1Beta1/latest) is also available (beta)
@@ -82,9 +84,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 
 The following libraries are available at a [beta](#versioning) quality level:
 
-* [Billing](https://cloud.google.com/billing/docs/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/latest) (beta)
 * [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/latest) (beta)
-* [Recommender](https://cloud.google.com/recommender/docs/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/latest) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/latest) (beta)
 * [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/latest) (beta)
 * [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/latest) (Beta)
