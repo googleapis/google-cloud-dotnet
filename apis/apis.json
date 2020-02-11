@@ -88,6 +88,22 @@
   },
 
   {
+    "id": "Google.Cloud.BigQuery.Storage.V1",
+    "generator": "micro",
+    "protoPath": "google/cloud/bigquery/storage/v1",
+    "productName": "Google BigQuery Storage",
+    "productUrl": "https://cloud.google.com/bigquery/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the BigQuery Storage API.",
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.10.0",
+      "Grpc.Core": "1.22.1"
+    },
+    "tags": [ "BigQuery" ]
+  },
+
+  {
     "id": "Google.Cloud.Bigtable.Admin.V2",
     "generator": "gapic",
     "protoPath": "google/bigtable/admin/v2",
