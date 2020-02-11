@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Grpc.Core;
@@ -1167,7 +1168,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             DatastoreDb db = new DatastoreDbBuilder
             {
                 ProjectId = projectId,
-                EmulatorDetection = EmulatorDetection.ProductionOrEmulator
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
             }.Build();
             // Use db as normal
             // End sample
