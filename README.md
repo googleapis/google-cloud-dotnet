@@ -84,6 +84,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 
 The following libraries are available at a [beta](#versioning) quality level:
 
+* [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Storage.V1/latest) (beta)
 * [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/latest) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/latest) (beta)
 * [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/latest) (beta)
