@@ -22,6 +22,7 @@ GA:
 - [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
 - [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
 - [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
+- [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html)
 - [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html)
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
@@ -45,6 +46,7 @@ GA:
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
 - [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
+- [Google.Cloud.Recommender.V1](Google.Cloud.Recommender.V1/index.html)
 - [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html)
 - [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html)
 - Google Cloud Spanner:
@@ -71,11 +73,9 @@ GA:
 Beta:
 
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
-- [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.ManagedIdentities.V1](Google.Cloud.ManagedIdentities.V1/index.html)
 - [Google.Cloud.OsLogin.V1Beta](Google.Cloud.OsLogin.V1Beta/index.html)
-- [Google.Cloud.Recommender.V1](Google.Cloud.Recommender.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html)
 - [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html)
