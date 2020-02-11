@@ -146,7 +146,7 @@ namespace Google.Cloud.Firestore
                         endpoint != null,
                         "Expected {0} environment variable to be set", EmulatorHostVariable);
                     break;
-                case EmulatorDetection.ProductionOrEmulator:
+                case EmulatorDetection.EmulatorOrProduction:
                     if (endpoint == null)
                     {
                         return;
