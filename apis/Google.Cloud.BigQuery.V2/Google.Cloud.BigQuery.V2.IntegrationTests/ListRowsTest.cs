@@ -13,10 +13,12 @@
 // limitations under the License.
 
 
+using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
@@ -93,6 +95,70 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             Func<BigQueryRow, string> projection = r => $"{r["gameStarted"]:o} {r["player"]} {r["score"]}";
             Assert.Equal(rows1.Select(projection), rows2.Select(projection));
+        }
+
+        [Fact]
+        public async Task ListRows_PartialSchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.PeopleTableId;
+            var options = new GetTableOptions
+            {
+                SelectedFields = "age,gender,children.gender,children.age"
+            };
+
+            // Obtain the table's partial schema.
+            var table = client.GetTable(datasetId, tableId, options);
+            // Use the partial schema to obtain partial rows.
+            // We are testing both the sync and async versions.
+            var rowsAsync = client.ListRowsAsync(datasetId, tableId, table.Schema);
+            var rows = client.ListRows(datasetId, tableId, table.Schema);
+            // Make sure we grab a row of a person with children for testing fields that should be present.
+            var rowAsyncTask = rowsAsync.FirstAsync(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
+            var rowSync = rows.First(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
+            var rowAsync = await rowAsyncTask.ConfigureAwait(false);
+
+            AssertPartialRow(rowSync);
+            AssertPartialRow(rowAsync);
+
+            void AssertPartialRow(BigQueryRow row)
+            {
+                // These should be present
+                Assert.NotNull(row["age"]);
+                Assert.NotNull(row["gender"]);
+                var children = row["children"] as Dictionary<string, object>[];
+                Assert.NotNull(children);
+                Assert.NotNull(children[0]["gender"]);
+                Assert.NotNull(children[0]["age"]);
+                // These shouldn't
+                Assert.Throws<KeyNotFoundException>(() => row["fullName"]);
+                Assert.Throws<KeyNotFoundException>(() => children[0]["name"]);
+            }
+        }
+
+        [Fact]
+        public async Task ListRows_EmptySchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            string tableId = _fixture.PeopleTableId;
+
+            // Use an empty schema to obtain the rows.
+            // We should get full rows.
+            var rowsAsyncTask = client.ListRowsAsync(datasetId, tableId, new TableSchema()).ToListAsync();
+            var rowsSync = client.ListRows(datasetId, tableId, new TableSchema()).ToList();
+            var rowsAsync = await rowsAsyncTask.ConfigureAwait(false);
+
+            AssertFullRows(rowsSync);
+            AssertFullRows(rowsAsync);
+
+            void AssertFullRows(IList<BigQueryRow> rows)
+            {
+                // The People table has 7 top level fields. We should have all fields.
+                object dummy;
+                Assert.All(rows, row => dummy = row[6]);
+            }
         }
     }
 }

@@ -149,7 +149,7 @@ namespace Google.Cloud.BigQuery.V2
             // So, if the schema is empty, the whole rows will be fetch, so we need to get the whole schema.
             var resultSchema = schema?.Fields?.Count > 0 ? schema : GetSchema(tableReference);
 
-            var pageManager = new TableRowPageManager(schema);
+            var pageManager = new TableRowPageManager(resultSchema);
             return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 // Pass the original schema, if it was null then the whole table will be fetch and we don't need to
                 // specify selected fields.
