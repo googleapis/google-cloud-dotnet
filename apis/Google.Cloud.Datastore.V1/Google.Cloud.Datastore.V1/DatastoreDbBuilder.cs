@@ -79,7 +79,7 @@ namespace Google.Cloud.Datastore.V1
                             "Expected {0} environment variable to be set", EmulatorConfiguration.EmulatorHostVariable);
                         ApplyEmulatorConfiguration();
                         break;
-                    case EmulatorDetection.ProductionOrEmulator:
+                    case EmulatorDetection.EmulatorOrProduction:
                         if (emulatorConfig.Endpoint != null)
                         {
                             ApplyEmulatorConfiguration();
