@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_table_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -371,8 +371,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Gets the access control policy for a table resource. Returns an empty
-      /// policy if an table exists but does not have a policy set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists but does not have a policy
+      /// set.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -383,8 +384,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Sets the access control policy on a table resource. Replaces any existing
-      /// policy.
+      /// Sets the access control policy on a Table or Backup resource.
+      /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1179,8 +1180,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSnapshot, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a table resource. Returns an empty
-      /// policy if an table exists but does not have a policy set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists but does not have a policy
+      /// set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1192,8 +1194,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a table resource. Returns an empty
-      /// policy if an table exists but does not have a policy set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists but does not have a policy
+      /// set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1203,8 +1206,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a table resource. Returns an empty
-      /// policy if an table exists but does not have a policy set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists but does not have a policy
+      /// set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1216,8 +1220,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a table resource. Returns an empty
-      /// policy if an table exists but does not have a policy set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists but does not have a policy
+      /// set.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1227,8 +1232,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy on a table resource. Replaces any existing
-      /// policy.
+      /// Sets the access control policy on a Table or Backup resource.
+      /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1240,8 +1245,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy on a table resource. Replaces any existing
-      /// policy.
+      /// Sets the access control policy on a Table or Backup resource.
+      /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1251,8 +1256,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy on a table resource. Replaces any existing
-      /// policy.
+      /// Sets the access control policy on a Table or Backup resource.
+      /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1264,8 +1269,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy on a table resource. Replaces any existing
-      /// policy.
+      /// Sets the access control policy on a Table or Backup resource.
+      /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
