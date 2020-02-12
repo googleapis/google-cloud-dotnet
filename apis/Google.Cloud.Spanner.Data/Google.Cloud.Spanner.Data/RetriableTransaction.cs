@@ -105,6 +105,8 @@ namespace Google.Cloud.Spanner.Data
 
         internal async Task<TResult> ExecuteWithRetryAsync<TResult>(Func<Task<TResult>> fn, CancellationToken cancellationToken)
         {
+            // Note: the way that we sometimes use the recommended retry delay, and base
+            // further delays on that, means we can't use RetryAttempt easily here.
             DateTime? overallDeadline = _options.CalculateDeadline(_clock);
             TimeSpan retryDelay = _options.InitialDelay;
             while (true)

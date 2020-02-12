@@ -46,28 +46,18 @@ namespace Google.Cloud.Firestore
             // can be used even for a streaming call.
             callSettings = callSettings.WithRetry(null);
 
-            TimeSpan backoffDelay = retrySettings.InitialBackoff;
-            int attempt = 0;
-            while (true)
+            foreach (var attempt in RetryAttempt.CreateRetrySequence(retrySettings, scheduler, overallDeadline, clock))
             {
                 try
                 {
-                    attempt++;
-                    var response = await fn(request, callSettings).ConfigureAwait(false);
-                    return response;
+                    return await fn(request, callSettings).ConfigureAwait(false);
                 }
-                catch (RpcException e) when (attempt < retrySettings.MaxAttempts && retrySettings.RetryFilter(e))
+                catch (RpcException e) when (attempt.ShouldRetry(e))
                 {
-                    TimeSpan actualDelay = retrySettings.BackoffJitter.GetDelay(backoffDelay);
-                    DateTime expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
-                    if (expectedRetryTime > overallDeadline)
-                    {
-                        throw;
-                    }
-                    await scheduler.Delay(actualDelay, callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-                    backoffDelay = retrySettings.NextBackoff(backoffDelay);
+                    await attempt.BackoffAsync(callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
                 }
             }
+            throw new InvalidOperationException("Bug in GAX retry handling: finished sequence of attempts");
         }
     }
 }
