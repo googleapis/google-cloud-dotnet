@@ -122,45 +122,34 @@ namespace Google.Cloud.Bigtable.V2
             RetrySettings retrySettings)
         {
             DateTime? overallDeadline = callSettings.Expiration.CalculateDeadline(clock);
-            TimeSpan retryBackoff = retrySettings.InitialBackoff;
             // Every attempt should use the same deadline, calculated from the start of the call.
             if (callSettings.Expiration?.Type == ExpirationType.Timeout)
             {
                 callSettings = callSettings.WithDeadline(overallDeadline.Value);
             }
-            int attempt = 0;
-            while (true)
+
+            var deadlineException = new RpcException(new Status(StatusCode.DeadlineExceeded, "Deadline Exceeded"));
+            foreach (var attempt in RetryAttempt.CreateRetrySequence(retrySettings, scheduler, overallDeadline, clock))
             {
-                DateTime expectedRetryTime;
-                TimeSpan actualBackoff = retrySettings.BackoffJitter.GetDelay(retryBackoff);
                 try
                 {
-                    attempt++;
-
                     bool isResponseOk = await fn(callSettings).ConfigureAwait(false);
                     if (isResponseOk)
                     {
                         return;
                     }
-
-                    expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualBackoff;
-                    if (expectedRetryTime > overallDeadline)
+                    if (!attempt.ShouldRetry(deadlineException))
                     {
-                        // TODO: Can we get this string from somewhere?
-                        throw new RpcException(new Status(StatusCode.DeadlineExceeded, "Deadline Exceeded"));
+                        throw deadlineException;
                     }
                 }
-                catch (RpcException e) when (attempt < retrySettings.MaxAttempts && retrySettings.RetryFilter(e))
+                catch (RpcException e) when (attempt.ShouldRetry(e))
                 {
-                    expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualBackoff;
-                    if (expectedRetryTime > overallDeadline)
-                    {
-                        throw;
-                    }
+                    // We back off below...
                 }
-                await scheduler.Delay(actualBackoff, callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-                retryBackoff = retrySettings.NextBackoff(retryBackoff);
+                await attempt.BackoffAsync(callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
             }
+            throw new InvalidOperationException("Bug in GAX retry handling: finished sequence of attempts");
         }
 
         internal static IEnumerable<T> ValidateCollection<T>(

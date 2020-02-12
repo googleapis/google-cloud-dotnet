@@ -34,7 +34,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
                 initialBackoff: TimeSpan.FromMilliseconds(50),
                 maxBackoff: TimeSpan.FromSeconds(1),
                 backoffMultiplier: 2,
-                retryFilter: ignored => false,
+                retryFilter: ex => ex is SpannerException se && se.IsRetryable,
                 RetrySettings.RandomJitter);
         private static readonly TimeSpan s_timeout = TimeSpan.FromSeconds(10);
 
@@ -70,26 +70,18 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             DateTime start = DateTime.UtcNow;
             DateTime end = start + s_timeout;
             // Immediate initial retry, before the exponential delay starts.
-            TimeSpan backoff = TimeSpan.Zero;
-            while (true)
+            foreach (var attempt in RetryAttempt.CreateRetrySequence(s_retrySettings, scheduler, end, clock, initialBackoffOverride: TimeSpan.Zero))
             {
                 try
                 {
                     return func();
                 }
-                catch (SpannerException e) when (e.IsRetryable)
+                catch (SpannerException e) when (attempt.ShouldRetry(e))
                 {
-                    TimeSpan actualDelay = s_retrySettings.BackoffJitter.GetDelay(backoff);
-                    DateTime expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
-                    if (expectedRetryTime > end)
-                    {
-                        throw;
-                    }
-                    scheduler.Sleep(actualDelay, CancellationToken.None);
-                    backoff = s_retrySettings.NextBackoff(backoff);
-                    Interlocked.Increment(ref _retries);
+                    attempt.Backoff(default);
                 }
             }
+            throw new InvalidOperationException("Bug in GAX retry handling: finished sequence of attempts");
         }
 
         private static async Task<T> ExecuteWithRetryAsyncImpl<T>(Func<Task<T>> func)
@@ -102,27 +94,19 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
             DateTime start = DateTime.UtcNow;
             DateTime end = start + s_timeout;
-            // Immediate initial retry, before the exponential delay starts.
-            TimeSpan backoff = TimeSpan.Zero;
-            while (true)
+
+            foreach (var attempt in RetryAttempt.CreateRetrySequence(s_retrySettings, scheduler, end, clock, initialBackoffOverride: TimeSpan.Zero))
             {
                 try
                 {
                     return await func();
                 }
-                catch (SpannerException e) when (e.IsRetryable)
+                catch (SpannerException e) when (attempt.ShouldRetry(e))
                 {
-                    TimeSpan actualDelay = s_retrySettings.BackoffJitter.GetDelay(backoff);
-                    DateTime expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
-                    if (expectedRetryTime > end)
-                    {
-                        throw;
-                    }
-                    await scheduler.Delay(actualDelay, CancellationToken.None).ConfigureAwait(false);
-                    backoff = s_retrySettings.NextBackoff(backoff);
-                    Interlocked.Increment(ref _retries);
+                    await attempt.BackoffAsync(default);
                 }
             }
+            throw new InvalidOperationException("Bug in GAX retry handling: finished sequence of attempts");
         }
 
         public static void MaybeLogStats(string description)

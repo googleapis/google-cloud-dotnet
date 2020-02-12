@@ -19,6 +19,7 @@ using Google.Rpc;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Api.Gax.Grpc.RetrySettings;
@@ -203,8 +204,9 @@ namespace Google.Cloud.Spanner.V1
             private readonly IScheduler _scheduler;
             private readonly RetrySettings _retrySettings;
             private readonly int _maxConsecutiveErrors;
-            private TimeSpan _nextBackoff;
-            // TODO: Possibly use RetrySettings.MaxAttempts instead of having this separately?
+            private IEnumerator<TimeSpan> _retrySettingsBackoffs;
+            // Note that we can't use RetrySettings.MaxAttempts, as our sequence of backoffs is not advanced
+            // when the exception provides the backoff.
             private int _consecutiveErrors;
 
             internal RetryState(IScheduler scheduler, RetrySettings retrySettings)
@@ -256,10 +258,10 @@ namespace Google.Cloud.Spanner.V1
             {
                 _consecutiveErrors++;
                 TimeSpan? delayFromException = GetRetryDelay(exception);
-                await _scheduler.Delay(_retrySettings.BackoffJitter.GetDelay(delayFromException ?? _nextBackoff), cancellationToken).ConfigureAwait(false);
+                await _scheduler.Delay(_retrySettings.BackoffJitter.GetDelay(delayFromException ?? _retrySettingsBackoffs.Current), cancellationToken).ConfigureAwait(false);
                 if (delayFromException == null)
                 {
-                    _nextBackoff = _retrySettings.NextBackoff(_nextBackoff);
+                    _retrySettingsBackoffs.MoveNext();
                 }
             }
 
@@ -270,7 +272,11 @@ namespace Google.Cloud.Spanner.V1
             internal void Reset()
             {
                 _consecutiveErrors = 0;
-                _nextBackoff = _retrySettings.InitialBackoff;
+                _retrySettingsBackoffs = RetryAttempt.CreateRetrySequence(_retrySettings, _scheduler)
+                    .Select(attempt => attempt.JitteredBackoff)
+                    .GetEnumerator();
+                // Make sure "Current" is already valid.
+                _retrySettingsBackoffs.MoveNext();
             }
 
             private TimeSpan? GetRetryDelay(RpcException e)
