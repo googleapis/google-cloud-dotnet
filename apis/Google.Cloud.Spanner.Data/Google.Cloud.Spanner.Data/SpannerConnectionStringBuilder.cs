@@ -32,6 +32,11 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
         /// <summary>
+        /// The flag to maintain host has been set explicitly or not.
+        /// </summary>
+        internal bool ExplicitHost = false;
+
+        /// <summary>
         /// The default value for <see cref="Timeout"/>.
         /// </summary>
         internal const int DefaultTimeout = 60;
@@ -186,7 +191,11 @@ can get an instance-specific endpoint and efficiently route requests.");
                 }
 
             }
-            set => this[nameof(Host)] = value;
+            set
+            {
+                ExplicitHost = true;
+                this[nameof(Host)] = value;
+            }
         }
 
         /// <summary>
@@ -385,6 +394,7 @@ can get an instance-specific endpoint and efficiently route requests.");
             CredentialOverride = credentials;
             SessionPoolManager = GaxPreconditions.CheckNotNull(sessionPoolManager, nameof(sessionPoolManager));
             InstanceHostManager = GaxPreconditions.CheckNotNull(instanceHostManager, nameof(instanceHostManager));
+            ExplicitHost = ContainsKey(nameof(Host).ToLower());
         }
 
         /// <summary>

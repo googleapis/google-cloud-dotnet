@@ -278,7 +278,7 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-            
+
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -364,7 +364,18 @@ namespace Google.Cloud.Spanner.Data
             {
                 Close();
             }
+            if (!Builder.ExplicitHost)
+            {
+                DatabaseName newDatabaseName;
+                DatabaseName.TryParse(newDataSource, out newDatabaseName);
+                string newProjectId = newDatabaseName?.ProjectId;
+                string newInstanceId = newDatabaseName?.InstanceId;
 
+                if (Builder.Project != newProjectId || Builder.SpannerInstance != newInstanceId)
+                {
+                    Builder.Remove(nameof(Builder.Host).ToLower());
+                }
+            }
             TrySetNewConnectionInfo(Builder.CloneWithNewDataSource(newDataSource));
         }
 
