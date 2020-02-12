@@ -689,9 +689,8 @@
   },
   {
     "id": "Google.Cloud.Monitoring.V3",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/monitoring/v3",
-    "serviceYaml": "monitoring.yaml",
     "productName": "Stackdriver Monitoring",
     "productUrl": "https://cloud.google.com/monitoring/api/v3/",
     "version": "2.0.0-alpha00",
