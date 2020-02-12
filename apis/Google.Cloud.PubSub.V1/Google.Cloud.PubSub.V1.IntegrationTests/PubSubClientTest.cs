@@ -466,5 +466,107 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
             Assert.Equal(7, subchannelsCreated);
         }
+
+        // TODO: Enable this test by end of Feb 2020, once feature is no longer whitelisted.
+        [Fact(Skip = "Feature behind whitelist; recommended not to whitelist CI GCP project due to possible pre-GA unreliability")]
+        public async Task DeadLetterQueueAndDeliveryAttempt()
+        {
+            // Construct the pubsub service account name. This is required for setting IAM permissions.
+            var projectNumber = await _fixture.GetProjectNumberAsync().ConfigureAwait(false);
+            var pubsubServiceAccount = $"service-{projectNumber}@gcp-sa-pubsub.iam.gserviceaccount.com";
+
+            var topicId = _fixture.CreateTopicId();
+            var dlqTopicId = _fixture.CreateTopicId();
+            var subscriptionId = _fixture.CreateSubscriptionId();
+            var dlqSubscriptionId = _fixture.CreateSubscriptionId();
+            var topicName = new TopicName(_fixture.ProjectId, topicId);
+            var dlqTopicName = new TopicName(_fixture.ProjectId, dlqTopicId);
+            var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
+            var dlqSubscriptionName = new SubscriptionName(_fixture.ProjectId, dlqSubscriptionId);
+
+            // Create topics.
+            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+            await publisherApi.CreateTopicAsync(dlqTopicName).ConfigureAwait(false);
+            // Allow pubsub-managed service account to publish to the DLQ topic.
+            await publisherApi.SetIamPolicyAsync(dlqTopicName.ToString(), new Iam.V1.Policy
+            {
+                Bindings =
+                {
+                    new Iam.V1.Binding
+                    {
+                        Members = { $"serviceAccount:{pubsubServiceAccount}" },
+                        Role = "roles/pubsub.publisher",
+                    },
+                }
+            }).ConfigureAwait(false);
+
+            // Subscribe to the topics.
+            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
+            await subscriberApi.CreateSubscriptionAsync(dlqSubscriptionName, dlqTopicName, null, 60).ConfigureAwait(false);
+            await subscriberApi.CreateSubscriptionAsync(new Subscription
+            {
+                SubscriptionName = subscriptionName,
+                TopicAsTopicNameOneof = TopicNameOneof.From(topicName),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = dlqTopicName.ToString(),
+                    MaxDeliveryAttempts = 10,
+                },
+                AckDeadlineSeconds = 60,
+            }).ConfigureAwait(false);
+            // Allow pubsub-managed service account to ACK message in subscription (so it won't be sent to client again).
+            await subscriberApi.SetIamPolicyAsync(subscriptionName.ToString(), new Iam.V1.Policy
+            {
+                Bindings =
+                {
+                    new Iam.V1.Binding
+                    {
+                        Members = { $"serviceAccount:{pubsubServiceAccount}" },
+                        Role = "roles/pubsub.subscriber",
+                    }
+                }
+            }).ConfigureAwait(false);
+
+            var pub = await PublisherClient.CreateAsync(topicName, new PublisherClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
+            var sub = await SubscriberClient.CreateAsync(subscriptionName, new SubscriberClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
+            var dlqSub = await SubscriberClient.CreateAsync(dlqSubscriptionName, new SubscriberClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
+
+            var result = new List<(int? deliveryAttempt, bool isDlq)>();
+
+            var taskSub = sub.StartAsync((msg, ct) =>
+            {
+                result.Add((msg.GetDeliveryAttempt(), false));
+                return Task.FromResult(SubscriberClient.Reply.Nack);
+            });
+
+            var taskDlqSub = dlqSub.StartAsync((msg, ct) =>
+            {
+                result.Add((msg.GetDeliveryAttempt(), true));
+                // Received DLQ message, so stop test.
+                sub.StopAsync(TimeSpan.FromSeconds(10));
+                dlqSub.StopAsync(TimeSpan.FromSeconds(10));
+                return Task.FromResult(SubscriberClient.Reply.Ack);
+            });
+
+            // Publish one message. This should be delivered 10 times (NACKed each time), then to the DLQ subscription once.
+            await pub.PublishAsync("m").ConfigureAwait(false);
+
+            // Cancel test if it takes too long.
+            var timeoutTask = Task.Delay(TimeSpan.FromSeconds(60));
+
+            await Task.WhenAny(timeoutTask, Task.WhenAll(taskSub, taskDlqSub)).ConfigureAwait(false);
+            Assert.True(taskSub.Status == TaskStatus.RanToCompletion, "Subscription task did not complete.");
+            Assert.True(taskDlqSub.Status == TaskStatus.RanToCompletion, "DLQ subscription task did not complete.");
+
+            // result.Count should be 11, but DLQ is best-effort only, so may vary.
+            Assert.True(result.Count >= 10 && result.Count <= 15,
+                $"Unexpected count of messages received: should be 11, received {result.Count}");
+
+            // Expected result is count-1 messages to normal subscription, followed by 1 message to DLQ.
+            var expectedResult = Enumerable.Range(1, result.Count - 1).Select(i => ((int?)i, false))
+                .Concat(new[] { ((int?)null, true) });
+            Assert.Equal(expectedResult, result);
+        }
     }
 }

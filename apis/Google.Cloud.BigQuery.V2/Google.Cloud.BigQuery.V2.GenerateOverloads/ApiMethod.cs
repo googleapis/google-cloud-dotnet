@@ -26,13 +26,15 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         private static readonly Parameter DatasetIdParameter = new Parameter("string", "datasetId", "The dataset ID. Must not be null.", null);
         private static readonly Parameter TableIdParameter = new Parameter("string", "tableId", "The table ID. Must not be null.", null);
         private static readonly Parameter JobIdParameter = new Parameter("string", "jobId", "The job ID. Must not be null.", null);
+        private static readonly Parameter ModelIdParameter = new Parameter("string", "modelId", "The model ID. Must not be null.", null);
         private static readonly Parameter DatasetReferenceParameter = new Parameter("DatasetReference", "datasetReference", "A fully-qualified identifier for the dataset. Must not be null.", null);
         private static readonly Parameter TableReferenceParameter = new Parameter("TableReference", "tableReference", "A fully-qualified identifier for the table. Must not be null.", null);
         private static readonly Parameter JobReferenceParameter = new Parameter("JobReference", "jobReference", "A fully-qualified identifier for the job. Must not be null.", null);
         private static readonly Parameter ProjectReferenceParameter = new Parameter("ProjectReference", "projectReference", "A fully-qualified identifier for the project. Must not be null.", null);
+        private static readonly Parameter ModelReferenceParameter = new Parameter("ModelReference", "modelReference", "A fully-qualified identifier for the model. Must not be null.", null);
         private static readonly Parameter CancellationTokenParameter = new Parameter("CancellationToken", "cancellationToken", "The token to monitor for cancellation requests.", "default");
 
-        private static readonly Parameter[] IdParameters = { ProjectIdParameter, DatasetIdParameter, TableIdParameter, JobIdParameter };
+        private static readonly Parameter[] IdParameters = { ProjectIdParameter, DatasetIdParameter, TableIdParameter, JobIdParameter, ModelIdParameter };
 
         private static readonly Dictionary<TargetType, Parameter[]> TargetParametersByType = new Dictionary<TargetType, Parameter[]>
         {
@@ -40,6 +42,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             { TargetType.Table, new[] { ProjectIdParameter, DatasetIdParameter, TableIdParameter } },
             { TargetType.Job, new[] { ProjectIdParameter, JobIdParameter } },
             { TargetType.Project, new[] { ProjectIdParameter } },
+            { TargetType.Model, new[] { ProjectIdParameter, DatasetIdParameter, ModelIdParameter } },
             { TargetType.None, new Parameter[0] },
         };
 
@@ -49,6 +52,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             { TargetType.Table, TableReferenceParameter },
             { TargetType.Job, JobReferenceParameter },
             { TargetType.Project, ProjectReferenceParameter },
+            { TargetType.Model, ModelReferenceParameter },
             { TargetType.None, null },
         };
 

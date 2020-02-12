@@ -713,6 +713,195 @@ namespace Google.Cloud.Redis.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpgradeInstance</summary>
+        public void UpgradeInstance_RequestObject()
+        {
+            // Snippet: UpgradeInstance(UpgradeInstanceRequest, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                RedisVersion = "",
+            };
+            // Make the request
+            Operation<Instance, Any> response = cloudRedisClient.UpgradeInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, Any> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, Any> retrievedResponse = cloudRedisClient.PollOnceUpgradeInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeInstanceAsync</summary>
+        public async Task UpgradeInstanceAsync_RequestObject()
+        {
+            // Snippet: UpgradeInstanceAsync(UpgradeInstanceRequest, CallSettings)
+            // Additional: UpgradeInstanceAsync(UpgradeInstanceRequest, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                RedisVersion = "",
+            };
+            // Make the request
+            Operation<Instance, Any> response = await cloudRedisClient.UpgradeInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, Any> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, Any> retrievedResponse = await cloudRedisClient.PollOnceUpgradeInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeInstance</summary>
+        public void UpgradeInstance()
+        {
+            // Snippet: UpgradeInstance(string, string, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            string redisVersion = "";
+            // Make the request
+            Operation<Instance, Any> response = cloudRedisClient.UpgradeInstance(name, redisVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, Any> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, Any> retrievedResponse = cloudRedisClient.PollOnceUpgradeInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeInstanceAsync</summary>
+        public async Task UpgradeInstanceAsync()
+        {
+            // Snippet: UpgradeInstanceAsync(string, string, CallSettings)
+            // Additional: UpgradeInstanceAsync(string, string, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            string redisVersion = "";
+            // Make the request
+            Operation<Instance, Any> response = await cloudRedisClient.UpgradeInstanceAsync(name, redisVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, Any> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, Any> retrievedResponse = await cloudRedisClient.PollOnceUpgradeInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeInstance</summary>
+        public void UpgradeInstance_ResourceNames()
+        {
+            // Snippet: UpgradeInstance(InstanceName, string, CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string redisVersion = "";
+            // Make the request
+            Operation<Instance, Any> response = cloudRedisClient.UpgradeInstance(name, redisVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, Any> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, Any> retrievedResponse = cloudRedisClient.PollOnceUpgradeInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeInstanceAsync</summary>
+        public async Task UpgradeInstanceAsync_ResourceNames()
+        {
+            // Snippet: UpgradeInstanceAsync(InstanceName, string, CallSettings)
+            // Additional: UpgradeInstanceAsync(InstanceName, string, CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string redisVersion = "";
+            // Make the request
+            Operation<Instance, Any> response = await cloudRedisClient.UpgradeInstanceAsync(name, redisVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, Any> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, Any> retrievedResponse = await cloudRedisClient.PollOnceUpgradeInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ImportInstance</summary>
         public void ImportInstance_RequestObject()
         {

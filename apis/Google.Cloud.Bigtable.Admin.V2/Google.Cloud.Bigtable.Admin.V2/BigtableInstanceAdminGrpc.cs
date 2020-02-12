@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -238,7 +238,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Updates an instance within a project.
+      /// Updates an instance within a project. This method updates only the display
+      /// name and type for an Instance. To update other Instance properties, such as
+      /// labels, use PartialUpdateInstance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -249,7 +251,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Partially updates an instance within a project.
+      /// Partially updates an instance within a project. This method can modify all
+      /// fields of an Instance and is the preferred way to update an Instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -573,7 +576,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
       }
       /// <summary>
-      /// Updates an instance within a project.
+      /// Updates an instance within a project. This method updates only the display
+      /// name and type for an Instance. To update other Instance properties, such as
+      /// labels, use PartialUpdateInstance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -585,7 +590,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return UpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an instance within a project.
+      /// Updates an instance within a project. This method updates only the display
+      /// name and type for an Instance. To update other Instance properties, such as
+      /// labels, use PartialUpdateInstance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -595,7 +602,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Updates an instance within a project.
+      /// Updates an instance within a project. This method updates only the display
+      /// name and type for an Instance. To update other Instance properties, such as
+      /// labels, use PartialUpdateInstance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -607,7 +616,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return UpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an instance within a project.
+      /// Updates an instance within a project. This method updates only the display
+      /// name and type for an Instance. To update other Instance properties, such as
+      /// labels, use PartialUpdateInstance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -617,7 +628,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Partially updates an instance within a project.
+      /// Partially updates an instance within a project. This method can modify all
+      /// fields of an Instance and is the preferred way to update an Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -629,7 +641,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return PartialUpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Partially updates an instance within a project.
+      /// Partially updates an instance within a project. This method can modify all
+      /// fields of an Instance and is the preferred way to update an Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -639,7 +652,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_PartialUpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Partially updates an instance within a project.
+      /// Partially updates an instance within a project. This method can modify all
+      /// fields of an Instance and is the preferred way to update an Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -651,7 +665,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return PartialUpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Partially updates an instance within a project.
+      /// Partially updates an instance within a project. This method can modify all
+      /// fields of an Instance and is the preferred way to update an Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

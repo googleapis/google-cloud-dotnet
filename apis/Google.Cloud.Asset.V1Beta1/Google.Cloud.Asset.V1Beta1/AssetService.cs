@@ -26,54 +26,63 @@ namespace Google.Cloud.Asset.V1Beta1 {
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvYXNzZXQvdjFiZXRhMS9hc3NldF9zZXJ2aWNlLnBy",
             "b3RvEhpnb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMRocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxonZ29vZ2xlL2Nsb3VkL2Fzc2V0L3YxYmV0YTEv",
-            "YXNzZXRzLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLpAQoTRXhw",
-            "b3J0QXNzZXRzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSLQoJcmVhZF90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgthc3NldF90",
-            "eXBlcxgDIAMoCRI9Cgxjb250ZW50X3R5cGUYBCABKA4yJy5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjFiZXRhMS5Db250ZW50VHlwZRI/Cg1vdXRwdXRfY29uZmln",
-            "GAUgASgLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuT3V0cHV0Q29u",
-            "ZmlnIoYBChRFeHBvcnRBc3NldHNSZXNwb25zZRItCglyZWFkX3RpbWUYASAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEj8KDW91dHB1dF9jb25m",
-            "aWcYAiABKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5PdXRwdXRD",
-            "b25maWcixAEKHEJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3QSDgoGcGFy",
-            "ZW50GAEgASgJEhMKC2Fzc2V0X25hbWVzGAIgAygJEj0KDGNvbnRlbnRfdHlw",
-            "ZRgDIAEoDjInLmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLkNvbnRlbnRU",
-            "eXBlEkAKEHJlYWRfdGltZV93aW5kb3cYBCABKAsyJi5nb29nbGUuY2xvdWQu",
-            "YXNzZXQudjFiZXRhMS5UaW1lV2luZG93IloKHUJhdGNoR2V0QXNzZXRzSGlz",
-            "dG9yeVJlc3BvbnNlEjkKBmFzc2V0cxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MWJldGExLlRlbXBvcmFsQXNzZXQiZAoMT3V0cHV0Q29uZmlnEkUK",
-            "D2djc19kZXN0aW5hdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MWJldGExLkdjc0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24iLQoOR2Nz",
-            "RGVzdGluYXRpb24SDQoDdXJpGAEgASgJSABCDAoKb2JqZWN0X3VyaSpJCgtD",
-            "b250ZW50VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghS",
-            "RVNPVVJDRRABEg4KCklBTV9QT0xJQ1kQAjKRBAoMQXNzZXRTZXJ2aWNlEvoB",
-            "CgxFeHBvcnRBc3NldHMSLy5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5F",
-            "eHBvcnRBc3NldHNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiKZAYLT5JMCkgEiKS92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06",
-            "ZXhwb3J0QXNzZXRzOgEqWi0iKC92MWJldGExL3twYXJlbnQ9Zm9sZGVycy8q",
-            "fTpleHBvcnRBc3NldHM6ASpaMyIuL3YxYmV0YTEve3BhcmVudD1vcmdhbml6",
-            "YXRpb25zLyp9OmV4cG9ydEFzc2V0czoBKhKDAgoVQmF0Y2hHZXRBc3NldHNI",
-            "aXN0b3J5EjguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuQmF0Y2hHZXRB",
-            "c3NldHNIaXN0b3J5UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5hc3NldC52MWJl",
-            "dGExLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlc3BvbnNlInWC0+STAm8SMi92",
-            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hHZXRBc3NldHNIaXN0",
-            "b3J5WjkSNy92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfTpiYXRj",
-            "aEdldEFzc2V0c0hpc3RvcnlCsAEKHmNvbS5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djFiZXRhMUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3NldC92MWJldGExO2Fz",
-            "c2V0qgIaR29vZ2xlLkNsb3VkLkFzc2V0LlYxQmV0YTHKAhpHb29nbGVcQ2xv",
-            "dWRcQXNzZXRcVjFiZXRhMWIGcHJvdG8z"));
+            "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
+            "b3VyY2UucHJvdG8aJ2dvb2dsZS9jbG91ZC9hc3NldC92MWJldGExL2Fzc2V0",
+            "cy5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ilwIKE0V4cG9ydEFz",
+            "c2V0c1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSESH2Nsb3VkYXNz",
+            "ZXQuZ29vZ2xlYXBpcy5jb20vQXNzZXQSLQoJcmVhZF90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgthc3NldF90eXBlcxgDIAMo",
+            "CRI9Cgxjb250ZW50X3R5cGUYBCABKA4yJy5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djFiZXRhMS5Db250ZW50VHlwZRJECg1vdXRwdXRfY29uZmlnGAUgASgLMigu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuT3V0cHV0Q29uZmlnQgPgQQIi",
+            "hgEKFEV4cG9ydEFzc2V0c1Jlc3BvbnNlEi0KCXJlYWRfdGltZRgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPwoNb3V0cHV0X2NvbmZpZxgC",
+            "IAEoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLk91dHB1dENvbmZp",
+            "ZyL3AQocQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVxdWVzdBI3CgZwYXJlbnQY",
+            "ASABKAlCJ+BBAvpBIRIfY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9Bc3Nl",
+            "dBITCgthc3NldF9uYW1lcxgCIAMoCRJCCgxjb250ZW50X3R5cGUYAyABKA4y",
+            "Jy5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5Db250ZW50VHlwZUID4EEB",
+            "EkUKEHJlYWRfdGltZV93aW5kb3cYBCABKAsyJi5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjFiZXRhMS5UaW1lV2luZG93QgPgQQEiWgodQmF0Y2hHZXRBc3NldHNI",
+            "aXN0b3J5UmVzcG9uc2USOQoGYXNzZXRzGAEgAygLMikuZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxYmV0YTEuVGVtcG9yYWxBc3NldCJkCgxPdXRwdXRDb25maWcS",
+            "RQoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxYmV0YTEuR2NzRGVzdGluYXRpb25IAEINCgtkZXN0aW5hdGlvbiJDCg5H",
+            "Y3NEZXN0aW5hdGlvbhINCgN1cmkYASABKAlIABIUCgp1cmlfcHJlZml4GAIg",
+            "ASgJSABCDAoKb2JqZWN0X3VyaSpJCgtDb250ZW50VHlwZRIcChhDT05URU5U",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIMCghSRVNPVVJDRRABEg4KCklBTV9QT0xJ",
+            "Q1kQAjLEBQoMQXNzZXRTZXJ2aWNlEt4CCgxFeHBvcnRBc3NldHMSLy5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjFiZXRhMS5FeHBvcnRBc3NldHNSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiL9AYLT5JMCkgEiKS92MWJl",
+            "dGExL3twYXJlbnQ9cHJvamVjdHMvKn06ZXhwb3J0QXNzZXRzOgEqWi0iKC92",
+            "MWJldGExL3twYXJlbnQ9Zm9sZGVycy8qfTpleHBvcnRBc3NldHM6ASpaMyIu",
+            "L3YxYmV0YTEve3BhcmVudD1vcmdhbml6YXRpb25zLyp9OmV4cG9ydEFzc2V0",
+            "czoBKspBYQovZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuRXhwb3J0QXNz",
+            "ZXRzUmVzcG9uc2USLmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLkV4cG9y",
+            "dEFzc2V0c1JlcXVlc3QSgwIKFUJhdGNoR2V0QXNzZXRzSGlzdG9yeRI4Lmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MWJldGExLkJhdGNoR2V0QXNzZXRzSGlzdG9y",
+            "eVJlcXVlc3QaOS5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5CYXRjaEdl",
+            "dEFzc2V0c0hpc3RvcnlSZXNwb25zZSJ1gtPkkwJvEjIvdjFiZXRhMS97cGFy",
+            "ZW50PXByb2plY3RzLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeVo5EjcvdjFi",
+            "ZXRhMS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKn06YmF0Y2hHZXRBc3NldHNI",
+            "aXN0b3J5Gk3KQRljbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKwAQoe",
+            "Y29tLmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExQhFBc3NldFNlcnZpY2VQ",
+            "cm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL2Fzc2V0L3YxYmV0YTE7YXNzZXSqAhpHb29nbGUuQ2xvdWQuQXNz",
+            "ZXQuVjFCZXRhMcoCGkdvb2dsZVxDbG91ZFxBc3NldFxWMWJldGExYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Asset.V1Beta1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1Beta1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1Beta1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.ExportAssetsRequest), global::Google.Cloud.Asset.V1Beta1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.ExportAssetsResponse), global::Google.Cloud.Asset.V1Beta1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.OutputConfig), global::Google.Cloud.Asset.V1Beta1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.GcsDestination), global::Google.Cloud.Asset.V1Beta1.GcsDestination.Parser, new[]{ "Uri" }, new[]{ "ObjectUri" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.GcsDestination), global::Google.Cloud.Asset.V1Beta1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null)
           }));
     }
     #endregion
@@ -640,7 +649,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ContentTypeFieldNumber = 3;
     private global::Google.Cloud.Asset.V1Beta1.ContentType contentType_ = 0;
     /// <summary>
-    /// Required. The content type.
+    /// Optional. The content type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1Beta1.ContentType ContentType {
@@ -1130,6 +1139,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
         case ObjectUriOneofCase.Uri:
           Uri = other.Uri;
           break;
+        case ObjectUriOneofCase.UriPrefix:
+          UriPrefix = other.UriPrefix;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1158,11 +1170,33 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "uri_prefix" field.</summary>
+    public const int UriPrefixFieldNumber = 2;
+    /// <summary>
+    /// The uri prefix of all generated Cloud Storage objects. For example:
+    /// "gs://bucket_name/object_name_prefix". Each object uri is in format:
+    /// "gs://bucket_name/object_name_prefix/&lt;asset type>/&lt;shard number> and only
+    /// contains assets for that type. &lt;shard number> starts from 0. For example:
+    /// "gs://bucket_name/object_name_prefix/google.compute.disk/0" is the first
+    /// shard of output objects containing all google.compute.disk assets.
+    /// An INVALID_ARGUMENT error will be returned if file with the same name
+    /// "gs://bucket_name/object_name_prefix" already exists.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UriPrefix {
+      get { return objectUriCase_ == ObjectUriOneofCase.UriPrefix ? (string) objectUri_ : ""; }
+      set {
+        objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        objectUriCase_ = ObjectUriOneofCase.UriPrefix;
+      }
+    }
+
     private object objectUri_;
     /// <summary>Enum of possible cases for the "object_uri" oneof.</summary>
     public enum ObjectUriOneofCase {
       None = 0,
       Uri = 1,
+      UriPrefix = 2,
     }
     private ObjectUriOneofCase objectUriCase_ = ObjectUriOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1190,6 +1224,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
         return true;
       }
       if (Uri != other.Uri) return false;
+      if (UriPrefix != other.UriPrefix) return false;
       if (ObjectUriCase != other.ObjectUriCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1198,6 +1233,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (objectUriCase_ == ObjectUriOneofCase.Uri) hash ^= Uri.GetHashCode();
+      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) hash ^= UriPrefix.GetHashCode();
       hash ^= (int) objectUriCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1216,6 +1252,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
+      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+        output.WriteRawTag(18);
+        output.WriteString(UriPrefix);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1226,6 +1266,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
       int size = 0;
       if (objectUriCase_ == ObjectUriOneofCase.Uri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UriPrefix);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1242,6 +1285,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
         case ObjectUriOneofCase.Uri:
           Uri = other.Uri;
           break;
+        case ObjectUriOneofCase.UriPrefix:
+          UriPrefix = other.UriPrefix;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1257,6 +1303,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
             break;
           case 10: {
             Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            UriPrefix = input.ReadString();
             break;
           }
         }

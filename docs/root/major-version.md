@@ -52,7 +52,7 @@ that we'd only release individual API libraries where there's
 significant demand, to improve the likelihood of being able to drop
 .NET 4.5 in future major versions.
 
-## Timing
+## Timing (updated 2020-02-11)
 
 Our tentative plan is as follows:
 
@@ -68,20 +68,26 @@ Already done:
 - Create next-major-version branch in the generator
 - Update all dependencies to GAX 3.0 (fetched locally for build)
 - Migrate API libraries to GAX 3.0
+- Create "expected final for this major version" releases for all APIs.
+  (We still expect to release a few more as we go, but on a case-by-case basis.)
 
-In progress, aiming for end-of-2019:
+In progress:
 
-- Create "final for this major version" releases for all APIs.
-  (We're nearly finished with this; just a few APIs to go.)
-- Migrate all APIs to the microgenerator
+- Migrate all APIs to the microgenerator (nearly there)
 - Check any remaining obsolete members and resource names, e.g.
-  where LocationName doesn't use GAX
+  where LocationName doesn't use GAX.
 
-Coming up in 2020:
+Future:
 
-- Early January: publish alpha releases of all APIs and GAX
-- If all goes well, in late January: publish beta releases of all APIs and GAX
-- Based on betas, but hopefully mid/late February: public GA releases of all APIs and GAX
+- Release GAX 3.0.0-beta01 and beta libraries for all APIs targeting
+it
+  - This is currently blocked on a Google.Protobuf fix, expected mid-February
+  - It's possible that a few APIs won't be migrated to the microgenerator by then; we'll simply not release new versions of those APIs
+  - We hope to release these over the course of February 17th-21st, 2020
+- Release further betas based on feedback, although further GAX breaking changes are "expensive" (in terms of releasing all new libraries targeting those changes)
+- Release GAX 3.0.0 and new API betas targeting it
+  - Hoping for early to mid March 2020, depending on feedback
+- Release API stable packages (for stable APIs) late March, depending on feedback
 
 ## Feedback
 

@@ -487,6 +487,8 @@ namespace Google.Cloud.Asset.V1Beta1
         /// non-delete or deleted status.
         /// For IAM_POLICY content, this API outputs history when the asset and its
         /// attached IAM POLICY both exist. This can create gaps in the output history.
+        /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+        /// error.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -510,6 +512,8 @@ namespace Google.Cloud.Asset.V1Beta1
         /// non-delete or deleted status.
         /// For IAM_POLICY content, this API outputs history when the asset and its
         /// attached IAM POLICY both exist. This can create gaps in the output history.
+        /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+        /// error.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -532,6 +536,8 @@ namespace Google.Cloud.Asset.V1Beta1
         /// non-delete or deleted status.
         /// For IAM_POLICY content, this API outputs history when the asset and its
         /// attached IAM POLICY both exist. This can create gaps in the output history.
+        /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+        /// error.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -670,6 +676,8 @@ namespace Google.Cloud.Asset.V1Beta1
         /// non-delete or deleted status.
         /// For IAM_POLICY content, this API outputs history when the asset and its
         /// attached IAM POLICY both exist. This can create gaps in the output history.
+        /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+        /// error.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -694,6 +702,8 @@ namespace Google.Cloud.Asset.V1Beta1
         /// non-delete or deleted status.
         /// For IAM_POLICY content, this API outputs history when the asset and its
         /// attached IAM POLICY both exist. This can create gaps in the output history.
+        /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+        /// error.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

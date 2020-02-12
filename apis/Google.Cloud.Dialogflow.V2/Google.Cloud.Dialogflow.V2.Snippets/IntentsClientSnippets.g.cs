@@ -522,31 +522,29 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// <summary>Snippet for UpdateIntentAsync</summary>
         public async Task UpdateIntentAsync2()
         {
-            // Snippet: UpdateIntentAsync(Intent,string,FieldMask,CallSettings)
-            // Additional: UpdateIntentAsync(Intent,string,FieldMask,CancellationToken)
+            // Snippet: UpdateIntentAsync(Intent,string,CallSettings)
+            // Additional: UpdateIntentAsync(Intent,string,CancellationToken)
             // Create client
             IntentsClient intentsClient = await IntentsClient.CreateAsync();
             // Initialize request argument(s)
             Intent intent = new Intent();
             string languageCode = "";
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Intent response = await intentsClient.UpdateIntentAsync(intent, languageCode, updateMask);
+            Intent response = await intentsClient.UpdateIntentAsync(intent, languageCode);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateIntent</summary>
         public void UpdateIntent2()
         {
-            // Snippet: UpdateIntent(Intent,string,FieldMask,CallSettings)
+            // Snippet: UpdateIntent(Intent,string,CallSettings)
             // Create client
             IntentsClient intentsClient = IntentsClient.Create();
             // Initialize request argument(s)
             Intent intent = new Intent();
             string languageCode = "";
-            FieldMask updateMask = new FieldMask();
             // Make the request
-            Intent response = intentsClient.UpdateIntent(intent, languageCode, updateMask);
+            Intent response = intentsClient.UpdateIntent(intent, languageCode);
             // End snippet
         }
 
@@ -561,7 +559,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "",
             };
             // Make the request
             Intent response = await intentsClient.UpdateIntentAsync(request);
@@ -578,7 +575,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "",
             };
             // Make the request
             Intent response = intentsClient.UpdateIntent(request);
@@ -655,7 +651,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
             {
                 ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                LanguageCode = "",
             };
             // Make the request
             Operation<BatchUpdateIntentsResponse, Struct> response =
@@ -691,7 +686,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             BatchUpdateIntentsRequest request = new BatchUpdateIntentsRequest
             {
                 ParentAsProjectAgentName = new ProjectAgentName("[PROJECT]"),
-                LanguageCode = "",
             };
             // Make the request
             Operation<BatchUpdateIntentsResponse, Struct> response =

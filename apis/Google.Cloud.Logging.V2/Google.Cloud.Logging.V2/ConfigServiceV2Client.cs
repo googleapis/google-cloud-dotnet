@@ -59,6 +59,8 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionSettings = existing.CreateExclusionSettings;
             UpdateExclusionSettings = existing.UpdateExclusionSettings;
             DeleteExclusionSettings = existing.DeleteExclusionSettings;
+            GetCmekSettingsSettings = existing.GetCmekSettingsSettings;
+            UpdateCmekSettingsSettings = existing.UpdateCmekSettingsSettings;
             OnCopy(existing);
         }
 
@@ -88,6 +90,20 @@ namespace Google.Cloud.Logging.V2
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "Idempotent2" <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent2" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> Idempotent2RetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
@@ -471,6 +487,65 @@ namespace Google.Cloud.Logging.V2
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.GetCmekSettings</c> and <c>ConfigServiceV2Client.GetCmekSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.GetCmekSettings</c> and
+        /// <c>ConfigServiceV2Client.GetCmekSettingsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCmekSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: Idempotent2RetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.UpdateCmekSettings</c> and <c>ConfigServiceV2Client.UpdateCmekSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.UpdateCmekSettings</c> and
+        /// <c>ConfigServiceV2Client.UpdateCmekSettingsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCmekSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -3434,6 +3509,178 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CmekSettings> GetCmekSettingsAsync(
+            GetCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CmekSettings> GetCmekSettingsAsync(
+            GetCmekSettingsRequest request,
+            st::CancellationToken cancellationToken) => GetCmekSettingsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CmekSettings GetCmekSettings(
+            GetCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CmekSettings> UpdateCmekSettingsAsync(
+            UpdateCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CmekSettings> UpdateCmekSettingsAsync(
+            UpdateCmekSettingsRequest request,
+            st::CancellationToken cancellationToken) => UpdateCmekSettingsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CmekSettings UpdateCmekSettings(
+            UpdateCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -3451,6 +3698,8 @@ namespace Google.Cloud.Logging.V2
         private readonly gaxgrpc::ApiCall<CreateExclusionRequest, LogExclusion> _callCreateExclusion;
         private readonly gaxgrpc::ApiCall<UpdateExclusionRequest, LogExclusion> _callUpdateExclusion;
         private readonly gaxgrpc::ApiCall<DeleteExclusionRequest, pbwkt::Empty> _callDeleteExclusion;
+        private readonly gaxgrpc::ApiCall<GetCmekSettingsRequest, CmekSettings> _callGetCmekSettings;
+        private readonly gaxgrpc::ApiCall<UpdateCmekSettingsRequest, CmekSettings> _callUpdateCmekSettings;
 
         /// <summary>
         /// Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.
@@ -3492,6 +3741,12 @@ namespace Google.Cloud.Logging.V2
             _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, pbwkt::Empty>(
                 GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings)
                 .WithGoogleRequestParam("name", request => request.Name);
+            _callGetCmekSettings = clientHelper.BuildApiCall<GetCmekSettingsRequest, CmekSettings>(
+                GrpcClient.GetCmekSettingsAsync, GrpcClient.GetCmekSettings, effectiveSettings.GetCmekSettingsSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
+            _callUpdateCmekSettings = clientHelper.BuildApiCall<UpdateCmekSettingsRequest, CmekSettings>(
+                GrpcClient.UpdateCmekSettingsAsync, GrpcClient.UpdateCmekSettings, effectiveSettings.UpdateCmekSettingsSettings)
+                .WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListSinks);
             Modify_ListSinksApiCall(ref _callListSinks);
             Modify_ApiCall(ref _callGetSink);
@@ -3512,6 +3767,10 @@ namespace Google.Cloud.Logging.V2
             Modify_UpdateExclusionApiCall(ref _callUpdateExclusion);
             Modify_ApiCall(ref _callDeleteExclusion);
             Modify_DeleteExclusionApiCall(ref _callDeleteExclusion);
+            Modify_ApiCall(ref _callGetCmekSettings);
+            Modify_GetCmekSettingsApiCall(ref _callGetCmekSettings);
+            Modify_ApiCall(ref _callUpdateCmekSettings);
+            Modify_UpdateCmekSettingsApiCall(ref _callUpdateCmekSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3535,6 +3794,8 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_CreateExclusionApiCall(ref gaxgrpc::ApiCall<CreateExclusionRequest, LogExclusion> call);
         partial void Modify_UpdateExclusionApiCall(ref gaxgrpc::ApiCall<UpdateExclusionRequest, LogExclusion> call);
         partial void Modify_DeleteExclusionApiCall(ref gaxgrpc::ApiCall<DeleteExclusionRequest, pbwkt::Empty> call);
+        partial void Modify_GetCmekSettingsApiCall(ref gaxgrpc::ApiCall<GetCmekSettingsRequest, CmekSettings> call);
+        partial void Modify_UpdateCmekSettingsApiCall(ref gaxgrpc::ApiCall<UpdateCmekSettingsRequest, CmekSettings> call);
         partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -3555,6 +3816,8 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_CreateExclusionRequest(ref CreateExclusionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateExclusionRequest(ref UpdateExclusionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteExclusionRequest(ref DeleteExclusionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetCmekSettingsRequest(ref GetCmekSettingsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateCmekSettingsRequest(ref UpdateCmekSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists sinks.
@@ -3968,6 +4231,126 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_DeleteExclusionRequest(ref request, ref callSettings);
             _callDeleteExclusion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<CmekSettings> GetCmekSettingsAsync(
+            GetCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCmekSettingsRequest(ref request, ref callSettings);
+            return _callGetCmekSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override CmekSettings GetCmekSettings(
+            GetCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCmekSettingsRequest(ref request, ref callSettings);
+            return _callGetCmekSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<CmekSettings> UpdateCmekSettingsAsync(
+            UpdateCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCmekSettingsRequest(ref request, ref callSettings);
+            return _callUpdateCmekSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Logs Router CMEK settings for the given resource.
+        ///
+        /// Note: CMEK for the Logs Router can currently only be configured for GCP
+        /// organizations. Once configured, it applies to all projects and folders in
+        /// the GCP organization.
+        ///
+        /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings]
+        /// will fail if 1) `kms_key_name` is invalid, or 2) the associated service
+        /// account does not have the required
+        /// `roles/cloudkms.cryptoKeyEncrypterDecrypter` role assigned for the key, or
+        /// 3) access to the key is disabled.
+        ///
+        /// See [Enabling CMEK for Logs
+        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override CmekSettings UpdateCmekSettings(
+            UpdateCmekSettingsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCmekSettingsRequest(ref request, ref callSettings);
+            return _callUpdateCmekSettings.Sync(request, callSettings);
         }
 
     }

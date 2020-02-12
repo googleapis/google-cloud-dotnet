@@ -635,7 +635,7 @@ namespace Google.Cloud.Monitoring.V3
         /// makes it possible for new channel types to be dynamically added.
         /// </summary>
         /// <param name="name">
-        /// The REST resource name of the parent from which to retrieve
+        /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         ///
         ///     projects/[PROJECT_ID]
@@ -677,7 +677,7 @@ namespace Google.Cloud.Monitoring.V3
         /// makes it possible for new channel types to be dynamically added.
         /// </summary>
         /// <param name="name">
-        /// The REST resource name of the parent from which to retrieve
+        /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         ///
         ///     projects/[PROJECT_ID]
@@ -719,7 +719,7 @@ namespace Google.Cloud.Monitoring.V3
         /// makes it possible for new channel types to be dynamically added.
         /// </summary>
         /// <param name="name">
-        /// The REST resource name of the parent from which to retrieve
+        /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         ///
         ///     projects/[PROJECT_ID]
@@ -761,7 +761,7 @@ namespace Google.Cloud.Monitoring.V3
         /// makes it possible for new channel types to be dynamically added.
         /// </summary>
         /// <param name="name">
-        /// The REST resource name of the parent from which to retrieve
+        /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         ///
         ///     projects/[PROJECT_ID]
@@ -843,7 +843,7 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// The channel type for which to execute the request. The format is
+        /// Required. The channel type for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="callSettings">
@@ -866,7 +866,7 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// The channel type for which to execute the request. The format is
+        /// Required. The channel type for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -886,7 +886,7 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// The channel type for which to execute the request. The format is
+        /// Required. The channel type for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="callSettings">
@@ -909,7 +909,7 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// The channel type for which to execute the request. The format is
+        /// Required. The channel type for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="callSettings">
@@ -932,7 +932,7 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// The channel type for which to execute the request. The format is
+        /// Required. The channel type for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -952,7 +952,7 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// The channel type for which to execute the request. The format is
+        /// Required. The channel type for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="callSettings">
@@ -1033,7 +1033,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is
+        /// Required. The project on which to execute the request. The format is
         /// `projects/[PROJECT_ID]`. That is, this names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is
+        /// Required. The project on which to execute the request. The format is
         /// `projects/[PROJECT_ID]`. That is, this names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
@@ -1111,7 +1111,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is
+        /// Required. The project on which to execute the request. The format is
         /// `projects/[PROJECT_ID]`. That is, this names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
@@ -1150,7 +1150,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is
+        /// Required. The project on which to execute the request. The format is
         /// `projects/[PROJECT_ID]`. That is, this names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1257,7 +1257,7 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1280,7 +1280,7 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1306,7 +1306,7 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1355,7 +1355,7 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="callSettings">
@@ -1446,7 +1446,7 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is:
+        /// Required. The project on which to execute the request. The format is:
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -1456,7 +1456,7 @@ namespace Google.Cloud.Monitoring.V3
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
         /// <param name="notificationChannel">
-        /// The definition of the `NotificationChannel` to create.
+        /// Required. The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1480,7 +1480,7 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is:
+        /// Required. The project on which to execute the request. The format is:
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -1490,7 +1490,7 @@ namespace Google.Cloud.Monitoring.V3
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
         /// <param name="notificationChannel">
-        /// The definition of the `NotificationChannel` to create.
+        /// Required. The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1511,7 +1511,7 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is:
+        /// Required. The project on which to execute the request. The format is:
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -1521,7 +1521,7 @@ namespace Google.Cloud.Monitoring.V3
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
         /// <param name="notificationChannel">
-        /// The definition of the `NotificationChannel` to create.
+        /// Required. The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1545,7 +1545,7 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is:
+        /// Required. The project on which to execute the request. The format is:
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.Monitoring.V3
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
         /// <param name="notificationChannel">
-        /// The definition of the `NotificationChannel` to create.
+        /// Required. The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1579,7 +1579,7 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is:
+        /// Required. The project on which to execute the request. The format is:
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.Monitoring.V3
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
         /// <param name="notificationChannel">
-        /// The definition of the `NotificationChannel` to create.
+        /// Required. The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// The project on which to execute the request. The format is:
+        /// Required. The project on which to execute the request. The format is:
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -1620,7 +1620,7 @@ namespace Google.Cloud.Monitoring.V3
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
         /// <param name="notificationChannel">
-        /// The definition of the `NotificationChannel` to create.
+        /// Required. The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1706,7 +1706,7 @@ namespace Google.Cloud.Monitoring.V3
         /// The fields to update.
         /// </param>
         /// <param name="notificationChannel">
-        /// A description of the changes to be applied to the specified
+        /// Required. A description of the changes to be applied to the specified
         /// notification channel. The description must provide a definition for
         /// fields to be updated; the names of these fields should also be
         /// included in the `update_mask`.
@@ -1736,7 +1736,7 @@ namespace Google.Cloud.Monitoring.V3
         /// The fields to update.
         /// </param>
         /// <param name="notificationChannel">
-        /// A description of the changes to be applied to the specified
+        /// Required. A description of the changes to be applied to the specified
         /// notification channel. The description must provide a definition for
         /// fields to be updated; the names of these fields should also be
         /// included in the `update_mask`.
@@ -1763,7 +1763,7 @@ namespace Google.Cloud.Monitoring.V3
         /// The fields to update.
         /// </param>
         /// <param name="notificationChannel">
-        /// A description of the changes to be applied to the specified
+        /// Required. A description of the changes to be applied to the specified
         /// notification channel. The description must provide a definition for
         /// fields to be updated; the names of these fields should also be
         /// included in the `update_mask`.
@@ -1848,7 +1848,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="force">
@@ -1878,7 +1878,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="force">
@@ -1905,7 +1905,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="force">
@@ -1932,7 +1932,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="force">
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="force">
@@ -1989,7 +1989,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// The channel for which to execute the request. The format is
+        /// Required. The channel for which to execute the request. The format is
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="force">
@@ -2070,7 +2070,7 @@ namespace Google.Cloud.Monitoring.V3
         /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to which to send a verification code.
+        /// Required. The notification channel to which to send a verification code.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2092,7 +2092,7 @@ namespace Google.Cloud.Monitoring.V3
         /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to which to send a verification code.
+        /// Required. The notification channel to which to send a verification code.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2111,7 +2111,7 @@ namespace Google.Cloud.Monitoring.V3
         /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to which to send a verification code.
+        /// Required. The notification channel to which to send a verification code.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2130,7 +2130,7 @@ namespace Google.Cloud.Monitoring.V3
         /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to which to send a verification code.
+        /// Required. The notification channel to which to send a verification code.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2152,7 +2152,7 @@ namespace Google.Cloud.Monitoring.V3
         /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to which to send a verification code.
+        /// Required. The notification channel to which to send a verification code.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2171,7 +2171,7 @@ namespace Google.Cloud.Monitoring.V3
         /// can then be supplied in `VerifyNotificationChannel` to verify the channel.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to which to send a verification code.
+        /// Required. The notification channel to which to send a verification code.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2265,7 +2265,7 @@ namespace Google.Cloud.Monitoring.V3
         /// 64 encoded string that has a longer expiration time.
         /// </summary>
         /// <param name="name">
-        /// The notification channel for which a verification code is to be generated
+        /// Required. The notification channel for which a verification code is to be generated
         /// and retrieved. This must name a channel that is already verified; if
         /// the specified channel is not verified, the request will fail.
         /// </param>
@@ -2308,7 +2308,7 @@ namespace Google.Cloud.Monitoring.V3
         /// 64 encoded string that has a longer expiration time.
         /// </summary>
         /// <param name="name">
-        /// The notification channel for which a verification code is to be generated
+        /// Required. The notification channel for which a verification code is to be generated
         /// and retrieved. This must name a channel that is already verified; if
         /// the specified channel is not verified, the request will fail.
         /// </param>
@@ -2348,7 +2348,7 @@ namespace Google.Cloud.Monitoring.V3
         /// 64 encoded string that has a longer expiration time.
         /// </summary>
         /// <param name="name">
-        /// The notification channel for which a verification code is to be generated
+        /// Required. The notification channel for which a verification code is to be generated
         /// and retrieved. This must name a channel that is already verified; if
         /// the specified channel is not verified, the request will fail.
         /// </param>
@@ -2391,7 +2391,7 @@ namespace Google.Cloud.Monitoring.V3
         /// 64 encoded string that has a longer expiration time.
         /// </summary>
         /// <param name="name">
-        /// The notification channel for which a verification code is to be generated
+        /// Required. The notification channel for which a verification code is to be generated
         /// and retrieved. This must name a channel that is already verified; if
         /// the specified channel is not verified, the request will fail.
         /// </param>
@@ -2434,7 +2434,7 @@ namespace Google.Cloud.Monitoring.V3
         /// 64 encoded string that has a longer expiration time.
         /// </summary>
         /// <param name="name">
-        /// The notification channel for which a verification code is to be generated
+        /// Required. The notification channel for which a verification code is to be generated
         /// and retrieved. This must name a channel that is already verified; if
         /// the specified channel is not verified, the request will fail.
         /// </param>
@@ -2474,7 +2474,7 @@ namespace Google.Cloud.Monitoring.V3
         /// 64 encoded string that has a longer expiration time.
         /// </summary>
         /// <param name="name">
-        /// The notification channel for which a verification code is to be generated
+        /// Required. The notification channel for which a verification code is to be generated
         /// and retrieved. This must name a channel that is already verified; if
         /// the specified channel is not verified, the request will fail.
         /// </param>
@@ -2615,10 +2615,10 @@ namespace Google.Cloud.Monitoring.V3
         /// `SendNotificationChannelVerificationCode`.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to verify.
+        /// Required. The notification channel to verify.
         /// </param>
         /// <param name="code">
-        /// The verification code that was delivered to the channel as
+        /// Required. The verification code that was delivered to the channel as
         /// a result of invoking the `SendNotificationChannelVerificationCode` API
         /// method or that was retrieved from a verified channel via
         /// `GetNotificationChannelVerificationCode`. For example, one might have
@@ -2649,10 +2649,10 @@ namespace Google.Cloud.Monitoring.V3
         /// `SendNotificationChannelVerificationCode`.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to verify.
+        /// Required. The notification channel to verify.
         /// </param>
         /// <param name="code">
-        /// The verification code that was delivered to the channel as
+        /// Required. The verification code that was delivered to the channel as
         /// a result of invoking the `SendNotificationChannelVerificationCode` API
         /// method or that was retrieved from a verified channel via
         /// `GetNotificationChannelVerificationCode`. For example, one might have
@@ -2680,10 +2680,10 @@ namespace Google.Cloud.Monitoring.V3
         /// `SendNotificationChannelVerificationCode`.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to verify.
+        /// Required. The notification channel to verify.
         /// </param>
         /// <param name="code">
-        /// The verification code that was delivered to the channel as
+        /// Required. The verification code that was delivered to the channel as
         /// a result of invoking the `SendNotificationChannelVerificationCode` API
         /// method or that was retrieved from a verified channel via
         /// `GetNotificationChannelVerificationCode`. For example, one might have
@@ -2714,10 +2714,10 @@ namespace Google.Cloud.Monitoring.V3
         /// `SendNotificationChannelVerificationCode`.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to verify.
+        /// Required. The notification channel to verify.
         /// </param>
         /// <param name="code">
-        /// The verification code that was delivered to the channel as
+        /// Required. The verification code that was delivered to the channel as
         /// a result of invoking the `SendNotificationChannelVerificationCode` API
         /// method or that was retrieved from a verified channel via
         /// `GetNotificationChannelVerificationCode`. For example, one might have
@@ -2748,10 +2748,10 @@ namespace Google.Cloud.Monitoring.V3
         /// `SendNotificationChannelVerificationCode`.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to verify.
+        /// Required. The notification channel to verify.
         /// </param>
         /// <param name="code">
-        /// The verification code that was delivered to the channel as
+        /// Required. The verification code that was delivered to the channel as
         /// a result of invoking the `SendNotificationChannelVerificationCode` API
         /// method or that was retrieved from a verified channel via
         /// `GetNotificationChannelVerificationCode`. For example, one might have
@@ -2779,10 +2779,10 @@ namespace Google.Cloud.Monitoring.V3
         /// `SendNotificationChannelVerificationCode`.
         /// </summary>
         /// <param name="name">
-        /// The notification channel to verify.
+        /// Required. The notification channel to verify.
         /// </param>
         /// <param name="code">
-        /// The verification code that was delivered to the channel as
+        /// Required. The verification code that was delivered to the channel as
         /// a result of invoking the `SendNotificationChannelVerificationCode` API
         /// method or that was retrieved from a verified channel via
         /// `GetNotificationChannelVerificationCode`. For example, one might have

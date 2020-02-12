@@ -928,5 +928,59 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetCmekSettingsAsync</summary>
+        public async Task GetCmekSettingsAsync_RequestObject()
+        {
+            // Snippet: GetCmekSettingsAsync(GetCmekSettingsRequest,CallSettings)
+            // Additional: GetCmekSettingsAsync(GetCmekSettingsRequest,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest();
+            // Make the request
+            CmekSettings response = await configServiceV2Client.GetCmekSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekSettings</summary>
+        public void GetCmekSettings_RequestObject()
+        {
+            // Snippet: GetCmekSettings(GetCmekSettingsRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest();
+            // Make the request
+            CmekSettings response = configServiceV2Client.GetCmekSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCmekSettingsAsync</summary>
+        public async Task UpdateCmekSettingsAsync_RequestObject()
+        {
+            // Snippet: UpdateCmekSettingsAsync(UpdateCmekSettingsRequest,CallSettings)
+            // Additional: UpdateCmekSettingsAsync(UpdateCmekSettingsRequest,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest();
+            // Make the request
+            CmekSettings response = await configServiceV2Client.UpdateCmekSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCmekSettings</summary>
+        public void UpdateCmekSettings_RequestObject()
+        {
+            // Snippet: UpdateCmekSettings(UpdateCmekSettingsRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateCmekSettingsRequest request = new UpdateCmekSettingsRequest();
+            // Make the request
+            CmekSettings response = configServiceV2Client.UpdateCmekSettings(request);
+            // End snippet
+        }
+
     }
 }

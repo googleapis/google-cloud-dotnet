@@ -1533,6 +1533,8 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   /// <summary>
   /// Instructs the speech synthesizer on how to generate the output audio content.
+  /// If this audio config is supplied in a request, it overrides all existing
+  /// text-to-speech settings applied to the agent.
   /// </summary>
   public sealed partial class OutputAudioConfig : pb::IMessage<OutputAudioConfig> {
     private static readonly pb::MessageParser<OutputAudioConfig> _parser = new pb::MessageParser<OutputAudioConfig>(() => new OutputAudioConfig());

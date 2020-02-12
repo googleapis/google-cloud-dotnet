@@ -797,15 +797,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specified in the request.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance in which to create the table.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
-        /// The Table to create.
+        /// Required. The Table to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -832,15 +833,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specified in the request.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance in which to create the table.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
-        /// The Table to create.
+        /// Required. The Table to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -864,15 +866,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specified in the request.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance in which to create the table.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
-        /// The Table to create.
+        /// Required. The Table to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -899,15 +902,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specified in the request.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance in which to create the table.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
-        /// The Table to create.
+        /// Required. The Table to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -934,15 +938,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specified in the request.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance in which to create the table.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
-        /// The Table to create.
+        /// Required. The Table to create.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -966,15 +971,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specified in the request.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance in which to create the table.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
-        /// The Table to create.
+        /// Required. The Table to create.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1061,8 +1067,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance for which tables should be listed.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1095,8 +1101,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance for which tables should be listed.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1129,8 +1135,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance for which tables should be listed.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1163,8 +1169,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance for which tables should be listed.
+        /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1235,9 +1241,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets metadata information about the specified table.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the requested table.
+        /// Required. The unique name of the requested table.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1258,9 +1264,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets metadata information about the specified table.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the requested table.
+        /// Required. The unique name of the requested table.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1278,9 +1284,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets metadata information about the specified table.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the requested table.
+        /// Required. The unique name of the requested table.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1301,9 +1307,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets metadata information about the specified table.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the requested table.
+        /// Required. The unique name of the requested table.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1324,9 +1330,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets metadata information about the specified table.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the requested table.
+        /// Required. The unique name of the requested table.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1344,9 +1350,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets metadata information about the specified table.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the requested table.
+        /// Required. The unique name of the requested table.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1423,9 +1429,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Permanently deletes a specified table and all of its data.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table to be deleted.
+        /// Required. The unique name of the table to be deleted.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1446,9 +1452,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Permanently deletes a specified table and all of its data.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table to be deleted.
+        /// Required. The unique name of the table to be deleted.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1466,9 +1472,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Permanently deletes a specified table and all of its data.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table to be deleted.
+        /// Required. The unique name of the table to be deleted.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1486,9 +1492,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Permanently deletes a specified table and all of its data.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table to be deleted.
+        /// Required. The unique name of the table to be deleted.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1509,9 +1515,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Permanently deletes a specified table and all of its data.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table to be deleted.
+        /// Required. The unique name of the table to be deleted.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1529,9 +1535,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Permanently deletes a specified table and all of its data.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table to be deleted.
+        /// Required. The unique name of the table to be deleted.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1605,12 +1611,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// where only some modifications have taken effect.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table whose families should be modified.
+        /// Required. The unique name of the table whose families should be modified.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Modifications to be atomically applied to the specified table's families.
+        /// Required. Modifications to be atomically applied to the specified table's families.
         /// Entries are applied in order, meaning that earlier modifications can be
         /// masked by later ones (in the case of repeated updates to the same family,
         /// for example).
@@ -1639,12 +1645,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// where only some modifications have taken effect.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table whose families should be modified.
+        /// Required. The unique name of the table whose families should be modified.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Modifications to be atomically applied to the specified table's families.
+        /// Required. Modifications to be atomically applied to the specified table's families.
         /// Entries are applied in order, meaning that earlier modifications can be
         /// masked by later ones (in the case of repeated updates to the same family,
         /// for example).
@@ -1670,12 +1676,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// where only some modifications have taken effect.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table whose families should be modified.
+        /// Required. The unique name of the table whose families should be modified.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Modifications to be atomically applied to the specified table's families.
+        /// Required. Modifications to be atomically applied to the specified table's families.
         /// Entries are applied in order, meaning that earlier modifications can be
         /// masked by later ones (in the case of repeated updates to the same family,
         /// for example).
@@ -1704,12 +1710,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// where only some modifications have taken effect.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table whose families should be modified.
+        /// Required. The unique name of the table whose families should be modified.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Modifications to be atomically applied to the specified table's families.
+        /// Required. Modifications to be atomically applied to the specified table's families.
         /// Entries are applied in order, meaning that earlier modifications can be
         /// masked by later ones (in the case of repeated updates to the same family,
         /// for example).
@@ -1738,12 +1744,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// where only some modifications have taken effect.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table whose families should be modified.
+        /// Required. The unique name of the table whose families should be modified.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Modifications to be atomically applied to the specified table's families.
+        /// Required. Modifications to be atomically applied to the specified table's families.
         /// Entries are applied in order, meaning that earlier modifications can be
         /// masked by later ones (in the case of repeated updates to the same family,
         /// for example).
@@ -1769,12 +1775,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// where only some modifications have taken effect.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the table whose families should be modified.
+        /// Required. The unique name of the table whose families should be modified.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Modifications to be atomically applied to the specified table's families.
+        /// Required. Modifications to be atomically applied to the specified table's families.
         /// Entries are applied in order, meaning that earlier modifications can be
         /// masked by later ones (in the case of repeated updates to the same family,
         /// for example).
@@ -1927,9 +1933,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to create a consistency token.
+        /// Required. The unique name of the Table for which to create a consistency token.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1953,9 +1959,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to create a consistency token.
+        /// Required. The unique name of the Table for which to create a consistency token.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1976,9 +1982,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to create a consistency token.
+        /// Required. The unique name of the Table for which to create a consistency token.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2002,9 +2008,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to create a consistency token.
+        /// Required. The unique name of the Table for which to create a consistency token.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2028,9 +2034,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to create a consistency token.
+        /// Required. The unique name of the Table for which to create a consistency token.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2051,9 +2057,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to create a consistency token.
+        /// Required. The unique name of the Table for which to create a consistency token.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2141,12 +2147,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to check replication consistency.
+        /// Required. The unique name of the Table for which to check replication consistency.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
-        /// The token created using GenerateConsistencyToken for the Table.
+        /// Required. The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2171,12 +2177,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to check replication consistency.
+        /// Required. The unique name of the Table for which to check replication consistency.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
-        /// The token created using GenerateConsistencyToken for the Table.
+        /// Required. The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2198,12 +2204,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to check replication consistency.
+        /// Required. The unique name of the Table for which to check replication consistency.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
-        /// The token created using GenerateConsistencyToken for the Table.
+        /// Required. The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2228,12 +2234,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to check replication consistency.
+        /// Required. The unique name of the Table for which to check replication consistency.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
-        /// The token created using GenerateConsistencyToken for the Table.
+        /// Required. The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2258,12 +2264,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to check replication consistency.
+        /// Required. The unique name of the Table for which to check replication consistency.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
-        /// The token created using GenerateConsistencyToken for the Table.
+        /// Required. The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2285,12 +2291,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// The unique name of the Table for which to check replication consistency.
+        /// Required. The unique name of the Table for which to check replication consistency.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
-        /// The token created using GenerateConsistencyToken for the Table.
+        /// Required. The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2372,8 +2378,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -2395,8 +2402,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -2415,8 +2423,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -2438,8 +2447,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2458,8 +2468,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2477,8 +2488,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2497,8 +2509,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2528,8 +2540,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2556,8 +2568,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2587,8 +2599,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2607,8 +2619,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2626,8 +2638,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3257,8 +3269,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3278,8 +3291,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for a table resource. Returns an empty
-        /// policy if an table exists but does not have a policy set.
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists but does not have a policy
+        /// set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3299,8 +3313,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3320,8 +3334,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Sets the access control policy on a table resource. Replaces any existing
-        /// policy.
+        /// Sets the access control policy on a Table or Backup resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

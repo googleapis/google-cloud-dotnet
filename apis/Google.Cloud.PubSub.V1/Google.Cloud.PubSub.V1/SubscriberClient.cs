@@ -20,6 +20,7 @@ using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -344,6 +345,8 @@ namespace Google.Cloud.PubSub.V1
     public sealed class SubscriberClientImpl : SubscriberClient
     {
         // TODO: Logging
+
+        internal const string DeliveryAttemptAttrKey = "googclient_deliveryattempt";
 
         /// <summary>
         /// Instantiate a <see cref="SubscriberClientImpl"/> associated with the specified <see cref="SubscriptionName"/>.
@@ -1098,6 +1101,10 @@ namespace Google.Cloud.PubSub.V1
                         {
                             _softStopCts.Token.ThrowIfCancellationRequested();
                             _userHandlerInFlight += 1;
+                        }
+                        if (msg.DeliveryAttempt > 0)
+                        {
+                            msg.Message.Attributes[DeliveryAttemptAttrKey] = msg.DeliveryAttempt.ToString(CultureInfo.InvariantCulture);
                         }
                         // Call user message handler
                         var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);

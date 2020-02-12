@@ -496,7 +496,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 Intent = new Intent(),
                 LanguageCode = "languageCode-412800396",
-                UpdateMask = new FieldMask(),
             };
             Intent expectedResponse = new Intent
             {
@@ -515,8 +514,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
             Intent intent = new Intent();
             string languageCode = "languageCode-412800396";
-            FieldMask updateMask = new FieldMask();
-            Intent response = client.UpdateIntent(intent, languageCode, updateMask);
+            Intent response = client.UpdateIntent(intent, languageCode);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -531,7 +529,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 Intent = new Intent(),
                 LanguageCode = "languageCode-412800396",
-                UpdateMask = new FieldMask(),
             };
             Intent expectedResponse = new Intent
             {
@@ -550,8 +547,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
             Intent intent = new Intent();
             string languageCode = "languageCode-412800396";
-            FieldMask updateMask = new FieldMask();
-            Intent response = await client.UpdateIntentAsync(intent, languageCode, updateMask);
+            Intent response = await client.UpdateIntentAsync(intent, languageCode);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -565,7 +561,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
             };
             Intent expectedResponse = new Intent
             {
@@ -596,7 +591,6 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateIntentRequest request = new UpdateIntentRequest
             {
                 Intent = new Intent(),
-                LanguageCode = "languageCode-412800396",
             };
             Intent expectedResponse = new Intent
             {

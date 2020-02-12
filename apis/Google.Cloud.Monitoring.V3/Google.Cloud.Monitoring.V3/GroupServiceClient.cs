@@ -513,7 +513,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// The project whose groups are to be listed. The format is
+        /// Required. The project whose groups are to be listed. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
@@ -547,7 +547,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// The project whose groups are to be listed. The format is
+        /// Required. The project whose groups are to be listed. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
@@ -581,7 +581,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// The project whose groups are to be listed. The format is
+        /// Required. The project whose groups are to be listed. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
@@ -615,7 +615,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// The project whose groups are to be listed. The format is
+        /// Required. The project whose groups are to be listed. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
@@ -687,7 +687,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        /// The group to retrieve. The format is
+        /// Required. The group to retrieve. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -709,7 +709,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        /// The group to retrieve. The format is
+        /// Required. The group to retrieve. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -728,7 +728,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        /// The group to retrieve. The format is
+        /// Required. The group to retrieve. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -750,7 +750,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        /// The group to retrieve. The format is
+        /// Required. The group to retrieve. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -772,7 +772,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        /// The group to retrieve. The format is
+        /// Required. The group to retrieve. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -791,7 +791,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        /// The group to retrieve. The format is
+        /// Required. The group to retrieve. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -869,11 +869,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the group. The format is
+        /// Required. The project in which to create the group. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
+        /// Required. A group definition. It is an error to define the `name` field because
         /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
@@ -897,11 +897,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the group. The format is
+        /// Required. The project in which to create the group. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
+        /// Required. A group definition. It is an error to define the `name` field because
         /// the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">
@@ -922,11 +922,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the group. The format is
+        /// Required. The project in which to create the group. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
+        /// Required. A group definition. It is an error to define the `name` field because
         /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
@@ -950,11 +950,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the group. The format is
+        /// Required. The project in which to create the group. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
+        /// Required. A group definition. It is an error to define the `name` field because
         /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
@@ -978,11 +978,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the group. The format is
+        /// Required. The project in which to create the group. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
+        /// Required. A group definition. It is an error to define the `name` field because
         /// the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">
@@ -1003,11 +1003,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the group. The format is
+        /// Required. The project in which to create the group. The format is
         /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
+        /// Required. A group definition. It is an error to define the `name` field because
         /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
@@ -1088,7 +1088,7 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// The new definition of the group.  All fields of the existing group,
+        /// Required. The new definition of the group.  All fields of the existing group,
         /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="callSettings">
@@ -1111,7 +1111,7 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// The new definition of the group.  All fields of the existing group,
+        /// Required. The new definition of the group.  All fields of the existing group,
         /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="cancellationToken">
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// The new definition of the group.  All fields of the existing group,
+        /// Required. The new definition of the group.  All fields of the existing group,
         /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="callSettings">
@@ -1212,7 +1212,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        /// The group to delete. The format is
+        /// Required. The group to delete. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -1234,7 +1234,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        /// The group to delete. The format is
+        /// Required. The group to delete. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1253,7 +1253,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        /// The group to delete. The format is
+        /// Required. The group to delete. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -1272,7 +1272,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        /// The group to delete. The format is
+        /// Required. The group to delete. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -1294,7 +1294,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        /// The group to delete. The format is
+        /// Required. The group to delete. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1313,7 +1313,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        /// The group to delete. The format is
+        /// Required. The group to delete. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
@@ -1385,7 +1385,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        /// The group whose members are listed. The format is
+        /// Required. The group whose members are listed. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        /// The group whose members are listed. The format is
+        /// Required. The group whose members are listed. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        /// The group whose members are listed. The format is
+        /// Required. The group whose members are listed. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
@@ -1487,7 +1487,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        /// The group whose members are listed. The format is
+        /// Required. The group whose members are listed. The format is
         /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">

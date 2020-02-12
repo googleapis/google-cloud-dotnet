@@ -480,7 +480,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing alerting policies for the project.
         /// </summary>
         /// <param name="name">
-        /// The project whose alert policies are to be listed. The format is
+        /// Required. The project whose alert policies are to be listed. The format is
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -521,7 +521,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing alerting policies for the project.
         /// </summary>
         /// <param name="name">
-        /// The project whose alert policies are to be listed. The format is
+        /// Required. The project whose alert policies are to be listed. The format is
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -562,7 +562,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing alerting policies for the project.
         /// </summary>
         /// <param name="name">
-        /// The project whose alert policies are to be listed. The format is
+        /// Required. The project whose alert policies are to be listed. The format is
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -603,7 +603,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing alerting policies for the project.
         /// </summary>
         /// <param name="name">
-        /// The project whose alert policies are to be listed. The format is
+        /// Required. The project whose alert policies are to be listed. The format is
         ///
         ///     projects/[PROJECT_ID]
         ///
@@ -682,7 +682,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to retrieve. The format is
+        /// Required. The alerting policy to retrieve. The format is
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
@@ -705,7 +705,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to retrieve. The format is
+        /// Required. The alerting policy to retrieve. The format is
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
@@ -725,7 +725,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to retrieve. The format is
+        /// Required. The alerting policy to retrieve. The format is
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
@@ -748,7 +748,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to retrieve. The format is
+        /// Required. The alerting policy to retrieve. The format is
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
@@ -771,7 +771,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to retrieve. The format is
+        /// Required. The alerting policy to retrieve. The format is
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
@@ -791,7 +791,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to retrieve. The format is
+        /// Required. The alerting policy to retrieve. The format is
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
@@ -870,7 +870,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the alerting policy. The format is
+        /// Required. The project in which to create the alerting policy. The format is
         /// `projects/[PROJECT_ID]`.
         ///
         /// Note that this field names the parent container in which the alerting
@@ -880,7 +880,7 @@ namespace Google.Cloud.Monitoring.V3
         /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
         /// </param>
         /// <param name="alertPolicy">
-        /// The requested alerting policy. You should omit the `name` field in this
+        /// Required. The requested alerting policy. You should omit the `name` field in this
         /// policy. The name will be returned in the new policy, including
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
@@ -905,7 +905,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the alerting policy. The format is
+        /// Required. The project in which to create the alerting policy. The format is
         /// `projects/[PROJECT_ID]`.
         ///
         /// Note that this field names the parent container in which the alerting
@@ -915,7 +915,7 @@ namespace Google.Cloud.Monitoring.V3
         /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
         /// </param>
         /// <param name="alertPolicy">
-        /// The requested alerting policy. You should omit the `name` field in this
+        /// Required. The requested alerting policy. You should omit the `name` field in this
         /// policy. The name will be returned in the new policy, including
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
@@ -937,7 +937,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the alerting policy. The format is
+        /// Required. The project in which to create the alerting policy. The format is
         /// `projects/[PROJECT_ID]`.
         ///
         /// Note that this field names the parent container in which the alerting
@@ -947,7 +947,7 @@ namespace Google.Cloud.Monitoring.V3
         /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
         /// </param>
         /// <param name="alertPolicy">
-        /// The requested alerting policy. You should omit the `name` field in this
+        /// Required. The requested alerting policy. You should omit the `name` field in this
         /// policy. The name will be returned in the new policy, including
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
@@ -972,7 +972,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the alerting policy. The format is
+        /// Required. The project in which to create the alerting policy. The format is
         /// `projects/[PROJECT_ID]`.
         ///
         /// Note that this field names the parent container in which the alerting
@@ -982,7 +982,7 @@ namespace Google.Cloud.Monitoring.V3
         /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
         /// </param>
         /// <param name="alertPolicy">
-        /// The requested alerting policy. You should omit the `name` field in this
+        /// Required. The requested alerting policy. You should omit the `name` field in this
         /// policy. The name will be returned in the new policy, including
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
@@ -1007,7 +1007,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the alerting policy. The format is
+        /// Required. The project in which to create the alerting policy. The format is
         /// `projects/[PROJECT_ID]`.
         ///
         /// Note that this field names the parent container in which the alerting
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Monitoring.V3
         /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
         /// </param>
         /// <param name="alertPolicy">
-        /// The requested alerting policy. You should omit the `name` field in this
+        /// Required. The requested alerting policy. You should omit the `name` field in this
         /// policy. The name will be returned in the new policy, including
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
@@ -1039,7 +1039,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The project in which to create the alerting policy. The format is
+        /// Required. The project in which to create the alerting policy. The format is
         /// `projects/[PROJECT_ID]`.
         ///
         /// Note that this field names the parent container in which the alerting
@@ -1049,7 +1049,7 @@ namespace Google.Cloud.Monitoring.V3
         /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
         /// </param>
         /// <param name="alertPolicy">
-        /// The requested alerting policy. You should omit the `name` field in this
+        /// Required. The requested alerting policy. You should omit the `name` field in this
         /// policy. The name will be returned in the new policy, including
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to delete. The format is:
+        /// Required. The alerting policy to delete. The format is:
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         ///
@@ -1155,7 +1155,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to delete. The format is:
+        /// Required. The alerting policy to delete. The format is:
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         ///
@@ -1177,7 +1177,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to delete. The format is:
+        /// Required. The alerting policy to delete. The format is:
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         ///
@@ -1199,7 +1199,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to delete. The format is:
+        /// Required. The alerting policy to delete. The format is:
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         ///
@@ -1224,7 +1224,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to delete. The format is:
+        /// Required. The alerting policy to delete. The format is:
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         ///
@@ -1246,7 +1246,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes an alerting policy.
         /// </summary>
         /// <param name="name">
-        /// The alerting policy to delete. The format is:
+        /// Required. The alerting policy to delete. The format is:
         ///
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         ///

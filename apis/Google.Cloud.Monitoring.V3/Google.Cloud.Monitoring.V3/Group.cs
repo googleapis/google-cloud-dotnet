@@ -25,15 +25,19 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvbW9uaXRvcmluZy92My9ncm91cC5wcm90bxIUZ29vZ2xlLm1v",
-            "bml0b3JpbmcudjMiZAoFR3JvdXASDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5",
-            "X25hbWUYAiABKAkSEwoLcGFyZW50X25hbWUYAyABKAkSDgoGZmlsdGVyGAUg",
-            "ASgJEhIKCmlzX2NsdXN0ZXIYBiABKAhCogEKGGNvbS5nb29nbGUubW9uaXRv",
-            "cmluZy52M0IKR3JvdXBQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL21vbml0b3JpbmcvdjM7bW9uaXRvcmluZ6oCGkdv",
-            "b2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0",
-            "b3JpbmdcVjNiBnByb3RvMw=="));
+            "bml0b3JpbmcudjMaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8igAIKBUdy",
+            "b3VwEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEhMKC3Bh",
+            "cmVudF9uYW1lGAMgASgJEg4KBmZpbHRlchgFIAEoCRISCgppc19jbHVzdGVy",
+            "GAYgASgIOpkB6kGVAQofbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Hcm91",
+            "cBIhcHJvamVjdHMve3Byb2plY3R9L2dyb3Vwcy97Z3JvdXB9Eitvcmdhbml6",
+            "YXRpb25zL3tvcmdhbml6YXRpb259L2dyb3Vwcy97Z3JvdXB9Eh9mb2xkZXJz",
+            "L3tmb2xkZXJ9L2dyb3Vwcy97Z3JvdXB9EgEqQqIBChhjb20uZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjNCCkdyb3VwUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3Jpbmeq",
+            "AhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxN",
+            "b25pdG9yaW5nXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Group), global::Google.Cloud.Monitoring.V3.Group.Parser, new[]{ "Name", "DisplayName", "ParentName", "Filter", "IsCluster" }, null, null, null)
           }));

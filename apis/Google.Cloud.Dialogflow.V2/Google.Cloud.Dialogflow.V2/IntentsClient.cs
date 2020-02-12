@@ -1751,7 +1751,7 @@ namespace Google.Cloud.Dialogflow.V2
                 new UpdateIntentRequest
                 {
                     Intent = gax::GaxPreconditions.CheckNotNull(intent, nameof(intent)),
-                    LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+                    LanguageCode = languageCode ?? "", // Optional
                 },
                 callSettings);
 
@@ -1810,7 +1810,7 @@ namespace Google.Cloud.Dialogflow.V2
                 new UpdateIntentRequest
                 {
                     Intent = gax::GaxPreconditions.CheckNotNull(intent, nameof(intent)),
-                    LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+                    LanguageCode = languageCode ?? "", // Optional
                 },
                 callSettings);
 
@@ -1845,7 +1845,7 @@ namespace Google.Cloud.Dialogflow.V2
                 new UpdateIntentRequest
                 {
                     Intent = gax::GaxPreconditions.CheckNotNull(intent, nameof(intent)),
-                    LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+                    LanguageCode = languageCode ?? "", // Optional
                     UpdateMask = updateMask, // Optional
                 },
                 callSettings);
@@ -1914,7 +1914,7 @@ namespace Google.Cloud.Dialogflow.V2
                 new UpdateIntentRequest
                 {
                     Intent = gax::GaxPreconditions.CheckNotNull(intent, nameof(intent)),
-                    LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+                    LanguageCode = languageCode ?? "", // Optional
                     UpdateMask = updateMask, // Optional
                 },
                 callSettings);
