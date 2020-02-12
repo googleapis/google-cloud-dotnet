@@ -176,6 +176,11 @@ namespace Google.Cloud.Spanner.Data
             {
                 try
                 {
+                    ParseCurrentDataSource();
+                    if (_instanceName == null && _databaseName == null)
+                    {
+                        return GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
+                    }
                     InstanceName instance = _instanceName ?? new InstanceName(_databaseName.ProjectId, _databaseName.InstanceId);
                     return GetOrAddValue(nameof(Host), () => InstanceHostManager.GetHost(instance) ?? SpannerClient.DefaultEndpoint.Host);
                 }
