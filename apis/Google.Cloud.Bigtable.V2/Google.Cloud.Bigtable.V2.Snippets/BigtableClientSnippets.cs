@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.GrpcCore;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Cloud.Bigtable.V2.IntegrationTests;
 using Google.Cloud.ClientTesting;
@@ -121,7 +122,8 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 PreferredMaxStreamsPerChannel = 4
             };
             string endpoint = BigtableServiceApiClient.DefaultEndpoint.ToString();
-            GcpCallInvoker callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
+            GcpCallInvoker callInvoker = new GcpCallInvoker(endpoint, credentials,
+                GrpcCoreAdapter.Instance.ConvertOptions(settings.CreateChannelOptions()));
 
             // These will share the same set of channels to the Bigtable service.
             BigtableClient client1 = new BigtableClientBuilder
@@ -144,7 +146,8 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Note that CreateChannelOptions() is an extension method which allows the receiver to be null,
             // and will just act as if the default settings were specified.
             settings = null;
-            callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
+            var channelOptions = settings.CreateChannelOptions();
+            callInvoker = new GcpCallInvoker(endpoint, credentials, GrpcCoreAdapter.Instance.ConvertOptions(channelOptions));
             BigtableClient client3 = new BigtableClientBuilder
             {
                 CallInvoker = callInvoker,
