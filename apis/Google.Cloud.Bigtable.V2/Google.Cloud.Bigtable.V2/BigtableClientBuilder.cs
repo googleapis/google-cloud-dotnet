@@ -54,5 +54,8 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc />
         protected override IReadOnlyList<string> GetDefaultScopes() => throw new NotImplementedException();
+
+        /// <inheritdoc />
+        protected override GrpcAdapter DefaultGrpcAdapter => throw new NotImplementedException();
     }
 }
