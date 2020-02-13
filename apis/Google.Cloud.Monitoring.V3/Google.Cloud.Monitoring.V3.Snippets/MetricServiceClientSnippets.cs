@@ -14,6 +14,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace Google.Cloud.Monitoring.V3
             // Sample: ListMetricDescriptors
             // Additional: ListMetricDescriptors(ProjectName,*,*,*)
             MetricServiceClient client = MetricServiceClient.Create();
-            ProjectName projectName = new ProjectName(projectId);
+            ProjectName projectName = ProjectName.FromProject(projectId);
             PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> metrics = client.ListMetricDescriptors(projectName);
             foreach (MetricDescriptor metric in metrics.Take(10))
             {
