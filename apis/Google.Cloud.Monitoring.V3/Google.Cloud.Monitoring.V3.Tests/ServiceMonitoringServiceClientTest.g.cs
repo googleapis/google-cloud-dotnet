@@ -14,696 +14,1421 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Monitoring.V3.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedServiceMonitoringServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedServiceMonitoringServiceClientTest
     {
-        [Fact]
-        public void CreateService()
+        [xunit::FactAttribute]
+        public void CreateServiceRequestObject()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            CreateServiceRequest expectedRequest = new CreateServiceRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Service = new Service(),
-            };
-            Service expectedResponse = new Service
-            {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateService(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Service service = new Service();
-            Service response = client.CreateService(parent, service);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateServiceAsync()
-        {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            CreateServiceRequest expectedRequest = new CreateServiceRequest
-            {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
-                Service = new Service(),
-            };
-            Service expectedResponse = new Service
-            {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Service>(Task.FromResult(expectedResponse), null, null, null, null));
-            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
-            Service service = new Service();
-            Service response = await client.CreateServiceAsync(parent, service);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateService2()
-        {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             CreateServiceRequest request = new CreateServiceRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Service = new Service(),
+                ServiceId = "service_id291edcb0",
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.CreateService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             Service response = client.CreateService(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateServiceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             CreateServiceRequest request = new CreateServiceRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+                ServiceId = "service_id291edcb0",
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.CreateServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.CreateServiceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateService()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Service = new Service(),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Service>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            Service response = await client.CreateServiceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Service response = client.CreateService(request.Parent, request.Service);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetService()
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            GetServiceRequest expectedRequest = new GetServiceRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.GetService(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceName name = new ServiceName("[PROJECT]", "[SERVICE]");
-            Service response = client.GetService(name);
-            Assert.Same(expectedResponse, response);
+            Service responseCallSettings = await client.CreateServiceAsync(request.Parent, request.Service, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.CreateServiceAsync(request.Parent, request.Service, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetServiceAsync()
+        [xunit::FactAttribute]
+        public void CreateServiceResourceNames1()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            GetServiceRequest expectedRequest = new GetServiceRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.GetServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Service>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceName name = new ServiceName("[PROJECT]", "[SERVICE]");
-            Service response = await client.GetServiceAsync(name);
-            Assert.Same(expectedResponse, response);
+            Service response = client.CreateService(request.ParentAsProjectName, request.Service);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetService2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceResourceNames1Async()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.CreateServiceAsync(request.ParentAsProjectName, request.Service, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.CreateServiceAsync(request.ParentAsProjectName, request.Service, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceResourceNames2()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service response = client.CreateService(request.ParentAsOrganizationName, request.Service);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceResourceNames2Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.CreateServiceAsync(request.ParentAsOrganizationName, request.Service, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.CreateServiceAsync(request.ParentAsOrganizationName, request.Service, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceResourceNames3()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service response = client.CreateService(request.ParentAsFolderName, request.Service);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceResourceNames3Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.CreateServiceAsync(request.ParentAsFolderName, request.Service, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.CreateServiceAsync(request.ParentAsFolderName, request.Service, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceResourceNames4()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service response = client.CreateService(request.ParentAsResourceName, request.Service);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceResourceNames4Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceRequest request = new CreateServiceRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Service = new Service(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.CreateServiceAsync(request.ParentAsResourceName, request.Service, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.CreateServiceAsync(request.ParentAsResourceName, request.Service, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetServiceRequestObject()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             GetServiceRequest request = new GetServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.GetService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             Service response = client.GetService(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetServiceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             GetServiceRequest request = new GetServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.GetServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Service>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            Service response = await client.GetServiceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Service responseCallSettings = await client.GetServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.GetServiceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateService()
+        [xunit::FactAttribute]
+        public void GetService()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            UpdateServiceRequest expectedRequest = new UpdateServiceRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceRequest request = new GetServiceRequest
             {
-                Service = new Service(),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.UpdateService(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            Service service = new Service();
-            Service response = client.UpdateService(service);
-            Assert.Same(expectedResponse, response);
+            Service response = client.GetService(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateServiceAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            UpdateServiceRequest expectedRequest = new UpdateServiceRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceRequest request = new GetServiceRequest
             {
-                Service = new Service(),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.UpdateServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Service>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            Service service = new Service();
-            Service response = await client.UpdateServiceAsync(service);
-            Assert.Same(expectedResponse, response);
+            Service responseCallSettings = await client.GetServiceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.GetServiceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateService2()
+        [xunit::FactAttribute]
+        public void GetServiceResourceNames1()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceRequest request = new GetServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service response = client.GetService(request.ServiceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceResourceNames1Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceRequest request = new GetServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.GetServiceAsync(request.ServiceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.GetServiceAsync(request.ServiceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetServiceResourceNames2()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceRequest request = new GetServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service response = client.GetService(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceResourceNames2Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceRequest request = new GetServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.GetServiceAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.GetServiceAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateServiceRequestObject()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.UpdateService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             Service response = client.UpdateService(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateServiceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateServiceRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            UpdateServiceRequest request = new UpdateServiceRequest
+            {
+                Service = new Service(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Service expectedResponse = new Service
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            Service responseCallSettings = await client.UpdateServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.UpdateServiceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateService()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
             };
             Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                DisplayName = "displayName1615086568",
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Service>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            Service response = await client.UpdateServiceAsync(request);
-            Assert.Same(expectedResponse, response);
+            Service response = client.UpdateService(request.Service);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteService()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateServiceAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            DeleteServiceRequest expectedRequest = new DeleteServiceRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            UpdateServiceRequest request = new UpdateServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                Service = new Service(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteService(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceName name = new ServiceName("[PROJECT]", "[SERVICE]");
-            client.DeleteService(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteServiceAsync()
-        {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            DeleteServiceRequest expectedRequest = new DeleteServiceRequest
+            Service expectedResponse = new Service
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                DisplayName = "display_name137f65c2",
+                Custom = new Service.Types.Custom(),
+                AppEngine = new Service.Types.AppEngine(),
+                CloudEndpoints = new Service.Types.CloudEndpoints(),
+                ClusterIstio = new Service.Types.ClusterIstio(),
+                Telemetry = new Service.Types.Telemetry(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceName name = new ServiceName("[PROJECT]", "[SERVICE]");
-            await client.DeleteServiceAsync(name);
+            Service responseCallSettings = await client.UpdateServiceAsync(request.Service, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Service responseCancellationToken = await client.UpdateServiceAsync(request.Service, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteService2()
+        [xunit::FactAttribute]
+        public void DeleteServiceRequestObject()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             DeleteServiceRequest request = new DeleteServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteService(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteServiceAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             DeleteServiceRequest request = new DeleteServiceRequest
             {
-                ServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteServiceAsync(request);
+            await client.DeleteServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateServiceLevelObjective()
+        [xunit::FactAttribute]
+        public void DeleteService()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            CreateServiceLevelObjectiveRequest expectedRequest = new CreateServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceRequest request = new DeleteServiceRequest
             {
-                ParentAsServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                ServiceLevelObjective = new ServiceLevelObjective(),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
-            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
-            {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
-            };
-            mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceName parent = new ServiceName("[PROJECT]", "[SERVICE]");
-            ServiceLevelObjective serviceLevelObjective = new ServiceLevelObjective();
-            ServiceLevelObjective response = client.CreateServiceLevelObjective(parent, serviceLevelObjective);
-            Assert.Same(expectedResponse, response);
+            client.DeleteService(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateServiceLevelObjectiveAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            CreateServiceLevelObjectiveRequest expectedRequest = new CreateServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceRequest request = new DeleteServiceRequest
             {
-                ParentAsServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
-                ServiceLevelObjective = new ServiceLevelObjective(),
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
             };
-            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
-            {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
-            };
-            mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServiceLevelObjective>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceName parent = new ServiceName("[PROJECT]", "[SERVICE]");
-            ServiceLevelObjective serviceLevelObjective = new ServiceLevelObjective();
-            ServiceLevelObjective response = await client.CreateServiceLevelObjectiveAsync(parent, serviceLevelObjective);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteServiceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateServiceLevelObjective2()
+        [xunit::FactAttribute]
+        public void DeleteServiceResourceNames1()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceRequest request = new DeleteServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteService(request.ServiceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceResourceNames1Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceRequest request = new DeleteServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteServiceAsync(request.ServiceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceAsync(request.ServiceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteServiceResourceNames2()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceRequest request = new DeleteServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteService(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceResourceNames2Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceRequest request = new DeleteServiceRequest
+            {
+                ServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteServiceAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceLevelObjectiveRequestObject()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
             {
-                ParentAsServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
                 ServiceLevelObjective = new ServiceLevelObjective(),
+                ServiceLevelObjectiveId = "service_level_objective_ideb3a3c26",
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             ServiceLevelObjective response = client.CreateServiceLevelObjective(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateServiceLevelObjectiveAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceLevelObjectiveRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
             {
-                ParentAsServiceName = new ServiceName("[PROJECT]", "[SERVICE]"),
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
+                ServiceLevelObjectiveId = "service_level_objective_ideb3a3c26",
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective responseCallSettings = await client.CreateServiceLevelObjectiveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.CreateServiceLevelObjectiveAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceLevelObjective()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
                 ServiceLevelObjective = new ServiceLevelObjective(),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServiceLevelObjective>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjective response = await client.CreateServiceLevelObjectiveAsync(request);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective response = client.CreateServiceLevelObjective(request.Parent, request.ServiceLevelObjective);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetServiceLevelObjective()
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceLevelObjectiveAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            GetServiceLevelObjectiveRequest expectedRequest = new GetServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.GetServiceLevelObjective(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjectiveName name = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]");
-            ServiceLevelObjective response = client.GetServiceLevelObjective(name);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective responseCallSettings = await client.CreateServiceLevelObjectiveAsync(request.Parent, request.ServiceLevelObjective, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.CreateServiceLevelObjectiveAsync(request.Parent, request.ServiceLevelObjective, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetServiceLevelObjectiveAsync()
+        [xunit::FactAttribute]
+        public void CreateServiceLevelObjectiveResourceNames1()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            GetServiceLevelObjectiveRequest expectedRequest = new GetServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServiceLevelObjective>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjectiveName name = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]");
-            ServiceLevelObjective response = await client.GetServiceLevelObjectiveAsync(name);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective response = client.CreateServiceLevelObjective(request.ParentAsServiceName, request.ServiceLevelObjective);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetServiceLevelObjective2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceLevelObjectiveResourceNames1Async()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective responseCallSettings = await client.CreateServiceLevelObjectiveAsync(request.ParentAsServiceName, request.ServiceLevelObjective, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.CreateServiceLevelObjectiveAsync(request.ParentAsServiceName, request.ServiceLevelObjective, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceLevelObjectiveResourceNames2()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective response = client.CreateServiceLevelObjective(request.ParentAsResourceName, request.ServiceLevelObjective);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceLevelObjectiveResourceNames2Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            CreateServiceLevelObjectiveRequest request = new CreateServiceLevelObjectiveRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectService("[PROJECT]", "[SERVICE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective responseCallSettings = await client.CreateServiceLevelObjectiveAsync(request.ParentAsResourceName, request.ServiceLevelObjective, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.CreateServiceLevelObjectiveAsync(request.ParentAsResourceName, request.ServiceLevelObjective, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetServiceLevelObjectiveRequestObject()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                View = ServiceLevelObjective.Types.View.Full,
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             ServiceLevelObjective response = client.GetServiceLevelObjective(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetServiceLevelObjectiveAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceLevelObjectiveRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                View = ServiceLevelObjective.Types.View.Full,
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServiceLevelObjective>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjective response = await client.GetServiceLevelObjectiveAsync(request);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective responseCallSettings = await client.GetServiceLevelObjectiveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.GetServiceLevelObjectiveAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateServiceLevelObjective()
+        [xunit::FactAttribute]
+        public void GetServiceLevelObjective()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            UpdateServiceLevelObjectiveRequest expectedRequest = new UpdateServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
             {
-                ServiceLevelObjective = new ServiceLevelObjective(),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjective(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjective serviceLevelObjective = new ServiceLevelObjective();
-            ServiceLevelObjective response = client.UpdateServiceLevelObjective(serviceLevelObjective);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective response = client.GetServiceLevelObjective(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateServiceLevelObjectiveAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceLevelObjectiveAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            UpdateServiceLevelObjectiveRequest expectedRequest = new UpdateServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
             {
-                ServiceLevelObjective = new ServiceLevelObjective(),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjectiveAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServiceLevelObjective>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjective serviceLevelObjective = new ServiceLevelObjective();
-            ServiceLevelObjective response = await client.UpdateServiceLevelObjectiveAsync(serviceLevelObjective);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective responseCallSettings = await client.GetServiceLevelObjectiveAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.GetServiceLevelObjectiveAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateServiceLevelObjective2()
+        [xunit::FactAttribute]
+        public void GetServiceLevelObjectiveResourceNames1()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective response = client.GetServiceLevelObjective(request.ServiceLevelObjectiveName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceLevelObjectiveResourceNames1Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective responseCallSettings = await client.GetServiceLevelObjectiveAsync(request.ServiceLevelObjectiveName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.GetServiceLevelObjectiveAsync(request.ServiceLevelObjectiveName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetServiceLevelObjectiveResourceNames2()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective response = client.GetServiceLevelObjective(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetServiceLevelObjectiveResourceNames2Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            GetServiceLevelObjectiveRequest request = new GetServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective responseCallSettings = await client.GetServiceLevelObjectiveAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.GetServiceLevelObjectiveAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateServiceLevelObjectiveRequestObject()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceLevelObjectiveRequest request = new UpdateServiceLevelObjectiveRequest
             {
                 ServiceLevelObjective = new ServiceLevelObjective(),
+                UpdateMask = new wkt::FieldMask(),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjective(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             ServiceLevelObjective response = client.UpdateServiceLevelObjective(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateServiceLevelObjectiveAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateServiceLevelObjectiveRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            UpdateServiceLevelObjectiveRequest request = new UpdateServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjective = new ServiceLevelObjective(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            ServiceLevelObjective responseCallSettings = await client.UpdateServiceLevelObjectiveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.UpdateServiceLevelObjectiveAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateServiceLevelObjective()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceLevelObjectiveRequest request = new UpdateServiceLevelObjectiveRequest
             {
                 ServiceLevelObjective = new ServiceLevelObjective(),
             };
             ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
-                DisplayName = "displayName1615086568",
-                Goal = 317825.0,
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjectiveAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ServiceLevelObjective>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjective response = await client.UpdateServiceLevelObjectiveAsync(request);
-            Assert.Same(expectedResponse, response);
+            ServiceLevelObjective response = client.UpdateServiceLevelObjective(request.ServiceLevelObjective);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteServiceLevelObjective()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateServiceLevelObjectiveAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            DeleteServiceLevelObjectiveRequest expectedRequest = new DeleteServiceLevelObjectiveRequest
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            UpdateServiceLevelObjectiveRequest request = new UpdateServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelObjective = new ServiceLevelObjective(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjective(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjectiveName name = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]");
-            client.DeleteServiceLevelObjective(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteServiceLevelObjectiveAsync()
-        {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
-            DeleteServiceLevelObjectiveRequest expectedRequest = new DeleteServiceLevelObjectiveRequest
+            ServiceLevelObjective expectedResponse = new ServiceLevelObjective
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelIndicator = new ServiceLevelIndicator(),
+                Goal = 9.5452680033302554E+17,
+                RollingPeriod = new wkt::Duration(),
+                CalendarPeriod = gt::CalendarPeriod.Month,
+                DisplayName = "display_name137f65c2",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjectiveAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            ServiceLevelObjectiveName name = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]");
-            await client.DeleteServiceLevelObjectiveAsync(name);
+            ServiceLevelObjective responseCallSettings = await client.UpdateServiceLevelObjectiveAsync(request.ServiceLevelObjective, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ServiceLevelObjective responseCancellationToken = await client.UpdateServiceLevelObjectiveAsync(request.ServiceLevelObjective, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteServiceLevelObjective2()
+        [xunit::FactAttribute]
+        public void DeleteServiceLevelObjectiveRequestObject()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjective(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteServiceLevelObjective(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteServiceLevelObjectiveAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceLevelObjectiveRequestObjectAsync()
         {
-            Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(MockBehavior.Strict);
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
             DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
             {
-                ServiceLevelObjectiveName = new ServiceLevelObjectiveName("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjectiveAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteServiceLevelObjectiveAsync(request);
+            await client.DeleteServiceLevelObjectiveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceLevelObjectiveAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteServiceLevelObjective()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteServiceLevelObjective(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceLevelObjectiveAsync()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteServiceLevelObjectiveAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceLevelObjectiveAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteServiceLevelObjectiveResourceNames1()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteServiceLevelObjective(request.ServiceLevelObjectiveName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceLevelObjectiveResourceNames1Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteServiceLevelObjectiveAsync(request.ServiceLevelObjectiveName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceLevelObjectiveAsync(request.ServiceLevelObjectiveName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteServiceLevelObjectiveResourceNames2()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteServiceLevelObjective(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteServiceLevelObjectiveResourceNames2Async()
+        {
+            moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient> mockGrpcClient = new moq::Mock<ServiceMonitoringService.ServiceMonitoringServiceClient>(moq::MockBehavior.Strict);
+            DeleteServiceLevelObjectiveRequest request = new DeleteServiceLevelObjectiveRequest
+            {
+                ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteServiceLevelObjectiveAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteServiceLevelObjectiveAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

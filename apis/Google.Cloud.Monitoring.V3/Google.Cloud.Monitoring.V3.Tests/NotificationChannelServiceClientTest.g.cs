@@ -14,728 +14,1941 @@
 
 // Generated code. DO NOT EDIT!
 
+using ga = Google.Api;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Monitoring.V3.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedNotificationChannelServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedNotificationChannelServiceClientTest
     {
-        [Fact]
-        public void GetNotificationChannelDescriptor()
+        [xunit::FactAttribute]
+        public void GetNotificationChannelDescriptorRequestObject()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            GetNotificationChannelDescriptorRequest expectedRequest = new GetNotificationChannelDescriptorRequest
-            {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
-            };
-            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
-            NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetNotificationChannelDescriptorAsync()
-        {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            GetNotificationChannelDescriptorRequest expectedRequest = new GetNotificationChannelDescriptorRequest
-            {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
-            };
-            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannelDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelDescriptorName name = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
-            NotificationChannelDescriptor response = await client.GetNotificationChannelDescriptorAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetNotificationChannelDescriptor2()
-        {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
             };
             NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNotificationChannelDescriptorAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelDescriptorRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelDescriptorName = new NotificationChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
             };
             NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannelDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelDescriptor response = await client.GetNotificationChannelDescriptorAsync(request);
-            Assert.Same(expectedResponse, response);
+            NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetNotificationChannel()
+        [xunit::FactAttribute]
+        public void GetNotificationChannelDescriptor()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            GetNotificationChannelRequest expectedRequest = new GetNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
             };
-            NotificationChannel expectedResponse = new NotificationChannel
+            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannel(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            NotificationChannel response = client.GetNotificationChannel(name);
-            Assert.Same(expectedResponse, response);
+            NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNotificationChannelAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelDescriptorAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            GetNotificationChannelRequest expectedRequest = new GetNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
             };
-            NotificationChannel expectedResponse = new NotificationChannel
+            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            NotificationChannel response = await client.GetNotificationChannelAsync(name);
-            Assert.Same(expectedResponse, response);
+            NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetNotificationChannel2()
+        [xunit::FactAttribute]
+        public void GetNotificationChannelDescriptorResourceNames1()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
+            {
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+            };
+            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request.NotificationChannelDescriptorName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelDescriptorResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
+            {
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+            };
+            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request.NotificationChannelDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request.NotificationChannelDescriptorName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationChannelDescriptorResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
+            {
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+            };
+            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelDescriptor response = client.GetNotificationChannelDescriptor(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelDescriptorResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelDescriptorRequest request = new GetNotificationChannelDescriptorRequest
+            {
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+            };
+            NotificationChannelDescriptor expectedResponse = new NotificationChannelDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannelDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannelDescriptor responseCallSettings = await client.GetNotificationChannelDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannelDescriptor responseCancellationToken = await client.GetNotificationChannelDescriptorAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationChannelRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             GetNotificationChannelRequest request = new GetNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannel(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             NotificationChannel response = client.GetNotificationChannel(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNotificationChannelAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             GetNotificationChannelRequest request = new GetNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannel response = await client.GetNotificationChannelAsync(request);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateNotificationChannel()
+        [xunit::FactAttribute]
+        public void GetNotificationChannel()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            CreateNotificationChannelRequest expectedRequest = new CreateNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelRequest request = new GetNotificationChannelRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                NotificationChannel = new NotificationChannel(),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.CreateNotificationChannel(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            NotificationChannel notificationChannel = new NotificationChannel();
-            NotificationChannel response = client.CreateNotificationChannel(name, notificationChannel);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel response = client.GetNotificationChannel(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateNotificationChannelAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            CreateNotificationChannelRequest expectedRequest = new CreateNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelRequest request = new GetNotificationChannelRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                NotificationChannel = new NotificationChannel(),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            NotificationChannel notificationChannel = new NotificationChannel();
-            NotificationChannel response = await client.CreateNotificationChannelAsync(name, notificationChannel);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateNotificationChannel2()
+        [xunit::FactAttribute]
+        public void GetNotificationChannelResourceNames1()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelRequest request = new GetNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.GetNotificationChannel(request.NotificationChannelName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelRequest request = new GetNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request.NotificationChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request.NotificationChannelName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationChannelResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelRequest request = new GetNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.GetNotificationChannel(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelRequest request = new GetNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.GetNotificationChannelAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.GetNotificationChannelAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationChannelRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             NotificationChannel response = client.CreateNotificationChannel(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateNotificationChannelAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationChannelRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannel response = await client.CreateNotificationChannelAsync(request);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateNotificationChannel()
+        [xunit::FactAttribute]
+        public void CreateNotificationChannel()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            UpdateNotificationChannelRequest expectedRequest = new UpdateNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
             {
-                UpdateMask = new FieldMask(),
                 NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.UpdateNotificationChannel(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            FieldMask updateMask = new FieldMask();
-            NotificationChannel notificationChannel = new NotificationChannel();
-            NotificationChannel response = client.UpdateNotificationChannel(updateMask, notificationChannel);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel response = client.CreateNotificationChannel(request.Name, request.NotificationChannel);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateNotificationChannelAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationChannelAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            UpdateNotificationChannelRequest expectedRequest = new UpdateNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
             {
-                UpdateMask = new FieldMask(),
                 NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.UpdateNotificationChannelAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            FieldMask updateMask = new FieldMask();
-            NotificationChannel notificationChannel = new NotificationChannel();
-            NotificationChannel response = await client.UpdateNotificationChannelAsync(updateMask, notificationChannel);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.Name, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.Name, request.NotificationChannel, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateNotificationChannel2()
+        [xunit::FactAttribute]
+        public void CreateNotificationChannelResourceNames1()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.CreateNotificationChannel(request.ProjectName, request.NotificationChannel);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationChannelResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.ProjectName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.ProjectName, request.NotificationChannel, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationChannelResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.CreateNotificationChannel(request.OrganizationName, request.NotificationChannel);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationChannelResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.OrganizationName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.OrganizationName, request.NotificationChannel, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationChannelResourceNames3()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.CreateNotificationChannel(request.FolderName, request.NotificationChannel);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationChannelResourceNames3Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.FolderName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.FolderName, request.NotificationChannel, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationChannelResourceNames4()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.CreateNotificationChannel(request.ResourceName, request.NotificationChannel);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationChannelResourceNames4Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            CreateNotificationChannelRequest request = new CreateNotificationChannelRequest
+            {
+                NotificationChannel = new NotificationChannel(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.CreateNotificationChannelAsync(request.ResourceName, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.CreateNotificationChannelAsync(request.ResourceName, request.NotificationChannel, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateNotificationChannelRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             UpdateNotificationChannelRequest request = new UpdateNotificationChannelRequest
             {
+                UpdateMask = new wkt::FieldMask(),
                 NotificationChannel = new NotificationChannel(),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.UpdateNotificationChannel(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             NotificationChannel response = client.UpdateNotificationChannel(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateNotificationChannelAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateNotificationChannelRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             UpdateNotificationChannelRequest request = new UpdateNotificationChannelRequest
             {
+                UpdateMask = new wkt::FieldMask(),
                 NotificationChannel = new NotificationChannel(),
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.UpdateNotificationChannelAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannel response = await client.UpdateNotificationChannelAsync(request);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel responseCallSettings = await client.UpdateNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.UpdateNotificationChannelAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteNotificationChannel()
+        [xunit::FactAttribute]
+        public void UpdateNotificationChannel()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            DeleteNotificationChannelRequest expectedRequest = new DeleteNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            UpdateNotificationChannelRequest request = new UpdateNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
-                Force = false,
+                UpdateMask = new wkt::FieldMask(),
+                NotificationChannel = new NotificationChannel(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteNotificationChannel(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            bool force = false;
-            client.DeleteNotificationChannel(name, force);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteNotificationChannelAsync()
-        {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            DeleteNotificationChannelRequest expectedRequest = new DeleteNotificationChannelRequest
+            NotificationChannel expectedResponse = new NotificationChannel
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
-                Force = false,
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            bool force = false;
-            await client.DeleteNotificationChannelAsync(name, force);
+            NotificationChannel response = client.UpdateNotificationChannel(request.UpdateMask, request.NotificationChannel);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteNotificationChannel2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateNotificationChannelAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            UpdateNotificationChannelRequest request = new UpdateNotificationChannelRequest
+            {
+                UpdateMask = new wkt::FieldMask(),
+                NotificationChannel = new NotificationChannel(),
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.UpdateNotificationChannelAsync(request.UpdateMask, request.NotificationChannel, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.UpdateNotificationChannelAsync(request.UpdateMask, request.NotificationChannel, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteNotificationChannelRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteNotificationChannel(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteNotificationChannelAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationChannelRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteNotificationChannelAsync(request);
+            await client.DeleteNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationChannelAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SendNotificationChannelVerificationCode()
+        [xunit::FactAttribute]
+        public void DeleteNotificationChannel()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            SendNotificationChannelVerificationCodeRequest expectedRequest = new SendNotificationChannelVerificationCodeRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            client.SendNotificationChannelVerificationCode(name);
+            client.DeleteNotificationChannel(request.Name, request.Force);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SendNotificationChannelVerificationCodeAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationChannelAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            SendNotificationChannelVerificationCodeRequest expectedRequest = new SendNotificationChannelVerificationCodeRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            await client.SendNotificationChannelVerificationCodeAsync(name);
+            await client.DeleteNotificationChannelAsync(request.Name, request.Force, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationChannelAsync(request.Name, request.Force, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void SendNotificationChannelVerificationCode2()
+        [xunit::FactAttribute]
+        public void DeleteNotificationChannelResourceNames1()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteNotificationChannel(request.NotificationChannelName, request.Force);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationChannelResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteNotificationChannelAsync(request.NotificationChannelName, request.Force, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationChannelAsync(request.NotificationChannelName, request.Force, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteNotificationChannelResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteNotificationChannel(request.ResourceName, request.Force);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationChannelResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            DeleteNotificationChannelRequest request = new DeleteNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Force = true,
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteNotificationChannelAsync(request.ResourceName, request.Force, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationChannelAsync(request.ResourceName, request.Force, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SendNotificationChannelVerificationCodeRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             client.SendNotificationChannelVerificationCode(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task SendNotificationChannelVerificationCodeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task SendNotificationChannelVerificationCodeRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            await client.SendNotificationChannelVerificationCodeAsync(request);
+            await client.SendNotificationChannelVerificationCodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SendNotificationChannelVerificationCodeAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetNotificationChannelVerificationCode()
+        [xunit::FactAttribute]
+        public void SendNotificationChannelVerificationCode()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            GetNotificationChannelVerificationCodeRequest expectedRequest = new GetNotificationChannelVerificationCodeRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
-            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
-            {
-                Code = "code3059181",
-            };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(name);
-            Assert.Same(expectedResponse, response);
+            client.SendNotificationChannelVerificationCode(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNotificationChannelVerificationCodeAsync()
+        [xunit::FactAttribute]
+        public async stt::Task SendNotificationChannelVerificationCodeAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            GetNotificationChannelVerificationCodeRequest expectedRequest = new GetNotificationChannelVerificationCodeRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
-            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
-            {
-                Code = "code3059181",
-            };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            GetNotificationChannelVerificationCodeResponse response = await client.GetNotificationChannelVerificationCodeAsync(name);
-            Assert.Same(expectedResponse, response);
+            await client.SendNotificationChannelVerificationCodeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SendNotificationChannelVerificationCodeAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetNotificationChannelVerificationCode2()
+        [xunit::FactAttribute]
+        public void SendNotificationChannelVerificationCodeResourceNames1()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            client.SendNotificationChannelVerificationCode(request.NotificationChannelName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SendNotificationChannelVerificationCodeResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            await client.SendNotificationChannelVerificationCodeAsync(request.NotificationChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SendNotificationChannelVerificationCodeAsync(request.NotificationChannelName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SendNotificationChannelVerificationCodeResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            client.SendNotificationChannelVerificationCode(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SendNotificationChannelVerificationCodeResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            SendNotificationChannelVerificationCodeRequest request = new SendNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SendNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            await client.SendNotificationChannelVerificationCodeAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SendNotificationChannelVerificationCodeAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationChannelVerificationCodeRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                ExpireTime = new wkt::Timestamp(),
             };
             GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
             {
-                Code = "code3059181",
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetNotificationChannelVerificationCodeAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelVerificationCodeRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                ExpireTime = new wkt::Timestamp(),
             };
             GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
             {
-                Code = "code3059181",
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            GetNotificationChannelVerificationCodeResponse response = await client.GetNotificationChannelVerificationCodeAsync(request);
-            Assert.Same(expectedResponse, response);
+            GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void VerifyNotificationChannel()
+        [xunit::FactAttribute]
+        public void GetNotificationChannelVerificationCode()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            VerifyNotificationChannelRequest expectedRequest = new VerifyNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
-                Code = "code3059181",
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
-            NotificationChannel expectedResponse = new NotificationChannel
+            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.VerifyNotificationChannel(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            string code = "code3059181";
-            NotificationChannel response = client.VerifyNotificationChannel(name, code);
-            Assert.Same(expectedResponse, response);
+            GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task VerifyNotificationChannelAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelVerificationCodeAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
-            VerifyNotificationChannelRequest expectedRequest = new VerifyNotificationChannelRequest
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
-                Code = "code3059181",
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
             };
-            NotificationChannel expectedResponse = new NotificationChannel
+            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
             };
-            mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannelName name = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]");
-            string code = "code3059181";
-            NotificationChannel response = await client.VerifyNotificationChannelAsync(name, code);
-            Assert.Same(expectedResponse, response);
+            GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void VerifyNotificationChannel2()
+        [xunit::FactAttribute]
+        public void GetNotificationChannelVerificationCodeResourceNames1()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
+            {
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request.NotificationChannelName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelVerificationCodeResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
+            {
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request.NotificationChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request.NotificationChannelName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationChannelVerificationCodeResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
+            {
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCode(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            GetNotificationChannelVerificationCodeResponse response = client.GetNotificationChannelVerificationCode(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationChannelVerificationCodeResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            GetNotificationChannelVerificationCodeRequest request = new GetNotificationChannelVerificationCodeRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+            };
+            GetNotificationChannelVerificationCodeResponse expectedResponse = new GetNotificationChannelVerificationCodeResponse
+            {
+                Code = "code946733c1",
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationChannelVerificationCodeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetNotificationChannelVerificationCodeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            GetNotificationChannelVerificationCodeResponse responseCallSettings = await client.GetNotificationChannelVerificationCodeAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetNotificationChannelVerificationCodeResponse responseCancellationToken = await client.GetNotificationChannelVerificationCodeAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void VerifyNotificationChannelRequestObject()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
-                Code = "code3059181",
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
             NotificationChannel response = client.VerifyNotificationChannel(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task VerifyNotificationChannelAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task VerifyNotificationChannelRequestObjectAsync()
         {
-            Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new Mock<NotificationChannelService.NotificationChannelServiceClient>(MockBehavior.Strict);
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
             VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
             {
-                NotificationChannelName = new NotificationChannelName("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
-                Code = "code3059181",
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
             };
             NotificationChannel expectedResponse = new NotificationChannel
             {
-                Type = "type3575610",
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
             };
-            mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<NotificationChannel>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
-            NotificationChannel response = await client.VerifyNotificationChannelAsync(request);
-            Assert.Same(expectedResponse, response);
+            NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void VerifyNotificationChannel()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.VerifyNotificationChannel(request.Name, request.Code);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task VerifyNotificationChannelAsync()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request.Name, request.Code, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request.Name, request.Code, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void VerifyNotificationChannelResourceNames1()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.VerifyNotificationChannel(request.NotificationChannelName, request.Code);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task VerifyNotificationChannelResourceNames1Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request.NotificationChannelName, request.Code, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request.NotificationChannelName, request.Code, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void VerifyNotificationChannelResourceNames2()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel response = client.VerifyNotificationChannel(request.ResourceName, request.Code);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task VerifyNotificationChannelResourceNames2Async()
+        {
+            moq::Mock<NotificationChannelService.NotificationChannelServiceClient> mockGrpcClient = new moq::Mock<NotificationChannelService.NotificationChannelServiceClient>(moq::MockBehavior.Strict);
+            VerifyNotificationChannelRequest request = new VerifyNotificationChannelRequest
+            {
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                Code = "code946733c1",
+            };
+            NotificationChannel expectedResponse = new NotificationChannel
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                NotificationChannelName = NotificationChannelName.FromProjectNotificationChannel("[PROJECT]", "[NOTIFICATION_CHANNEL]"),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VerificationStatus = NotificationChannel.Types.VerificationStatus.Unspecified,
+                Enabled = new bool?(),
+            };
+            mockGrpcClient.Setup(x => x.VerifyNotificationChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationChannel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            NotificationChannelServiceClient client = new NotificationChannelServiceClientImpl(mockGrpcClient.Object, null);
+            NotificationChannel responseCallSettings = await client.VerifyNotificationChannelAsync(request.ResourceName, request.Code, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationChannel responseCancellationToken = await client.VerifyNotificationChannelAsync(request.ResourceName, request.Code, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

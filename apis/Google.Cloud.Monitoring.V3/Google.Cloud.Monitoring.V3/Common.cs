@@ -67,10 +67,10 @@ namespace Google.Cloud.Monitoring.V3 {
             "aW5nXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), typeof(global::Google.Cloud.Monitoring.V3.ServiceTier), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TypedValue), global::Google.Cloud.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeInterval), global::Google.Cloud.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Aggregation), global::Google.Cloud.Monitoring.V3.Aggregation.Parser, new[]{ "AlignmentPeriod", "PerSeriesAligner", "CrossSeriesReducer", "GroupByFields" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner), typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) }, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), typeof(global::Google.Cloud.Monitoring.V3.ServiceTier), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TypedValue), global::Google.Cloud.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeInterval), global::Google.Cloud.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Aggregation), global::Google.Cloud.Monitoring.V3.Aggregation.Parser, new[]{ "AlignmentPeriod", "PerSeriesAligner", "CrossSeriesReducer", "GroupByFields" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner), typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) }, null, null)
           }));
     }
     #endregion
@@ -741,7 +741,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "per_series_aligner" field.</summary>
     public const int PerSeriesAlignerFieldNumber = 2;
-    private global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner perSeriesAligner_ = 0;
+    private global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner perSeriesAligner_ = global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner.AlignNone;
     /// <summary>
     /// An `Aligner` describes how to bring the data points in a single
     /// time series into temporal alignment. Except for `ALIGN_NONE`, all
@@ -770,7 +770,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "cross_series_reducer" field.</summary>
     public const int CrossSeriesReducerFieldNumber = 4;
-    private global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer crossSeriesReducer_ = 0;
+    private global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer crossSeriesReducer_ = global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer.ReduceNone;
     /// <summary>
     /// The reduction operation to be used to combine time series into a single
     /// time series, where the value of each data point in the resulting series is
@@ -845,8 +845,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (alignmentPeriod_ != null) hash ^= AlignmentPeriod.GetHashCode();
-      if (PerSeriesAligner != 0) hash ^= PerSeriesAligner.GetHashCode();
-      if (CrossSeriesReducer != 0) hash ^= CrossSeriesReducer.GetHashCode();
+      if (PerSeriesAligner != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner.AlignNone) hash ^= PerSeriesAligner.GetHashCode();
+      if (CrossSeriesReducer != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer.ReduceNone) hash ^= CrossSeriesReducer.GetHashCode();
       hash ^= groupByFields_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -865,11 +865,11 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(10);
         output.WriteMessage(AlignmentPeriod);
       }
-      if (PerSeriesAligner != 0) {
+      if (PerSeriesAligner != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner.AlignNone) {
         output.WriteRawTag(16);
         output.WriteEnum((int) PerSeriesAligner);
       }
-      if (CrossSeriesReducer != 0) {
+      if (CrossSeriesReducer != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer.ReduceNone) {
         output.WriteRawTag(32);
         output.WriteEnum((int) CrossSeriesReducer);
       }
@@ -885,10 +885,10 @@ namespace Google.Cloud.Monitoring.V3 {
       if (alignmentPeriod_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AlignmentPeriod);
       }
-      if (PerSeriesAligner != 0) {
+      if (PerSeriesAligner != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner.AlignNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PerSeriesAligner);
       }
-      if (CrossSeriesReducer != 0) {
+      if (CrossSeriesReducer != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer.ReduceNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CrossSeriesReducer);
       }
       size += groupByFields_.CalculateSize(_repeated_groupByFields_codec);
@@ -909,10 +909,10 @@ namespace Google.Cloud.Monitoring.V3 {
         }
         AlignmentPeriod.MergeFrom(other.AlignmentPeriod);
       }
-      if (other.PerSeriesAligner != 0) {
+      if (other.PerSeriesAligner != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner.AlignNone) {
         PerSeriesAligner = other.PerSeriesAligner;
       }
-      if (other.CrossSeriesReducer != 0) {
+      if (other.CrossSeriesReducer != global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer.ReduceNone) {
         CrossSeriesReducer = other.CrossSeriesReducer;
       }
       groupByFields_.Add(other.groupByFields_);

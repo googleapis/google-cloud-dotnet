@@ -14,369 +14,997 @@
 
 // Generated code. DO NOT EDIT!
 
-// Do not warn when using obsolete members
-#pragma warning disable CS0612
+using ga = Google.Api;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
 
 namespace Google.Cloud.Monitoring.V3.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedUptimeCheckServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedUptimeCheckServiceClientTest
     {
-        [Fact]
-        public void GetUptimeCheckConfig()
+        [xunit::FactAttribute]
+        public void GetUptimeCheckConfigRequestObject()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            GetUptimeCheckConfigRequest expectedRequest = new GetUptimeCheckConfigRequest
-            {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
-            };
-            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
-            {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
-            };
-            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
-            UptimeCheckConfig response = client.GetUptimeCheckConfig(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetUptimeCheckConfigAsync()
-        {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            GetUptimeCheckConfigRequest expectedRequest = new GetUptimeCheckConfigRequest
-            {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
-            };
-            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
-            {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
-            };
-            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
-            UptimeCheckConfig response = await client.GetUptimeCheckConfigAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetUptimeCheckConfig2()
-        {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             UptimeCheckConfig response = client.GetUptimeCheckConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetUptimeCheckConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetUptimeCheckConfigRequestObjectAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfig response = await client.GetUptimeCheckConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateUptimeCheckConfig()
+        [xunit::FactAttribute]
+        public void GetUptimeCheckConfig()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            CreateUptimeCheckConfigRequest expectedRequest = new CreateUptimeCheckConfigRequest
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
-                UptimeCheckConfig = new UptimeCheckConfig(),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
-            UptimeCheckConfig response = client.CreateUptimeCheckConfig(formattedParent, uptimeCheckConfig);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig response = client.GetUptimeCheckConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateUptimeCheckConfigAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetUptimeCheckConfigAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            CreateUptimeCheckConfigRequest expectedRequest = new CreateUptimeCheckConfigRequest
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
-                UptimeCheckConfig = new UptimeCheckConfig(),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
-            UptimeCheckConfig response = await client.CreateUptimeCheckConfigAsync(formattedParent, uptimeCheckConfig);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateUptimeCheckConfig2()
+        [xunit::FactAttribute]
+        public void GetUptimeCheckConfigResourceNames1()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.GetUptimeCheckConfig(request.UptimeCheckConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetUptimeCheckConfigResourceNames1Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request.UptimeCheckConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request.UptimeCheckConfigName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetUptimeCheckConfigResourceNames2()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.GetUptimeCheckConfig(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetUptimeCheckConfigResourceNames2Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.GetUptimeCheckConfigAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.GetUptimeCheckConfigAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateUptimeCheckConfigRequestObject()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateUptimeCheckConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateUptimeCheckConfigRequestObjectAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfig response = await client.CreateUptimeCheckConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateUptimeCheckConfig()
+        [xunit::FactAttribute]
+        public void CreateUptimeCheckConfig()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            UpdateUptimeCheckConfigRequest expectedRequest = new UpdateUptimeCheckConfigRequest
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
             {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
-            UptimeCheckConfig response = client.UpdateUptimeCheckConfig(uptimeCheckConfig);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.Parent, request.UptimeCheckConfig);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateUptimeCheckConfigAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateUptimeCheckConfigAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            UpdateUptimeCheckConfigRequest expectedRequest = new UpdateUptimeCheckConfigRequest
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
             {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
-            UptimeCheckConfig response = await client.UpdateUptimeCheckConfigAsync(uptimeCheckConfig);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.Parent, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.Parent, request.UptimeCheckConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateUptimeCheckConfig2()
+        [xunit::FactAttribute]
+        public void CreateUptimeCheckConfigResourceNames1()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsProjectName, request.UptimeCheckConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateUptimeCheckConfigResourceNames1Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsProjectName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsProjectName, request.UptimeCheckConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateUptimeCheckConfigResourceNames2()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsOrganizationName, request.UptimeCheckConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateUptimeCheckConfigResourceNames2Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsOrganizationName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsOrganizationName, request.UptimeCheckConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateUptimeCheckConfigResourceNames3()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsFolderName, request.UptimeCheckConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateUptimeCheckConfigResourceNames3Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsFolderName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsFolderName, request.UptimeCheckConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateUptimeCheckConfigResourceNames4()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.CreateUptimeCheckConfig(request.ParentAsResourceName, request.UptimeCheckConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateUptimeCheckConfigResourceNames4Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.CreateUptimeCheckConfigAsync(request.ParentAsResourceName, request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.CreateUptimeCheckConfigAsync(request.ParentAsResourceName, request.UptimeCheckConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateUptimeCheckConfigRequestObject()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
             {
+                UpdateMask = new wkt::FieldMask(),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             UptimeCheckConfig response = client.UpdateUptimeCheckConfig(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateUptimeCheckConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateUptimeCheckConfigRequestObjectAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
+            {
+                UpdateMask = new wkt::FieldMask(),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig responseCallSettings = await client.UpdateUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.UpdateUptimeCheckConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateUptimeCheckConfig()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
             {
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-                IsInternal = true,
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfig response = await client.UpdateUptimeCheckConfigAsync(request);
-            Assert.Same(expectedResponse, response);
+            UptimeCheckConfig response = client.UpdateUptimeCheckConfig(request.UptimeCheckConfig);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteUptimeCheckConfig()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateUptimeCheckConfigAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            DeleteUptimeCheckConfigRequest expectedRequest = new DeleteUptimeCheckConfigRequest
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
-            client.DeleteUptimeCheckConfig(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteUptimeCheckConfigAsync()
-        {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
-            DeleteUptimeCheckConfigRequest expectedRequest = new DeleteUptimeCheckConfigRequest
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                DisplayName = "display_name137f65c2",
+                MonitoredResource = new ga::MonitoredResource(),
+                ResourceGroup = new UptimeCheckConfig.Types.ResourceGroup(),
+                HttpCheck = new UptimeCheckConfig.Types.HttpCheck(),
+                TcpCheck = new UptimeCheckConfig.Types.TcpCheck(),
+                Period = new wkt::Duration(),
+                Timeout = new wkt::Duration(),
+                ContentMatchers =
+                {
+                    new UptimeCheckConfig.Types.ContentMatcher(),
+                },
+                SelectedRegions =
+                {
+                    UptimeCheckRegion.RegionUnspecified,
+                },
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
-            await client.DeleteUptimeCheckConfigAsync(name);
+            UptimeCheckConfig responseCallSettings = await client.UpdateUptimeCheckConfigAsync(request.UptimeCheckConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UptimeCheckConfig responseCancellationToken = await client.UpdateUptimeCheckConfigAsync(request.UptimeCheckConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteUptimeCheckConfig2()
+        [xunit::FactAttribute]
+        public void DeleteUptimeCheckConfigRequestObject()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteUptimeCheckConfig(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteUptimeCheckConfigAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteUptimeCheckConfigRequestObjectAsync()
         {
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteUptimeCheckConfigAsync(request);
+            await client.DeleteUptimeCheckConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteUptimeCheckConfigAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteUptimeCheckConfig()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteUptimeCheckConfig(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteUptimeCheckConfigAsync()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteUptimeCheckConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteUptimeCheckConfigAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteUptimeCheckConfigResourceNames1()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteUptimeCheckConfig(request.UptimeCheckConfigName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteUptimeCheckConfigResourceNames1Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteUptimeCheckConfigAsync(request.UptimeCheckConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteUptimeCheckConfigAsync(request.UptimeCheckConfigName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteUptimeCheckConfigResourceNames2()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteUptimeCheckConfig(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteUptimeCheckConfigResourceNames2Async()
+        {
+            moq::Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new moq::Mock<UptimeCheckService.UptimeCheckServiceClient>(moq::MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteUptimeCheckConfigAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteUptimeCheckConfigAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
