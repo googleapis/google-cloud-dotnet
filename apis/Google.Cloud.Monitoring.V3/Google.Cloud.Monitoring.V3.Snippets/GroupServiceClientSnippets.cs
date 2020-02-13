@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
@@ -39,9 +40,8 @@ namespace Google.Cloud.Monitoring.V3
             // Sample: ListGroups
             // Additional: ListGroups(*,*)
             GroupServiceClient client = GroupServiceClient.Create();
-            ProjectName projectName = new ProjectName(projectId);
-            ListGroupsRequest request = new ListGroupsRequest { Name = projectName.ToString() };
-            PagedEnumerable<ListGroupsResponse, Group> groups = client.ListGroups(request);
+            ProjectName projectName = ProjectName.FromProject(projectId);
+            PagedEnumerable<ListGroupsResponse, Group> groups = client.ListGroups(projectName);
             foreach (Group group in groups.Take(10))
             {
                 Console.WriteLine($"{group.Name}: {group.DisplayName}");

@@ -12,21 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Generated code. DO NOT EDIT!
-
 namespace Google.Cloud.Monitoring.V3.SmokeTests
 {
     using Google.Api;
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
+    using Google.Api.Gax.ResourceNames;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
 
     public class MetricServiceSmokeTest
     {
@@ -45,10 +36,10 @@ namespace Google.Cloud.Monitoring.V3.SmokeTests
             MetricServiceClient client = MetricServiceClient.Create();
 
             // Initialize request argument(s)
-            ProjectName name = new ProjectName(projectId);
+            ProjectName name = ProjectName.FromProject(projectId);
 
             // Call API method
-            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> pagedResponse = client.ListMonitoredResourceDescriptors(name);
+            var pagedResponse = client.ListMonitoredResourceDescriptors(name);
             // Show the result
             foreach (var item in pagedResponse)
             {
