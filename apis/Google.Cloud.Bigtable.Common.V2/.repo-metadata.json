@@ -1,4 +1,5 @@
 {
   "distribution_name": "Google.Cloud.Bigtable.Common.V2",
-  "release_level": "ga"
+  "release_level": "ga",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Common.V2/latest"
 }
