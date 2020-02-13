@@ -14,358 +14,1167 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Monitoring.V3.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedAlertPolicyServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedAlertPolicyServiceClientTest
     {
-        [Fact]
-        public void GetAlertPolicy()
+        [xunit::FactAttribute]
+        public void GetAlertPolicyRequestObject()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            GetAlertPolicyRequest expectedRequest = new GetAlertPolicyRequest
-            {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
-            };
-            AlertPolicy expectedResponse = new AlertPolicy
-            {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetAlertPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicyName name = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]");
-            AlertPolicy response = client.GetAlertPolicy(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetAlertPolicyAsync()
-        {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            GetAlertPolicyRequest expectedRequest = new GetAlertPolicyRequest
-            {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
-            };
-            AlertPolicy expectedResponse = new AlertPolicy
-            {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AlertPolicy>(Task.FromResult(expectedResponse), null, null, null, null));
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicyName name = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]");
-            AlertPolicy response = await client.GetAlertPolicyAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetAlertPolicy2()
-        {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             GetAlertPolicyRequest request = new GetAlertPolicyRequest
             {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.GetAlertPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
             AlertPolicy response = client.GetAlertPolicy(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetAlertPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetAlertPolicyRequestObjectAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             GetAlertPolicyRequest request = new GetAlertPolicyRequest
             {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AlertPolicy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicy response = await client.GetAlertPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateAlertPolicy()
+        [xunit::FactAttribute]
+        public void GetAlertPolicy()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            CreateAlertPolicyRequest expectedRequest = new CreateAlertPolicyRequest
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            GetAlertPolicyRequest request = new GetAlertPolicyRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                AlertPolicy = new AlertPolicy(),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.CreateAlertPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            AlertPolicy alertPolicy = new AlertPolicy();
-            AlertPolicy response = client.CreateAlertPolicy(name, alertPolicy);
-            Assert.Same(expectedResponse, response);
+            AlertPolicy response = client.GetAlertPolicy(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateAlertPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetAlertPolicyAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            CreateAlertPolicyRequest expectedRequest = new CreateAlertPolicyRequest
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            GetAlertPolicyRequest request = new GetAlertPolicyRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                AlertPolicy = new AlertPolicy(),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AlertPolicy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            AlertPolicy alertPolicy = new AlertPolicy();
-            AlertPolicy response = await client.CreateAlertPolicyAsync(name, alertPolicy);
-            Assert.Same(expectedResponse, response);
+            AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateAlertPolicy2()
+        [xunit::FactAttribute]
+        public void GetAlertPolicyResourceNames1()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            GetAlertPolicyRequest request = new GetAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.GetAlertPolicy(request.AlertPolicyName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAlertPolicyResourceNames1Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            GetAlertPolicyRequest request = new GetAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request.AlertPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request.AlertPolicyName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAlertPolicyResourceNames2()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            GetAlertPolicyRequest request = new GetAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.GetAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.GetAlertPolicy(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAlertPolicyResourceNames2Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            GetAlertPolicyRequest request = new GetAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.GetAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.GetAlertPolicyAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.GetAlertPolicyAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAlertPolicyRequestObject()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
             AlertPolicy response = client.CreateAlertPolicy(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateAlertPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateAlertPolicyRequestObjectAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name2-1052831874",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AlertPolicy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicy response = await client.CreateAlertPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteAlertPolicy()
+        [xunit::FactAttribute]
+        public void CreateAlertPolicy()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            DeleteAlertPolicyRequest expectedRequest = new DeleteAlertPolicyRequest
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
             {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAlertPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicyName name = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]");
-            client.DeleteAlertPolicy(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteAlertPolicyAsync()
-        {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            DeleteAlertPolicyRequest expectedRequest = new DeleteAlertPolicyRequest
+            AlertPolicy expectedResponse = new AlertPolicy
             {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicyName name = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]");
-            await client.DeleteAlertPolicyAsync(name);
+            AlertPolicy response = client.CreateAlertPolicy(request.Name, request.AlertPolicy);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteAlertPolicy2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateAlertPolicyAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.Name, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.Name, request.AlertPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAlertPolicyResourceNames1()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.CreateAlertPolicy(request.ProjectName, request.AlertPolicy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAlertPolicyResourceNames1Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.ProjectName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.ProjectName, request.AlertPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAlertPolicyResourceNames2()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.CreateAlertPolicy(request.OrganizationName, request.AlertPolicy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAlertPolicyResourceNames2Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.OrganizationName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.OrganizationName, request.AlertPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAlertPolicyResourceNames3()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.CreateAlertPolicy(request.FolderName, request.AlertPolicy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAlertPolicyResourceNames3Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.FolderName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.FolderName, request.AlertPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateAlertPolicyResourceNames4()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.CreateAlertPolicy(request.ResourceName, request.AlertPolicy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateAlertPolicyResourceNames4Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            CreateAlertPolicyRequest request = new CreateAlertPolicyRequest
+            {
+                AlertPolicy = new AlertPolicy(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.CreateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.CreateAlertPolicyAsync(request.ResourceName, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.CreateAlertPolicyAsync(request.ResourceName, request.AlertPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAlertPolicyRequestObject()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
             {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteAlertPolicy(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteAlertPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAlertPolicyRequestObjectAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
             {
-                AlertPolicyName = new AlertPolicyName("[PROJECT]", "[ALERT_POLICY]"),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteAlertPolicyAsync(request);
+            await client.DeleteAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAlertPolicyAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateAlertPolicy()
+        [xunit::FactAttribute]
+        public void DeleteAlertPolicy()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            UpdateAlertPolicyRequest expectedRequest = new UpdateAlertPolicyRequest
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
             {
-                UpdateMask = new FieldMask(),
-                AlertPolicy = new AlertPolicy(),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
-            AlertPolicy expectedResponse = new AlertPolicy
-            {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.UpdateAlertPolicy(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            FieldMask updateMask = new FieldMask();
-            AlertPolicy alertPolicy = new AlertPolicy();
-            AlertPolicy response = client.UpdateAlertPolicy(updateMask, alertPolicy);
-            Assert.Same(expectedResponse, response);
+            client.DeleteAlertPolicy(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateAlertPolicyAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAlertPolicyAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
-            UpdateAlertPolicyRequest expectedRequest = new UpdateAlertPolicyRequest
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
             {
-                UpdateMask = new FieldMask(),
-                AlertPolicy = new AlertPolicy(),
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
             };
-            AlertPolicy expectedResponse = new AlertPolicy
-            {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.UpdateAlertPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AlertPolicy>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            FieldMask updateMask = new FieldMask();
-            AlertPolicy alertPolicy = new AlertPolicy();
-            AlertPolicy response = await client.UpdateAlertPolicyAsync(updateMask, alertPolicy);
-            Assert.Same(expectedResponse, response);
+            await client.DeleteAlertPolicyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAlertPolicyAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateAlertPolicy2()
+        [xunit::FactAttribute]
+        public void DeleteAlertPolicyResourceNames1()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAlertPolicy(request.AlertPolicyName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAlertPolicyResourceNames1Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAlertPolicyAsync(request.AlertPolicyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAlertPolicyAsync(request.AlertPolicyName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAlertPolicyResourceNames2()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAlertPolicy(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAlertPolicyResourceNames2Async()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            DeleteAlertPolicyRequest request = new DeleteAlertPolicyRequest
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAlertPolicyAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAlertPolicyAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateAlertPolicyRequestObject()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             UpdateAlertPolicyRequest request = new UpdateAlertPolicyRequest
             {
+                UpdateMask = new wkt::FieldMask(),
                 AlertPolicy = new AlertPolicy(),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.UpdateAlertPolicy(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
             AlertPolicy response = client.UpdateAlertPolicy(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateAlertPolicyAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateAlertPolicyRequestObjectAsync()
         {
-            Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new Mock<AlertPolicyService.AlertPolicyServiceClient>(MockBehavior.Strict);
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
             UpdateAlertPolicyRequest request = new UpdateAlertPolicyRequest
             {
+                UpdateMask = new wkt::FieldMask(),
                 AlertPolicy = new AlertPolicy(),
             };
             AlertPolicy expectedResponse = new AlertPolicy
             {
-                Name = "name3373707",
-                DisplayName = "displayName1615086568",
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
             };
-            mockGrpcClient.Setup(x => x.UpdateAlertPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AlertPolicy>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
-            AlertPolicy response = await client.UpdateAlertPolicyAsync(request);
-            Assert.Same(expectedResponse, response);
+            AlertPolicy responseCallSettings = await client.UpdateAlertPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.UpdateAlertPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void UpdateAlertPolicy()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            UpdateAlertPolicyRequest request = new UpdateAlertPolicyRequest
+            {
+                UpdateMask = new wkt::FieldMask(),
+                AlertPolicy = new AlertPolicy(),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateAlertPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy response = client.UpdateAlertPolicy(request.UpdateMask, request.AlertPolicy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateAlertPolicyAsync()
+        {
+            moq::Mock<AlertPolicyService.AlertPolicyServiceClient> mockGrpcClient = new moq::Mock<AlertPolicyService.AlertPolicyServiceClient>(moq::MockBehavior.Strict);
+            UpdateAlertPolicyRequest request = new UpdateAlertPolicyRequest
+            {
+                UpdateMask = new wkt::FieldMask(),
+                AlertPolicy = new AlertPolicy(),
+            };
+            AlertPolicy expectedResponse = new AlertPolicy
+            {
+                AlertPolicyName = AlertPolicyName.FromProjectAlertPolicy("[PROJECT]", "[ALERT_POLICY]"),
+                DisplayName = "display_name137f65c2",
+                Combiner = AlertPolicy.Types.ConditionCombinerType.AndWithMatchingResource,
+                CreationRecord = new MutationRecord(),
+                MutationRecord = new MutationRecord(),
+                Conditions =
+                {
+                    new AlertPolicy.Types.Condition(),
+                },
+                Documentation = new AlertPolicy.Types.Documentation(),
+                NotificationChannels =
+                {
+                    "notification_channelseafebd2f",
+                },
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Enabled = new bool?(),
+                Validity = new gr::Status(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateAlertPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AlertPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlertPolicyServiceClient client = new AlertPolicyServiceClientImpl(mockGrpcClient.Object, null);
+            AlertPolicy responseCallSettings = await client.UpdateAlertPolicyAsync(request.UpdateMask, request.AlertPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AlertPolicy responseCancellationToken = await client.UpdateAlertPolicyAsync(request.UpdateMask, request.AlertPolicy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

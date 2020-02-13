@@ -17,33 +17,76 @@
 namespace Google.Cloud.Monitoring.V3.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf;
+    using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedUptimeCheckServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedUptimeCheckServiceClientSnippets
     {
-        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
-        public async Task ListUptimeCheckConfigsAsync()
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public void ListUptimeCheckConfigsRequestObject()
         {
-            // Snippet: ListUptimeCheckConfigsAsync(string,string,int?,CallSettings)
+            // Snippet: ListUptimeCheckConfigs(ListUptimeCheckConfigsRequest, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (UptimeCheckConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUptimeCheckConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public async Task ListUptimeCheckConfigsRequestObjectAsync()
+        {
+            // Snippet: ListUptimeCheckConfigsAsync(ListUptimeCheckConfigsRequest, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
-            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response =
-                uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(formattedParent);
+            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((UptimeCheckConfig item) =>
@@ -59,6 +102,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (UptimeCheckConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -70,6 +114,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (UptimeCheckConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -80,14 +125,13 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         /// <summary>Snippet for ListUptimeCheckConfigs</summary>
         public void ListUptimeCheckConfigs()
         {
-            // Snippet: ListUptimeCheckConfigs(string,string,int?,CallSettings)
+            // Snippet: ListUptimeCheckConfigs(string, string, int?, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response =
-                uptimeCheckServiceClient.ListUptimeCheckConfigs(formattedParent);
+            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (UptimeCheckConfig item in response)
@@ -103,6 +147,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (UptimeCheckConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -114,6 +159,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (UptimeCheckConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -121,20 +167,16 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
-        public async Task ListUptimeCheckConfigsAsync_RequestObject()
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public async Task ListUptimeCheckConfigsAsync()
         {
-            // Snippet: ListUptimeCheckConfigsAsync(ListUptimeCheckConfigsRequest,CallSettings)
+            // Snippet: ListUptimeCheckConfigsAsync(string, string, int?, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
-            {
-                Parent = new ProjectName("[PROJECT]").ToString(),
-            };
+            string parent = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response =
-                uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(request);
+            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((UptimeCheckConfig item) =>
@@ -150,6 +192,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (UptimeCheckConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -161,6 +204,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (UptimeCheckConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -169,19 +213,15 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for ListUptimeCheckConfigs</summary>
-        public void ListUptimeCheckConfigs_RequestObject()
+        public void ListUptimeCheckConfigsResourceNames1()
         {
-            // Snippet: ListUptimeCheckConfigs(ListUptimeCheckConfigsRequest,CallSettings)
+            // Snippet: ListUptimeCheckConfigs(ProjectName, string, int?, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
-            {
-                Parent = new ProjectName("[PROJECT]").ToString(),
-            };
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response =
-                uptimeCheckServiceClient.ListUptimeCheckConfigs(request);
+            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (UptimeCheckConfig item in response)
@@ -197,6 +237,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (UptimeCheckConfig item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -208,6 +249,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (UptimeCheckConfig item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -215,44 +257,348 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetUptimeCheckConfigAsync</summary>
-        public async Task GetUptimeCheckConfigAsync()
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public async Task ListUptimeCheckConfigsResourceNames1Async()
         {
-            // Snippet: GetUptimeCheckConfigAsync(UptimeCheckConfigName,CallSettings)
-            // Additional: GetUptimeCheckConfigAsync(UptimeCheckConfigName,CancellationToken)
+            // Snippet: ListUptimeCheckConfigsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(name);
+            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UptimeCheckConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUptimeCheckConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public void ListUptimeCheckConfigsResourceNames2()
+        {
+            // Snippet: ListUptimeCheckConfigs(OrganizationName, string, int?, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (UptimeCheckConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUptimeCheckConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public async Task ListUptimeCheckConfigsResourceNames2Async()
+        {
+            // Snippet: ListUptimeCheckConfigsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UptimeCheckConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUptimeCheckConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public void ListUptimeCheckConfigsResourceNames3()
+        {
+            // Snippet: ListUptimeCheckConfigs(FolderName, string, int?, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (UptimeCheckConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUptimeCheckConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public async Task ListUptimeCheckConfigsResourceNames3Async()
+        {
+            // Snippet: ListUptimeCheckConfigsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UptimeCheckConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUptimeCheckConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public void ListUptimeCheckConfigsResourceNames4()
+        {
+            // Snippet: ListUptimeCheckConfigs(IResourceName, string, int?, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName parent = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (UptimeCheckConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUptimeCheckConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        public async Task ListUptimeCheckConfigsResourceNames4Async()
+        {
+            // Snippet: ListUptimeCheckConfigsAsync(IResourceName, string, int?, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName parent = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UptimeCheckConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUptimeCheckConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetUptimeCheckConfig</summary>
-        public void GetUptimeCheckConfig()
+        public void GetUptimeCheckConfigRequestObject()
         {
-            // Snippet: GetUptimeCheckConfig(UptimeCheckConfigName,CallSettings)
+            // Snippet: GetUptimeCheckConfig(GetUptimeCheckConfigRequest, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
             // Make the request
-            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(name);
+            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetUptimeCheckConfigAsync</summary>
-        public async Task GetUptimeCheckConfigAsync_RequestObject()
+        public async Task GetUptimeCheckConfigRequestObjectAsync()
         {
-            // Snippet: GetUptimeCheckConfigAsync(GetUptimeCheckConfigRequest,CallSettings)
-            // Additional: GetUptimeCheckConfigAsync(GetUptimeCheckConfigRequest,CancellationToken)
+            // Snippet: GetUptimeCheckConfigAsync(GetUptimeCheckConfigRequest, CallSettings)
+            // Additional: GetUptimeCheckConfigAsync(GetUptimeCheckConfigRequest, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             // Make the request
             UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(request);
@@ -260,61 +606,114 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for GetUptimeCheckConfig</summary>
-        public void GetUptimeCheckConfig_RequestObject()
+        public void GetUptimeCheckConfig()
         {
-            // Snippet: GetUptimeCheckConfig(GetUptimeCheckConfigRequest,CallSettings)
+            // Snippet: GetUptimeCheckConfig(string, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
-            {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
-            };
+            string name = "projects/[PROJECT]/uptimeCheckConfigs/[UPTIME_CHECK_CONFIG]";
             // Make the request
-            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(request);
+            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
-        public async Task CreateUptimeCheckConfigAsync()
+        /// <summary>Snippet for GetUptimeCheckConfigAsync</summary>
+        public async Task GetUptimeCheckConfigAsync()
         {
-            // Snippet: CreateUptimeCheckConfigAsync(string,UptimeCheckConfig,CallSettings)
-            // Additional: CreateUptimeCheckConfigAsync(string,UptimeCheckConfig,CancellationToken)
+            // Snippet: GetUptimeCheckConfigAsync(string, CallSettings)
+            // Additional: GetUptimeCheckConfigAsync(string, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            string name = "projects/[PROJECT]/uptimeCheckConfigs/[UPTIME_CHECK_CONFIG]";
             // Make the request
-            UptimeCheckConfig response = await uptimeCheckServiceClient.CreateUptimeCheckConfigAsync(formattedParent, uptimeCheckConfig);
+            UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUptimeCheckConfig</summary>
+        public void GetUptimeCheckConfigResourceNames1()
+        {
+            // Snippet: GetUptimeCheckConfig(UptimeCheckConfigName, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            UptimeCheckConfigName name = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUptimeCheckConfigAsync</summary>
+        public async Task GetUptimeCheckConfigResourceNames1Async()
+        {
+            // Snippet: GetUptimeCheckConfigAsync(UptimeCheckConfigName, CallSettings)
+            // Additional: GetUptimeCheckConfigAsync(UptimeCheckConfigName, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UptimeCheckConfigName name = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUptimeCheckConfig</summary>
+        public void GetUptimeCheckConfigResourceNames2()
+        {
+            // Snippet: GetUptimeCheckConfig(IResourceName, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUptimeCheckConfigAsync</summary>
+        public async Task GetUptimeCheckConfigResourceNames2Async()
+        {
+            // Snippet: GetUptimeCheckConfigAsync(IResourceName, CallSettings)
+            // Additional: GetUptimeCheckConfigAsync(IResourceName, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for CreateUptimeCheckConfig</summary>
-        public void CreateUptimeCheckConfig()
+        public void CreateUptimeCheckConfigRequestObject()
         {
-            // Snippet: CreateUptimeCheckConfig(string,UptimeCheckConfig,CallSettings)
+            // Snippet: CreateUptimeCheckConfig(CreateUptimeCheckConfigRequest, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
             // Make the request
-            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(formattedParent, uptimeCheckConfig);
+            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
-        public async Task CreateUptimeCheckConfigAsync_RequestObject()
+        public async Task CreateUptimeCheckConfigRequestObjectAsync()
         {
-            // Snippet: CreateUptimeCheckConfigAsync(CreateUptimeCheckConfigRequest,CallSettings)
-            // Additional: CreateUptimeCheckConfigAsync(CreateUptimeCheckConfigRequest,CancellationToken)
+            // Snippet: CreateUptimeCheckConfigAsync(CreateUptimeCheckConfigRequest, CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(CreateUptimeCheckConfigRequest, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             // Make the request
@@ -323,40 +722,189 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for CreateUptimeCheckConfig</summary>
-        public void CreateUptimeCheckConfig_RequestObject()
+        public void CreateUptimeCheckConfig()
         {
-            // Snippet: CreateUptimeCheckConfig(CreateUptimeCheckConfigRequest,CallSettings)
+            // Snippet: CreateUptimeCheckConfig(string, UptimeCheckConfig, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            string parent = "projects/[PROJECT]";
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
+        public async Task CreateUptimeCheckConfigAsync()
+        {
+            // Snippet: CreateUptimeCheckConfigAsync(string, UptimeCheckConfig, CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(string, UptimeCheckConfig, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.CreateUptimeCheckConfigAsync(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfig</summary>
+        public void CreateUptimeCheckConfigResourceNames1()
+        {
+            // Snippet: CreateUptimeCheckConfig(ProjectName, UptimeCheckConfig, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
+        public async Task CreateUptimeCheckConfigResourceNames1Async()
+        {
+            // Snippet: CreateUptimeCheckConfigAsync(ProjectName, UptimeCheckConfig, CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(ProjectName, UptimeCheckConfig, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.CreateUptimeCheckConfigAsync(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfig</summary>
+        public void CreateUptimeCheckConfigResourceNames2()
+        {
+            // Snippet: CreateUptimeCheckConfig(OrganizationName, UptimeCheckConfig, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
+        public async Task CreateUptimeCheckConfigResourceNames2Async()
+        {
+            // Snippet: CreateUptimeCheckConfigAsync(OrganizationName, UptimeCheckConfig, CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(OrganizationName, UptimeCheckConfig, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.CreateUptimeCheckConfigAsync(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfig</summary>
+        public void CreateUptimeCheckConfigResourceNames3()
+        {
+            // Snippet: CreateUptimeCheckConfig(FolderName, UptimeCheckConfig, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
+        public async Task CreateUptimeCheckConfigResourceNames3Async()
+        {
+            // Snippet: CreateUptimeCheckConfigAsync(FolderName, UptimeCheckConfig, CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(FolderName, UptimeCheckConfig, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.CreateUptimeCheckConfigAsync(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfig</summary>
+        public void CreateUptimeCheckConfigResourceNames4()
+        {
+            // Snippet: CreateUptimeCheckConfig(IResourceName, UptimeCheckConfig, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName parent = new UnparsedResourceName("a/wildcard/resource");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUptimeCheckConfigAsync</summary>
+        public async Task CreateUptimeCheckConfigResourceNames4Async()
+        {
+            // Snippet: CreateUptimeCheckConfigAsync(IResourceName, UptimeCheckConfig, CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(IResourceName, UptimeCheckConfig, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName parent = new UnparsedResourceName("a/wildcard/resource");
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            // Make the request
+            UptimeCheckConfig response = await uptimeCheckServiceClient.CreateUptimeCheckConfigAsync(parent, uptimeCheckConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateUptimeCheckConfig</summary>
+        public void UpdateUptimeCheckConfigRequestObject()
+        {
+            // Snippet: UpdateUptimeCheckConfig(UpdateUptimeCheckConfigRequest, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                UpdateMask = new FieldMask(),
                 UptimeCheckConfig = new UptimeCheckConfig(),
             };
             // Make the request
-            UptimeCheckConfig response = uptimeCheckServiceClient.CreateUptimeCheckConfig(request);
+            UptimeCheckConfig response = uptimeCheckServiceClient.UpdateUptimeCheckConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateUptimeCheckConfigAsync</summary>
-        public async Task UpdateUptimeCheckConfigAsync()
+        public async Task UpdateUptimeCheckConfigRequestObjectAsync()
         {
-            // Snippet: UpdateUptimeCheckConfigAsync(UptimeCheckConfig,CallSettings)
-            // Additional: UpdateUptimeCheckConfigAsync(UptimeCheckConfig,CancellationToken)
+            // Snippet: UpdateUptimeCheckConfigAsync(UpdateUptimeCheckConfigRequest, CallSettings)
+            // Additional: UpdateUptimeCheckConfigAsync(UpdateUptimeCheckConfigRequest, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
             // Make the request
-            UptimeCheckConfig response = await uptimeCheckServiceClient.UpdateUptimeCheckConfigAsync(uptimeCheckConfig);
+            UptimeCheckConfig response = await uptimeCheckServiceClient.UpdateUptimeCheckConfigAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateUptimeCheckConfig</summary>
         public void UpdateUptimeCheckConfig()
         {
-            // Snippet: UpdateUptimeCheckConfig(UptimeCheckConfig,CallSettings)
+            // Snippet: UpdateUptimeCheckConfig(UptimeCheckConfig, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
@@ -367,76 +915,46 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for UpdateUptimeCheckConfigAsync</summary>
-        public async Task UpdateUptimeCheckConfigAsync_RequestObject()
+        public async Task UpdateUptimeCheckConfigAsync()
         {
-            // Snippet: UpdateUptimeCheckConfigAsync(UpdateUptimeCheckConfigRequest,CallSettings)
-            // Additional: UpdateUptimeCheckConfigAsync(UpdateUptimeCheckConfigRequest,CancellationToken)
+            // Snippet: UpdateUptimeCheckConfigAsync(UptimeCheckConfig, CallSettings)
+            // Additional: UpdateUptimeCheckConfigAsync(UptimeCheckConfig, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
-            {
-                UptimeCheckConfig = new UptimeCheckConfig(),
-            };
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
             // Make the request
-            UptimeCheckConfig response = await uptimeCheckServiceClient.UpdateUptimeCheckConfigAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateUptimeCheckConfig</summary>
-        public void UpdateUptimeCheckConfig_RequestObject()
-        {
-            // Snippet: UpdateUptimeCheckConfig(UpdateUptimeCheckConfigRequest,CallSettings)
-            // Create client
-            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
-            {
-                UptimeCheckConfig = new UptimeCheckConfig(),
-            };
-            // Make the request
-            UptimeCheckConfig response = uptimeCheckServiceClient.UpdateUptimeCheckConfig(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUptimeCheckConfigAsync</summary>
-        public async Task DeleteUptimeCheckConfigAsync()
-        {
-            // Snippet: DeleteUptimeCheckConfigAsync(UptimeCheckConfigName,CallSettings)
-            // Additional: DeleteUptimeCheckConfigAsync(UptimeCheckConfigName,CancellationToken)
-            // Create client
-            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
-            // Make the request
-            await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(name);
+            UptimeCheckConfig response = await uptimeCheckServiceClient.UpdateUptimeCheckConfigAsync(uptimeCheckConfig);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteUptimeCheckConfig</summary>
-        public void DeleteUptimeCheckConfig()
+        public void DeleteUptimeCheckConfigRequestObject()
         {
-            // Snippet: DeleteUptimeCheckConfig(UptimeCheckConfigName,CallSettings)
+            // Snippet: DeleteUptimeCheckConfig(DeleteUptimeCheckConfigRequest, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+            };
             // Make the request
-            uptimeCheckServiceClient.DeleteUptimeCheckConfig(name);
+            uptimeCheckServiceClient.DeleteUptimeCheckConfig(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteUptimeCheckConfigAsync</summary>
-        public async Task DeleteUptimeCheckConfigAsync_RequestObject()
+        public async Task DeleteUptimeCheckConfigRequestObjectAsync()
         {
-            // Snippet: DeleteUptimeCheckConfigAsync(DeleteUptimeCheckConfigRequest,CallSettings)
-            // Additional: DeleteUptimeCheckConfigAsync(DeleteUptimeCheckConfigRequest,CancellationToken)
+            // Snippet: DeleteUptimeCheckConfigAsync(DeleteUptimeCheckConfigRequest, CallSettings)
+            // Additional: DeleteUptimeCheckConfigAsync(DeleteUptimeCheckConfigRequest, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
+                UptimeCheckConfigName = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             // Make the request
             await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(request);
@@ -444,76 +962,96 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for DeleteUptimeCheckConfig</summary>
-        public void DeleteUptimeCheckConfig_RequestObject()
+        public void DeleteUptimeCheckConfig()
         {
-            // Snippet: DeleteUptimeCheckConfig(DeleteUptimeCheckConfigRequest,CallSettings)
+            // Snippet: DeleteUptimeCheckConfig(string, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
-            {
-                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
-            };
+            string name = "projects/[PROJECT]/uptimeCheckConfigs/[UPTIME_CHECK_CONFIG]";
             // Make the request
-            uptimeCheckServiceClient.DeleteUptimeCheckConfig(request);
+            uptimeCheckServiceClient.DeleteUptimeCheckConfig(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckIpsAsync</summary>
-        public async Task ListUptimeCheckIpsAsync_RequestObject()
+        /// <summary>Snippet for DeleteUptimeCheckConfigAsync</summary>
+        public async Task DeleteUptimeCheckConfigAsync()
         {
-            // Snippet: ListUptimeCheckIpsAsync(ListUptimeCheckIpsRequest,CallSettings)
+            // Snippet: DeleteUptimeCheckConfigAsync(string, CallSettings)
+            // Additional: DeleteUptimeCheckConfigAsync(string, CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListUptimeCheckIpsRequest request = new ListUptimeCheckIpsRequest();
+            string name = "projects/[PROJECT]/uptimeCheckConfigs/[UPTIME_CHECK_CONFIG]";
             // Make the request
-            PagedAsyncEnumerable<ListUptimeCheckIpsResponse, UptimeCheckIp> response =
-                uptimeCheckServiceClient.ListUptimeCheckIpsAsync(request);
+            await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(name);
+            // End snippet
+        }
 
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UptimeCheckIp item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
+        /// <summary>Snippet for DeleteUptimeCheckConfig</summary>
+        public void DeleteUptimeCheckConfigResourceNames1()
+        {
+            // Snippet: DeleteUptimeCheckConfig(UptimeCheckConfigName, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            UptimeCheckConfigName name = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            // Make the request
+            uptimeCheckServiceClient.DeleteUptimeCheckConfig(name);
+            // End snippet
+        }
 
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUptimeCheckIpsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UptimeCheckIp item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
+        /// <summary>Snippet for DeleteUptimeCheckConfigAsync</summary>
+        public async Task DeleteUptimeCheckConfigResourceNames1Async()
+        {
+            // Snippet: DeleteUptimeCheckConfigAsync(UptimeCheckConfigName, CallSettings)
+            // Additional: DeleteUptimeCheckConfigAsync(UptimeCheckConfigName, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UptimeCheckConfigName name = UptimeCheckConfigName.FromProjectUptimeCheckConfig("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            // Make the request
+            await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(name);
+            // End snippet
+        }
 
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UptimeCheckIp> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UptimeCheckIp item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+        /// <summary>Snippet for DeleteUptimeCheckConfig</summary>
+        public void DeleteUptimeCheckConfigResourceNames2()
+        {
+            // Snippet: DeleteUptimeCheckConfig(IResourceName, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            uptimeCheckServiceClient.DeleteUptimeCheckConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUptimeCheckConfigAsync</summary>
+        public async Task DeleteUptimeCheckConfigResourceNames2Async()
+        {
+            // Snippet: DeleteUptimeCheckConfigAsync(IResourceName, CallSettings)
+            // Additional: DeleteUptimeCheckConfigAsync(IResourceName, CancellationToken)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for ListUptimeCheckIps</summary>
-        public void ListUptimeCheckIps_RequestObject()
+        public void ListUptimeCheckIpsRequestObject()
         {
-            // Snippet: ListUptimeCheckIps(ListUptimeCheckIpsRequest,CallSettings)
+            // Snippet: ListUptimeCheckIps(ListUptimeCheckIpsRequest, CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            ListUptimeCheckIpsRequest request = new ListUptimeCheckIpsRequest();
+            ListUptimeCheckIpsRequest request = new ListUptimeCheckIpsRequest { };
             // Make the request
-            PagedEnumerable<ListUptimeCheckIpsResponse, UptimeCheckIp> response =
-                uptimeCheckServiceClient.ListUptimeCheckIps(request);
+            PagedEnumerable<ListUptimeCheckIpsResponse, UptimeCheckIp> response = uptimeCheckServiceClient.ListUptimeCheckIps(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (UptimeCheckIp item in response)
@@ -529,6 +1067,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (UptimeCheckIp item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -540,6 +1079,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (UptimeCheckIp item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -547,5 +1087,49 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListUptimeCheckIps</summary>
+        public async Task ListUptimeCheckIpsRequestObjectAsync()
+        {
+            // Snippet: ListUptimeCheckIpsAsync(ListUptimeCheckIpsRequest, CallSettings)
+            // Create client
+            UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUptimeCheckIpsRequest request = new ListUptimeCheckIpsRequest { };
+            // Make the request
+            PagedAsyncEnumerable<ListUptimeCheckIpsResponse, UptimeCheckIp> response = uptimeCheckServiceClient.ListUptimeCheckIpsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((UptimeCheckIp item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUptimeCheckIpsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (UptimeCheckIp item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<UptimeCheckIp> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (UptimeCheckIp item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

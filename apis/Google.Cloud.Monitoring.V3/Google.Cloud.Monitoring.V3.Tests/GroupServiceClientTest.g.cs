@@ -14,390 +14,730 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Monitoring.V3.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedGroupServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedGroupServiceClientTest
     {
-        [Fact]
-        public void GetGroup()
+        [xunit::FactAttribute]
+        public void GetGroupRequestObject()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            GetGroupRequest expectedRequest = new GetGroupRequest
-            {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-            };
-            Group expectedResponse = new Group
-            {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
-            };
-            mockGrpcClient.Setup(x => x.GetGroup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
-            Group response = client.GetGroup(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetGroupAsync()
-        {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            GetGroupRequest expectedRequest = new GetGroupRequest
-            {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-            };
-            Group expectedResponse = new Group
-            {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
-            };
-            mockGrpcClient.Setup(x => x.GetGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Group>(Task.FromResult(expectedResponse), null, null, null, null));
-            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
-            Group response = await client.GetGroupAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetGroup2()
-        {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.GetGroup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
             Group response = client.GetGroup(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetGroupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupRequestObjectAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             GetGroupRequest request = new GetGroupRequest
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.GetGroupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Group>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            Group response = await client.GetGroupAsync(request);
-            Assert.Same(expectedResponse, response);
+            Group responseCallSettings = await client.GetGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.GetGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateGroup()
+        [xunit::FactAttribute]
+        public void GetGroup()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            CreateGroupRequest expectedRequest = new CreateGroupRequest
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Group = new Group(),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.CreateGroup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            Group group = new Group();
-            Group response = client.CreateGroup(name, group);
-            Assert.Same(expectedResponse, response);
+            Group response = client.GetGroup(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateGroupAsync()
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            CreateGroupRequest expectedRequest = new CreateGroupRequest
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Group = new Group(),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.CreateGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Group>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            Group group = new Group();
-            Group response = await client.CreateGroupAsync(name, group);
-            Assert.Same(expectedResponse, response);
+            Group responseCallSettings = await client.GetGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.GetGroupAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateGroup2()
+        [xunit::FactAttribute]
+        public void GetGroupResourceNames1()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group response = client.GetGroup(request.GroupName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupResourceNames1Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group responseCallSettings = await client.GetGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.GetGroupAsync(request.GroupName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGroupResourceNames2()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group response = client.GetGroup(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGroupResourceNames2Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group responseCallSettings = await client.GetGroupAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.GetGroupAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateGroupRequestObject()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             CreateGroupRequest request = new CreateGroupRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 Group = new Group(),
+                ValidateOnly = true,
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.CreateGroup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
             Group response = client.CreateGroup(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateGroupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateGroupRequestObjectAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             CreateGroupRequest request = new CreateGroupRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 Group = new Group(),
+                ValidateOnly = true,
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Group>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            Group response = await client.CreateGroupAsync(request);
-            Assert.Same(expectedResponse, response);
+            Group responseCallSettings = await client.CreateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.CreateGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateGroup()
+        [xunit::FactAttribute]
+        public void CreateGroup()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            UpdateGroupRequest expectedRequest = new UpdateGroupRequest
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
             {
                 Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateGroup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            Group group = new Group();
-            Group response = client.UpdateGroup(group);
-            Assert.Same(expectedResponse, response);
+            Group response = client.CreateGroup(request.Name, request.Group);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateGroupAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateGroupAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            UpdateGroupRequest expectedRequest = new UpdateGroupRequest
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
             {
                 Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Group>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            Group group = new Group();
-            Group response = await client.UpdateGroupAsync(group);
-            Assert.Same(expectedResponse, response);
+            Group responseCallSettings = await client.CreateGroupAsync(request.Name, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.CreateGroupAsync(request.Name, request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateGroup2()
+        [xunit::FactAttribute]
+        public void CreateGroupResourceNames1()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group response = client.CreateGroup(request.ProjectName, request.Group);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateGroupResourceNames1Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group responseCallSettings = await client.CreateGroupAsync(request.ProjectName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.CreateGroupAsync(request.ProjectName, request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateGroupResourceNames2()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group response = client.CreateGroup(request.OrganizationName, request.Group);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateGroupResourceNames2Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group responseCallSettings = await client.CreateGroupAsync(request.OrganizationName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.CreateGroupAsync(request.OrganizationName, request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateGroupResourceNames3()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group response = client.CreateGroup(request.FolderName, request.Group);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateGroupResourceNames3Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group responseCallSettings = await client.CreateGroupAsync(request.FolderName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.CreateGroupAsync(request.FolderName, request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateGroupResourceNames4()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group response = client.CreateGroup(request.ResourceName, request.Group);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateGroupResourceNames4Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Group = new Group(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Group expectedResponse = new Group
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            Group responseCallSettings = await client.CreateGroupAsync(request.ResourceName, request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.CreateGroupAsync(request.ResourceName, request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateGroupRequestObject()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
                 Group = new Group(),
+                ValidateOnly = true,
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateGroup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
             Group response = client.UpdateGroup(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateGroupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGroupRequestObjectAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
                 Group = new Group(),
+                ValidateOnly = true,
             };
             Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                DisplayName = "displayName1615086568",
-                ParentNameAsGroupName = new GroupName("[PROJECT]", "[GROUP]"),
-                Filter = "filter-1274492040",
-                IsCluster = false,
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Group>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            Group response = await client.UpdateGroupAsync(request);
-            Assert.Same(expectedResponse, response);
+            Group responseCallSettings = await client.UpdateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.UpdateGroupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteGroup()
+        [xunit::FactAttribute]
+        public void UpdateGroup()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            DeleteGroupRequest expectedRequest = new DeleteGroupRequest
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            UpdateGroupRequest request = new UpdateGroupRequest { Group = new Group(), };
+            Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteGroup(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
-            client.DeleteGroup(name);
+            Group response = client.UpdateGroup(request.Group);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteGroupAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGroupAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
-            DeleteGroupRequest expectedRequest = new DeleteGroupRequest
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            UpdateGroupRequest request = new UpdateGroupRequest { Group = new Group(), };
+            Group expectedResponse = new Group
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                DisplayName = "display_name137f65c2",
+                ParentName = "parent_name91315215",
+                Filter = "filtere47ac9b2",
+                IsCluster = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteGroupAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Group>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
-            await client.DeleteGroupAsync(name);
+            Group responseCallSettings = await client.UpdateGroupAsync(request.Group, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Group responseCancellationToken = await client.UpdateGroupAsync(request.Group, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteGroup2()
+        [xunit::FactAttribute]
+        public void DeleteGroupRequestObject()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             DeleteGroupRequest request = new DeleteGroupRequest
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                Recursive = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteGroup(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteGroup(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteGroupAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteGroupRequestObjectAsync()
         {
-            Mock<GroupService.GroupServiceClient> mockGrpcClient = new Mock<GroupService.GroupServiceClient>(MockBehavior.Strict);
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
             DeleteGroupRequest request = new DeleteGroupRequest
             {
-                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                Recursive = true,
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteGroupAsync(request);
+            await client.DeleteGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteGroupAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteGroup()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteGroup(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteGroupAsync()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteGroupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteGroupAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteGroupResourceNames1()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteGroup(request.GroupName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteGroupResourceNames1Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteGroupAsync(request.GroupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteGroupAsync(request.GroupName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteGroupResourceNames2()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteGroup(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteGroupResourceNames2Async()
+        {
+            moq::Mock<GroupService.GroupServiceClient> mockGrpcClient = new moq::Mock<GroupService.GroupServiceClient>(moq::MockBehavior.Strict);
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                GroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GroupServiceClient client = new GroupServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteGroupAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteGroupAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

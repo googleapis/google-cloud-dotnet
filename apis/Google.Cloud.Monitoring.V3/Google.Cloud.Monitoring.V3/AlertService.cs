@@ -77,13 +77,13 @@ namespace Google.Cloud.Monitoring.V3 {
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.AlertReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest.Parser, new[]{ "Name", "AlertPolicy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest.Parser, new[]{ "Name", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser, new[]{ "AlertPolicies", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest.Parser, new[]{ "UpdateMask", "AlertPolicy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest.Parser, new[]{ "Name", "AlertPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest.Parser, new[]{ "Name", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser, new[]{ "AlertPolicies", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest.Parser, new[]{ "UpdateMask", "AlertPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion

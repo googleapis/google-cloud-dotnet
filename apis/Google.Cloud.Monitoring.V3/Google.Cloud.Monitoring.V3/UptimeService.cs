@@ -90,15 +90,15 @@ namespace Google.Cloud.Monitoring.V3 {
             "b3JpbmdcVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser, new[]{ "UptimeCheckConfigs", "NextPageToken", "TotalSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest.Parser, new[]{ "Parent", "UptimeCheckConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest.Parser, new[]{ "UpdateMask", "UptimeCheckConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse.Parser, new[]{ "UptimeCheckIps", "NextPageToken" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser, new[]{ "UptimeCheckConfigs", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest.Parser, new[]{ "Parent", "UptimeCheckConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest.Parser, new[]{ "UpdateMask", "UptimeCheckConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse.Parser, new[]{ "UptimeCheckIps", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
