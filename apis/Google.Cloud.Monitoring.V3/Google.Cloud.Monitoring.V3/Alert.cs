@@ -84,11 +84,11 @@ namespace Google.Cloud.Monitoring.V3 {
             "cmluZ1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser, new[]{ "Name", "DisplayName", "Documentation", "UserLabels", "Conditions", "Combiner", "Enabled", "Validity", "NotificationChannels", "CreationRecord", "MutationRecord" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Parser, new[]{ "Content", "MimeType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent" }, new[]{ "Condition" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "Comparison", "ThresholdValue", "Duration", "Trigger" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence.Parser, new[]{ "Filter", "Aggregations", "Duration", "Trigger" }, null, null, null)}),
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser, new[]{ "Name", "DisplayName", "Documentation", "UserLabels", "Conditions", "Combiner", "Enabled", "Validity", "NotificationChannels", "CreationRecord", "MutationRecord" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Parser, new[]{ "Content", "MimeType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent" }, new[]{ "Condition" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "Comparison", "ThresholdValue", "Duration", "Trigger" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence.Parser, new[]{ "Filter", "Aggregations", "Duration", "Trigger" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -207,7 +207,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "user_labels" field.</summary>
     public const int UserLabelsFieldNumber = 16;
     private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 130);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 130);
     private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// User-supplied key/value data to be used for organizing and
@@ -243,7 +243,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "combiner" field.</summary>
     public const int CombinerFieldNumber = 6;
-    private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType combiner_ = 0;
+    private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType combiner_ = global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified;
     /// <summary>
     /// How to combine the results of multiple conditions to determine if an
     /// incident should be opened.
@@ -380,7 +380,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (documentation_ != null) hash ^= Documentation.GetHashCode();
       hash ^= UserLabels.GetHashCode();
       hash ^= conditions_.GetHashCode();
-      if (Combiner != 0) hash ^= Combiner.GetHashCode();
+      if (Combiner != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified) hash ^= Combiner.GetHashCode();
       if (enabled_ != null) hash ^= Enabled.GetHashCode();
       if (validity_ != null) hash ^= Validity.GetHashCode();
       hash ^= notificationChannels_.GetHashCode();
@@ -407,7 +407,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Combiner != 0) {
+      if (Combiner != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Combiner);
       }
@@ -452,7 +452,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       size += userLabels_.CalculateSize(_map_userLabels_codec);
       size += conditions_.CalculateSize(_repeated_conditions_codec);
-      if (Combiner != 0) {
+      if (Combiner != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Combiner);
       }
       if (enabled_ != null) {
@@ -493,7 +493,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       userLabels_.Add(other.userLabels_);
       conditions_.Add(other.conditions_);
-      if (other.Combiner != 0) {
+      if (other.Combiner != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified) {
         Combiner = other.Combiner;
       }
       if (other.enabled_ != null) {
@@ -1441,7 +1441,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
             /// <summary>Field number for the "comparison" field.</summary>
             public const int ComparisonFieldNumber = 4;
-            private global::Google.Cloud.Monitoring.V3.ComparisonType comparison_ = 0;
+            private global::Google.Cloud.Monitoring.V3.ComparisonType comparison_ = global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified;
             /// <summary>
             /// The comparison to apply between the time series (indicated by `filter`
             /// and `aggregation`) and the threshold (indicated by `threshold_value`).
@@ -1545,7 +1545,7 @@ namespace Google.Cloud.Monitoring.V3 {
               hash ^= aggregations_.GetHashCode();
               if (DenominatorFilter.Length != 0) hash ^= DenominatorFilter.GetHashCode();
               hash ^= denominatorAggregations_.GetHashCode();
-              if (Comparison != 0) hash ^= Comparison.GetHashCode();
+              if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) hash ^= Comparison.GetHashCode();
               if (ThresholdValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ThresholdValue);
               if (duration_ != null) hash ^= Duration.GetHashCode();
               if (trigger_ != null) hash ^= Trigger.GetHashCode();
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(18);
                 output.WriteString(Filter);
               }
-              if (Comparison != 0) {
+              if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
                 output.WriteRawTag(32);
                 output.WriteEnum((int) Comparison);
               }
@@ -1604,7 +1604,7 @@ namespace Google.Cloud.Monitoring.V3 {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(DenominatorFilter);
               }
               size += denominatorAggregations_.CalculateSize(_repeated_denominatorAggregations_codec);
-              if (Comparison != 0) {
+              if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Comparison);
               }
               if (ThresholdValue != 0D) {
@@ -1635,7 +1635,7 @@ namespace Google.Cloud.Monitoring.V3 {
                 DenominatorFilter = other.DenominatorFilter;
               }
               denominatorAggregations_.Add(other.denominatorAggregations_);
-              if (other.Comparison != 0) {
+              if (other.Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
                 Comparison = other.Comparison;
               }
               if (other.ThresholdValue != 0D) {

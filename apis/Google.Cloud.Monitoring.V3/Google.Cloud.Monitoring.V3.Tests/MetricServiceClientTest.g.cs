@@ -14,459 +14,1118 @@
 
 // Generated code. DO NOT EDIT!
 
+using ga = Google.Api;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Monitoring.V3.Tests
 {
-    using Google.Api;
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedMetricServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedMetricServiceClientTest
     {
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetMonitoredResourceDescriptorRequestObject()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMonitoredResourceDescriptorRequestObjectAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetMonitoredResourceDescriptor()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            GetMonitoredResourceDescriptorRequest expectedRequest = new GetMonitoredResourceDescriptorRequest
-            {
-                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
-            };
-            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
-            MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetMonitoredResourceDescriptorAsync()
-        {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            GetMonitoredResourceDescriptorRequest expectedRequest = new GetMonitoredResourceDescriptorRequest
-            {
-                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
-            };
-            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
-            };
-            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MonitoredResourceDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
-            MonitoredResourceDescriptor response = await client.GetMonitoredResourceDescriptorAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetMonitoredResourceDescriptor2()
-        {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
             {
-                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
             };
-            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request);
-            Assert.Same(expectedResponse, response);
+            ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetMonitoredResourceDescriptorAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetMonitoredResourceDescriptorAsync()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
             {
-                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
             };
-            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                DisplayName = "displayName1615086568",
-                Description = "description-1724546052",
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MonitoredResourceDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MonitoredResourceDescriptor response = await client.GetMonitoredResourceDescriptorAsync(request);
-            Assert.Same(expectedResponse, response);
+            ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetMonitoredResourceDescriptorResourceNames1()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request.MonitoredResourceDescriptorName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMonitoredResourceDescriptorResourceNames1Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request.MonitoredResourceDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request.MonitoredResourceDescriptorName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMonitoredResourceDescriptorResourceNames2()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMonitoredResourceDescriptorResourceNames2Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            ga::MonitoredResourceDescriptor expectedResponse = new ga::MonitoredResourceDescriptor
+            {
+                Type = "typee2cc9d59",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                Name = "name1c9368b0",
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MonitoredResourceDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MonitoredResourceDescriptor responseCallSettings = await client.GetMonitoredResourceDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MonitoredResourceDescriptor responseCancellationToken = await client.GetMonitoredResourceDescriptorAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetricDescriptorRequestObject()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.GetMetricDescriptor(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricDescriptorRequestObjectAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetMetricDescriptor()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            GetMetricDescriptorRequest expectedRequest = new GetMetricDescriptorRequest
-            {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
-            };
-            MetricDescriptor expectedResponse = new MetricDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetMetricDescriptor(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
-            MetricDescriptor response = client.GetMetricDescriptor(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetMetricDescriptorAsync()
-        {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            GetMetricDescriptorRequest expectedRequest = new GetMetricDescriptorRequest
-            {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
-            };
-            MetricDescriptor expectedResponse = new MetricDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
-            MetricDescriptor response = await client.GetMetricDescriptorAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetMetricDescriptor2()
-        {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
-            MetricDescriptor expectedResponse = new MetricDescriptor
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptor response = client.GetMetricDescriptor(request);
-            Assert.Same(expectedResponse, response);
+            ga::MetricDescriptor response = client.GetMetricDescriptor(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetMetricDescriptorAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricDescriptorAsync()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
-            MetricDescriptor expectedResponse = new MetricDescriptor
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptor response = await client.GetMetricDescriptorAsync(request);
-            Assert.Same(expectedResponse, response);
+            ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
+        [xunit::FactAttribute]
+        public void GetMetricDescriptorResourceNames1()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.GetMetricDescriptor(request.MetricDescriptorName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricDescriptorResourceNames1Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request.MetricDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request.MetricDescriptorName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetricDescriptorResourceNames2()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.GetMetricDescriptor(request.ResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricDescriptorResourceNames2Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.GetMetricDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.GetMetricDescriptorAsync(request.ResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMetricDescriptorRequestObject()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.CreateMetricDescriptor(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMetricDescriptorRequestObjectAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateMetricDescriptor()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            CreateMetricDescriptorRequest expectedRequest = new CreateMetricDescriptorRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                MetricDescriptor = new MetricDescriptor(),
-            };
-            MetricDescriptor expectedResponse = new MetricDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            MetricDescriptor metricDescriptor = new MetricDescriptor();
-            MetricDescriptor response = client.CreateMetricDescriptor(name, metricDescriptor);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateMetricDescriptorAsync()
-        {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            CreateMetricDescriptorRequest expectedRequest = new CreateMetricDescriptorRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                MetricDescriptor = new MetricDescriptor(),
-            };
-            MetricDescriptor expectedResponse = new MetricDescriptor
-            {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
-            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            MetricDescriptor metricDescriptor = new MetricDescriptor();
-            MetricDescriptor response = await client.CreateMetricDescriptorAsync(name, metricDescriptor);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateMetricDescriptor2()
-        {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                MetricDescriptor = new MetricDescriptor(),
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            MetricDescriptor expectedResponse = new MetricDescriptor
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptor response = client.CreateMetricDescriptor(request);
-            Assert.Same(expectedResponse, response);
+            ga::MetricDescriptor response = client.CreateMetricDescriptor(request.Name, request.MetricDescriptor);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateMetricDescriptorAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateMetricDescriptorAsync()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                MetricDescriptor = new MetricDescriptor(),
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            MetricDescriptor expectedResponse = new MetricDescriptor
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
-                Name = "name2-1052831874",
-                Type = "type3575610",
-                Unit = "unit3594628",
-                Description = "description-1724546052",
-                DisplayName = "displayName1615086568",
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
             };
-            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptor response = await client.CreateMetricDescriptorAsync(request);
-            Assert.Same(expectedResponse, response);
+            ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.Name, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.Name, request.MetricDescriptor, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteMetricDescriptor()
+        [xunit::FactAttribute]
+        public void CreateMetricDescriptorResourceNames1()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            DeleteMetricDescriptorRequest expectedRequest = new DeleteMetricDescriptorRequest
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
-            client.DeleteMetricDescriptor(name);
+            ga::MetricDescriptor response = client.CreateMetricDescriptor(request.ProjectName, request.MetricDescriptor);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteMetricDescriptorAsync()
+        [xunit::FactAttribute]
+        public async stt::Task CreateMetricDescriptorResourceNames1Async()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            DeleteMetricDescriptorRequest expectedRequest = new DeleteMetricDescriptorRequest
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
-            await client.DeleteMetricDescriptorAsync(name);
+            ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.ProjectName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.ProjectName, request.MetricDescriptor, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteMetricDescriptor2()
+        [xunit::FactAttribute]
+        public void CreateMetricDescriptorResourceNames2()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.CreateMetricDescriptor(request.OrganizationName, request.MetricDescriptor);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMetricDescriptorResourceNames2Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.OrganizationName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.OrganizationName, request.MetricDescriptor, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMetricDescriptorResourceNames3()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.CreateMetricDescriptor(request.FolderName, request.MetricDescriptor);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMetricDescriptorResourceNames3Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.FolderName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.FolderName, request.MetricDescriptor, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMetricDescriptorResourceNames4()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor response = client.CreateMetricDescriptor(request.ResourceName, request.MetricDescriptor);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMetricDescriptorResourceNames4Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new ga::MetricDescriptor(),
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
+            {
+                Name = "name1c9368b0",
+                Labels =
+                {
+                    new ga::LabelDescriptor(),
+                },
+                MetricKind = ga::MetricDescriptor.Types.MetricKind.Gauge,
+                ValueType = ga::MetricDescriptor.Types.ValueType.Money,
+                Unit = "unitebbd343e",
+                Description = "description2cf9da67",
+                DisplayName = "display_name137f65c2",
+                Type = "typee2cc9d59",
+                Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
+                LaunchStage = ga::LaunchStage.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ga::MetricDescriptor responseCallSettings = await client.CreateMetricDescriptorAsync(request.ResourceName, request.MetricDescriptor, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ga::MetricDescriptor responseCancellationToken = await client.CreateMetricDescriptorAsync(request.ResourceName, request.MetricDescriptor, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMetricDescriptorRequestObject()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             client.DeleteMetricDescriptor(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteMetricDescriptorAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMetricDescriptorRequestObjectAsync()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteMetricDescriptorAsync(request);
+            await client.DeleteMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMetricDescriptorAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateTimeSeries()
+        [xunit::FactAttribute]
+        public void DeleteMetricDescriptor()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            CreateTimeSeriesRequest expectedRequest = new CreateTimeSeriesRequest
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                TimeSeries = { },
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CreateTimeSeries(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
-            client.CreateTimeSeries(name, timeSeries);
+            client.DeleteMetricDescriptor(request.Name);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTimeSeriesAsync()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMetricDescriptorAsync()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
-            CreateTimeSeriesRequest expectedRequest = new CreateTimeSeriesRequest
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                TimeSeries = { },
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
-            await client.CreateTimeSeriesAsync(name, timeSeries);
+            await client.DeleteMetricDescriptorAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMetricDescriptorAsync(request.Name, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void CreateTimeSeries2()
+        [xunit::FactAttribute]
+        public void DeleteMetricDescriptorResourceNames1()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMetricDescriptor(request.MetricDescriptorName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMetricDescriptorResourceNames1Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMetricDescriptorAsync(request.MetricDescriptorName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMetricDescriptorAsync(request.MetricDescriptorName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMetricDescriptorResourceNames2()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMetricDescriptor(request.ResourceName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMetricDescriptorResourceNames2Async()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMetricDescriptorAsync(request.ResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMetricDescriptorAsync(request.ResourceName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTimeSeriesRequestObject()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                TimeSeries = { },
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CreateTimeSeries(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             client.CreateTimeSeries(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTimeSeriesAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTimeSeriesRequestObjectAsync()
         {
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                TimeSeries = { },
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
-            await client.CreateTimeSeriesAsync(request);
+            await client.CreateTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CreateTimeSeriesAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void CreateTimeSeries()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.CreateTimeSeries(request.Name, request.TimeSeries);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTimeSeriesAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CreateTimeSeriesAsync(request.Name, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CreateTimeSeriesAsync(request.Name, request.TimeSeries, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTimeSeriesResourceNames()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.CreateTimeSeries(request.ProjectName, request.TimeSeries);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTimeSeriesResourceNamesAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CreateTimeSeriesAsync(request.ProjectName, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CreateTimeSeriesAsync(request.ProjectName, request.TimeSeries, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

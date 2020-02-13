@@ -85,14 +85,14 @@ namespace Google.Cloud.Monitoring.V3 {
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckRegion), typeof(global::Google.Cloud.Monitoring.V3.GroupResourceType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.InternalChecker), global::Google.Cloud.Monitoring.V3.InternalChecker.Parser, new[]{ "Name", "DisplayName", "Network", "GcpZone", "PeerProjectId", "State" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser, new[]{ "Name", "DisplayName", "MonitoredResource", "ResourceGroup", "HttpCheck", "TcpCheck", "Period", "Timeout", "ContentMatchers", "SelectedRegions", "IsInternal", "InternalCheckers" }, new[]{ "Resource", "CheckRequestType" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup.Parser, new[]{ "GroupId", "ResourceType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Parser, new[]{ "UseSsl", "Path", "Port", "AuthInfo", "MaskHeaders", "Headers", "ValidateSsl" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication.Parser, new[]{ "Username", "Password" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckRegion), typeof(global::Google.Cloud.Monitoring.V3.GroupResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.InternalChecker), global::Google.Cloud.Monitoring.V3.InternalChecker.Parser, new[]{ "Name", "DisplayName", "Network", "GcpZone", "PeerProjectId", "State" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser, new[]{ "Name", "DisplayName", "MonitoredResource", "ResourceGroup", "HttpCheck", "TcpCheck", "Period", "Timeout", "ContentMatchers", "SelectedRegions", "IsInternal", "InternalCheckers" }, new[]{ "Resource", "CheckRequestType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup.Parser, new[]{ "GroupId", "ResourceType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Parser, new[]{ "UseSsl", "Path", "Port", "AuthInfo", "MaskHeaders", "Headers", "ValidateSsl" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck.Parser, new[]{ "Port" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Parser, new[]{ "Content", "Matcher" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckIp), global::Google.Cloud.Monitoring.V3.UptimeCheckIp.Parser, new[]{ "Region", "Location", "IpAddress" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck.Parser, new[]{ "Port" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Parser, new[]{ "Content", "Matcher" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckIp), global::Google.Cloud.Monitoring.V3.UptimeCheckIp.Parser, new[]{ "Region", "Location", "IpAddress" }, null, null, null, null)
           }));
     }
     #endregion
@@ -280,7 +280,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 7;
-    private global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State state_ = 0;
+    private global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State state_ = global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State.Unspecified;
     /// <summary>
     /// The current operational state of the internal checker.
     /// </summary>
@@ -322,7 +322,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (GcpZone.Length != 0) hash ^= GcpZone.GetHashCode();
       if (PeerProjectId.Length != 0) hash ^= PeerProjectId.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -356,7 +356,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(50);
         output.WriteString(PeerProjectId);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) State);
       }
@@ -383,7 +383,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (PeerProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerProjectId);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
@@ -412,7 +412,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.PeerProjectId.Length != 0) {
         PeerProjectId = other.PeerProjectId;
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State.Unspecified) {
         State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1145,7 +1145,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         /// <summary>Field number for the "resource_type" field.</summary>
         public const int ResourceTypeFieldNumber = 2;
-        private global::Google.Cloud.Monitoring.V3.GroupResourceType resourceType_ = 0;
+        private global::Google.Cloud.Monitoring.V3.GroupResourceType resourceType_ = global::Google.Cloud.Monitoring.V3.GroupResourceType.ResourceTypeUnspecified;
         /// <summary>
         /// The resource type of the group members.
         /// </summary>
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public override int GetHashCode() {
           int hash = 1;
           if (GroupId.Length != 0) hash ^= GroupId.GetHashCode();
-          if (ResourceType != 0) hash ^= ResourceType.GetHashCode();
+          if (ResourceType != global::Google.Cloud.Monitoring.V3.GroupResourceType.ResourceTypeUnspecified) hash ^= ResourceType.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1197,7 +1197,7 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(10);
             output.WriteString(GroupId);
           }
-          if (ResourceType != 0) {
+          if (ResourceType != global::Google.Cloud.Monitoring.V3.GroupResourceType.ResourceTypeUnspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) ResourceType);
           }
@@ -1212,7 +1212,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (GroupId.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GroupId);
           }
-          if (ResourceType != 0) {
+          if (ResourceType != global::Google.Cloud.Monitoring.V3.GroupResourceType.ResourceTypeUnspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResourceType);
           }
           if (_unknownFields != null) {
@@ -1229,7 +1229,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (other.GroupId.Length != 0) {
             GroupId = other.GroupId;
           }
-          if (other.ResourceType != 0) {
+          if (other.ResourceType != global::Google.Cloud.Monitoring.V3.GroupResourceType.ResourceTypeUnspecified) {
             ResourceType = other.ResourceType;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// <summary>Field number for the "headers" field.</summary>
         public const int HeadersFieldNumber = 6;
         private static readonly pbc::MapField<string, string>.Codec _map_headers_codec
-            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 50);
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
         private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
         /// <summary>
         /// The list of headers to send as part of the Uptime check request.
@@ -1971,7 +1971,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         /// <summary>Field number for the "matcher" field.</summary>
         public const int MatcherFieldNumber = 2;
-        private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption matcher_ = 0;
+        private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption matcher_ = global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption.Unspecified;
         /// <summary>
         /// The type of content matcher that will be applied to the server output,
         /// compared to the `content` string when the check is run.
@@ -2006,7 +2006,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public override int GetHashCode() {
           int hash = 1;
           if (Content.Length != 0) hash ^= Content.GetHashCode();
-          if (Matcher != 0) hash ^= Matcher.GetHashCode();
+          if (Matcher != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption.Unspecified) hash ^= Matcher.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2024,7 +2024,7 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(10);
             output.WriteString(Content);
           }
-          if (Matcher != 0) {
+          if (Matcher != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption.Unspecified) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Matcher);
           }
@@ -2039,7 +2039,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (Content.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
           }
-          if (Matcher != 0) {
+          if (Matcher != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Matcher);
           }
           if (_unknownFields != null) {
@@ -2056,7 +2056,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (other.Content.Length != 0) {
             Content = other.Content;
           }
-          if (other.Matcher != 0) {
+          if (other.Matcher != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption.Unspecified) {
             Matcher = other.Matcher;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2173,7 +2173,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "region" field.</summary>
     public const int RegionFieldNumber = 1;
-    private global::Google.Cloud.Monitoring.V3.UptimeCheckRegion region_ = 0;
+    private global::Google.Cloud.Monitoring.V3.UptimeCheckRegion region_ = global::Google.Cloud.Monitoring.V3.UptimeCheckRegion.RegionUnspecified;
     /// <summary>
     /// A broad region category in which the IP address is located.
     /// </summary>
@@ -2241,7 +2241,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Region != 0) hash ^= Region.GetHashCode();
+      if (Region != global::Google.Cloud.Monitoring.V3.UptimeCheckRegion.RegionUnspecified) hash ^= Region.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
       if (_unknownFields != null) {
@@ -2257,7 +2257,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Region != 0) {
+      if (Region != global::Google.Cloud.Monitoring.V3.UptimeCheckRegion.RegionUnspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Region);
       }
@@ -2277,7 +2277,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Region != 0) {
+      if (Region != global::Google.Cloud.Monitoring.V3.UptimeCheckRegion.RegionUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Region);
       }
       if (Location.Length != 0) {
@@ -2297,7 +2297,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other == null) {
         return;
       }
-      if (other.Region != 0) {
+      if (other.Region != global::Google.Cloud.Monitoring.V3.UptimeCheckRegion.RegionUnspecified) {
         Region = other.Region;
       }
       if (other.Location.Length != 0) {
