@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
@@ -340,6 +341,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableTableAdminClient.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>BigtableTableAdmin client wrapper, for convenient use.</summary>
