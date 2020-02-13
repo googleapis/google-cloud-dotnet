@@ -53,12 +53,13 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
         private const string DefaultGaxVersion = "3.0.0-alpha00";
-        private const string GrpcVersion = "2.25.0";
+        private const string GrpcVersion = "2.27.0";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
             { "Google.Api.Gax.Rest", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc", DefaultGaxVersion },
+            { "Google.Api.Gax.Grpc.GrpcCore", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Gcp", DefaultGaxVersion },
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
@@ -404,7 +405,7 @@ shell.run(
                         targetFrameworks = targetFrameworks ?? DefaultRestTargetFrameworks;
                         break;
                     case ApiType.Grpc:
-                        dependencies.Add("Google.Api.Gax.Grpc", DefaultVersionValue);
+                        dependencies.Add("Google.Api.Gax.Grpc.GrpcCore", DefaultVersionValue);
                         dependencies.Add("Grpc.Core", DefaultVersionValue);
                         targetFrameworks = targetFrameworks ?? DefaultGrpcTargetFrameworks;
                         break;
