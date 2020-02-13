@@ -14,11 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-// Ignore obsolete members within this file.
-// This is currently a hand-written addition to the generated file, until the
-// generator includes it automatically.
-#pragma warning disable CS0612 // Type or member is obsolete
-
 namespace Google.Cloud.Container.V1.Snippets
 {
     using Google.Api.Gax;
@@ -58,7 +53,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListClusters</summary>
-        public void ListClusters()
+        public void ListClusters1()
         {
             // Snippet: ListClusters(string, string, CallSettings)
             // Create client
@@ -72,7 +67,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync()
+        public async Task ListClusters1Async()
         {
             // Snippet: ListClustersAsync(string, string, CallSettings)
             // Additional: ListClustersAsync(string, string, CancellationToken)
@@ -83,6 +78,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             // Make the request
             ListClustersResponse response = await clusterManagerClient.ListClustersAsync(projectId, zone);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClusters</summary>
+        public void ListClusters2()
+        {
+            // Snippet: ListClusters(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListClustersResponse response = clusterManagerClient.ListClusters(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClustersAsync</summary>
+        public async Task ListClusters2Async()
+        {
+            // Snippet: ListClustersAsync(string, CallSettings)
+            // Additional: ListClustersAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListClustersResponse response = await clusterManagerClient.ListClustersAsync(parent);
             // End snippet
         }
 
@@ -114,7 +136,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetCluster</summary>
-        public void GetCluster()
+        public void GetCluster1()
         {
             // Snippet: GetCluster(string, string, string, CallSettings)
             // Create client
@@ -129,7 +151,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetClusterAsync</summary>
-        public async Task GetClusterAsync()
+        public async Task GetCluster1Async()
         {
             // Snippet: GetClusterAsync(string, string, string, CallSettings)
             // Additional: GetClusterAsync(string, string, string, CancellationToken)
@@ -141,6 +163,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             // Make the request
             Cluster response = await clusterManagerClient.GetClusterAsync(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCluster</summary>
+        public void GetCluster2()
+        {
+            // Snippet: GetCluster(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Cluster response = clusterManagerClient.GetCluster(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClusterAsync</summary>
+        public async Task GetCluster2Async()
+        {
+            // Snippet: GetClusterAsync(string, CallSettings)
+            // Additional: GetClusterAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Cluster response = await clusterManagerClient.GetClusterAsync(name);
             // End snippet
         }
 
@@ -180,7 +229,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateCluster</summary>
-        public void CreateCluster()
+        public void CreateCluster1()
         {
             // Snippet: CreateCluster(string, string, Cluster, CallSettings)
             // Create client
@@ -195,7 +244,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateClusterAsync</summary>
-        public async Task CreateClusterAsync()
+        public async Task CreateCluster1Async()
         {
             // Snippet: CreateClusterAsync(string, string, Cluster, CallSettings)
             // Additional: CreateClusterAsync(string, string, Cluster, CancellationToken)
@@ -207,6 +256,35 @@ namespace Google.Cloud.Container.V1.Snippets
             Cluster cluster = new Cluster();
             // Make the request
             Operation response = await clusterManagerClient.CreateClusterAsync(projectId, zone, cluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCluster</summary>
+        public void CreateCluster2()
+        {
+            // Snippet: CreateCluster(string, Cluster, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            Cluster cluster = new Cluster();
+            // Make the request
+            Operation response = clusterManagerClient.CreateCluster(parent, cluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClusterAsync</summary>
+        public async Task CreateCluster2Async()
+        {
+            // Snippet: CreateClusterAsync(string, Cluster, CallSettings)
+            // Additional: CreateClusterAsync(string, Cluster, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            Cluster cluster = new Cluster();
+            // Make the request
+            Operation response = await clusterManagerClient.CreateClusterAsync(parent, cluster);
             // End snippet
         }
 
@@ -246,7 +324,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateCluster</summary>
-        public void UpdateCluster()
+        public void UpdateCluster1()
         {
             // Snippet: UpdateCluster(string, string, string, ClusterUpdate, CallSettings)
             // Create client
@@ -262,7 +340,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync()
+        public async Task UpdateCluster1Async()
         {
             // Snippet: UpdateClusterAsync(string, string, string, ClusterUpdate, CallSettings)
             // Additional: UpdateClusterAsync(string, string, string, ClusterUpdate, CancellationToken)
@@ -275,6 +353,35 @@ namespace Google.Cloud.Container.V1.Snippets
             ClusterUpdate update = new ClusterUpdate();
             // Make the request
             Operation response = await clusterManagerClient.UpdateClusterAsync(projectId, zone, clusterId, update);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCluster</summary>
+        public void UpdateCluster2()
+        {
+            // Snippet: UpdateCluster(string, ClusterUpdate, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            ClusterUpdate update = new ClusterUpdate();
+            // Make the request
+            Operation response = clusterManagerClient.UpdateCluster(name, update);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateClusterAsync</summary>
+        public async Task UpdateCluster2Async()
+        {
+            // Snippet: UpdateClusterAsync(string, ClusterUpdate, CallSettings)
+            // Additional: UpdateClusterAsync(string, ClusterUpdate, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            ClusterUpdate update = new ClusterUpdate();
+            // Make the request
+            Operation response = await clusterManagerClient.UpdateClusterAsync(name, update);
             // End snippet
         }
 
@@ -359,7 +466,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLoggingServiceRequest request = new SetLoggingServiceRequest
             {
-                Zone = "",
                 LoggingService = "",
                 Name = "",
             };
@@ -378,7 +484,6 @@ namespace Google.Cloud.Container.V1.Snippets
             // Initialize request argument(s)
             SetLoggingServiceRequest request = new SetLoggingServiceRequest
             {
-                Zone = "",
                 LoggingService = "",
                 Name = "",
             };
@@ -388,7 +493,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLoggingService</summary>
-        public void SetLoggingService()
+        public void SetLoggingService1()
         {
             // Snippet: SetLoggingService(string, string, string, string, CallSettings)
             // Create client
@@ -404,7 +509,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLoggingServiceAsync</summary>
-        public async Task SetLoggingServiceAsync()
+        public async Task SetLoggingService1Async()
         {
             // Snippet: SetLoggingServiceAsync(string, string, string, string, CallSettings)
             // Additional: SetLoggingServiceAsync(string, string, string, string, CancellationToken)
@@ -417,6 +522,35 @@ namespace Google.Cloud.Container.V1.Snippets
             string loggingService = "";
             // Make the request
             Operation response = await clusterManagerClient.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLoggingService</summary>
+        public void SetLoggingService2()
+        {
+            // Snippet: SetLoggingService(string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            string loggingService = "";
+            // Make the request
+            Operation response = clusterManagerClient.SetLoggingService(name, loggingService);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLoggingServiceAsync</summary>
+        public async Task SetLoggingService2Async()
+        {
+            // Snippet: SetLoggingServiceAsync(string, string, CallSettings)
+            // Additional: SetLoggingServiceAsync(string, string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            string loggingService = "";
+            // Make the request
+            Operation response = await clusterManagerClient.SetLoggingServiceAsync(name, loggingService);
             // End snippet
         }
 
@@ -456,7 +590,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMonitoringService</summary>
-        public void SetMonitoringService()
+        public void SetMonitoringService1()
         {
             // Snippet: SetMonitoringService(string, string, string, string, CallSettings)
             // Create client
@@ -472,7 +606,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMonitoringServiceAsync</summary>
-        public async Task SetMonitoringServiceAsync()
+        public async Task SetMonitoringService1Async()
         {
             // Snippet: SetMonitoringServiceAsync(string, string, string, string, CallSettings)
             // Additional: SetMonitoringServiceAsync(string, string, string, string, CancellationToken)
@@ -485,6 +619,35 @@ namespace Google.Cloud.Container.V1.Snippets
             string monitoringService = "";
             // Make the request
             Operation response = await clusterManagerClient.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMonitoringService</summary>
+        public void SetMonitoringService2()
+        {
+            // Snippet: SetMonitoringService(string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            string monitoringService = "";
+            // Make the request
+            Operation response = clusterManagerClient.SetMonitoringService(name, monitoringService);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMonitoringServiceAsync</summary>
+        public async Task SetMonitoringService2Async()
+        {
+            // Snippet: SetMonitoringServiceAsync(string, string, CallSettings)
+            // Additional: SetMonitoringServiceAsync(string, string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            string monitoringService = "";
+            // Make the request
+            Operation response = await clusterManagerClient.SetMonitoringServiceAsync(name, monitoringService);
             // End snippet
         }
 
@@ -524,7 +687,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetAddonsConfig</summary>
-        public void SetAddonsConfig()
+        public void SetAddonsConfig1()
         {
             // Snippet: SetAddonsConfig(string, string, string, AddonsConfig, CallSettings)
             // Create client
@@ -540,7 +703,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetAddonsConfigAsync</summary>
-        public async Task SetAddonsConfigAsync()
+        public async Task SetAddonsConfig1Async()
         {
             // Snippet: SetAddonsConfigAsync(string, string, string, AddonsConfig, CallSettings)
             // Additional: SetAddonsConfigAsync(string, string, string, AddonsConfig, CancellationToken)
@@ -553,6 +716,35 @@ namespace Google.Cloud.Container.V1.Snippets
             AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
             Operation response = await clusterManagerClient.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAddonsConfig</summary>
+        public void SetAddonsConfig2()
+        {
+            // Snippet: SetAddonsConfig(string, AddonsConfig, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            AddonsConfig addonsConfig = new AddonsConfig();
+            // Make the request
+            Operation response = clusterManagerClient.SetAddonsConfig(name, addonsConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAddonsConfigAsync</summary>
+        public async Task SetAddonsConfig2Async()
+        {
+            // Snippet: SetAddonsConfigAsync(string, AddonsConfig, CallSettings)
+            // Additional: SetAddonsConfigAsync(string, AddonsConfig, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            AddonsConfig addonsConfig = new AddonsConfig();
+            // Make the request
+            Operation response = await clusterManagerClient.SetAddonsConfigAsync(name, addonsConfig);
             // End snippet
         }
 
@@ -592,7 +784,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLocations</summary>
-        public void SetLocations()
+        public void SetLocations1()
         {
             // Snippet: SetLocations(string, string, string, IEnumerable<string>, CallSettings)
             // Create client
@@ -608,7 +800,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLocationsAsync</summary>
-        public async Task SetLocationsAsync()
+        public async Task SetLocations1Async()
         {
             // Snippet: SetLocationsAsync(string, string, string, IEnumerable<string>, CallSettings)
             // Additional: SetLocationsAsync(string, string, string, IEnumerable<string>, CancellationToken)
@@ -621,6 +813,35 @@ namespace Google.Cloud.Container.V1.Snippets
             IEnumerable<string> locations = new string[] { "", };
             // Make the request
             Operation response = await clusterManagerClient.SetLocationsAsync(projectId, zone, clusterId, locations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLocations</summary>
+        public void SetLocations2()
+        {
+            // Snippet: SetLocations(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            IEnumerable<string> locations = new string[] { "", };
+            // Make the request
+            Operation response = clusterManagerClient.SetLocations(name, locations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLocationsAsync</summary>
+        public async Task SetLocations2Async()
+        {
+            // Snippet: SetLocationsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: SetLocationsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            IEnumerable<string> locations = new string[] { "", };
+            // Make the request
+            Operation response = await clusterManagerClient.SetLocationsAsync(name, locations);
             // End snippet
         }
 
@@ -660,7 +881,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateMaster</summary>
-        public void UpdateMaster()
+        public void UpdateMaster1()
         {
             // Snippet: UpdateMaster(string, string, string, string, CallSettings)
             // Create client
@@ -676,7 +897,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateMasterAsync</summary>
-        public async Task UpdateMasterAsync()
+        public async Task UpdateMaster1Async()
         {
             // Snippet: UpdateMasterAsync(string, string, string, string, CallSettings)
             // Additional: UpdateMasterAsync(string, string, string, string, CancellationToken)
@@ -689,6 +910,35 @@ namespace Google.Cloud.Container.V1.Snippets
             string masterVersion = "";
             // Make the request
             Operation response = await clusterManagerClient.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMaster</summary>
+        public void UpdateMaster2()
+        {
+            // Snippet: UpdateMaster(string, string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            string masterVersion = "";
+            // Make the request
+            Operation response = clusterManagerClient.UpdateMaster(name, masterVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMasterAsync</summary>
+        public async Task UpdateMaster2Async()
+        {
+            // Snippet: UpdateMasterAsync(string, string, CallSettings)
+            // Additional: UpdateMasterAsync(string, string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            string masterVersion = "";
+            // Make the request
+            Operation response = await clusterManagerClient.UpdateMasterAsync(name, masterVersion);
             // End snippet
         }
 
@@ -757,7 +1007,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteCluster</summary>
-        public void DeleteCluster()
+        public void DeleteCluster1()
         {
             // Snippet: DeleteCluster(string, string, string, CallSettings)
             // Create client
@@ -772,7 +1022,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteClusterAsync</summary>
-        public async Task DeleteClusterAsync()
+        public async Task DeleteCluster1Async()
         {
             // Snippet: DeleteClusterAsync(string, string, string, CallSettings)
             // Additional: DeleteClusterAsync(string, string, string, CancellationToken)
@@ -784,6 +1034,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             // Make the request
             Operation response = await clusterManagerClient.DeleteClusterAsync(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCluster</summary>
+        public void DeleteCluster2()
+        {
+            // Snippet: DeleteCluster(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = clusterManagerClient.DeleteCluster(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClusterAsync</summary>
+        public async Task DeleteCluster2Async()
+        {
+            // Snippet: DeleteClusterAsync(string, CallSettings)
+            // Additional: DeleteClusterAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = await clusterManagerClient.DeleteClusterAsync(name);
             // End snippet
         }
 
@@ -929,7 +1206,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CancelOperation</summary>
-        public void CancelOperation()
+        public void CancelOperation1()
         {
             // Snippet: CancelOperation(string, string, string, CallSettings)
             // Create client
@@ -944,7 +1221,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CancelOperationAsync</summary>
-        public async Task CancelOperationAsync()
+        public async Task CancelOperation1Async()
         {
             // Snippet: CancelOperationAsync(string, string, string, CallSettings)
             // Additional: CancelOperationAsync(string, string, string, CancellationToken)
@@ -956,6 +1233,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string operationId = "";
             // Make the request
             await clusterManagerClient.CancelOperationAsync(projectId, zone, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOperation</summary>
+        public void CancelOperation2()
+        {
+            // Snippet: CancelOperation(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            clusterManagerClient.CancelOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOperationAsync</summary>
+        public async Task CancelOperation2Async()
+        {
+            // Snippet: CancelOperationAsync(string, CallSettings)
+            // Additional: CancelOperationAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            await clusterManagerClient.CancelOperationAsync(name);
             // End snippet
         }
 
@@ -987,7 +1291,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetServerConfig</summary>
-        public void GetServerConfig()
+        public void GetServerConfig1()
         {
             // Snippet: GetServerConfig(string, string, CallSettings)
             // Create client
@@ -1001,7 +1305,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetServerConfigAsync</summary>
-        public async Task GetServerConfigAsync()
+        public async Task GetServerConfig1Async()
         {
             // Snippet: GetServerConfigAsync(string, string, CallSettings)
             // Additional: GetServerConfigAsync(string, string, CancellationToken)
@@ -1012,6 +1316,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             // Make the request
             ServerConfig response = await clusterManagerClient.GetServerConfigAsync(projectId, zone);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServerConfig</summary>
+        public void GetServerConfig2()
+        {
+            // Snippet: GetServerConfig(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            ServerConfig response = clusterManagerClient.GetServerConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServerConfigAsync</summary>
+        public async Task GetServerConfig2Async()
+        {
+            // Snippet: GetServerConfigAsync(string, CallSettings)
+            // Additional: GetServerConfigAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            ServerConfig response = await clusterManagerClient.GetServerConfigAsync(name);
             // End snippet
         }
 
@@ -1043,7 +1374,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListNodePools</summary>
-        public void ListNodePools()
+        public void ListNodePools1()
         {
             // Snippet: ListNodePools(string, string, string, CallSettings)
             // Create client
@@ -1058,7 +1389,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListNodePoolsAsync</summary>
-        public async Task ListNodePoolsAsync()
+        public async Task ListNodePools1Async()
         {
             // Snippet: ListNodePoolsAsync(string, string, string, CallSettings)
             // Additional: ListNodePoolsAsync(string, string, string, CancellationToken)
@@ -1070,6 +1401,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             // Make the request
             ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodePools</summary>
+        public void ListNodePools2()
+        {
+            // Snippet: ListNodePools(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListNodePoolsResponse response = clusterManagerClient.ListNodePools(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodePoolsAsync</summary>
+        public async Task ListNodePools2Async()
+        {
+            // Snippet: ListNodePoolsAsync(string, CallSettings)
+            // Additional: ListNodePoolsAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(parent);
             // End snippet
         }
 
@@ -1101,7 +1459,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetNodePool</summary>
-        public void GetNodePool()
+        public void GetNodePool1()
         {
             // Snippet: GetNodePool(string, string, string, string, CallSettings)
             // Create client
@@ -1117,7 +1475,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetNodePoolAsync</summary>
-        public async Task GetNodePoolAsync()
+        public async Task GetNodePool1Async()
         {
             // Snippet: GetNodePoolAsync(string, string, string, string, CallSettings)
             // Additional: GetNodePoolAsync(string, string, string, string, CancellationToken)
@@ -1130,6 +1488,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string nodePoolId = "";
             // Make the request
             NodePool response = await clusterManagerClient.GetNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodePool</summary>
+        public void GetNodePool2()
+        {
+            // Snippet: GetNodePool(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            NodePool response = clusterManagerClient.GetNodePool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodePoolAsync</summary>
+        public async Task GetNodePool2Async()
+        {
+            // Snippet: GetNodePoolAsync(string, CallSettings)
+            // Additional: GetNodePoolAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            NodePool response = await clusterManagerClient.GetNodePoolAsync(name);
             // End snippet
         }
 
@@ -1169,7 +1554,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNodePool</summary>
-        public void CreateNodePool()
+        public void CreateNodePool1()
         {
             // Snippet: CreateNodePool(string, string, string, NodePool, CallSettings)
             // Create client
@@ -1185,7 +1570,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CreateNodePoolAsync</summary>
-        public async Task CreateNodePoolAsync()
+        public async Task CreateNodePool1Async()
         {
             // Snippet: CreateNodePoolAsync(string, string, string, NodePool, CallSettings)
             // Additional: CreateNodePoolAsync(string, string, string, NodePool, CancellationToken)
@@ -1198,6 +1583,35 @@ namespace Google.Cloud.Container.V1.Snippets
             NodePool nodePool = new NodePool();
             // Make the request
             Operation response = await clusterManagerClient.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNodePool</summary>
+        public void CreateNodePool2()
+        {
+            // Snippet: CreateNodePool(string, NodePool, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            NodePool nodePool = new NodePool();
+            // Make the request
+            Operation response = clusterManagerClient.CreateNodePool(parent, nodePool);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNodePoolAsync</summary>
+        public async Task CreateNodePool2Async()
+        {
+            // Snippet: CreateNodePoolAsync(string, NodePool, CallSettings)
+            // Additional: CreateNodePoolAsync(string, NodePool, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            NodePool nodePool = new NodePool();
+            // Make the request
+            Operation response = await clusterManagerClient.CreateNodePoolAsync(parent, nodePool);
             // End snippet
         }
 
@@ -1229,7 +1643,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNodePool</summary>
-        public void DeleteNodePool()
+        public void DeleteNodePool1()
         {
             // Snippet: DeleteNodePool(string, string, string, string, CallSettings)
             // Create client
@@ -1245,7 +1659,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteNodePoolAsync</summary>
-        public async Task DeleteNodePoolAsync()
+        public async Task DeleteNodePool1Async()
         {
             // Snippet: DeleteNodePoolAsync(string, string, string, string, CallSettings)
             // Additional: DeleteNodePoolAsync(string, string, string, string, CancellationToken)
@@ -1258,6 +1672,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string nodePoolId = "";
             // Make the request
             Operation response = await clusterManagerClient.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNodePool</summary>
+        public void DeleteNodePool2()
+        {
+            // Snippet: DeleteNodePool(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = clusterManagerClient.DeleteNodePool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNodePoolAsync</summary>
+        public async Task DeleteNodePool2Async()
+        {
+            // Snippet: DeleteNodePoolAsync(string, CallSettings)
+            // Additional: DeleteNodePoolAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = await clusterManagerClient.DeleteNodePoolAsync(name);
             // End snippet
         }
 
@@ -1289,7 +1730,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
-        public void RollbackNodePoolUpgrade()
+        public void RollbackNodePoolUpgrade1()
         {
             // Snippet: RollbackNodePoolUpgrade(string, string, string, string, CallSettings)
             // Create client
@@ -1305,7 +1746,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
-        public async Task RollbackNodePoolUpgradeAsync()
+        public async Task RollbackNodePoolUpgrade1Async()
         {
             // Snippet: RollbackNodePoolUpgradeAsync(string, string, string, string, CallSettings)
             // Additional: RollbackNodePoolUpgradeAsync(string, string, string, string, CancellationToken)
@@ -1318,6 +1759,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string nodePoolId = "";
             // Make the request
             Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackNodePoolUpgrade</summary>
+        public void RollbackNodePoolUpgrade2()
+        {
+            // Snippet: RollbackNodePoolUpgrade(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = clusterManagerClient.RollbackNodePoolUpgrade(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackNodePoolUpgradeAsync</summary>
+        public async Task RollbackNodePoolUpgrade2Async()
+        {
+            // Snippet: RollbackNodePoolUpgradeAsync(string, CallSettings)
+            // Additional: RollbackNodePoolUpgradeAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(name);
             // End snippet
         }
 
@@ -1429,7 +1897,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLegacyAbac</summary>
-        public void SetLegacyAbac()
+        public void SetLegacyAbac1()
         {
             // Snippet: SetLegacyAbac(string, string, string, bool, CallSettings)
             // Create client
@@ -1445,7 +1913,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetLegacyAbacAsync</summary>
-        public async Task SetLegacyAbacAsync()
+        public async Task SetLegacyAbac1Async()
         {
             // Snippet: SetLegacyAbacAsync(string, string, string, bool, CallSettings)
             // Additional: SetLegacyAbacAsync(string, string, string, bool, CancellationToken)
@@ -1458,6 +1926,35 @@ namespace Google.Cloud.Container.V1.Snippets
             bool enabled = false;
             // Make the request
             Operation response = await clusterManagerClient.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLegacyAbac</summary>
+        public void SetLegacyAbac2()
+        {
+            // Snippet: SetLegacyAbac(string, bool, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            bool enabled = false;
+            // Make the request
+            Operation response = clusterManagerClient.SetLegacyAbac(name, enabled);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLegacyAbacAsync</summary>
+        public async Task SetLegacyAbac2Async()
+        {
+            // Snippet: SetLegacyAbacAsync(string, bool, CallSettings)
+            // Additional: SetLegacyAbacAsync(string, bool, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            bool enabled = false;
+            // Make the request
+            Operation response = await clusterManagerClient.SetLegacyAbacAsync(name, enabled);
             // End snippet
         }
 
@@ -1497,7 +1994,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for StartIPRotation</summary>
-        public void StartIPRotation()
+        public void StartIPRotation1()
         {
             // Snippet: StartIPRotation(string, string, string, CallSettings)
             // Create client
@@ -1512,7 +2009,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for StartIPRotationAsync</summary>
-        public async Task StartIPRotationAsync()
+        public async Task StartIPRotation1Async()
         {
             // Snippet: StartIPRotationAsync(string, string, string, CallSettings)
             // Additional: StartIPRotationAsync(string, string, string, CancellationToken)
@@ -1524,6 +2021,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             // Make the request
             Operation response = await clusterManagerClient.StartIPRotationAsync(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartIPRotation</summary>
+        public void StartIPRotation2()
+        {
+            // Snippet: StartIPRotation(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = clusterManagerClient.StartIPRotation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartIPRotationAsync</summary>
+        public async Task StartIPRotation2Async()
+        {
+            // Snippet: StartIPRotationAsync(string, CallSettings)
+            // Additional: StartIPRotationAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = await clusterManagerClient.StartIPRotationAsync(name);
             // End snippet
         }
 
@@ -1555,7 +2079,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CompleteIPRotation</summary>
-        public void CompleteIPRotation()
+        public void CompleteIPRotation1()
         {
             // Snippet: CompleteIPRotation(string, string, string, CallSettings)
             // Create client
@@ -1570,7 +2094,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for CompleteIPRotationAsync</summary>
-        public async Task CompleteIPRotationAsync()
+        public async Task CompleteIPRotation1Async()
         {
             // Snippet: CompleteIPRotationAsync(string, string, string, CallSettings)
             // Additional: CompleteIPRotationAsync(string, string, string, CancellationToken)
@@ -1582,6 +2106,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             // Make the request
             Operation response = await clusterManagerClient.CompleteIPRotationAsync(projectId, zone, clusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteIPRotation</summary>
+        public void CompleteIPRotation2()
+        {
+            // Snippet: CompleteIPRotation(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = clusterManagerClient.CompleteIPRotation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteIPRotationAsync</summary>
+        public async Task CompleteIPRotation2Async()
+        {
+            // Snippet: CompleteIPRotationAsync(string, CallSettings)
+            // Additional: CompleteIPRotationAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = await clusterManagerClient.CompleteIPRotationAsync(name);
             // End snippet
         }
 
@@ -1656,7 +2207,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNetworkPolicy</summary>
-        public void SetNetworkPolicy()
+        public void SetNetworkPolicy1()
         {
             // Snippet: SetNetworkPolicy(string, string, string, NetworkPolicy, CallSettings)
             // Create client
@@ -1672,7 +2223,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetNetworkPolicyAsync</summary>
-        public async Task SetNetworkPolicyAsync()
+        public async Task SetNetworkPolicy1Async()
         {
             // Snippet: SetNetworkPolicyAsync(string, string, string, NetworkPolicy, CallSettings)
             // Additional: SetNetworkPolicyAsync(string, string, string, NetworkPolicy, CancellationToken)
@@ -1685,6 +2236,35 @@ namespace Google.Cloud.Container.V1.Snippets
             NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
             Operation response = await clusterManagerClient.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetNetworkPolicy</summary>
+        public void SetNetworkPolicy2()
+        {
+            // Snippet: SetNetworkPolicy(string, NetworkPolicy, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            NetworkPolicy networkPolicy = new NetworkPolicy();
+            // Make the request
+            Operation response = clusterManagerClient.SetNetworkPolicy(name, networkPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetNetworkPolicyAsync</summary>
+        public async Task SetNetworkPolicy2Async()
+        {
+            // Snippet: SetNetworkPolicyAsync(string, NetworkPolicy, CallSettings)
+            // Additional: SetNetworkPolicyAsync(string, NetworkPolicy, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            NetworkPolicy networkPolicy = new NetworkPolicy();
+            // Make the request
+            Operation response = await clusterManagerClient.SetNetworkPolicyAsync(name, networkPolicy);
             // End snippet
         }
 
@@ -1730,7 +2310,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMaintenancePolicy</summary>
-        public void SetMaintenancePolicy()
+        public void SetMaintenancePolicy1()
         {
             // Snippet: SetMaintenancePolicy(string, string, string, MaintenancePolicy, CallSettings)
             // Create client
@@ -1746,7 +2326,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
-        public async Task SetMaintenancePolicyAsync()
+        public async Task SetMaintenancePolicy1Async()
         {
             // Snippet: SetMaintenancePolicyAsync(string, string, string, MaintenancePolicy, CallSettings)
             // Additional: SetMaintenancePolicyAsync(string, string, string, MaintenancePolicy, CancellationToken)
@@ -1759,6 +2339,35 @@ namespace Google.Cloud.Container.V1.Snippets
             MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
             // Make the request
             Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMaintenancePolicy</summary>
+        public void SetMaintenancePolicy2()
+        {
+            // Snippet: SetMaintenancePolicy(string, MaintenancePolicy, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
+            // Make the request
+            Operation response = clusterManagerClient.SetMaintenancePolicy(name, maintenancePolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMaintenancePolicyAsync</summary>
+        public async Task SetMaintenancePolicy2Async()
+        {
+            // Snippet: SetMaintenancePolicyAsync(string, MaintenancePolicy, CallSettings)
+            // Additional: SetMaintenancePolicyAsync(string, MaintenancePolicy, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
+            // Make the request
+            Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(name, maintenancePolicy);
             // End snippet
         }
 
