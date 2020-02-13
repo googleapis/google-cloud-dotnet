@@ -18,33 +18,78 @@ namespace Google.Cloud.Monitoring.V3.Snippets
 {
     using Google.Api;
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.Monitoring.V3;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
+    using Google.Api.Gax.ResourceNames;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedMetricServiceClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedMetricServiceClientSnippets
     {
-        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
-        public async Task ListMonitoredResourceDescriptorsAsync()
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public void ListMonitoredResourceDescriptorsRequestObject()
         {
-            // Snippet: ListMonitoredResourceDescriptorsAsync(ProjectName,string,int?,CallSettings)
+            // Snippet: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
+            {
+                Filter = "",
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptors(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MonitoredResourceDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public async Task ListMonitoredResourceDescriptorsRequestObjectAsync()
+        {
+            // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
+            {
+                Filter = "",
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
-            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
-                metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((MonitoredResourceDescriptor item) =>
@@ -60,6 +105,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MonitoredResourceDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -71,6 +117,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MonitoredResourceDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -81,14 +128,13 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
         public void ListMonitoredResourceDescriptors()
         {
-            // Snippet: ListMonitoredResourceDescriptors(ProjectName,string,int?,CallSettings)
+            // Snippet: ListMonitoredResourceDescriptors(string, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            string name = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
-                metricServiceClient.ListMonitoredResourceDescriptors(name);
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptors(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (MonitoredResourceDescriptor item in response)
@@ -104,6 +150,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MonitoredResourceDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -115,6 +162,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MonitoredResourceDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -122,20 +170,16 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
-        public async Task ListMonitoredResourceDescriptorsAsync_RequestObject()
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public async Task ListMonitoredResourceDescriptorsAsync()
         {
-            // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest,CallSettings)
+            // Snippet: ListMonitoredResourceDescriptorsAsync(string, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-            };
+            string name = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
-                metricServiceClient.ListMonitoredResourceDescriptorsAsync(request);
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((MonitoredResourceDescriptor item) =>
@@ -151,6 +195,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MonitoredResourceDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -162,6 +207,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MonitoredResourceDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -170,19 +216,15 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
-        public void ListMonitoredResourceDescriptors_RequestObject()
+        public void ListMonitoredResourceDescriptorsResourceNames1()
         {
-            // Snippet: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest,CallSettings)
+            // Snippet: ListMonitoredResourceDescriptors(ProjectName, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-            };
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
-                metricServiceClient.ListMonitoredResourceDescriptors(request);
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptors(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (MonitoredResourceDescriptor item in response)
@@ -198,6 +240,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MonitoredResourceDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -209,6 +252,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MonitoredResourceDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -216,44 +260,348 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
-        public async Task GetMonitoredResourceDescriptorAsync()
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public async Task ListMonitoredResourceDescriptorsResourceNames1Async()
         {
-            // Snippet: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName,CallSettings)
-            // Additional: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName,CancellationToken)
+            // Snippet: ListMonitoredResourceDescriptorsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(name);
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public void ListMonitoredResourceDescriptorsResourceNames2()
+        {
+            // Snippet: ListMonitoredResourceDescriptors(OrganizationName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptors(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MonitoredResourceDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public async Task ListMonitoredResourceDescriptorsResourceNames2Async()
+        {
+            // Snippet: ListMonitoredResourceDescriptorsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public void ListMonitoredResourceDescriptorsResourceNames3()
+        {
+            // Snippet: ListMonitoredResourceDescriptors(FolderName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptors(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MonitoredResourceDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public async Task ListMonitoredResourceDescriptorsResourceNames3Async()
+        {
+            // Snippet: ListMonitoredResourceDescriptorsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public void ListMonitoredResourceDescriptorsResourceNames4()
+        {
+            // Snippet: ListMonitoredResourceDescriptors(IResourceName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptors(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MonitoredResourceDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        public async Task ListMonitoredResourceDescriptorsResourceNames4Async()
+        {
+            // Snippet: ListMonitoredResourceDescriptorsAsync(IResourceName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetMonitoredResourceDescriptor</summary>
-        public void GetMonitoredResourceDescriptor()
+        public void GetMonitoredResourceDescriptorRequestObject()
         {
-            // Snippet: GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName,CallSettings)
+            // Snippet: GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
             // Make the request
-            MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(name);
+            MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
-        public async Task GetMonitoredResourceDescriptorAsync_RequestObject()
+        public async Task GetMonitoredResourceDescriptorRequestObjectAsync()
         {
-            // Snippet: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest,CallSettings)
-            // Additional: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest,CancellationToken)
+            // Snippet: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest, CallSettings)
+            // Additional: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
             {
-                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+                MonitoredResourceDescriptorName = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
             };
             // Make the request
             MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(request);
@@ -261,32 +609,149 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for GetMonitoredResourceDescriptor</summary>
-        public void GetMonitoredResourceDescriptor_RequestObject()
+        public void GetMonitoredResourceDescriptor()
         {
-            // Snippet: GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest,CallSettings)
+            // Snippet: GetMonitoredResourceDescriptor(string, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
-            {
-                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
-            };
+            string name = "projects/[PROJECT]/monitoredResourceDescriptors/[MONITORED_RESOURCE_DESCRIPTOR]";
             // Make the request
-            MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(request);
+            MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
-        public async Task ListMetricDescriptorsAsync()
+        /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
+        public async Task GetMonitoredResourceDescriptorAsync()
         {
-            // Snippet: ListMetricDescriptorsAsync(ProjectName,string,int?,CallSettings)
+            // Snippet: GetMonitoredResourceDescriptorAsync(string, CallSettings)
+            // Additional: GetMonitoredResourceDescriptorAsync(string, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            string name = "projects/[PROJECT]/monitoredResourceDescriptors/[MONITORED_RESOURCE_DESCRIPTOR]";
             // Make the request
-            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
-                metricServiceClient.ListMetricDescriptorsAsync(name);
+            MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMonitoredResourceDescriptor</summary>
+        public void GetMonitoredResourceDescriptorResourceNames1()
+        {
+            // Snippet: GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            MonitoredResourceDescriptorName name = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            // Make the request
+            MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
+        public async Task GetMonitoredResourceDescriptorResourceNames1Async()
+        {
+            // Snippet: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CallSettings)
+            // Additional: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MonitoredResourceDescriptorName name = MonitoredResourceDescriptorName.FromProjectMonitoredResourceDescriptor("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            // Make the request
+            MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMonitoredResourceDescriptor</summary>
+        public void GetMonitoredResourceDescriptorResourceNames2()
+        {
+            // Snippet: GetMonitoredResourceDescriptor(IResourceName, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
+        public async Task GetMonitoredResourceDescriptorResourceNames2Async()
+        {
+            // Snippet: GetMonitoredResourceDescriptorAsync(IResourceName, CallSettings)
+            // Additional: GetMonitoredResourceDescriptorAsync(IResourceName, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public void ListMetricDescriptorsRequestObject()
+        {
+            // Snippet: ListMetricDescriptors(ListMetricDescriptorsRequest, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
+            {
+                Filter = "",
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MetricDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public async Task ListMetricDescriptorsRequestObjectAsync()
+        {
+            // Snippet: ListMetricDescriptorsAsync(ListMetricDescriptorsRequest, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
+            {
+                Filter = "",
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((MetricDescriptor item) =>
@@ -302,6 +767,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MetricDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -313,6 +779,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MetricDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -323,14 +790,13 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         /// <summary>Snippet for ListMetricDescriptors</summary>
         public void ListMetricDescriptors()
         {
-            // Snippet: ListMetricDescriptors(ProjectName,string,int?,CallSettings)
+            // Snippet: ListMetricDescriptors(string, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            string name = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
-                metricServiceClient.ListMetricDescriptors(name);
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (MetricDescriptor item in response)
@@ -346,6 +812,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MetricDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -357,6 +824,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MetricDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -364,20 +832,16 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
-        public async Task ListMetricDescriptorsAsync_RequestObject()
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public async Task ListMetricDescriptorsAsync()
         {
-            // Snippet: ListMetricDescriptorsAsync(ListMetricDescriptorsRequest,CallSettings)
+            // Snippet: ListMetricDescriptorsAsync(string, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-            };
+            string name = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
-                metricServiceClient.ListMetricDescriptorsAsync(request);
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((MetricDescriptor item) =>
@@ -393,6 +857,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MetricDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -404,6 +869,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MetricDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -412,19 +878,15 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for ListMetricDescriptors</summary>
-        public void ListMetricDescriptors_RequestObject()
+        public void ListMetricDescriptorsResourceNames1()
         {
-            // Snippet: ListMetricDescriptors(ListMetricDescriptorsRequest,CallSettings)
+            // Snippet: ListMetricDescriptors(ProjectName, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-            };
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
-                metricServiceClient.ListMetricDescriptors(request);
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (MetricDescriptor item in response)
@@ -440,6 +902,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (MetricDescriptor item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -451,6 +914,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (MetricDescriptor item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -458,44 +922,348 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetMetricDescriptorAsync</summary>
-        public async Task GetMetricDescriptorAsync()
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public async Task ListMetricDescriptorsResourceNames1Async()
         {
-            // Snippet: GetMetricDescriptorAsync(MetricDescriptorName,CallSettings)
-            // Additional: GetMetricDescriptorAsync(MetricDescriptorName,CancellationToken)
+            // Snippet: ListMetricDescriptorsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MetricDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public void ListMetricDescriptorsResourceNames2()
+        {
+            // Snippet: ListMetricDescriptors(OrganizationName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MetricDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public async Task ListMetricDescriptorsResourceNames2Async()
+        {
+            // Snippet: ListMetricDescriptorsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MetricDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public void ListMetricDescriptorsResourceNames3()
+        {
+            // Snippet: ListMetricDescriptors(FolderName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MetricDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public async Task ListMetricDescriptorsResourceNames3Async()
+        {
+            // Snippet: ListMetricDescriptorsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MetricDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public void ListMetricDescriptorsResourceNames4()
+        {
+            // Snippet: ListMetricDescriptors(IResourceName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MetricDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetricDescriptors</summary>
+        public async Task ListMetricDescriptorsResourceNames4Async()
+        {
+            // Snippet: ListMetricDescriptorsAsync(IResourceName, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MetricDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MetricDescriptor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetMetricDescriptor</summary>
-        public void GetMetricDescriptor()
+        public void GetMetricDescriptorRequestObject()
         {
-            // Snippet: GetMetricDescriptor(MetricDescriptorName,CallSettings)
+            // Snippet: GetMetricDescriptor(GetMetricDescriptorRequest, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
             // Make the request
-            MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
+            MetricDescriptor response = metricServiceClient.GetMetricDescriptor(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetMetricDescriptorAsync</summary>
-        public async Task GetMetricDescriptorAsync_RequestObject()
+        public async Task GetMetricDescriptorRequestObjectAsync()
         {
-            // Snippet: GetMetricDescriptorAsync(GetMetricDescriptorRequest,CallSettings)
-            // Additional: GetMetricDescriptorAsync(GetMetricDescriptorRequest,CancellationToken)
+            // Snippet: GetMetricDescriptorAsync(GetMetricDescriptorRequest, CallSettings)
+            // Additional: GetMetricDescriptorAsync(GetMetricDescriptorRequest, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
             // Make the request
             MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(request);
@@ -503,62 +1271,115 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for GetMetricDescriptor</summary>
-        public void GetMetricDescriptor_RequestObject()
+        public void GetMetricDescriptor()
         {
-            // Snippet: GetMetricDescriptor(GetMetricDescriptorRequest,CallSettings)
+            // Snippet: GetMetricDescriptor(string, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
-            {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
-            };
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
             // Make the request
-            MetricDescriptor response = metricServiceClient.GetMetricDescriptor(request);
+            MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
             // End snippet
         }
 
-        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
-        public async Task CreateMetricDescriptorAsync()
+        /// <summary>Snippet for GetMetricDescriptorAsync</summary>
+        public async Task GetMetricDescriptorAsync()
         {
-            // Snippet: CreateMetricDescriptorAsync(ProjectName,MetricDescriptor,CallSettings)
-            // Additional: CreateMetricDescriptorAsync(ProjectName,MetricDescriptor,CancellationToken)
+            // Snippet: GetMetricDescriptorAsync(string, CallSettings)
+            // Additional: GetMetricDescriptorAsync(string, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
             // Make the request
-            MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
+            MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricDescriptor</summary>
+        public void GetMetricDescriptorResourceNames1()
+        {
+            // Snippet: GetMetricDescriptor(MetricDescriptorName, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            // Make the request
+            MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricDescriptorAsync</summary>
+        public async Task GetMetricDescriptorResourceNames1Async()
+        {
+            // Snippet: GetMetricDescriptorAsync(MetricDescriptorName, CallSettings)
+            // Additional: GetMetricDescriptorAsync(MetricDescriptorName, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            // Make the request
+            MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricDescriptor</summary>
+        public void GetMetricDescriptorResourceNames2()
+        {
+            // Snippet: GetMetricDescriptor(IResourceName, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricDescriptorAsync</summary>
+        public async Task GetMetricDescriptorResourceNames2Async()
+        {
+            // Snippet: GetMetricDescriptorAsync(IResourceName, CallSettings)
+            // Additional: GetMetricDescriptorAsync(IResourceName, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for CreateMetricDescriptor</summary>
-        public void CreateMetricDescriptor()
+        public void CreateMetricDescriptorRequestObject()
         {
-            // Snippet: CreateMetricDescriptor(ProjectName,MetricDescriptor,CallSettings)
+            // Snippet: CreateMetricDescriptor(CreateMetricDescriptorRequest, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                MetricDescriptor = new MetricDescriptor(),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
-            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
+            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
-        public async Task CreateMetricDescriptorAsync_RequestObject()
+        public async Task CreateMetricDescriptorRequestObjectAsync()
         {
-            // Snippet: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest,CallSettings)
-            // Additional: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest,CancellationToken)
+            // Snippet: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest, CallSettings)
+            // Additional: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
                 MetricDescriptor = new MetricDescriptor(),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(request);
@@ -566,60 +1387,177 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for CreateMetricDescriptor</summary>
-        public void CreateMetricDescriptor_RequestObject()
+        public void CreateMetricDescriptor()
         {
-            // Snippet: CreateMetricDescriptor(CreateMetricDescriptorRequest,CallSettings)
+            // Snippet: CreateMetricDescriptor(string, MetricDescriptor, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                MetricDescriptor = new MetricDescriptor(),
-            };
+            string name = "projects/[PROJECT]";
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
             // Make the request
-            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(request);
+            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
-        public async Task DeleteMetricDescriptorAsync()
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
+        public async Task CreateMetricDescriptorAsync()
         {
-            // Snippet: DeleteMetricDescriptorAsync(MetricDescriptorName,CallSettings)
-            // Additional: DeleteMetricDescriptorAsync(MetricDescriptorName,CancellationToken)
+            // Snippet: CreateMetricDescriptorAsync(string, MetricDescriptor, CallSettings)
+            // Additional: CreateMetricDescriptorAsync(string, MetricDescriptor, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string name = "projects/[PROJECT]";
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
             // Make the request
-            await metricServiceClient.DeleteMetricDescriptorAsync(name);
+            MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptor</summary>
+        public void CreateMetricDescriptorResourceNames1()
+        {
+            // Snippet: CreateMetricDescriptor(ProjectName, MetricDescriptor, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
+        public async Task CreateMetricDescriptorResourceNames1Async()
+        {
+            // Snippet: CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CallSettings)
+            // Additional: CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptor</summary>
+        public void CreateMetricDescriptorResourceNames2()
+        {
+            // Snippet: CreateMetricDescriptor(OrganizationName, MetricDescriptor, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
+        public async Task CreateMetricDescriptorResourceNames2Async()
+        {
+            // Snippet: CreateMetricDescriptorAsync(OrganizationName, MetricDescriptor, CallSettings)
+            // Additional: CreateMetricDescriptorAsync(OrganizationName, MetricDescriptor, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptor</summary>
+        public void CreateMetricDescriptorResourceNames3()
+        {
+            // Snippet: CreateMetricDescriptor(FolderName, MetricDescriptor, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
+        public async Task CreateMetricDescriptorResourceNames3Async()
+        {
+            // Snippet: CreateMetricDescriptorAsync(FolderName, MetricDescriptor, CallSettings)
+            // Additional: CreateMetricDescriptorAsync(FolderName, MetricDescriptor, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptor</summary>
+        public void CreateMetricDescriptorResourceNames4()
+        {
+            // Snippet: CreateMetricDescriptor(IResourceName, MetricDescriptor, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
+        public async Task CreateMetricDescriptorResourceNames4Async()
+        {
+            // Snippet: CreateMetricDescriptorAsync(IResourceName, MetricDescriptor, CallSettings)
+            // Additional: CreateMetricDescriptorAsync(IResourceName, MetricDescriptor, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            // Make the request
+            MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteMetricDescriptor</summary>
-        public void DeleteMetricDescriptor()
+        public void DeleteMetricDescriptorRequestObject()
         {
-            // Snippet: DeleteMetricDescriptor(MetricDescriptorName,CallSettings)
+            // Snippet: DeleteMetricDescriptor(DeleteMetricDescriptorRequest, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
             // Make the request
-            metricServiceClient.DeleteMetricDescriptor(name);
+            metricServiceClient.DeleteMetricDescriptor(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
-        public async Task DeleteMetricDescriptorAsync_RequestObject()
+        public async Task DeleteMetricDescriptorRequestObjectAsync()
         {
-            // Snippet: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest,CallSettings)
-            // Additional: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest,CancellationToken)
+            // Snippet: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest, CallSettings)
+            // Additional: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
             };
             // Make the request
             await metricServiceClient.DeleteMetricDescriptorAsync(request);
@@ -627,35 +1565,157 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for DeleteMetricDescriptor</summary>
-        public void DeleteMetricDescriptor_RequestObject()
+        public void DeleteMetricDescriptor()
         {
-            // Snippet: DeleteMetricDescriptor(DeleteMetricDescriptorRequest,CallSettings)
+            // Snippet: DeleteMetricDescriptor(string, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
-            {
-                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
-            };
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
             // Make the request
-            metricServiceClient.DeleteMetricDescriptor(request);
+            metricServiceClient.DeleteMetricDescriptor(name);
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeriesAsync</summary>
-        public async Task ListTimeSeriesAsync()
+        /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
+        public async Task DeleteMetricDescriptorAsync()
         {
-            // Snippet: ListTimeSeriesAsync(ProjectName,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
+            // Snippet: DeleteMetricDescriptorAsync(string, CallSettings)
+            // Additional: DeleteMetricDescriptorAsync(string, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            string filter = "";
-            TimeInterval interval = new TimeInterval();
-            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
             // Make the request
-            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response =
-                metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
+            await metricServiceClient.DeleteMetricDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetricDescriptor</summary>
+        public void DeleteMetricDescriptorResourceNames1()
+        {
+            // Snippet: DeleteMetricDescriptor(MetricDescriptorName, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            // Make the request
+            metricServiceClient.DeleteMetricDescriptor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
+        public async Task DeleteMetricDescriptorResourceNames1Async()
+        {
+            // Snippet: DeleteMetricDescriptorAsync(MetricDescriptorName, CallSettings)
+            // Additional: DeleteMetricDescriptorAsync(MetricDescriptorName, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            // Make the request
+            await metricServiceClient.DeleteMetricDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetricDescriptor</summary>
+        public void DeleteMetricDescriptorResourceNames2()
+        {
+            // Snippet: DeleteMetricDescriptor(IResourceName, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            metricServiceClient.DeleteMetricDescriptor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
+        public async Task DeleteMetricDescriptorResourceNames2Async()
+        {
+            // Snippet: DeleteMetricDescriptorAsync(IResourceName, CallSettings)
+            // Additional: DeleteMetricDescriptorAsync(IResourceName, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            await metricServiceClient.DeleteMetricDescriptorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public void ListTimeSeriesRequestObject()
+        {
+            // Snippet: ListTimeSeries(ListTimeSeriesRequest, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
+            {
+                Filter = "",
+                Interval = new TimeInterval(),
+                Aggregation = new Aggregation(),
+                OrderBy = "",
+                View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeries(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TimeSeries item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTimeSeriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TimeSeries item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public async Task ListTimeSeriesRequestObjectAsync()
+        {
+            // Snippet: ListTimeSeriesAsync(ListTimeSeriesRequest, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
+            {
+                Filter = "",
+                Interval = new TimeInterval(),
+                Aggregation = new Aggregation(),
+                OrderBy = "",
+                View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TimeSeries item) =>
@@ -671,6 +1731,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TimeSeries item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -682,6 +1743,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TimeSeries item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -692,17 +1754,16 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         /// <summary>Snippet for ListTimeSeries</summary>
         public void ListTimeSeries()
         {
-            // Snippet: ListTimeSeries(ProjectName,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
+            // Snippet: ListTimeSeries(string, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
+            string name = "projects/[PROJECT]";
             string filter = "";
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response =
-                metricServiceClient.ListTimeSeries(name, filter, interval, view);
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeries(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TimeSeries item in response)
@@ -718,6 +1779,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TimeSeries item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -729,6 +1791,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TimeSeries item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -736,23 +1799,19 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeriesAsync</summary>
-        public async Task ListTimeSeriesAsync_RequestObject()
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public async Task ListTimeSeriesAsync()
         {
-            // Snippet: ListTimeSeriesAsync(ListTimeSeriesRequest,CallSettings)
+            // Snippet: ListTimeSeriesAsync(string, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListTimeSeriesRequest request = new ListTimeSeriesRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Filter = "",
-                Interval = new TimeInterval(),
-                View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
-            };
+            string name = "projects/[PROJECT]";
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response =
-                metricServiceClient.ListTimeSeriesAsync(request);
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TimeSeries item) =>
@@ -768,6 +1827,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TimeSeries item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -779,6 +1839,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TimeSeries item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -787,22 +1848,18 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for ListTimeSeries</summary>
-        public void ListTimeSeries_RequestObject()
+        public void ListTimeSeriesResourceNames()
         {
-            // Snippet: ListTimeSeries(ListTimeSeriesRequest,CallSettings)
+            // Snippet: ListTimeSeries(ProjectName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ListTimeSeriesRequest request = new ListTimeSeriesRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                Filter = "",
-                Interval = new TimeInterval(),
-                View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
-            };
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response =
-                metricServiceClient.ListTimeSeries(request);
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeries(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (TimeSeries item in response)
@@ -818,6 +1875,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (TimeSeries item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -829,6 +1887,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TimeSeries item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -836,47 +1895,83 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateTimeSeriesAsync</summary>
-        public async Task CreateTimeSeriesAsync()
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public async Task ListTimeSeriesResourceNamesAsync()
         {
-            // Snippet: CreateTimeSeriesAsync(ProjectName,IEnumerable<TimeSeries>,CallSettings)
-            // Additional: CreateTimeSeriesAsync(ProjectName,IEnumerable<TimeSeries>,CancellationToken)
+            // Snippet: ListTimeSeriesAsync(ProjectName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            await metricServiceClient.CreateTimeSeriesAsync(name, timeSeries);
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TimeSeries item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TimeSeries item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for CreateTimeSeries</summary>
-        public void CreateTimeSeries()
+        public void CreateTimeSeriesRequestObject()
         {
-            // Snippet: CreateTimeSeries(ProjectName,IEnumerable<TimeSeries>,CallSettings)
+            // Snippet: CreateTimeSeries(CreateTimeSeriesRequest, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
-            metricServiceClient.CreateTimeSeries(name, timeSeries);
+            metricServiceClient.CreateTimeSeries(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateTimeSeriesAsync</summary>
-        public async Task CreateTimeSeriesAsync_RequestObject()
+        public async Task CreateTimeSeriesRequestObjectAsync()
         {
-            // Snippet: CreateTimeSeriesAsync(CreateTimeSeriesRequest,CallSettings)
-            // Additional: CreateTimeSeriesAsync(CreateTimeSeriesRequest,CancellationToken)
+            // Snippet: CreateTimeSeriesAsync(CreateTimeSeriesRequest, CallSettings)
+            // Additional: CreateTimeSeriesAsync(CreateTimeSeriesRequest, CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
-                TimeSeries = { },
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             await metricServiceClient.CreateTimeSeriesAsync(request);
@@ -884,21 +1979,61 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for CreateTimeSeries</summary>
-        public void CreateTimeSeries_RequestObject()
+        public void CreateTimeSeries()
         {
-            // Snippet: CreateTimeSeries(CreateTimeSeriesRequest,CallSettings)
+            // Snippet: CreateTimeSeries(string, IEnumerable<TimeSeries>, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
-            {
-                ProjectName = new ProjectName("[PROJECT]"),
-                TimeSeries = { },
-            };
+            string name = "projects/[PROJECT]";
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
             // Make the request
-            metricServiceClient.CreateTimeSeries(request);
+            metricServiceClient.CreateTimeSeries(name, timeSeries);
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTimeSeriesAsync</summary>
+        public async Task CreateTimeSeriesAsync()
+        {
+            // Snippet: CreateTimeSeriesAsync(string, IEnumerable<TimeSeries>, CallSettings)
+            // Additional: CreateTimeSeriesAsync(string, IEnumerable<TimeSeries>, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]";
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            await metricServiceClient.CreateTimeSeriesAsync(name, timeSeries);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTimeSeries</summary>
+        public void CreateTimeSeriesResourceNames()
+        {
+            // Snippet: CreateTimeSeries(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            metricServiceClient.CreateTimeSeries(name, timeSeries);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTimeSeriesAsync</summary>
+        public async Task CreateTimeSeriesResourceNamesAsync()
+        {
+            // Snippet: CreateTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+            // Additional: CreateTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            await metricServiceClient.CreateTimeSeriesAsync(name, timeSeries);
+            // End snippet
+        }
     }
 }

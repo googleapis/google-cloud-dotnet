@@ -35,8 +35,8 @@ namespace Google.Cloud.Monitoring.V3 {
             "Z1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DroppedLabels), global::Google.Cloud.Monitoring.V3.DroppedLabels.Parser, new[]{ "Label" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DroppedLabels), global::Google.Cloud.Monitoring.V3.DroppedLabels.Parser, new[]{ "Label" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -97,7 +97,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "label" field.</summary>
     public const int LabelFieldNumber = 1;
     private static readonly pbc::MapField<string, string>.Codec _map_label_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 10);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
     private readonly pbc::MapField<string, string> label_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Map from label to its value, for all labels dropped in any aggregation.

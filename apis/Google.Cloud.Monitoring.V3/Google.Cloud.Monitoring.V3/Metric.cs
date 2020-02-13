@@ -45,9 +45,9 @@ namespace Google.Cloud.Monitoring.V3 {
             "M2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null, null)
           }));
     }
     #endregion
@@ -333,7 +333,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "metric_kind" field.</summary>
     public const int MetricKindFieldNumber = 3;
-    private global::Google.Api.MetricDescriptor.Types.MetricKind metricKind_ = 0;
+    private global::Google.Api.MetricDescriptor.Types.MetricKind metricKind_ = global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified;
     /// <summary>
     /// The metric kind of the time series. When listing time series, this metric
     /// kind might be different from the metric kind of the associated metric if
@@ -355,7 +355,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "value_type" field.</summary>
     public const int ValueTypeFieldNumber = 4;
-    private global::Google.Api.MetricDescriptor.Types.ValueType valueType_ = 0;
+    private global::Google.Api.MetricDescriptor.Types.ValueType valueType_ = global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified;
     /// <summary>
     /// The value type of the time series. When listing time series, this value
     /// type might be different from the value type of the associated metric if
@@ -420,8 +420,8 @@ namespace Google.Cloud.Monitoring.V3 {
       if (metric_ != null) hash ^= Metric.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
-      if (MetricKind != 0) hash ^= MetricKind.GetHashCode();
-      if (ValueType != 0) hash ^= ValueType.GetHashCode();
+      if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) hash ^= MetricKind.GetHashCode();
+      if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) hash ^= ValueType.GetHashCode();
       hash ^= points_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -444,11 +444,11 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(18);
         output.WriteMessage(Resource);
       }
-      if (MetricKind != 0) {
+      if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) MetricKind);
       }
-      if (ValueType != 0) {
+      if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ValueType);
       }
@@ -474,10 +474,10 @@ namespace Google.Cloud.Monitoring.V3 {
       if (metadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
       }
-      if (MetricKind != 0) {
+      if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricKind);
       }
-      if (ValueType != 0) {
+      if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ValueType);
       }
       size += points_.CalculateSize(_repeated_points_codec);
@@ -510,10 +510,10 @@ namespace Google.Cloud.Monitoring.V3 {
         }
         Metadata.MergeFrom(other.Metadata);
       }
-      if (other.MetricKind != 0) {
+      if (other.MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
         MetricKind = other.MetricKind;
       }
-      if (other.ValueType != 0) {
+      if (other.ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) {
         ValueType = other.ValueType;
       }
       points_.Add(other.points_);

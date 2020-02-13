@@ -138,20 +138,20 @@ namespace Google.Cloud.Monitoring.V3 {
             "X2Rlc2NyaXB0b3J9EgEqIAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.AlertReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser, new[]{ "MetricDescriptors", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser, new[]{ "Name", "MetricDescriptor" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser, new[]{ "Name", "Filter", "Interval", "Aggregation", "OrderBy", "View", "PageSize", "PageToken" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse), global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser, new[]{ "TimeSeries", "NextPageToken", "ExecutionErrors" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser, new[]{ "Name", "TimeSeries" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError.Parser, new[]{ "TimeSeries", "Status" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Parser, new[]{ "TotalPointCount", "SuccessPointCount", "Errors" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error.Parser, new[]{ "Status", "PointCount" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser, new[]{ "MetricDescriptors", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser, new[]{ "Name", "MetricDescriptor" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser, new[]{ "Name", "Filter", "Interval", "Aggregation", "OrderBy", "View", "PageSize", "PageToken" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse), global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser, new[]{ "TimeSeries", "NextPageToken", "ExecutionErrors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser, new[]{ "Name", "TimeSeries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError.Parser, new[]{ "TimeSeries", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Parser, new[]{ "TotalPointCount", "SuccessPointCount", "Errors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesSummary.Types.Error.Parser, new[]{ "Status", "PointCount" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1682,7 +1682,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 7;
-    private global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView view_ = 0;
+    private global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView view_ = global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView.Full;
     /// <summary>
     /// Required. Specifies which information is returned about the time series.
     /// </summary>
@@ -1760,7 +1760,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (interval_ != null) hash ^= Interval.GetHashCode();
       if (aggregation_ != null) hash ^= Aggregation.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
-      if (View != 0) hash ^= View.GetHashCode();
+      if (View != global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView.Full) hash ^= View.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -1792,7 +1792,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(50);
         output.WriteString(OrderBy);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView.Full) {
         output.WriteRawTag(56);
         output.WriteEnum((int) View);
       }
@@ -1831,7 +1831,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (OrderBy.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView.Full) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (PageSize != 0) {
@@ -1872,7 +1872,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.OrderBy.Length != 0) {
         OrderBy = other.OrderBy;
       }
-      if (other.View != 0) {
+      if (other.View != global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView.Full) {
         View = other.View;
       }
       if (other.PageSize != 0) {

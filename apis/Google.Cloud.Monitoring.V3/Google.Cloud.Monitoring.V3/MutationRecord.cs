@@ -35,8 +35,8 @@ namespace Google.Cloud.Monitoring.V3 {
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.MutationRecord), global::Google.Cloud.Monitoring.V3.MutationRecord.Parser, new[]{ "MutateTime", "MutatedBy" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.MutationRecord), global::Google.Cloud.Monitoring.V3.MutationRecord.Parser, new[]{ "MutateTime", "MutatedBy" }, null, null, null, null)
           }));
     }
     #endregion
