@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc.GrpcCore;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Bigtable.Admin.V2;
 using Google.Cloud.Bigtable.Common.V2;
@@ -58,7 +59,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 EmulatorCallInvoker = new GcpCallInvoker(
                     emulatorHost,
                     ChannelCredentials.Insecure,
-                    BigtableServiceApiSettings.GetDefault().CreateChannelOptions());
+                    GrpcCoreAdapter.Instance.ConvertOptions(BigtableServiceApiSettings.GetDefault().CreateChannelOptions()));
 
                 instanceId = "doesnt-matter";
             }
