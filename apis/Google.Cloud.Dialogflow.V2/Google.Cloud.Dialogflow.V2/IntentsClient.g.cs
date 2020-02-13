@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -228,6 +229,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => IntentsClient.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Intents client wrapper, for convenient use.</summary>

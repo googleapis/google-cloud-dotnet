@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -168,6 +169,9 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => AutoscalingPolicyServiceClient.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>AutoscalingPolicyService client wrapper, for convenient use.</summary>

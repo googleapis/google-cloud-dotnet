@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -149,6 +150,9 @@ namespace Google.Cloud.Speech.V1
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SpeechClient.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Speech client wrapper, for convenient use.</summary>

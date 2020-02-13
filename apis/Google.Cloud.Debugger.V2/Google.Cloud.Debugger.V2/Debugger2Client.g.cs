@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -162,6 +163,9 @@ namespace Google.Cloud.Debugger.V2
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => Debugger2Client.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>Debugger2 client wrapper, for convenient use.</summary>

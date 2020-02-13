@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcoc = Google.Cloud.OsLogin.Common;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -183,6 +184,9 @@ namespace Google.Cloud.OsLogin.V1Beta
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => OsLoginServiceClient.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>OsLoginService client wrapper, for convenient use.</summary>
