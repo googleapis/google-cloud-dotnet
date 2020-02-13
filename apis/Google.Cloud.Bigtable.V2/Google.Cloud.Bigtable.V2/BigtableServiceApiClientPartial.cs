@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Gcp;
+using Google.Api.Gax.Grpc.GrpcCore;
 using Grpc.Core;
 using Grpc.Gcp;
 using System;
@@ -133,10 +134,8 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public static class BigtableServiceApiSettingsExtensions
     {
-        private static readonly Lazy<IEnumerable<ChannelOption>> s_defaultChannelOptions =
-            new Lazy<IEnumerable<ChannelOption>>(
-                () => new ReadOnlyCollection<ChannelOption>(
-                    BigtableServiceApiSettings.GetDefault().CreateChannelOptionsImpl()));
+        private static readonly Lazy<GrpcChannelOptions> s_defaultChannelOptions =
+            new Lazy<GrpcChannelOptions>(() => BigtableServiceApiSettings.GetDefault().CreateChannelOptionsImpl());
 
         /// <summary>
         /// Creates a collection of <see cref="ChannelOption"/> instances which can be used to create a <see cref="Channel"/>
@@ -153,16 +152,10 @@ namespace Google.Cloud.Bigtable.V2
         /// The settings with which to create channel options. May be null, in which case the default settings will be used.
         /// </param>
         /// <returns>A collection of <see cref="ChannelOption"/> instances.</returns>
-        public static IEnumerable<ChannelOption> CreateChannelOptions(this BigtableServiceApiSettings settings)
-        {
-            if (settings == null)
-            {
-                return s_defaultChannelOptions.Value;
-            }
-            return CreateChannelOptionsImpl(settings);
-        }
+        public static GrpcChannelOptions CreateChannelOptions(this BigtableServiceApiSettings settings) =>
+            settings is null ? s_defaultChannelOptions.Value : CreateChannelOptionsImpl(settings);
 
-        private static ChannelOption[] CreateChannelOptionsImpl(this BigtableServiceApiSettings settings)
+        private static GrpcChannelOptions CreateChannelOptionsImpl(this BigtableServiceApiSettings settings)
         {
             var apiConfig = new ApiConfig
             {
@@ -173,17 +166,11 @@ namespace Google.Cloud.Bigtable.V2
                 }
             };
 
-            return new[]
-            {
-                // Set channel send/recv message size to unlimited.
-                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
-                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
-
-                // TODO: Figure out if there's a good way to test this
-                new ChannelOption(ChannelOptions.PrimaryUserAgentString, BigtableClient.UserAgent),
-
-                new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
-            };
+            return GrpcChannelOptions.Empty
+                .WithPrimaryUserAgent(BigtableClient.UserAgent)
+                .WithMaxSendMessageSize(-1)
+                .WithMaxReceiveMessageSize(-1)
+                .WithCustomOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString());
         }
     }
 
@@ -210,7 +197,7 @@ namespace Google.Cloud.Bigtable.V2
                 return CallInvoker;
             }
             var endpoint = Endpoint ?? GetDefaultEndpoint();
-            var channelOptions = Settings.CreateChannelOptions().Concat(GetChannelOptions()).ToList();
+            var channelOptions = GetChannelOptions().MergedWith(Settings.CreateChannelOptions());
             // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
@@ -220,7 +207,7 @@ namespace Google.Cloud.Bigtable.V2
             else
             {
                 var credentials = GetChannelCredentials();
-                return new GcpCallInvoker(endpoint.ToString(), credentials, channelOptions);
+                return new GcpCallInvoker(endpoint.ToString(), credentials, GrpcCoreAdapter.Instance.ConvertOptions(channelOptions));
             }
         }
 
@@ -232,7 +219,7 @@ namespace Google.Cloud.Bigtable.V2
                 return CallInvoker;
             }
             var endpoint = Endpoint ?? GetDefaultEndpoint();
-            var channelOptions = Settings.CreateChannelOptions().Concat(GetChannelOptions()).ToList();
+            var channelOptions = GetChannelOptions().MergedWith(Settings.CreateChannelOptions());
             // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
@@ -242,7 +229,7 @@ namespace Google.Cloud.Bigtable.V2
             else
             {
                 var credentials = GetChannelCredentials();
-                return new GcpCallInvoker(endpoint.ToString(), credentials, channelOptions);
+                return new GcpCallInvoker(endpoint.ToString(), credentials, GrpcCoreAdapter.Instance.ConvertOptions(channelOptions));
             }
         }
 
