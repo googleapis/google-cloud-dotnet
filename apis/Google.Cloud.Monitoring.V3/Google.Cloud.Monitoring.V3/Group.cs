@@ -38,8 +38,8 @@ namespace Google.Cloud.Monitoring.V3 {
             "b25pdG9yaW5nXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Group), global::Google.Cloud.Monitoring.V3.Group.Parser, new[]{ "Name", "DisplayName", "ParentName", "Filter", "IsCluster" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Group), global::Google.Cloud.Monitoring.V3.Group.Parser, new[]{ "Name", "DisplayName", "ParentName", "Filter", "IsCluster" }, null, null, null, null)
           }));
     }
     #endregion

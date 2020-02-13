@@ -66,9 +66,9 @@ namespace Google.Cloud.Monitoring.V3 {
             "cmluZ1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.LabelReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor), global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser, new[]{ "Name", "Type", "DisplayName", "Description", "Labels", "SupportedTiers", "LaunchStage" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel), global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser, new[]{ "Type", "Name", "DisplayName", "Description", "Labels", "UserLabels", "VerificationStatus", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) }, new pbr::GeneratedClrTypeInfo[] { null, null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor), global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser, new[]{ "Name", "Type", "DisplayName", "Description", "Labels", "SupportedTiers", "LaunchStage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel), global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser, new[]{ "Type", "Name", "DisplayName", "Description", "Labels", "UserLabels", "VerificationStatus", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -216,7 +216,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "launch_stage" field.</summary>
     public const int LaunchStageFieldNumber = 7;
-    private global::Google.Api.LaunchStage launchStage_ = 0;
+    private global::Google.Api.LaunchStage launchStage_ = global::Google.Api.LaunchStage.Unspecified;
     /// <summary>
     /// The product launch stage for channels of this type.
     /// </summary>
@@ -260,7 +260,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= labels_.GetHashCode();
       hash ^= supportedTiers_.GetHashCode();
-      if (LaunchStage != 0) hash ^= LaunchStage.GetHashCode();
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) hash ^= LaunchStage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -292,7 +292,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(50);
         output.WriteString(Name);
       }
-      if (LaunchStage != 0) {
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
         output.WriteRawTag(56);
         output.WriteEnum((int) LaunchStage);
       }
@@ -318,7 +318,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       size += labels_.CalculateSize(_repeated_labels_codec);
       size += supportedTiers_.CalculateSize(_repeated_supportedTiers_codec);
-      if (LaunchStage != 0) {
+      if (LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LaunchStage);
       }
       if (_unknownFields != null) {
@@ -346,7 +346,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       labels_.Add(other.labels_);
       supportedTiers_.Add(other.supportedTiers_);
-      if (other.LaunchStage != 0) {
+      if (other.LaunchStage != global::Google.Api.LaunchStage.Unspecified) {
         LaunchStage = other.LaunchStage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -512,7 +512,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Configuration fields that define the channel and its behavior. The
@@ -528,7 +528,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "user_labels" field.</summary>
     public const int UserLabelsFieldNumber = 8;
     private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 66);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
     private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// User-supplied key/value data that does not need to conform to
@@ -548,7 +548,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "verification_status" field.</summary>
     public const int VerificationStatusFieldNumber = 9;
-    private global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus verificationStatus_ = 0;
+    private global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus verificationStatus_ = global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified;
     /// <summary>
     /// Indicates whether this channel has been verified or not. On a
     /// [`ListNotificationChannels`][google.monitoring.v3.NotificationChannelService.ListNotificationChannels]
@@ -632,7 +632,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= UserLabels.GetHashCode();
-      if (VerificationStatus != 0) hash ^= VerificationStatus.GetHashCode();
+      if (VerificationStatus != global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified) hash ^= VerificationStatus.GetHashCode();
       if (enabled_ != null) hash ^= Enabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -665,7 +665,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteString(Name);
       }
       userLabels_.WriteTo(output, _map_userLabels_codec);
-      if (VerificationStatus != 0) {
+      if (VerificationStatus != global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified) {
         output.WriteRawTag(72);
         output.WriteEnum((int) VerificationStatus);
       }
@@ -694,7 +694,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       size += labels_.CalculateSize(_map_labels_codec);
       size += userLabels_.CalculateSize(_map_userLabels_codec);
-      if (VerificationStatus != 0) {
+      if (VerificationStatus != global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VerificationStatus);
       }
       if (enabled_ != null) {
@@ -725,7 +725,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       labels_.Add(other.labels_);
       userLabels_.Add(other.userLabels_);
-      if (other.VerificationStatus != 0) {
+      if (other.VerificationStatus != global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified) {
         VerificationStatus = other.VerificationStatus;
       }
       if (other.enabled_ != null) {

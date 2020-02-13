@@ -121,19 +121,19 @@ namespace Google.Cloud.Monitoring.V3 {
             "bmdcVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.ServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateServiceRequest), global::Google.Cloud.Monitoring.V3.CreateServiceRequest.Parser, new[]{ "Parent", "ServiceId", "Service" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetServiceRequest), global::Google.Cloud.Monitoring.V3.GetServiceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServicesRequest), global::Google.Cloud.Monitoring.V3.ListServicesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServicesResponse), global::Google.Cloud.Monitoring.V3.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateServiceRequest), global::Google.Cloud.Monitoring.V3.UpdateServiceRequest.Parser, new[]{ "Service", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteServiceRequest), global::Google.Cloud.Monitoring.V3.DeleteServiceRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.CreateServiceLevelObjectiveRequest.Parser, new[]{ "Parent", "ServiceLevelObjectiveId", "ServiceLevelObjective" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.GetServiceLevelObjectiveRequest.Parser, new[]{ "Name", "View" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesRequest), global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "View" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesResponse), global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesResponse.Parser, new[]{ "ServiceLevelObjectives", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.UpdateServiceLevelObjectiveRequest.Parser, new[]{ "ServiceLevelObjective", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.DeleteServiceLevelObjectiveRequest.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateServiceRequest), global::Google.Cloud.Monitoring.V3.CreateServiceRequest.Parser, new[]{ "Parent", "ServiceId", "Service" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetServiceRequest), global::Google.Cloud.Monitoring.V3.GetServiceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServicesRequest), global::Google.Cloud.Monitoring.V3.ListServicesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServicesResponse), global::Google.Cloud.Monitoring.V3.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateServiceRequest), global::Google.Cloud.Monitoring.V3.UpdateServiceRequest.Parser, new[]{ "Service", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteServiceRequest), global::Google.Cloud.Monitoring.V3.DeleteServiceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.CreateServiceLevelObjectiveRequest.Parser, new[]{ "Parent", "ServiceLevelObjectiveId", "ServiceLevelObjective" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.GetServiceLevelObjectiveRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesRequest), global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesResponse), global::Google.Cloud.Monitoring.V3.ListServiceLevelObjectivesResponse.Parser, new[]{ "ServiceLevelObjectives", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.UpdateServiceLevelObjectiveRequest.Parser, new[]{ "ServiceLevelObjective", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteServiceLevelObjectiveRequest), global::Google.Cloud.Monitoring.V3.DeleteServiceLevelObjectiveRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 2;
-    private global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View view_ = 0;
+    private global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View view_ = global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified;
     /// <summary>
     /// View of the `ServiceLevelObjective` to return. If `DEFAULT`, return the
     /// `ServiceLevelObjective` as originally defined. If `EXPLICIT` and the
@@ -1503,7 +1503,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (View != 0) hash ^= View.GetHashCode();
+      if (View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1521,7 +1521,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) View);
       }
@@ -1536,7 +1536,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
@@ -1553,7 +1553,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.View != 0) {
+      if (other.View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) {
         View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1684,7 +1684,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 5;
-    private global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View view_ = 0;
+    private global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View view_ = global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified;
     /// <summary>
     /// View of the `ServiceLevelObjective`s to return. If `DEFAULT`, return each
     /// `ServiceLevelObjective` as originally defined. If `EXPLICIT` and the
@@ -1727,7 +1727,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (View != 0) hash ^= View.GetHashCode();
+      if (View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) {
         output.WriteRawTag(40);
         output.WriteEnum((int) View);
       }
@@ -1781,7 +1781,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
-      if (View != 0) {
+      if (View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
@@ -1807,7 +1807,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
-      if (other.View != 0) {
+      if (other.View != global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View.Unspecified) {
         View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
