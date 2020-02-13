@@ -344,7 +344,8 @@ shell.run(
             var metadata = new
             {
                 distribution_name = api.Id,
-                release_level = releaseLevel
+                release_level = releaseLevel,
+                client_documentation = $"https://googleapis.dev/dotnet/{api.Id}/latest",
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
             File.WriteAllText(Path.Combine(apiRoot, ".repo-metadata.json"), json);
