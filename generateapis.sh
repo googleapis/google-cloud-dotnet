@@ -150,6 +150,13 @@ generate_gapicgenerator() {
   do
     cp $i $API_TMP_DIR/gapic.yaml
   done
+    
+  # We don't know why BigQuery DataTransfer doesn't work with the GAPIC v2 config, but it doesn't.
+  # Just until we switch to GAX v3 and the new microgenerator, use the legacy GAPIC v1 config file.
+  if [[ $1 == "Google.Cloud.BigQuery.DataTransfer.V1" ]]
+  then
+    cp $GOOGLEAPIS/google/cloud/bigquery/datatransfer/v1/bigquerydatatransfer_gapic.legacy.yaml $API_TMP_DIR/gapic.yaml
+  fi
   
   # Include extra protos, when they're present, even if they're not needed.
   extra_protos=()
