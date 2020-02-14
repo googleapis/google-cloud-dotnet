@@ -35,8 +35,8 @@ namespace Google.Cloud.AutoML.V1 {
             "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSegment), global::Google.Cloud.AutoML.V1.TextSegment.Parser, new[]{ "Content", "StartOffset", "EndOffset" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSegment), global::Google.Cloud.AutoML.V1.TextSegment.Parser, new[]{ "Content", "StartOffset", "EndOffset" }, null, null, null, null)
           }));
     }
     #endregion

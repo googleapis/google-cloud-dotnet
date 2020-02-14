@@ -51,13 +51,13 @@ namespace Google.Cloud.AutoML.V1 {
             "QXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata.Parser, new[]{ "BaseModelId", "TrainBudgetMilliNodeHours", "TrainCostMilliNodeHours", "StopReason", "ModelType", "NodeQps", "NodeCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata.Parser, new[]{ "ModelType", "NodeCount", "NodeQps", "StopReason", "TrainBudgetMilliNodeHours", "TrainCostMilliNodeHours" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationModelDeploymentMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationModelDeploymentMetadata.Parser, new[]{ "NodeCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelDeploymentMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelDeploymentMetadata.Parser, new[]{ "NodeCount" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationModelMetadata.Parser, new[]{ "BaseModelId", "TrainBudgetMilliNodeHours", "TrainCostMilliNodeHours", "StopReason", "ModelType", "NodeQps", "NodeCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelMetadata.Parser, new[]{ "ModelType", "NodeCount", "NodeQps", "StopReason", "TrainBudgetMilliNodeHours", "TrainCostMilliNodeHours" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationModelDeploymentMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationModelDeploymentMetadata.Parser, new[]{ "NodeCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelDeploymentMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionModelDeploymentMetadata.Parser, new[]{ "NodeCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -103,7 +103,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     /// <summary>Field number for the "classification_type" field.</summary>
     public const int ClassificationTypeFieldNumber = 1;
-    private global::Google.Cloud.AutoML.V1.ClassificationType classificationType_ = 0;
+    private global::Google.Cloud.AutoML.V1.ClassificationType classificationType_ = global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified;
     /// <summary>
     /// Required. Type of the classification problem.
     /// </summary>
@@ -135,7 +135,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ClassificationType != 0) hash ^= ClassificationType.GetHashCode();
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) hash ^= ClassificationType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -149,7 +149,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ClassificationType != 0) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ClassificationType);
       }
@@ -161,7 +161,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ClassificationType != 0) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ClassificationType);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      if (other.ClassificationType != 0) {
+      if (other.ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         ClassificationType = other.ClassificationType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

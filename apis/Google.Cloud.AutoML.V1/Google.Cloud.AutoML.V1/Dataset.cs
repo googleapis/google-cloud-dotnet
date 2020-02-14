@@ -56,8 +56,8 @@ namespace Google.Cloud.AutoML.V1 {
             "bFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Dataset), global::Google.Cloud.AutoML.V1.Dataset.Parser, new[]{ "TranslationDatasetMetadata", "ImageClassificationDatasetMetadata", "TextClassificationDatasetMetadata", "ImageObjectDetectionDatasetMetadata", "TextExtractionDatasetMetadata", "TextSentimentDatasetMetadata", "Name", "DisplayName", "Description", "ExampleCount", "CreateTime", "Etag", "Labels" }, new[]{ "DatasetMetadata" }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Dataset), global::Google.Cloud.AutoML.V1.Dataset.Parser, new[]{ "TranslationDatasetMetadata", "ImageClassificationDatasetMetadata", "TextClassificationDatasetMetadata", "ImageObjectDetectionDatasetMetadata", "TextExtractionDatasetMetadata", "TextSentimentDatasetMetadata", "Name", "DisplayName", "Description", "ExampleCount", "CreateTime", "Etag", "Labels" }, new[]{ "DatasetMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -306,7 +306,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 39;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 314);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 314);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. The labels with user-defined metadata to organize your dataset.

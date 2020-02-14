@@ -14,113 +14,97 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.AutoML.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using apis = Google.Cloud.AutoML.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedPredictionServiceClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedPredictionServiceClientTest
     {
-        [Fact]
-        public void Predict()
+        [xunit::FactAttribute]
+        public void PredictRequestObject()
         {
-            Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            PredictRequest expectedRequest = new PredictRequest
-            {
-                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
-                Params = { },
-            };
-            PredictResponse expectedResponse = new PredictResponse();
-            mockGrpcClient.Setup(x => x.Predict(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
-            ExamplePayload payload = new ExamplePayload();
-            IDictionary<string, string> @params = new Dictionary<string, string>();
-            PredictResponse response = client.Predict(name, payload, @params);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task PredictAsync()
-        {
-            Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            PredictRequest expectedRequest = new PredictRequest
-            {
-                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
-                Params = { },
-            };
-            PredictResponse expectedResponse = new PredictResponse();
-            mockGrpcClient.Setup(x => x.PredictAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<PredictResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            ModelName name = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]");
-            ExamplePayload payload = new ExamplePayload();
-            IDictionary<string, string> @params = new Dictionary<string, string>();
-            PredictResponse response = await client.PredictAsync(name, payload, @params);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Predict2()
-        {
-            Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PredictRequest request = new PredictRequest
             {
-                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Name = "name1c9368b0",
                 Payload = new ExamplePayload(),
+                Params =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            PredictResponse expectedResponse = new PredictResponse();
-            mockGrpcClient.Setup(x => x.Predict(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            PredictResponse expectedResponse = new PredictResponse
+            {
+                Payload =
+                {
+                    new AnnotationPayload(),
+                },
+                Metadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                PreprocessedInput = new ExamplePayload(),
+            };
+            mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
             PredictResponse response = client.Predict(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PredictAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task PredictRequestObjectAsync()
         {
-            Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new Mock<PredictionService.PredictionServiceClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
+            moq::Mock<PredictionService.PredictionServiceClient> mockGrpcClient = new moq::Mock<PredictionService.PredictionServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PredictRequest request = new PredictRequest
             {
-                ModelName = new ModelName("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Name = "name1c9368b0",
                 Payload = new ExamplePayload(),
+                Params =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
-            PredictResponse expectedResponse = new PredictResponse();
-            mockGrpcClient.Setup(x => x.PredictAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<PredictResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            PredictResponse expectedResponse = new PredictResponse
+            {
+                Payload =
+                {
+                    new AnnotationPayload(),
+                },
+                Metadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                PreprocessedInput = new ExamplePayload(),
+            };
+            mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            PredictResponse response = await client.PredictAsync(request);
-            Assert.Same(expectedResponse, response);
+            PredictResponse responseCallSettings = await client.PredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PredictResponse responseCancellationToken = await client.PredictAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
-
     }
 }
