@@ -262,7 +262,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
-            PublisherServiceApi.PublisherServiceApiClient grpcClient = new PublisherServiceApi.PublisherServiceApiClient(callInvoker);
+            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(callInvoker);
             return new PublisherServiceApiClientImpl(grpcClient, settings);
         }
 
@@ -280,7 +280,7 @@ namespace Google.Cloud.PubSub.V1
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
 
         /// <summary>The underlying gRPC PublisherServiceApi client</summary>
-        public virtual PublisherServiceApi.PublisherServiceApiClient GrpcClient => throw new sys::NotImplementedException();
+        public virtual Publisher.PublisherClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates the given topic with the given name. See the
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="PublisherServiceApiSettings"/> used within this client.</param>
-        public PublisherServiceApiClientImpl(PublisherServiceApi.PublisherServiceApiClient grpcClient, PublisherServiceApiSettings settings)
+        public PublisherServiceApiClientImpl(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings settings)
         {
             GrpcClient = grpcClient;
             PublisherServiceApiSettings effectiveSettings = settings ?? PublisherServiceApiSettings.GetDefault();
@@ -1217,10 +1217,10 @@ namespace Google.Cloud.PubSub.V1
 
         partial void Modify_DeleteTopicApiCall(ref gaxgrpc::ApiCall<DeleteTopicRequest, wkt::Empty> call);
 
-        partial void OnConstruction(PublisherServiceApi.PublisherServiceApiClient grpcClient, PublisherServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
+        partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PublisherServiceApi client</summary>
-        public override PublisherServiceApi.PublisherServiceApiClient GrpcClient { get; }
+        public override Publisher.PublisherClient GrpcClient { get; }
 
         partial void Modify_Topic(ref Topic request, ref gaxgrpc::CallSettings settings);
 

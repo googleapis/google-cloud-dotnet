@@ -30,7 +30,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateTopicRequestObject()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -67,7 +67,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateTopicRequestObjectAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -106,7 +106,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateTopic()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -134,7 +134,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateTopicAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -164,7 +164,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateTopicResourceNames()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -192,7 +192,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateTopicResourceNamesAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -222,7 +222,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void UpdateTopicRequestObject()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
                 Topic = new Topic(),
@@ -251,7 +251,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task UpdateTopicRequestObjectAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
                 Topic = new Topic(),
@@ -282,7 +282,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void PublishRequestObject()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -308,7 +308,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task PublishRequestObjectAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -336,7 +336,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void Publish()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -362,7 +362,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task PublishAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -390,7 +390,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void PublishResourceNames()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -416,7 +416,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task PublishResourceNamesAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -444,7 +444,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetTopicRequestObject()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -472,7 +472,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetTopicRequestObjectAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -502,7 +502,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetTopic()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -530,7 +530,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetTopicAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -560,7 +560,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetTopicResourceNames()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -588,7 +588,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetTopicResourceNamesAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -618,7 +618,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteTopicRequestObject()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -633,7 +633,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteTopicRequestObjectAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -649,7 +649,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteTopic()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -664,7 +664,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteTopicAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -680,7 +680,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteTopicResourceNames()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -695,7 +695,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteTopicResourceNamesAsync()
         {
-            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),

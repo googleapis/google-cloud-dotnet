@@ -379,7 +379,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
-            SubscriberServiceApi.SubscriberServiceApiClient grpcClient = new SubscriberServiceApi.SubscriberServiceApiClient(callInvoker);
+            Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(callInvoker);
             return new SubscriberServiceApiClientImpl(grpcClient, settings);
         }
 
@@ -397,7 +397,7 @@ namespace Google.Cloud.PubSub.V1
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
 
         /// <summary>The underlying gRPC SubscriberServiceApi client</summary>
-        public virtual SubscriberServiceApi.SubscriberServiceApiClient GrpcClient => throw new sys::NotImplementedException();
+        public virtual Subscriber.SubscriberClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a subscription to a given topic. See the
@@ -3011,7 +3011,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="SubscriberServiceApiSettings"/> used within this client.</param>
-        public SubscriberServiceApiClientImpl(SubscriberServiceApi.SubscriberServiceApiClient grpcClient, SubscriberServiceApiSettings settings)
+        public SubscriberServiceApiClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings settings)
         {
             GrpcClient = grpcClient;
             SubscriberServiceApiSettings effectiveSettings = settings ?? SubscriberServiceApiSettings.GetDefault();
@@ -3103,10 +3103,10 @@ namespace Google.Cloud.PubSub.V1
 
         partial void Modify_SeekApiCall(ref gaxgrpc::ApiCall<SeekRequest, SeekResponse> call);
 
-        partial void OnConstruction(SubscriberServiceApi.SubscriberServiceApiClient grpcClient, SubscriberServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
+        partial void OnConstruction(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC SubscriberServiceApi client</summary>
-        public override SubscriberServiceApi.SubscriberServiceApiClient GrpcClient { get; }
+        public override Subscriber.SubscriberClient GrpcClient { get; }
 
         partial void Modify_Subscription(ref Subscription request, ref gaxgrpc::CallSettings settings);
 
