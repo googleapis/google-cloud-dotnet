@@ -35,9 +35,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "R29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema), global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema.Parser, new[]{ "SerializedSchema" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch), global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch.Parser, new[]{ "SerializedRecordBatch", "RowCount" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema), global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema.Parser, new[]{ "SerializedSchema" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch), global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch.Parser, new[]{ "SerializedRecordBatch", "RowCount" }, null, null, null, null)
           }));
     }
     #endregion

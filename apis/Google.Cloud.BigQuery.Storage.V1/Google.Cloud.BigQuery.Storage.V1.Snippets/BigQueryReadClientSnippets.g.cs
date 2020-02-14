@@ -16,15 +16,15 @@
 
 namespace Google.Cloud.BigQuery.Storage.V1.Snippets
 {
+    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedBigQueryReadClientSnippets
     {
         /// <summary>Snippet for CreateReadSession</summary>
-        public void CreateReadSession_RequestObject()
+        public void CreateReadSessionRequestObject()
         {
             // Snippet: CreateReadSession(CreateReadSessionRequest, CallSettings)
             // Create client
@@ -32,7 +32,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Initialize request argument(s)
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 0,
             };
@@ -42,7 +42,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for CreateReadSessionAsync</summary>
-        public async Task CreateReadSessionAsync_RequestObject()
+        public async Task CreateReadSessionRequestObjectAsync()
         {
             // Snippet: CreateReadSessionAsync(CreateReadSessionRequest, CallSettings)
             // Additional: CreateReadSessionAsync(CreateReadSessionRequest, CancellationToken)
@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Initialize request argument(s)
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 0,
             };
@@ -92,13 +92,13 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for CreateReadSession</summary>
-        public void CreateReadSession_ResourceNames()
+        public void CreateReadSessionResourceNames()
         {
             // Snippet: CreateReadSession(ProjectName, ReadSession, int, CallSettings)
             // Create client
             BigQueryReadClient bigQueryReadClient = BigQueryReadClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             ReadSession readSession = new ReadSession();
             int maxStreamCount = 0;
             // Make the request
@@ -107,14 +107,14 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for CreateReadSessionAsync</summary>
-        public async Task CreateReadSessionAsync_ResourceNames()
+        public async Task CreateReadSessionResourceNamesAsync()
         {
             // Snippet: CreateReadSessionAsync(ProjectName, ReadSession, int, CallSettings)
             // Additional: CreateReadSessionAsync(ProjectName, ReadSession, int, CancellationToken)
             // Create client
             BigQueryReadClient bigQueryReadClient = await BigQueryReadClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             ReadSession readSession = new ReadSession();
             int maxStreamCount = 0;
             // Make the request
@@ -123,7 +123,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for ReadRows</summary>
-        public async Task ReadRows_RequestObject()
+        public async Task ReadRowsRequestObject()
         {
             // Snippet: ReadRows(ReadRowsRequest, CallSettings)
             // Create client
@@ -131,15 +131,16 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Initialize request argument(s)
             ReadRowsRequest request = new ReadRowsRequest
             {
-                ReadStreamAsReadStreamName = new ReadStreamName("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                ReadStreamAsReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
                 Offset = 0L,
             };
             // Make the request, returning a streaming response
             BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(request);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -161,8 +162,9 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(readStream, offset);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -172,20 +174,21 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for ReadRows</summary>
-        public async Task ReadRows_ResourceNames()
+        public async Task ReadRowsResourceNames()
         {
             // Snippet: ReadRows(ReadStreamName, long, CallSettings)
             // Create client
             BigQueryReadClient bigQueryReadClient = BigQueryReadClient.Create();
             // Initialize request argument(s)
-            ReadStreamName readStream = new ReadStreamName("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]");
+            ReadStreamName readStream = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]");
             long offset = 0L;
             // Make the request, returning a streaming response
             BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(readStream, offset);
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<ReadRowsResponse> responseStream = response.ResponseStream;
-            while (await responseStream.MoveNext())
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadRowsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
             {
                 ReadRowsResponse responseItem = responseStream.Current;
                 // Do something with streamed response
@@ -195,7 +198,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for SplitReadStream</summary>
-        public void SplitReadStream_RequestObject()
+        public void SplitReadStreamRequestObject()
         {
             // Snippet: SplitReadStream(SplitReadStreamRequest, CallSettings)
             // Create client
@@ -203,7 +206,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Initialize request argument(s)
             SplitReadStreamRequest request = new SplitReadStreamRequest
             {
-                ReadStreamName = new ReadStreamName("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
                 Fraction = 0,
             };
             // Make the request
@@ -212,7 +215,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
         }
 
         /// <summary>Snippet for SplitReadStreamAsync</summary>
-        public async Task SplitReadStreamAsync_RequestObject()
+        public async Task SplitReadStreamRequestObjectAsync()
         {
             // Snippet: SplitReadStreamAsync(SplitReadStreamRequest, CallSettings)
             // Additional: SplitReadStreamAsync(SplitReadStreamRequest, CancellationToken)
@@ -221,7 +224,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Initialize request argument(s)
             SplitReadStreamRequest request = new SplitReadStreamRequest
             {
-                ReadStreamName = new ReadStreamName("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
                 Fraction = 0,
             };
             // Make the request

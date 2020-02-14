@@ -1880,9 +1880,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(string name, string cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
             SnapshotTable(new SnapshotTableRequest
             {
-                Name = name ?? "",
-                Cluster = cluster ?? "",
-                SnapshotId = snapshotId ?? "",
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Cluster = gax::GaxPreconditions.CheckNotNullOrEmpty(cluster, nameof(cluster)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
                 Description = description ?? "",
             }, callSettings);
 
@@ -1920,9 +1920,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(string name, string cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
             SnapshotTableAsync(new SnapshotTableRequest
             {
-                Name = name ?? "",
-                Cluster = cluster ?? "",
-                SnapshotId = snapshotId ?? "",
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Cluster = gax::GaxPreconditions.CheckNotNullOrEmpty(cluster, nameof(cluster)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
                 Description = description ?? "",
             }, callSettings);
 
@@ -1958,6 +1958,120 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(string name, string cluster, string snapshotId, string description, st::CancellationToken cancellationToken) =>
+            SnapshotTableAsync(name, cluster, snapshotId, description, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// 
+        /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+        /// feature is not currently available to most Cloud Bigtable customers. This
+        /// feature might be changed in backward-incompatible ways and is not
+        /// recommended for production use. It is not subject to any SLA or deprecation
+        /// policy.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to have the snapshot taken.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="cluster">
+        /// The name of the cluster where the snapshot will be created in.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="snapshotId">
+        /// The ID by which the new snapshot should be referred to within the parent
+        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// rather than
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
+        /// </param>
+        /// <param name="description">
+        /// Description of the snapshot.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(gcbcv::TableName name, ClusterName cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
+            SnapshotTable(new SnapshotTableRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ClusterAsClusterName = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
+                Description = description ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// 
+        /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+        /// feature is not currently available to most Cloud Bigtable customers. This
+        /// feature might be changed in backward-incompatible ways and is not
+        /// recommended for production use. It is not subject to any SLA or deprecation
+        /// policy.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to have the snapshot taken.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="cluster">
+        /// The name of the cluster where the snapshot will be created in.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="snapshotId">
+        /// The ID by which the new snapshot should be referred to within the parent
+        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// rather than
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
+        /// </param>
+        /// <param name="description">
+        /// Description of the snapshot.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(gcbcv::TableName name, ClusterName cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
+            SnapshotTableAsync(new SnapshotTableRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ClusterAsClusterName = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
+                Description = description ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// 
+        /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+        /// feature is not currently available to most Cloud Bigtable customers. This
+        /// feature might be changed in backward-incompatible ways and is not
+        /// recommended for production use. It is not subject to any SLA or deprecation
+        /// policy.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to have the snapshot taken.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="cluster">
+        /// The name of the cluster where the snapshot will be created in.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="snapshotId">
+        /// The ID by which the new snapshot should be referred to within the parent
+        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// rather than
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
+        /// </param>
+        /// <param name="description">
+        /// Description of the snapshot.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(gcbcv::TableName name, ClusterName cluster, string snapshotId, string description, st::CancellationToken cancellationToken) =>
             SnapshotTableAsync(name, cluster, snapshotId, description, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

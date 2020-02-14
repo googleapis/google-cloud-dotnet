@@ -30,7 +30,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
     public sealed class GeneratedSecurityCenterClientSnippets
     {
         /// <summary>Snippet for CreateSource</summary>
-        public void CreateSource_RequestObject()
+        public void CreateSourceRequestObject()
         {
             // Snippet: CreateSource(CreateSourceRequest, CallSettings)
             // Create client
@@ -38,7 +38,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             // Make the request
@@ -47,7 +47,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateSourceAsync</summary>
-        public async Task CreateSourceAsync_RequestObject()
+        public async Task CreateSourceRequestObjectAsync()
         {
             // Snippet: CreateSourceAsync(CreateSourceRequest, CallSettings)
             // Additional: CreateSourceAsync(CreateSourceRequest, CancellationToken)
@@ -56,7 +56,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             // Make the request
@@ -94,13 +94,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateSource</summary>
-        public void CreateSource_ResourceNames()
+        public void CreateSourceResourceNames()
         {
             // Snippet: CreateSource(OrganizationName, Source, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             Source source = new Source();
             // Make the request
             Source response = securityCenterClient.CreateSource(parent, source);
@@ -108,14 +108,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateSourceAsync</summary>
-        public async Task CreateSourceAsync_ResourceNames()
+        public async Task CreateSourceResourceNamesAsync()
         {
             // Snippet: CreateSourceAsync(OrganizationName, Source, CallSettings)
             // Additional: CreateSourceAsync(OrganizationName, Source, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             Source source = new Source();
             // Make the request
             Source response = await securityCenterClient.CreateSourceAsync(parent, source);
@@ -123,7 +123,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateFinding</summary>
-        public void CreateFinding_RequestObject()
+        public void CreateFindingRequestObject()
         {
             // Snippet: CreateFinding(CreateFindingRequest, CallSettings)
             // Create client
@@ -131,7 +131,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "",
                 Finding = new Finding(),
             };
@@ -141,7 +141,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateFindingAsync</summary>
-        public async Task CreateFindingAsync_RequestObject()
+        public async Task CreateFindingRequestObjectAsync()
         {
             // Snippet: CreateFindingAsync(CreateFindingRequest, CallSettings)
             // Additional: CreateFindingAsync(CreateFindingRequest, CancellationToken)
@@ -150,7 +150,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "",
                 Finding = new Finding(),
             };
@@ -191,13 +191,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateFinding</summary>
-        public void CreateFinding1_ResourceNames()
+        public void CreateFinding1ResourceNames()
         {
             // Snippet: CreateFinding(SourceName, string, Finding, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             string findingId = "";
             Finding finding = new Finding();
             // Make the request
@@ -206,14 +206,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateFindingAsync</summary>
-        public async Task CreateFinding1Async_ResourceNames()
+        public async Task CreateFinding1ResourceNamesAsync()
         {
             // Snippet: CreateFindingAsync(SourceName, string, Finding, CallSettings)
             // Additional: CreateFindingAsync(SourceName, string, Finding, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             string findingId = "";
             Finding finding = new Finding();
             // Make the request
@@ -253,13 +253,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateFinding</summary>
-        public void CreateFinding2_ResourceNames()
+        public void CreateFinding2ResourceNames()
         {
             // Snippet: CreateFinding(SourceName, Finding, string, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             Finding finding = new Finding();
             string findingId = "";
             // Make the request
@@ -268,14 +268,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateFindingAsync</summary>
-        public async Task CreateFinding2Async_ResourceNames()
+        public async Task CreateFinding2ResourceNamesAsync()
         {
             // Snippet: CreateFindingAsync(SourceName, Finding, string, CallSettings)
             // Additional: CreateFindingAsync(SourceName, Finding, string, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             Finding finding = new Finding();
             string findingId = "";
             // Make the request
@@ -284,7 +284,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateNotificationConfig</summary>
-        public void CreateNotificationConfig_RequestObject()
+        public void CreateNotificationConfigRequestObject()
         {
             // Snippet: CreateNotificationConfig(CreateNotificationConfigRequest, CallSettings)
             // Create client
@@ -292,7 +292,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "",
                 NotificationConfig = new NotificationConfig(),
             };
@@ -302,7 +302,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateNotificationConfigAsync</summary>
-        public async Task CreateNotificationConfigAsync_RequestObject()
+        public async Task CreateNotificationConfigRequestObjectAsync()
         {
             // Snippet: CreateNotificationConfigAsync(CreateNotificationConfigRequest, CallSettings)
             // Additional: CreateNotificationConfigAsync(CreateNotificationConfigRequest, CancellationToken)
@@ -311,7 +311,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "",
                 NotificationConfig = new NotificationConfig(),
             };
@@ -352,13 +352,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateNotificationConfig</summary>
-        public void CreateNotificationConfig1_ResourceNames()
+        public void CreateNotificationConfig1ResourceNames()
         {
             // Snippet: CreateNotificationConfig(OrganizationName, string, NotificationConfig, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             string configId = "";
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
@@ -367,14 +367,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateNotificationConfigAsync</summary>
-        public async Task CreateNotificationConfig1Async_ResourceNames()
+        public async Task CreateNotificationConfig1ResourceNamesAsync()
         {
             // Snippet: CreateNotificationConfigAsync(OrganizationName, string, NotificationConfig, CallSettings)
             // Additional: CreateNotificationConfigAsync(OrganizationName, string, NotificationConfig, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             string configId = "";
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
@@ -412,13 +412,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateNotificationConfig</summary>
-        public void CreateNotificationConfig2_ResourceNames()
+        public void CreateNotificationConfig2ResourceNames()
         {
             // Snippet: CreateNotificationConfig(OrganizationName, NotificationConfig, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
             NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, notificationConfig);
@@ -426,14 +426,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateNotificationConfigAsync</summary>
-        public async Task CreateNotificationConfig2Async_ResourceNames()
+        public async Task CreateNotificationConfig2ResourceNamesAsync()
         {
             // Snippet: CreateNotificationConfigAsync(OrganizationName, NotificationConfig, CallSettings)
             // Additional: CreateNotificationConfigAsync(OrganizationName, NotificationConfig, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
             NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, notificationConfig);
@@ -441,7 +441,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteNotificationConfig</summary>
-        public void DeleteNotificationConfig_RequestObject()
+        public void DeleteNotificationConfigRequestObject()
         {
             // Snippet: DeleteNotificationConfig(DeleteNotificationConfigRequest, CallSettings)
             // Create client
@@ -449,7 +449,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             // Make the request
             securityCenterClient.DeleteNotificationConfig(request);
@@ -457,7 +457,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteNotificationConfigAsync</summary>
-        public async Task DeleteNotificationConfigAsync_RequestObject()
+        public async Task DeleteNotificationConfigRequestObjectAsync()
         {
             // Snippet: DeleteNotificationConfigAsync(DeleteNotificationConfigRequest, CallSettings)
             // Additional: DeleteNotificationConfigAsync(DeleteNotificationConfigRequest, CancellationToken)
@@ -466,7 +466,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             // Make the request
             await securityCenterClient.DeleteNotificationConfigAsync(request);
@@ -501,34 +501,34 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for DeleteNotificationConfig</summary>
-        public void DeleteNotificationConfig_ResourceNames()
+        public void DeleteNotificationConfigResourceNames()
         {
             // Snippet: DeleteNotificationConfig(NotificationConfigName, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            NotificationConfigName name = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
             // Make the request
             securityCenterClient.DeleteNotificationConfig(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteNotificationConfigAsync</summary>
-        public async Task DeleteNotificationConfigAsync_ResourceNames()
+        public async Task DeleteNotificationConfigResourceNamesAsync()
         {
             // Snippet: DeleteNotificationConfigAsync(NotificationConfigName, CallSettings)
             // Additional: DeleteNotificationConfigAsync(NotificationConfigName, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            NotificationConfigName name = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
             // Make the request
             await securityCenterClient.DeleteNotificationConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
+        public void GetIamPolicyRequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
@@ -536,7 +536,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -545,7 +545,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
@@ -554,7 +554,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Options = new GetPolicyOptions(),
             };
             // Make the request
@@ -590,34 +590,34 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = securityCenterClient.GetIamPolicy(resource);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_ResourceNames()
+        public async Task GetIamPolicyResourceNamesAsync()
         {
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await securityCenterClient.GetIamPolicyAsync(resource);
             // End snippet
         }
 
         /// <summary>Snippet for GetNotificationConfig</summary>
-        public void GetNotificationConfig_RequestObject()
+        public void GetNotificationConfigRequestObject()
         {
             // Snippet: GetNotificationConfig(GetNotificationConfigRequest, CallSettings)
             // Create client
@@ -625,7 +625,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             // Make the request
             NotificationConfig response = securityCenterClient.GetNotificationConfig(request);
@@ -633,7 +633,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetNotificationConfigAsync</summary>
-        public async Task GetNotificationConfigAsync_RequestObject()
+        public async Task GetNotificationConfigRequestObjectAsync()
         {
             // Snippet: GetNotificationConfigAsync(GetNotificationConfigRequest, CallSettings)
             // Additional: GetNotificationConfigAsync(GetNotificationConfigRequest, CancellationToken)
@@ -642,7 +642,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             // Make the request
             NotificationConfig response = await securityCenterClient.GetNotificationConfigAsync(request);
@@ -677,34 +677,34 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetNotificationConfig</summary>
-        public void GetNotificationConfig_ResourceNames()
+        public void GetNotificationConfigResourceNames()
         {
             // Snippet: GetNotificationConfig(NotificationConfigName, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            NotificationConfigName name = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
             // Make the request
             NotificationConfig response = securityCenterClient.GetNotificationConfig(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetNotificationConfigAsync</summary>
-        public async Task GetNotificationConfigAsync_ResourceNames()
+        public async Task GetNotificationConfigResourceNamesAsync()
         {
             // Snippet: GetNotificationConfigAsync(NotificationConfigName, CallSettings)
             // Additional: GetNotificationConfigAsync(NotificationConfigName, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            NotificationConfigName name = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
             // Make the request
             NotificationConfig response = await securityCenterClient.GetNotificationConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetOrganizationSettings</summary>
-        public void GetOrganizationSettings_RequestObject()
+        public void GetOrganizationSettingsRequestObject()
         {
             // Snippet: GetOrganizationSettings(GetOrganizationSettingsRequest, CallSettings)
             // Create client
@@ -712,7 +712,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             OrganizationSettings response = securityCenterClient.GetOrganizationSettings(request);
@@ -720,7 +720,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetOrganizationSettingsAsync</summary>
-        public async Task GetOrganizationSettingsAsync_RequestObject()
+        public async Task GetOrganizationSettingsRequestObjectAsync()
         {
             // Snippet: GetOrganizationSettingsAsync(GetOrganizationSettingsRequest, CallSettings)
             // Additional: GetOrganizationSettingsAsync(GetOrganizationSettingsRequest, CancellationToken)
@@ -729,7 +729,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             OrganizationSettings response = await securityCenterClient.GetOrganizationSettingsAsync(request);
@@ -764,34 +764,34 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetOrganizationSettings</summary>
-        public void GetOrganizationSettings_ResourceNames()
+        public void GetOrganizationSettingsResourceNames()
         {
             // Snippet: GetOrganizationSettings(OrganizationSettingsName, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationSettingsName name = new OrganizationSettingsName("[ORGANIZATION]");
+            OrganizationSettingsName name = OrganizationSettingsName.FromOrganization("[ORGANIZATION]");
             // Make the request
             OrganizationSettings response = securityCenterClient.GetOrganizationSettings(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetOrganizationSettingsAsync</summary>
-        public async Task GetOrganizationSettingsAsync_ResourceNames()
+        public async Task GetOrganizationSettingsResourceNamesAsync()
         {
             // Snippet: GetOrganizationSettingsAsync(OrganizationSettingsName, CallSettings)
             // Additional: GetOrganizationSettingsAsync(OrganizationSettingsName, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationSettingsName name = new OrganizationSettingsName("[ORGANIZATION]");
+            OrganizationSettingsName name = OrganizationSettingsName.FromOrganization("[ORGANIZATION]");
             // Make the request
             OrganizationSettings response = await securityCenterClient.GetOrganizationSettingsAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetSource</summary>
-        public void GetSource_RequestObject()
+        public void GetSourceRequestObject()
         {
             // Snippet: GetSource(GetSourceRequest, CallSettings)
             // Create client
@@ -799,7 +799,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             // Make the request
             Source response = securityCenterClient.GetSource(request);
@@ -807,7 +807,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetSourceAsync</summary>
-        public async Task GetSourceAsync_RequestObject()
+        public async Task GetSourceRequestObjectAsync()
         {
             // Snippet: GetSourceAsync(GetSourceRequest, CallSettings)
             // Additional: GetSourceAsync(GetSourceRequest, CancellationToken)
@@ -816,7 +816,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             // Make the request
             Source response = await securityCenterClient.GetSourceAsync(request);
@@ -851,34 +851,34 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GetSource</summary>
-        public void GetSource_ResourceNames()
+        public void GetSourceResourceNames()
         {
             // Snippet: GetSource(SourceName, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            SourceName name = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName name = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             // Make the request
             Source response = securityCenterClient.GetSource(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetSourceAsync</summary>
-        public async Task GetSourceAsync_ResourceNames()
+        public async Task GetSourceResourceNamesAsync()
         {
             // Snippet: GetSourceAsync(SourceName, CallSettings)
             // Additional: GetSourceAsync(SourceName, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            SourceName name = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName name = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             // Make the request
             Source response = await securityCenterClient.GetSourceAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GroupAssets</summary>
-        public void GroupAssets_RequestObject()
+        public void GroupAssetsRequestObject()
         {
             // Snippet: GroupAssets(GroupAssetsRequest, CallSettings)
             // Create client
@@ -886,7 +886,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GroupAssetsRequest request = new GroupAssetsRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Filter = "",
                 GroupBy = "",
                 CompareDuration = new Duration(),
@@ -931,7 +931,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GroupAssets</summary>
-        public async Task GroupAssetsAsync_RequestObject()
+        public async Task GroupAssetsRequestObjectAsync()
         {
             // Snippet: GroupAssetsAsync(GroupAssetsRequest, CallSettings)
             // Create client
@@ -939,7 +939,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GroupAssetsRequest request = new GroupAssetsRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Filter = "",
                 GroupBy = "",
                 CompareDuration = new Duration(),
@@ -984,7 +984,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public void GroupFindings_RequestObject()
+        public void GroupFindingsRequestObject()
         {
             // Snippet: GroupFindings(GroupFindingsRequest, CallSettings)
             // Create client
@@ -992,7 +992,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GroupFindingsRequest request = new GroupFindingsRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 Filter = "",
                 GroupBy = "",
                 ReadTime = new Timestamp(),
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public async Task GroupFindingsAsync_RequestObject()
+        public async Task GroupFindingsRequestObjectAsync()
         {
             // Snippet: GroupFindingsAsync(GroupFindingsRequest, CallSettings)
             // Create client
@@ -1045,7 +1045,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             GroupFindingsRequest request = new GroupFindingsRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 Filter = "",
                 GroupBy = "",
                 ReadTime = new Timestamp(),
@@ -1182,13 +1182,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public void GroupFindings_ResourceNames()
+        public void GroupFindingsResourceNames()
         {
             // Snippet: GroupFindings(SourceName, string, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             string groupBy = "";
             // Make the request
             PagedEnumerable<GroupFindingsResponse, GroupResult> response = securityCenterClient.GroupFindings(parent, groupBy);
@@ -1228,13 +1228,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for GroupFindings</summary>
-        public async Task GroupFindingsAsync_ResourceNames()
+        public async Task GroupFindingsResourceNamesAsync()
         {
             // Snippet: GroupFindingsAsync(SourceName, string, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             string groupBy = "";
             // Make the request
             PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> response = securityCenterClient.GroupFindingsAsync(parent, groupBy);
@@ -1274,7 +1274,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListAssets</summary>
-        public void ListAssets_RequestObject()
+        public void ListAssetsRequestObject()
         {
             // Snippet: ListAssets(ListAssetsRequest, CallSettings)
             // Create client
@@ -1282,7 +1282,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListAssetsRequest request = new ListAssetsRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Filter = "",
                 OrderBy = "",
                 ReadTime = new Timestamp(),
@@ -1328,7 +1328,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListAssets</summary>
-        public async Task ListAssetsAsync_RequestObject()
+        public async Task ListAssetsRequestObjectAsync()
         {
             // Snippet: ListAssetsAsync(ListAssetsRequest, CallSettings)
             // Create client
@@ -1336,7 +1336,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListAssetsRequest request = new ListAssetsRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Filter = "",
                 OrderBy = "",
                 ReadTime = new Timestamp(),
@@ -1472,13 +1472,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListAssets</summary>
-        public void ListAssets_ResourceNames()
+        public void ListAssetsResourceNames()
         {
             // Snippet: ListAssets(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssets(parent);
 
@@ -1517,13 +1517,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListAssets</summary>
-        public async Task ListAssetsAsync_ResourceNames()
+        public async Task ListAssetsResourceNamesAsync()
         {
             // Snippet: ListAssetsAsync(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssetsAsync(parent);
 
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListFindings</summary>
-        public void ListFindings_RequestObject()
+        public void ListFindingsRequestObject()
         {
             // Snippet: ListFindings(ListFindingsRequest, CallSettings)
             // Create client
@@ -1570,7 +1570,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListFindingsRequest request = new ListFindingsRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 Filter = "",
                 OrderBy = "",
                 ReadTime = new Timestamp(),
@@ -1616,7 +1616,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListFindings</summary>
-        public async Task ListFindingsAsync_RequestObject()
+        public async Task ListFindingsRequestObjectAsync()
         {
             // Snippet: ListFindingsAsync(ListFindingsRequest, CallSettings)
             // Create client
@@ -1624,7 +1624,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListFindingsRequest request = new ListFindingsRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 Filter = "",
                 OrderBy = "",
                 ReadTime = new Timestamp(),
@@ -1760,13 +1760,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListFindings</summary>
-        public void ListFindings_ResourceNames()
+        public void ListFindingsResourceNames()
         {
             // Snippet: ListFindings(SourceName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             // Make the request
             PagedEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> response = securityCenterClient.ListFindings(parent);
 
@@ -1805,13 +1805,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListFindings</summary>
-        public async Task ListFindingsAsync_ResourceNames()
+        public async Task ListFindingsResourceNamesAsync()
         {
             // Snippet: ListFindingsAsync(SourceName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            SourceName parent = new SourceName("[ORGANIZATION]", "[SOURCE]");
+            SourceName parent = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]");
             // Make the request
             PagedAsyncEnumerable<ListFindingsResponse, ListFindingsResponse.Types.ListFindingsResult> response = securityCenterClient.ListFindingsAsync(parent);
 
@@ -1850,7 +1850,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListNotificationConfigs</summary>
-        public void ListNotificationConfigs_RequestObject()
+        public void ListNotificationConfigsRequestObject()
         {
             // Snippet: ListNotificationConfigs(ListNotificationConfigsRequest, CallSettings)
             // Create client
@@ -1858,7 +1858,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigs(request);
@@ -1898,7 +1898,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListNotificationConfigs</summary>
-        public async Task ListNotificationConfigsAsync_RequestObject()
+        public async Task ListNotificationConfigsRequestObjectAsync()
         {
             // Snippet: ListNotificationConfigsAsync(ListNotificationConfigsRequest, CallSettings)
             // Create client
@@ -1906,7 +1906,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigsAsync(request);
@@ -2036,13 +2036,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListNotificationConfigs</summary>
-        public void ListNotificationConfigs_ResourceNames()
+        public void ListNotificationConfigsResourceNames()
         {
             // Snippet: ListNotificationConfigs(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigs(parent);
 
@@ -2081,13 +2081,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListNotificationConfigs</summary>
-        public async Task ListNotificationConfigsAsync_ResourceNames()
+        public async Task ListNotificationConfigsResourceNamesAsync()
         {
             // Snippet: ListNotificationConfigsAsync(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigsAsync(parent);
 
@@ -2126,7 +2126,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public void ListSources_RequestObject()
+        public void ListSourcesRequestObject()
         {
             // Snippet: ListSources(ListSourcesRequest, CallSettings)
             // Create client
@@ -2134,7 +2134,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListSourcesRequest request = new ListSourcesRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             PagedEnumerable<ListSourcesResponse, Source> response = securityCenterClient.ListSources(request);
@@ -2174,7 +2174,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public async Task ListSourcesAsync_RequestObject()
+        public async Task ListSourcesRequestObjectAsync()
         {
             // Snippet: ListSourcesAsync(ListSourcesRequest, CallSettings)
             // Create client
@@ -2182,7 +2182,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             ListSourcesRequest request = new ListSourcesRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListSourcesResponse, Source> response = securityCenterClient.ListSourcesAsync(request);
@@ -2312,13 +2312,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public void ListSources_ResourceNames()
+        public void ListSourcesResourceNames()
         {
             // Snippet: ListSources(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedEnumerable<ListSourcesResponse, Source> response = securityCenterClient.ListSources(parent);
 
@@ -2357,13 +2357,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for ListSources</summary>
-        public async Task ListSourcesAsync_ResourceNames()
+        public async Task ListSourcesResourceNamesAsync()
         {
             // Snippet: ListSourcesAsync(OrganizationName, string, int?, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             PagedAsyncEnumerable<ListSourcesResponse, Source> response = securityCenterClient.ListSourcesAsync(parent);
 
@@ -2402,7 +2402,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscovery</summary>
-        public void RunAssetDiscovery_RequestObject()
+        public void RunAssetDiscoveryRequestObject()
         {
             // Snippet: RunAssetDiscovery(RunAssetDiscoveryRequest, CallSettings)
             // Create client
@@ -2410,7 +2410,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             RunAssetDiscoveryRequest request = new RunAssetDiscoveryRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             Operation<RunAssetDiscoveryResponse, Empty> response = securityCenterClient.RunAssetDiscovery(request);
@@ -2434,7 +2434,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscoveryAsync</summary>
-        public async Task RunAssetDiscoveryAsync_RequestObject()
+        public async Task RunAssetDiscoveryRequestObjectAsync()
         {
             // Snippet: RunAssetDiscoveryAsync(RunAssetDiscoveryRequest, CallSettings)
             // Additional: RunAssetDiscoveryAsync(RunAssetDiscoveryRequest, CancellationToken)
@@ -2443,7 +2443,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             RunAssetDiscoveryRequest request = new RunAssetDiscoveryRequest
             {
-                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
             Operation<RunAssetDiscoveryResponse, Empty> response = await securityCenterClient.RunAssetDiscoveryAsync(request);
@@ -2526,13 +2526,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscovery</summary>
-        public void RunAssetDiscovery_ResourceNames()
+        public void RunAssetDiscoveryResourceNames()
         {
             // Snippet: RunAssetDiscovery(OrganizationName, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             Operation<RunAssetDiscoveryResponse, Empty> response = securityCenterClient.RunAssetDiscovery(parent);
 
@@ -2555,14 +2555,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for RunAssetDiscoveryAsync</summary>
-        public async Task RunAssetDiscoveryAsync_ResourceNames()
+        public async Task RunAssetDiscoveryResourceNamesAsync()
         {
             // Snippet: RunAssetDiscoveryAsync(OrganizationName, CallSettings)
             // Additional: RunAssetDiscoveryAsync(OrganizationName, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationName parent = new OrganizationName("[ORGANIZATION]");
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
             Operation<RunAssetDiscoveryResponse, Empty> response = await securityCenterClient.RunAssetDiscoveryAsync(parent);
 
@@ -2585,7 +2585,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetFindingState</summary>
-        public void SetFindingState_RequestObject()
+        public void SetFindingStateRequestObject()
         {
             // Snippet: SetFindingState(SetFindingStateRequest, CallSettings)
             // Create client
@@ -2593,7 +2593,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new Timestamp(),
             };
@@ -2603,7 +2603,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetFindingStateAsync</summary>
-        public async Task SetFindingStateAsync_RequestObject()
+        public async Task SetFindingStateRequestObjectAsync()
         {
             // Snippet: SetFindingStateAsync(SetFindingStateRequest, CallSettings)
             // Additional: SetFindingStateAsync(SetFindingStateRequest, CancellationToken)
@@ -2612,7 +2612,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new Timestamp(),
             };
@@ -2653,13 +2653,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetFindingState</summary>
-        public void SetFindingState_ResourceNames()
+        public void SetFindingStateResourceNames()
         {
             // Snippet: SetFindingState(FindingName, Finding.Types.State, Timestamp, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            FindingName name = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
+            FindingName name = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
             Finding.Types.State state = Finding.Types.State.Unspecified;
             Timestamp startTime = new Timestamp();
             // Make the request
@@ -2668,14 +2668,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetFindingStateAsync</summary>
-        public async Task SetFindingStateAsync_ResourceNames()
+        public async Task SetFindingStateResourceNamesAsync()
         {
             // Snippet: SetFindingStateAsync(FindingName, Finding.Types.State, Timestamp, CallSettings)
             // Additional: SetFindingStateAsync(FindingName, Finding.Types.State, Timestamp, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            FindingName name = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
+            FindingName name = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
             Finding.Types.State state = Finding.Types.State.Unspecified;
             Timestamp startTime = new Timestamp();
             // Make the request
@@ -2684,7 +2684,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
+        public void SetIamPolicyRequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
@@ -2692,7 +2692,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -2701,7 +2701,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
@@ -2710,7 +2710,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -2748,13 +2748,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = securityCenterClient.SetIamPolicy(resource, policy);
@@ -2762,14 +2762,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_ResourceNames()
+        public async Task SetIamPolicyResourceNamesAsync()
         {
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
             Policy response = await securityCenterClient.SetIamPolicyAsync(resource, policy);
@@ -2777,7 +2777,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
+        public void TestIamPermissionsRequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
@@ -2785,7 +2785,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -2794,7 +2794,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
+        public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
@@ -2803,7 +2803,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Permissions = { "", },
             };
             // Make the request
@@ -2841,13 +2841,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
             SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = securityCenterClient.TestIamPermissions(resource, permissions);
@@ -2855,14 +2855,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_ResourceNames()
+        public async Task TestIamPermissionsResourceNamesAsync()
         {
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
             // Create client
             SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
             // Initialize request argument(s)
-            IResourceName resource = new UnknownResourceName("a/wildcard/resource");
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await securityCenterClient.TestIamPermissionsAsync(resource, permissions);
@@ -2870,7 +2870,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateFinding</summary>
-        public void UpdateFinding_RequestObject()
+        public void UpdateFindingRequestObject()
         {
             // Snippet: UpdateFinding(UpdateFindingRequest, CallSettings)
             // Create client
@@ -2887,7 +2887,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateFindingAsync</summary>
-        public async Task UpdateFindingAsync_RequestObject()
+        public async Task UpdateFindingRequestObjectAsync()
         {
             // Snippet: UpdateFindingAsync(UpdateFindingRequest, CallSettings)
             // Additional: UpdateFindingAsync(UpdateFindingRequest, CancellationToken)
@@ -2961,7 +2961,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateNotificationConfig</summary>
-        public void UpdateNotificationConfig_RequestObject()
+        public void UpdateNotificationConfigRequestObject()
         {
             // Snippet: UpdateNotificationConfig(UpdateNotificationConfigRequest, CallSettings)
             // Create client
@@ -2978,7 +2978,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateNotificationConfigAsync</summary>
-        public async Task UpdateNotificationConfigAsync_RequestObject()
+        public async Task UpdateNotificationConfigRequestObjectAsync()
         {
             // Snippet: UpdateNotificationConfigAsync(UpdateNotificationConfigRequest, CallSettings)
             // Additional: UpdateNotificationConfigAsync(UpdateNotificationConfigRequest, CancellationToken)
@@ -3052,7 +3052,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateOrganizationSettings</summary>
-        public void UpdateOrganizationSettings_RequestObject()
+        public void UpdateOrganizationSettingsRequestObject()
         {
             // Snippet: UpdateOrganizationSettings(UpdateOrganizationSettingsRequest, CallSettings)
             // Create client
@@ -3069,7 +3069,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateOrganizationSettingsAsync</summary>
-        public async Task UpdateOrganizationSettingsAsync_RequestObject()
+        public async Task UpdateOrganizationSettingsRequestObjectAsync()
         {
             // Snippet: UpdateOrganizationSettingsAsync(UpdateOrganizationSettingsRequest, CallSettings)
             // Additional: UpdateOrganizationSettingsAsync(UpdateOrganizationSettingsRequest, CancellationToken)
@@ -3114,7 +3114,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateSource</summary>
-        public void UpdateSource_RequestObject()
+        public void UpdateSourceRequestObject()
         {
             // Snippet: UpdateSource(UpdateSourceRequest, CallSettings)
             // Create client
@@ -3131,7 +3131,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateSourceAsync</summary>
-        public async Task UpdateSourceAsync_RequestObject()
+        public async Task UpdateSourceRequestObjectAsync()
         {
             // Snippet: UpdateSourceAsync(UpdateSourceRequest, CallSettings)
             // Additional: UpdateSourceAsync(UpdateSourceRequest, CancellationToken)
@@ -3205,7 +3205,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateSecurityMarks</summary>
-        public void UpdateSecurityMarks_RequestObject()
+        public void UpdateSecurityMarksRequestObject()
         {
             // Snippet: UpdateSecurityMarks(UpdateSecurityMarksRequest, CallSettings)
             // Create client
@@ -3223,7 +3223,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
         }
 
         /// <summary>Snippet for UpdateSecurityMarksAsync</summary>
-        public async Task UpdateSecurityMarksAsync_RequestObject()
+        public async Task UpdateSecurityMarksRequestObjectAsync()
         {
             // Snippet: UpdateSecurityMarksAsync(UpdateSecurityMarksRequest, CallSettings)
             // Additional: UpdateSecurityMarksAsync(UpdateSecurityMarksRequest, CancellationToken)
