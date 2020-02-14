@@ -29,7 +29,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
     public sealed class GeneratedManagedIdentitiesServiceClientSnippets
     {
         /// <summary>Snippet for CreateMicrosoftAdDomain</summary>
-        public void CreateMicrosoftAdDomain_RequestObject()
+        public void CreateMicrosoftAdDomainRequestObject()
         {
             // Snippet: CreateMicrosoftAdDomain(CreateMicrosoftAdDomainRequest, CallSettings)
             // Create client
@@ -37,7 +37,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             CreateMicrosoftAdDomainRequest request = new CreateMicrosoftAdDomainRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DomainName = "",
                 Domain = new Domain(),
             };
@@ -63,7 +63,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for CreateMicrosoftAdDomainAsync</summary>
-        public async Task CreateMicrosoftAdDomainAsync_RequestObject()
+        public async Task CreateMicrosoftAdDomainRequestObjectAsync()
         {
             // Snippet: CreateMicrosoftAdDomainAsync(CreateMicrosoftAdDomainRequest, CallSettings)
             // Additional: CreateMicrosoftAdDomainAsync(CreateMicrosoftAdDomainRequest, CancellationToken)
@@ -72,7 +72,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             CreateMicrosoftAdDomainRequest request = new CreateMicrosoftAdDomainRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DomainName = "",
                 Domain = new Domain(),
             };
@@ -161,13 +161,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for CreateMicrosoftAdDomain</summary>
-        public void CreateMicrosoftAdDomain_ResourceNames()
+        public void CreateMicrosoftAdDomainResourceNames()
         {
             // Snippet: CreateMicrosoftAdDomain(LocationName, string, Domain, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string domainName = "";
             Domain domain = new Domain();
             // Make the request
@@ -192,14 +192,14 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for CreateMicrosoftAdDomainAsync</summary>
-        public async Task CreateMicrosoftAdDomainAsync_ResourceNames()
+        public async Task CreateMicrosoftAdDomainResourceNamesAsync()
         {
             // Snippet: CreateMicrosoftAdDomainAsync(LocationName, string, Domain, CallSettings)
             // Additional: CreateMicrosoftAdDomainAsync(LocationName, string, Domain, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string domainName = "";
             Domain domain = new Domain();
             // Make the request
@@ -224,7 +224,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ResetAdminPassword</summary>
-        public void ResetAdminPassword_RequestObject()
+        public void ResetAdminPasswordRequestObject()
         {
             // Snippet: ResetAdminPassword(ResetAdminPasswordRequest, CallSettings)
             // Create client
@@ -232,7 +232,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             // Make the request
             ResetAdminPasswordResponse response = managedIdentitiesServiceClient.ResetAdminPassword(request);
@@ -240,7 +240,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ResetAdminPasswordAsync</summary>
-        public async Task ResetAdminPasswordAsync_RequestObject()
+        public async Task ResetAdminPasswordRequestObjectAsync()
         {
             // Snippet: ResetAdminPasswordAsync(ResetAdminPasswordRequest, CallSettings)
             // Additional: ResetAdminPasswordAsync(ResetAdminPasswordRequest, CancellationToken)
@@ -249,7 +249,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             // Make the request
             ResetAdminPasswordResponse response = await managedIdentitiesServiceClient.ResetAdminPasswordAsync(request);
@@ -284,34 +284,34 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ResetAdminPassword</summary>
-        public void ResetAdminPassword_ResourceNames()
+        public void ResetAdminPasswordResourceNames()
         {
             // Snippet: ResetAdminPassword(DomainName, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             // Make the request
             ResetAdminPasswordResponse response = managedIdentitiesServiceClient.ResetAdminPassword(name);
             // End snippet
         }
 
         /// <summary>Snippet for ResetAdminPasswordAsync</summary>
-        public async Task ResetAdminPasswordAsync_ResourceNames()
+        public async Task ResetAdminPasswordResourceNamesAsync()
         {
             // Snippet: ResetAdminPasswordAsync(DomainName, CallSettings)
             // Additional: ResetAdminPasswordAsync(DomainName, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             // Make the request
             ResetAdminPasswordResponse response = await managedIdentitiesServiceClient.ResetAdminPasswordAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for ListDomains</summary>
-        public void ListDomains_RequestObject()
+        public void ListDomainsRequestObject()
         {
             // Snippet: ListDomains(ListDomainsRequest, CallSettings)
             // Create client
@@ -319,7 +319,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ListDomainsRequest request = new ListDomainsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -361,7 +361,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ListDomains</summary>
-        public async Task ListDomainsAsync_RequestObject()
+        public async Task ListDomainsRequestObjectAsync()
         {
             // Snippet: ListDomainsAsync(ListDomainsRequest, CallSettings)
             // Create client
@@ -369,7 +369,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ListDomainsRequest request = new ListDomainsRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -501,13 +501,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ListDomains</summary>
-        public void ListDomains_ResourceNames()
+        public void ListDomainsResourceNames()
         {
             // Snippet: ListDomains(LocationName, string, int?, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListDomainsResponse, Domain> response = managedIdentitiesServiceClient.ListDomains(parent);
 
@@ -546,13 +546,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ListDomains</summary>
-        public async Task ListDomainsAsync_ResourceNames()
+        public async Task ListDomainsResourceNamesAsync()
         {
             // Snippet: ListDomainsAsync(LocationName, string, int?, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListDomainsResponse, Domain> response = managedIdentitiesServiceClient.ListDomainsAsync(parent);
 
@@ -591,7 +591,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for GetDomain</summary>
-        public void GetDomain_RequestObject()
+        public void GetDomainRequestObject()
         {
             // Snippet: GetDomain(GetDomainRequest, CallSettings)
             // Create client
@@ -599,7 +599,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             // Make the request
             Domain response = managedIdentitiesServiceClient.GetDomain(request);
@@ -607,7 +607,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for GetDomainAsync</summary>
-        public async Task GetDomainAsync_RequestObject()
+        public async Task GetDomainRequestObjectAsync()
         {
             // Snippet: GetDomainAsync(GetDomainRequest, CallSettings)
             // Additional: GetDomainAsync(GetDomainRequest, CancellationToken)
@@ -616,7 +616,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             // Make the request
             Domain response = await managedIdentitiesServiceClient.GetDomainAsync(request);
@@ -651,34 +651,34 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for GetDomain</summary>
-        public void GetDomain_ResourceNames()
+        public void GetDomainResourceNames()
         {
             // Snippet: GetDomain(DomainName, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             // Make the request
             Domain response = managedIdentitiesServiceClient.GetDomain(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetDomainAsync</summary>
-        public async Task GetDomainAsync_ResourceNames()
+        public async Task GetDomainResourceNamesAsync()
         {
             // Snippet: GetDomainAsync(DomainName, CallSettings)
             // Additional: GetDomainAsync(DomainName, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             // Make the request
             Domain response = await managedIdentitiesServiceClient.GetDomainAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateDomain</summary>
-        public void UpdateDomain_RequestObject()
+        public void UpdateDomainRequestObject()
         {
             // Snippet: UpdateDomain(UpdateDomainRequest, CallSettings)
             // Create client
@@ -711,7 +711,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateDomainAsync</summary>
-        public async Task UpdateDomainAsync_RequestObject()
+        public async Task UpdateDomainRequestObjectAsync()
         {
             // Snippet: UpdateDomainAsync(UpdateDomainRequest, CallSettings)
             // Additional: UpdateDomainAsync(UpdateDomainRequest, CancellationToken)
@@ -806,7 +806,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDomain</summary>
-        public void DeleteDomain_RequestObject()
+        public void DeleteDomainRequestObject()
         {
             // Snippet: DeleteDomain(DeleteDomainRequest, CallSettings)
             // Create client
@@ -814,7 +814,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             DeleteDomainRequest request = new DeleteDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             // Make the request
             Operation<Empty, OpMetadata> response = managedIdentitiesServiceClient.DeleteDomain(request);
@@ -838,7 +838,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDomainAsync</summary>
-        public async Task DeleteDomainAsync_RequestObject()
+        public async Task DeleteDomainRequestObjectAsync()
         {
             // Snippet: DeleteDomainAsync(DeleteDomainRequest, CallSettings)
             // Additional: DeleteDomainAsync(DeleteDomainRequest, CancellationToken)
@@ -847,7 +847,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             DeleteDomainRequest request = new DeleteDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             // Make the request
             Operation<Empty, OpMetadata> response = await managedIdentitiesServiceClient.DeleteDomainAsync(request);
@@ -930,13 +930,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDomain</summary>
-        public void DeleteDomain_ResourceNames()
+        public void DeleteDomainResourceNames()
         {
             // Snippet: DeleteDomain(DomainName, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             // Make the request
             Operation<Empty, OpMetadata> response = managedIdentitiesServiceClient.DeleteDomain(name);
 
@@ -959,14 +959,14 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteDomainAsync</summary>
-        public async Task DeleteDomainAsync_ResourceNames()
+        public async Task DeleteDomainResourceNamesAsync()
         {
             // Snippet: DeleteDomainAsync(DomainName, CallSettings)
             // Additional: DeleteDomainAsync(DomainName, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             // Make the request
             Operation<Empty, OpMetadata> response = await managedIdentitiesServiceClient.DeleteDomainAsync(name);
 
@@ -989,7 +989,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for AttachTrust</summary>
-        public void AttachTrust_RequestObject()
+        public void AttachTrustRequestObject()
         {
             // Snippet: AttachTrust(AttachTrustRequest, CallSettings)
             // Create client
@@ -997,7 +997,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             AttachTrustRequest request = new AttachTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Trust = new Trust(),
             };
             // Make the request
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for AttachTrustAsync</summary>
-        public async Task AttachTrustAsync_RequestObject()
+        public async Task AttachTrustRequestObjectAsync()
         {
             // Snippet: AttachTrustAsync(AttachTrustRequest, CallSettings)
             // Additional: AttachTrustAsync(AttachTrustRequest, CancellationToken)
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             AttachTrustRequest request = new AttachTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Trust = new Trust(),
             };
             // Make the request
@@ -1117,13 +1117,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for AttachTrust</summary>
-        public void AttachTrust_ResourceNames()
+        public void AttachTrustResourceNames()
         {
             // Snippet: AttachTrust(DomainName, Trust, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             Trust trust = new Trust();
             // Make the request
             Operation<Domain, OpMetadata> response = managedIdentitiesServiceClient.AttachTrust(name, trust);
@@ -1147,14 +1147,14 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for AttachTrustAsync</summary>
-        public async Task AttachTrustAsync_ResourceNames()
+        public async Task AttachTrustResourceNamesAsync()
         {
             // Snippet: AttachTrustAsync(DomainName, Trust, CallSettings)
             // Additional: AttachTrustAsync(DomainName, Trust, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             Trust trust = new Trust();
             // Make the request
             Operation<Domain, OpMetadata> response = await managedIdentitiesServiceClient.AttachTrustAsync(name, trust);
@@ -1178,7 +1178,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ReconfigureTrust</summary>
-        public void ReconfigureTrust_RequestObject()
+        public void ReconfigureTrustRequestObject()
         {
             // Snippet: ReconfigureTrust(ReconfigureTrustRequest, CallSettings)
             // Create client
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ReconfigureTrustRequest request = new ReconfigureTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 TargetDomainName = "",
                 TargetDnsIpAddresses = { "", },
             };
@@ -1212,7 +1212,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ReconfigureTrustAsync</summary>
-        public async Task ReconfigureTrustAsync_RequestObject()
+        public async Task ReconfigureTrustRequestObjectAsync()
         {
             // Snippet: ReconfigureTrustAsync(ReconfigureTrustRequest, CallSettings)
             // Additional: ReconfigureTrustAsync(ReconfigureTrustRequest, CancellationToken)
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ReconfigureTrustRequest request = new ReconfigureTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 TargetDomainName = "",
                 TargetDnsIpAddresses = { "", },
             };
@@ -1310,13 +1310,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ReconfigureTrust</summary>
-        public void ReconfigureTrust_ResourceNames()
+        public void ReconfigureTrustResourceNames()
         {
             // Snippet: ReconfigureTrust(DomainName, string, IEnumerable<string>, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             string targetDomainName = "";
             IEnumerable<string> targetDnsIpAddresses = new string[] { "", };
             // Make the request
@@ -1341,14 +1341,14 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ReconfigureTrustAsync</summary>
-        public async Task ReconfigureTrustAsync_ResourceNames()
+        public async Task ReconfigureTrustResourceNamesAsync()
         {
             // Snippet: ReconfigureTrustAsync(DomainName, string, IEnumerable<string>, CallSettings)
             // Additional: ReconfigureTrustAsync(DomainName, string, IEnumerable<string>, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             string targetDomainName = "";
             IEnumerable<string> targetDnsIpAddresses = new string[] { "", };
             // Make the request
@@ -1373,7 +1373,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DetachTrust</summary>
-        public void DetachTrust_RequestObject()
+        public void DetachTrustRequestObject()
         {
             // Snippet: DetachTrust(DetachTrustRequest, CallSettings)
             // Create client
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             DetachTrustRequest request = new DetachTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Trust = new Trust(),
             };
             // Make the request
@@ -1406,7 +1406,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DetachTrustAsync</summary>
-        public async Task DetachTrustAsync_RequestObject()
+        public async Task DetachTrustRequestObjectAsync()
         {
             // Snippet: DetachTrustAsync(DetachTrustRequest, CallSettings)
             // Additional: DetachTrustAsync(DetachTrustRequest, CancellationToken)
@@ -1415,7 +1415,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             DetachTrustRequest request = new DetachTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Trust = new Trust(),
             };
             // Make the request
@@ -1501,13 +1501,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DetachTrust</summary>
-        public void DetachTrust_ResourceNames()
+        public void DetachTrustResourceNames()
         {
             // Snippet: DetachTrust(DomainName, Trust, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             Trust trust = new Trust();
             // Make the request
             Operation<Domain, OpMetadata> response = managedIdentitiesServiceClient.DetachTrust(name, trust);
@@ -1531,14 +1531,14 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for DetachTrustAsync</summary>
-        public async Task DetachTrustAsync_ResourceNames()
+        public async Task DetachTrustResourceNamesAsync()
         {
             // Snippet: DetachTrustAsync(DomainName, Trust, CallSettings)
             // Additional: DetachTrustAsync(DomainName, Trust, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             Trust trust = new Trust();
             // Make the request
             Operation<Domain, OpMetadata> response = await managedIdentitiesServiceClient.DetachTrustAsync(name, trust);
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ValidateTrust</summary>
-        public void ValidateTrust_RequestObject()
+        public void ValidateTrustRequestObject()
         {
             // Snippet: ValidateTrust(ValidateTrustRequest, CallSettings)
             // Create client
@@ -1570,7 +1570,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ValidateTrustRequest request = new ValidateTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Trust = new Trust(),
             };
             // Make the request
@@ -1595,7 +1595,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ValidateTrustAsync</summary>
-        public async Task ValidateTrustAsync_RequestObject()
+        public async Task ValidateTrustRequestObjectAsync()
         {
             // Snippet: ValidateTrustAsync(ValidateTrustRequest, CallSettings)
             // Additional: ValidateTrustAsync(ValidateTrustRequest, CancellationToken)
@@ -1604,7 +1604,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // Initialize request argument(s)
             ValidateTrustRequest request = new ValidateTrustRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Trust = new Trust(),
             };
             // Make the request
@@ -1690,13 +1690,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ValidateTrust</summary>
-        public void ValidateTrust_ResourceNames()
+        public void ValidateTrustResourceNames()
         {
             // Snippet: ValidateTrust(DomainName, Trust, CallSettings)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = ManagedIdentitiesServiceClient.Create();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             Trust trust = new Trust();
             // Make the request
             Operation<Domain, OpMetadata> response = managedIdentitiesServiceClient.ValidateTrust(name, trust);
@@ -1720,14 +1720,14 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
         }
 
         /// <summary>Snippet for ValidateTrustAsync</summary>
-        public async Task ValidateTrustAsync_ResourceNames()
+        public async Task ValidateTrustResourceNamesAsync()
         {
             // Snippet: ValidateTrustAsync(DomainName, Trust, CallSettings)
             // Additional: ValidateTrustAsync(DomainName, Trust, CancellationToken)
             // Create client
             ManagedIdentitiesServiceClient managedIdentitiesServiceClient = await ManagedIdentitiesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DomainName name = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            DomainName name = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
             Trust trust = new Trust();
             // Make the request
             Operation<Domain, OpMetadata> response = await managedIdentitiesServiceClient.ValidateTrustAsync(name, trust);

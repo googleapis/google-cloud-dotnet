@@ -1123,8 +1123,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Initialize request argument(s)
             SnapshotTableRequest request = new SnapshotTableRequest
             {
-                Name = "",
-                Cluster = "",
+                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                ClusterAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
                 SnapshotId = "",
                 Ttl = new Duration(),
                 Description = "",
@@ -1160,8 +1160,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Initialize request argument(s)
             SnapshotTableRequest request = new SnapshotTableRequest
             {
-                Name = "",
-                Cluster = "",
+                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                ClusterAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
                 SnapshotId = "",
                 Ttl = new Duration(),
                 Description = "",
@@ -1194,8 +1194,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
             // Initialize request argument(s)
-            string name = "";
-            string cluster = "";
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            string cluster = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]";
             string snapshotId = "";
             string description = "";
             // Make the request
@@ -1227,8 +1227,73 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
-            string cluster = "";
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            string cluster = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]";
+            string snapshotId = "";
+            string description = "";
+            // Make the request
+            Operation<Snapshot, SnapshotTableMetadata> response = await bigtableTableAdminClient.SnapshotTableAsync(name, cluster, snapshotId, description);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, SnapshotTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, SnapshotTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceSnapshotTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SnapshotTable</summary>
+        public void SnapshotTableResourceNames()
+        {
+            // Snippet: SnapshotTable(TableName, ClusterName, string, string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName name = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ClusterName cluster = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            string snapshotId = "";
+            string description = "";
+            // Make the request
+            Operation<Snapshot, SnapshotTableMetadata> response = bigtableTableAdminClient.SnapshotTable(name, cluster, snapshotId, description);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, SnapshotTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, SnapshotTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceSnapshotTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SnapshotTableAsync</summary>
+        public async Task SnapshotTableResourceNamesAsync()
+        {
+            // Snippet: SnapshotTableAsync(TableName, ClusterName, string, string, CallSettings)
+            // Additional: SnapshotTableAsync(TableName, ClusterName, string, string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName name = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ClusterName cluster = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
             string snapshotId = "";
             string description = "";
             // Make the request

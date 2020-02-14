@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -75,8 +76,13 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.CreateMicrosoftAdDomain</c> and
         /// <c>ManagedIdentitiesServiceClient.CreateMicrosoftAdDomainAsync</c>.
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings CreateMicrosoftAdDomainSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMicrosoftAdDomainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.CreateMicrosoftAdDomain</c>
@@ -101,31 +107,51 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.ResetAdminPassword</c> and
         /// <c>ManagedIdentitiesServiceClient.ResetAdminPasswordAsync</c>.
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings ResetAdminPasswordSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResetAdminPasswordSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ManagedIdentitiesServiceClient.ListDomains</c> and <c>ManagedIdentitiesServiceClient.ListDomainsAsync</c>
         /// .
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings ListDomainsSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDomainsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ManagedIdentitiesServiceClient.GetDomain</c> and <c>ManagedIdentitiesServiceClient.GetDomainAsync</c>.
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings GetDomainSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDomainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ManagedIdentitiesServiceClient.UpdateDomain</c> and <c>ManagedIdentitiesServiceClient.UpdateDomainAsync</c>
         /// .
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings UpdateDomainSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDomainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.UpdateDomain</c> and
@@ -150,8 +176,13 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.DeleteDomain</c> and <c>ManagedIdentitiesServiceClient.DeleteDomainAsync</c>
         /// .
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings DeleteDomainSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDomainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.DeleteDomain</c> and
@@ -176,8 +207,13 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.AttachTrust</c> and <c>ManagedIdentitiesServiceClient.AttachTrustAsync</c>
         /// .
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings AttachTrustSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AttachTrustSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.AttachTrust</c> and
@@ -202,8 +238,13 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.ReconfigureTrust</c> and
         /// <c>ManagedIdentitiesServiceClient.ReconfigureTrustAsync</c>.
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings ReconfigureTrustSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReconfigureTrustSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.ReconfigureTrust</c> and
@@ -228,8 +269,13 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.DetachTrust</c> and <c>ManagedIdentitiesServiceClient.DetachTrustAsync</c>
         /// .
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings DetachTrustSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DetachTrustSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.DetachTrust</c> and
@@ -254,8 +300,13 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <c>ManagedIdentitiesServiceClient.ValidateTrust</c> and <c>ManagedIdentitiesServiceClient.ValidateTrustAsync</c>
         /// .
         /// </summary>
-        /// <remarks>By default, retry will not be attempted.</remarks>
-        public gaxgrpc::CallSettings ValidateTrustSettings { get; set; }
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ValidateTrustSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>ManagedIdentitiesServiceClient.ValidateTrust</c> and
@@ -306,13 +357,16 @@ namespace Google.Cloud.ManagedIdentities.V1
         }
 
         /// <inheritdoc/>
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ManagedIdentitiesServiceClient.DefaultEndpoint;
+        protected override string GetDefaultEndpoint() => ManagedIdentitiesServiceClient.DefaultEndpoint;
 
         /// <inheritdoc/>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => ManagedIdentitiesServiceClient.DefaultScopes;
 
         /// <inheritdoc/>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ManagedIdentitiesServiceClient.ChannelPool;
+
+        /// <inheritdoc/>
+        protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
     /// <summary>ManagedIdentitiesService client wrapper, for convenient use.</summary>
@@ -322,7 +376,7 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// The default endpoint for the ManagedIdentitiesService service, which is a host of
         /// "managedidentities.googleapis.com" and a port of 443.
         /// </summary>
-        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("managedidentities.googleapis.com", 443);
+        public static string DefaultEndpoint { get; } = "managedidentities.googleapis.com:443";
 
         /// <summary>The default ManagedIdentitiesService scopes.</summary>
         /// <remarks>
@@ -339,97 +393,24 @@ namespace Google.Cloud.ManagedIdentities.V1
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="ManagedIdentitiesServiceClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Asynchronously creates a <see cref="ManagedIdentitiesServiceClient"/> using the default credentials,
+        /// endpoint and settings. To specify custom credentials or other settings, use
+        /// <see cref="ManagedIdentitiesServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = await ImageAnnotatorClient.CreateAsync();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="ManagedIdentitiesServiceSettings"/>.</param>
+        /// <param name="cancellationToken">
+        /// The <see cref="st::CancellationToken"/> to use while creating the client.
+        /// </param>
         /// <returns>The task representing the created <see cref="ManagedIdentitiesServiceClient"/>.</returns>
-        public static async stt::Task<ManagedIdentitiesServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, ManagedIdentitiesServiceSettings settings = null)
-        {
-            grpccore::Channel channel = await ChannelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
+        public static stt::Task<ManagedIdentitiesServiceClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new ManagedIdentitiesServiceClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="ManagedIdentitiesServiceClient"/>, applying defaults for all unspecified
-        /// settings, and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary. See the example for how to use custom credentials.
+        /// Synchronously creates a <see cref="ManagedIdentitiesServiceClient"/> using the default credentials, endpoint
+        /// and settings. To specify custom credentials or other settings, use
+        /// <see cref="ManagedIdentitiesServiceClientBuilder"/>.
         /// </summary>
-        /// <example>
-        /// This sample shows how to create a client using default credentials:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// ...
-        /// // When running on Google Cloud Platform this will use the project Compute Credential.
-        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
-        /// // credential file to use that credential.
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-        /// </code>
-        /// This sample shows how to create a client using credentials loaded from a JSON file:
-        /// <code>
-        /// using Google.Cloud.Vision.V1;
-        /// using Google.Apis.Auth.OAuth2;
-        /// using Grpc.Auth;
-        /// using Grpc.Core;
-        /// ...
-        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
-        /// Channel channel = new Channel(
-        ///     ImageAnnotatorClient.DefaultEndpoint.Host, ImageAnnotatorClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
-        /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
-        /// ...
-        /// // Shutdown the channel when it is no longer required.
-        /// channel.ShutdownAsync().Wait();
-        /// </code>
-        /// </example>
-        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="ManagedIdentitiesServiceSettings"/>.</param>
         /// <returns>The created <see cref="ManagedIdentitiesServiceClient"/>.</returns>
-        public static ManagedIdentitiesServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, ManagedIdentitiesServiceSettings settings = null)
-        {
-            grpccore::Channel channel = ChannelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="ManagedIdentitiesServiceClient"/> which uses the specified channel for remote
-        /// operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="ManagedIdentitiesServiceSettings"/>.</param>
-        /// <returns>The created <see cref="ManagedIdentitiesServiceClient"/>.</returns>
-        public static ManagedIdentitiesServiceClient Create(grpccore::Channel channel, ManagedIdentitiesServiceSettings settings = null)
-        {
-            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel), settings);
-        }
+        public static ManagedIdentitiesServiceClient Create() => new ManagedIdentitiesServiceClientBuilder().Build();
 
         /// <summary>
         /// Creates a <see cref="ManagedIdentitiesServiceClient"/> which uses the specified call invoker for remote
@@ -440,7 +421,7 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// </param>
         /// <param name="settings">Optional <see cref="ManagedIdentitiesServiceSettings"/>.</param>
         /// <returns>The created <see cref="ManagedIdentitiesServiceClient"/>.</returns>
-        public static ManagedIdentitiesServiceClient Create(grpccore::CallInvoker callInvoker, ManagedIdentitiesServiceSettings settings = null)
+        internal static ManagedIdentitiesServiceClient Create(grpccore::CallInvoker callInvoker, ManagedIdentitiesServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -453,16 +434,14 @@ namespace Google.Cloud.ManagedIdentities.V1
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by
-        /// <see cref="Create(grpccore::CallInvoker,ManagedIdentitiesServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,ManagedIdentitiesServiceSettings)"/>. Channels which weren't
-        /// automatically created are not affected.
+        /// Shuts down any channels automatically created by <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/>. Channels which weren't automatically created are not
+        /// affected.
         /// </summary>
         /// <remarks>
-        /// After calling this method, further calls to
-        /// <see cref="Create(grpccore::CallInvoker,ManagedIdentitiesServiceSettings)"/> and
-        /// <see cref="CreateAsync(gaxgrpc::ServiceEndpoint,ManagedIdentitiesServiceSettings)"/> will create new
-        /// channels, which could in turn be shut down by another call to this method.
+        /// After calling this method, further calls to <see cref="Create()"/> and
+        /// <see cref="CreateAsync(st::CancellationToken)"/> will create new channels, which could in turn be shut down
+        /// by another call to this method.
         /// </remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();

@@ -41,8 +41,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.AssetReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.FindingReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessage), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessage.Parser, new[]{ "NotificationConfigName", "Finding" }, new[]{ "Event" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessage), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessage.Parser, new[]{ "NotificationConfigName", "Finding" }, new[]{ "Event" }, null, null, null)
           }));
     }
     #endregion

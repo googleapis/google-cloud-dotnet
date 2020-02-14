@@ -39,12 +39,12 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -62,12 +62,12 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -87,12 +87,12 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -110,12 +110,12 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -129,18 +129,18 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateSource_ResourceNames()
+        public void CreateSourceResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -152,18 +152,18 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateSourceAsync_ResourceNames()
+        public async stt::Task CreateSourceResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateSourceRequest request = new CreateSourceRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Source = new Source(),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -183,13 +183,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -220,13 +220,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -259,13 +259,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -296,13 +296,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -329,19 +329,19 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateFinding1_ResourceNames()
+        public void CreateFinding1ResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -366,19 +366,19 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateFinding1Async_ResourceNames()
+        public async stt::Task CreateFinding1ResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -411,13 +411,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -448,13 +448,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -481,19 +481,19 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateFinding2_ResourceNames()
+        public void CreateFinding2ResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -518,19 +518,19 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateFinding2Async_ResourceNames()
+        public async stt::Task CreateFinding2ResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateFindingRequest request = new CreateFindingRequest
             {
-                ParentAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ParentAsSourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 FindingId = "finding_idcb48e4ee",
                 Finding = new Finding(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -563,16 +563,16 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "config_id908a73d1",
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -590,16 +590,16 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "config_id908a73d1",
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -619,16 +619,16 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "config_id908a73d1",
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -646,16 +646,16 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "config_id908a73d1",
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -669,22 +669,22 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateNotificationConfig1_ResourceNames()
+        public void CreateNotificationConfig1ResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "config_id908a73d1",
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -696,22 +696,22 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateNotificationConfig1Async_ResourceNames()
+        public async stt::Task CreateNotificationConfig1ResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 ConfigId = "config_id908a73d1",
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -731,15 +731,15 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -757,15 +757,15 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -779,21 +779,21 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateNotificationConfig2_ResourceNames()
+        public void CreateNotificationConfig2ResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -805,21 +805,21 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateNotificationConfig2Async_ResourceNames()
+        public async stt::Task CreateNotificationConfig2ResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
             {
-                ParentAsOrganizationName = new gagr::OrganizationName("[ORGANIZATION]"),
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 NotificationConfig = new NotificationConfig(),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -839,7 +839,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -855,7 +855,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -872,7 +872,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -888,7 +888,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -899,13 +899,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteNotificationConfig_ResourceNames()
+        public void DeleteNotificationConfigResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -915,13 +915,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteNotificationConfigAsync_ResourceNames()
+        public async stt::Task DeleteNotificationConfigResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -938,7 +938,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -964,7 +964,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Options = new gciv::GetPolicyOptions(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -992,7 +992,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1038,13 +1038,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetIamPolicy_ResourceNames()
+        public void GetIamPolicyResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1063,13 +1063,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetIamPolicyAsync_ResourceNames()
+        public async stt::Task GetIamPolicyResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1096,14 +1096,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -1121,14 +1121,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -1148,14 +1148,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -1173,14 +1173,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -1194,20 +1194,20 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetNotificationConfig_ResourceNames()
+        public void GetNotificationConfigResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -1219,20 +1219,20 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetNotificationConfigAsync_ResourceNames()
+        public async stt::Task GetNotificationConfigResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNotificationConfigRequest request = new GetNotificationConfigRequest
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -1252,11 +1252,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -1274,11 +1274,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -1298,11 +1298,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -1320,11 +1320,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -1338,17 +1338,17 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetOrganizationSettings_ResourceNames()
+        public void GetOrganizationSettingsResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -1360,17 +1360,17 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetOrganizationSettingsAsync_ResourceNames()
+        public async stt::Task GetOrganizationSettingsResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetOrganizationSettingsRequest request = new GetOrganizationSettingsRequest
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -1390,11 +1390,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -1412,11 +1412,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -1436,11 +1436,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -1458,11 +1458,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -1476,17 +1476,17 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetSource_ResourceNames()
+        public void GetSourceResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -1498,17 +1498,17 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetSourceAsync_ResourceNames()
+        public async stt::Task GetSourceResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSourceRequest request = new GetSourceRequest
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -1528,13 +1528,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new wkt::Timestamp(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -1565,13 +1565,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new wkt::Timestamp(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -1604,13 +1604,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new wkt::Timestamp(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -1641,13 +1641,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new wkt::Timestamp(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -1674,19 +1674,19 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetFindingState_ResourceNames()
+        public void SetFindingStateResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new wkt::Timestamp(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -1711,19 +1711,19 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetFindingStateAsync_ResourceNames()
+        public async stt::Task SetFindingStateResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetFindingStateRequest request = new SetFindingStateRequest
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 State = Finding.Types.State.Unspecified,
                 StartTime = new wkt::Timestamp(),
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1782,7 +1782,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1810,7 +1810,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1836,7 +1836,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1858,13 +1858,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetIamPolicy_ResourceNames()
+        public void SetIamPolicyResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1884,13 +1884,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task SetIamPolicyAsync_ResourceNames()
+        public async stt::Task SetIamPolicyResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Policy = new gciv::Policy(),
             };
             gciv::Policy expectedResponse = new gciv::Policy
@@ -1918,7 +1918,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1945,7 +1945,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -1974,7 +1974,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -2001,7 +2001,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -2024,13 +2024,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void TestIamPermissions_ResourceNames()
+        public void TestIamPermissionsResourceNames()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -2051,13 +2051,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task TestIamPermissionsAsync_ResourceNames()
+        public async stt::Task TestIamPermissionsResourceNamesAsync()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new gax::UnknownResourceName("a/wildcard/resource"),
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Permissions =
                 {
                     "permissions535a2741",
@@ -2091,7 +2091,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -2127,7 +2127,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -2164,7 +2164,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -2199,7 +2199,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -2237,7 +2237,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -2273,7 +2273,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent7858e4d0",
                 ResourceName = "resource_name8cc2e687",
                 State = Finding.Types.State.Unspecified,
@@ -2311,10 +2311,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -2337,10 +2337,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -2364,10 +2364,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -2389,10 +2389,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -2417,10 +2417,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -2443,10 +2443,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             NotificationConfig expectedResponse = new NotificationConfig
             {
-                NotificationConfigName = new NotificationConfigName("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
                 Description = "description2cf9da67",
                 EventType = NotificationConfig.Types.EventType.Unspecified,
-                PubsubTopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 ServiceAccount = "service_accounta3c1b923",
                 StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
             };
@@ -2471,7 +2471,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -2494,7 +2494,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -2518,7 +2518,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -2540,7 +2540,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             OrganizationSettings expectedResponse = new OrganizationSettings
             {
-                OrganizationSettingsName = new OrganizationSettingsName("[ORGANIZATION]"),
+                OrganizationSettingsName = OrganizationSettingsName.FromOrganization("[ORGANIZATION]"),
                 EnableAssetDiscovery = true,
                 AssetDiscoveryConfig = new OrganizationSettings.Types.AssetDiscoveryConfig(),
             };
@@ -2565,7 +2565,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -2588,7 +2588,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -2612,7 +2612,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -2634,7 +2634,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -2659,7 +2659,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -2682,7 +2682,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             Source expectedResponse = new Source
             {
-                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
             };
@@ -2708,7 +2708,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             SecurityMarks expectedResponse = new SecurityMarks
             {
-                SecurityMarksNameOneOf = SecurityMarksNameOneOf.From(new OrganizationAssetName("[ORGANIZATION]", "[ASSET]")),
+                SecurityMarksName = SecurityMarksName.FromOrganizationAsset("[ORGANIZATION]", "[ASSET]"),
                 Marks =
                 {
                     {
@@ -2737,7 +2737,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             SecurityMarks expectedResponse = new SecurityMarks
             {
-                SecurityMarksNameOneOf = SecurityMarksNameOneOf.From(new OrganizationAssetName("[ORGANIZATION]", "[ASSET]")),
+                SecurityMarksName = SecurityMarksName.FromOrganizationAsset("[ORGANIZATION]", "[ASSET]"),
                 Marks =
                 {
                     {
@@ -2766,7 +2766,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             SecurityMarks expectedResponse = new SecurityMarks
             {
-                SecurityMarksNameOneOf = SecurityMarksNameOneOf.From(new OrganizationAssetName("[ORGANIZATION]", "[ASSET]")),
+                SecurityMarksName = SecurityMarksName.FromOrganizationAsset("[ORGANIZATION]", "[ASSET]"),
                 Marks =
                 {
                     {
@@ -2793,7 +2793,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             SecurityMarks expectedResponse = new SecurityMarks
             {
-                SecurityMarksNameOneOf = SecurityMarksNameOneOf.From(new OrganizationAssetName("[ORGANIZATION]", "[ASSET]")),
+                SecurityMarksName = SecurityMarksName.FromOrganizationAsset("[ORGANIZATION]", "[ASSET]"),
                 Marks =
                 {
                     {
@@ -2823,7 +2823,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             SecurityMarks expectedResponse = new SecurityMarks
             {
-                SecurityMarksNameOneOf = SecurityMarksNameOneOf.From(new OrganizationAssetName("[ORGANIZATION]", "[ASSET]")),
+                SecurityMarksName = SecurityMarksName.FromOrganizationAsset("[ORGANIZATION]", "[ASSET]"),
                 Marks =
                 {
                     {
@@ -2851,7 +2851,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
             };
             SecurityMarks expectedResponse = new SecurityMarks
             {
-                SecurityMarksNameOneOf = SecurityMarksNameOneOf.From(new OrganizationAssetName("[ORGANIZATION]", "[ASSET]")),
+                SecurityMarksName = SecurityMarksName.FromOrganizationAsset("[ORGANIZATION]", "[ASSET]"),
                 Marks =
                 {
                     {

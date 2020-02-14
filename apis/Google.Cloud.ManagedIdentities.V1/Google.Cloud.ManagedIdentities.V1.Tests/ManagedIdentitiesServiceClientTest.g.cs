@@ -35,7 +35,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             ResetAdminPasswordResponse expectedResponse = new ResetAdminPasswordResponse
             {
@@ -55,7 +55,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             ResetAdminPasswordResponse expectedResponse = new ResetAdminPasswordResponse
             {
@@ -77,7 +77,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             ResetAdminPasswordResponse expectedResponse = new ResetAdminPasswordResponse
             {
@@ -97,7 +97,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             ResetAdminPasswordResponse expectedResponse = new ResetAdminPasswordResponse
             {
@@ -113,13 +113,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ResetAdminPassword_ResourceNames()
+        public void ResetAdminPasswordResourceNames()
         {
             moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient> mockGrpcClient = new moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             ResetAdminPasswordResponse expectedResponse = new ResetAdminPasswordResponse
             {
@@ -133,13 +133,13 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ResetAdminPasswordAsync_ResourceNames()
+        public async stt::Task ResetAdminPasswordResourceNamesAsync()
         {
             moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient> mockGrpcClient = new moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ResetAdminPasswordRequest request = new ResetAdminPasswordRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             ResetAdminPasswordResponse expectedResponse = new ResetAdminPasswordResponse
             {
@@ -161,11 +161,11 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             Domain expectedResponse = new Domain
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Labels =
                 {
                     {
@@ -204,11 +204,11 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             Domain expectedResponse = new Domain
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Labels =
                 {
                     {
@@ -249,11 +249,11 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             Domain expectedResponse = new Domain
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Labels =
                 {
                     {
@@ -292,11 +292,11 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             Domain expectedResponse = new Domain
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Labels =
                 {
                     {
@@ -331,17 +331,17 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetDomain_ResourceNames()
+        public void GetDomainResourceNames()
         {
             moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient> mockGrpcClient = new moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             Domain expectedResponse = new Domain
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Labels =
                 {
                     {
@@ -374,17 +374,17 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetDomainAsync_ResourceNames()
+        public async stt::Task GetDomainResourceNamesAsync()
         {
             moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient> mockGrpcClient = new moq::Mock<ManagedIdentitiesService.ManagedIdentitiesServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDomainRequest request = new GetDomainRequest
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
             };
             Domain expectedResponse = new Domain
             {
-                DomainName = new DomainName("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                DomainName = DomainName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
                 Labels =
                 {
                     {

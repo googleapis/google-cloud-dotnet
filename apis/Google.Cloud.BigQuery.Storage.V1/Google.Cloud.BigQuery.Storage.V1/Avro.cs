@@ -35,9 +35,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "dG9yYWdlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSchema), global::Google.Cloud.BigQuery.Storage.V1.AvroSchema.Parser, new[]{ "Schema" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroRows), global::Google.Cloud.BigQuery.Storage.V1.AvroRows.Parser, new[]{ "SerializedBinaryRows", "RowCount" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSchema), global::Google.Cloud.BigQuery.Storage.V1.AvroSchema.Parser, new[]{ "Schema" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroRows), global::Google.Cloud.BigQuery.Storage.V1.AvroRows.Parser, new[]{ "SerializedBinaryRows", "RowCount" }, null, null, null, null)
           }));
     }
     #endregion
