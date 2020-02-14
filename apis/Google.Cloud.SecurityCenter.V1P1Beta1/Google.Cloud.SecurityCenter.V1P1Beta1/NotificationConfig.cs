@@ -51,8 +51,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "dG9waWN9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Parser, new[]{ "Name", "Description", "EventType", "PubsubTopic", "ServiceAccount", "StreamingConfig" }, new[]{ "NotifyConfig" }, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig.Parser, new[]{ "Filter" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Parser, new[]{ "Name", "Description", "EventType", "PubsubTopic", "ServiceAccount", "StreamingConfig" }, new[]{ "NotifyConfig" }, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig.Parser, new[]{ "Filter" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -142,7 +142,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     /// <summary>Field number for the "event_type" field.</summary>
     public const int EventTypeFieldNumber = 3;
-    private global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType eventType_ = 0;
+    private global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType eventType_ = global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType.Unspecified;
     /// <summary>
     /// The type of events the config is for, e.g. FINDING.
     /// </summary>
@@ -244,7 +244,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (EventType != 0) hash ^= EventType.GetHashCode();
+      if (EventType != global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType.Unspecified) hash ^= EventType.GetHashCode();
       if (PubsubTopic.Length != 0) hash ^= PubsubTopic.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (notifyConfigCase_ == NotifyConfigOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
@@ -270,7 +270,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (EventType != 0) {
+      if (EventType != global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) EventType);
       }
@@ -300,7 +300,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (EventType != 0) {
+      if (EventType != global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
       }
       if (PubsubTopic.Length != 0) {
@@ -329,7 +329,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      if (other.EventType != 0) {
+      if (other.EventType != global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType.Unspecified) {
         EventType = other.EventType;
       }
       if (other.PubsubTopic.Length != 0) {

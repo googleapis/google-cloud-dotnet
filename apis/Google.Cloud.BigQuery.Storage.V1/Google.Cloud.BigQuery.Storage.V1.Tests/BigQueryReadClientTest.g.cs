@@ -34,18 +34,18 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
-                ReadSessionName = new ReadSessionName("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 ExpireTime = new wkt::Timestamp(),
                 DataFormat = DataFormat.Arrow,
                 AvroSchema = new AvroSchema(),
                 ArrowSchema = new ArrowSchema(),
-                TableAsTableName = new TableName("[PROJECT]", "[DATASET]", "[TABLE]"),
+                TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 TableModifiers = new ReadSession.Types.TableModifiers(),
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
@@ -63,18 +63,18 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
-                ReadSessionName = new ReadSessionName("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 ExpireTime = new wkt::Timestamp(),
                 DataFormat = DataFormat.Arrow,
                 AvroSchema = new AvroSchema(),
                 ArrowSchema = new ArrowSchema(),
-                TableAsTableName = new TableName("[PROJECT]", "[DATASET]", "[TABLE]"),
+                TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 TableModifiers = new ReadSession.Types.TableModifiers(),
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
@@ -94,18 +94,18 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
-                ReadSessionName = new ReadSessionName("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 ExpireTime = new wkt::Timestamp(),
                 DataFormat = DataFormat.Arrow,
                 AvroSchema = new AvroSchema(),
                 ArrowSchema = new ArrowSchema(),
-                TableAsTableName = new TableName("[PROJECT]", "[DATASET]", "[TABLE]"),
+                TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 TableModifiers = new ReadSession.Types.TableModifiers(),
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
@@ -123,18 +123,18 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
-                ReadSessionName = new ReadSessionName("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 ExpireTime = new wkt::Timestamp(),
                 DataFormat = DataFormat.Arrow,
                 AvroSchema = new AvroSchema(),
                 ArrowSchema = new ArrowSchema(),
-                TableAsTableName = new TableName("[PROJECT]", "[DATASET]", "[TABLE]"),
+                TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 TableModifiers = new ReadSession.Types.TableModifiers(),
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
@@ -149,23 +149,23 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateReadSession_ResourceNames()
+        public void CreateReadSessionResourceNames()
         {
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
-                ReadSessionName = new ReadSessionName("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 ExpireTime = new wkt::Timestamp(),
                 DataFormat = DataFormat.Arrow,
                 AvroSchema = new AvroSchema(),
                 ArrowSchema = new ArrowSchema(),
-                TableAsTableName = new TableName("[PROJECT]", "[DATASET]", "[TABLE]"),
+                TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 TableModifiers = new ReadSession.Types.TableModifiers(),
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
@@ -178,23 +178,23 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateReadSessionAsync_ResourceNames()
+        public async stt::Task CreateReadSessionResourceNamesAsync()
         {
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
-                ParentAsProjectName = new gagr::ProjectName("[PROJECT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ReadSession = new ReadSession(),
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
-                ReadSessionName = new ReadSessionName("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
                 ExpireTime = new wkt::Timestamp(),
                 DataFormat = DataFormat.Arrow,
                 AvroSchema = new AvroSchema(),
                 ArrowSchema = new ArrowSchema(),
-                TableAsTableName = new TableName("[PROJECT]", "[DATASET]", "[TABLE]"),
+                TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
                 TableModifiers = new ReadSession.Types.TableModifiers(),
                 ReadOptions = new ReadSession.Types.TableReadOptions(),
                 Streams = { new ReadStream(), },
@@ -214,7 +214,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             SplitReadStreamRequest request = new SplitReadStreamRequest
             {
-                ReadStreamName = new ReadStreamName("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
                 Fraction = 6.953526182705065E+17,
             };
             SplitReadStreamResponse expectedResponse = new SplitReadStreamResponse
@@ -235,7 +235,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             moq::Mock<BigQueryRead.BigQueryReadClient> mockGrpcClient = new moq::Mock<BigQueryRead.BigQueryReadClient>(moq::MockBehavior.Strict);
             SplitReadStreamRequest request = new SplitReadStreamRequest
             {
-                ReadStreamName = new ReadStreamName("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
                 Fraction = 6.953526182705065E+17,
             };
             SplitReadStreamResponse expectedResponse = new SplitReadStreamResponse

@@ -136,6 +136,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
     }
 
+    public partial class SnapshotTableRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Cluster"/> resource name property.
+        /// </summary>
+        public ClusterName ClusterAsClusterName
+        {
+            get => string.IsNullOrEmpty(Cluster) ? null : ClusterName.Parse(Cluster, allowUnparsed: true);
+            set => Cluster = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetSnapshotRequest
     {
         /// <summary>

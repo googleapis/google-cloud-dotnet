@@ -61,10 +61,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "b29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams" }, new[]{ "Schema" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -176,7 +176,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     /// <summary>Field number for the "data_format" field.</summary>
     public const int DataFormatFieldNumber = 3;
-    private global::Google.Cloud.BigQuery.Storage.V1.DataFormat dataFormat_ = 0;
+    private global::Google.Cloud.BigQuery.Storage.V1.DataFormat dataFormat_ = global::Google.Cloud.BigQuery.Storage.V1.DataFormat.Unspecified;
     /// <summary>
     /// Immutable. Data format of the output data.
     /// </summary>
@@ -327,7 +327,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
-      if (DataFormat != 0) hash ^= DataFormat.GetHashCode();
+      if (DataFormat != global::Google.Cloud.BigQuery.Storage.V1.DataFormat.Unspecified) hash ^= DataFormat.GetHashCode();
       if (schemaCase_ == SchemaOneofCase.AvroSchema) hash ^= AvroSchema.GetHashCode();
       if (schemaCase_ == SchemaOneofCase.ArrowSchema) hash ^= ArrowSchema.GetHashCode();
       if (Table.Length != 0) hash ^= Table.GetHashCode();
@@ -356,7 +356,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ExpireTime);
       }
-      if (DataFormat != 0) {
+      if (DataFormat != global::Google.Cloud.BigQuery.Storage.V1.DataFormat.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) DataFormat);
       }
@@ -395,7 +395,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (expireTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
       }
-      if (DataFormat != 0) {
+      if (DataFormat != global::Google.Cloud.BigQuery.Storage.V1.DataFormat.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataFormat);
       }
       if (schemaCase_ == SchemaOneofCase.AvroSchema) {
@@ -434,7 +434,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
-      if (other.DataFormat != 0) {
+      if (other.DataFormat != global::Google.Cloud.BigQuery.Storage.V1.DataFormat.Unspecified) {
         DataFormat = other.DataFormat;
       }
       if (other.Table.Length != 0) {

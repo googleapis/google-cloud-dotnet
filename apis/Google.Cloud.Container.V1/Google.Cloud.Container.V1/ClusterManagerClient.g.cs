@@ -14,12 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-// Ignore obsolete members within this file.
-// This is currently a hand-written addition to the generated file, until the
-// generator includes it automatically.
-// See https://github.com/googleapis/gapic-generator-csharp/issues/220
-#pragma warning disable CS0612 // Type or member is obsolete
-
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;

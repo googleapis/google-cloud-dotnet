@@ -24,82 +24,214 @@ namespace Google.Cloud.BigQuery.Storage.V1
     /// <summary>Resource name for the <c>Table</c> resource.</summary>
     public sealed partial class TableName : gax::IResourceName, sys::IEquatable<TableName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/datasets/{dataset}/tables/{table}");
-
-        /// <summary>
-        /// Parses the given <c>Table</c> resource name in string form into a new <see cref="TableName"/> instance.
-        /// </summary>
-        /// <param name="tableName">The <c>Table</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="TableName"/> if successful.</returns>
-        public static TableName Parse(string tableName)
+        /// <summary>The possible contents of <see cref="TableName"/>.</summary>
+        public enum ResourceNameType
         {
-            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(tableName);
-            return new TableName(resourceName[0], resourceName[1], resourceName[2]);
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/datasets/{dataset}/tables/{table}</c>.
+            /// </summary>
+            ProjectDatasetTable = 1
         }
 
+        private static gax::PathTemplate s_projectDatasetTable = new gax::PathTemplate("projects/{project}/datasets/{dataset}/tables/{table}");
+
+        /// <summary>Creates a <see cref="TableName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TableName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TableName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TableName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new <see cref="TableName"/> instance.
+        /// Creates a <see cref="TableName"/> with the pattern <c>projects/{project}/datasets/{dataset}/tables/{table}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tableId">The <c>Table</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TableName"/> constructed from the provided ids.</returns>
+        public static TableName FromProjectDatasetTable(string projectId, string datasetId, string tableId) =>
+            new TableName(ResourceNameType.ProjectDatasetTable, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), datasetId: gax::GaxPreconditions.CheckNotNullOrEmpty(datasetId, nameof(datasetId)), tableId: gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TableName"/> with pattern
+        /// <c>projects/{project}/datasets/{dataset}/tables/{table}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tableId">The <c>Table</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TableName"/> with pattern
+        /// <c>projects/{project}/datasets/{dataset}/tables/{table}</c>.
+        /// </returns>
+        public static string Format(string projectId, string datasetId, string tableId) =>
+            FormatProjectDatasetTable(projectId, datasetId, tableId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TableName"/> with pattern
+        /// <c>projects/{project}/datasets/{dataset}/tables/{table}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tableId">The <c>Table</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TableName"/> with pattern
+        /// <c>projects/{project}/datasets/{dataset}/tables/{table}</c>.
+        /// </returns>
+        public static string FormatProjectDatasetTable(string projectId, string datasetId, string tableId) =>
+            s_projectDatasetTable.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(datasetId, nameof(datasetId)), gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="TableName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/datasets/{dataset}/tables/{table}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="tableName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TableName"/> if successful.</returns>
+        public static TableName Parse(string tableName) => Parse(tableName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TableName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="tableName"/> is <c>null</c>
-        /// , as this would usually indicate a programming error rather than a data error.
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/datasets/{dataset}/tables/{table}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="tableName">The <c>Table</c> resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="TableName"/>, or <c>null</c> if parsing fails.
+        /// <param name="tableName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
         /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string tableName, out TableName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
-            if (s_template.TryParseName(tableName, out gax::TemplatedResourceName resourceName))
-            {
-                result = new TableName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>Formats the IDs into the string representation of the <see cref="TableName"/>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="tableId">The <c>Table</c> ID. Must not be <c>null</c>.</param>
-        /// <returns>The string representation of the <see cref="TableName"/>.</returns>
-        public static string Format(string projectId, string datasetId, string tableId) =>
-            s_template.Expand(gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)), gax::GaxPreconditions.CheckNotNull(tableId, nameof(tableId)));
+        /// <returns>The parsed <see cref="TableName"/> if successful.</returns>
+        public static TableName Parse(string tableName, bool allowUnparsed) =>
+            TryParse(tableName, allowUnparsed, out TableName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="TableName"/> resource name class from its component parts.
+        /// Tries to parse the given resource name string into a new <see cref="TableName"/> instance.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c>.</param>
-        /// <param name="tableId">The <c>Table</c> ID. Must not be <c>null</c>.</param>
-        public TableName(string projectId, string datasetId, string tableId)
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/datasets/{dataset}/tables/{table}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="tableName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TableName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tableName, out TableName result) => TryParse(tableName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TableName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/datasets/{dataset}/tables/{table}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="tableName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TableName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tableName, bool allowUnparsed, out TableName result)
         {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DatasetId = gax::GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId));
-            TableId = gax::GaxPreconditions.CheckNotNull(tableId, nameof(tableId));
+            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectDatasetTable.TryParseName(tableName, out resourceName))
+            {
+                result = FromProjectDatasetTable(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(tableName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
         }
 
-        /// <summary>The <c>Project</c> ID. Never <c>null</c>.</summary>
-        public string ProjectId { get; }
+        private TableName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string datasetId = null, string projectId = null, string tableId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DatasetId = datasetId;
+            ProjectId = projectId;
+            TableId = tableId;
+        }
 
-        /// <summary>The <c>Dataset</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TableName"/> class from the component parts of pattern
+        /// <c>projects/{project}/datasets/{dataset}/tables/{table}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tableId">The <c>Table</c> ID. Must not be <c>null</c> or empty.</param>
+        public TableName(string projectId, string datasetId, string tableId) : this(ResourceNameType.ProjectDatasetTable, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), datasetId: gax::GaxPreconditions.CheckNotNullOrEmpty(datasetId, nameof(datasetId)), tableId: gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Dataset</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string DatasetId { get; }
 
-        /// <summary>The <c>Table</c> ID. Never <c>null</c>.</summary>
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Table</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
         public string TableId { get; }
 
         /// <inheritdoc/>
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
         /// <inheritdoc/>
-        public override string ToString() => s_template.Expand(ProjectId, DatasetId, TableId);
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectDatasetTable: return s_projectDatasetTable.Expand(ProjectId, DatasetId, TableId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
 
         /// <inheritdoc/>
         public override int GetHashCode() => ToString().GetHashCode();
@@ -124,7 +256,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -136,7 +268,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// </summary>
         public ReadStreamName ReadStreamAsReadStreamName
         {
-            get => string.IsNullOrEmpty(ReadStream) ? null : ReadStreamName.Parse(ReadStream);
+            get => string.IsNullOrEmpty(ReadStream) ? null : ReadStreamName.Parse(ReadStream, allowUnparsed: true);
             set => ReadStream = value?.ToString() ?? "";
         }
     }
@@ -148,7 +280,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// </summary>
         public gcbsv::ReadStreamName ReadStreamName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbsv::ReadStreamName.Parse(Name);
+            get => string.IsNullOrEmpty(Name) ? null : gcbsv::ReadStreamName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
