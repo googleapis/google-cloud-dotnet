@@ -151,7 +151,7 @@ namespace Google.Cloud.PubSub.V1
                 int? clientCount = null,
                 SubscriberServiceApiSettings subscriberServiceApiSettings = null,
                 ChannelCredentials credentials = null,
-                ServiceEndpoint serviceEndpoint = null)
+                string serviceEndpoint = null)
             {
                 ClientCount = clientCount;
                 SubscriberServiceApiSettings = subscriberServiceApiSettings;
@@ -179,10 +179,10 @@ namespace Google.Cloud.PubSub.V1
             public ChannelCredentials Credentials { get; }
 
             /// <summary>
-            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="SubscriberServiceApiClient"/> instances.
+            /// The endpoint to use when creating <see cref="SubscriberServiceApiClient"/> instances.
             /// If <c>null</c>, defaults to <see cref="SubscriberServiceApiClient.DefaultEndpoint"/>.
             /// </summary>
-            public ServiceEndpoint ServiceEndpoint { get; }
+            public string ServiceEndpoint { get; }
 
             internal void Validate()
             {
@@ -263,6 +263,7 @@ namespace Google.Cloud.PubSub.V1
             var shutdowns = new Func<Task>[clientCount];
             for (int i = 0; i < clientCount; i++)
             {
+                // TODO: Use GrpcChannelOptions, and expose a way of setting custom options in the client builder.
                 var channelOptions = new[]
                 {
                     // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
@@ -271,8 +272,12 @@ namespace Google.Cloud.PubSub.V1
                     // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
                     new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
                 };
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
-                clients[i] = SubscriberServiceApiClient.Create(channel, clientCreationSettings?.SubscriberServiceApiSettings);
+                var channel = new Channel(endpoint, channelCredentials, channelOptions);
+                clients[i] = new SubscriberServiceApiClientBuilder
+                {
+                    CallInvoker = channel.CreateCallInvoker(),
+                    Settings = clientCreationSettings?.SubscriberServiceApiSettings
+                }.Build();
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
@@ -872,7 +877,13 @@ namespace Google.Cloud.PubSub.V1
             private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
             private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
 
-            private readonly static BackoffSettings s_pullBackoff = new BackoffSettings(TimeSpan.FromSeconds(0.5), TimeSpan.FromSeconds(30), 2.0);
+            private readonly static RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(0.5),
+                maxBackoff: TimeSpan.FromSeconds(30),
+                backoffMultiplier: 2.0,
+                retryFilter: _ => false // Ignored
+                );
             private TimeSpan? _pullBackoff = null;
 
             // Stream shutdown occurs after 1 minute, so ensure we're always before that.
@@ -994,7 +1005,7 @@ namespace Google.Cloud.PubSub.V1
                         StopStreamingPull();
                         // Increase backoff internal and start stream again.
                         // If stream-pull fails repeatly, increase the delay, up to a maximum of 30 seconds.
-                        _pullBackoff = s_pullBackoff.NextDelay(_pullBackoff ?? TimeSpan.Zero);
+                        _pullBackoff = s_pullBackoff.NextBackoff(_pullBackoff ?? TimeSpan.Zero);
                         StartStreamingPull();
                         return true;
                     }
