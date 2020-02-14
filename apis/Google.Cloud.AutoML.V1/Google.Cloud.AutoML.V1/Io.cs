@@ -54,15 +54,15 @@ namespace Google.Cloud.AutoML.V1 {
             "Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.InputConfig), global::Google.Cloud.AutoML.V1.InputConfig.Parser, new[]{ "GcsSource", "Params" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictInputConfig), global::Google.Cloud.AutoML.V1.BatchPredictInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentInputConfig), global::Google.Cloud.AutoML.V1.DocumentInputConfig.Parser, new[]{ "GcsSource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OutputConfig), global::Google.Cloud.AutoML.V1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig), global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ModelExportOutputConfig), global::Google.Cloud.AutoML.V1.ModelExportOutputConfig.Parser, new[]{ "GcsDestination", "ModelFormat", "Params" }, new[]{ "Destination" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GcsSource), global::Google.Cloud.AutoML.V1.GcsSource.Parser, new[]{ "InputUris" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GcsDestination), global::Google.Cloud.AutoML.V1.GcsDestination.Parser, new[]{ "OutputUriPrefix" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.InputConfig), global::Google.Cloud.AutoML.V1.InputConfig.Parser, new[]{ "GcsSource", "Params" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictInputConfig), global::Google.Cloud.AutoML.V1.BatchPredictInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentInputConfig), global::Google.Cloud.AutoML.V1.DocumentInputConfig.Parser, new[]{ "GcsSource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OutputConfig), global::Google.Cloud.AutoML.V1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig), global::Google.Cloud.AutoML.V1.BatchPredictOutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ModelExportOutputConfig), global::Google.Cloud.AutoML.V1.ModelExportOutputConfig.Parser, new[]{ "GcsDestination", "ModelFormat", "Params" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GcsSource), global::Google.Cloud.AutoML.V1.GcsSource.Parser, new[]{ "InputUris" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GcsDestination), global::Google.Cloud.AutoML.V1.GcsDestination.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null)
           }));
     }
     #endregion
@@ -561,7 +561,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "params" field.</summary>
     public const int ParamsFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_params_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> params_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Additional domain-specific parameters describing the semantic of the
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "params" field.</summary>
     public const int ParamsFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_params_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> params_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Additional model-type and format specific parameters describing the

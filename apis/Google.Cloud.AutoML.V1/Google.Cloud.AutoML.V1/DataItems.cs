@@ -66,12 +66,12 @@ namespace Google.Cloud.AutoML.V1 {
             "OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Image), global::Google.Cloud.AutoML.V1.Image.Parser, new[]{ "ImageBytes", "ThumbnailUri" }, new[]{ "Data" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSnippet), global::Google.Cloud.AutoML.V1.TextSnippet.Parser, new[]{ "Content", "MimeType", "ContentUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions), global::Google.Cloud.AutoML.V1.DocumentDimensions.Parser, new[]{ "Unit", "Width", "Height" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document), global::Google.Cloud.AutoML.V1.Document.Parser, new[]{ "InputConfig", "DocumentText", "Layout", "DocumentDimensions", "PageCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout), global::Google.Cloud.AutoML.V1.Document.Types.Layout.Parser, new[]{ "TextSegment", "PageNumber", "BoundingPoly", "TextSegmentType" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType) }, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExamplePayload), global::Google.Cloud.AutoML.V1.ExamplePayload.Parser, new[]{ "Image", "TextSnippet", "Document" }, new[]{ "Payload" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Image), global::Google.Cloud.AutoML.V1.Image.Parser, new[]{ "ImageBytes", "ThumbnailUri" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSnippet), global::Google.Cloud.AutoML.V1.TextSnippet.Parser, new[]{ "Content", "MimeType", "ContentUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions), global::Google.Cloud.AutoML.V1.DocumentDimensions.Parser, new[]{ "Unit", "Width", "Height" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document), global::Google.Cloud.AutoML.V1.Document.Parser, new[]{ "InputConfig", "DocumentText", "Layout", "DocumentDimensions", "PageCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout), global::Google.Cloud.AutoML.V1.Document.Types.Layout.Parser, new[]{ "TextSegment", "PageNumber", "BoundingPoly", "TextSegmentType" }, null, new[]{ typeof(global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ExamplePayload), global::Google.Cloud.AutoML.V1.ExamplePayload.Parser, new[]{ "Image", "TextSnippet", "Document" }, new[]{ "Payload" }, null, null, null)
           }));
     }
     #endregion
@@ -518,7 +518,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     /// <summary>Field number for the "unit" field.</summary>
     public const int UnitFieldNumber = 1;
-    private global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit unit_ = 0;
+    private global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit unit_ = global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit.Unspecified;
     /// <summary>
     /// Unit of the dimension.
     /// </summary>
@@ -580,7 +580,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Unit != 0) hash ^= Unit.GetHashCode();
+      if (Unit != global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit.Unspecified) hash ^= Unit.GetHashCode();
       if (Width != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Width);
       if (Height != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Height);
       if (_unknownFields != null) {
@@ -596,7 +596,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Unit != 0) {
+      if (Unit != global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Unit);
       }
@@ -616,7 +616,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Unit != 0) {
+      if (Unit != global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
       }
       if (Width != 0F) {
@@ -636,7 +636,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      if (other.Unit != 0) {
+      if (other.Unit != global::Google.Cloud.AutoML.V1.DocumentDimensions.Types.DocumentDimensionUnit.Unspecified) {
         Unit = other.Unit;
       }
       if (other.Width != 0F) {
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.AutoML.V1 {
 
         /// <summary>Field number for the "text_segment_type" field.</summary>
         public const int TextSegmentTypeFieldNumber = 4;
-        private global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType textSegmentType_ = 0;
+        private global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType textSegmentType_ = global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType.Unspecified;
         /// <summary>
         /// The type of the
         /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
@@ -1113,7 +1113,7 @@ namespace Google.Cloud.AutoML.V1 {
           if (textSegment_ != null) hash ^= TextSegment.GetHashCode();
           if (PageNumber != 0) hash ^= PageNumber.GetHashCode();
           if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
-          if (TextSegmentType != 0) hash ^= TextSegmentType.GetHashCode();
+          if (TextSegmentType != global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType.Unspecified) hash ^= TextSegmentType.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.AutoML.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(BoundingPoly);
           }
-          if (TextSegmentType != 0) {
+          if (TextSegmentType != global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType.Unspecified) {
             output.WriteRawTag(32);
             output.WriteEnum((int) TextSegmentType);
           }
@@ -1160,7 +1160,7 @@ namespace Google.Cloud.AutoML.V1 {
           if (boundingPoly_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingPoly);
           }
-          if (TextSegmentType != 0) {
+          if (TextSegmentType != global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TextSegmentType);
           }
           if (_unknownFields != null) {
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.AutoML.V1 {
             }
             BoundingPoly.MergeFrom(other.BoundingPoly);
           }
-          if (other.TextSegmentType != 0) {
+          if (other.TextSegmentType != global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType.Unspecified) {
             TextSegmentType = other.TextSegmentType;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
