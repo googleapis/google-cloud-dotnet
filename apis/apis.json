@@ -80,12 +80,12 @@
     "protoPath": "google/cloud/bigquery/storage/v1",
     "productName": "Google BigQuery Storage",
     "productUrl": "https://cloud.google.com/bigquery/docs/reference/storage/",
-    "version": "1.0.0-beta01",
+    "version": "2.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the BigQuery Storage API.",
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Grpc.Core": "1.22.1"
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-alpha00",
+      "Grpc.Core": "2.27.0"
     },
     "tags": [
       "BigQuery"
@@ -661,7 +661,7 @@
     "protoPath": "google/cloud/managedidentities/v1",
     "productName": "Managed Service for Microsoft Active Directory",
     "productUrl": "https://cloud.google.com/managed-microsoft-ad/",
-    "version": "1.0.0-beta01",
+    "version": "2.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Managed Identities API.",
     "tags": [
@@ -670,9 +670,9 @@
       "Active Directory"
     ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "1.22.1"
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-alpha00",
+      "Google.LongRunning": "project",
+      "Grpc.Core": "2.27.0"
     }
   },
   {
@@ -712,9 +712,9 @@
     "id": "Google.Cloud.OrgPolicy.V1",
     "generator": "proto",
     "protoPath": "google/cloud/orgpolicy/v1",
-    "version": "2.0.0-beta01",
+    "version": "2.0.0-alpha00",
     "type": "other",
-    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
+    "targetFrameworks": "netstandard2.0;net461",
     "description": "OrgPolicy API messages.",
     "tags": [],
     "dependencies": {
@@ -941,14 +941,14 @@
     "protoPath": "google/cloud/securitycenter/v1p1beta1",
     "productName": "Google Cloud Security Command Center",
     "productUrl": "https://cloud.google.com/security-command-center/",
-    "version": "1.0.0-beta01",
+    "version": "2.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Security Command Center API version v1p1beta1, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.10.0",
-      "Google.Cloud.Iam.V1": "1.3.0",
-      "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "1.22.1"
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-alpha00",
+      "Google.Cloud.Iam.V1": "project",
+      "Google.LongRunning": "project",
+      "Grpc.Core": "2.27.0"
     },
     "tags": [
       "security",
