@@ -67,8 +67,8 @@ namespace Google.Cloud.Logging.NLog.Tests
             {
                 var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
                 fakeClient.Setup(x => x.WriteLogEntriesAsync(
-                    It.IsAny<LogNameOneof>(), It.IsAny<MonitoredResource>(), It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
-                    .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
+                    It.IsAny<LogName>(), It.IsAny<MonitoredResource>(), It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
+                    .Returns<LogName, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
                 var googleTarget = new GoogleStackdriverTarget(fakeClient.Object, platform)
                 {
                     ProjectId = s_projectId,
