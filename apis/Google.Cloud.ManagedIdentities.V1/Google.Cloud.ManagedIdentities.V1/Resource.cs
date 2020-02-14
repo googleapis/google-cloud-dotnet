@@ -72,9 +72,9 @@ namespace Google.Cloud.ManagedIdentities.V1 {
             "b2dsZS5DbG91ZC5NYW5hZ2VkSWRlbnRpdGllcy5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedIdentities.V1.Domain), global::Google.Cloud.ManagedIdentities.V1.Domain.Parser, new[]{ "Name", "Labels", "AuthorizedNetworks", "ReservedIpRange", "Locations", "Admin", "Fqdn", "CreateTime", "UpdateTime", "State", "StatusMessage", "Trusts" }, null, new[]{ typeof(global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedIdentities.V1.Trust), global::Google.Cloud.ManagedIdentities.V1.Trust.Parser, new[]{ "TargetDomainName", "TrustType", "TrustDirection", "SelectiveAuthentication", "TargetDnsIpAddresses", "TrustHandshakeSecret", "CreateTime", "UpdateTime", "State", "StateDescription", "LastTrustHeartbeatTime" }, null, new[]{ typeof(global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State), typeof(global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType), typeof(global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedIdentities.V1.Domain), global::Google.Cloud.ManagedIdentities.V1.Domain.Parser, new[]{ "Name", "Labels", "AuthorizedNetworks", "ReservedIpRange", "Locations", "Admin", "Fqdn", "CreateTime", "UpdateTime", "State", "StatusMessage", "Trusts" }, null, new[]{ typeof(global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedIdentities.V1.Trust), global::Google.Cloud.ManagedIdentities.V1.Trust.Parser, new[]{ "TargetDomainName", "TrustType", "TrustDirection", "SelectiveAuthentication", "TargetDnsIpAddresses", "TrustHandshakeSecret", "CreateTime", "UpdateTime", "State", "StateDescription", "LastTrustHeartbeatTime" }, null, new[]{ typeof(global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State), typeof(global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType), typeof(global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection) }, null, null)
           }));
     }
     #endregion
@@ -147,7 +147,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Resource labels that can contain user-provided metadata.
@@ -269,7 +269,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 13;
-    private global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State state_ = 0;
+    private global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State state_ = global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State.Unspecified;
     /// <summary>
     /// Output only. The current state of this domain.
     /// </summary>
@@ -349,7 +349,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (Fqdn.Length != 0) hash ^= Fqdn.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
       hash ^= trusts_.GetHashCode();
       if (_unknownFields != null) {
@@ -392,7 +392,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(UpdateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State.Unspecified) {
         output.WriteRawTag(104);
         output.WriteEnum((int) State);
       }
@@ -430,7 +430,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (StatusMessage.Length != 0) {
@@ -475,7 +475,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.StatusMessage.Length != 0) {
@@ -664,7 +664,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     /// <summary>Field number for the "trust_type" field.</summary>
     public const int TrustTypeFieldNumber = 2;
-    private global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType trustType_ = 0;
+    private global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType trustType_ = global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType.Unspecified;
     /// <summary>
     /// Required. The type of trust represented by the trust resource.
     /// </summary>
@@ -678,7 +678,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     /// <summary>Field number for the "trust_direction" field.</summary>
     public const int TrustDirectionFieldNumber = 3;
-    private global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection trustDirection_ = 0;
+    private global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection trustDirection_ = global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection.Unspecified;
     /// <summary>
     /// Required. The trust direction, which decides if the current domain is trusted,
     /// trusting, or both.
@@ -766,7 +766,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 9;
-    private global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State state_ = 0;
+    private global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State state_ = global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State.Unspecified;
     /// <summary>
     /// Output only. The current state of the trust.
     /// </summary>
@@ -837,14 +837,14 @@ namespace Google.Cloud.ManagedIdentities.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (TargetDomainName.Length != 0) hash ^= TargetDomainName.GetHashCode();
-      if (TrustType != 0) hash ^= TrustType.GetHashCode();
-      if (TrustDirection != 0) hash ^= TrustDirection.GetHashCode();
+      if (TrustType != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType.Unspecified) hash ^= TrustType.GetHashCode();
+      if (TrustDirection != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection.Unspecified) hash ^= TrustDirection.GetHashCode();
       if (SelectiveAuthentication != false) hash ^= SelectiveAuthentication.GetHashCode();
       hash ^= targetDnsIpAddresses_.GetHashCode();
       if (TrustHandshakeSecret.Length != 0) hash ^= TrustHandshakeSecret.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StateDescription.Length != 0) hash ^= StateDescription.GetHashCode();
       if (lastTrustHeartbeatTime_ != null) hash ^= LastTrustHeartbeatTime.GetHashCode();
       if (_unknownFields != null) {
@@ -864,11 +864,11 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         output.WriteRawTag(10);
         output.WriteString(TargetDomainName);
       }
-      if (TrustType != 0) {
+      if (TrustType != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) TrustType);
       }
-      if (TrustDirection != 0) {
+      if (TrustDirection != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) TrustDirection);
       }
@@ -889,7 +889,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(UpdateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State.Unspecified) {
         output.WriteRawTag(72);
         output.WriteEnum((int) State);
       }
@@ -912,10 +912,10 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (TargetDomainName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetDomainName);
       }
-      if (TrustType != 0) {
+      if (TrustType != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TrustType);
       }
-      if (TrustDirection != 0) {
+      if (TrustDirection != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TrustDirection);
       }
       if (SelectiveAuthentication != false) {
@@ -931,7 +931,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (State != 0) {
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (StateDescription.Length != 0) {
@@ -954,10 +954,10 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (other.TargetDomainName.Length != 0) {
         TargetDomainName = other.TargetDomainName;
       }
-      if (other.TrustType != 0) {
+      if (other.TrustType != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType.Unspecified) {
         TrustType = other.TrustType;
       }
-      if (other.TrustDirection != 0) {
+      if (other.TrustDirection != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection.Unspecified) {
         TrustDirection = other.TrustDirection;
       }
       if (other.SelectiveAuthentication != false) {
@@ -979,7 +979,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.State != 0) {
+      if (other.State != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.StateDescription.Length != 0) {

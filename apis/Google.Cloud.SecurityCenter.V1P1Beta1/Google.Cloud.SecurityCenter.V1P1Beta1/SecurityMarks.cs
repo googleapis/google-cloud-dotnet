@@ -44,8 +44,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks), global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks.Parser, new[]{ "Name", "Marks" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks), global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks.Parser, new[]{ "Name", "Marks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -114,7 +114,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// <summary>Field number for the "marks" field.</summary>
     public const int MarksFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_marks_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> marks_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Mutable user specified security marks belonging to the parent resource.
