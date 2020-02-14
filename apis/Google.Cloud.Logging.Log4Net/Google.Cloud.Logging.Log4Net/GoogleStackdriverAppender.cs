@@ -208,15 +208,15 @@ namespace Google.Cloud.Logging.Log4Net
                 // This is acceptable as most patterns will be irrelevant in this context.
                 Labels = { _customLabels.ToDictionary(x => x.Key, x => x.Value) },
             };
-            var serverErrorBackoffSettings = new BackoffSettings(
-                delay: TimeSpan.FromSeconds(ServerErrorBackoffDelaySeconds),
-                delayMultiplier: ServerErrorBackoffMultiplier,
-                maxDelay: TimeSpan.FromSeconds(ServerErrorBackoffMaxDelaySeconds)
-            );
+            var serverErrorRetrySettings = RetrySettings.FromExponentialBackoff(maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(ServerErrorBackoffDelaySeconds),
+                maxBackoff: TimeSpan.FromSeconds(ServerErrorBackoffMaxDelaySeconds),
+                backoffMultiplier: ServerErrorBackoffMultiplier,
+                retryFilter: _ => true); // Ignored                
             _logUploader = new LogUploader(
                 _client, _scheduler, _clock,
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
-                serverErrorBackoffSettings);
+                serverErrorRetrySettings);
             if (_usePatternWithinCustomLabels)
             {
                 // Initialize a pattern layout for each custom label.
@@ -225,22 +225,11 @@ namespace Google.Cloud.Logging.Log4Net
             _isActivated = true;
         }
 
-        private LoggingServiceV2Client BuildLoggingServiceClient()
-        {
-            GoogleCredential credential = GetCredentialFromConfiguration();
-            if(credential == null)
-            {
-                return LoggingServiceV2Client.Create();
-            }
-
-            Grpc.Core.Channel channel = new Grpc.Core.Channel(
-                LoggingServiceV2Client.DefaultEndpoint.Host, 
-                LoggingServiceV2Client.DefaultEndpoint.Port, 
-                credential.ToChannelCredential()
-            );
-
-            return LoggingServiceV2Client.Create(channel);
-        }
+        private LoggingServiceV2Client BuildLoggingServiceClient() =>
+            new LoggingServiceV2ClientBuilder
+            { 
+                ChannelCredentials = GetCredentialFromConfiguration()?.ToChannelCredential()
+            }.Build();
 
         private GoogleCredential GetCredentialFromConfiguration()
         {

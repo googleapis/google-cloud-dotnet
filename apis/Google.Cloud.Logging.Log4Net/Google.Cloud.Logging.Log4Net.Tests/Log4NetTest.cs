@@ -105,8 +105,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
                 fakeClient.Setup(x => x.WriteLogEntriesAsync(
-                    (LogNameOneof) null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
-                    .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
+                    (LogName) null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
+                    .Returns<LogName, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
                 var appender = new GoogleStackdriverAppender(fakeClient.Object,
                     scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock(), platform)
                 {

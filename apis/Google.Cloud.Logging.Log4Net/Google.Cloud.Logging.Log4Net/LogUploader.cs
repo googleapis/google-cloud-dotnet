@@ -30,8 +30,8 @@ namespace Google.Cloud.Logging.Log4Net
     /// LogUploader waits for log entries to be available in the queue, then retrieves a batch of log entries
     /// from the queue and attempts to upload them to Google Logging. When it is confirmed that these entries
     /// have been uploaded successfully, the entries are removed from the queue.
-    /// If Google Logging is unavailable for any reason, upload is retried indefinitely will exponential
-    /// backoff up to a configured maxmimum.
+    /// If Google Logging is unavailable for any reason, upload is retried indefinitely with exponential
+    /// backoff up to a configured maximum.
     /// </remarks>
     internal sealed class LogUploader
     {
@@ -44,7 +44,7 @@ namespace Google.Cloud.Logging.Log4Net
             ILogQueue logQ,
             LogEntry logsLostWarningTemplate,
             int maxUploadBatchSize,
-            BackoffSettings serverErrorBackoffSettings)
+            RetrySettings serverErrorRetrySettings)
         {
             _client = client;
             _scheduler = scheduler;
@@ -52,7 +52,7 @@ namespace Google.Cloud.Logging.Log4Net
             _logQ = logQ;
             _logsLostWarningTemplate = logsLostWarningTemplate;
             _maxUploadBatchSize = maxUploadBatchSize;
-            _serverErrorBackoffSettings = serverErrorBackoffSettings;
+            _serverErrorRetrySettings = serverErrorRetrySettings;
             _uploaderTaskCancellation = new CancellationTokenSource();
             _uploaderTask = Task.Run(() => RunUploader(_uploaderTaskCancellation.Token));
         }
@@ -64,7 +64,7 @@ namespace Google.Cloud.Logging.Log4Net
         private readonly ILogQueue _logQ;
         private readonly LogEntry _logsLostWarningTemplate;
         private readonly int _maxUploadBatchSize;
-        private readonly BackoffSettings _serverErrorBackoffSettings;
+        private readonly RetrySettings _serverErrorRetrySettings;
 
         private readonly Task _uploaderTask;
         private readonly CancellationTokenSource _uploaderTaskCancellation;
@@ -96,7 +96,7 @@ namespace Google.Cloud.Logging.Log4Net
         // context, but it's simple and harmless to make it "obviously okay".
         private async Task RunUploader(CancellationToken cancellationToken)
         {
-            TimeSpan errorDelay = _serverErrorBackoffSettings.Delay;
+            TimeSpan errorDelay = _serverErrorRetrySettings.InitialBackoff;
             while (true)
             {
                 List<LogEntryExtra> entries;
@@ -121,24 +121,21 @@ namespace Google.Cloud.Logging.Log4Net
                 // Upload entries to the Cloud Logging server
                 try
                 {
-                    await _client.WriteLogEntriesAsync((LogNameOneof) null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken).ConfigureAwait(false);
+                    await _client.WriteLogEntriesAsync((LogName) null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken).ConfigureAwait(false);
                     await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken).ConfigureAwait(false);
                     lock (_lock)
                     {
                         _maxConfirmedSentId = entries.Last().Id;
                     }
                     _uploadCompleteEvent.Set();
-                    errorDelay = _serverErrorBackoffSettings.Delay;
+                    errorDelay = _serverErrorRetrySettings.InitialBackoff;
                 }
                 catch (Exception e)
                 {
                     // Always retry, regardless of error, as there's nothing much else to be done.
                     await _scheduler.Delay(errorDelay, cancellationToken).ConfigureAwait(false);
-                    errorDelay = new TimeSpan((long)(errorDelay.Ticks * _serverErrorBackoffSettings.DelayMultiplier));
-                    if (errorDelay > _serverErrorBackoffSettings.MaxDelay)
-                    {
-                        errorDelay = _serverErrorBackoffSettings.MaxDelay;
-                    }
+                    // TODO: Try to use RetryAttempt for this.
+                    errorDelay = _serverErrorRetrySettings.NextBackoff(errorDelay);
                     // Use log4net internal logging to warn user of upload error.
                     // Internal logging can be enabled as described in the "Troubleshooting" section of the log4net FAQ.
                     log4net.Util.LogLog.Warn(typeof(LogUploader), "Error uploading log messages to server.", e);
