@@ -30,7 +30,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateSubscriptionRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -79,7 +79,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateSubscriptionRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -130,7 +130,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateSubscription()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -167,7 +167,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateSubscriptionAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -206,7 +206,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateSubscriptionResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -243,7 +243,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateSubscriptionResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -282,7 +282,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetSubscriptionRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -316,7 +316,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetSubscriptionRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -352,7 +352,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetSubscription()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -386,7 +386,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetSubscriptionAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -422,7 +422,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetSubscriptionResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -456,7 +456,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetSubscriptionResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -492,7 +492,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void UpdateSubscriptionRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
                 Subscription = new Subscription(),
@@ -527,7 +527,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task UpdateSubscriptionRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
                 Subscription = new Subscription(),
@@ -564,7 +564,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteSubscriptionRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -579,7 +579,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteSubscriptionRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -595,7 +595,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteSubscription()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -610,7 +610,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteSubscriptionAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -626,7 +626,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteSubscriptionResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -641,7 +641,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteSubscriptionResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -657,7 +657,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void ModifyAckDeadlineRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -674,7 +674,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ModifyAckDeadlineRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -692,7 +692,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void ModifyAckDeadline()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -709,7 +709,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ModifyAckDeadlineAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -727,7 +727,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void ModifyAckDeadlineResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -744,7 +744,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ModifyAckDeadlineResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -762,7 +762,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void AcknowledgeRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -778,7 +778,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task AcknowledgeRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -795,7 +795,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void Acknowledge()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -811,7 +811,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task AcknowledgeAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -828,7 +828,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void AcknowledgeResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -844,7 +844,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task AcknowledgeResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -861,7 +861,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void PullRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -885,7 +885,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task PullRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -911,7 +911,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void Pull()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -935,7 +935,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task PullAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -961,7 +961,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void PullResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -985,7 +985,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task PullResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void ModifyPushConfigRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ModifyPushConfigRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1044,7 +1044,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void ModifyPushConfig()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1060,7 +1060,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ModifyPushConfigAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void ModifyPushConfigResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ModifyPushConfigResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1110,7 +1110,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void GetSnapshotRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1138,7 +1138,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetSnapshotRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateSnapshotRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1204,7 +1204,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateSnapshotRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateSnapshot()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateSnapshotAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1302,7 +1302,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void CreateSnapshotResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1331,7 +1331,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task CreateSnapshotResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1362,7 +1362,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void UpdateSnapshotRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
                 Snapshot = new Snapshot(),
@@ -1391,7 +1391,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task UpdateSnapshotRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
                 Snapshot = new Snapshot(),
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteSnapshotRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1437,7 +1437,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteSnapshotRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1453,7 +1453,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteSnapshot()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1468,7 +1468,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteSnapshotAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1484,7 +1484,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void DeleteSnapshotResourceNames()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1499,7 +1499,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteSnapshotResourceNamesAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public void SeekRequestObject()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             SeekRequest request = new SeekRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1533,7 +1533,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task SeekRequestObjectAsync()
         {
-            moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient> mockGrpcClient = new moq::Mock<SubscriberServiceApi.SubscriberServiceApiClient>(moq::MockBehavior.Strict);
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             SeekRequest request = new SeekRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
