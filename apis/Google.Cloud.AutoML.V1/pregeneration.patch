@@ -1,0 +1,114 @@
+--- a/googleapis/google/cloud/automl/v1/prediction_service.proto
++++ b/googleapis/google/cloud/automl/v1/prediction_service.proto
+@@ -82,6 +82,10 @@ service PredictionService {
+       post: "/v1/{name=projects/*/locations/*/models/*}:batchPredict"
+       body: "*"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "BatchPredictResult"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ }
+ 
+--- a/googleapis/google/cloud/automl/v1/service.proto
++++ b/googleapis/google/cloud/automl/v1/service.proto
+@@ -65,6 +65,10 @@ service AutoMl {
+       post: "/v1/{parent=projects/*/locations/*}/datasets"
+       body: "dataset"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "Dataset"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Gets a dataset.
+@@ -99,6 +103,10 @@ service AutoMl {
+     option (google.api.http) = {
+       delete: "/v1/{name=projects/*/locations/*/datasets/*}"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Imports data into a dataset.
+@@ -107,6 +115,10 @@ service AutoMl {
+       post: "/v1/{name=projects/*/locations/*/datasets/*}:importData"
+       body: "*"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Exports dataset's data to the provided output location.
+@@ -117,6 +129,10 @@ service AutoMl {
+       post: "/v1/{name=projects/*/locations/*/datasets/*}:exportData"
+       body: "*"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Gets an annotation spec.
+@@ -137,6 +153,10 @@ service AutoMl {
+       post: "/v1/{parent=projects/*/locations/*}/models"
+       body: "model"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "Model"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Gets a model.
+@@ -162,6 +182,10 @@ service AutoMl {
+     option (google.api.http) = {
+       delete: "/v1/{name=projects/*/locations/*/models/*}"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Updates a model.
+@@ -189,6 +213,10 @@ service AutoMl {
+       post: "/v1/{name=projects/*/locations/*/models/*}:deploy"
+       body: "*"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Undeploys a model. If the model is not deployed this method has no effect.
+@@ -204,6 +232,10 @@ service AutoMl {
+       post: "/v1/{name=projects/*/locations/*/models/*}:undeploy"
+       body: "*"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Exports a trained, "export-able", model to a user specified Google Cloud
+@@ -218,6 +250,10 @@ service AutoMl {
+       post: "/v1/{name=projects/*/locations/*/models/*}:export"
+       body: "*"
+     };
++    option (google.longrunning.operation_info) = {
++      response_type: "google.protobuf.Empty"
++      metadata_type: "OperationMetadata"
++    };
+   }
+ 
+   // Gets a model evaluation.
