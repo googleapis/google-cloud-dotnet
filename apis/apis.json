@@ -22,9 +22,8 @@
   },
   {
     "id": "Google.Cloud.AutoML.V1",
-    "generator": "gapic",
+    "generator": "micro",
     "protoPath": "google/cloud/automl/v1",
-    "serviceYaml": "automl_v1.yaml",
     "productName": "Google AutoML",
     "productUrl": "https://cloud.google.com/automl/",
     "version": "2.0.0-alpha00",
