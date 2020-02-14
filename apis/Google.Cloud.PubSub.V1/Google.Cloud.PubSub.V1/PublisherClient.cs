@@ -108,12 +108,12 @@ namespace Google.Cloud.PubSub.V1
             /// <param name="publisherServiceApiSettings">Optional. The settings to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
             /// <param name="credentials">Optional. Credentials to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
             /// <param name="serviceEndpoint">Optional.
-            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
+            /// The endpoint to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
             public ClientCreationSettings(
                 int? clientCount = null,
                 PublisherServiceApiSettings publisherServiceApiSettings = null,
                 ChannelCredentials credentials = null,
-                ServiceEndpoint serviceEndpoint = null)
+                string serviceEndpoint = null)
             {
                 ClientCount = clientCount;
                 PublisherServiceApiSettings = publisherServiceApiSettings;
@@ -140,10 +140,10 @@ namespace Google.Cloud.PubSub.V1
             public ChannelCredentials Credentials { get; }
 
             /// <summary>
-            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherServiceApiClient"/> instances.
+            /// The endpoint to use when creating <see cref="PublisherServiceApiClient"/> instances.
             /// If <c>null</c>, defaults to <see cref="PublisherServiceApiClient.DefaultEndpoint"/>.
             /// </summary>
-            public ServiceEndpoint ServiceEndpoint { get; }
+            public string ServiceEndpoint { get; }
 
             internal void Validate()
             {
@@ -174,7 +174,7 @@ namespace Google.Cloud.PubSub.V1
         /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
         /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
         /// settings may need changing; especially
-        /// <see cref="ClientCreationSettings.PublisherServiceApiSettings"/>.<see cref="PublisherServiceApiSettings.PublishSettings"/>.<see cref="CallSettings.Timing"/>.<see cref="CallTiming.Retry"/>.<see cref="RetrySettings.TimeoutBackoff"/>.
+        /// <see cref="ClientCreationSettings.PublisherServiceApiSettings"/>.<see cref="PublisherServiceApiSettings.PublishSettings"/>.<see cref="CallSettings.Retry"/>.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
@@ -212,8 +212,12 @@ namespace Google.Cloud.PubSub.V1
                     // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
                     new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
                 };
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
-                clients[i] = PublisherServiceApiClient.Create(channel, clientCreationSettings?.PublisherServiceApiSettings);
+                var channel = new Channel(endpoint, channelCredentials, channelOptions);
+                clients[i] = new PublisherServiceApiClientBuilder
+                {
+                    CallInvoker = channel.CreateCallInvoker(),
+                    Settings = clientCreationSettings?.PublisherServiceApiSettings
+                }.Build();
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
