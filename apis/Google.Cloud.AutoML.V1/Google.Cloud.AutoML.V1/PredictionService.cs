@@ -52,28 +52,29 @@ namespace Google.Cloud.AutoML.V1 {
             "IAEoCToCOAEikQEKEkJhdGNoUHJlZGljdFJlc3VsdBJKCghtZXRhZGF0YRgB",
             "IAMoCzI4Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQmF0Y2hQcmVkaWN0UmVz",
             "dWx0Lk1ldGFkYXRhRW50cnkaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBMpsDChFQcmVkaWN0aW9uU2VydmljZRKZ",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBMsUDChFQcmVkaWN0aW9uU2VydmljZRKZ",
             "AQoHUHJlZGljdBImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJl",
             "cXVlc3QaJy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlByZWRpY3RSZXNwb25z",
             "ZSI9gtPkkwI3IjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9t",
-            "b2RlbHMvKn06cHJlZGljdDoBKhKeAQoMQmF0Y2hQcmVkaWN0EisuZ29vZ2xl",
+            "b2RlbHMvKn06cHJlZGljdDoBKhLIAQoMQmF0Y2hQcmVkaWN0EisuZ29vZ2xl",
             "LmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJCgtPkkwI8IjcvdjEve25hbWU9cHJv",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJsgtPkkwI8IjcvdjEve25hbWU9cHJv",
             "amVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06YmF0Y2hQcmVkaWN0OgEq",
-            "GknKQRVhdXRvbWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBChpjb20uZ29vZ2xl",
-            "LmNsb3VkLmF1dG9tbC52MUIWUHJlZGljdGlvblNlcnZpY2VQcm90b1ABWjxn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1",
-            "dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29v",
-            "Z2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6",
-            "VjFiBnByb3RvMw=="));
+            "ykEnChJCYXRjaFByZWRpY3RSZXN1bHQSEU9wZXJhdGlvbk1ldGFkYXRhGknK",
+            "QRVhdXRvbWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBChpjb20uZ29vZ2xlLmNs",
+            "b3VkLmF1dG9tbC52MUIWUHJlZGljdGlvblNlcnZpY2VQcm90b1ABWjxnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9t",
+            "bC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xl",
+            "XENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictRequest), global::Google.Cloud.AutoML.V1.PredictRequest.Parser, new[]{ "Name", "Payload", "Params" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictResponse), global::Google.Cloud.AutoML.V1.PredictResponse.Parser, new[]{ "Payload", "PreprocessedInput", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictRequest), global::Google.Cloud.AutoML.V1.BatchPredictRequest.Parser, new[]{ "Name", "InputConfig", "OutputConfig", "Params" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictResult), global::Google.Cloud.AutoML.V1.BatchPredictResult.Parser, new[]{ "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictRequest), global::Google.Cloud.AutoML.V1.PredictRequest.Parser, new[]{ "Name", "Payload", "Params" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictResponse), global::Google.Cloud.AutoML.V1.PredictResponse.Parser, new[]{ "Payload", "PreprocessedInput", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictRequest), global::Google.Cloud.AutoML.V1.BatchPredictRequest.Parser, new[]{ "Name", "InputConfig", "OutputConfig", "Params" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictResult), global::Google.Cloud.AutoML.V1.BatchPredictResult.Parser, new[]{ "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -152,7 +153,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "params" field.</summary>
     public const int ParamsFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_params_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> params_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Additional domain-specific parameters, any string must be up to 25000
@@ -375,7 +376,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "metadata" field.</summary>
     public const int MetadataFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_metadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Additional domain-specific prediction response metadata.
@@ -594,7 +595,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "params" field.</summary>
     public const int ParamsFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_params_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> params_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Additional domain-specific parameters for the predictions, any string must
@@ -806,7 +807,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "metadata" field.</summary>
     public const int MetadataFieldNumber = 1;
     private static readonly pbc::MapField<string, string>.Codec _map_metadata_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 10);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Additional domain-specific prediction response metadata.

@@ -54,8 +54,8 @@ namespace Google.Cloud.AutoML.V1 {
             "bFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Cloud.AutoML.V1.DetectionReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextExtractionReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSentimentReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ModelEvaluation), global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser, new[]{ "ClassificationEvaluationMetrics", "TranslationEvaluationMetrics", "ImageObjectDetectionEvaluationMetrics", "TextSentimentEvaluationMetrics", "TextExtractionEvaluationMetrics", "Name", "AnnotationSpecId", "DisplayName", "CreateTime", "EvaluatedExampleCount" }, new[]{ "Metrics" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ModelEvaluation), global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser, new[]{ "ClassificationEvaluationMetrics", "TranslationEvaluationMetrics", "ImageObjectDetectionEvaluationMetrics", "TextSentimentEvaluationMetrics", "TextExtractionEvaluationMetrics", "Name", "AnnotationSpecId", "DisplayName", "CreateTime", "EvaluatedExampleCount" }, new[]{ "Metrics" }, null, null, null)
           }));
     }
     #endregion

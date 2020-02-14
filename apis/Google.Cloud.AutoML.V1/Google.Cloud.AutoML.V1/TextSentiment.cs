@@ -42,9 +42,9 @@ namespace Google.Cloud.AutoML.V1 {
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentAnnotation), global::Google.Cloud.AutoML.V1.TextSentimentAnnotation.Parser, new[]{ "Sentiment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics), global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics.Parser, new[]{ "Precision", "Recall", "F1Score", "MeanAbsoluteError", "MeanSquaredError", "LinearKappa", "QuadraticKappa", "ConfusionMatrix" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentAnnotation), global::Google.Cloud.AutoML.V1.TextSentimentAnnotation.Parser, new[]{ "Sentiment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics), global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics.Parser, new[]{ "Precision", "Recall", "F1Score", "MeanAbsoluteError", "MeanSquaredError", "LinearKappa", "QuadraticKappa", "ConfusionMatrix" }, null, null, null, null)
           }));
     }
     #endregion
