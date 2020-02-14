@@ -714,7 +714,7 @@ namespace Google.Cloud.PubSub.V1
         /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
-        /// The name of the topic. It must have the format
+        /// Required. The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
         /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
@@ -742,7 +742,7 @@ namespace Google.Cloud.PubSub.V1
         /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
-        /// The name of the topic. It must have the format
+        /// Required. The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
         /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
@@ -767,7 +767,7 @@ namespace Google.Cloud.PubSub.V1
         /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
-        /// The name of the topic. It must have the format
+        /// Required. The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
         /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
@@ -795,7 +795,7 @@ namespace Google.Cloud.PubSub.V1
         /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
-        /// The name of the topic. It must have the format
+        /// Required. The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
         /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
@@ -823,7 +823,7 @@ namespace Google.Cloud.PubSub.V1
         /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
-        /// The name of the topic. It must have the format
+        /// Required. The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
         /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
@@ -848,7 +848,7 @@ namespace Google.Cloud.PubSub.V1
         /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
-        /// The name of the topic. It must have the format
+        /// Required. The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
         /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
@@ -996,11 +996,11 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// The messages in the request will be published on this topic.
+        /// Required. The messages in the request will be published on this topic.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
-        /// The messages to publish.
+        /// Required. The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1024,11 +1024,11 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// The messages in the request will be published on this topic.
+        /// Required. The messages in the request will be published on this topic.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
-        /// The messages to publish.
+        /// Required. The messages to publish.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1049,11 +1049,11 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// The messages in the request will be published on this topic.
+        /// Required. The messages in the request will be published on this topic.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
-        /// The messages to publish.
+        /// Required. The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1077,11 +1077,11 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// The messages in the request will be published on this topic.
+        /// Required. The messages in the request will be published on this topic.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
-        /// The messages to publish.
+        /// Required. The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1105,11 +1105,11 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// The messages in the request will be published on this topic.
+        /// Required. The messages in the request will be published on this topic.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
-        /// The messages to publish.
+        /// Required. The messages to publish.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1130,11 +1130,11 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// The messages in the request will be published on this topic.
+        /// Required. The messages in the request will be published on this topic.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
-        /// The messages to publish.
+        /// Required. The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1257,7 +1257,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1301,7 +1301,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1320,7 +1320,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1398,7 +1398,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1432,7 +1432,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1500,7 +1500,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1572,7 +1572,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
+        /// Required. The name of the topic that subscriptions are attached to.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
@@ -1606,7 +1606,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
+        /// Required. The name of the topic that subscriptions are attached to.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
@@ -1640,7 +1640,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
+        /// Required. The name of the topic that subscriptions are attached to.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
@@ -1674,7 +1674,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
+        /// Required. The name of the topic that subscriptions are attached to.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
@@ -1750,7 +1750,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1776,7 +1776,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1799,7 +1799,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1822,7 +1822,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1848,7 +1848,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1871,7 +1871,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
@@ -1952,8 +1952,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1983,8 +1986,11 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2011,8 +2017,11 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2042,8 +2051,11 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2062,8 +2074,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2081,8 +2096,11 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2101,9 +2119,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -2125,9 +2142,8 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -2146,9 +2162,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -2170,9 +2185,8 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2191,9 +2205,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2211,9 +2224,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2232,13 +2244,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2268,13 +2280,13 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2301,13 +2313,13 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2337,13 +2349,13 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2362,13 +2374,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2386,13 +2398,13 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2827,8 +2839,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2848,8 +2863,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
+        /// Sets the access control policy on the specified resource. Replaces
+        /// any existing policy.
+        ///
+        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and
+        /// PERMISSION_DENIED
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2869,9 +2887,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2891,9 +2908,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
+        /// Gets the access control policy for a resource. Returns an empty policy
+        /// if the resource exists and does not have a policy set.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2913,13 +2929,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2939,13 +2955,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
+        /// Returns permissions that a caller has on the specified resource. If the
+        /// resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         ///
-        /// Note: This operation is designed to be used for building permission-aware
-        /// UIs and command-line tools, not for authorization checking. This operation
-        /// may "fail open" without warning.
+        /// Note: This operation is designed to be used for building
+        /// permission-aware UIs and command-line tools, not for authorization
+        /// checking. This operation may "fail open" without warning.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
