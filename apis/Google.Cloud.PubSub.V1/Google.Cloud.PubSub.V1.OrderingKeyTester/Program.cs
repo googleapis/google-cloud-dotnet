@@ -83,13 +83,13 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
             void CreateTopicAndSubscription()
             {
                 Console.WriteLine("Creating topic and subscription");
-                var pubApi = PublisherServiceApiClient.Create(channel);
+                var pubApi = CreatePublisher();
                 var topic = pubApi.CreateTopic(topicName);
-                var subApi = SubscriberServiceApiClient.Create(channel);
+                var subApi = CreateSubscriber();
                 subApi.CreateSubscription(new Subscription
                 {
                     EnableMessageOrdering = true,
-                    TopicAsTopicNameOneof = TopicNameOneof.From(topicName),
+                    TopicAsTopicName = topicName,
                     SubscriptionName = subscriptionName,
                     AckDeadlineSeconds = 120,
                 });
@@ -100,9 +100,9 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
                 Console.WriteLine("Creating subscribers");
                 var subs = new[]
                 {
-                    SubscriberServiceApiClient.Create(channel),
-                    SubscriberServiceApiClient.Create(channel),
-                    SubscriberServiceApiClient.Create(channel)
+                    CreateSubscriber(),
+                    CreateSubscriber(),
+                    CreateSubscriber()
                 };
                 var sub = new SubscriberClientImpl(subscriptionName, subs, new SubscriberClient.Settings(), null);
                 var recvCount = 0;
@@ -133,9 +133,9 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
                 Console.WriteLine("Creating publishers");
                 var pubs = new[]
                 {
-                    PublisherServiceApiClient.Create(channel),
-                    PublisherServiceApiClient.Create(channel),
-                    PublisherServiceApiClient.Create(channel)
+                    CreatePublisher(),
+                    CreatePublisher(),
+                    CreatePublisher()
                 };
                 var pub = new PublisherClientImpl(topicName, pubs, new PublisherClient.Settings { EnableMessageOrdering = true }, null);
                 var publishTasks = new List<Task>();
@@ -148,6 +148,9 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
                 Console.WriteLine("Publishing complete");
                 return publishTasks;
             }
+
+            PublisherServiceApiClient CreatePublisher() => new PublisherServiceApiClientBuilder { CallInvoker = channel.CreateCallInvoker() }.Build();
+            SubscriberServiceApiClient CreateSubscriber() => new SubscriberServiceApiClientBuilder { CallInvoker = channel.CreateCallInvoker() }.Build();
         }
     }
 }

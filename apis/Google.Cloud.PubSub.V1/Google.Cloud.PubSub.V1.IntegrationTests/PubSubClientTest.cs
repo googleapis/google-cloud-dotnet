@@ -97,12 +97,14 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     clientCount: publisherChannelCount,
                     publisherServiceApiSettings: timeouts == null ? null : new PublisherServiceApiSettings
                     {
-                        PublishSettings = CallSettings.FromCallTiming(CallTiming.FromRetry(new RetrySettings(
-                            retryBackoff: PublisherServiceApiSettings.GetMessagingRetryBackoff(),
-                            timeoutBackoff: new BackoffSettings(timeouts.Value, timeouts.Value, 1.0),
-                            totalExpiration: Expiration.FromTimeout(timeouts.Value),
-                            retryFilter: PublisherServiceApiSettings.NonIdempotentRetryFilter
-                        )))
+                        PublishSettings = CallSettings
+                            .FromRetry(RetrySettings.FromExponentialBackoff(
+                                maxAttempts: int.MaxValue,
+                                initialBackoff: TimeSpan.FromMilliseconds(100),
+                                maxBackoff: TimeSpan.FromSeconds(6),
+                                backoffMultiplier: 1.3,
+                                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable)))
+                            .WithTimeout(timeouts.Value)
                     }
                 )).ConfigureAwait(false);
             var subscriber = await SubscriberClient.CreateAsync(subscriptionName,
@@ -332,7 +334,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var batchingSettings = new BatchingSettings(PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold,
                 PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, TimeSpan.FromSeconds(4));
             var publisherServiceApiSettings = PublisherServiceApiSettings.GetDefault();
-            publisherServiceApiSettings.PublishSettings = CallSettings.FromCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(60)));
+            publisherServiceApiSettings.PublishSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(60)));
             var publisher = await PublisherClient.CreateAsync(topicName,
                 new PublisherClient.ClientCreationSettings(clientCount: 1, publisherServiceApiSettings: publisherServiceApiSettings),
                 new PublisherClient.Settings { BatchingSettings = batchingSettings }).ConfigureAwait(false);
@@ -507,7 +509,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await subscriberApi.CreateSubscriptionAsync(new Subscription
             {
                 SubscriptionName = subscriptionName,
-                TopicAsTopicNameOneof = TopicNameOneof.From(topicName),
+                TopicAsTopicName = topicName,
                 DeadLetterPolicy = new DeadLetterPolicy
                 {
                     DeadLetterTopic = dlqTopicName.ToString(),
