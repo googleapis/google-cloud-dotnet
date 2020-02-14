@@ -34,12 +34,12 @@ namespace Google.Cloud.PubSub.V1
             ProjectTopic = 1,
 
             /// <summary>A resource name with pattern <c>_deleted-topic_</c>.</summary>
-             = 2
+            DeletedTopic = 2
         }
 
         private static gax::PathTemplate s_projectTopic = new gax::PathTemplate("projects/{project}/topics/{topic}");
 
-        private static gax::PathTemplate s_ = new gax::PathTemplate("_deleted-topic_");
+        private static gax::PathTemplate s_deletedTopic = new gax::PathTemplate("_deleted-topic_");
 
         /// <summary>Creates a <see cref="TopicName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -60,7 +60,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>Creates a <see cref="TopicName"/> with the pattern <c>_deleted-topic_</c>.</summary>
         /// <returns>A new instance of <see cref="TopicName"/> constructed from the provided ids.</returns>
-        public static TopicName From() => new TopicName(ResourceNameType.);
+        public static TopicName FromDeletedTopic() => new TopicName(ResourceNameType.DeletedTopic);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="TopicName"/> with pattern
@@ -94,7 +94,7 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>
         /// The string representation of this <see cref="TopicName"/> with pattern <c>_deleted-topic_</c>.
         /// </returns>
-        public static string Format() => s_.Expand();
+        public static string Format() => s_deletedTopic.Expand();
 
         /// <summary>Parses the given resource name string into a new <see cref="TopicName"/> instance.</summary>
         /// <remarks>
@@ -178,9 +178,9 @@ namespace Google.Cloud.PubSub.V1
                 result = FromProjectTopic(resourceName[0], resourceName[1]);
                 return true;
             }
-            if (s_.TryParseName(topicName, out resourceName))
+            if (s_deletedTopic.TryParseName(topicName, out resourceName))
             {
-                result = From();
+                result = FromDeletedTopic();
                 return true;
             }
             if (allowUnparsed)
@@ -242,7 +242,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectTopic: return s_projectTopic.Expand(ProjectId, TopicId);
-                case ResourceNameType.: return s_.Expand();
+                case ResourceNameType.DeletedTopic: return s_deletedTopic.Expand();
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
