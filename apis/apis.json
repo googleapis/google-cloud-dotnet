@@ -725,7 +725,7 @@
     "id": "Google.Cloud.PubSub.V1",
     "generator": "gapic",
     "protoPath": "google/pubsub/v1",
-    "serviceYaml": "pubsub.yaml",
+    "serviceYaml": "pubsub_v1.yaml",
     "productName": "Cloud Pub/Sub",
     "productUrl": "https://cloud.google.com/pubsub/",
     "version": "1.2.0-beta01",
