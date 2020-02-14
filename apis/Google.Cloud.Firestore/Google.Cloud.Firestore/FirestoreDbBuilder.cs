@@ -107,6 +107,10 @@ namespace Google.Cloud.Firestore
         protected override ChannelPool GetChannelPool() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
 
+        /// <inheritdoc />
+        protected override GrpcAdapter DefaultGrpcAdapter =>
+            throw new InvalidOperationException($"This property should never execute in {nameof(FirestoreDbBuilder)}");
+
         private FirestoreDb BuildFromClient(string projectId, FirestoreClient client) =>
             FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger, ConverterRegistry);
 

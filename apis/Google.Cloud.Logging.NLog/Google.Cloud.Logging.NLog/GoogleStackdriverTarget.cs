@@ -31,6 +31,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
+using Grpc.Auth;
 
 namespace Google.Cloud.Logging.NLog
 {
@@ -57,7 +58,7 @@ namespace Google.Cloud.Logging.NLog
         private Platform _platform;
         private MonitoredResource _resource;
         private string _logName;
-        private LogNameOneof _logNameToWrite;
+        private LogName _logNameToWrite;
         private Task _prevTask;
         private long _pendingTaskCount;
         private CancellationTokenSource _cancelTokenSource;
@@ -260,13 +261,7 @@ namespace Google.Cloud.Logging.NLog
                 credential = credential.CreateScoped(s_oAuthScopes);
             }
 
-            Grpc.Core.Channel channel = new Grpc.Core.Channel(
-                LoggingServiceV2Client.DefaultEndpoint.Host,
-                LoggingServiceV2Client.DefaultEndpoint.Port,
-                Grpc.Auth.GoogleGrpcCredentials.ToChannelCredentials(credential)
-            );
-
-            return LoggingServiceV2Client.Create(channel);
+            return new LoggingServiceV2ClientBuilder { ChannelCredentials = credential.ToChannelCredentials() }.Build();
         }
 
         private GoogleCredential GetCredentialFromConfiguration()
@@ -320,7 +315,7 @@ namespace Google.Cloud.Logging.NLog
             _resource = resource;
             var logName = new LogName(projectId, logId);
             _logName = logName.ToString();
-            _logNameToWrite = LogNameOneof.From(logName);
+            _logNameToWrite = logName;
         }
 
         /// <summary>
@@ -487,7 +482,9 @@ namespace Google.Cloud.Logging.NLog
                         // Include ServiceContext to allow errors to be automatically forwarded
                         var serviceVersion = RenderLogEvent(ServiceContextVersion, loggingEvent);
                         if (string.IsNullOrEmpty(serviceVersion))
+                        {
                             serviceVersion = "0.0.0.0";
+                        }
 
                         var serviceContext = new Struct();
                         jsonStruct.Fields.Add("serviceContext", Value.ForStruct(serviceContext));

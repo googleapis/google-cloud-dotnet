@@ -136,6 +136,10 @@ namespace Google.Cloud.Datastore.V1
         protected override ChannelPool GetChannelPool() =>
             throw new InvalidOperationException($"This method should never execute in {nameof(DatastoreDbBuilder)}");
 
+        /// <inheritdoc />
+        protected override GrpcAdapter DefaultGrpcAdapter =>
+            throw new InvalidOperationException($"This property should never execute in {nameof(DatastoreDbBuilder)}");
+
         private class EmulatorConfiguration
         {
             internal const string EmulatorHostVariable = "DATASTORE_EMULATOR_HOST";
