@@ -17,62 +17,49 @@
 namespace Google.Cloud.PubSub.V1.Snippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
-    using Google.Cloud.Iam.V1;
-    using apis = Google.Cloud.PubSub.V1;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
 
-    /// <summary>Generated snippets</summary>
-    public class GeneratedPublisherServiceApiClientSnippets
+    /// <summary>Generated snippets.</summary>
+    public sealed class GeneratedPublisherServiceApiClientSnippets
     {
-        /// <summary>Snippet for CreateTopicAsync</summary>
-        public async Task CreateTopicAsync()
-        {
-            // Snippet: CreateTopicAsync(TopicName,CallSettings)
-            // Additional: CreateTopicAsync(TopicName,CancellationToken)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
-            // Initialize request argument(s)
-            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
-            // Make the request
-            Topic response = await publisherServiceApiClient.CreateTopicAsync(name);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateTopic</summary>
-        public void CreateTopic()
+        public void CreateTopicRequestObject()
         {
-            // Snippet: CreateTopic(TopicName,CallSettings)
+            // Snippet: CreateTopic(Topic, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
+            Topic request = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels = { { "", "" }, },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "",
+            };
             // Make the request
-            Topic response = publisherServiceApiClient.CreateTopic(name);
+            Topic response = publisherServiceApiClient.CreateTopic(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateTopicAsync</summary>
-        public async Task CreateTopicAsync_RequestObject()
+        public async Task CreateTopicRequestObjectAsync()
         {
-            // Snippet: CreateTopicAsync(Topic,CallSettings)
-            // Additional: CreateTopicAsync(Topic,CancellationToken)
+            // Snippet: CreateTopicAsync(Topic, CallSettings)
+            // Additional: CreateTopicAsync(Topic, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             Topic request = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels = { { "", "" }, },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "",
             };
             // Make the request
             Topic response = await publisherServiceApiClient.CreateTopicAsync(request);
@@ -80,43 +67,63 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for CreateTopic</summary>
-        public void CreateTopic_RequestObject()
+        public void CreateTopic()
         {
-            // Snippet: CreateTopic(Topic,CallSettings)
+            // Snippet: CreateTopic(string, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            Topic request = new Topic
-            {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
+            string name = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            Topic response = publisherServiceApiClient.CreateTopic(request);
+            Topic response = publisherServiceApiClient.CreateTopic(name);
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateTopicAsync</summary>
-        public async Task UpdateTopicAsync_RequestObject()
+        /// <summary>Snippet for CreateTopicAsync</summary>
+        public async Task CreateTopicAsync()
         {
-            // Snippet: UpdateTopicAsync(UpdateTopicRequest,CallSettings)
-            // Additional: UpdateTopicAsync(UpdateTopicRequest,CancellationToken)
+            // Snippet: CreateTopicAsync(string, CallSettings)
+            // Additional: CreateTopicAsync(string, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateTopicRequest request = new UpdateTopicRequest
-            {
-                Topic = new Topic(),
-                UpdateMask = new FieldMask(),
-            };
+            string name = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            Topic response = await publisherServiceApiClient.UpdateTopicAsync(request);
+            Topic response = await publisherServiceApiClient.CreateTopicAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTopic</summary>
+        public void CreateTopicResourceNames()
+        {
+            // Snippet: CreateTopic(TopicName, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            TopicName name = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
+            // Make the request
+            Topic response = publisherServiceApiClient.CreateTopic(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTopicAsync</summary>
+        public async Task CreateTopicResourceNamesAsync()
+        {
+            // Snippet: CreateTopicAsync(TopicName, CallSettings)
+            // Additional: CreateTopicAsync(TopicName, CancellationToken)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            TopicName name = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
+            // Make the request
+            Topic response = await publisherServiceApiClient.CreateTopicAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for UpdateTopic</summary>
-        public void UpdateTopic_RequestObject()
+        public void UpdateTopicRequestObject()
         {
-            // Snippet: UpdateTopic(UpdateTopicRequest,CallSettings)
+            // Snippet: UpdateTopic(UpdateTopicRequest, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
@@ -130,64 +137,58 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for PublishAsync</summary>
-        public async Task PublishAsync()
+        /// <summary>Snippet for UpdateTopicAsync</summary>
+        public async Task UpdateTopicRequestObjectAsync()
         {
-            // Snippet: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CallSettings)
-            // Additional: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CancellationToken)
+            // Snippet: UpdateTopicAsync(UpdateTopicRequest, CallSettings)
+            // Additional: UpdateTopicAsync(UpdateTopicRequest, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            IEnumerable<PubsubMessage> messages = new[]
+            UpdateTopicRequest request = new UpdateTopicRequest
             {
-                new PubsubMessage
-                {
-                    Data = ByteString.Empty,
-                },
+                Topic = new Topic(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            PublishResponse response = await publisherServiceApiClient.PublishAsync(topic, messages);
+            Topic response = await publisherServiceApiClient.UpdateTopicAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for Publish</summary>
-        public void Publish()
+        public void PublishRequestObject()
         {
-            // Snippet: Publish(TopicName,IEnumerable<PubsubMessage>,CallSettings)
+            // Snippet: Publish(PublishRequest, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            IEnumerable<PubsubMessage> messages = new[]
+            PublishRequest request = new PublishRequest
             {
-                new PubsubMessage
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Messages =
                 {
-                    Data = ByteString.Empty,
+                    new PubsubMessage(),
                 },
             };
             // Make the request
-            PublishResponse response = publisherServiceApiClient.Publish(topic, messages);
+            PublishResponse response = publisherServiceApiClient.Publish(request);
             // End snippet
         }
 
         /// <summary>Snippet for PublishAsync</summary>
-        public async Task PublishAsync_RequestObject()
+        public async Task PublishRequestObjectAsync()
         {
-            // Snippet: PublishAsync(PublishRequest,CallSettings)
-            // Additional: PublishAsync(PublishRequest,CancellationToken)
+            // Snippet: PublishAsync(PublishRequest, CallSettings)
+            // Additional: PublishAsync(PublishRequest, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             PublishRequest request = new PublishRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage
-                    {
-                        Data = ByteString.Empty,
-                    },
+                    new PubsubMessage(),
                 },
             };
             // Make the request
@@ -196,66 +197,102 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for Publish</summary>
-        public void Publish_RequestObject()
+        public void Publish()
         {
-            // Snippet: Publish(PublishRequest,CallSettings)
+            // Snippet: Publish(string, IEnumerable<PubsubMessage>, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            PublishRequest request = new PublishRequest
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
+            IEnumerable<PubsubMessage> messages = new PubsubMessage[]
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages =
-                {
-                    new PubsubMessage
-                    {
-                        Data = ByteString.Empty,
-                    },
-                },
+                new PubsubMessage(),
             };
             // Make the request
-            PublishResponse response = publisherServiceApiClient.Publish(request);
+            PublishResponse response = publisherServiceApiClient.Publish(topic, messages);
             // End snippet
         }
 
-        /// <summary>Snippet for GetTopicAsync</summary>
-        public async Task GetTopicAsync()
+        /// <summary>Snippet for PublishAsync</summary>
+        public async Task PublishAsync()
         {
-            // Snippet: GetTopicAsync(TopicName,CallSettings)
-            // Additional: GetTopicAsync(TopicName,CancellationToken)
+            // Snippet: PublishAsync(string, IEnumerable<PubsubMessage>, CallSettings)
+            // Additional: PublishAsync(string, IEnumerable<PubsubMessage>, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
+            IEnumerable<PubsubMessage> messages = new PubsubMessage[]
+            {
+                new PubsubMessage(),
+            };
             // Make the request
-            Topic response = await publisherServiceApiClient.GetTopicAsync(topic);
+            PublishResponse response = await publisherServiceApiClient.PublishAsync(topic, messages);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Publish</summary>
+        public void PublishResourceNames()
+        {
+            // Snippet: Publish(TopicName, IEnumerable<PubsubMessage>, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
+            IEnumerable<PubsubMessage> messages = new PubsubMessage[]
+            {
+                new PubsubMessage(),
+            };
+            // Make the request
+            PublishResponse response = publisherServiceApiClient.Publish(topic, messages);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PublishAsync</summary>
+        public async Task PublishResourceNamesAsync()
+        {
+            // Snippet: PublishAsync(TopicName, IEnumerable<PubsubMessage>, CallSettings)
+            // Additional: PublishAsync(TopicName, IEnumerable<PubsubMessage>, CancellationToken)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
+            IEnumerable<PubsubMessage> messages = new PubsubMessage[]
+            {
+                new PubsubMessage(),
+            };
+            // Make the request
+            PublishResponse response = await publisherServiceApiClient.PublishAsync(topic, messages);
             // End snippet
         }
 
         /// <summary>Snippet for GetTopic</summary>
-        public void GetTopic()
+        public void GetTopicRequestObject()
         {
-            // Snippet: GetTopic(TopicName,CallSettings)
+            // Snippet: GetTopic(GetTopicRequest, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
             // Make the request
-            Topic response = publisherServiceApiClient.GetTopic(topic);
+            Topic response = publisherServiceApiClient.GetTopic(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetTopicAsync</summary>
-        public async Task GetTopicAsync_RequestObject()
+        public async Task GetTopicRequestObjectAsync()
         {
-            // Snippet: GetTopicAsync(GetTopicRequest,CallSettings)
-            // Additional: GetTopicAsync(GetTopicRequest,CancellationToken)
+            // Snippet: GetTopicAsync(GetTopicRequest, CallSettings)
+            // Additional: GetTopicAsync(GetTopicRequest, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             GetTopicRequest request = new GetTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
             // Make the request
             Topic response = await publisherServiceApiClient.GetTopicAsync(request);
@@ -263,32 +300,120 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for GetTopic</summary>
-        public void GetTopic_RequestObject()
+        public void GetTopic()
         {
-            // Snippet: GetTopic(GetTopicRequest,CallSettings)
+            // Snippet: GetTopic(string, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            GetTopicRequest request = new GetTopicRequest
-            {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            Topic response = publisherServiceApiClient.GetTopic(request);
+            Topic response = publisherServiceApiClient.GetTopic(topic);
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicsAsync</summary>
-        public async Task ListTopicsAsync()
+        /// <summary>Snippet for GetTopicAsync</summary>
+        public async Task GetTopicAsync()
         {
-            // Snippet: ListTopicsAsync(ProjectName,string,int?,CallSettings)
+            // Snippet: GetTopicAsync(string, CallSettings)
+            // Additional: GetTopicAsync(string, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName project = new ProjectName("[PROJECT]");
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            PagedAsyncEnumerable<ListTopicsResponse, Topic> response =
-                publisherServiceApiClient.ListTopicsAsync(project);
+            Topic response = await publisherServiceApiClient.GetTopicAsync(topic);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTopic</summary>
+        public void GetTopicResourceNames()
+        {
+            // Snippet: GetTopic(TopicName, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
+            // Make the request
+            Topic response = publisherServiceApiClient.GetTopic(topic);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTopicAsync</summary>
+        public async Task GetTopicResourceNamesAsync()
+        {
+            // Snippet: GetTopicAsync(TopicName, CallSettings)
+            // Additional: GetTopicAsync(TopicName, CancellationToken)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
+            // Make the request
+            Topic response = await publisherServiceApiClient.GetTopicAsync(topic);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopics</summary>
+        public void ListTopicsRequestObject()
+        {
+            // Snippet: ListTopics(ListTopicsRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            ListTopicsRequest request = new ListTopicsRequest
+            {
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListTopicsResponse, Topic> response = publisherServiceApiClient.ListTopics(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Topic item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Topic item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Topic> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Topic item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopics</summary>
+        public async Task ListTopicsRequestObjectAsync()
+        {
+            // Snippet: ListTopicsAsync(ListTopicsRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTopicsRequest request = new ListTopicsRequest
+            {
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTopicsResponse, Topic> response = publisherServiceApiClient.ListTopicsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Topic item) =>
@@ -304,6 +429,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Topic item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -315,6 +441,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Topic item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -325,14 +452,13 @@ namespace Google.Cloud.PubSub.V1.Snippets
         /// <summary>Snippet for ListTopics</summary>
         public void ListTopics()
         {
-            // Snippet: ListTopics(ProjectName,string,int?,CallSettings)
+            // Snippet: ListTopics(string, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            ProjectName project = new ProjectName("[PROJECT]");
+            string project = "projects/[PROJECT]";
             // Make the request
-            PagedEnumerable<ListTopicsResponse, Topic> response =
-                publisherServiceApiClient.ListTopics(project);
+            PagedEnumerable<ListTopicsResponse, Topic> response = publisherServiceApiClient.ListTopics(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Topic item in response)
@@ -348,6 +474,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Topic item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -359,6 +486,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Topic item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -366,20 +494,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicsAsync</summary>
-        public async Task ListTopicsAsync_RequestObject()
+        /// <summary>Snippet for ListTopics</summary>
+        public async Task ListTopicsAsync()
         {
-            // Snippet: ListTopicsAsync(ListTopicsRequest,CallSettings)
+            // Snippet: ListTopicsAsync(string, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                ProjectAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            string project = "projects/[PROJECT]";
             // Make the request
-            PagedAsyncEnumerable<ListTopicsResponse, Topic> response =
-                publisherServiceApiClient.ListTopicsAsync(request);
+            PagedAsyncEnumerable<ListTopicsResponse, Topic> response = publisherServiceApiClient.ListTopicsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Topic item) =>
@@ -395,6 +519,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Topic item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
@@ -406,6 +531,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Topic item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -414,19 +540,15 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for ListTopics</summary>
-        public void ListTopics_RequestObject()
+        public void ListTopicsResourceNames()
         {
-            // Snippet: ListTopics(ListTopicsRequest,CallSettings)
+            // Snippet: ListTopics(ProjectName, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                ProjectAsProjectName = new ProjectName("[PROJECT]"),
-            };
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListTopicsResponse, Topic> response =
-                publisherServiceApiClient.ListTopics(request);
+            PagedEnumerable<ListTopicsResponse, Topic> response = publisherServiceApiClient.ListTopics(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Topic item in response)
@@ -442,6 +564,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Console.WriteLine("A page of results:");
                 foreach (Topic item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
@@ -453,6 +576,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Topic item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -460,20 +584,115 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
-        public async Task ListTopicSubscriptionsAsync()
+        /// <summary>Snippet for ListTopics</summary>
+        public async Task ListTopicsResourceNamesAsync()
         {
-            // Snippet: ListTopicSubscriptionsAsync(TopicName,string,int?,CallSettings)
+            // Snippet: ListTopicsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> response =
-                publisherServiceApiClient.ListTopicSubscriptionsAsync(topic);
+            PagedAsyncEnumerable<ListTopicsResponse, Topic> response = publisherServiceApiClient.ListTopicsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SubscriptionName item) =>
+            await response.ForEachAsync((Topic item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Topic item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Topic> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Topic item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        public void ListTopicSubscriptionsRequestObject()
+        {
+            // Snippet: ListTopicSubscriptions(ListTopicSubscriptionsRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            PagedEnumerable<ListTopicSubscriptionsResponse, string> response = publisherServiceApiClient.ListTopicSubscriptions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        public async Task ListTopicSubscriptionsRequestObjectAsync()
+        {
+            // Snippet: ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> response = publisherServiceApiClient.ListTopicSubscriptionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -484,19 +703,21 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SubscriptionName item in page)
+                foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SubscriptionName> singlePage = await response.ReadPageAsync(pageSize);
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SubscriptionName item in singlePage)
+            foreach (string item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -507,17 +728,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
         /// <summary>Snippet for ListTopicSubscriptions</summary>
         public void ListTopicSubscriptions()
         {
-            // Snippet: ListTopicSubscriptions(TopicName,string,int?,CallSettings)
+            // Snippet: ListTopicSubscriptions(string, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> response =
-                publisherServiceApiClient.ListTopicSubscriptions(topic);
+            PagedEnumerable<ListTopicSubscriptionsResponse, string> response = publisherServiceApiClient.ListTopicSubscriptions(topic);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (SubscriptionName item in response)
+            foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -528,19 +748,21 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SubscriptionName item in page)
+                foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SubscriptionName> singlePage = response.ReadPage(pageSize);
+            Page<string> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SubscriptionName item in singlePage)
+            foreach (string item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -548,23 +770,19 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
-        public async Task ListTopicSubscriptionsAsync_RequestObject()
+        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        public async Task ListTopicSubscriptionsAsync()
         {
-            // Snippet: ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest,CallSettings)
+            // Snippet: ListTopicSubscriptionsAsync(string, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
-            {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> response =
-                publisherServiceApiClient.ListTopicSubscriptionsAsync(request);
+            PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> response = publisherServiceApiClient.ListTopicSubscriptionsAsync(topic);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SubscriptionName item) =>
+            await response.ForEachAsync((string item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -575,19 +793,21 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SubscriptionName item in page)
+                foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SubscriptionName> singlePage = await response.ReadPageAsync(pageSize);
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SubscriptionName item in singlePage)
+            foreach (string item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -596,22 +816,18 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for ListTopicSubscriptions</summary>
-        public void ListTopicSubscriptions_RequestObject()
+        public void ListTopicSubscriptionsResourceNames()
         {
-            // Snippet: ListTopicSubscriptions(ListTopicSubscriptionsRequest,CallSettings)
+            // Snippet: ListTopicSubscriptions(TopicName, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
-            {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
             // Make the request
-            PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> response =
-                publisherServiceApiClient.ListTopicSubscriptions(request);
+            PagedEnumerable<ListTopicSubscriptionsResponse, string> response = publisherServiceApiClient.ListTopicSubscriptions(topic);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (SubscriptionName item in response)
+            foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -622,19 +838,21 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SubscriptionName item in page)
+                foreach (string item in page)
                 {
+                    // Do something with each item
                     Console.WriteLine(item);
                 }
             }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SubscriptionName> singlePage = response.ReadPage(pageSize);
+            Page<string> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SubscriptionName item in singlePage)
+            foreach (string item in singlePage)
             {
+                // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
@@ -642,44 +860,168 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteTopicAsync</summary>
-        public async Task DeleteTopicAsync()
+        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        public async Task ListTopicSubscriptionsResourceNamesAsync()
         {
-            // Snippet: DeleteTopicAsync(TopicName,CallSettings)
-            // Additional: DeleteTopicAsync(TopicName,CancellationToken)
+            // Snippet: ListTopicSubscriptionsAsync(TopicName, string, int?, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
             // Make the request
-            await publisherServiceApiClient.DeleteTopicAsync(topic);
+            PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> response = publisherServiceApiClient.ListTopicSubscriptionsAsync(topic);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopicSnapshots</summary>
+        public void ListTopicSnapshotsRequestObject()
+        {
+            // Snippet: ListTopicSnapshots(ListTopicSnapshotsRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest { Topic = "", };
+            // Make the request
+            PagedEnumerable<ListTopicSnapshotsResponse, string> response = publisherServiceApiClient.ListTopicSnapshots(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopicSnapshots</summary>
+        public async Task ListTopicSnapshotsRequestObjectAsync()
+        {
+            // Snippet: ListTopicSnapshotsAsync(ListTopicSnapshotsRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest { Topic = "", };
+            // Make the request
+            PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> response = publisherServiceApiClient.ListTopicSnapshotsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTopic</summary>
-        public void DeleteTopic()
+        public void DeleteTopicRequestObject()
         {
-            // Snippet: DeleteTopic(TopicName,CallSettings)
+            // Snippet: DeleteTopic(DeleteTopicRequest, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
             // Make the request
-            publisherServiceApiClient.DeleteTopic(topic);
+            publisherServiceApiClient.DeleteTopic(request);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTopicAsync</summary>
-        public async Task DeleteTopicAsync_RequestObject()
+        public async Task DeleteTopicRequestObjectAsync()
         {
-            // Snippet: DeleteTopicAsync(DeleteTopicRequest,CallSettings)
-            // Additional: DeleteTopicAsync(DeleteTopicRequest,CancellationToken)
+            // Snippet: DeleteTopicAsync(DeleteTopicRequest, CallSettings)
+            // Additional: DeleteTopicAsync(DeleteTopicRequest, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
             // Make the request
             await publisherServiceApiClient.DeleteTopicAsync(request);
@@ -687,208 +1029,57 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for DeleteTopic</summary>
-        public void DeleteTopic_RequestObject()
+        public void DeleteTopic()
         {
-            // Snippet: DeleteTopic(DeleteTopicRequest,CallSettings)
+            // Snippet: DeleteTopic(string, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            DeleteTopicRequest request = new DeleteTopicRequest
-            {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            publisherServiceApiClient.DeleteTopic(request);
+            publisherServiceApiClient.DeleteTopic(topic);
             // End snippet
         }
 
-        /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync()
+        /// <summary>Snippet for DeleteTopicAsync</summary>
+        public async Task DeleteTopicAsync()
         {
-            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
-            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Snippet: DeleteTopicAsync(string, CallSettings)
+            // Additional: DeleteTopicAsync(string, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
-            Policy policy = new Policy();
+            string topic = "projects/[PROJECT]/topics/[TOPIC]";
             // Make the request
-            Policy response = await publisherServiceApiClient.SetIamPolicyAsync(formattedResource, policy);
+            await publisherServiceApiClient.DeleteTopicAsync(topic);
             // End snippet
         }
 
-        /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy()
+        /// <summary>Snippet for DeleteTopic</summary>
+        public void DeleteTopicResourceNames()
         {
-            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Snippet: DeleteTopic(TopicName, CallSettings)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
-            Policy policy = new Policy();
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
             // Make the request
-            Policy response = publisherServiceApiClient.SetIamPolicy(formattedResource, policy);
+            publisherServiceApiClient.DeleteTopic(topic);
             // End snippet
         }
 
-        /// <summary>Snippet for SetIamPolicyAsync</summary>
-        public async Task SetIamPolicyAsync_RequestObject()
+        /// <summary>Snippet for DeleteTopicAsync</summary>
+        public async Task DeleteTopicResourceNamesAsync()
         {
-            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
-            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
+            // Snippet: DeleteTopicAsync(TopicName, CallSettings)
+            // Additional: DeleteTopicAsync(TopicName, CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
-                Policy = new Policy(),
-            };
+            TopicName topic = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]");
             // Make the request
-            Policy response = await publisherServiceApiClient.SetIamPolicyAsync(request);
+            await publisherServiceApiClient.DeleteTopicAsync(topic);
             // End snippet
         }
-
-        /// <summary>Snippet for SetIamPolicy</summary>
-        public void SetIamPolicy_RequestObject()
-        {
-            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
-            // Initialize request argument(s)
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
-                Policy = new Policy(),
-            };
-            // Make the request
-            Policy response = publisherServiceApiClient.SetIamPolicy(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync()
-        {
-            // Snippet: GetIamPolicyAsync(string,CallSettings)
-            // Additional: GetIamPolicyAsync(string,CancellationToken)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
-            // Initialize request argument(s)
-            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
-            // Make the request
-            Policy response = await publisherServiceApiClient.GetIamPolicyAsync(formattedResource);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy()
-        {
-            // Snippet: GetIamPolicy(string,CallSettings)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
-            // Initialize request argument(s)
-            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
-            // Make the request
-            Policy response = publisherServiceApiClient.GetIamPolicy(formattedResource);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIamPolicyAsync</summary>
-        public async Task GetIamPolicyAsync_RequestObject()
-        {
-            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
-            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
-            // Initialize request argument(s)
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
-            };
-            // Make the request
-            Policy response = await publisherServiceApiClient.GetIamPolicyAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetIamPolicy</summary>
-        public void GetIamPolicy_RequestObject()
-        {
-            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
-            // Initialize request argument(s)
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
-            };
-            // Make the request
-            Policy response = publisherServiceApiClient.GetIamPolicy(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync()
-        {
-            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
-            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
-            // Initialize request argument(s)
-            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
-            IEnumerable<string> permissions = new List<string>();
-            // Make the request
-            TestIamPermissionsResponse response = await publisherServiceApiClient.TestIamPermissionsAsync(formattedResource, permissions);
-            // End snippet
-        }
-
-        /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions()
-        {
-            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
-            // Initialize request argument(s)
-            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
-            IEnumerable<string> permissions = new List<string>();
-            // Make the request
-            TestIamPermissionsResponse response = publisherServiceApiClient.TestIamPermissions(formattedResource, permissions);
-            // End snippet
-        }
-
-        /// <summary>Snippet for TestIamPermissionsAsync</summary>
-        public async Task TestIamPermissionsAsync_RequestObject()
-        {
-            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
-            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
-            // Initialize request argument(s)
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
-                Permissions = { },
-            };
-            // Make the request
-            TestIamPermissionsResponse response = await publisherServiceApiClient.TestIamPermissionsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for TestIamPermissions</summary>
-        public void TestIamPermissions_RequestObject()
-        {
-            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
-            // Create client
-            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
-            // Initialize request argument(s)
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
-                Permissions = { },
-            };
-            // Make the request
-            TestIamPermissionsResponse response = publisherServiceApiClient.TestIamPermissions(request);
-            // End snippet
-        }
-
     }
 }

@@ -14,480 +14,698 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.PubSub.V1.Tests
 {
-    using Google.Api.Gax;
-    using Google.Api.Gax.Grpc;
-    using Google.Cloud.Iam.V1;
-    using apis = Google.Cloud.PubSub.V1;
-    using Google.Protobuf;
-    using Google.Protobuf.WellKnownTypes;
-    using Grpc.Core;
-    using Moq;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Xunit;
-
-    /// <summary>Generated unit tests</summary>
-    public class GeneratedPublisherServiceApiClientTest
+    /// <summary>Generated unit tests.</summary>
+    public sealed class GeneratedPublisherServiceApiClientTest
     {
-        [Fact]
-        public void CreateTopic()
+        [xunit::FactAttribute]
+        public void CreateTopicRequestObject()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            Topic expectedRequest = new Topic
-            {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
-            Topic expectedResponse = new Topic
-            {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
-            };
-            mockGrpcClient.Setup(x => x.CreateTopic(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
-            Topic response = client.CreateTopic(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateTopicAsync()
-        {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            Topic expectedRequest = new Topic
-            {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-            };
-            Topic expectedResponse = new Topic
-            {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
-            };
-            mockGrpcClient.Setup(x => x.CreateTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
-            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
-            Topic response = await client.CreateTopicAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateTopic2()
-        {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
             Topic expectedResponse = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            mockGrpcClient.Setup(x => x.CreateTopic(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             Topic response = client.CreateTopic(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task CreateTopicAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task CreateTopicRequestObjectAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             Topic request = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
             Topic expectedResponse = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            mockGrpcClient.Setup(x => x.CreateTopicAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            Topic response = await client.CreateTopicAsync(request);
-            Assert.Same(expectedResponse, response);
+            Topic responseCallSettings = await client.CreateTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.CreateTopicAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void UpdateTopic()
+        [xunit::FactAttribute]
+        public void CreateTopic()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            UpdateTopicRequest request = new UpdateTopicRequest
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            Topic request = new Topic
             {
-                Topic = new Topic(),
-                UpdateMask = new FieldMask(),
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
             Topic expectedResponse = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            mockGrpcClient.Setup(x => x.UpdateTopic(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = client.CreateTopic(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTopicAsync()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            Topic request = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic responseCallSettings = await client.CreateTopicAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.CreateTopicAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateTopicResourceNames()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            Topic request = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = client.CreateTopic(request.TopicName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateTopicResourceNamesAsync()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            Topic request = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic responseCallSettings = await client.CreateTopicAsync(request.TopicName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.CreateTopicAsync(request.TopicName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateTopicRequestObject()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            UpdateTopicRequest request = new UpdateTopicRequest
+            {
+                Topic = new Topic(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.UpdateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             Topic response = client.UpdateTopic(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task UpdateTopicAsync()
+        [xunit::FactAttribute]
+        public async stt::Task UpdateTopicRequestObjectAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
                 Topic = new Topic(),
-                UpdateMask = new FieldMask(),
+                UpdateMask = new wkt::FieldMask(),
             };
             Topic expectedResponse = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
-            };
-            mockGrpcClient.Setup(x => x.UpdateTopicAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
-            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            Topic response = await client.UpdateTopicAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Publish()
-        {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            PublishRequest expectedRequest = new PublishRequest
-            {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages =
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
                 {
-                    new PubsubMessage
                     {
-                        Data = ByteString.CopyFromUtf8("-86"),
+                        "key8a0b6e3c",
+                        "value60c16320"
                     },
                 },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            PublishResponse expectedResponse = new PublishResponse
-            {
-                MessageIds =
-                {
-                    "messageIdsElement-744837059",
-                },
-            };
-            mockGrpcClient.Setup(x => x.Publish(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            IEnumerable<PubsubMessage> messages = new[]
-            {
-                new PubsubMessage
-                {
-                    Data = ByteString.CopyFromUtf8("-86"),
-                },
-            };
-            PublishResponse response = client.Publish(topic, messages);
-            Assert.Same(expectedResponse, response);
+            Topic responseCallSettings = await client.UpdateTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.UpdateTopicAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PublishAsync()
+        [xunit::FactAttribute]
+        public void PublishRequestObject()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            PublishRequest expectedRequest = new PublishRequest
-            {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages =
-                {
-                    new PubsubMessage
-                    {
-                        Data = ByteString.CopyFromUtf8("-86"),
-                    },
-                },
-            };
-            PublishResponse expectedResponse = new PublishResponse
-            {
-                MessageIds =
-                {
-                    "messageIdsElement-744837059",
-                },
-            };
-            mockGrpcClient.Setup(x => x.PublishAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<PublishResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            IEnumerable<PubsubMessage> messages = new[]
-            {
-                new PubsubMessage
-                {
-                    Data = ByteString.CopyFromUtf8("-86"),
-                },
-            };
-            PublishResponse response = await client.PublishAsync(topic, messages);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void Publish2()
-        {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage
-                    {
-                        Data = ByteString.CopyFromUtf8("-86"),
-                    },
+                    new PubsubMessage(),
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
             {
                 MessageIds =
                 {
-                    "messageIdsElement-744837059",
+                    "message_idsbfb136bc",
                 },
             };
-            mockGrpcClient.Setup(x => x.Publish(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Publish(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             PublishResponse response = client.Publish(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task PublishAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task PublishRequestObjectAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             PublishRequest request = new PublishRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage
-                    {
-                        Data = ByteString.CopyFromUtf8("-86"),
-                    },
+                    new PubsubMessage(),
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
             {
                 MessageIds =
                 {
-                    "messageIdsElement-744837059",
+                    "message_idsbfb136bc",
                 },
             };
-            mockGrpcClient.Setup(x => x.PublishAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<PublishResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.PublishAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            PublishResponse response = await client.PublishAsync(request);
-            Assert.Same(expectedResponse, response);
+            PublishResponse responseCallSettings = await client.PublishAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PublishResponse responseCancellationToken = await client.PublishAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTopic()
+        [xunit::FactAttribute]
+        public void Publish()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            GetTopicRequest expectedRequest = new GetTopicRequest
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            PublishRequest request = new PublishRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Messages =
+                {
+                    new PubsubMessage(),
+                },
             };
-            Topic expectedResponse = new Topic
+            PublishResponse expectedResponse = new PublishResponse
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                MessageIds =
+                {
+                    "message_idsbfb136bc",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetTopic(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Publish(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            Topic response = client.GetTopic(topic);
-            Assert.Same(expectedResponse, response);
+            PublishResponse response = client.Publish(request.Topic, request.Messages);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTopicAsync()
+        [xunit::FactAttribute]
+        public async stt::Task PublishAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            GetTopicRequest expectedRequest = new GetTopicRequest
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            PublishRequest request = new PublishRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Messages =
+                {
+                    new PubsubMessage(),
+                },
             };
-            Topic expectedResponse = new Topic
+            PublishResponse expectedResponse = new PublishResponse
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                MessageIds =
+                {
+                    "message_idsbfb136bc",
+                },
             };
-            mockGrpcClient.Setup(x => x.GetTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.PublishAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            Topic response = await client.GetTopicAsync(topic);
-            Assert.Same(expectedResponse, response);
+            PublishResponse responseCallSettings = await client.PublishAsync(request.Topic, request.Messages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PublishResponse responseCancellationToken = await client.PublishAsync(request.Topic, request.Messages, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void GetTopic2()
+        [xunit::FactAttribute]
+        public void PublishResourceNames()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            PublishRequest request = new PublishRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Messages =
+                {
+                    new PubsubMessage(),
+                },
+            };
+            PublishResponse expectedResponse = new PublishResponse
+            {
+                MessageIds =
+                {
+                    "message_idsbfb136bc",
+                },
+            };
+            mockGrpcClient.Setup(x => x.Publish(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            PublishResponse response = client.Publish(request.TopicAsTopicName, request.Messages);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PublishResourceNamesAsync()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            PublishRequest request = new PublishRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Messages =
+                {
+                    new PubsubMessage(),
+                },
+            };
+            PublishResponse expectedResponse = new PublishResponse
+            {
+                MessageIds =
+                {
+                    "message_idsbfb136bc",
+                },
+            };
+            mockGrpcClient.Setup(x => x.PublishAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublishResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            PublishResponse responseCallSettings = await client.PublishAsync(request.TopicAsTopicName, request.Messages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PublishResponse responseCancellationToken = await client.PublishAsync(request.TopicAsTopicName, request.Messages, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTopicRequestObject()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
             Topic expectedResponse = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            mockGrpcClient.Setup(x => x.GetTopic(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             Topic response = client.GetTopic(request);
-            Assert.Same(expectedResponse, response);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task GetTopicAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTopicRequestObjectAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             GetTopicRequest request = new GetTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
             Topic expectedResponse = new Topic
             {
-                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                KmsKeyName = "kmsKeyName2094986649",
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            mockGrpcClient.Setup(x => x.GetTopicAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            Topic response = await client.GetTopicAsync(request);
-            Assert.Same(expectedResponse, response);
+            Topic responseCallSettings = await client.GetTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.GetTopicAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTopic()
+        [xunit::FactAttribute]
+        public void GetTopic()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            DeleteTopicRequest expectedRequest = new DeleteTopicRequest
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            GetTopicRequest request = new GetTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTopic(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            client.DeleteTopic(topic);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteTopicAsync()
-        {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
-            DeleteTopicRequest expectedRequest = new DeleteTopicRequest
+            Topic expectedResponse = new Topic
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
-            await client.DeleteTopicAsync(topic);
+            Topic response = client.GetTopic(request.Topic);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public void DeleteTopic2()
+        [xunit::FactAttribute]
+        public async stt::Task GetTopicAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic responseCallSettings = await client.GetTopicAsync(request.Topic, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.GetTopicAsync(request.Topic, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTopicResourceNames()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = client.GetTopic(request.TopicAsTopicName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTopicResourceNamesAsync()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                MessageStoragePolicy = new MessageStoragePolicy(),
+                KmsKeyName = "kms_key_name06bd122b",
+            };
+            mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic responseCallSettings = await client.GetTopicAsync(request.TopicAsTopicName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Topic responseCancellationToken = await client.GetTopicAsync(request.TopicAsTopicName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTopicRequestObject()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTopic(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             client.DeleteTopic(request);
             mockGrpcClient.VerifyAll();
         }
 
-        [Fact]
-        public async Task DeleteTopicAsync2()
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTopicRequestObjectAsync()
         {
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
-                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
             };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteTopicAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteTopicAsync(request);
+            await client.DeleteTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTopicAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
+        [xunit::FactAttribute]
+        public void DeleteTopic()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTopic(request.Topic);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTopicAsync()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTopicAsync(request.Topic, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTopicAsync(request.Topic, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteTopicResourceNames()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTopic(request.TopicAsTopicName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteTopicResourceNamesAsync()
+        {
+            moq::Mock<PublisherServiceApi.PublisherServiceApiClient> mockGrpcClient = new moq::Mock<PublisherServiceApi.PublisherServiceApiClient>(moq::MockBehavior.Strict);
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTopicAsync(request.TopicAsTopicName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteTopicAsync(request.TopicAsTopicName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
