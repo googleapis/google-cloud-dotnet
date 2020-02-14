@@ -3,8 +3,7 @@
 set -e
 
 # Undo the changes in googleapis
-# (Do this first so that if we have any failures in the remaining
-git -C ../../googleapis checkout google/bigtable/v2/bigtable_gapic.yaml
+# (Do this first so that if we have any failures in the remaining steps)
 git -C ../../googleapis checkout google/bigtable/v2/bigtable.proto
 git -C ../../googleapis checkout google/bigtable/v2/bigtable_grpc_service_config.json
 
