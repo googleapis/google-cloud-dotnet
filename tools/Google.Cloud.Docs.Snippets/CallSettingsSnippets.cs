@@ -44,7 +44,7 @@ namespace Google.Cloud.Tools.Snippets
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
             // Create a CallSettings with a custom header.
-            CallSettings callSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null);
+            CallSettings callSettings = CallSettings.FromHeader("ClientVersion", "1.0.0");
             // This will cause the custom 'ClientVersion' header to be included in the RPC call.
             Topic topic = client.CreateTopic(topicName, callSettings);
             // End sample
@@ -60,9 +60,9 @@ namespace Google.Cloud.Tools.Snippets
             // Create a default PublisherServiceApiSettings, with a custom header for calls to all RPC methods.
             PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings
             {
-                CallSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null)
+                CallSettings = CallSettings.FromHeader("ClientVersion", "1.0.0")
             };
-            PublisherServiceApiClient client = PublisherServiceApiClient.Create(settings: publisherSettings);
+            PublisherServiceApiClient client = new PublisherServiceApiClientBuilder { Settings = publisherSettings }.Build();
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
@@ -82,7 +82,7 @@ namespace Google.Cloud.Tools.Snippets
             // to the CreateTopic RPC method.
             PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings();
             publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings.WithHeader("ClientVersion", "1.0.0");
-            PublisherServiceApiClient client = PublisherServiceApiClient.Create(settings: publisherSettings);
+            PublisherServiceApiClient client = new PublisherServiceApiClientBuilder { Settings = publisherSettings }.Build();
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
@@ -107,17 +107,17 @@ namespace Google.Cloud.Tools.Snippets
             PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings();
             publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings
                 .WithCancellationToken(CancellationToken.None)
-                .WithCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(5)))
+                .WithTimeout(TimeSpan.FromSeconds(5))
                 .WithHeader("ClientVersion", "1.0.0");
 
             // Override the above Timing and CancellationToken in the client-wide CallSettings;
             // the Headers are not overridden.
             publisherSettings.CallSettings = CallSettings
-                .FromCallTiming(CallTiming.FromDeadline(deadline))
+                .FromExpiration(Expiration.FromDeadline(deadline))
                 .WithCancellationToken(CancellationToken.None);
 
             // Create the client with the configured publisherSettings
-            PublisherServiceApiClient client = PublisherServiceApiClient.Create(settings: publisherSettings);
+            PublisherServiceApiClient client = new PublisherServiceApiClientBuilder { Settings = publisherSettings }.Build();
 
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
@@ -135,26 +135,15 @@ namespace Google.Cloud.Tools.Snippets
         public void RetrySettingsTiming()
         {
             // Sample: RetrySettingsTiming
-            // The overall operation mustn't take more than 30 seconds.
-            Expiration totalExpiration = Expiration.FromTimeout(TimeSpan.FromSeconds(30));
-
-            // The delay between one RPC finishing and when we make the next one.
             // Each delay is double the previous one, with a maximum of 5s.
             // The first delay is 1s, then 2s, then 4s, then 5s, then 5s, etc.
-            BackoffSettings retryBackoff = new BackoffSettings(
-                delay: TimeSpan.FromSeconds(1),
-                maxDelay: TimeSpan.FromSeconds(5),
-                delayMultiplier: 2.0);
-
-            // How long each individual RPC is allowed to take.
-            // Each timeout is 1.5x the previous one, with a maximum of 10s.
-            // The first timeout is 4s, then 6s, then 9s, then 10s, then 10s etc.
-            BackoffSettings timeoutBackoff = new BackoffSettings(
-                delay: TimeSpan.FromSeconds(4),
-                maxDelay: TimeSpan.FromSeconds(10),
-                delayMultiplier: 1.5);
-
-            RetrySettings settings = new RetrySettings(retryBackoff, timeoutBackoff, totalExpiration);
+            // Only aborted RPCs are retried in this example.
+            RetrySettings settings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: 10,
+                initialBackoff: TimeSpan.FromSeconds(1),
+                maxBackoff: TimeSpan.FromSeconds(5),
+                backoffMultiplier: 2.0,
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Aborted));
             // End sample
         }
     }

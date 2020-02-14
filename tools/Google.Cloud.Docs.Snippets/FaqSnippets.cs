@@ -38,8 +38,11 @@ namespace Google.Cloud.Tools.Snippets
             // For example, "localhost:8615"
             string emulatorHostAndPort = Environment.GetEnvironmentVariable("PUBSUB_EMULATOR_HOST");
 
-            Channel channel = new Channel(emulatorHostAndPort, ChannelCredentials.Insecure);
-            PublisherServiceApiClient client = PublisherServiceApiClient.Create(channel);
+            PublisherServiceApiClient client = new PublisherServiceApiClientBuilder
+            {
+                Endpoint = emulatorHostAndPort,
+                ChannelCredentials = ChannelCredentials.Insecure
+            }.Build();
             client.CreateTopic(new TopicName("project", "topic"));
             foreach (var topic in client.ListTopics(new ProjectName("project")))
             {
