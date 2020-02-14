@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta01</Version>
+    <Version>2.0.0-alpha00</Version>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
@@ -23,10 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.10.0" />
     <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="3.0.0-alpha00" />
-    <PackageReference Include="Google.LongRunning" Version="1.1.0" />
-    <PackageReference Include="Grpc.Core" Version="1.22.1" PrivateAssets="None" />
+    <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
+    <PackageReference Include="Grpc.Core" Version="2.27.0" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />

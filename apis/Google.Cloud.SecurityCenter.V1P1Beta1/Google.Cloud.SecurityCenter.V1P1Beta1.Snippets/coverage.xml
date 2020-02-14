@@ -7,6 +7,12 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.SecurityCenter.V1P1Beta1</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.LongRunning</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
