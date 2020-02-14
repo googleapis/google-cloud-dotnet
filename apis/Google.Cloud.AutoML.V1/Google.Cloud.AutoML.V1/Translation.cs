@@ -43,11 +43,11 @@ namespace Google.Cloud.AutoML.V1 {
             "bG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata), global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata.Parser, new[]{ "SourceLanguageCode", "TargetLanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics), global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics.Parser, new[]{ "BleuScore", "BaseBleuScore" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationModelMetadata), global::Google.Cloud.AutoML.V1.TranslationModelMetadata.Parser, new[]{ "BaseModel", "SourceLanguageCode", "TargetLanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationAnnotation), global::Google.Cloud.AutoML.V1.TranslationAnnotation.Parser, new[]{ "TranslatedContent" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata), global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata.Parser, new[]{ "SourceLanguageCode", "TargetLanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics), global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics.Parser, new[]{ "BleuScore", "BaseBleuScore" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationModelMetadata), global::Google.Cloud.AutoML.V1.TranslationModelMetadata.Parser, new[]{ "BaseModel", "SourceLanguageCode", "TargetLanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationAnnotation), global::Google.Cloud.AutoML.V1.TranslationAnnotation.Parser, new[]{ "TranslatedContent" }, null, null, null, null)
           }));
     }
     #endregion

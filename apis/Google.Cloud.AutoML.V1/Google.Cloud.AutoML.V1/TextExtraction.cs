@@ -42,9 +42,9 @@ namespace Google.Cloud.AutoML.V1 {
             "dXRvTWxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRvTUw6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionAnnotation), global::Google.Cloud.AutoML.V1.TextExtractionAnnotation.Parser, new[]{ "TextSegment", "Score" }, new[]{ "Annotation" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics), global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Parser, new[]{ "AuPrc", "ConfidenceMetricsEntries" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry), global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry.Parser, new[]{ "ConfidenceThreshold", "Recall", "Precision", "F1Score" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionAnnotation), global::Google.Cloud.AutoML.V1.TextExtractionAnnotation.Parser, new[]{ "TextSegment", "Score" }, new[]{ "Annotation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics), global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Parser, new[]{ "AuPrc", "ConfidenceMetricsEntries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry), global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry.Parser, new[]{ "ConfidenceThreshold", "Recall", "Precision", "F1Score" }, null, null, null, null)})
           }));
     }
     #endregion

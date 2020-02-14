@@ -42,13 +42,13 @@ namespace Google.Cloud.AutoML.V1 {
             "QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata), global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata.Parser, new[]{ "ClassificationType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionDatasetMetadata), global::Google.Cloud.AutoML.V1.TextExtractionDatasetMetadata.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata), global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentDatasetMetadata), global::Google.Cloud.AutoML.V1.TextSentimentDatasetMetadata.Parser, new[]{ "SentimentMax" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata), global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata), global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionDatasetMetadata), global::Google.Cloud.AutoML.V1.TextExtractionDatasetMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata), global::Google.Cloud.AutoML.V1.TextExtractionModelMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentDatasetMetadata), global::Google.Cloud.AutoML.V1.TextSentimentDatasetMetadata.Parser, new[]{ "SentimentMax" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata), global::Google.Cloud.AutoML.V1.TextSentimentModelMetadata.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -94,7 +94,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     /// <summary>Field number for the "classification_type" field.</summary>
     public const int ClassificationTypeFieldNumber = 1;
-    private global::Google.Cloud.AutoML.V1.ClassificationType classificationType_ = 0;
+    private global::Google.Cloud.AutoML.V1.ClassificationType classificationType_ = global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified;
     /// <summary>
     /// Required. Type of the classification problem.
     /// </summary>
@@ -126,7 +126,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ClassificationType != 0) hash ^= ClassificationType.GetHashCode();
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) hash ^= ClassificationType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,7 +140,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ClassificationType != 0) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ClassificationType);
       }
@@ -152,7 +152,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ClassificationType != 0) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ClassificationType);
       }
       if (_unknownFields != null) {
@@ -166,7 +166,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      if (other.ClassificationType != 0) {
+      if (other.ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         ClassificationType = other.ClassificationType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -229,7 +229,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     /// <summary>Field number for the "classification_type" field.</summary>
     public const int ClassificationTypeFieldNumber = 3;
-    private global::Google.Cloud.AutoML.V1.ClassificationType classificationType_ = 0;
+    private global::Google.Cloud.AutoML.V1.ClassificationType classificationType_ = global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified;
     /// <summary>
     /// Output only. Classification type of the dataset used to train this model.
     /// </summary>
@@ -261,7 +261,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ClassificationType != 0) hash ^= ClassificationType.GetHashCode();
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) hash ^= ClassificationType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -275,7 +275,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ClassificationType != 0) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) ClassificationType);
       }
@@ -287,7 +287,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ClassificationType != 0) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ClassificationType);
       }
       if (_unknownFields != null) {
@@ -301,7 +301,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      if (other.ClassificationType != 0) {
+      if (other.ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         ClassificationType = other.ClassificationType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

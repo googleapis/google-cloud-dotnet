@@ -62,8 +62,8 @@ namespace Google.Cloud.AutoML.V1 {
             "QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Model), global::Google.Cloud.AutoML.V1.Model.Parser, new[]{ "TranslationModelMetadata", "ImageClassificationModelMetadata", "TextClassificationModelMetadata", "ImageObjectDetectionModelMetadata", "TextExtractionModelMetadata", "TextSentimentModelMetadata", "Name", "DisplayName", "DatasetId", "CreateTime", "UpdateTime", "DeploymentState", "Etag", "Labels" }, new[]{ "ModelMetadata" }, new[]{ typeof(global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState) }, new pbr::GeneratedClrTypeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Model), global::Google.Cloud.AutoML.V1.Model.Parser, new[]{ "TranslationModelMetadata", "ImageClassificationModelMetadata", "TextClassificationModelMetadata", "ImageObjectDetectionModelMetadata", "TextExtractionModelMetadata", "TextSentimentModelMetadata", "Name", "DisplayName", "DatasetId", "CreateTime", "UpdateTime", "DeploymentState", "Etag", "Labels" }, new[]{ "ModelMetadata" }, new[]{ typeof(global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -296,7 +296,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     /// <summary>Field number for the "deployment_state" field.</summary>
     public const int DeploymentStateFieldNumber = 8;
-    private global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState deploymentState_ = 0;
+    private global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState deploymentState_ = global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState.Unspecified;
     /// <summary>
     /// Output only. Deployment state of the model. A model can only serve
     /// prediction requests after it gets deployed.
@@ -327,7 +327,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 34;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 274);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 274);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. The labels with user-defined metadata to organize your model.
@@ -412,7 +412,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (DeploymentState != 0) hash ^= DeploymentState.GetHashCode();
+      if (DeploymentState != global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState.Unspecified) hash ^= DeploymentState.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= (int) modelMetadataCase_;
@@ -445,7 +445,7 @@ namespace Google.Cloud.AutoML.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(CreateTime);
       }
-      if (DeploymentState != 0) {
+      if (DeploymentState != global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState.Unspecified) {
         output.WriteRawTag(64);
         output.WriteEnum((int) DeploymentState);
       }
@@ -523,7 +523,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (DeploymentState != 0) {
+      if (DeploymentState != global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeploymentState);
       }
       if (Etag.Length != 0) {
@@ -562,7 +562,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.DeploymentState != 0) {
+      if (other.DeploymentState != global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState.Unspecified) {
         DeploymentState = other.DeploymentState;
       }
       if (other.Etag.Length != 0) {

@@ -35,9 +35,9 @@ namespace Google.Cloud.AutoML.V1 {
             "dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.NormalizedVertex), global::Google.Cloud.AutoML.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BoundingPoly), global::Google.Cloud.AutoML.V1.BoundingPoly.Parser, new[]{ "NormalizedVertices" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.NormalizedVertex), global::Google.Cloud.AutoML.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BoundingPoly), global::Google.Cloud.AutoML.V1.BoundingPoly.Parser, new[]{ "NormalizedVertices" }, null, null, null, null)
           }));
     }
     #endregion
