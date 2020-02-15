@@ -202,8 +202,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The project on which to execute the request. The format is
-    /// `"projects/{project_id_or_number}"`.
+    /// Required. The project on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -217,11 +218,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// An optional [filter](/monitoring/api/v3/filters) describing
-    /// the descriptors to be returned.  The filter can reference
-    /// the descriptor's type and labels. For example, the
-    /// following filter returns only Google Compute Engine descriptors
-    /// that have an `id` label:
+    /// An optional [filter](https://cloud.google.com/monitoring/api/v3/filters)
+    /// describing the descriptors to be returned.  The filter can reference the
+    /// descriptor's type and labels. For example, the following filter returns
+    /// only Google Compute Engine descriptors that have an `id` label:
     ///
     ///     resource.type = starts_with("gce_") AND resource.label:id
     /// </summary>
@@ -453,7 +453,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If there are more results than have been returned, then this field is set
     /// to a non-empty value.  To see the additional results,
-    /// use that value as `pageToken` in the next call to this method.
+    /// use that value as `page_token` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -597,9 +597,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The monitored resource descriptor to get.  The format is
-    /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-    /// The `{resource_type}` is a predefined type, such as
+    /// Required. The monitored resource descriptor to get.  The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+    ///
+    /// The `[RESOURCE_TYPE]` is a predefined type, such as
     /// `cloudsql_database`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -738,8 +740,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The project on which to execute the request. The format is
-    /// `"projects/{project_id_or_number}"`.
+    /// Required. The project on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -755,10 +758,10 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If this field is empty, all custom and
     /// system-defined metric descriptors are returned.
-    /// Otherwise, the [filter](/monitoring/api/v3/filters)
+    /// Otherwise, the [filter](https://cloud.google.com/monitoring/api/v3/filters)
     /// specifies which metric descriptors are to be
     /// returned. For example, the following filter matches all
-    /// [custom metrics](/monitoring/custom-metrics):
+    /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics):
     ///
     ///     metric.type = starts_with("custom.googleapis.com/")
     /// </summary>
@@ -990,7 +993,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If there are more results than have been returned, then this field is set
     /// to a non-empty value.  To see the additional results,
-    /// use that value as `pageToken` in the next call to this method.
+    /// use that value as `page_token` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1134,9 +1137,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The metric descriptor on which to execute the request. The format is
-    /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-    /// An example value of `{metric_id}` is
+    /// Required. The metric descriptor on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+    ///
+    /// An example value of `[METRIC_ID]` is
     /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1273,8 +1278,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The project on which to execute the request. The format is
-    /// `"projects/{project_id_or_number}"`.
+    /// Required. The project on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1288,7 +1294,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int MetricDescriptorFieldNumber = 2;
     private global::Google.Api.MetricDescriptor metricDescriptor_;
     /// <summary>
-    /// Required. The new [custom metric](/monitoring/custom-metrics)
+    /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
     /// descriptor.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1446,9 +1452,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The metric descriptor on which to execute the request. The format is
-    /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-    /// An example of `{metric_id}` is:
+    /// Required. The metric descriptor on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+    ///
+    /// An example of `[METRIC_ID]` is:
     /// `"custom.googleapis.com/my_test_metric"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1591,8 +1599,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 10;
     private string name_ = "";
     /// <summary>
-    /// Required. The project on which to execute the request. The format is
-    /// "projects/{project_id_or_number}".
+    /// Required. The project on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1606,10 +1615,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Required. A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-    /// series should be returned.  The filter must specify a single metric type,
-    /// and can additionally specify metric labels and other information. For
-    /// example:
+    /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+    /// that specifies which time series should be returned.  The filter must
+    /// specify a single metric type, and can additionally specify metric labels
+    /// and other information. For example:
     ///
     ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
     ///         metric.labels.instance_name = "my-instance-name"
@@ -2008,7 +2017,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If there are more results than have been returned, then this field is set
     /// to a non-empty value.  To see the additional results,
-    /// use that value as `pageToken` in the next call to this method.
+    /// use that value as `page_token` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -2176,8 +2185,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The project on which to execute the request. The format is
-    /// `"projects/{project_id_or_number}"`.
+    /// Required. The project on which to execute the request. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

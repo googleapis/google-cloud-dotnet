@@ -132,14 +132,16 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The project in which to create the alerting policy. The format is
-    /// `projects/[PROJECT_ID]`.
+    /// Required. The project in which to create the alerting policy. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
     /// Note that this field names the parent container in which the alerting
     /// policy will be written, not the name of the created policy. The alerting
     /// policy that is returned will have a name that contains a normalized
     /// representation of this name as a prefix but adds a suffix of the form
-    /// `/alertPolicies/[POLICY_ID]`, identifying the policy in the container.
+    /// `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the
+    /// container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -155,7 +157,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// Required. The requested alerting policy. You should omit the `name` field in this
     /// policy. The name will be returned in the new policy, including
-    /// a new [ALERT_POLICY_ID] value.
+    /// a new `[ALERT_POLICY_ID]` value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.AlertPolicy AlertPolicy {
@@ -312,9 +314,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The alerting policy to retrieve. The format is
+    /// Required. The alerting policy to retrieve. The format is:
     ///
-    ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -453,9 +455,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The project whose alert policies are to be listed. The format is
+    /// Required. The project whose alert policies are to be listed. The format is:
     ///
-    ///     projects/[PROJECT_ID]
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
     /// Note that this field names the parent container in which the alerting
     /// policies to be listed are stored. To retrieve a single alerting policy
@@ -479,7 +481,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// alert policies to be included in the response.
     ///
     /// For more details, see [sorting and
-    /// filtering](/monitoring/api/v3/sorting-and-filtering).
+    /// filtering](https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -498,7 +500,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// prefixed with a minus sign to sort by the field in descending order.
     ///
     /// For more details, see [sorting and
-    /// filtering](/monitoring/api/v3/sorting-and-filtering).
+    /// filtering](https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -743,7 +745,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If there might be more results than were returned, then this field is set
     /// to a non-empty value. To see the additional results,
-    /// use that value as `pageToken` in the next call to this method.
+    /// use that value as `page_token` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1090,7 +1092,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// Required. The alerting policy to delete. The format is:
     ///
-    ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     ///
     /// For more information, see [AlertPolicy][google.monitoring.v3.AlertPolicy].
     /// </summary>
