@@ -574,8 +574,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -608,8 +609,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -642,8 +644,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -676,8 +679,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -748,9 +752,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
+        /// Required. The monitored resource descriptor to get.  The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+        ///
+        /// The `[RESOURCE_TYPE]` is a predefined type, such as
         /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
@@ -772,9 +778,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
+        /// Required. The monitored resource descriptor to get.  The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+        ///
+        /// The `[RESOURCE_TYPE]` is a predefined type, such as
         /// `cloudsql_database`.
         /// </param>
         /// <param name="cancellationToken">
@@ -793,9 +801,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
+        /// Required. The monitored resource descriptor to get.  The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+        ///
+        /// The `[RESOURCE_TYPE]` is a predefined type, such as
         /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
@@ -817,9 +827,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
+        /// Required. The monitored resource descriptor to get.  The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+        ///
+        /// The `[RESOURCE_TYPE]` is a predefined type, such as
         /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
@@ -841,9 +853,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
+        /// Required. The monitored resource descriptor to get.  The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+        ///
+        /// The `[RESOURCE_TYPE]` is a predefined type, such as
         /// `cloudsql_database`.
         /// </param>
         /// <param name="cancellationToken">
@@ -862,9 +876,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
+        /// Required. The monitored resource descriptor to get.  The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
+        ///
+        /// The `[RESOURCE_TYPE]` is a predefined type, such as
         /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
@@ -942,8 +958,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -976,8 +993,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1010,8 +1028,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1044,8 +1063,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1116,9 +1136,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example value of `[METRIC_ID]` is
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
@@ -1140,9 +1162,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example value of `[METRIC_ID]` is
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1161,9 +1185,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example value of `[METRIC_ID]` is
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
@@ -1185,9 +1211,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example value of `[METRIC_ID]` is
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
@@ -1209,9 +1237,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example value of `[METRIC_ID]` is
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1230,9 +1260,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example value of `[METRIC_ID]` is
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
@@ -1309,14 +1341,15 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](/monitoring/custom-metrics)
+        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
         /// descriptor.
         /// </param>
         /// <param name="callSettings">
@@ -1339,14 +1372,15 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](/monitoring/custom-metrics)
+        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
         /// descriptor.
         /// </param>
         /// <param name="cancellationToken">
@@ -1366,14 +1400,15 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](/monitoring/custom-metrics)
+        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
         /// descriptor.
         /// </param>
         /// <param name="callSettings">
@@ -1396,14 +1431,15 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](/monitoring/custom-metrics)
+        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
         /// descriptor.
         /// </param>
         /// <param name="callSettings">
@@ -1426,14 +1462,15 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](/monitoring/custom-metrics)
+        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
         /// descriptor.
         /// </param>
         /// <param name="cancellationToken">
@@ -1453,14 +1490,15 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](/monitoring/custom-metrics)
+        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
         /// descriptor.
         /// </param>
         /// <param name="callSettings">
@@ -1483,7 +1521,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1504,7 +1542,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1524,7 +1562,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1544,12 +1582,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example of `[METRIC_ID]` is:
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
@@ -1569,12 +1610,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example of `[METRIC_ID]` is:
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1591,12 +1635,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example of `[METRIC_ID]` is:
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
@@ -1613,12 +1660,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example of `[METRIC_ID]` is:
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
@@ -1638,12 +1688,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example of `[METRIC_ID]` is:
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1660,12 +1713,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
+        /// Required. The metric descriptor on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
+        ///
+        /// An example of `[METRIC_ID]` is:
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
@@ -1682,7 +1738,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1702,7 +1759,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1721,7 +1779,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1740,14 +1799,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// "projects/{project_id_or_number}".
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-        /// series should be returned.  The filter must specify a single metric type,
-        /// and can additionally specify metric labels and other information. For
-        /// example:
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
         ///
         ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         ///         metric.labels.instance_name = "my-instance-name"
@@ -1797,14 +1857,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// "projects/{project_id_or_number}".
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-        /// series should be returned.  The filter must specify a single metric type,
-        /// and can additionally specify metric labels and other information. For
-        /// example:
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
         ///
         ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         ///         metric.labels.instance_name = "my-instance-name"
@@ -1854,14 +1915,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// "projects/{project_id_or_number}".
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-        /// series should be returned.  The filter must specify a single metric type,
-        /// and can additionally specify metric labels and other information. For
-        /// example:
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
         ///
         ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         ///         metric.labels.instance_name = "my-instance-name"
@@ -1911,14 +1973,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// "projects/{project_id_or_number}".
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-        /// series should be returned.  The filter must specify a single metric type,
-        /// and can additionally specify metric labels and other information. For
-        /// example:
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
         ///
         ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         ///         metric.labels.instance_name = "my-instance-name"
@@ -2009,8 +2072,9 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="timeSeries">
         /// Required. The new data to be added to a list of time series.
@@ -2045,8 +2109,9 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="timeSeries">
         /// Required. The new data to be added to a list of time series.
@@ -2078,8 +2143,9 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="timeSeries">
         /// Required. The new data to be added to a list of time series.
@@ -2111,8 +2177,9 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="timeSeries">
         /// Required. The new data to be added to a list of time series.
@@ -2147,8 +2214,9 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="timeSeries">
         /// Required. The new data to be added to a list of time series.
@@ -2180,8 +2248,9 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
+        /// Required. The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="timeSeries">
         /// Required. The new data to be added to a list of time series.
@@ -2537,7 +2606,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2559,7 +2628,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new metric descriptor.
         /// User-created metric descriptors define
-        /// [custom metrics](/monitoring/custom-metrics).
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2580,7 +2649,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2601,7 +2671,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
-        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

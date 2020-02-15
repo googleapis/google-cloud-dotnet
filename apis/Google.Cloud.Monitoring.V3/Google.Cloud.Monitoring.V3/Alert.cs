@@ -151,9 +151,9 @@ namespace Google.Cloud.Monitoring.V3 {
     private string name_ = "";
     /// <summary>
     /// Required if the policy exists. The resource name for this policy. The
-    /// syntax is:
+    /// format is:
     ///
-    ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     ///
     /// `[ALERT_POLICY_ID]` is assigned by Stackdriver Monitoring when the policy
     /// is created.  When calling the
@@ -233,8 +233,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// OR according to the `combiner` field. If the combined conditions evaluate
     /// to true, then an incident is created. A policy can have from one to six
     /// conditions.
-    /// If |condition_time_series_uery_language| is present, it must be the only
-    /// |condition|.
+    /// If `condition_time_series_query_language` is present, it must be the only
+    /// `condition`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition> Conditions {
@@ -247,8 +247,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// How to combine the results of multiple conditions to determine if an
     /// incident should be opened.
-    /// If condition_time_series_query_language is present, this must be
-    /// COMBINE_UNSPECIFIED.
+    /// If `condition_time_series_query_language` is present, this must be
+    /// `COMBINE_UNSPECIFIED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType Combiner {
@@ -306,9 +306,9 @@ namespace Google.Cloud.Monitoring.V3 {
     /// [`NotificationChannel`][google.monitoring.v3.NotificationChannel]
     /// objects that are returned from the [`ListNotificationChannels`]
     /// [google.monitoring.v3.NotificationChannelService.ListNotificationChannels]
-    /// method. The syntax of the entries in this field is:
+    /// method. The format of the entries in this field is:
     ///
-    ///     projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+    ///     projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> NotificationChannels {
@@ -608,7 +608,7 @@ namespace Google.Cloud.Monitoring.V3 {
         [pbr::OriginalName("COMBINE_UNSPECIFIED")] CombineUnspecified = 0,
         /// <summary>
         /// Combine conditions using the logical `AND` operator. An
-        /// incident is created only if all conditions are met
+        /// incident is created only if all the conditions are met
         /// simultaneously. This combiner is satisfied if all conditions are
         /// met, even if they are met on completely different resources.
         /// </summary>
@@ -852,9 +852,9 @@ namespace Google.Cloud.Monitoring.V3 {
         private string name_ = "";
         /// <summary>
         /// Required if the condition exists. The unique resource name for this
-        /// condition. Its syntax is:
+        /// condition. Its format is:
         ///
-        ///     projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+        ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
         ///
         /// `[CONDITION_ID]` is assigned by Stackdriver Monitoring when the
         /// condition is created as part of a new or updated alerting policy.
@@ -1353,7 +1353,7 @@ namespace Google.Cloud.Monitoring.V3 {
             public const int FilterFieldNumber = 2;
             private string filter_ = "";
             /// <summary>
-            /// A [filter](/monitoring/api/v3/filters) that
+            /// A [filter](https://cloud.google.com/monitoring/api/v3/filters) that
             /// identifies which time series should be compared with the threshold.
             ///
             /// The filter is similar to the one that is specified in the
@@ -1399,11 +1399,11 @@ namespace Google.Cloud.Monitoring.V3 {
             public const int DenominatorFilterFieldNumber = 9;
             private string denominatorFilter_ = "";
             /// <summary>
-            /// A [filter](/monitoring/api/v3/filters) that identifies a time
-            /// series that should be used as the denominator of a ratio that will be
-            /// compared with the threshold. If a `denominator_filter` is specified,
-            /// the time series specified by the `filter` field will be used as the
-            /// numerator.
+            /// A [filter](https://cloud.google.com/monitoring/api/v3/filters) that
+            /// identifies a time series that should be used as the denominator of a
+            /// ratio that will be compared with the threshold. If a
+            /// `denominator_filter` is specified, the time series specified by the
+            /// `filter` field will be used as the numerator.
             ///
             /// The filter must specify the metric type and optionally may contain
             /// restrictions on resource type, resource labels, and metric labels.
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.Monitoring.V3 {
             public const int FilterFieldNumber = 1;
             private string filter_ = "";
             /// <summary>
-            /// A [filter](/monitoring/api/v3/filters) that
+            /// A [filter](https://cloud.google.com/monitoring/api/v3/filters) that
             /// identifies which time series should be compared with the threshold.
             ///
             /// The filter is similar to the one that is specified in the

@@ -160,7 +160,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new metric descriptor.
       /// User-created metric descriptors define
-      /// [custom metrics](/monitoring/custom-metrics).
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -172,7 +172,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Deletes a metric descriptor. Only user-created
-      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+      /// deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -411,7 +412,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new metric descriptor.
       /// User-created metric descriptors define
-      /// [custom metrics](/monitoring/custom-metrics).
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +426,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new metric descriptor.
       /// User-created metric descriptors define
-      /// [custom metrics](/monitoring/custom-metrics).
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -437,7 +438,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new metric descriptor.
       /// User-created metric descriptors define
-      /// [custom metrics](/monitoring/custom-metrics).
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -451,7 +452,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new metric descriptor.
       /// User-created metric descriptors define
-      /// [custom metrics](/monitoring/custom-metrics).
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -462,7 +463,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a metric descriptor. Only user-created
-      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -475,7 +477,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a metric descriptor. Only user-created
-      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -486,7 +489,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a metric descriptor. Only user-created
-      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -499,7 +503,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a metric descriptor. Only user-created
-      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -156,8 +156,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 7;
     private string name_ = "";
     /// <summary>
-    /// Required. The project whose groups are to be listed. The format is
-    /// `"projects/{project_id_or_number}"`.
+    /// Required. The project whose groups are to be listed. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -170,8 +171,11 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "children_of_group" field.</summary>
     public const int ChildrenOfGroupFieldNumber = 2;
     /// <summary>
-    /// A group name: `"projects/{project_id_or_number}/groups/{group_id}"`.
-    /// Returns groups whose `parentName` field contains the group
+    /// A group name. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+    ///
+    /// Returns groups whose `parent_name` field contains the group
     /// name.  If no groups have this parent, the results are empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -186,7 +190,10 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "ancestors_of_group" field.</summary>
     public const int AncestorsOfGroupFieldNumber = 3;
     /// <summary>
-    /// A group name: `"projects/{project_id_or_number}/groups/{group_id}"`.
+    /// A group name. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+    ///
     /// Returns groups that are ancestors of the specified group.
     /// The groups are returned in order, starting with the immediate parent and
     /// ending with the most distant ancestor.  If the specified group has no
@@ -204,9 +211,12 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>Field number for the "descendants_of_group" field.</summary>
     public const int DescendantsOfGroupFieldNumber = 4;
     /// <summary>
-    /// A group name: `"projects/{project_id_or_number}/groups/{group_id}"`.
+    /// A group name. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+    ///
     /// Returns the descendants of the specified group.  This is a superset of
-    /// the results returned by the `childrenOfGroup` filter, and includes
+    /// the results returned by the `children_of_group` filter, and includes
     /// children-of-children, and so forth.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -236,7 +246,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 6;
     private string pageToken_ = "";
     /// <summary>
-    /// If this field is not empty then it must contain the `nextPageToken` value
+    /// If this field is not empty then it must contain the `next_page_token` value
     /// returned by a previous call to this method.  Using this field causes the
     /// method to return additional results from the previous method call.
     /// </summary>
@@ -494,7 +504,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If there are more results than have been returned, then this field is set
     /// to a non-empty value.  To see the additional results,
-    /// use that value as `pageToken` in the next call to this method.
+    /// use that value as `page_token` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -638,8 +648,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The group to retrieve. The format is
-    /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+    /// Required. The group to retrieve. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -776,8 +787,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The project in which to create the group. The format is
-    /// `"projects/{project_id_or_number}"`.
+    /// Required. The project in which to create the group. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1154,8 +1166,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The group to delete. The format is
-    /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+    /// Required. The group to delete. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1326,8 +1339,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 7;
     private string name_ = "";
     /// <summary>
-    /// Required. The group whose members are listed. The format is
-    /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+    /// Required. The group whose members are listed. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1355,7 +1369,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// If this field is not empty then it must contain the `nextPageToken` value
+    /// If this field is not empty then it must contain the `next_page_token` value
     /// returned by a previous call to this method.  Using this field causes the
     /// method to return additional results from the previous method call.
     /// </summary>
@@ -1371,13 +1385,14 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// An optional [list filter](/monitoring/api/learn_more#filtering) describing
-    /// the members to be returned.  The filter may reference the type, labels, and
-    /// metadata of monitored resources that comprise the group.
-    /// For example, to return only resources representing Compute Engine VM
-    /// instances, use this filter:
+    /// An optional [list
+    /// filter](https://cloud.google.com/monitoring/api/learn_more#filtering)
+    /// describing the members to be returned.  The filter may reference the type,
+    /// labels, and metadata of monitored resources that comprise the group. For
+    /// example, to return only resources representing Compute Engine VM instances,
+    /// use this filter:
     ///
-    ///     resource.type = "gce_instance"
+    ///     `resource.type = "gce_instance"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -1616,7 +1631,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If there are more results than have been returned, then this field is
     /// set to a non-empty value.  To see the additional results, use that value as
-    /// `pageToken` in the next call to this method.
+    /// `page_token` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
