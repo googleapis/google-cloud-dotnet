@@ -6,5 +6,7 @@
   href: guides/
 - name: GAX API Reference
   href: obj/api/Google.Api.Gax.yml
+- name: Breaking changes (Feb 2020)
+  href: breaking-gax2.md
 - name: Major Version Plans
   href: major-version.md
