@@ -6,7 +6,7 @@ source toolversions.sh
 declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 
 # This script generates all APIs from the googleapis/googleapis github repository,
-# using the code generator from googleapis/gapic-generator.
+# using the code generator from googleapis/gapic-generator-csharp.
 # It will fetch both repositories if necessary.
 
 # Currently it will only work on Windows due to the way nuget packages installed;
@@ -17,7 +17,6 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 # - git
 # - wget
 # - unzip
-# - Java 9
 
 OUTDIR=tmp
 if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
@@ -28,16 +27,6 @@ else
 fi
 
 fetch_github_repos() {
-  if [ -d "gapic-generator" ]
-  then
-    git -C gapic-generator pull -q
-    git -C gapic-generator submodule update
-  else
-    git clone --recursive https://github.com/googleapis/gapic-generator \
-      --config core.autocrlf=false \
-      --config core.eol=lf
-  fi
-          
   if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" ]]
   then
     if [ -d "googleapis" ]
@@ -128,92 +117,6 @@ generate_microgenerator() {
   cp -r $API_TMP_DIR $API_OUT_DIR
 }
 
-generate_gapicgenerator() {
-  API_TMP_DIR=$OUTDIR/$1
-  API_OUT_DIR=apis
-  PROTO_PATH=$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
-  API_SRC_DIR=$GOOGLEAPIS/$PROTO_PATH
-  SERVICE_YAML=$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
-  # This is a hacky way of allowing a proto package to be explicitly specified,
-  # or inferred from the proto path. We might want to add an option to getapifield.py for default values.
-  PROTO_PACKAGE=$(python tools/getapifield.py apis/apis.json $1 protoPackage 2> /dev/null || echo $PROTO_PATH | sed 's/\//./g')
-
-  # Look the versioned directory and its parent for the service YAML.
-  # (Currently the location is in flux; we should be able to use just the
-  # versioned directory eventually.)
-  if [[ -f $API_SRC_DIR/$SERVICE_YAML ]]
-  then
-    API_YAML=$API_SRC_DIR/$SERVICE_YAML
-  elif [[ -f $API_SRC_DIR/../$SERVICE_YAML ]]
-  then
-    API_YAML=$API_SRC_DIR/../$SERVICE_YAML
-  else
-    echo "$SERVICE_YAML doesn't exist. Please check inputs."
-    exit 1
-  fi
-
-  mkdir $API_TMP_DIR
-  
-  # There should be only one gapic yaml file...
-  for i in $API_SRC_DIR/*_gapic.yaml
-  do
-    cp $i $API_TMP_DIR/gapic.yaml
-  done
-    
-  # We don't know why BigQuery DataTransfer doesn't work with the GAPIC v2 config, but it doesn't.
-  # Just until we switch to GAX v3 and the new microgenerator, use the legacy GAPIC v1 config file.
-  if [[ $1 == "Google.Cloud.BigQuery.DataTransfer.V1" ]]
-  then
-    cp $GOOGLEAPIS/google/cloud/bigquery/datatransfer/v1/bigquerydatatransfer_gapic.legacy.yaml $API_TMP_DIR/gapic.yaml
-  fi
-  
-  # Include extra protos, when they're present, even if they're not needed.
-  extra_protos=()
-  if [[ -d $GOOGLEAPIS/google/iam/v1 ]]; then extra_protos+=($GOOGLEAPIS/google/iam/v1/*.proto); fi
-  if [[ -f $GOOGLEAPIS/google/cloud/common_resources.proto ]]; then extra_protos+=($GOOGLEAPIS/google/cloud/common_resources.proto); fi
-  
-  # Generate the descriptor set for this API.
-  $PROTOC \
-    -I $GOOGLEAPIS \
-    -I $CORE_PROTOS_ROOT \
-    --include_source_info \
-    --include_imports \
-    -o $API_TMP_DIR/protos.desc \
-    $API_SRC_DIR/*.proto \
-    ${extra_protos[*]} \
-    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
-
-
-  jvm_args=()
-  jvm_args+=(-cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar)
-  
-  args=()
-  args+=(--descriptor_set=$API_TMP_DIR/protos.desc)
-  args+=(--service_yaml=$API_YAML)
-  args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
-  args+=(--output=$API_TMP_DIR)
-  args+=(--language=csharp)
-  args+=(--package=$PROTO_PACKAGE)
-
-  # Suppress protobuf warnings in Java 9/10. By the time they
-  # become a problem, we won't be using Java...
-  java $JAVA9OPTS ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]} \
-  2>&1 | grep -v "does not have control environment" || true # Ignore control environment warnings (and grep exit code)
-
-  cp -r $API_TMP_DIR/$1 $API_OUT_DIR
-
-  # Generate the C# protos/gRPC directly into the right directory
-  # This assumes they all belong to the same API, and are in the same namespace...
-  $PROTOC \
-    --csharp_out=$API_OUT_DIR/$1/$1 \
-    --grpc_out=$API_OUT_DIR/$1/$1 \
-    -I $GOOGLEAPIS \
-    -I $CORE_PROTOS_ROOT \
-    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    $API_SRC_DIR/*.proto \
-    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
-}
-
 generate_proto() {
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   mkdir -p apis/$1/$1
@@ -255,9 +158,6 @@ generate_api() {
   case "$GENERATOR" in
     micro)
       generate_microgenerator $1
-      ;;
-    gapic)
-      generate_gapicgenerator $1
       ;;
     proto)
       generate_proto $1
@@ -313,12 +213,6 @@ install_protoc
 install_microgenerator
 install_grpc
 fetch_github_repos
-GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
-
-# Build GAPIC generator once with gradle so we can invoke it from Java directly
-# once per API. We don't care that we're using deprecated Gradle features: we
-# won't be using Gradle at all by the end of 2018, with any luck...
-(cd gapic-generator; ./gradlew shadowJar --warning-mode=none)
 
 OUTDIR=tmp
 rm -rf $OUTDIR

@@ -24,6 +24,6 @@ Fields:
 - `testDependencies`: Dependencies for all test projects. (This can lead to redundant dependencies, but it's simple.)
 - `productName`: Name of product to include when using doc templates
 - `productUrl`: Product home page URL to include when using doc templates
-- `generator`: The generator type to use: "gapic", "micro", "proto", "protogrpc"
+- `generator`: The generator type to use: "micro", "proto", "protogrpc"
 - `protoPath`: The path within the `googleapis` repo to the API definition
 - `serviceYaml`: (GAPIC generator only) The file (one directory above `protoPath`) containing the service definition
