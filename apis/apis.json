@@ -1305,7 +1305,7 @@
     "id": "Google.LongRunning",
     "generator": "micro",
     "protoPath": "google/longrunning",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [
