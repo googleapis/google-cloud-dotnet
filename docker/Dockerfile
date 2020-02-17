@@ -3,9 +3,6 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.2.104-bionic
 
 RUN apt-get update
 RUN apt-get install -y git
-# Note: when all APIs are on the microgenerator, we can remove the following line.
-RUN apt-get install -y openjdk-8-jdk
-
 RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN python3 -m pip install --upgrade pip

@@ -11,7 +11,6 @@ Prerequisites:
 - `bash` (on Windows, the version that comes with Git for Windows)
 - `wget`
 - Python 3 on the path as `python`
-- Java 9+ (until the microgenerators are in use for everything)
 - .NET Core SDK, suitable for the version specified in `global.json`
 
 *Almost* all of the generation process works fine on Linux and
@@ -64,9 +63,8 @@ You'll typically want JSON like this:
 ```json
 {
   "id": "FIXME",
-  "generator": "gapic",
+  "generator": "micro",
   "protoPath": "FIXME",
-  "serviceYaml": "FIXME",
   "productName": "FIXME",
   "productUrl": "FIXME",
   "version": "1.0.0-beta01",
@@ -110,11 +108,6 @@ in which case all APIs will be generated.
 
 This will clone both the `googleapis` and `toolkit` repos as
 subdirectories, or pull them if they already exist.
-
-This may take a while, and will spew a lot of output. If it fails
-with a Java exception, that's probably due to a configuration issue
-somewhere. You can try to fix it yourself, but it's probably worth
-reaching out at that point.
 
 Step 5: Commit just the changes for your API
 --------------------------------------------

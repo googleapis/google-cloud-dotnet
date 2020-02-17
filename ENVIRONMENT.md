@@ -50,12 +50,6 @@ This is required for synthtool and other aspects of API generation
 
 It's expected that `pip` is also installed.
 
-## Java 8+
-
-Java is required for the "monolithic" API generator. Once all APIs are
-moved onto the "micro" generator (which is written in C#) this
-dependency will be removed.
-
 ## Other tools
 
 The following common tools are expected to be available:
