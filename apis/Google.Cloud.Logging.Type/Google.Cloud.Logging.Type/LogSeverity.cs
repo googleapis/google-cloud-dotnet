@@ -35,7 +35,7 @@ namespace Google.Cloud.Logging.Type {
             "GUdvb2dsZVxDbG91ZFxMb2dnaW5nXFR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Logging.Type.LogSeverity), }, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Logging.Type.LogSeverity), }, null, null));
     }
     #endregion
 
