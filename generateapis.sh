@@ -82,7 +82,7 @@ generate_microgenerator() {
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $API_SRC_DIR/*.proto \
-    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
+    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 
   # Allow protos to be changed after proto/gRPC generation but before the
   # GAPIC microgenerator. This is pretty extreme, but is used for service renaming.
@@ -104,7 +104,7 @@ generate_microgenerator() {
     -I $CORE_PROTOS_ROOT \
     $API_SRC_DIR/*.proto \
     $COMMON_RESOURCES_PROTO \
-    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
+    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 
   # The microgenerator currently creates Google.Cloud directories due to being given
   # the common resources proto. Clean up for now; this is being fixed in the generator.
@@ -124,7 +124,8 @@ generate_proto() {
     --csharp_out=apis/$1/$1 \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    $API_SRC_DIR/*.proto
+    $API_SRC_DIR/*.proto \
+    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 }
 
 generate_protogrpc() {
@@ -135,7 +136,8 @@ generate_protogrpc() {
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    $API_SRC_DIR/*.proto
+    $API_SRC_DIR/*.proto \
+    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 }
 
 generate_api() {
