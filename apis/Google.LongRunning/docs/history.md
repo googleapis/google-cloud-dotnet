@@ -1,5 +1,29 @@
 # Version history
 
+# Version 2.0.0-beta01, released 2020-02-17
+
+This is the first prerelease targeting GAX v3. Please see the [breaking changes
+guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+for details of changes to both GAX and code generation.
+
+# Version 1.2.0-beta01, released 2019-06-10
+
+- [Commit ee5c7dc](https://github.com/googleapis/google-cloud-dotnet/commit/ee5c7dc):
+  - Introduce ClientBuilders for all APIs (except Grafeas)
+  - (We need to work out what to do about Grafeas separately. Next commit will be code to remove the new builder which is generated for Grafeas.)
+- [Commit 0cb5661](https://github.com/googleapis/google-cloud-dotnet/commit/0cb5661):
+  - Revert "Regenerate all clients, without retrying on DeadlineExceeded"
+  - This reverts commit 877f04bb6a47d51399d2e4945e60f05a2b9097d0.
+- [Commit 877f04b](https://github.com/googleapis/google-cloud-dotnet/commit/877f04b): Regenerate all clients, without retrying on DeadlineExceeded
+- [Commit 34507ab](https://github.com/googleapis/google-cloud-dotnet/commit/34507ab): Use effective settings for PollUntilCompleted more carefully. Fixes [issue 3029](https://github.com/googleapis/google-cloud-dotnet/issues/3029).
+- [Commit a1a01f9](https://github.com/googleapis/google-cloud-dotnet/commit/a1a01f9):
+  - Regenerate all APIs with updated generator
+  - This populates x-goog-request-params on all requests
+- [Commit 45cd32e](https://github.com/googleapis/google-cloud-dotnet/commit/45cd32e):
+  - Regenerate Long Running Operations API
+  - This introduces a new WaitOperation call, along with comment changes
+- [Commit e539ddc](https://github.com/googleapis/google-cloud-dotnet/commit/e539ddc): Regenerate LRO API: comment changes only
+
 # Version 1.1.0, released 2019-02-19
 
 Added async RPC methods accepting full request objects.
