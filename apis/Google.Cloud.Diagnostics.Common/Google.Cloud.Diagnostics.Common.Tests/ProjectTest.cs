@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static MonitoredResource CreateGkeResource(string resourceType)
         {
             var resource = MonitoredResourceBuilder.FromPlatform(new Platform(
-                new GkePlatformDetails("json", "project-id", "cluster", "location", "host", "instance", "zone", "namespace", "pod", "container")));
+                new GkePlatformDetails("json", "project-id", "cluster", "location", "host", "instance", "zone", "namespace", "pod", "container", "clusterLocation")));
             resource.Type = resourceType;
             return resource;
         }
