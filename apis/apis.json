@@ -211,7 +211,7 @@
     "protoPath": "google/datastore/v1",
     "productName": "Google Cloud Datastore",
     "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [
@@ -576,7 +576,7 @@
   },
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -599,7 +599,7 @@
   },
   {
     "id": "Google.Cloud.Logging.NLog",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -624,7 +624,7 @@
     "id": "Google.Cloud.Logging.Type",
     "generator": "proto",
     "protoPath": "google/logging/type",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "description": "Version-agnostic types for the Google Stackdriver Logging API.",
@@ -642,7 +642,7 @@
     "protoPath": "google/logging/v2",
     "productName": "Stackdriver Logging",
     "productUrl": "https://cloud.google.com/logging/",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [
@@ -963,7 +963,7 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [
@@ -983,7 +983,7 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [
@@ -999,7 +999,7 @@
     "id": "Google.Cloud.Spanner.Data",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "other",
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
     "tags": [
@@ -1022,7 +1022,7 @@
     "id": "Google.Cloud.Spanner.Common.V1",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [
       "Spanner"
@@ -1039,7 +1039,7 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "grpc",
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [
@@ -1088,7 +1088,7 @@
     "id": "Google.Cloud.Storage.V1",
     "productName": "Google Cloud Storage",
     "productUrl": "https://cloud.google.com/storage/",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0-alpha00",
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
