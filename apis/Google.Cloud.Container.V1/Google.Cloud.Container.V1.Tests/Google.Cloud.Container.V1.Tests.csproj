@@ -23,4 +23,7 @@
     <Reference Condition="'$(TargetFramework)' == 'net452'" Include="Microsoft.CSharp" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
+  <PropertyGroup>
+    <NoWarn>0612;1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
+  </PropertyGroup>
 </Project>
