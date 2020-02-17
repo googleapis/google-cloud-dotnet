@@ -33,17 +33,20 @@ var client3 = new SpeechClientBuilder
 {
    UserAgent = "custom-user-agent"
 }.Build();
+```
 
 # Endpoints
 
 The previous GAX `ServiceEndpoint` class has been removed. Endpoints
 are now specified as strings. For example:
 
+```csharp
 // Customized synchronous creation
 var client3 = new SpeechClientBuilder
 {
     Endpoint = "sandbox.speech.googleapis.com"
 }.Build();
+```
 
 # Retry settings
 
