@@ -105,8 +105,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["src"] = src,
                         ["dest"] = "obj/api",
                         ["filter"] = "filterConfig.yml",
-                        // TODO: net45, really?
-                        ["properties"] = new JObject { ["TargetFramework"] = "net45" }
+                        ["properties"] = new JObject { ["TargetFramework"] = "net461" }
                     },
                 },
                 ["build"] = new JObject {
