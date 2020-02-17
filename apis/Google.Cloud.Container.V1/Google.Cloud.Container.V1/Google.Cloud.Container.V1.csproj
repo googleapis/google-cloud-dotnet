@@ -30,4 +30,7 @@
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
     <None Include="../../../LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
+  <PropertyGroup>
+    <NoWarn>0612;1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
+  </PropertyGroup>
 </Project>
