@@ -59,7 +59,7 @@ done
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
 if [[ ${#apis[@]} -eq 0 ]]
 then
-  apis=(${tools} $(find apis -mindepth 1 -maxdepth 1 -type d | sed 's/apis\///g'))
+  apis=(${tools} $($PYTHON3 tools/listapis.py apis/apis.json))
 fi
 
 # If we were given an API filter regex, apply it now.
