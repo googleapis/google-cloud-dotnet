@@ -1588,5 +1588,109 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             await client.BatchDeleteJobsAsync(request.ParentAsTenantOrProjectName, request.Filter, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void SearchJobsRequestObject()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SearchJobsRequest request = new SearchJobsRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                SearchMode = SearchJobsRequest.Types.SearchMode.FeaturedJobSearch,
+                RequestMetadata = new RequestMetadata(),
+                JobQuery = new JobQuery(),
+                EnableBroadening = false,
+                RequirePreciseResultSize = false,
+                HistogramQueries =
+                {
+                    new HistogramQuery(),
+                },
+                JobView = JobView.Small,
+                Offset = 1472300666,
+                PageSize = -226905851,
+                PageToken = "page_tokenf09e5538",
+                OrderBy = "order_byb4d33ada",
+                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
+                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                DisableKeywordMatch = true,
+            };
+            SearchJobsResponse expectedResponse = new SearchJobsResponse
+            {
+                MatchingJobs =
+                {
+                    new SearchJobsResponse.Types.MatchingJob(),
+                },
+                HistogramQueryResults =
+                {
+                    new HistogramQueryResult(),
+                },
+                NextPageToken = "next_page_tokendbee0940",
+                LocationFilters = { new Location(), },
+                EstimatedTotalSize = 1828561437,
+                TotalSize = 1202968108,
+                Metadata = new ResponseMetadata(),
+                BroadenedQueryJobsCount = 2131480093,
+                SpellCorrection = new SpellingCorrection(),
+            };
+            mockGrpcClient.Setup(x => x.SearchJobs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            SearchJobsResponse response = client.SearchJobs(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SearchJobsRequestObjectAsync()
+        {
+            moq::Mock<JobService.JobServiceClient> mockGrpcClient = new moq::Mock<JobService.JobServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SearchJobsRequest request = new SearchJobsRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                SearchMode = SearchJobsRequest.Types.SearchMode.FeaturedJobSearch,
+                RequestMetadata = new RequestMetadata(),
+                JobQuery = new JobQuery(),
+                EnableBroadening = false,
+                RequirePreciseResultSize = false,
+                HistogramQueries =
+                {
+                    new HistogramQuery(),
+                },
+                JobView = JobView.Small,
+                Offset = 1472300666,
+                PageSize = -226905851,
+                PageToken = "page_tokenf09e5538",
+                OrderBy = "order_byb4d33ada",
+                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
+                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                DisableKeywordMatch = true,
+            };
+            SearchJobsResponse expectedResponse = new SearchJobsResponse
+            {
+                MatchingJobs =
+                {
+                    new SearchJobsResponse.Types.MatchingJob(),
+                },
+                HistogramQueryResults =
+                {
+                    new HistogramQueryResult(),
+                },
+                NextPageToken = "next_page_tokendbee0940",
+                LocationFilters = { new Location(), },
+                EstimatedTotalSize = 1828561437,
+                TotalSize = 1202968108,
+                Metadata = new ResponseMetadata(),
+                BroadenedQueryJobsCount = 2131480093,
+                SpellCorrection = new SpellingCorrection(),
+            };
+            mockGrpcClient.Setup(x => x.SearchJobsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchJobsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
+            SearchJobsResponse responseCallSettings = await client.SearchJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SearchJobsResponse responseCancellationToken = await client.SearchJobsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

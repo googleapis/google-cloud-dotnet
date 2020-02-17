@@ -1679,52 +1679,23 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 },
                 JobView = JobView.Unspecified,
                 Offset = 0,
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
             };
             // Make the request
-            PagedEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> response = jobServiceClient.SearchJobs(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (SearchJobsResponse.Types.MatchingJob item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchJobsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (SearchJobsResponse.Types.MatchingJob item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<SearchJobsResponse.Types.MatchingJob> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SearchJobsResponse.Types.MatchingJob item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            SearchJobsResponse response = jobServiceClient.SearchJobs(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SearchJobs</summary>
+        /// <summary>Snippet for SearchJobsAsync</summary>
         public async Task SearchJobsRequestObjectAsync()
         {
             // Snippet: SearchJobsAsync(SearchJobsRequest, CallSettings)
+            // Additional: SearchJobsAsync(SearchJobsRequest, CancellationToken)
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -1742,45 +1713,15 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 },
                 JobView = JobView.Unspecified,
                 Offset = 0,
+                PageSize = 0,
+                PageToken = "",
                 OrderBy = "",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
             };
             // Make the request
-            PagedAsyncEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> response = jobServiceClient.SearchJobsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SearchJobsResponse.Types.MatchingJob item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchJobsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (SearchJobsResponse.Types.MatchingJob item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<SearchJobsResponse.Types.MatchingJob> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SearchJobsResponse.Types.MatchingJob item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            SearchJobsResponse response = await jobServiceClient.SearchJobsAsync(request);
             // End snippet
         }
 

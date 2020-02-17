@@ -556,6 +556,8 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 RequestMetadata = new RequestMetadata(),
                 ProfileQuery = new ProfileQuery(),
+                PageSize = 0,
+                PageToken = "",
                 Offset = 0,
                 DisableSpellCheck = false,
                 OrderBy = "",
@@ -568,46 +570,15 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 StrictKeywordsSearch = false,
             };
             // Make the request
-            PagedEnumerable<SearchProfilesResponse, HistogramQueryResult> response = profileServiceClient.SearchProfiles(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (HistogramQueryResult item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchProfilesResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (HistogramQueryResult item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<HistogramQueryResult> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (HistogramQueryResult item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            SearchProfilesResponse response = profileServiceClient.SearchProfiles(request);
             // End snippet
         }
 
-        /// <summary>Snippet for SearchProfiles</summary>
+        /// <summary>Snippet for SearchProfilesAsync</summary>
         public async Task SearchProfilesRequestObjectAsync()
         {
             // Snippet: SearchProfilesAsync(SearchProfilesRequest, CallSettings)
+            // Additional: SearchProfilesAsync(SearchProfilesRequest, CancellationToken)
             // Create client
             ProfileServiceClient profileServiceClient = await ProfileServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -616,6 +587,8 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 RequestMetadata = new RequestMetadata(),
                 ProfileQuery = new ProfileQuery(),
+                PageSize = 0,
+                PageToken = "",
                 Offset = 0,
                 DisableSpellCheck = false,
                 OrderBy = "",
@@ -628,39 +601,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 StrictKeywordsSearch = false,
             };
             // Make the request
-            PagedAsyncEnumerable<SearchProfilesResponse, HistogramQueryResult> response = profileServiceClient.SearchProfilesAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((HistogramQueryResult item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchProfilesResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (HistogramQueryResult item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<HistogramQueryResult> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (HistogramQueryResult item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            SearchProfilesResponse response = await profileServiceClient.SearchProfilesAsync(request);
             // End snippet
         }
     }
