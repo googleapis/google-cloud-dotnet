@@ -1055,7 +1055,7 @@
     "protoPath": "google/cloud/speech/v1",
     "productName": "Google Cloud Speech",
     "productUrl": "https://cloud.google.com/speech",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
     "tags": [
