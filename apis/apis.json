@@ -97,7 +97,7 @@
     "protoPath": "google/bigtable/admin/v2",
     "productName": "Google Cloud Bigtable Administration",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [
@@ -118,7 +118,7 @@
     "id": "Google.Cloud.Bigtable.Common.V2",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [
       "Bigtable"
@@ -134,7 +134,7 @@
     "protoPath": "google/bigtable/v2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [
