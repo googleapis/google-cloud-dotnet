@@ -371,7 +371,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -404,7 +404,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -439,7 +439,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -472,7 +472,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -507,7 +507,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -540,7 +540,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -575,7 +575,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -608,7 +608,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -643,7 +643,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -676,7 +676,7 @@ namespace Google.Cloud.Monitoring.V3
         /// Required. The REST resource name of the parent from which to retrieve
         /// the notification channel descriptors. The expected syntax is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
         /// Note that this names the parent container in which to look for the
         /// descriptors; to retrieve a single descriptor by name, use the
@@ -738,8 +738,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -754,8 +755,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -770,8 +772,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -783,8 +786,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -799,8 +803,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -815,8 +820,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -828,8 +834,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -844,8 +851,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -860,8 +868,9 @@ namespace Google.Cloud.Monitoring.V3
         /// are expected / permitted for a notification channel of the given type.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel type for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// Required. The channel type for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[CHANNEL_TYPE]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -890,8 +899,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -920,8 +932,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -950,8 +965,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -980,8 +998,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1010,8 +1031,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1040,8 +1064,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1070,8 +1097,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1100,8 +1130,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1130,8 +1163,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1160,8 +1196,11 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is
-        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// Required. The project on which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// 
+        /// This names the container
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
@@ -1233,8 +1272,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1252,8 +1292,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1271,8 +1312,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1287,8 +1329,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1306,8 +1349,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1325,8 +1369,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1341,8 +1386,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1360,8 +1406,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1379,8 +1426,9 @@ namespace Google.Cloud.Monitoring.V3
         /// that was supplied in the call to the create method.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1424,10 +1472,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1450,10 +1498,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1476,10 +1524,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1498,10 +1546,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1524,10 +1572,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1550,10 +1598,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1572,10 +1620,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1598,10 +1646,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1624,10 +1672,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1646,10 +1694,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1672,10 +1720,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1698,10 +1746,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1720,10 +1768,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1746,10 +1794,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1772,10 +1820,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="name">
         /// Required. The project on which to execute the request. The format is:
         /// 
-        /// projects/[PROJECT_ID]
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the container into which the channel will be
-        /// written. This does not name the newly created channel. The resulting
+        /// This names the container into which the channel will be
+        /// written, this does not name the newly created channel. The resulting
         /// channel's name will have a normalized version of this field as a prefix,
         /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
         /// </param>
@@ -1910,8 +1958,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -1932,8 +1981,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -1954,8 +2004,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -1972,8 +2023,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -1994,8 +2046,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -2016,8 +2069,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -2034,8 +2088,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -2056,8 +2111,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
@@ -2078,8 +2134,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a notification channel.
         /// </summary>
         /// <param name="name">
-        /// Required. The channel for which to execute the request. The format is
-        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// Required. The channel for which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
         /// </param>
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
