@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Talent.V4Beta1</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.LongRunning</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

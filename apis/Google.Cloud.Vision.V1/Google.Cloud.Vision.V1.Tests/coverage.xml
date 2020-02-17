@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Vision.V1</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.LongRunning</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

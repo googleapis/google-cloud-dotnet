@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Dialogflow.V2</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.LongRunning</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
