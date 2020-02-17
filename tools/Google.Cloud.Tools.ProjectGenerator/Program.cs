@@ -574,10 +574,6 @@ shell.run(
                 );
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
-            // Allow test projects to use dynamic...
-            dependenciesElement.Add(new XElement("Reference",
-                new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
-                new XAttribute("Include", "Microsoft.CSharp")));
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
