@@ -49,10 +49,10 @@ namespace Google.Cloud.OrgPolicy.V1 {
             "VjHqAhxHb29nbGU6OkNsb3VkOjpPcmdQb2xpY3k6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy), global::Google.Cloud.OrgPolicy.V1.Policy.Parser, new[]{ "Version", "Constraint", "Etag", "UpdateTime", "ListPolicy", "BooleanPolicy", "RestoreDefault" }, new[]{ "PolicyType" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy), global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Parser, new[]{ "AllowedValues", "DeniedValues", "AllValues", "SuggestedValue", "InheritFromParent" }, null, new[]{ typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.BooleanPolicy), global::Google.Cloud.OrgPolicy.V1.Policy.Types.BooleanPolicy.Parser, new[]{ "Enforced" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.RestoreDefault), global::Google.Cloud.OrgPolicy.V1.Policy.Types.RestoreDefault.Parser, null, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy), global::Google.Cloud.OrgPolicy.V1.Policy.Parser, new[]{ "Version", "Constraint", "Etag", "UpdateTime", "ListPolicy", "BooleanPolicy", "RestoreDefault" }, new[]{ "PolicyType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy), global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Parser, new[]{ "AllowedValues", "DeniedValues", "AllValues", "SuggestedValue", "InheritFromParent" }, null, new[]{ typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.BooleanPolicy), global::Google.Cloud.OrgPolicy.V1.Policy.Types.BooleanPolicy.Parser, new[]{ "Enforced" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V1.Policy.Types.RestoreDefault), global::Google.Cloud.OrgPolicy.V1.Policy.Types.RestoreDefault.Parser, null, null, null, null, null)})
           }));
     }
     #endregion
@@ -559,7 +559,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
 
         /// <summary>Field number for the "all_values" field.</summary>
         public const int AllValuesFieldNumber = 3;
-        private global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues allValues_ = 0;
+        private global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues allValues_ = global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues.Unspecified;
         /// <summary>
         /// The policy all_values state.
         /// </summary>
@@ -724,7 +724,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
           int hash = 1;
           hash ^= allowedValues_.GetHashCode();
           hash ^= deniedValues_.GetHashCode();
-          if (AllValues != 0) hash ^= AllValues.GetHashCode();
+          if (AllValues != global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues.Unspecified) hash ^= AllValues.GetHashCode();
           if (SuggestedValue.Length != 0) hash ^= SuggestedValue.GetHashCode();
           if (InheritFromParent != false) hash ^= InheritFromParent.GetHashCode();
           if (_unknownFields != null) {
@@ -742,7 +742,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
         public void WriteTo(pb::CodedOutputStream output) {
           allowedValues_.WriteTo(output, _repeated_allowedValues_codec);
           deniedValues_.WriteTo(output, _repeated_deniedValues_codec);
-          if (AllValues != 0) {
+          if (AllValues != global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues.Unspecified) {
             output.WriteRawTag(24);
             output.WriteEnum((int) AllValues);
           }
@@ -764,7 +764,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
           int size = 0;
           size += allowedValues_.CalculateSize(_repeated_allowedValues_codec);
           size += deniedValues_.CalculateSize(_repeated_deniedValues_codec);
-          if (AllValues != 0) {
+          if (AllValues != global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AllValues);
           }
           if (SuggestedValue.Length != 0) {
@@ -786,7 +786,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
           }
           allowedValues_.Add(other.allowedValues_);
           deniedValues_.Add(other.deniedValues_);
-          if (other.AllValues != 0) {
+          if (other.AllValues != global::Google.Cloud.OrgPolicy.V1.Policy.Types.ListPolicy.Types.AllValues.Unspecified) {
             AllValues = other.AllValues;
           }
           if (other.SuggestedValue.Length != 0) {
