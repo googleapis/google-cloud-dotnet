@@ -1359,5 +1359,97 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             await client.DeleteProfileAsync(request.ProfileName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void SearchProfilesRequestObject()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            SearchProfilesRequest request = new SearchProfilesRequest
+            {
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                RequestMetadata = new RequestMetadata(),
+                ProfileQuery = new ProfileQuery(),
+                PageSize = -226905851,
+                PageToken = "page_tokenf09e5538",
+                Offset = 1472300666,
+                DisableSpellCheck = true,
+                OrderBy = "order_byb4d33ada",
+                CaseSensitiveSort = true,
+                HistogramQueries =
+                {
+                    new HistogramQuery(),
+                },
+                ResultSetId = "result_set_id6cf58a14",
+                StrictKeywordsSearch = true,
+            };
+            SearchProfilesResponse expectedResponse = new SearchProfilesResponse
+            {
+                EstimatedTotalSize = 5269174732212511261L,
+                SpellCorrection = new SpellingCorrection(),
+                Metadata = new ResponseMetadata(),
+                NextPageToken = "next_page_tokendbee0940",
+                HistogramQueryResults =
+                {
+                    new HistogramQueryResult(),
+                },
+                SummarizedProfiles =
+                {
+                    new SummarizedProfile(),
+                },
+                ResultSetId = "result_set_id6cf58a14",
+            };
+            mockGrpcClient.Setup(x => x.SearchProfiles(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            SearchProfilesResponse response = client.SearchProfiles(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SearchProfilesRequestObjectAsync()
+        {
+            moq::Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new moq::Mock<ProfileService.ProfileServiceClient>(moq::MockBehavior.Strict);
+            SearchProfilesRequest request = new SearchProfilesRequest
+            {
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                RequestMetadata = new RequestMetadata(),
+                ProfileQuery = new ProfileQuery(),
+                PageSize = -226905851,
+                PageToken = "page_tokenf09e5538",
+                Offset = 1472300666,
+                DisableSpellCheck = true,
+                OrderBy = "order_byb4d33ada",
+                CaseSensitiveSort = true,
+                HistogramQueries =
+                {
+                    new HistogramQuery(),
+                },
+                ResultSetId = "result_set_id6cf58a14",
+                StrictKeywordsSearch = true,
+            };
+            SearchProfilesResponse expectedResponse = new SearchProfilesResponse
+            {
+                EstimatedTotalSize = 5269174732212511261L,
+                SpellCorrection = new SpellingCorrection(),
+                Metadata = new ResponseMetadata(),
+                NextPageToken = "next_page_tokendbee0940",
+                HistogramQueryResults =
+                {
+                    new HistogramQueryResult(),
+                },
+                SummarizedProfiles =
+                {
+                    new SummarizedProfile(),
+                },
+                ResultSetId = "result_set_id6cf58a14",
+            };
+            mockGrpcClient.Setup(x => x.SearchProfilesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchProfilesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
+            SearchProfilesResponse responseCallSettings = await client.SearchProfilesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SearchProfilesResponse responseCancellationToken = await client.SearchProfilesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

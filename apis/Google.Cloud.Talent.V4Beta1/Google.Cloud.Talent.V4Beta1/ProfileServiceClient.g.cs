@@ -828,8 +828,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="HistogramQueryResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfiles(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchProfilesResponse SearchProfiles(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -842,9 +842,23 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="HistogramQueryResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfilesAsync(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchProfilesResponse> SearchProfilesAsync(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches for profiles within a tenant.
+        /// 
+        /// For example, search by raw queries "software engineer in Mountain View" or
+        /// search by structured filters (location filter, education filter, etc.).
+        /// 
+        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchProfilesResponse> SearchProfilesAsync(SearchProfilesRequest request, st::CancellationToken cancellationToken) =>
+            SearchProfilesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ProfileService client wrapper implementation, for convenient use.</summary>
@@ -1058,11 +1072,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="HistogramQueryResult"/> resources.</returns>
-        public override gax::PagedEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfiles(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>The RPC response.</returns>
+        public override SearchProfilesResponse SearchProfiles(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchProfilesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<SearchProfilesRequest, SearchProfilesResponse, HistogramQueryResult>(_callSearchProfiles, request, callSettings);
+            return _callSearchProfiles.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -1075,11 +1089,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="HistogramQueryResult"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfilesAsync(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchProfilesResponse> SearchProfilesAsync(SearchProfilesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchProfilesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchProfilesRequest, SearchProfilesResponse, HistogramQueryResult>(_callSearchProfiles, request, callSettings);
+            return _callSearchProfiles.Async(request, callSettings);
         }
     }
 
@@ -1087,22 +1101,10 @@ namespace Google.Cloud.Talent.V4Beta1
     {
     }
 
-    public partial class SearchProfilesRequest : gaxgrpc::IPageRequest
-    {
-    }
-
     public partial class ListProfilesResponse : gaxgrpc::IPageResponse<Profile>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Profile> GetEnumerator() => Profiles.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class SearchProfilesResponse : gaxgrpc::IPageResponse<HistogramQueryResult>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<HistogramQueryResult> GetEnumerator() => HistogramQueryResults.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

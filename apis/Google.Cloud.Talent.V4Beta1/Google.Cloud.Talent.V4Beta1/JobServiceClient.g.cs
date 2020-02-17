@@ -2547,8 +2547,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="SearchJobsResponse.Types.MatchingJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> SearchJobs(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchJobsResponse SearchJobs(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2560,11 +2560,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="SearchJobsResponse.Types.MatchingJob"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> SearchJobsAsync(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchJobsResponse> SearchJobsAsync(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// 
+        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
+        /// present in the database, and only returns jobs that the caller has
+        /// permission to search against.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchJobsResponse> SearchJobsAsync(SearchJobsRequest request, st::CancellationToken cancellationToken) =>
+            SearchJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
@@ -2945,11 +2956,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="SearchJobsResponse.Types.MatchingJob"/> resources.</returns>
-        public override gax::PagedEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> SearchJobs(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>The RPC response.</returns>
+        public override SearchJobsResponse SearchJobs(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchJobsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<SearchJobsRequest, SearchJobsResponse, SearchJobsResponse.Types.MatchingJob>(_callSearchJobs, request, callSettings);
+            return _callSearchJobs.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -2961,13 +2972,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="SearchJobsResponse.Types.MatchingJob"/> resources.
-        /// </returns>
-        public override gax::PagedAsyncEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> SearchJobsAsync(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchJobsResponse> SearchJobsAsync(SearchJobsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchJobsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchJobsRequest, SearchJobsResponse, SearchJobsResponse.Types.MatchingJob>(_callSearchJobs, request, callSettings);
+            return _callSearchJobs.Async(request, callSettings);
         }
 
         /// <summary>
