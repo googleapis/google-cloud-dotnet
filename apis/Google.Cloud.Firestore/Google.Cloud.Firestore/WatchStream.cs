@@ -206,10 +206,15 @@ namespace Google.Cloud.Firestore
             }
 
             // Create a new enumerator for the retry attempt sequence, starting with a backoff of zero.
-            IEnumerator<RetryAttempt> CreateRetryAttemptSequence() =>
-                RetryAttempt
+            IEnumerator<RetryAttempt> CreateRetryAttemptSequence()
+            {
+                var iterator = RetryAttempt
                     .CreateRetrySequence(_backoffSettings, _scheduler, initialBackoffOverride: TimeSpan.Zero)
                     .GetEnumerator();
+                // Make sure Current is already valid
+                iterator.MoveNext();
+                return iterator;
+            }
         }
 
         internal void Stop(CancellationToken userCancellationToken)
