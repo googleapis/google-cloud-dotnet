@@ -94,7 +94,7 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>
         /// The string representation of this <see cref="TopicName"/> with pattern <c>_deleted-topic_</c>.
         /// </returns>
-        public static string Format() => s_deletedTopic.Expand();
+        public static string FormatDeletedTopic() => s_deletedTopic.Expand();
 
         /// <summary>Parses the given resource name string into a new <see cref="TopicName"/> instance.</summary>
         /// <remarks>
