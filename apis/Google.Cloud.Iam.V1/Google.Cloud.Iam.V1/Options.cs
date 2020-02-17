@@ -33,8 +33,8 @@ namespace Google.Cloud.Iam.V1 {
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetPolicyOptions), global::Google.Cloud.Iam.V1.GetPolicyOptions.Parser, new[]{ "RequestedPolicyVersion" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetPolicyOptions), global::Google.Cloud.Iam.V1.GetPolicyOptions.Parser, new[]{ "RequestedPolicyVersion" }, null, null, null, null)
           }));
     }
     #endregion

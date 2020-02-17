@@ -52,11 +52,11 @@ namespace Google.Cloud.Iam.V1 {
             "XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Iam.V1.OptionsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.SetIamPolicyRequest), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetIamPolicyRequest), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource", "Options" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser, new[]{ "Resource", "Permissions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsResponse), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser, new[]{ "Permissions" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.SetIamPolicyRequest), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetIamPolicyRequest), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser, new[]{ "Resource", "Permissions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsResponse), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser, new[]{ "Permissions" }, null, null, null, null)
           }));
     }
     #endregion

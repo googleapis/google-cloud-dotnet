@@ -47,12 +47,12 @@ namespace Google.Cloud.Iam.V1 {
             "dWRcSWFtXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.ExprReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Policy), global::Google.Cloud.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "Etag" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Binding), global::Google.Cloud.Iam.V1.Binding.Parser, new[]{ "Role", "Members", "Condition" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.PolicyDelta), global::Google.Cloud.Iam.V1.PolicyDelta.Parser, new[]{ "BindingDeltas", "AuditConfigDeltas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.BindingDelta), global::Google.Cloud.Iam.V1.BindingDelta.Parser, new[]{ "Action", "Role", "Member", "Condition" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.BindingDelta.Types.Action) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.AuditConfigDelta), global::Google.Cloud.Iam.V1.AuditConfigDelta.Parser, new[]{ "Action", "Service", "ExemptedMember", "LogType" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Policy), global::Google.Cloud.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Binding), global::Google.Cloud.Iam.V1.Binding.Parser, new[]{ "Role", "Members", "Condition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.PolicyDelta), global::Google.Cloud.Iam.V1.PolicyDelta.Parser, new[]{ "BindingDeltas", "AuditConfigDeltas" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.BindingDelta), global::Google.Cloud.Iam.V1.BindingDelta.Parser, new[]{ "Action", "Role", "Member", "Condition" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.BindingDelta.Types.Action) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.AuditConfigDelta), global::Google.Cloud.Iam.V1.AuditConfigDelta.Parser, new[]{ "Action", "Service", "ExemptedMember", "LogType" }, null, new[]{ typeof(global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action) }, null, null)
           }));
     }
     #endregion
@@ -740,7 +740,7 @@ namespace Google.Cloud.Iam.V1 {
 
     /// <summary>Field number for the "action" field.</summary>
     public const int ActionFieldNumber = 1;
-    private global::Google.Cloud.Iam.V1.BindingDelta.Types.Action action_ = 0;
+    private global::Google.Cloud.Iam.V1.BindingDelta.Types.Action action_ = global::Google.Cloud.Iam.V1.BindingDelta.Types.Action.Unspecified;
     /// <summary>
     /// The action that was performed on a Binding.
     /// Required
@@ -822,7 +822,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Action != 0) hash ^= Action.GetHashCode();
+      if (Action != global::Google.Cloud.Iam.V1.BindingDelta.Types.Action.Unspecified) hash ^= Action.GetHashCode();
       if (Role.Length != 0) hash ^= Role.GetHashCode();
       if (Member.Length != 0) hash ^= Member.GetHashCode();
       if (condition_ != null) hash ^= Condition.GetHashCode();
@@ -839,7 +839,7 @@ namespace Google.Cloud.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Iam.V1.BindingDelta.Types.Action.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Action);
       }
@@ -863,7 +863,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Iam.V1.BindingDelta.Types.Action.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (Role.Length != 0) {
@@ -886,7 +886,7 @@ namespace Google.Cloud.Iam.V1 {
       if (other == null) {
         return;
       }
-      if (other.Action != 0) {
+      if (other.Action != global::Google.Cloud.Iam.V1.BindingDelta.Types.Action.Unspecified) {
         Action = other.Action;
       }
       if (other.Role.Length != 0) {
@@ -1005,7 +1005,7 @@ namespace Google.Cloud.Iam.V1 {
 
     /// <summary>Field number for the "action" field.</summary>
     public const int ActionFieldNumber = 1;
-    private global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action action_ = 0;
+    private global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action action_ = global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action.Unspecified;
     /// <summary>
     /// The action that was performed on an audit configuration in a policy.
     /// Required
@@ -1090,7 +1090,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Action != 0) hash ^= Action.GetHashCode();
+      if (Action != global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action.Unspecified) hash ^= Action.GetHashCode();
       if (Service.Length != 0) hash ^= Service.GetHashCode();
       if (ExemptedMember.Length != 0) hash ^= ExemptedMember.GetHashCode();
       if (LogType.Length != 0) hash ^= LogType.GetHashCode();
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Action);
       }
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Action != 0) {
+      if (Action != global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (Service.Length != 0) {
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.Iam.V1 {
       if (other == null) {
         return;
       }
-      if (other.Action != 0) {
+      if (other.Action != global::Google.Cloud.Iam.V1.AuditConfigDelta.Types.Action.Unspecified) {
         Action = other.Action;
       }
       if (other.Service.Length != 0) {
