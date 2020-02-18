@@ -576,7 +576,7 @@
   },
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "3.0.0-alpha00",
+    "version": "3.0.0-beta01",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -589,8 +589,8 @@
     "dependencies": {
       "log4net": "2.0.8",
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta01",
-      "Google.Cloud.Logging.V2": "project",
-      "Google.Cloud.DevTools.Common": "project",
+      "Google.Cloud.Logging.V2": "3.0.0-beta01",
+      "Google.Cloud.DevTools.Common": "2.0.0-beta01",
       "Grpc.Core": "2.27.0"
     },
     "testDependencies": {
