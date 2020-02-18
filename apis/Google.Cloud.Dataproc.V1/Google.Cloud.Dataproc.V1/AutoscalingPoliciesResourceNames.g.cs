@@ -32,20 +32,20 @@ namespace Google.Cloud.Dataproc.V1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
+            /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>.
             /// </summary>
-            ProjectRegionAutoscalingPolicy = 1,
+            ProjectLocationAutoscalingPolicy = 1,
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>.
+            /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
             /// </summary>
-            ProjectLocationAutoscalingPolicy = 2
+            ProjectRegionAutoscalingPolicy = 2
         }
 
-        private static gax::PathTemplate s_projectRegionAutoscalingPolicy = new gax::PathTemplate("projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}");
-
         private static gax::PathTemplate s_projectLocationAutoscalingPolicy = new gax::PathTemplate("projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}");
+
+        private static gax::PathTemplate s_projectRegionAutoscalingPolicy = new gax::PathTemplate("projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}");
 
         /// <summary>Creates a <see cref="AutoscalingPolicyName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -55,17 +55,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public static AutoscalingPolicyName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
             new AutoscalingPolicyName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="AutoscalingPolicyName"/> with the pattern
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="autoscalingPolicyId">The <c>AutoscalingPolicy</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="AutoscalingPolicyName"/> constructed from the provided ids.</returns>
-        public static AutoscalingPolicyName FromProjectRegionAutoscalingPolicy(string projectId, string regionId, string autoscalingPolicyId) =>
-            new AutoscalingPolicyName(ResourceNameType.ProjectRegionAutoscalingPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), autoscalingPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)));
 
         /// <summary>
         /// Creates a <see cref="AutoscalingPolicyName"/> with the pattern
@@ -79,32 +68,29 @@ namespace Google.Cloud.Dataproc.V1
             new AutoscalingPolicyName(ResourceNameType.ProjectLocationAutoscalingPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), autoscalingPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)));
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="AutoscalingPolicyName"/> with pattern
+        /// Creates a <see cref="AutoscalingPolicyName"/> with the pattern
         /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="autoscalingPolicyId">The <c>AutoscalingPolicy</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="AutoscalingPolicyName"/> with pattern
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
-        /// </returns>
-        public static string Format(string projectId, string regionId, string autoscalingPolicyId) =>
-            FormatProjectRegionAutoscalingPolicy(projectId, regionId, autoscalingPolicyId);
+        /// <returns>A new instance of <see cref="AutoscalingPolicyName"/> constructed from the provided ids.</returns>
+        public static AutoscalingPolicyName FromProjectRegionAutoscalingPolicy(string projectId, string regionId, string autoscalingPolicyId) =>
+            new AutoscalingPolicyName(ResourceNameType.ProjectRegionAutoscalingPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), autoscalingPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AutoscalingPolicyName"/> with pattern
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="autoscalingPolicyId">The <c>AutoscalingPolicy</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="AutoscalingPolicyName"/> with pattern
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>.
         /// </returns>
-        public static string FormatProjectRegionAutoscalingPolicy(string projectId, string regionId, string autoscalingPolicyId) =>
-            s_projectRegionAutoscalingPolicy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)));
+        public static string Format(string projectId, string locationId, string autoscalingPolicyId) =>
+            FormatProjectLocationAutoscalingPolicy(projectId, locationId, autoscalingPolicyId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AutoscalingPolicyName"/> with pattern
@@ -121,6 +107,20 @@ namespace Google.Cloud.Dataproc.V1
             s_projectLocationAutoscalingPolicy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AutoscalingPolicyName"/> with pattern
+        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="autoscalingPolicyId">The <c>AutoscalingPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AutoscalingPolicyName"/> with pattern
+        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
+        /// </returns>
+        public static string FormatProjectRegionAutoscalingPolicy(string projectId, string regionId, string autoscalingPolicyId) =>
+            s_projectRegionAutoscalingPolicy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="AutoscalingPolicyName"/> instance.
         /// </summary>
         /// <remarks>
@@ -128,12 +128,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -151,12 +151,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -180,12 +180,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -207,12 +207,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -232,14 +232,14 @@ namespace Google.Cloud.Dataproc.V1
         {
             gax::GaxPreconditions.CheckNotNull(autoscalingPolicyName, nameof(autoscalingPolicyName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectRegionAutoscalingPolicy.TryParseName(autoscalingPolicyName, out resourceName))
-            {
-                result = FromProjectRegionAutoscalingPolicy(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
             if (s_projectLocationAutoscalingPolicy.TryParseName(autoscalingPolicyName, out resourceName))
             {
                 result = FromProjectLocationAutoscalingPolicy(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_projectRegionAutoscalingPolicy.TryParseName(autoscalingPolicyName, out resourceName))
+            {
+                result = FromProjectRegionAutoscalingPolicy(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
             if (allowUnparsed)
@@ -266,12 +266,12 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="AutoscalingPolicyName"/> class from the component parts of pattern
-        /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>
+        /// <c>projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="autoscalingPolicyId">The <c>AutoscalingPolicy</c> ID. Must not be <c>null</c> or empty.</param>
-        public AutoscalingPolicyName(string projectId, string regionId, string autoscalingPolicyId) : this(ResourceNameType.ProjectRegionAutoscalingPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), autoscalingPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)))
+        public AutoscalingPolicyName(string projectId, string locationId, string autoscalingPolicyId) : this(ResourceNameType.ProjectLocationAutoscalingPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), autoscalingPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(autoscalingPolicyId, nameof(autoscalingPolicyId)))
         {
         }
 
@@ -314,8 +314,8 @@ namespace Google.Cloud.Dataproc.V1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectRegionAutoscalingPolicy: return s_projectRegionAutoscalingPolicy.Expand(ProjectId, RegionId, AutoscalingPolicyId);
                 case ResourceNameType.ProjectLocationAutoscalingPolicy: return s_projectLocationAutoscalingPolicy.Expand(ProjectId, LocationId, AutoscalingPolicyId);
+                case ResourceNameType.ProjectRegionAutoscalingPolicy: return s_projectRegionAutoscalingPolicy.Expand(ProjectId, RegionId, AutoscalingPolicyId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -336,185 +336,144 @@ namespace Google.Cloud.Dataproc.V1
         public static bool operator !=(AutoscalingPolicyName a, AutoscalingPolicyName b) => !(a == b);
     }
 
-    /// <summary>Resource name for the <c>RegionOrLocation</c> resource.</summary>
-    public sealed partial class RegionOrLocationName : gax::IResourceName, sys::IEquatable<RegionOrLocationName>
+    /// <summary>Resource name for the <c>Region</c> resource.</summary>
+    public sealed partial class RegionName : gax::IResourceName, sys::IEquatable<RegionName>
     {
-        /// <summary>The possible contents of <see cref="RegionOrLocationName"/>.</summary>
+        /// <summary>The possible contents of <see cref="RegionName"/>.</summary>
         public enum ResourceNameType
         {
             /// <summary>An unparsed resource name.</summary>
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/regions/{region}</c>.</summary>
-            ProjectRegion = 1,
-
-            /// <summary>A resource name with pattern <c>projects/{project}/locations/{location}</c>.</summary>
-            ProjectLocation = 2
+            ProjectRegion = 1
         }
 
         private static gax::PathTemplate s_projectRegion = new gax::PathTemplate("projects/{project}/regions/{region}");
 
-        private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}");
-
-        /// <summary>Creates a <see cref="RegionOrLocationName"/> containing an unparsed resource name.</summary>
+        /// <summary>Creates a <see cref="RegionName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
         /// <returns>
-        /// A new instance of <see cref="RegionOrLocationName"/> containing the provided
-        /// <paramref name="unparsedResourceName"/>.
+        /// A new instance of <see cref="RegionName"/> containing the provided <paramref name="unparsedResourceName"/>.
         /// </returns>
-        public static RegionOrLocationName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new RegionOrLocationName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+        public static RegionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RegionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="RegionOrLocationName"/> with the pattern <c>projects/{project}/regions/{region}</c>.
+        /// Creates a <see cref="RegionName"/> with the pattern <c>projects/{project}/regions/{region}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="RegionOrLocationName"/> constructed from the provided ids.</returns>
-        public static RegionOrLocationName FromProjectRegion(string projectId, string regionId) =>
-            new RegionOrLocationName(ResourceNameType.ProjectRegion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)));
+        /// <returns>A new instance of <see cref="RegionName"/> constructed from the provided ids.</returns>
+        public static RegionName FromProjectRegion(string projectId, string regionId) =>
+            new RegionName(ResourceNameType.ProjectRegion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)));
 
         /// <summary>
-        /// Creates a <see cref="RegionOrLocationName"/> with the pattern <c>projects/{project}/locations/{location}</c>
-        /// .
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="RegionOrLocationName"/> constructed from the provided ids.</returns>
-        public static RegionOrLocationName FromProjectLocation(string projectId, string locationId) =>
-            new RegionOrLocationName(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="RegionOrLocationName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="RegionName"/> with pattern
         /// <c>projects/{project}/regions/{region}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="RegionOrLocationName"/> with pattern
+        /// The string representation of this <see cref="RegionName"/> with pattern
         /// <c>projects/{project}/regions/{region}</c>.
         /// </returns>
         public static string Format(string projectId, string regionId) => FormatProjectRegion(projectId, regionId);
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="RegionOrLocationName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="RegionName"/> with pattern
         /// <c>projects/{project}/regions/{region}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="RegionOrLocationName"/> with pattern
+        /// The string representation of this <see cref="RegionName"/> with pattern
         /// <c>projects/{project}/regions/{region}</c>.
         /// </returns>
         public static string FormatProjectRegion(string projectId, string regionId) =>
             s_projectRegion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)));
 
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="RegionOrLocationName"/> with pattern
-        /// <c>projects/{project}/locations/{location}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="RegionOrLocationName"/> with pattern
-        /// <c>projects/{project}/locations/{location}</c>.
-        /// </returns>
-        public static string FormatProjectLocation(string projectId, string locationId) =>
-            s_projectLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+        /// <summary>Parses the given resource name string into a new <see cref="RegionName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/regions/{region}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="regionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RegionName"/> if successful.</returns>
+        public static RegionName Parse(string regionName) => Parse(regionName, false);
 
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="RegionOrLocationName"/> instance.
+        /// Parses the given resource name string into a new <see cref="RegionName"/> instance; optionally allowing an
+        /// unparseable resource name.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/regions/{region}</c></description></item>
-        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="regionOrLocationName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="RegionOrLocationName"/> if successful.</returns>
-        public static RegionOrLocationName Parse(string regionOrLocationName) => Parse(regionOrLocationName, false);
+        /// <param name="regionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RegionName"/> if successful.</returns>
+        public static RegionName Parse(string regionName, bool allowUnparsed) =>
+            TryParse(regionName, allowUnparsed, out RegionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="RegionOrLocationName"/> instance; optionally
+        /// Tries to parse the given resource name string into a new <see cref="RegionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/regions/{region}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="regionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RegionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string regionName, out RegionName result) => TryParse(regionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RegionName"/> instance; optionally
         /// allowing an unparseable resource name.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/regions/{region}</c></description></item>
-        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="regionOrLocationName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <returns>The parsed <see cref="RegionOrLocationName"/> if successful.</returns>
-        public static RegionOrLocationName Parse(string regionOrLocationName, bool allowUnparsed) =>
-            TryParse(regionOrLocationName, allowUnparsed, out RegionOrLocationName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="RegionOrLocationName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>projects/{project}/regions/{region}</c></description></item>
-        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
-        /// </list>
-        /// </remarks>
-        /// <param name="regionOrLocationName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="RegionOrLocationName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string regionOrLocationName, out RegionOrLocationName result) =>
-            TryParse(regionOrLocationName, false, out result);
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="RegionOrLocationName"/> instance;
-        /// optionally allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>projects/{project}/regions/{region}</c></description></item>
-        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="regionOrLocationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="regionName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="RegionOrLocationName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="RegionName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string regionOrLocationName, bool allowUnparsed, out RegionOrLocationName result)
+        public static bool TryParse(string regionName, bool allowUnparsed, out RegionName result)
         {
-            gax::GaxPreconditions.CheckNotNull(regionOrLocationName, nameof(regionOrLocationName));
+            gax::GaxPreconditions.CheckNotNull(regionName, nameof(regionName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectRegion.TryParseName(regionOrLocationName, out resourceName))
+            if (s_projectRegion.TryParseName(regionName, out resourceName))
             {
                 result = FromProjectRegion(resourceName[0], resourceName[1]);
                 return true;
             }
-            if (s_projectLocation.TryParseName(regionOrLocationName, out resourceName))
-            {
-                result = FromProjectLocation(resourceName[0], resourceName[1]);
-                return true;
-            }
             if (allowUnparsed)
             {
-                if (gax::UnparsedResourceName.TryParse(regionOrLocationName, out gax::UnparsedResourceName unparsedResourceName))
+                if (gax::UnparsedResourceName.TryParse(regionName, out gax::UnparsedResourceName unparsedResourceName))
                 {
                     result = FromUnparsed(unparsedResourceName);
                     return true;
@@ -524,22 +483,21 @@ namespace Google.Cloud.Dataproc.V1
             return false;
         }
 
-        private RegionOrLocationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string regionId = null)
+        private RegionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string regionId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
-            LocationId = locationId;
             ProjectId = projectId;
             RegionId = regionId;
         }
 
         /// <summary>
-        /// Constructs a new instance of a <see cref="RegionOrLocationName"/> class from the component parts of pattern
+        /// Constructs a new instance of a <see cref="RegionName"/> class from the component parts of pattern
         /// <c>projects/{project}/regions/{region}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
-        public RegionOrLocationName(string projectId, string regionId) : this(ResourceNameType.ProjectRegion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)))
+        public RegionName(string projectId, string regionId) : this(ResourceNameType.ProjectRegion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)))
         {
         }
 
@@ -553,17 +511,12 @@ namespace Google.Cloud.Dataproc.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
-        /// </summary>
-        public string LocationId { get; }
-
-        /// <summary>
-        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Region</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Region</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string RegionId { get; }
 
@@ -577,7 +530,6 @@ namespace Google.Cloud.Dataproc.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectRegion: return s_projectRegion.Expand(ProjectId, RegionId);
-                case ResourceNameType.ProjectLocation: return s_projectLocation.Expand(ProjectId, LocationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -586,16 +538,16 @@ namespace Google.Cloud.Dataproc.V1
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as RegionOrLocationName);
+        public override bool Equals(object obj) => Equals(obj as RegionName);
 
         /// <inheritdoc/>
-        public bool Equals(RegionOrLocationName other) => ToString() == other?.ToString();
+        public bool Equals(RegionName other) => ToString() == other?.ToString();
 
         /// <inheritdoc/>
-        public static bool operator ==(RegionOrLocationName a, RegionOrLocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(RegionName a, RegionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc/>
-        public static bool operator !=(RegionOrLocationName a, RegionOrLocationName b) => !(a == b);
+        public static bool operator !=(RegionName a, RegionName b) => !(a == b);
     }
 
     public partial class AutoscalingPolicy
@@ -621,12 +573,10 @@ namespace Google.Cloud.Dataproc.V1
             set => Parent = value?.ToString() ?? "";
         }
 
-        /// <summary>
-        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public RegionOrLocationName ParentAsRegionOrLocationName
+        /// <summary><see cref="RegionName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public RegionName ParentAsRegionName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : RegionName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -645,9 +595,9 @@ namespace Google.Cloud.Dataproc.V1
                 {
                     return location;
                 }
-                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
+                if (RegionName.TryParse(Parent, out RegionName region))
                 {
-                    return regionOrLocation;
+                    return region;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -690,12 +640,10 @@ namespace Google.Cloud.Dataproc.V1
             set => Parent = value?.ToString() ?? "";
         }
 
-        /// <summary>
-        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public RegionOrLocationName ParentAsRegionOrLocationName
+        /// <summary><see cref="RegionName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public RegionName ParentAsRegionName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : RegionName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -714,9 +662,9 @@ namespace Google.Cloud.Dataproc.V1
                 {
                     return location;
                 }
-                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
+                if (RegionName.TryParse(Parent, out RegionName region))
                 {
-                    return regionOrLocation;
+                    return region;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }

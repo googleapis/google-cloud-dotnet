@@ -40,7 +40,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
@@ -64,7 +64,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
@@ -89,7 +89,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
@@ -112,7 +112,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
@@ -132,12 +132,12 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
@@ -155,12 +155,12 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
@@ -180,7 +180,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -195,7 +195,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));

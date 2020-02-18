@@ -342,21 +342,19 @@ namespace Google.Cloud.Dataproc.V1
 
     public partial class CreateWorkflowTemplateRequest
     {
+        /// <summary><see cref="RegionName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public RegionName ParentAsRegionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RegionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public RegionOrLocationName ParentAsRegionOrLocationName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -371,13 +369,13 @@ namespace Google.Cloud.Dataproc.V1
                 {
                     return null;
                 }
+                if (RegionName.TryParse(Parent, out RegionName region))
+                {
+                    return region;
+                }
                 if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
                 {
                     return location;
-                }
-                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
-                {
-                    return regionOrLocation;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -411,21 +409,19 @@ namespace Google.Cloud.Dataproc.V1
 
     public partial class InstantiateInlineWorkflowTemplateRequest
     {
+        /// <summary><see cref="RegionName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public RegionName ParentAsRegionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RegionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public RegionOrLocationName ParentAsRegionOrLocationName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -440,13 +436,13 @@ namespace Google.Cloud.Dataproc.V1
                 {
                     return null;
                 }
+                if (RegionName.TryParse(Parent, out RegionName region))
+                {
+                    return region;
+                }
                 if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
                 {
                     return location;
-                }
-                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
-                {
-                    return regionOrLocation;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -456,21 +452,19 @@ namespace Google.Cloud.Dataproc.V1
 
     public partial class ListWorkflowTemplatesRequest
     {
+        /// <summary><see cref="RegionName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public RegionName ParentAsRegionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RegionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="RegionOrLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public RegionOrLocationName ParentAsRegionOrLocationName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : RegionOrLocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -485,13 +479,13 @@ namespace Google.Cloud.Dataproc.V1
                 {
                     return null;
                 }
+                if (RegionName.TryParse(Parent, out RegionName region))
+                {
+                    return region;
+                }
                 if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
                 {
                     return location;
-                }
-                if (RegionOrLocationName.TryParse(Parent, out RegionOrLocationName regionOrLocation))
-                {
-                    return regionOrLocation;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
