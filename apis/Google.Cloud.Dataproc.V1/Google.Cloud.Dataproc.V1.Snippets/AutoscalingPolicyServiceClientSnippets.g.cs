@@ -102,7 +102,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
             AutoscalingPolicy response = autoscalingPolicyServiceClient.GetAutoscalingPolicy(request);
@@ -119,7 +119,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             GetAutoscalingPolicyRequest request = new GetAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
             AutoscalingPolicy response = await autoscalingPolicyServiceClient.GetAutoscalingPolicyAsync(request);
@@ -231,7 +231,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
             autoscalingPolicyServiceClient.DeleteAutoscalingPolicy(request);
@@ -248,7 +248,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             DeleteAutoscalingPolicyRequest request = new DeleteAutoscalingPolicyRequest
             {
-                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectRegionAutoscalingPolicy("[PROJECT]", "[REGION]", "[AUTOSCALING_POLICY]"),
+                AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
             };
             // Make the request
             await autoscalingPolicyServiceClient.DeleteAutoscalingPolicyAsync(request);
