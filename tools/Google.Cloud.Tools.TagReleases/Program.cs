@@ -72,14 +72,11 @@ namespace Google.Cloud.Tools.TagReleases
             {
                 Credentials = new Octokit.Credentials(args[0])
             };
-
             var commit = await FetchRemoteCommitAsync(client);
             ValidateLocalRepository(commit);
-
             var apis = ApiMetadata.LoadApis();
-            var newReleases = await ComputeNewReleasesAsync(client, apis);
+            var newReleases = ComputeNewReleasesAsync(apis);
             ValidateChanges(newReleases);
-
             if (!ConfirmReleases(apis, newReleases))
             {
                 return 0;
@@ -118,11 +115,15 @@ namespace Google.Cloud.Tools.TagReleases
             }
         }
 
-        private static async Task<List<ApiMetadata>> ComputeNewReleasesAsync(GitHubClient client, List<ApiMetadata> allApis)
+        private static List<ApiMetadata> ComputeNewReleasesAsync(List<ApiMetadata> allApis)
         {
-            var tags = (await client.Repository.GetAllTags(RepositoryOwner, RepositoryName)).Select(tag => tag.Name);
-            var noChange = allApis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
-            return allApis.Except(noChange).ToList();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            using (var repo = new LibGit2Sharp.Repository(root))
+            {
+                var tags = repo.Tags.Select(tag => tag.FriendlyName).ToList();
+                var noChange = allApis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
+                return allApis.Except(noChange).ToList();
+            }
         }
 
         /// <summary>
