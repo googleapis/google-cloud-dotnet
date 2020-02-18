@@ -211,10 +211,15 @@ generate_api() {
 
 # Entry point
 
+log_build_action "Installing protoc"
 install_protoc
+log_build_action "Installing the microgenerator"
 install_microgenerator
+log_build_action "Installing gRPC"
 install_grpc
+log_build_action "Fetching github repos"
 fetch_github_repos
+log_build_action "Starting main generation"
 
 OUTDIR=tmp
 rm -rf $OUTDIR
@@ -222,6 +227,7 @@ mkdir $OUTDIR
 CHECK_COMPATIBILITY=false
 if [[ $1 == "--check_compatibility" ]]
 then
+log_build_action "Building version comparer"
   CHECK_COMPATIBILITY=true
   # Build the tool once so it doesn't interfere with output later
   dotnet build tools/Google.Cloud.Tools.CompareVersions -v quiet -nologo -clp:NoSummary
@@ -236,5 +242,7 @@ fi
 
 for package in $packages
 do
+  log_build_action "Starting to generate $package"
   generate_api $package
+  log_build_action "Finished generating $package"
 done
