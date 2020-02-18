@@ -9,7 +9,7 @@ then
 fi
 
 # Make sure we have all the tags locally.
-git fetch --all --tags -f -q
+git fetch --tags -f -q upstream master
 
 echo "Building $1"
 ./build.sh $1 --notests
