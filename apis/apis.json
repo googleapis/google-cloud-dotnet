@@ -232,7 +232,7 @@
     "protoPath": "google/devtools/clouddebugger/v2",
     "productName": "Stackdriver Debugger",
     "productUrl": "https://cloud.google.com/debugger/",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Debugger API.",
     "tags": [
@@ -243,7 +243,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta01",
-      "Google.Cloud.DevTools.Common": "project",
+      "Google.Cloud.DevTools.Common": "2.0.0-beta01",
       "Grpc.Core": "2.27.0"
     }
   },

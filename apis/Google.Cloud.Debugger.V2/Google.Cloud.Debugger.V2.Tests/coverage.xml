@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Debugger.V2</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Cloud.DevTools.Common</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
