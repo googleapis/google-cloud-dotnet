@@ -19,6 +19,8 @@ declare -r REPORTGENERATOR=$TOOL_PACKAGES/ReportGenerator.$REPORTGENERATOR_VERSI
 
 declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERSION
 
+if [[ "$KOKORO_GIT_COMMIT" != "" ]]; then declare -r RUNNING_ON_KOKORO=true; fi
+
 # Try to detect Python 3. It's quite different between Windows and Linux.
 if which python > /dev/null && python --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python
 elif which py > /dev/null && py -3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3="py -3"
@@ -84,15 +86,6 @@ install_protoc() {
 }
 
 install_microgenerator() {
-  # TODO: Use a specific tag, or even a NuGet package eventually
-  if [ -d "gapic-generator-csharp" ]
-  then
-    git -C gapic-generator-csharp pull -q
-    git -C gapic-generator-csharp submodule update
-  else
-    git clone --recursive https://github.com/googleapis/gapic-generator-csharp -b next-major-version
-  fi
-
   case "$OSTYPE" in
     linux*)
       declare -r RUNTIME=linux-x64
@@ -110,9 +103,23 @@ install_microgenerator() {
       echo "Unknown OSTYPE: $OSTYPE"
       exit 1
   esac
-  (cd gapic-generator-csharp; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
-  
   export GAPIC_PLUGIN=$REPO_ROOT/gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/$RUNTIME/publish/Google.Api.Generator$EXTENSION
+  
+  if [[ $RUNNING_ON_KOKORO == "true" && -f $GAPIC_PLUGIN ]]
+  then
+    echo "Skipping microgenerator fetch/build: already built, and running on Kokoro"
+  else
+    # TODO: Use a specific tag, or even a NuGet package eventually
+    if [ -d "gapic-generator-csharp" ]
+    then
+      git -C gapic-generator-csharp pull -q
+      git -C gapic-generator-csharp submodule update
+    else
+      git clone --recursive https://github.com/googleapis/gapic-generator-csharp -b next-major-version
+    fi
+
+    (cd gapic-generator-csharp; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
+  fi
 }
 
 install_grpc() {
