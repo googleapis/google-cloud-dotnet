@@ -513,7 +513,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntriesResourceNames1()
         {
-            // Snippet: ListLogEntries(ProjectName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntries(IEnumerable<ProjectName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
@@ -563,7 +563,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public async Task ListLogEntriesResourceNames1Async()
         {
-            // Snippet: ListLogEntriesAsync(ProjectName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntriesAsync(IEnumerable<ProjectName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -613,7 +613,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntriesResourceNames2()
         {
-            // Snippet: ListLogEntries(OrganizationName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntries(IEnumerable<OrganizationName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
@@ -663,7 +663,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public async Task ListLogEntriesResourceNames2Async()
         {
-            // Snippet: ListLogEntriesAsync(OrganizationName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntriesAsync(IEnumerable<OrganizationName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -713,7 +713,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntriesResourceNames3()
         {
-            // Snippet: ListLogEntries(FolderName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntries(IEnumerable<FolderName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
@@ -763,7 +763,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public async Task ListLogEntriesResourceNames3Async()
         {
-            // Snippet: ListLogEntriesAsync(FolderName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntriesAsync(IEnumerable<FolderName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -813,7 +813,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntriesResourceNames4()
         {
-            // Snippet: ListLogEntries(BillingAccountName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntries(IEnumerable<BillingAccountName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
@@ -863,7 +863,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public async Task ListLogEntriesResourceNames4Async()
         {
-            // Snippet: ListLogEntriesAsync(BillingAccountName, string, string, string, int?, CallSettings)
+            // Snippet: ListLogEntriesAsync(IEnumerable<BillingAccountName>, string, string, string, int?, CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
