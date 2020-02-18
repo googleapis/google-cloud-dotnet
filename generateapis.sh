@@ -146,11 +146,7 @@ generate_api() {
   if [[ $CHECK_COMPATIBILITY == "true" && -d $PACKAGE_DIR ]]
   then
     echo "Building existing version of $PACKAGE for compatibility checking"
-    log_build_action "Building old version"
-
     dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
-        log_build_action "Finished building old version"
-
     cp $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll $OUTDIR
   fi
   echo "Generating $PACKAGE"
@@ -158,15 +154,12 @@ generate_api() {
   if [[ -f $PACKAGE_DIR/pregeneration.sh ]]
   then
     echo "Running pre-generation script for $PACKAGE"
-    log_build_action "Running pre-generation script"
     (cd $PACKAGE_DIR; ./pregeneration.sh)
   fi
 
   case "$GENERATOR" in
     micro)
-    log_build_action "Running generator"
       generate_microgenerator $1
-    log_build_action "Generator finished"
       ;;
     proto)
       generate_proto $1
@@ -195,20 +188,31 @@ generate_api() {
     echo "API $1 has broken namespace declarations"
     exit 1
   fi
-  log_build_action "Post-actions finished"
+
   if [[ $CHECK_COMPATIBILITY == "true" ]]
   then
     if [[ -f $OUTDIR/$PACKAGE.dll ]]
     then
-      echo "Building new version of $PACKAGE for compatibility checking"
-      log_build_action "Building new version"      
-      dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
-      log_build_action "Comparing new version with old"
-      echo ""
-      echo "Changes in $PACKAGE:"
-      dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- \
-        --file1=$OUTDIR/$PACKAGE.dll \
-        --file2=$PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
+      # In order to skip expensive "build and check compatibility" step,
+      # first see whether git thinks anything has changed.
+      # Command line arguments:
+      # -c core.safecrlf=false: don't warn on line ending changes
+      # diff: do a diff :)
+      # -s: suppress output as we only care about the exit code
+      # -b: ignore whitespace
+      # --exit-code: set the exit code to 0 for no diff, 1 when a diff is detected      
+      if git -c core.safecrlf=false diff -s -b --exit-code -- $PACKAGE_DIR
+      then
+        echo "git detects no change in $PACKAGE; skipping compatibility checking"
+      else
+        echo "Building new version of $PACKAGE for compatibility checking"
+        dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+        echo ""
+        echo "Changes in $PACKAGE:"
+        dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- \
+          --file1=$OUTDIR/$PACKAGE.dll \
+          --file2=$PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
+      fi
     else
       echo ""
       echo "$PACKAGE is a new API."
@@ -220,15 +224,10 @@ generate_api() {
 
 # Entry point
 
-log_build_action "Installing protoc"
 install_protoc
-log_build_action "Installing the microgenerator"
 install_microgenerator
-log_build_action "Installing gRPC"
 install_grpc
-log_build_action "Fetching github repos"
 fetch_github_repos
-log_build_action "Starting main generation"
 
 OUTDIR=tmp
 rm -rf $OUTDIR
@@ -236,10 +235,16 @@ mkdir $OUTDIR
 CHECK_COMPATIBILITY=false
 if [[ $1 == "--check_compatibility" ]]
 then
-log_build_action "Building version comparer"
   CHECK_COMPATIBILITY=true
   # Build the tool once so it doesn't interfere with output later
-  dotnet build tools/Google.Cloud.Tools.CompareVersions -v quiet -nologo -clp:NoSummary
+  if [[ $RUNNING_ON_KOKORO == "true" && -d tools/Google.Cloud.Tools.CompareVersions/bin ]]
+  then
+    # If we're running on Kokoro and the bin directory exists, don't even run dotnet build...
+    # ... we've clearly already built it in that case, and it won't have changed.
+    echo "Skipping Google.Cloud.Tools.CompareVersions build on Kokoro"
+  else
+    dotnet build tools/Google.Cloud.Tools.CompareVersions -v quiet -nologo -clp:NoSummary
+  fi
   shift
 fi
 
@@ -251,7 +256,5 @@ fi
 
 for package in $packages
 do
-  log_build_action "Starting to generate $package"
   generate_api $package
-  log_build_action "Finished generating $package"
 done
