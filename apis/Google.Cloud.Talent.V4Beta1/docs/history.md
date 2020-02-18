@@ -2,6 +2,12 @@
 
 (This API has changed significantly over time, and the history is tricky to backfill. Future changes will be tracked more closely.)
 
+# Version 2.0.0-beta01, released 2020-02-18
+
+This is the first prerelease targeting GAX v3. Please see the [breaking changes
+guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+for details of changes to both GAX and code generation.
+
 # Version 1.0.0-beta09, released 2019-12-10
 
 # Version 1.0.0-beta08, released 2019-11-11
