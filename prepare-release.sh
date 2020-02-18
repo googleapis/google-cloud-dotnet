@@ -15,8 +15,10 @@ echo "Building $1"
 ./build.sh $1 --notests
 echo ""
 
-echo "Updating release notes"
+echo "Updating release notes at:"
+echo "apis/$1/docs/history.md"
 dotnet run -p tools/Google.Cloud.Tools.UpdateReleaseNotes -- $1
+echo ""
 
 echo "Checking version compatibility"
 dotnet run -p tools/Google.Cloud.Tools.CheckVersionCompatibility -- $1
