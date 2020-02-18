@@ -599,7 +599,7 @@
   },
   {
     "id": "Google.Cloud.Logging.NLog",
-    "version": "3.0.0-alpha00",
+    "version": "3.0.0-beta01",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -612,7 +612,7 @@
     "dependencies": {
       "NLog": "4.5.11",
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta01",
-      "Google.Cloud.Logging.V2": "project",
+      "Google.Cloud.Logging.V2": "3.0.0-beta01",
       "Google.Cloud.DevTools.Common": "project",
       "Grpc.Core": "2.27.0"
     },
