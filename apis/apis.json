@@ -902,7 +902,7 @@
     "serviceYaml": "secrets_vbeta1.yaml",
     "productName": "Secret Manager",
     "productUrl": "https://cloud.google.com/secret-manager",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "releaseLevelOverride": "beta",
     "type": "grpc",
     "description": "Recommended Google client library to access the Secret Manager API.",
