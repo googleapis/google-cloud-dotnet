@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.0.0-beta01, released 2020-02-18
+
+This is the first prerelease targeting GAX v3. Please see the [breaking changes
+guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+for details of changes to both GAX and code generation.
+
 # Version 2.1.0, released 2019-12-12
 
 - [Commit 0740a76](https://github.com/googleapis/google-cloud-dotnet/commit/0740a76): Adds support for retriable transactions
