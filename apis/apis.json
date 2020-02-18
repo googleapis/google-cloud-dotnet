@@ -249,7 +249,7 @@
   },
   {
     "id": "Google.Cloud.DevTools.Common",
-    "version": "2.0.0-alpha00",
+    "version": "2.0.0-beta01",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
