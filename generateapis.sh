@@ -146,7 +146,11 @@ generate_api() {
   if [[ $CHECK_COMPATIBILITY == "true" && -d $PACKAGE_DIR ]]
   then
     echo "Building existing version of $PACKAGE for compatibility checking"
+    log_build_action "Building old version"
+
     dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+        log_build_action "Finished building old version"
+
     cp $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll $OUTDIR
   fi
   echo "Generating $PACKAGE"
@@ -154,12 +158,15 @@ generate_api() {
   if [[ -f $PACKAGE_DIR/pregeneration.sh ]]
   then
     echo "Running pre-generation script for $PACKAGE"
+    log_build_action "Running pre-generation script"
     (cd $PACKAGE_DIR; ./pregeneration.sh)
   fi
 
   case "$GENERATOR" in
     micro)
+    log_build_action "Running generator"
       generate_microgenerator $1
+    log_build_action "Generator finished"
       ;;
     proto)
       generate_proto $1
@@ -178,7 +185,7 @@ generate_api() {
   fi
 
   if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
-  then
+  then    
     echo "Running post-generation script for $PACKAGE"
     (cd $PACKAGE_DIR; ./postgeneration.sh)
   fi
@@ -188,13 +195,15 @@ generate_api() {
     echo "API $1 has broken namespace declarations"
     exit 1
   fi
-  
+  log_build_action "Post-actions finished"
   if [[ $CHECK_COMPATIBILITY == "true" ]]
   then
     if [[ -f $OUTDIR/$PACKAGE.dll ]]
     then
       echo "Building new version of $PACKAGE for compatibility checking"
+      log_build_action "Building new version"      
       dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
+      log_build_action "Comparing new version with old"
       echo ""
       echo "Changes in $PACKAGE:"
       dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- \
