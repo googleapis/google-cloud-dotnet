@@ -113,9 +113,8 @@ install_microgenerator() {
     if [ -d "gapic-generator-csharp" ]
     then
       git -C gapic-generator-csharp pull -q
-      git -C gapic-generator-csharp submodule update
     else
-      git clone --recursive https://github.com/googleapis/gapic-generator-csharp -b next-major-version
+      git clone https://github.com/googleapis/gapic-generator-csharp -b next-major-version --depth 1
     fi
 
     (cd gapic-generator-csharp; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)

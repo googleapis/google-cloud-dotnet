@@ -35,7 +35,7 @@ fetch_github_repos() {
     else
       # Auto-detect whether we're cloning the public or private googleapis repo.
       git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
-      git clone --recursive https://github.com/googleapis/${repo} googleapis
+      git clone https://github.com/googleapis/${repo} googleapis --depth 1
     fi
   fi
 }
@@ -209,7 +209,7 @@ generate_api() {
         dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
         echo ""
         echo "Changes in $PACKAGE:"
-        dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- \
+        dotnet run -p tools/Google.Cloud.Tools.CompareVersions -- \
           --file1=$OUTDIR/$PACKAGE.dll \
           --file2=$PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
       fi
@@ -236,15 +236,6 @@ CHECK_COMPATIBILITY=false
 if [[ $1 == "--check_compatibility" ]]
 then
   CHECK_COMPATIBILITY=true
-  # Build the tool once so it doesn't interfere with output later
-  if [[ $RUNNING_ON_KOKORO == "true" && -d tools/Google.Cloud.Tools.CompareVersions/bin ]]
-  then
-    # If we're running on Kokoro and the bin directory exists, don't even run dotnet build...
-    # ... we've clearly already built it in that case, and it won't have changed.
-    echo "Skipping Google.Cloud.Tools.CompareVersions build on Kokoro"
-  else
-    dotnet build tools/Google.Cloud.Tools.CompareVersions -v quiet -nologo -clp:NoSummary
-  fi
   shift
 fi
 
