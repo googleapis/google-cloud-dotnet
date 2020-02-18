@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Logging.NLog</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Cloud.DevTools.Common</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
