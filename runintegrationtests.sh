@@ -93,9 +93,6 @@ do
   if [[ "$testdir" =~ Metadata || "$testdir" =~ EntityFrameworkCore.Spanner ]]
   then
     echo "Skipping $testdir; test not supported yet."
-  elif [[ "$testdir" =~ AspNet\. && "$OS" != "Windows_NT" ]]
-  then
-    echo "Skipping $testdir; test not supported on non windows environment."
   elif [[ "$testdir" =~ SmokeTests ]]
   then
     # Smoke tests aren't unit tests - we just run them as console apps,

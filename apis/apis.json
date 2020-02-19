@@ -284,34 +284,6 @@
     }
   },
   {
-    "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "4.0.0-alpha00",
-    "type": "other",
-    "targetFrameworks": "net461",
-    "testTargetFrameworks": "net461",
-    "description": "Google Stackdriver Instrumentation Libraries for ASP.NET.",
-    "tags": [
-      "Error",
-      "Reporting",
-      "Stackdriver",
-      "ExceptionLogger",
-      "Trace",
-      "Diagnostics"
-    ],
-    "dependencies": {
-      "Google.Cloud.Diagnostics.Common": "project",
-      "Microsoft.AspNet.WebApi.Core": "5.2.7",
-      "Microsoft.AspNet.WebPages": "3.2.7",
-      "Microsoft.AspNet.Mvc": "5.2.7",
-      "Grpc.Core": "2.27.0"
-    },
-    "testDependencies": {
-      "Google.Cloud.Diagnostics.Common.Tests": "project",
-      "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Microsoft.AspNet.Http": "1.0.0-rc1-final"
-    }
-  },
-  {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
     "version": "4.0.0-beta01",
     "type": "other",

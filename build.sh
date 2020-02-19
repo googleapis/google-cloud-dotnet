@@ -119,12 +119,6 @@ for api in ${apis[*]}
 do
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
-  # Only build ASP.NET support on Windows
-  if [[ "$OS" != "Windows_NT" ]] && [[ "$apidir" == "apis/Google.Cloud.Diagnostics.AspNet" ]]
-  then
-    continue
-  fi
-
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
 
