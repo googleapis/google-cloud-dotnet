@@ -382,14 +382,14 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "default",
-      "Google.Cloud.Logging.V2": "project",
-      "Google.Cloud.Trace.V1": "project",
+      "Google.Cloud.Logging.V2": "3.0.0-beta01",
+      "Google.Cloud.Trace.V1": "2.0.0-beta01",
       "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
       "Microsoft.Extensions.Http": "2.1.1",
       "System.Diagnostics.StackTrace": "4.3.0"
     },
     "testDependencies": {
-      "Google.Cloud.ErrorReporting.V1Beta1": "project",
+      "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta01",
       "Microsoft.AspNetCore.Http": "2.1.1"
     }
   },
