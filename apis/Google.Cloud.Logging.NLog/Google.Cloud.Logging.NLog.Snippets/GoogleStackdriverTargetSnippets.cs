@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Logging.V2;
 using NLog;
@@ -38,6 +39,7 @@ namespace Google.Cloud.Logging.NLog.Snippets
         [Fact]
         public void Overview()
         {
+            DateTime startTime = DateTime.UtcNow;
             string projectId = _fixture.ProjectId;
             string logId = $"{_fixture.LogId}-{Guid.NewGuid()}";
             string fileName = "nlog.xml";
@@ -80,12 +82,18 @@ namespace Google.Cloud.Logging.NLog.Snippets
 
                 // Verify the log entry is in StackDriver
                 var logClient = LoggingServiceV2Client.Create();
-                var logName = new LogName(projectId, logId);
+                var logName = LogName.FromProjectLog(projectId, logId);
+
+                string formattedTime = XmlConvert.ToString(startTime.AddMinutes(-3), XmlDateTimeSerializationMode.Utc);
+                string filter = $"timestamp >= \"{formattedTime}\" AND logName=\"{logName}\" AND \"An exciting log entry!\"";
                 // Wait up to 60 seconds for the log entry to appear in StackDriver.
                 for (int i = 0; i < 60; i++)
                 {
-                    var logEntry = logClient.ListLogEntries(new[] { $"projects/{projectId}" },
-                        $"logName=\"{logName}\" AND \"An exciting log entry!\"", "timestamp desc").FirstOrDefault();
+                    var logEntry = logClient.ListLogEntries(
+                        resourceNames: new[] { ProjectName.FromProject(projectId) },
+                        filter: filter,
+                        orderBy:"timestamp desc")
+                        .FirstOrDefault();
                     if (logEntry != null)
                     {
                         Assert.Contains("An exciting log entry!", logEntry.TextPayload);
