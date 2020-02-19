@@ -1,5 +1,14 @@
 # Version history
 
+# Version 2.0.0-beta01, released 2020-02-19
+
+This is the first prerelease targeting GAX v3. The immediate API
+surface hasn't changed from 1.2.0, but there can still be transitive
+breaking changes via the dependencies. Please see the [breaking
+changes guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+for details of changes for GAX, noting that gRPC-specific changes
+are irrelevant to this package.
+
 # Version 1.2.0, released 2019-12-09
 
 - [Commit 5c5afff](https://github.com/googleapis/google-cloud-dotnet/commit/5c5afff): Added client builders for simplified configuration
