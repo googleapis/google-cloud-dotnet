@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
     /// This is similar to Google.Cloud.Tools.GenerateReleaseNotes, but that just spits all
     /// changes out onto the console.
     /// </summary>
-    class Program
+    public class Program
     {
         private const string MarkdownFile = "history.md";
 
@@ -54,11 +54,11 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
             }
         }
 
-        private static void Execute(string id)
+        public static void Execute(string id)
         {
             var catalog = ApiMetadata.LoadApis();
             var api = catalog.FirstOrDefault(x => x.Id == id) ?? throw new UserErrorException($"Unknown API: {id}");
-            string historyFilePath = Path.Combine(DirectoryLayout.ForApi(id).DocsSourceDirectory, MarkdownFile);
+            string historyFilePath = HistoryFile.GetPathForPackage(id);
 
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new Repository(root))
@@ -72,6 +72,9 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 historyFile.MergeReleases(releases);
                 historyFile.Save(historyFilePath);
             }
+            var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
+                .Replace('\\', '/');
+            Console.WriteLine($"Updated version history file: {relativePath}");
         }
 
         private static IEnumerable<Release> LoadReleases(Repository repo, ApiMetadata api)

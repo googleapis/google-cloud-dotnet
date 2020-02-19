@@ -26,13 +26,19 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
     /// a version and release date - except potentially the first section, which might contain
     /// some preamble. All sections then have a list of lines.
     /// </summary>
-    internal sealed class HistoryFile
+    public sealed class HistoryFile
     {
+        private const string MarkdownFile = "history.md";
         private static readonly Regex SectionHeader = new Regex(@"# Version (.*), released \d{4}-\d{2}-\d{2}");
 
-        private List<Section> sections;
+        /// <summary>
+        /// The sections within the history file.
+        /// </summary>
+        public List<Section> Sections { get; }
 
-        private HistoryFile(List<Section> sections) => this.sections = sections;
+        private HistoryFile(List<Section> sections) => Sections = sections;
+
+        public static string GetPathForPackage(string id) => Path.Combine(DirectoryLayout.ForApi(id).DocsSourceDirectory, MarkdownFile);
 
         public static HistoryFile Load(string file)
         {
@@ -58,7 +64,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
         }
 
         public void Save(string file) =>
-            File.WriteAllLines(file, sections.SelectMany(section => section.Lines));
+            File.WriteAllLines(file, Sections.SelectMany(section => section.Lines));
 
         /// <summary>
         /// Merges the given list of releases into the file, ignoring releases that are already present.
@@ -66,10 +72,10 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
         /// <param name="releases">The list of releases to merge, in reverse-chronological order (so latest first).</param>
         internal void MergeReleases(List<Release> releases)
         {
-            int latestExistingVersionIndex = sections.FindIndex(s => s.Version != null);
+            int latestExistingVersionIndex = Sections.FindIndex(s => s.Version != null);
 
-            var latestExistingVersion = latestExistingVersionIndex == -1 ? null : sections[latestExistingVersionIndex].Version;
-            var insertIndex = latestExistingVersionIndex == -1 ? sections.Count : latestExistingVersionIndex;
+            var latestExistingVersion = latestExistingVersionIndex == -1 ? null : Sections[latestExistingVersionIndex].Version;
+            var insertIndex = latestExistingVersionIndex == -1 ? Sections.Count : latestExistingVersionIndex;
 
             foreach (var release in releases)
             {
@@ -79,16 +85,18 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                     break;
                 }
                 Section section = new Section(release);
-                sections.Insert(insertIndex, section);
+                Sections.Insert(insertIndex, section);
                 insertIndex++;
             }
         }
 
-        private class Section
+        public sealed class Section
         {
             public StructuredVersion Version { get; }
 
-            // The lines for the section, including the section header.
+            /// <summary>
+            /// The lines for the section, including the section header.
+            /// </summary>
             public List<string> Lines { get; }
 
             public Section(StructuredVersion version, List<string> lines)
@@ -97,7 +105,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 Lines = lines;
             }
 
-            public Section(Release release)
+            internal Section(Release release)
             {
                 Version = release.Version;
 

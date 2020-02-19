@@ -98,8 +98,6 @@ namespace Google.Cloud.Tools.Common
 
         public static List<ApiMetadata> LoadApis()
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-
             var json = File.ReadAllText(CatalogPath);
             return JsonConvert.DeserializeObject<List<ApiMetadata>>(json);
         }

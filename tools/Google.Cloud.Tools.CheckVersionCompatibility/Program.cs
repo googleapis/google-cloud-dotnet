@@ -23,7 +23,7 @@ using Mono.Cecil;
 
 namespace Google.Cloud.Tools.CheckVersionCompatibility
 {
-    class Program
+    public class Program
     {
         // These APIs don't build for netstandard2.0, so for now we ignore them.
         // We could potentially detect the right TFM, but that's more work than it's probably worth.
@@ -33,7 +33,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
             "Google.Cloud.Diagnostics.AspNetCore.Analyzers"
         }.ToList();
 
-        static int Main(string[] args)
+        public static int Main(string[] args)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var apis = ApiMetadata.LoadApis();
