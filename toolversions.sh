@@ -21,6 +21,8 @@ declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERS
 
 if [[ "$KOKORO_GIT_COMMIT" != "" ]]; then declare -r RUNNING_ON_KOKORO=true; fi
 
+if [[ -d ~/.cache/synthtool ]]; then declare -r SYNTHTOOL_CACHE=~/.cache/synthtool; fi
+
 # Try to detect Python 3. It's quite different between Windows and Linux.
 if which python > /dev/null && python --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python
 elif which py > /dev/null && py -3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3="py -3"
@@ -103,21 +105,29 @@ install_microgenerator() {
       echo "Unknown OSTYPE: $OSTYPE"
       exit 1
   esac
-  export GAPIC_PLUGIN=$REPO_ROOT/gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/$RUNTIME/publish/Google.Api.Generator$EXTENSION
+  
+  if [[ "$SYNTHTOOL_CACHE" != "" ]]
+  then
+    declare -r GENERATOR_ROOT=$SYNTHTOOL_CACHE/gapic-generator-csharp
+  else
+    declare -r GENERATOR_ROOT=$REPO_ROOT/gapic-generator-csharp
+  fi
+  
+  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/netcoreapp2.2/$RUNTIME/publish/Google.Api.Generator$EXTENSION
   
   if [[ $RUNNING_ON_KOKORO == "true" && -f $GAPIC_PLUGIN ]]
   then
     echo "Skipping microgenerator fetch/build: already built, and running on Kokoro"
   else
     # TODO: Use a specific tag, or even a NuGet package eventually
-    if [ -d "gapic-generator-csharp" ]
+    if [ -d $GENERATOR_ROOT ]
     then
-      git -C gapic-generator-csharp pull -q
+      git -C $GENERATOR_ROOT pull -q
     else
-      git clone https://github.com/googleapis/gapic-generator-csharp -b next-major-version --depth 1
+      git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -b next-major-version --depth 1
     fi
 
-    (cd gapic-generator-csharp; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
+    (cd $GENERATOR_ROOT; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
   fi
 }
 
