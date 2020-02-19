@@ -84,7 +84,3 @@ Beta:
 - [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html)
 - [Google.Cloud.Speech.V1P1Beta1](Google.Cloud.Speech.V1P1Beta1/index.html)
 - [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html)
-
-Alpha:
-
-- [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)

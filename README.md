@@ -92,10 +92,6 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/latest) (beta)
 * [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/latest) (Beta)
 
-The following libraries are available at an [alpha](#versioning) quality level:
-
-* Google Cloud Metadata - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Metadata.V1/latest) (alpha)
-
 See the [API documentation](https://googleapis.dev/dotnet/latest) for details of the status
 of each library.
 
@@ -167,12 +163,6 @@ be stable and working, but the API surface is still under active
 development. We encourage you to experiment with these libraries, but
 expect breaking changes in future versions. There may still be
 issues, but we have a fairly high degree of confidence.
-
-**Alpha**: Libraries defined at an Alpha quality level are still
-experimental. They may have significant issues, and the API surface
-will almost certainly change before a final release. We encourage
-experimentation with these libraries on test projects, but strongly
-discourage you from using them in a production environment.
 
 ## License
 
