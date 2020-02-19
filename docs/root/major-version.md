@@ -1,9 +1,9 @@
 # Major Version Plan
 
-The current (as of October 2019) versions of all Google Cloud client
-libraries are incompatible with Grpc.Core.Api 2.x - which means
-they're incompatible with anyone trying to use the Microsoft gRPC
-libraries in .NET Core 3.0.
+Google Cloud client libraries released earlier than February 17th 2020
+are incompatible with Grpc.Core.Api 2.x - which means they're
+incompatible with anyone trying to use the Microsoft gRPC libraries
+in .NET Core 3.0.
 
 This is effectively a forcing factor for us to make a series of
 breaking changes, and bump the major version of all libraries. While
@@ -52,7 +52,7 @@ that we'd only release individual API libraries where there's
 significant demand, to improve the likelihood of being able to drop
 .NET 4.5 in future major versions.
 
-## Timing (updated 2020-02-11)
+## Timing (updated 2020-02-19)
 
 Our tentative plan is as follows:
 
@@ -70,21 +70,18 @@ Already done:
 - Migrate API libraries to GAX 3.0
 - Create "expected final for this major version" releases for all APIs.
   (We still expect to release a few more as we go, but on a case-by-case basis.)
+- Migrate all APIs to the microgenerator
+- Check any remaining obsolete members and resource names, e.g.
+  where LocationName doesn't use GAX.
+- Release GAX 3.0.0-beta01 and beta libraries for all APIs targeting it
 
 In progress:
 
-- Migrate all APIs to the microgenerator (nearly there)
-- Check any remaining obsolete members and resource names, e.g.
-  where LocationName doesn't use GAX.
+- (Waiting for feedback)
 
 Future:
-
-- Release GAX 3.0.0-beta01 and beta libraries for all APIs targeting
-it
-  - This is currently blocked on a Google.Protobuf fix, expected mid-February
-  - It's possible that a few APIs won't be migrated to the microgenerator by then; we'll simply not release new versions of those APIs
-  - We hope to release these over the course of February 17th-21st, 2020
-- Release further betas based on feedback, although further GAX breaking changes are "expensive" (in terms of releasing all new libraries targeting those changes)
+- Release further betas based on feedback, although further GAX breaking changes are "expensive"
+  (in terms of releasing all new libraries targeting those changes)
 - Release GAX 3.0.0 and new API betas targeting it
   - Hoping for early to mid March 2020, depending on feedback
 - Release API stable packages (for stable APIs) late March, depending on feedback

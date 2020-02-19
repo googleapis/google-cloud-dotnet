@@ -14,6 +14,16 @@ which apply to most or all API libraries. Any breaking changes which
 only affect a single API library are documented in the corresponding
 version history instead.
 
+# Platform support
+
+GAX v3 supports .NET Standard 2.0 and .NET 4.6.1 (and higher
+versions of each). (For reference, GAX v2 supported .NET Standard
+1.3 or 1.5 depending on the exact package, and .NET 4.5.)
+
+This means that if you want to use the API libraries targeting GAX
+v3, you need to be using .NET Core 2.0 or .NET 4.6.1, or a higher
+version of either of these.
+
 # Client creation
 
 Creating a client with the default endpoint, credentials, settings
