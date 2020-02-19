@@ -229,7 +229,6 @@ generate_api() {
 
 
 # Entry point
-log_build_action "(Start) generateapis.sh"
 
 install_protoc
 install_microgenerator
@@ -256,5 +255,3 @@ for package in $packages
 do
   generate_api $package
 done
-
-log_build_action "(End) generateapis.sh"
