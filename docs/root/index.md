@@ -77,6 +77,7 @@ Beta:
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.ManagedIdentities.V1](Google.Cloud.ManagedIdentities.V1/index.html)
 - [Google.Cloud.OsLogin.V1Beta](Google.Cloud.OsLogin.V1Beta/index.html)
+- [Google.Cloud.PhishingProtection.V1Beta1](Google.Cloud.PhishingProtection.V1Beta1/index.html)
 - [Google.Cloud.RecaptchaEnterprise.V1Beta1](Google.Cloud.RecaptchaEnterprise.V1Beta1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html)
