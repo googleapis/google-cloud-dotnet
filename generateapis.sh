@@ -26,7 +26,7 @@ elif [[ "$SYNTHTOOL_CACHE" != "" ]]
 then
   declare -r GOOGLEAPIS="$SYNTHTOOL_CACHE/googleapis"
 else
-  declare -r GOOGLEAPIS=googleapis
+  declare -r GOOGLEAPIS="$PWD/googleapis"
 fi
 
 # Allow pre/post-generation scripts to know where to find the repo

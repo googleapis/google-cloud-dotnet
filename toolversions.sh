@@ -21,6 +21,14 @@ declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERS
 
 if [[ "$KOKORO_GIT_COMMIT" != "" ]]; then declare -r RUNNING_ON_KOKORO=true; fi
 
+# Bit of a hack... assume that if we're running on Kokoro, we should be able to use the cache...
+# TODO: Remove this, and create the cache in the autosynth script instead, perhaps.
+if [[ $RUNNING_ON_KOKORO == "true" ]]
+then
+  mkdir -p ~/.cache/synthtool
+fi
+
+# Detect a synthtool cache, used for other repos that we clone and build from.
 if [[ -d ~/.cache/synthtool ]]; then declare -r SYNTHTOOL_CACHE=~/.cache/synthtool; fi
 
 # Try to detect Python 3. It's quite different between Windows and Linux.
