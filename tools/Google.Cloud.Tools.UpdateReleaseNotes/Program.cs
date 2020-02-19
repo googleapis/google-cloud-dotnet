@@ -94,7 +94,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 .Where(tag => tag.FriendlyName.StartsWith(tagPrefix))
                 .ToDictionary(tag => tag.Target.Id, tag => tag.FriendlyName.Substring(tagPrefix.Length));
 
-            foreach (var commit in repo.Branches["master"].Commits)
+            foreach (var commit in repo.Branches["gax-v2"].Commits)
             {
                 if (CommitContainsApi(commit))
                 {

@@ -2,9 +2,9 @@
 
 set -e
 
-apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
+apis=$(git diff gax-v2 --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
 
-git clone . tmpgit --no-local -b master --depth 1
+git clone . tmpgit --no-local -b gax-v2 --depth 1
 
 mkdir tmpgit/old
 mkdir tmpgit/new
