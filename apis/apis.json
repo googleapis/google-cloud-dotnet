@@ -648,21 +648,6 @@
     }
   },
   {
-    "id": "Google.Cloud.Metadata.V1",
-    "productName": "Google Compute Engine Metadata Server",
-    "productUrl": "https://cloud.google.com/compute/docs/storing-retrieving-metadata",
-    "version": "2.0.0-alpha00",
-    "releaseLevelOverride": "alpha",
-    "type": "rest",
-    "description": "Google Compute Engine Metadata v1 client library",
-    "tags": [
-      "Metadata"
-    ],
-    "dependencies": {
-      "Google.Apis.Compute.v1": "1.41.1.1687"
-    }
-  },
-  {
     "id": "Google.Cloud.Monitoring.V3",
     "generator": "micro",
     "protoPath": "google/monitoring/v3",

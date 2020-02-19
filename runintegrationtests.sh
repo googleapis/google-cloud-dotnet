@@ -90,10 +90,7 @@ log_build_action "(Start) Integration tests"
 for testdir in $testdirs
 do
   log_build_action "Testing $testdir"
-  if [[ "$testdir" =~ Metadata || "$testdir" =~ EntityFrameworkCore.Spanner ]]
-  then
-    echo "Skipping $testdir; test not supported yet."
-  elif [[ "$testdir" =~ SmokeTests ]]
+  if [[ "$testdir" =~ SmokeTests ]]
   then
     # Smoke tests aren't unit tests - we just run them as console apps,
     # passing in the project ID
