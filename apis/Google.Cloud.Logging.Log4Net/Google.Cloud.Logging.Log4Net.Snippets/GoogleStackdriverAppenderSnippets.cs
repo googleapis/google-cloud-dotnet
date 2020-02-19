@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Logging.V2;
 using log4net;
@@ -22,6 +23,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
+using System.Xml;
 using Xunit;
 
 namespace Google.Cloud.Logging.Log4Net.Snippets
@@ -44,6 +46,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
         [Fact]
         public void Overview()
         {
+            DateTime startTime = DateTime.UtcNow;
             string projectId = _fixture.ProjectId;
             string logId = _fixture.LogId + $"-{Guid.NewGuid()}";
             string fileName = "log4net.xml";
@@ -85,12 +88,19 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
                 Assert.True(repositoryFlushCompleted);
 
                 var logClient = LoggingServiceV2Client.Create();
-                var logName = new LogName(projectId, logId);
+                var logName = LogName.FromProjectLog(projectId, logId);
+
+                string formattedTime = XmlConvert.ToString(startTime.AddMinutes(-3), XmlDateTimeSerializationMode.Utc);
+                string filter = $"timestamp >= \"{formattedTime}\" AND logName=\"{logName}\" AND \"An exciting log entry!\"";
+
                 // Wait up to 30 seconds for the log entry to appear in StackDriver.
                 for (int i = 0; i < 30; i++)
                 {
-                    var logEntry = logClient.ListLogEntries(new[] { $"projects/{projectId}" },
-                        $"logName=\"{logName}\" AND \"An exciting log entry!\"", "timestamp desc").FirstOrDefault();
+                    var logEntry = logClient.ListLogEntries(
+                        resourceNames: new[] { ProjectName.FromProject(projectId) },
+                        filter: filter,
+                        orderBy: "timestamp desc")
+                        .FirstOrDefault();
                     if (logEntry != null)
                     {
                         Assert.Contains("An exciting log entry!", logEntry.TextPayload);
