@@ -84,7 +84,7 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
                     .ToList();
                 var idToTagName = apiTags.ToDictionary(tag => tag.Target.Id, tag => tag.FriendlyName.Substring(tagPrefix.Length));
 
-                foreach (var commit in repo.Branches["master"].Commits)
+                foreach (var commit in repo.Branches["gax-v2"].Commits)
                 {
                     if (idToTagName.TryGetValue(commit.Id, out string version))
                     {

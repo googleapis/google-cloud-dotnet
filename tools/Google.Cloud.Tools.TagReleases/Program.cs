@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.TagReleases
     /// 
     /// Steps taken:
     /// 
-    /// - Find the current head of the master branch on github
+    /// - Find the current head of the gax-v2 branch on github
     /// - Check that the local repo is at the same commit
     /// - Check that the local repo has no pending changes to apis.json
     /// - Work out which packages would need to be tagged
@@ -40,7 +40,7 @@ namespace Google.Cloud.Tools.TagReleases
     {
         private const string RepositoryOwner = "googleapis";
         private const string RepositoryName = "google-cloud-dotnet";
-        private const string TargetBranch = "master";
+        private const string TargetBranch = "gax-v2";
         private const string ApplicationName = "google-cloud-dotnet-tagreleases";
 
         private static int Main(string[] args)
