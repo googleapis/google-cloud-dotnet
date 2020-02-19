@@ -1,3 +1,5 @@
 # Version history
 
-(No releases yet.)
+# Version 1.0.0-beta01, released 2020-02-19
+
+Initial beta release.
