@@ -1,5 +1,5 @@
---- a/googleapis/google/cloud/automl/v1/prediction_service.proto
-+++ b/googleapis/google/cloud/automl/v1/prediction_service.proto
+--- a/google/cloud/automl/v1/prediction_service.proto
++++ b/google/cloud/automl/v1/prediction_service.proto
 @@ -82,6 +82,10 @@ service PredictionService {
        post: "/v1/{name=projects/*/locations/*/models/*}:batchPredict"
        body: "*"
@@ -11,8 +11,8 @@
    }
  }
  
---- a/googleapis/google/cloud/automl/v1/service.proto
-+++ b/googleapis/google/cloud/automl/v1/service.proto
+--- a/google/cloud/automl/v1/service.proto
++++ b/google/cloud/automl/v1/service.proto
 @@ -65,6 +65,10 @@ service AutoMl {
        post: "/v1/{parent=projects/*/locations/*}/datasets"
        body: "dataset"

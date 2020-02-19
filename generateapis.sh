@@ -22,20 +22,26 @@ OUTDIR=tmp
 if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
 then
   declare -r GOOGLEAPIS="$SYNTHTOOL_GOOGLEAPIS"
+elif [[ "$SYNTHTOOL_CACHE" != "" ]]
+then
+  declare -r GOOGLEAPIS="$SYNTHTOOL_CACHE/googleapis"
 else
   declare -r GOOGLEAPIS=googleapis
 fi
 
+# Allow pre/post-generation scripts to know where to find the repo
+export GOOGLEAPIS
+
 fetch_github_repos() {
   if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" ]]
   then
-    if [ -d "googleapis" ]
+    if [ -d "$GOOGLEAPIS" ]
     then
-      git -C googleapis pull -q
+      git -C $GOOGLEAPIS pull -q
     else
       # Auto-detect whether we're cloning the public or private googleapis repo.
       git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
-      git clone https://github.com/googleapis/${repo} googleapis --depth 1
+      git clone https://github.com/googleapis/${repo} $GOOGLEAPIS --depth 1
     fi
   fi
 }
