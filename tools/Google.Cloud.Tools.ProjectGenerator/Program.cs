@@ -17,7 +17,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -168,7 +167,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        static void GenerateProjects(string apiRoot, ApiMetadata api, HashSet<string> apiNames)
+        public static void GenerateProjects(string apiRoot, ApiMetadata api, HashSet<string> apiNames)
         {
             if (api.Type == ApiType.Analyzers)
             {
@@ -346,7 +345,7 @@ shell.run(
         /// Generates a metadata file (currently .repo-metadata.json; may change name later) with
         /// all the information that language-agnostic tools require.
         /// </summary>
-        private static void GenerateMetadataFile(string apiRoot, ApiMetadata api)
+        public static void GenerateMetadataFile(string apiRoot, ApiMetadata api)
         {
             var version = api.StructuredVersion;
             string versionBasedReleaseLevel = 
@@ -369,7 +368,6 @@ shell.run(
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
             File.WriteAllText(Path.Combine(apiRoot, ".repo-metadata.json"), json);
-
         }
 
         private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)

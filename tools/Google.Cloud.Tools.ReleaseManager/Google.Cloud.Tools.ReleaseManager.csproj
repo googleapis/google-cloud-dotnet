@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Tools.ProjectGenerator\Google.Cloud.Tools.ProjectGenerator.csproj" />
+    <ProjectReference Include="..\Google.Cloud.Tools.UpdateReleaseNotes\Google.Cloud.Tools.UpdateReleaseNotes.csproj" />
+    <ProjectReference Include="..\Google.Cloud.Tools.CheckVersionCompatibility\Google.Cloud.Tools.CheckVersionCompatibility.csproj" />
+  </ItemGroup>
+
+</Project>
