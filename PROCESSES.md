@@ -131,7 +131,8 @@ project itself:
 
 Releasing consists of these steps:
 
-- Updating the version number in GitHub (via standard pull requests)
+- Updating the version number in GitHub (via standard pull requests),
+  as well as the version history.
 - Creating a release tag and GitHub release
 - Building and testing
 - Pushing the package to nuget.org
@@ -142,36 +143,45 @@ job.
 
 ### Detailed steps
 
+Much of this work is automated by the `prepare-release.sh` script,
+but allows for intervention at any point. This documentation assumes
+the use of `prepare-release.sh`, but that's just for simplicity.
+Everything can be done manually.
+
+Note that only the `set-version` command for `prepare-release` needs
+the package ID to be specified. All other commands work on the basis
+of "whatever versions have been changed since the latest commit on
+GitHub are the ones we want to release".
+
 **Create the release PR**
 
-1. Edit the API catalog (`apis/apis.json`). Find the package you
-want to release (by ID) and edit the version key to the new release
-version. Usually this will be a bump of prerelease (e.g.
-1.0.0-beta03 to 1.0.0-beta04) or a minor version bump (e.g. 1.3.0 to
-1.4.0). You may update any dependencies at the same time.
+1. Run `./prepare-release.sh set-version <api> <new-version>`, e.g.
+`prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03`. This
+updates `apis.json` and regenerates the project and metadata files.
+The output includes the old version and the new version, so you can
+check this is really what you meant to do.
 
-2. Run `generateprojects.sh` from the root directory. This should
-indicate that it has updated the project file for the package you're
-releasing.
+2. Run `./prepare-release.sh compare`. This will compare the
+previously released NuGet packages with the current source code,
+showing you what's changed. Check there's nothing unexpected.
 
-3. If this is the first release of a package, or it's been updated
+3. Run `./prepare-release update-history`. This will update the
+version history files of all changed APIs, based on the commits
+that touched the relevant directories. You may well wish to review
+the files afterwards to check they contain everything you want to
+include in the history. (The filenames are displayed as the output
+of this command.)
+
+4. If this is the first release of a package, or it's been updated
 from beta to GA, update `README.md` and `docs/root/index.md`
-accordingly.
+accordingly. There is no automation for this step currently.
 
-4. Update the version history for the package (in
-`apis/{package_id}/docs/history.md`). There is a script in the root
-directory to help with this: run `prepare-release.sh` passing in the
-package ID, which will perform version comparisons and perform an
-initial edit on the file, but you'll need to edit the file manually
-afterwards to make the history as useful as possible. (The tool is
-very new, and we hope to reduce the manual edit requirements over
-time.)
-
-5. Commit the changes. The first line of the commit message should
-be "Release {package_id} version {version}". Optionally, add release
-notes as the rest of the commit message, potentially by copying from
-the `history.md` file you've just edited. ([Sample
-commit](https://github.com/googleapis/google-cloud-dotnet/commit/3b580a6a0e8248daec4c84f6a45d0e07c094013d))
+5. Assuming you're only releasing a single package, run
+`./prepare-release commit`. This will commit all the current
+changes, with a message taken from the version history for the
+package. Use `git commit --amend` to change the commit message if
+you need to. If you're releasing more than one package, commit the
+changes manually with a suitable message.
 
 6. Create a pull request for the commit, and get it reviewed.
 
@@ -179,11 +189,10 @@ Sample session when releasing Google.Cloud.Speech.V1:
 
 ```text
 $ git checkout -b release-speech
-$ pico apis/apis.json
-$ ./generateprojects.sh
-$ ./prepare-release.sh Google.Cloud.Speech.V1
-$ pico apis/Google.Cloud.Speech.V1/docs/history.md
-$ git commit -a
+$ ./prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03
+$ ./prepare-release.sh compare
+$ ./prepare-release.sh update-history
+$ ./prepare-release.sh commit
 $ git push
 ```
 
