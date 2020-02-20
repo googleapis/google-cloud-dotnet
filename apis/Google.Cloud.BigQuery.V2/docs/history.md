@@ -1,6 +1,6 @@
 # Version history
 
-# Version 3.0.0-beta01, released 2020-02-20
+# Version 2.0.0-beta01, released 2020-02-20
 
 Breaking changes:
 
