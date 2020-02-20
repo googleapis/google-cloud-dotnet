@@ -1,5 +1,14 @@
 # Version history
 
+# Version 3.0.0-beta01, released 2020-02-20
+
+Upgrade dependencies to GAX v3. Currently there are no direct
+surface changes, but breaking changes in GAX may affect users, for
+example in terms of async pagination.
+
+More direct breaking changes are expected in this package before
+3.0.0 is released, specifically around signed URLs.
+
 # Version 2.5.0, released 2020-01-06
 
 - [Commit f556739](https://github.com/googleapis/google-cloud-dotnet/commit/f556739): Add Fields parameters to ListObjectsOptions and ListBucketsOptions
