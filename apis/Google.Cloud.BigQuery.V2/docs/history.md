@@ -1,5 +1,37 @@
 # Version history
 
+# Version 3.0.0-beta01, released 2020-02-20
+
+Breaking changes:
+
+- Updated to GAX v3, which has breaking changes, particularly around async pagination
+- Removed obsolete BigQueryResults constructor
+- Insert operations now return a BigQueryInsertResults instead of void
+
+Further breaking changes are being considered before the 3.0.0
+release, specifically around BigQueryResults.SafeTotalRows and
+options to create resources (tables, datasets etc).
+
+New features:
+
+- Introduced BigQueryInsertResults as a cleaner way of handling insert errors
+- Retrieval of partial results via GetTableOptions.SelectedFields
+- Support for ParentJobId filtering when listing jobs
+- CRUD support for models
+
+Specific commits:
+
+- [Commit 3c900ed](https://github.com/googleapis/google-cloud-dotnet/commit/3c900ed): Remove obsolete BigQueryResults constructor
+- [Commit 21117b7](https://github.com/googleapis/google-cloud-dotnet/commit/21117b7): Fixes issue introduced in [issue 4073](https://github.com/googleapis/google-cloud-dotnet/issues/4073).
+- [Commit 3cadc8e](https://github.com/googleapis/google-cloud-dotnet/commit/3cadc8e): Modifies insert methods to return BigQueryInsertResults.
+- [Commit 9a2f966](https://github.com/googleapis/google-cloud-dotnet/commit/9a2f966): Adds BigQueryInsertResults which wraps the response obtained from insert attempts.
+- [Commit a849e5c](https://github.com/googleapis/google-cloud-dotnet/commit/a849e5c): Supports listing partial rows by specifying a partial table schema.
+- [Commit a820034](https://github.com/googleapis/google-cloud-dotnet/commit/a820034): Supports fetching a partial table schema when getting a table.
+- [Commit 06e0d6e](https://github.com/googleapis/google-cloud-dotnet/commit/06e0d6e): Adds Model CRUD operations wrappers to BigQueryDataset and BigQueryModel.
+- [Commit 38e755a](https://github.com/googleapis/google-cloud-dotnet/commit/38e755a): Adds some Model CRUD operations and supporting types.
+- [Commit ade13ba](https://github.com/googleapis/google-cloud-dotnet/commit/ade13ba): Support ParentJobId filtering when listing Jobs.
+- [Commit ebeece5](https://github.com/googleapis/google-cloud-dotnet/commit/ebeece5): Parse timestamp JSON values as decimal instead of double. Fixes [issue 4031](https://github.com/googleapis/google-cloud-dotnet/issues/4031).
+
 # Version 1.4.0, released 2019-12-16
 
 New features since 1.3.0:
