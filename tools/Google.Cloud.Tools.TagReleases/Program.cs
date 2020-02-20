@@ -18,6 +18,7 @@ using Octokit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Tools.TagReleases
@@ -77,7 +78,7 @@ namespace Google.Cloud.Tools.TagReleases
             var apis = ApiMetadata.LoadApis();
             var newReleases = ComputeNewReleasesAsync(apis);
             ValidateChanges(newReleases);
-            if (!ConfirmReleases(apis, newReleases))
+            if (!ConfirmReleases(newReleases))
             {
                 return 0;
             }
@@ -89,21 +90,20 @@ namespace Google.Cloud.Tools.TagReleases
             return 0;
         }
 
-        private static async Task<string> FetchRemoteCommitAsync(GitHubClient client)
+        private static async Task<Octokit.Commit> FetchRemoteCommitAsync(GitHubClient client)
         {
-            var remoteBranch = await client.Repository.Branch.Get(RepositoryOwner, RepositoryName, TargetBranch);
-            string sha = remoteBranch.Commit.Sha;
-            Console.WriteLine($"Current GitHub {TargetBranch} commit: {sha}");
-            return sha;
+            var commit = (await client.Repository.Commit.Get(RepositoryOwner, RepositoryName, TargetBranch)).Commit;
+            Console.WriteLine($"Current GitHub {TargetBranch} commit: {commit.Sha}");
+            return commit;
         }
 
-        private static void ValidateLocalRepository(string expectedCommit)
+        private static void ValidateLocalRepository(Octokit.Commit expectedCommit)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new LibGit2Sharp.Repository(root))
             {
                 string tip = repo.Head.Tip.Sha;
-                if (tip != expectedCommit)
+                if (tip != expectedCommit.Sha)
                 {
                     throw new UserErrorException($"Current local commit: {tip}. Aborting.");
                 }
@@ -153,7 +153,7 @@ namespace Google.Cloud.Tools.TagReleases
             }
         }
 
-        private static bool ConfirmReleases(List<ApiMetadata> allApis, List<ApiMetadata> newReleases)
+        private static bool ConfirmReleases(List<ApiMetadata> newReleases)
         {
             Console.WriteLine("APIs requiring a new release:");
             newReleases.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
@@ -169,20 +169,63 @@ namespace Google.Cloud.Tools.TagReleases
             return response == "y";
         }
 
-        private static async Task MakeReleasesAsync(GitHubClient client, List<ApiMetadata> newReleases, string commit)
+        private static async Task MakeReleasesAsync(GitHubClient client, List<ApiMetadata> newReleases, Octokit.Commit commit)
         {
+            var originalMessage = commit.Message;
+            var unwrappedMessage = string.Join("\n", UnwrapLines(originalMessage.Split('\n')));
+
             foreach (var api in newReleases)
             {
                 var gitRelease = new NewRelease($"{api.Id}-{api.Version}")
                 {
                     Prerelease = !api.IsReleaseVersion,
                     Name = $"{api.Version} release of {api.Id}",
-                    TargetCommitish = commit
+                    TargetCommitish = commit.Sha,
+                    Body = unwrappedMessage
                 };
                 // We could parallelize, but there's very little point.
                 await client.Repository.Release.Create(RepositoryOwner, RepositoryName, gitRelease);
                 Console.WriteLine($"Created release for {api.Id}");
             }
-        }       
+        }
+
+        /// <summary>
+        /// Unwraps the given sequence of lines to be more suitable for a GitHub commit/release message.
+        /// (GitHub Markdown formatting breaks on newlines, which can be annoying.)
+        /// </summary>
+        private static IEnumerable<string> UnwrapLines(IEnumerable<string> lines)
+        {
+            var builder = new StringBuilder();
+            foreach (var line in lines)
+            {
+                bool emptyLine = string.IsNullOrWhiteSpace(line);
+                // Don't unwrap lists or empty lines.
+                if (line.StartsWith("- ") || line.StartsWith("* ") || line.StartsWith(" ") || emptyLine)
+                {
+                    if (builder.Length > 0)
+                    {
+                        yield return builder.ToString();
+                        builder.Clear();
+                    }
+                }
+                if (builder.Length > 0)
+                {
+                    builder.Append(" ");
+                }
+                builder.Append(line);
+
+                // Yield immediately for Markdown line breaks or empty lines
+                if (line.EndsWith("  ") || emptyLine)
+                {
+                    yield return builder.ToString();
+                    builder.Clear();
+                }
+            }
+            // Yield anything we still have
+            if (builder.Length > 0)
+            {
+                yield return builder.ToString();
+            }
+        }
     }
 }
