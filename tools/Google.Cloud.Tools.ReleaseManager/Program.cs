@@ -113,6 +113,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"API '{id}' not found in API catalog.");
             }
+            string oldVersion = api.Version;
             api.Version = version;
             var layout = DirectoryLayout.ForApi(id);
             var apiNames = new HashSet<string>(catalog.Select(x => x.Id));
@@ -130,6 +131,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             string formatted = parsed.ToString(Formatting.Indented);
             File.WriteAllText(ApiMetadata.CatalogPath, formatted);
             Console.WriteLine("Updated apis.json");
+            Console.WriteLine();
+            Console.WriteLine(new ApiVersionPair(id, oldVersion, version));
         }
 
         private static void ShowVersions(string[] args)
