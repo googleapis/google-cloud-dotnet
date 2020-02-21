@@ -1,5 +1,17 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-02-21
+
+- [Commit 2305571](https://github.com/googleapis/google-cloud-dotnet/commit/2305571):
+  - Regenerate Google.Cloud.Kms.V1
+  - Restores some method signatures that were in 1.1.0:
+    - GetCryptoKey(name)
+    - GetCryptoKeyVersion(name)
+    - GetImportJob(name)
+    - GetPublicKey(name)
+  - (Breaking) Changes Encrypt parameter type from CryptoKeyName to IResourceName
+  - (Breaking) Changes ListCryptoKeyVersions from KeyRingName to CryptoKeyName
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
