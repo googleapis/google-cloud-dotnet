@@ -75,13 +75,14 @@ namespace Google.Cloud.Firestore
             DocumentsPath = $"{RootPath}/documents";
             WarningLogger = warningLogger;
 
-            // TODO: Validate these settings, and potentially make them configurable
+            // TODO: Potentially make these configurable.
+            // The retry settings are taken from firestore_grpc_service_config.json.
             var batchGetRetry = RetrySettings.FromExponentialBackoff(
-                maxAttempts: int.MaxValue,
-                initialBackoff: TimeSpan.FromMilliseconds(500),
-                maxBackoff: TimeSpan.FromSeconds(5),
-                backoffMultiplier: 2.0,
-                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable));
+                maxAttempts: 5,
+                initialBackoff: TimeSpan.FromMilliseconds(100),
+                maxBackoff: TimeSpan.FromSeconds(60),
+                backoffMultiplier: 1.3,
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.Internal, StatusCode.DeadlineExceeded));
             _batchGetCallSettings = CallSettings.FromRetry(batchGetRetry).WithTimeout(TimeSpan.FromMinutes(10));
 
             SerializationContext = GaxPreconditions.CheckNotNull(serializationContext, nameof(serializationContext));
