@@ -85,19 +85,19 @@ namespace Google.Cloud.Tools.TagReleases
 
             await MakeReleasesAsync(client, newReleases, commit);
             Console.WriteLine();
-            Console.WriteLine($"Release tags created. Please start the Kokoro release job with commit hash \"{commit}\" and wait for an email with the result.");
+            Console.WriteLine($"Release tags created. Please start the Kokoro release job with commit hash \"{commit.Sha}\" and wait for an email with the result.");
             Console.WriteLine($"For a manual release, run ./buildrelease.sh {commit}");
             return 0;
         }
 
-        private static async Task<Octokit.Commit> FetchRemoteCommitAsync(GitHubClient client)
+        private static async Task<GitHubCommit> FetchRemoteCommitAsync(GitHubClient client)
         {
-            var commit = (await client.Repository.Commit.Get(RepositoryOwner, RepositoryName, TargetBranch)).Commit;
+            var commit = await client.Repository.Commit.Get(RepositoryOwner, RepositoryName, TargetBranch);
             Console.WriteLine($"Current GitHub {TargetBranch} commit: {commit.Sha}");
             return commit;
         }
 
-        private static void ValidateLocalRepository(Octokit.Commit expectedCommit)
+        private static void ValidateLocalRepository(GitHubCommit expectedCommit)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new LibGit2Sharp.Repository(root))
@@ -169,9 +169,9 @@ namespace Google.Cloud.Tools.TagReleases
             return response == "y";
         }
 
-        private static async Task MakeReleasesAsync(GitHubClient client, List<ApiMetadata> newReleases, Octokit.Commit commit)
+        private static async Task MakeReleasesAsync(GitHubClient client, List<ApiMetadata> newReleases, GitHubCommit commit)
         {
-            var originalMessage = commit.Message;
+            var originalMessage = commit.Commit.Message;
             var unwrappedMessage = string.Join("\n", UnwrapLines(originalMessage.Split('\n')));
 
             foreach (var api in newReleases)
