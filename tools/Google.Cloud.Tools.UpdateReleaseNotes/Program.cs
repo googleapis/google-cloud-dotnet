@@ -28,8 +28,6 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
     /// </summary>
     public class Program
     {
-        private const string MarkdownFile = "history.md";
-
         static int Main(string[] args)
         {
             if (args.Length != 1)
@@ -97,7 +95,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 .Where(tag => tag.FriendlyName.StartsWith(tagPrefix))
                 .ToDictionary(tag => tag.Target.Id, tag => tag.FriendlyName.Substring(tagPrefix.Length));
 
-            foreach (var commit in repo.Branches["master"].Commits)
+            foreach (var commit in repo.Head.Commits)
             {
                 if (CommitContainsApi(commit))
                 {
