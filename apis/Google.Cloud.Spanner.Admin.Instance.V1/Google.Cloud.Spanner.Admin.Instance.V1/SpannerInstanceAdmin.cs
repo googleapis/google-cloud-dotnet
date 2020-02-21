@@ -771,14 +771,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> endpointUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. The endpoint URIs based on the instance config.
-    /// For example, instances located in a specific cloud region (or multi region)
-    /// such as nam3, would have a nam3 specific endpoint URI.
-    /// This URI is to be used implictly by SDK clients, with fallback to default
-    /// URI. These endpoints are intended to optimize the network routing between
-    /// the client and the instance's serving resources.
-    /// If multiple endpoints are present, client may establish connections using
-    /// any of the given URIs.
+    /// Deprecated. This field is not populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> EndpointUris {
