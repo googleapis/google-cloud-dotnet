@@ -28,34 +28,38 @@ namespace Google.Cloud.Tasks.V2 {
             "bG91ZC50YXNrcy52MhoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoiZ29v",
             "Z2xlL2Nsb3VkL3Rhc2tzL3YyL3RhcmdldC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
             "YnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIt0DCgVRdWV1",
+            "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIrIECgVRdWV1",
             "ZRIMCgRuYW1lGAEgASgJEkwKG2FwcF9lbmdpbmVfcm91dGluZ19vdmVycmlk",
             "ZRgCIAEoCzInLmdvb2dsZS5jbG91ZC50YXNrcy52Mi5BcHBFbmdpbmVSb3V0",
             "aW5nEjYKC3JhdGVfbGltaXRzGAMgASgLMiEuZ29vZ2xlLmNsb3VkLnRhc2tz",
             "LnYyLlJhdGVMaW1pdHMSOAoMcmV0cnlfY29uZmlnGAQgASgLMiIuZ29vZ2xl",
             "LmNsb3VkLnRhc2tzLnYyLlJldHJ5Q29uZmlnEjEKBXN0YXRlGAUgASgOMiIu",
             "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyLlF1ZXVlLlN0YXRlEi4KCnB1cmdlX3Rp",
-            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIkUKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEgoKBlBBVVNF",
-            "RBACEgwKCERJU0FCTEVEEAM6XOpBWQofY2xvdWR0YXNrcy5nb29nbGVhcGlz",
-            "LmNvbS9RdWV1ZRI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3F1ZXVlcy97cXVldWV9ImoKClJhdGVMaW1pdHMSIQoZbWF4X2Rp",
-            "c3BhdGNoZXNfcGVyX3NlY29uZBgBIAEoARIWCg5tYXhfYnVyc3Rfc2l6ZRgC",
-            "IAEoBRIhChltYXhfY29uY3VycmVudF9kaXNwYXRjaGVzGAMgASgFItEBCgtS",
-            "ZXRyeUNvbmZpZxIUCgxtYXhfYXR0ZW1wdHMYASABKAUSNQoSbWF4X3JldHJ5",
-            "X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi4K",
-            "C21pbl9iYWNrb2ZmGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "Ei4KC21heF9iYWNrb2ZmGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uEhUKDW1heF9kb3VibGluZ3MYBSABKAVCZQoZY29tLmdvb2dsZS5jbG91",
-            "ZC50YXNrcy52MkIKUXVldWVQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Rhc2tzL3YyO3Rhc2tzYgZwcm90",
-            "bzM="));
+            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElMKGnN0YWNr",
+            "ZHJpdmVyX2xvZ2dpbmdfY29uZmlnGAkgASgLMi8uZ29vZ2xlLmNsb3VkLnRh",
+            "c2tzLnYyLlN0YWNrZHJpdmVyTG9nZ2luZ0NvbmZpZyJFCgVTdGF0ZRIVChFT",
+            "VEFURV9VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARIKCgZQQVVTRUQQAhIM",
+            "CghESVNBQkxFRBADOlzqQVkKH2Nsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20v",
+            "UXVldWUSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9xdWV1ZXMve3F1ZXVlfSJqCgpSYXRlTGltaXRzEiEKGW1heF9kaXNwYXRj",
+            "aGVzX3Blcl9zZWNvbmQYASABKAESFgoObWF4X2J1cnN0X3NpemUYAiABKAUS",
+            "IQoZbWF4X2NvbmN1cnJlbnRfZGlzcGF0Y2hlcxgDIAEoBSLRAQoLUmV0cnlD",
+            "b25maWcSFAoMbWF4X2F0dGVtcHRzGAEgASgFEjUKEm1heF9yZXRyeV9kdXJh",
+            "dGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIuCgttaW5f",
+            "YmFja29mZhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIuCgtt",
+            "YXhfYmFja29mZhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIV",
+            "Cg1tYXhfZG91YmxpbmdzGAUgASgFIjIKGFN0YWNrZHJpdmVyTG9nZ2luZ0Nv",
+            "bmZpZxIWCg5zYW1wbGluZ19yYXRpbxgBIAEoAUJlChljb20uZ29vZ2xlLmNs",
+            "b3VkLnRhc2tzLnYyQgpRdWV1ZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFza3MvdjI7dGFza3NiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Queue), global::Google.Cloud.Tasks.V2.Queue.Parser, new[]{ "Name", "AppEngineRoutingOverride", "RateLimits", "RetryConfig", "State", "PurgeTime" }, null, new[]{ typeof(global::Google.Cloud.Tasks.V2.Queue.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.Queue), global::Google.Cloud.Tasks.V2.Queue.Parser, new[]{ "Name", "AppEngineRoutingOverride", "RateLimits", "RetryConfig", "State", "PurgeTime", "StackdriverLoggingConfig" }, null, new[]{ typeof(global::Google.Cloud.Tasks.V2.Queue.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.RateLimits), global::Google.Cloud.Tasks.V2.RateLimits.Parser, new[]{ "MaxDispatchesPerSecond", "MaxBurstSize", "MaxConcurrentDispatches" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.RetryConfig), global::Google.Cloud.Tasks.V2.RetryConfig.Parser, new[]{ "MaxAttempts", "MaxRetryDuration", "MinBackoff", "MaxBackoff", "MaxDoublings" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.RetryConfig), global::Google.Cloud.Tasks.V2.RetryConfig.Parser, new[]{ "MaxAttempts", "MaxRetryDuration", "MinBackoff", "MaxBackoff", "MaxDoublings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.StackdriverLoggingConfig), global::Google.Cloud.Tasks.V2.StackdriverLoggingConfig.Parser, new[]{ "SamplingRatio" }, null, null, null, null)
           }));
     }
     #endregion
@@ -98,6 +102,7 @@ namespace Google.Cloud.Tasks.V2 {
       retryConfig_ = other.retryConfig_ != null ? other.retryConfig_.Clone() : null;
       state_ = other.state_;
       purgeTime_ = other.purgeTime_ != null ? other.purgeTime_.Clone() : null;
+      stackdriverLoggingConfig_ = other.stackdriverLoggingConfig_ != null ? other.stackdriverLoggingConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -265,6 +270,22 @@ namespace Google.Cloud.Tasks.V2 {
       }
     }
 
+    /// <summary>Field number for the "stackdriver_logging_config" field.</summary>
+    public const int StackdriverLoggingConfigFieldNumber = 9;
+    private global::Google.Cloud.Tasks.V2.StackdriverLoggingConfig stackdriverLoggingConfig_;
+    /// <summary>
+    /// Configuration options for writing logs to
+    /// [Stackdriver Logging](https://cloud.google.com/logging/docs/). If this
+    /// field is unset, then no logs are written.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Tasks.V2.StackdriverLoggingConfig StackdriverLoggingConfig {
+      get { return stackdriverLoggingConfig_; }
+      set {
+        stackdriverLoggingConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Queue);
@@ -284,6 +305,7 @@ namespace Google.Cloud.Tasks.V2 {
       if (!object.Equals(RetryConfig, other.RetryConfig)) return false;
       if (State != other.State) return false;
       if (!object.Equals(PurgeTime, other.PurgeTime)) return false;
+      if (!object.Equals(StackdriverLoggingConfig, other.StackdriverLoggingConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -296,6 +318,7 @@ namespace Google.Cloud.Tasks.V2 {
       if (retryConfig_ != null) hash ^= RetryConfig.GetHashCode();
       if (State != global::Google.Cloud.Tasks.V2.Queue.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (purgeTime_ != null) hash ^= PurgeTime.GetHashCode();
+      if (stackdriverLoggingConfig_ != null) hash ^= StackdriverLoggingConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -333,6 +356,10 @@ namespace Google.Cloud.Tasks.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(PurgeTime);
       }
+      if (stackdriverLoggingConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(StackdriverLoggingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -358,6 +385,9 @@ namespace Google.Cloud.Tasks.V2 {
       }
       if (purgeTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PurgeTime);
+      }
+      if (stackdriverLoggingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StackdriverLoggingConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -399,6 +429,12 @@ namespace Google.Cloud.Tasks.V2 {
           PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PurgeTime.MergeFrom(other.PurgeTime);
+      }
+      if (other.stackdriverLoggingConfig_ != null) {
+        if (stackdriverLoggingConfig_ == null) {
+          StackdriverLoggingConfig = new global::Google.Cloud.Tasks.V2.StackdriverLoggingConfig();
+        }
+        StackdriverLoggingConfig.MergeFrom(other.StackdriverLoggingConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -445,6 +481,13 @@ namespace Google.Cloud.Tasks.V2 {
               PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(PurgeTime);
+            break;
+          }
+          case 74: {
+            if (stackdriverLoggingConfig_ == null) {
+              StackdriverLoggingConfig = new global::Google.Cloud.Tasks.V2.StackdriverLoggingConfig();
+            }
+            input.ReadMessage(StackdriverLoggingConfig);
             break;
           }
         }
@@ -1109,6 +1152,145 @@ namespace Google.Cloud.Tasks.V2 {
           }
           case 40: {
             MaxDoublings = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Configuration options for writing logs to
+  /// [Stackdriver Logging](https://cloud.google.com/logging/docs/).
+  /// </summary>
+  public sealed partial class StackdriverLoggingConfig : pb::IMessage<StackdriverLoggingConfig> {
+    private static readonly pb::MessageParser<StackdriverLoggingConfig> _parser = new pb::MessageParser<StackdriverLoggingConfig>(() => new StackdriverLoggingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StackdriverLoggingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2.QueueReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StackdriverLoggingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StackdriverLoggingConfig(StackdriverLoggingConfig other) : this() {
+      samplingRatio_ = other.samplingRatio_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StackdriverLoggingConfig Clone() {
+      return new StackdriverLoggingConfig(this);
+    }
+
+    /// <summary>Field number for the "sampling_ratio" field.</summary>
+    public const int SamplingRatioFieldNumber = 1;
+    private double samplingRatio_;
+    /// <summary>
+    /// Specifies the fraction of operations to write to
+    /// [Stackdriver Logging](https://cloud.google.com/logging/docs/).
+    /// This field may contain any value between 0.0 and 1.0, inclusive.
+    /// 0.0 is the default and means that no operations are logged.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double SamplingRatio {
+      get { return samplingRatio_; }
+      set {
+        samplingRatio_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StackdriverLoggingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StackdriverLoggingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SamplingRatio, other.SamplingRatio)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SamplingRatio != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SamplingRatio);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (SamplingRatio != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(SamplingRatio);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (SamplingRatio != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StackdriverLoggingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SamplingRatio != 0D) {
+        SamplingRatio = other.SamplingRatio;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            SamplingRatio = input.ReadDouble();
             break;
           }
         }
