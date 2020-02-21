@@ -871,10 +871,10 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CryptoKeyVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersions(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersions(CryptoKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListCryptoKeyVersions(new ListCryptoKeyVersionsRequest
             {
-                ParentAsKeyRingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsCryptoKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -896,10 +896,10 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CryptoKeyVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersionsAsync(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersionsAsync(CryptoKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListCryptoKeyVersionsAsync(new ListCryptoKeyVersionsRequest
             {
-                ParentAsKeyRingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsCryptoKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -1158,6 +1158,90 @@ namespace Google.Cloud.Kms.V1
             GetCryptoKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns metadata for a given [CryptoKey][google.cloud.kms.v1.CryptoKey], as well as its
+        /// [primary][google.cloud.kms.v1.CryptoKey.primary] [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKey GetCryptoKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKey(new GetCryptoKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKey][google.cloud.kms.v1.CryptoKey], as well as its
+        /// [primary][google.cloud.kms.v1.CryptoKey.primary] [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> GetCryptoKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKeyAsync(new GetCryptoKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKey][google.cloud.kms.v1.CryptoKey], as well as its
+        /// [primary][google.cloud.kms.v1.CryptoKey.primary] [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> GetCryptoKeyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCryptoKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKey][google.cloud.kms.v1.CryptoKey], as well as its
+        /// [primary][google.cloud.kms.v1.CryptoKey.primary] [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKey GetCryptoKey(CryptoKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKey(new GetCryptoKeyRequest
+            {
+                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKey][google.cloud.kms.v1.CryptoKey], as well as its
+        /// [primary][google.cloud.kms.v1.CryptoKey.primary] [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> GetCryptoKeyAsync(CryptoKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKeyAsync(new GetCryptoKeyRequest
+            {
+                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKey][google.cloud.kms.v1.CryptoKey], as well as its
+        /// [primary][google.cloud.kms.v1.CryptoKey.primary] [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> GetCryptoKeyAsync(CryptoKeyName name, st::CancellationToken cancellationToken) =>
+            GetCryptoKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1183,6 +1267,84 @@ namespace Google.Cloud.Kms.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CryptoKeyVersion> GetCryptoKeyVersionAsync(GetCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
             GetCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion GetCryptoKeyVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKeyVersion(new GetCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> GetCryptoKeyVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKeyVersionAsync(new GetCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> GetCryptoKeyVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion GetCryptoKeyVersion(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKeyVersion(new GetCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> GetCryptoKeyVersionAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCryptoKeyVersionAsync(new GetCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> GetCryptoKeyVersionAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
+            GetCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
@@ -1221,6 +1383,108 @@ namespace Google.Cloud.Kms.V1
             GetPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublicKey GetPublicKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPublicKey(new GetPublicKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPublicKeyAsync(new GetPublicKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPublicKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublicKey GetPublicKey(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPublicKey(new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPublicKeyAsync(new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
+            GetPublicKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1246,6 +1510,84 @@ namespace Google.Cloud.Kms.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ImportJob> GetImportJobAsync(GetImportJobRequest request, st::CancellationToken cancellationToken) =>
             GetImportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImportJob GetImportJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImportJob(new GetImportJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportJob> GetImportJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImportJobAsync(new GetImportJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportJob> GetImportJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImportJob GetImportJob(ImportJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImportJob(new GetImportJobRequest
+            {
+                ImportJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportJob> GetImportJobAsync(ImportJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImportJobAsync(new GetImportJobRequest
+            {
+                ImportJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for a given [ImportJob][google.cloud.kms.v1.ImportJob].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportJob> GetImportJobAsync(ImportJobName name, st::CancellationToken cancellationToken) =>
+            GetImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and Location.
@@ -2328,10 +2670,10 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual EncryptResponse Encrypt(CryptoKeyName name, proto::ByteString plaintext, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual EncryptResponse Encrypt(gax::IResourceName name, proto::ByteString plaintext, gaxgrpc::CallSettings callSettings = null) =>
             Encrypt(new EncryptRequest
             {
-                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Plaintext = gax::GaxPreconditions.CheckNotNull(plaintext, nameof(plaintext)),
             }, callSettings);
 
@@ -2359,10 +2701,10 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<EncryptResponse> EncryptAsync(CryptoKeyName name, proto::ByteString plaintext, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<EncryptResponse> EncryptAsync(gax::IResourceName name, proto::ByteString plaintext, gaxgrpc::CallSettings callSettings = null) =>
             EncryptAsync(new EncryptRequest
             {
-                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Plaintext = gax::GaxPreconditions.CheckNotNull(plaintext, nameof(plaintext)),
             }, callSettings);
 
@@ -2390,7 +2732,7 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<EncryptResponse> EncryptAsync(CryptoKeyName name, proto::ByteString plaintext, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<EncryptResponse> EncryptAsync(gax::IResourceName name, proto::ByteString plaintext, st::CancellationToken cancellationToken) =>
             EncryptAsync(name, plaintext, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
