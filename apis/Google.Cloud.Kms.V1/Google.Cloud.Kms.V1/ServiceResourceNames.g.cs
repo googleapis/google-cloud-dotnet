@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
 using gckv = Google.Cloud.Kms.V1;
 
@@ -46,11 +47,11 @@ namespace Google.Cloud.Kms.V1
     public partial class ListCryptoKeyVersionsRequest
     {
         /// <summary>
-        /// <see cref="KeyRingName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public KeyRingName ParentAsKeyRingName
+        public CryptoKeyName ParentAsCryptoKeyName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : KeyRingName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -190,11 +191,11 @@ namespace Google.Cloud.Kms.V1
     public partial class EncryptRequest
     {
         /// <summary>
-        /// <see cref="gckv::CryptoKeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gckv::CryptoKeyName CryptoKeyName
+        public gax::IResourceName ResourceName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gax::UnparsedResourceName.Parse(Name);
             set => Name = value?.ToString() ?? "";
         }
     }
