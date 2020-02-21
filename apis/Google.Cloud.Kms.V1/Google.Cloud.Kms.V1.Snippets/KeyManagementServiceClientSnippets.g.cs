@@ -598,7 +598,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Initialize request argument(s)
             ListCryptoKeyVersionsRequest request = new ListCryptoKeyVersionsRequest
             {
-                ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 View = CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified,
                 Filter = "",
                 OrderBy = "",
@@ -649,7 +649,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Initialize request argument(s)
             ListCryptoKeyVersionsRequest request = new ListCryptoKeyVersionsRequest
             {
-                ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 View = CryptoKeyVersion.Types.CryptoKeyVersionView.Unspecified,
                 Filter = "",
                 OrderBy = "",
@@ -698,7 +698,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
             // Make the request
             PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersions(parent);
 
@@ -743,7 +743,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
             // Make the request
             PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersionsAsync(parent);
 
@@ -784,11 +784,11 @@ namespace Google.Cloud.Kms.V1.Snippets
         /// <summary>Snippet for ListCryptoKeyVersions</summary>
         public void ListCryptoKeyVersionsResourceNames()
         {
-            // Snippet: ListCryptoKeyVersions(KeyRingName, string, int?, CallSettings)
+            // Snippet: ListCryptoKeyVersions(CryptoKeyName, string, int?, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            KeyRingName parent = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]");
+            CryptoKeyName parent = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
             // Make the request
             PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersions(parent);
 
@@ -829,11 +829,11 @@ namespace Google.Cloud.Kms.V1.Snippets
         /// <summary>Snippet for ListCryptoKeyVersions</summary>
         public async Task ListCryptoKeyVersionsResourceNamesAsync()
         {
-            // Snippet: ListCryptoKeyVersionsAsync(KeyRingName, string, int?, CallSettings)
+            // Snippet: ListCryptoKeyVersionsAsync(CryptoKeyName, string, int?, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
-            KeyRingName parent = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]");
+            CryptoKeyName parent = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
             // Make the request
             PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersionsAsync(parent);
 
@@ -1271,6 +1271,60 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetCryptoKey</summary>
+        public void GetCryptoKey()
+        {
+            // Snippet: GetCryptoKey(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            // Make the request
+            CryptoKey response = keyManagementServiceClient.GetCryptoKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKeyAsync</summary>
+        public async Task GetCryptoKeyAsync()
+        {
+            // Snippet: GetCryptoKeyAsync(string, CallSettings)
+            // Additional: GetCryptoKeyAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            // Make the request
+            CryptoKey response = await keyManagementServiceClient.GetCryptoKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKey</summary>
+        public void GetCryptoKeyResourceNames()
+        {
+            // Snippet: GetCryptoKey(CryptoKeyName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            // Make the request
+            CryptoKey response = keyManagementServiceClient.GetCryptoKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKeyAsync</summary>
+        public async Task GetCryptoKeyResourceNamesAsync()
+        {
+            // Snippet: GetCryptoKeyAsync(CryptoKeyName, CallSettings)
+            // Additional: GetCryptoKeyAsync(CryptoKeyName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            // Make the request
+            CryptoKey response = await keyManagementServiceClient.GetCryptoKeyAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetCryptoKeyVersion</summary>
         public void GetCryptoKeyVersionRequestObject()
         {
@@ -1301,6 +1355,60 @@ namespace Google.Cloud.Kms.V1.Snippets
             };
             // Make the request
             CryptoKeyVersion response = await keyManagementServiceClient.GetCryptoKeyVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKeyVersion</summary>
+        public void GetCryptoKeyVersion()
+        {
+            // Snippet: GetCryptoKeyVersion(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.GetCryptoKeyVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKeyVersionAsync</summary>
+        public async Task GetCryptoKeyVersionAsync()
+        {
+            // Snippet: GetCryptoKeyVersionAsync(string, CallSettings)
+            // Additional: GetCryptoKeyVersionAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.GetCryptoKeyVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKeyVersion</summary>
+        public void GetCryptoKeyVersionResourceNames()
+        {
+            // Snippet: GetCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.GetCryptoKeyVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCryptoKeyVersionAsync</summary>
+        public async Task GetCryptoKeyVersionResourceNamesAsync()
+        {
+            // Snippet: GetCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
+            // Additional: GetCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.GetCryptoKeyVersionAsync(name);
             // End snippet
         }
 
@@ -1337,6 +1445,60 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetPublicKey</summary>
+        public void GetPublicKey()
+        {
+            // Snippet: GetPublicKey(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            PublicKey response = keyManagementServiceClient.GetPublicKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPublicKeyAsync</summary>
+        public async Task GetPublicKeyAsync()
+        {
+            // Snippet: GetPublicKeyAsync(string, CallSettings)
+            // Additional: GetPublicKeyAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            PublicKey response = await keyManagementServiceClient.GetPublicKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPublicKey</summary>
+        public void GetPublicKeyResourceNames()
+        {
+            // Snippet: GetPublicKey(CryptoKeyVersionName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            PublicKey response = keyManagementServiceClient.GetPublicKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPublicKeyAsync</summary>
+        public async Task GetPublicKeyResourceNamesAsync()
+        {
+            // Snippet: GetPublicKeyAsync(CryptoKeyVersionName, CallSettings)
+            // Additional: GetPublicKeyAsync(CryptoKeyVersionName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            PublicKey response = await keyManagementServiceClient.GetPublicKeyAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetImportJob</summary>
         public void GetImportJobRequestObject()
         {
@@ -1367,6 +1529,60 @@ namespace Google.Cloud.Kms.V1.Snippets
             };
             // Make the request
             ImportJob response = await keyManagementServiceClient.GetImportJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImportJob</summary>
+        public void GetImportJob()
+        {
+            // Snippet: GetImportJob(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/importJobs/[IMPORT_JOB]";
+            // Make the request
+            ImportJob response = keyManagementServiceClient.GetImportJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImportJobAsync</summary>
+        public async Task GetImportJobAsync()
+        {
+            // Snippet: GetImportJobAsync(string, CallSettings)
+            // Additional: GetImportJobAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/importJobs/[IMPORT_JOB]";
+            // Make the request
+            ImportJob response = await keyManagementServiceClient.GetImportJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImportJob</summary>
+        public void GetImportJobResourceNames()
+        {
+            // Snippet: GetImportJob(ImportJobName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            ImportJobName name = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]");
+            // Make the request
+            ImportJob response = keyManagementServiceClient.GetImportJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImportJobAsync</summary>
+        public async Task GetImportJobResourceNamesAsync()
+        {
+            // Snippet: GetImportJobAsync(ImportJobName, CallSettings)
+            // Additional: GetImportJobAsync(ImportJobName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportJobName name = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]");
+            // Make the request
+            ImportJob response = await keyManagementServiceClient.GetImportJobAsync(name);
             // End snippet
         }
 
@@ -1938,7 +2154,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Initialize request argument(s)
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = ByteString.Empty,
                 AdditionalAuthenticatedData = ByteString.Empty,
             };
@@ -1957,7 +2173,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Initialize request argument(s)
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = ByteString.Empty,
                 AdditionalAuthenticatedData = ByteString.Empty,
             };
@@ -1973,7 +2189,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            string name = "a/wildcard/resource";
             ByteString plaintext = ByteString.Empty;
             // Make the request
             EncryptResponse response = keyManagementServiceClient.Encrypt(name, plaintext);
@@ -1988,7 +2204,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            string name = "a/wildcard/resource";
             ByteString plaintext = ByteString.Empty;
             // Make the request
             EncryptResponse response = await keyManagementServiceClient.EncryptAsync(name, plaintext);
@@ -1998,11 +2214,11 @@ namespace Google.Cloud.Kms.V1.Snippets
         /// <summary>Snippet for Encrypt</summary>
         public void EncryptResourceNames()
         {
-            // Snippet: Encrypt(CryptoKeyName, ByteString, CallSettings)
+            // Snippet: Encrypt(IResourceName, ByteString, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
             ByteString plaintext = ByteString.Empty;
             // Make the request
             EncryptResponse response = keyManagementServiceClient.Encrypt(name, plaintext);
@@ -2012,12 +2228,12 @@ namespace Google.Cloud.Kms.V1.Snippets
         /// <summary>Snippet for EncryptAsync</summary>
         public async Task EncryptResourceNamesAsync()
         {
-            // Snippet: EncryptAsync(CryptoKeyName, ByteString, CallSettings)
-            // Additional: EncryptAsync(CryptoKeyName, ByteString, CancellationToken)
+            // Snippet: EncryptAsync(IResourceName, ByteString, CallSettings)
+            // Additional: EncryptAsync(IResourceName, ByteString, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            IResourceName name = new UnparsedResourceName("a/wildcard/resource");
             ByteString plaintext = ByteString.Empty;
             // Make the request
             EncryptResponse response = await keyManagementServiceClient.EncryptAsync(name, plaintext);

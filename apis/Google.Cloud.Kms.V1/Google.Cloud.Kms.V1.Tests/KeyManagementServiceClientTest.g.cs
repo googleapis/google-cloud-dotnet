@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
@@ -222,6 +223,138 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetCryptoKey()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyRequest request = new GetCryptoKeyRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            CryptoKey expectedResponse = new CryptoKey
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Primary = new CryptoKeyVersion(),
+                Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                CreateTime = new wkt::Timestamp(),
+                NextRotationTime = new wkt::Timestamp(),
+                RotationPeriod = new wkt::Duration(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VersionTemplate = new CryptoKeyVersionTemplate(),
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKey response = client.GetCryptoKey(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCryptoKeyAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyRequest request = new GetCryptoKeyRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            CryptoKey expectedResponse = new CryptoKey
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Primary = new CryptoKeyVersion(),
+                Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                CreateTime = new wkt::Timestamp(),
+                NextRotationTime = new wkt::Timestamp(),
+                RotationPeriod = new wkt::Duration(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VersionTemplate = new CryptoKeyVersionTemplate(),
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKey responseCallSettings = await client.GetCryptoKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CryptoKey responseCancellationToken = await client.GetCryptoKeyAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCryptoKeyResourceNames()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyRequest request = new GetCryptoKeyRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            CryptoKey expectedResponse = new CryptoKey
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Primary = new CryptoKeyVersion(),
+                Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                CreateTime = new wkt::Timestamp(),
+                NextRotationTime = new wkt::Timestamp(),
+                RotationPeriod = new wkt::Duration(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VersionTemplate = new CryptoKeyVersionTemplate(),
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKey response = client.GetCryptoKey(request.CryptoKeyName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCryptoKeyResourceNamesAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyRequest request = new GetCryptoKeyRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            CryptoKey expectedResponse = new CryptoKey
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Primary = new CryptoKeyVersion(),
+                Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                CreateTime = new wkt::Timestamp(),
+                NextRotationTime = new wkt::Timestamp(),
+                RotationPeriod = new wkt::Duration(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                VersionTemplate = new CryptoKeyVersionTemplate(),
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKey responseCallSettings = await client.GetCryptoKeyAsync(request.CryptoKeyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CryptoKey responseCancellationToken = await client.GetCryptoKeyAsync(request.CryptoKeyName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetCryptoKeyVersionRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
@@ -284,6 +417,130 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetCryptoKeyVersion()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            CryptoKeyVersion expectedResponse = new CryptoKeyVersion
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                CreateTime = new wkt::Timestamp(),
+                DestroyTime = new wkt::Timestamp(),
+                DestroyEventTime = new wkt::Timestamp(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                Attestation = new KeyOperationAttestation(),
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+                GenerateTime = new wkt::Timestamp(),
+                ImportJob = "import_job02c374ab",
+                ImportTime = new wkt::Timestamp(),
+                ImportFailureReason = "import_failure_reason8924b287",
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersion response = client.GetCryptoKeyVersion(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCryptoKeyVersionAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            CryptoKeyVersion expectedResponse = new CryptoKeyVersion
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                CreateTime = new wkt::Timestamp(),
+                DestroyTime = new wkt::Timestamp(),
+                DestroyEventTime = new wkt::Timestamp(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                Attestation = new KeyOperationAttestation(),
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+                GenerateTime = new wkt::Timestamp(),
+                ImportJob = "import_job02c374ab",
+                ImportTime = new wkt::Timestamp(),
+                ImportFailureReason = "import_failure_reason8924b287",
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersion responseCallSettings = await client.GetCryptoKeyVersionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CryptoKeyVersion responseCancellationToken = await client.GetCryptoKeyVersionAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCryptoKeyVersionResourceNames()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            CryptoKeyVersion expectedResponse = new CryptoKeyVersion
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                CreateTime = new wkt::Timestamp(),
+                DestroyTime = new wkt::Timestamp(),
+                DestroyEventTime = new wkt::Timestamp(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                Attestation = new KeyOperationAttestation(),
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+                GenerateTime = new wkt::Timestamp(),
+                ImportJob = "import_job02c374ab",
+                ImportTime = new wkt::Timestamp(),
+                ImportFailureReason = "import_failure_reason8924b287",
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersion response = client.GetCryptoKeyVersion(request.CryptoKeyVersionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCryptoKeyVersionResourceNamesAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            CryptoKeyVersion expectedResponse = new CryptoKeyVersion
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                CreateTime = new wkt::Timestamp(),
+                DestroyTime = new wkt::Timestamp(),
+                DestroyEventTime = new wkt::Timestamp(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                Attestation = new KeyOperationAttestation(),
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+                GenerateTime = new wkt::Timestamp(),
+                ImportJob = "import_job02c374ab",
+                ImportTime = new wkt::Timestamp(),
+                ImportFailureReason = "import_failure_reason8924b287",
+            };
+            mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersion responseCallSettings = await client.GetCryptoKeyVersionAsync(request.CryptoKeyVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CryptoKeyVersion responseCancellationToken = await client.GetCryptoKeyVersionAsync(request.CryptoKeyVersionName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetPublicKeyRequestObject()
         {
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
@@ -321,6 +578,90 @@ namespace Google.Cloud.Kms.V1.Tests
             PublicKey responseCallSettings = await client.GetPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             PublicKey responseCancellationToken = await client.GetPublicKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetPublicKey()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pemd6ff2189",
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            PublicKey response = client.GetPublicKey(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetPublicKeyAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pemd6ff2189",
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            PublicKey responseCallSettings = await client.GetPublicKeyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PublicKey responseCancellationToken = await client.GetPublicKeyAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetPublicKeyResourceNames()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pemd6ff2189",
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            PublicKey response = client.GetPublicKey(request.CryptoKeyVersionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetPublicKeyResourceNamesAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pemd6ff2189",
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            PublicKey responseCallSettings = await client.GetPublicKeyAsync(request.CryptoKeyVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PublicKey responseCancellationToken = await client.GetPublicKeyAsync(request.CryptoKeyVersionName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -379,6 +720,122 @@ namespace Google.Cloud.Kms.V1.Tests
             ImportJob responseCallSettings = await client.GetImportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ImportJob responseCancellationToken = await client.GetImportJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetImportJob()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetImportJobRequest request = new GetImportJobRequest
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                CreateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+                State = ImportJob.Types.ImportJobState.Active,
+                PublicKey = new ImportJob.Types.WrappingPublicKey(),
+                Attestation = new KeyOperationAttestation(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                ExpireEventTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob response = client.GetImportJob(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetImportJobAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetImportJobRequest request = new GetImportJobRequest
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                CreateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+                State = ImportJob.Types.ImportJobState.Active,
+                PublicKey = new ImportJob.Types.WrappingPublicKey(),
+                Attestation = new KeyOperationAttestation(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                ExpireEventTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob responseCallSettings = await client.GetImportJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportJob responseCancellationToken = await client.GetImportJobAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetImportJobResourceNames()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetImportJobRequest request = new GetImportJobRequest
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                CreateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+                State = ImportJob.Types.ImportJobState.Active,
+                PublicKey = new ImportJob.Types.WrappingPublicKey(),
+                Attestation = new KeyOperationAttestation(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                ExpireEventTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob response = client.GetImportJob(request.ImportJobName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetImportJobResourceNamesAsync()
+        {
+            moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
+            GetImportJobRequest request = new GetImportJobRequest
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                CreateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+                State = ImportJob.Types.ImportJobState.Active,
+                PublicKey = new ImportJob.Types.WrappingPublicKey(),
+                Attestation = new KeyOperationAttestation(),
+                ProtectionLevel = ProtectionLevel.Hsm,
+                ExpireEventTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob responseCallSettings = await client.GetImportJobAsync(request.ImportJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ImportJob responseCancellationToken = await client.GetImportJobAsync(request.ImportJobName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1449,7 +1906,7 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 AdditionalAuthenticatedData = proto::ByteString.CopyFromUtf8("additional_authenticated_data3a987f33"),
             };
@@ -1471,7 +1928,7 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 AdditionalAuthenticatedData = proto::ByteString.CopyFromUtf8("additional_authenticated_data3a987f33"),
             };
@@ -1495,7 +1952,7 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
             };
             EncryptResponse expectedResponse = new EncryptResponse
@@ -1516,7 +1973,7 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
             };
             EncryptResponse expectedResponse = new EncryptResponse
@@ -1539,7 +1996,7 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
             };
             EncryptResponse expectedResponse = new EncryptResponse
@@ -1549,7 +2006,7 @@ namespace Google.Cloud.Kms.V1.Tests
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
-            EncryptResponse response = client.Encrypt(request.CryptoKeyName, request.Plaintext);
+            EncryptResponse response = client.Encrypt(request.ResourceName, request.Plaintext);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1560,7 +2017,7 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             EncryptRequest request = new EncryptRequest
             {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
             };
             EncryptResponse expectedResponse = new EncryptResponse
@@ -1570,9 +2027,9 @@ namespace Google.Cloud.Kms.V1.Tests
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
-            EncryptResponse responseCallSettings = await client.EncryptAsync(request.CryptoKeyName, request.Plaintext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            EncryptResponse responseCallSettings = await client.EncryptAsync(request.ResourceName, request.Plaintext, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            EncryptResponse responseCancellationToken = await client.EncryptAsync(request.CryptoKeyName, request.Plaintext, st::CancellationToken.None);
+            EncryptResponse responseCancellationToken = await client.EncryptAsync(request.ResourceName, request.Plaintext, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
