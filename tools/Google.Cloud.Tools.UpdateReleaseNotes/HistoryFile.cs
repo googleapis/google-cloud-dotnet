@@ -167,7 +167,8 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                     yield return $"- [Commit {sha}]({commitUrl}):";
                     foreach (var line in messageLines)
                     {
-                        yield return $"  - {line}";
+                        // Anything already in a list can keep its existing list indentation; otherwise, create a list item.
+                        yield return line.TrimStart().StartsWith("-") ? $"  {line}" : $"  - {line}";
                     }
                 }
 
