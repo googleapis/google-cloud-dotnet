@@ -1301,9 +1301,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "hadoop_job" field.</summary>
     public const int HadoopJobFieldNumber = 2;
-    /// <summary>
-    /// Job is a Hadoop job.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.HadoopJob HadoopJob {
       get { return jobTypeCase_ == JobTypeOneofCase.HadoopJob ? (global::Google.Cloud.Dataproc.V1.HadoopJob) jobType_ : null; }
@@ -1315,9 +1312,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "spark_job" field.</summary>
     public const int SparkJobFieldNumber = 3;
-    /// <summary>
-    /// Job is a Spark job.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.SparkJob SparkJob {
       get { return jobTypeCase_ == JobTypeOneofCase.SparkJob ? (global::Google.Cloud.Dataproc.V1.SparkJob) jobType_ : null; }
@@ -1329,9 +1323,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "pyspark_job" field.</summary>
     public const int PysparkJobFieldNumber = 4;
-    /// <summary>
-    /// Job is a Pyspark job.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.PySparkJob PysparkJob {
       get { return jobTypeCase_ == JobTypeOneofCase.PysparkJob ? (global::Google.Cloud.Dataproc.V1.PySparkJob) jobType_ : null; }
@@ -1343,9 +1334,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "hive_job" field.</summary>
     public const int HiveJobFieldNumber = 5;
-    /// <summary>
-    /// Job is a Hive job.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.HiveJob HiveJob {
       get { return jobTypeCase_ == JobTypeOneofCase.HiveJob ? (global::Google.Cloud.Dataproc.V1.HiveJob) jobType_ : null; }
@@ -1357,9 +1345,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "pig_job" field.</summary>
     public const int PigJobFieldNumber = 6;
-    /// <summary>
-    /// Job is a Pig job.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.PigJob PigJob {
       get { return jobTypeCase_ == JobTypeOneofCase.PigJob ? (global::Google.Cloud.Dataproc.V1.PigJob) jobType_ : null; }
@@ -1371,9 +1356,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "spark_sql_job" field.</summary>
     public const int SparkSqlJobFieldNumber = 7;
-    /// <summary>
-    /// Job is a SparkSql job.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.SparkSqlJob SparkSqlJob {
       get { return jobTypeCase_ == JobTypeOneofCase.SparkSqlJob ? (global::Google.Cloud.Dataproc.V1.SparkSqlJob) jobType_ : null; }

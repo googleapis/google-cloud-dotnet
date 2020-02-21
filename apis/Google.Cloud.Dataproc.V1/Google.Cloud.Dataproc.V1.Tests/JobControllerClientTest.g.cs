@@ -64,7 +64,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -110,7 +112,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -157,7 +161,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -202,7 +208,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -249,7 +257,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -294,7 +304,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -341,7 +353,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -386,7 +400,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -435,7 +451,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -482,7 +500,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -529,7 +549,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -574,7 +596,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -621,7 +645,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -666,7 +692,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
                     },
                 },
                 Scheduling = new JobScheduling(),
+                SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
+                PrestoJob = new PrestoJob(),
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
