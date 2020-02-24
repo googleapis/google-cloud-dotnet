@@ -648,6 +648,25 @@
     }
   },
   {
+    "id": "Google.Cloud.Memcache.V1Beta2",
+    "generator": "micro",
+    "protoPath": "google/cloud/memcache/v1beta2",
+    "productName": "Google Cloud Memorystore for Memcache",
+    "productUrl": "https://cloud.google.com/memorystore/",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to administer Cloud Memorystore for Memcache (v1beta2).",
+    "dependencies": {
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta01",
+      "Google.LongRunning": "2.0.0-beta01",
+      "Grpc.Core": "2.27.0"
+    },
+    "tags": [
+      "Redis",
+      "Memorystore"
+    ]
+  },
+  {
     "id": "Google.Cloud.Monitoring.V3",
     "generator": "micro",
     "protoPath": "google/monitoring/v3",
