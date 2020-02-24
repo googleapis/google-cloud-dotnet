@@ -13,10 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,22 +26,14 @@ namespace Google.Cloud.Storage.V1
         private interface ISigner
         {
             string Sign(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
+                RequestTemplate requestTemplate,
+                Options options,
                 IBlobSigner blobSigner,
                 IClock clock);
 
             Task<string> SignAsync(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
+                RequestTemplate requestTemplate,
+                Options options,
                 IBlobSigner blobSigner,
                 IClock clock,
                 CancellationToken cancellationToken);

@@ -40,17 +40,17 @@ namespace Google.Cloud.Storage.V1
             // Note: It's irritating to have to convert from base64 to bytes and then to hex, but we can't change the IBlobSigner implementation
             // and ServiceAccountCredential.CreateSignature returns base64 anyway.
 
-            public string Sign(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner,
-                IClock clock)
+            public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner, clock);
+                var state = new SigningState(
+                    requestTemplate.Bucket,
+                    requestTemplate.ObjectName,
+                    options.ToExpiration(clock).Expiration.Value,
+                    requestTemplate.HttpMethod,
+                    requestTemplate.RequestHeaders,
+                    requestTemplate.ContentHeaders,
+                    blobSigner,
+                    clock);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
@@ -58,17 +58,21 @@ namespace Google.Cloud.Storage.V1
             }
 
             public async Task<string> SignAsync(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
+                RequestTemplate requestTemplate,
+                Options options,
                 IBlobSigner blobSigner,
                 IClock clock,
                 CancellationToken cancellationToken)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner, clock);
+                var state = new SigningState(
+                    requestTemplate.Bucket,
+                    requestTemplate.ObjectName,
+                    options.ToExpiration(clock).Expiration.Value,
+                    requestTemplate.HttpMethod,
+                    requestTemplate.RequestHeaders,
+                    requestTemplate.ContentHeaders,
+                    blobSigner,
+                    clock);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
@@ -90,8 +94,8 @@ namespace Google.Cloud.Storage.V1
                     string objectName,
                     DateTimeOffset expiration,
                     HttpMethod requestMethod,
-                    Dictionary<string, IEnumerable<string>> requestHeaders,
-                    Dictionary<string, IEnumerable<string>> contentHeaders,
+                    IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
+                    IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders,
                     IBlobSigner blobSigner,
                     IClock clock)
                 {
@@ -161,7 +165,7 @@ namespace Google.Cloud.Storage.V1
 
                     _blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
 
-                    void AddHeaders(SortedDictionary<string, string> canonicalized, IDictionary<string, IEnumerable<string>> headersToAdd)
+                    void AddHeaders(SortedDictionary<string, string> canonicalized, IReadOnlyDictionary<string, IReadOnlyCollection<string>> headersToAdd)
                     {
                         if (headersToAdd == null)
                         {

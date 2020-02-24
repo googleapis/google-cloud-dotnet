@@ -29,40 +29,42 @@ namespace Google.Cloud.Storage.V1
     {
         private sealed class V2Signer : ISigner
         {
-            public string Sign(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner,
-                IClock clock)
+            public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner);
+                var state = new SigningState(
+                    requestTemplate.Bucket, 
+                    requestTemplate.ObjectName, 
+                    options.ToExpiration(clock).Expiration.Value,
+                    requestTemplate.HttpMethod,
+                    requestTemplate.RequestHeaders,
+                    requestTemplate.ContentHeaders,
+                    blobSigner);
                 var signature = blobSigner.CreateSignature(state._blobToSign);
                 return state.GetResult(signature);
             }
 
             public async Task<string> SignAsync(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
+                RequestTemplate requestTemplate,
+                Options options,
                 IBlobSigner blobSigner,
                 IClock clock,
                 CancellationToken cancellationToken)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner);
+                var state = new SigningState(
+                    requestTemplate.Bucket,
+                    requestTemplate.ObjectName,
+                    options.ToExpiration(clock).Expiration.Value,
+                    requestTemplate.HttpMethod,
+                    requestTemplate.RequestHeaders,
+                    requestTemplate.ContentHeaders,
+                    blobSigner);
                 var signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 return state.GetResult(signature);
             }
 
             private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
-    Dictionary<string, IEnumerable<string>> requestHeaders,
-    Dictionary<string, IEnumerable<string>> contentHeaders)
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders)
             {
                 // These docs indicate how to include extension headers in the signature, but they're not exactly
                 // correct (values must be trimmed, newlines are replaced with empty strings, not whitespace, and
@@ -87,7 +89,7 @@ namespace Google.Cloud.Storage.V1
             }
 
             private static void PopulateExtensionHeaders(
-                Dictionary<string, IEnumerable<string>> headers,
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> headers,
                 SortedDictionary<string, StringBuilder> extensionHeaders,
                 HashSet<string> keysToExcludeSpaceInNextValueSeparator = null)
             {
@@ -121,9 +123,9 @@ namespace Google.Cloud.Storage.V1
                 }
             }
 
-            private static string GetFirstHeaderValue(Dictionary<string, IEnumerable<string>> contentHeaders, string name)
+            private static string GetFirstHeaderValue(IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders, string name)
             {
-                IEnumerable<string> values;
+                IReadOnlyCollection<string> values;
                 if (contentHeaders != null && contentHeaders.TryGetValue(name, out values))
                 {
                     return values.FirstOrDefault();
@@ -146,8 +148,8 @@ namespace Google.Cloud.Storage.V1
                     string objectName,
                     DateTimeOffset expiration,
                     HttpMethod requestMethod,
-                    Dictionary<string, IEnumerable<string>> requestHeaders,
-                    Dictionary<string, IEnumerable<string>> contentHeaders,
+                    IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
+                    IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders,
                     IBlobSigner blobSigner)
                 {
                     StorageClientImpl.ValidateBucketName(bucket);
