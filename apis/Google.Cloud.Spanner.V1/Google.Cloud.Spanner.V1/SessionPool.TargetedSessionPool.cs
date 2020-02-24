@@ -637,7 +637,7 @@ namespace Google.Cloud.Spanner.V1
                 var previousTcs = Interlocked.CompareExchange(ref _nurseBackToHealthTask, newTcs, null);
                 if (previousTcs != null)
                 {
-                    return WithCancellationToken(previousTcs, cancellationToken);
+                    return WithCancellationTokenAsync(previousTcs.Task, cancellationToken);
                 }
 
                 // We want to try and nurse the pool back to health even if the (first) caller cancels the call.
@@ -683,26 +683,16 @@ namespace Google.Cloud.Spanner.V1
 
                 // Use the cancellation token now, if the caller cancels, the task they are waiting on will be canceled,
                 // but not the nursing.
-                return WithCancellationToken(newTcs, cancellationToken);
+                return WithCancellationTokenAsync(newTcs.Task, cancellationToken);
 
-                Task WithCancellationToken(TaskCompletionSource<int> source, CancellationToken token)
+                async Task<TTaskResult> WithCancellationTokenAsync<TTaskResult>(Task<TTaskResult> underlying, CancellationToken token)
                 {
-                    TaskCompletionSource<int> cancellable = new TaskCompletionSource<int>();
-                    token.Register(() => cancellable.TrySetCanceled());
-                    Parent.ConsumeBackgroundTask(Task.Run(async () => 
+                    TaskCompletionSource<TTaskResult> cancellable = new TaskCompletionSource<TTaskResult>();
+                    using (token.Register(() => cancellable.TrySetCanceled()))
                     {
-                        try
-                        {
-                            int dummyResult = await source.Task.ConfigureAwait(false);
-                            cancellable.TrySetResult(dummyResult);
-                        }
-                        catch (Exception e)
-                        {
-                            cancellable.TrySetException(e);
-                        }
-                    }), "don't propagate cancellation to underlying task");
-
-                    return cancellable.Task;
+                        Task<TTaskResult> completedTask = await Task.WhenAny(underlying, cancellable.Task).ConfigureAwait(false);
+                        return await completedTask.ConfigureAwait(false);
+                    }
                 }
             }
 
