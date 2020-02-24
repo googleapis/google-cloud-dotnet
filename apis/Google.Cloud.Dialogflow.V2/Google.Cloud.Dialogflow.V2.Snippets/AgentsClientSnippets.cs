@@ -56,40 +56,87 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             Console.WriteLine($"Total agents: {allAgents.Count}");
         }
 
-        // Sample: Webhook
-        public class DialogflowController : ControllerBase
+        // Nested class just for scoping...
+        class WebhookSample
         {
-            // A Protobuf JSON parser configured to ignore unknown fields. This makes
-            // the action robust against new fields being introduced by Dialogflow.
-            private static readonly JsonParser jsonParser =
-                new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
-
-            public ContentResult DialogAction()
+            // Sample: Webhook
+            public class DialogflowController : ControllerBase
             {
-                // Parse the body of the request using the Protobuf JSON parser,
-                // *not* Json.NET.
-                WebhookRequest request;
-                using (var reader = new StreamReader(Request.Body))
+                // A Protobuf JSON parser configured to ignore unknown fields. This makes
+                // the action robust against new fields being introduced by Dialogflow.
+                private static readonly JsonParser jsonParser =
+                    new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
+
+                public ContentResult DialogAction()
                 {
-                    request = jsonParser.Parse<WebhookRequest>(reader);
+                    // Parse the body of the request using the Protobuf JSON parser,
+                    // *not* Json.NET.
+                    WebhookRequest request;
+                    using (TextReader reader = new StreamReader(Request.Body))
+                    {
+                        request = jsonParser.Parse<WebhookRequest>(reader);
+                    }
+
+                    // Note: you should authenticate the request here.
+
+                    // Populate the response
+                    WebhookResponse response = new WebhookResponse
+                    {
+                        // ...
+                    };
+
+                    // Ask Protobuf to format the JSON to return.
+                    // Again, we don't want to use Json.NET - it doesn't know how to handle Struct
+                    // values etc.
+                    string responseJson = response.ToString();
+                    return Content(responseJson, "application/json");
                 }
-
-                // Note: you should authenticate the request here.
-
-                // Populate the response
-                WebhookResponse response = new WebhookResponse
-                {
-                    // ...
-                };
-
-                // Ask Protobuf to format the JSON to return.
-                // Again, we don't want to use Json.NET - it doesn't know how to handle Struct
-                // values etc.
-                string responseJson = response.ToString();
-                return Content(responseJson, "application/json");
             }
+            // End sample
         }
-        // End sample
+
+        // Nested class just for scoping...
+        class WebhookAsyncSample
+        {
+            // Sample: WebhookAsync
+            public class DialogflowController : ControllerBase
+            {
+                // A Protobuf JSON parser configured to ignore unknown fields. This makes
+                // the action robust against new fields being introduced by Dialogflow.
+                private static readonly JsonParser jsonParser =
+                    new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
+
+                public async Task<ContentResult> DialogAction()
+                {
+                    // Read the request JSON asynchronously, as the Google.Protobuf library
+                    // doesn't (yet) support asynchronous parsing.
+                    string requestJson;
+                    using (TextReader reader = new StreamReader(Request.Body))
+                    {
+                        requestJson = await reader.ReadToEndAsync();
+                    }
+
+                    // Parse the body of the request using the Protobuf JSON parser,
+                    // *not* Json.NET.
+                    WebhookRequest request = jsonParser.Parse<WebhookRequest>(requestJson);
+
+                    // Note: you should authenticate the request here.
+
+                    // Populate the response
+                    WebhookResponse response = new WebhookResponse
+                    {
+                        // ...
+                    };
+
+                    // Ask Protobuf to format the JSON to return.
+                    // Again, we don't want to use Json.NET - it doesn't know how to handle Struct
+                    // values etc.
+                    string responseJson = response.ToString();
+                    return Content(responseJson, "application/json");
+                }
+            }
+            // End sample
+        }
 
         // We don't want this project to depend on (classic) Web API properly, so we just declare our own
         // controller class with the single property we care about.
