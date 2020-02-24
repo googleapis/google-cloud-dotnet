@@ -29,40 +29,24 @@ namespace Google.Cloud.Storage.V1
     {
         private sealed class V2Signer : ISigner
         {
-            public string Sign(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner,
-                IClock clock)
+            public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner);
+                var state = new SigningState(requestTemplate, options, blobSigner, clock);
                 var signature = blobSigner.CreateSignature(state._blobToSign);
                 return state.GetResult(signature);
             }
 
             public async Task<string> SignAsync(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner,
-                IClock clock,
-                CancellationToken cancellationToken)
+                RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner);
+                var state = new SigningState(requestTemplate, options, blobSigner, clock);
                 var signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 return state.GetResult(signature);
             }
 
             private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
-    Dictionary<string, IEnumerable<string>> requestHeaders,
-    Dictionary<string, IEnumerable<string>> contentHeaders)
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders)
             {
                 // These docs indicate how to include extension headers in the signature, but they're not exactly
                 // correct (values must be trimmed, newlines are replaced with empty strings, not whitespace, and
@@ -87,7 +71,7 @@ namespace Google.Cloud.Storage.V1
             }
 
             private static void PopulateExtensionHeaders(
-                Dictionary<string, IEnumerable<string>> headers,
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> headers,
                 SortedDictionary<string, StringBuilder> extensionHeaders,
                 HashSet<string> keysToExcludeSpaceInNextValueSeparator = null)
             {
@@ -121,9 +105,9 @@ namespace Google.Cloud.Storage.V1
                 }
             }
 
-            private static string GetFirstHeaderValue(Dictionary<string, IEnumerable<string>> contentHeaders, string name)
+            private static string GetFirstHeaderValue(IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders, string name)
             {
-                IEnumerable<string> values;
+                IReadOnlyCollection<string> values;
                 if (contentHeaders != null && contentHeaders.TryGetValue(name, out values))
                 {
                     return values.FirstOrDefault();
@@ -141,46 +125,31 @@ namespace Google.Cloud.Storage.V1
                 private List<string> _queryParameters;
                 internal byte[] _blobToSign;
 
-                internal SigningState(
-                    string bucket,
-                    string objectName,
-                    DateTimeOffset expiration,
-                    HttpMethod requestMethod,
-                    Dictionary<string, IEnumerable<string>> requestHeaders,
-                    Dictionary<string, IEnumerable<string>> contentHeaders,
-                    IBlobSigner blobSigner)
+                internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
                 {
-                    StorageClientImpl.ValidateBucketName(bucket);
+                    options = options.ToExpiration(clock);
 
-                    bool isResumableUpload = false;
-                    if (requestMethod == null)
+                    string expiryUnixSeconds = ((int) (options.Expiration.Value - UnixEpoch).TotalSeconds).ToString(CultureInfo.InvariantCulture);
+                    _resourcePath = $"/{template.Bucket}";
+                    if (template.ObjectName != null)
                     {
-                        requestMethod = HttpMethod.Get;
-                    }
-                    else if (requestMethod == ResumableHttpMethod)
-                    {
-                        isResumableUpload = true;
-                        requestMethod = HttpMethod.Post;
+                        _resourcePath += $"/{Uri.EscapeDataString(template.ObjectName)}";
                     }
 
-                    string expiryUnixSeconds = ((int) (expiration - UnixEpoch).TotalSeconds).ToString(CultureInfo.InvariantCulture);
-                    _resourcePath = $"/{bucket}";
-                    if (objectName != null)
-                    {
-                        _resourcePath += $"/{Uri.EscapeDataString(objectName)}";
-                    }
-                    var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
-                    if (isResumableUpload)
+                    var extensionHeaders = GetExtensionHeaders(template.RequestHeaders, template.ContentHeaders);
+                    var effectiveHttpMethod = template.HttpMethod;
+                    if (effectiveHttpMethod == ResumableHttpMethod)
                     {
                         extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
+                        effectiveHttpMethod = HttpMethod.Post;
                     }
 
-                    var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
-                    var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
+                    var contentMD5 = GetFirstHeaderValue(template.ContentHeaders, "Content-MD5");
+                    var contentType = GetFirstHeaderValue(template.ContentHeaders, "Content-Type");
 
                     var signatureLines = new List<string>
                     {
-                        requestMethod.ToString(),
+                        effectiveHttpMethod.ToString(),
                         contentMD5,
                         contentType,
                         expiryUnixSeconds

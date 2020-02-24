@@ -40,17 +40,9 @@ namespace Google.Cloud.Storage.V1
             // Note: It's irritating to have to convert from base64 to bytes and then to hex, but we can't change the IBlobSigner implementation
             // and ServiceAccountCredential.CreateSignature returns base64 anyway.
 
-            public string Sign(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner,
-                IClock clock)
+            public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner, clock);
+                var state = new SigningState(requestTemplate, options, blobSigner, clock);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
@@ -58,17 +50,9 @@ namespace Google.Cloud.Storage.V1
             }
 
             public async Task<string> SignAsync(
-                string bucket,
-                string objectName,
-                DateTimeOffset expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner,
-                IClock clock,
-                CancellationToken cancellationToken)
+                RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
             {
-                var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner, clock);
+                var state = new SigningState(requestTemplate, options, blobSigner, clock);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
@@ -85,29 +69,21 @@ namespace Google.Cloud.Storage.V1
                 private string _canonicalQueryString;
                 internal byte[] _blobToSign;
 
-                internal SigningState(
-                    string bucket,
-                    string objectName,
-                    DateTimeOffset expiration,
-                    HttpMethod requestMethod,
-                    Dictionary<string, IEnumerable<string>> requestHeaders,
-                    Dictionary<string, IEnumerable<string>> contentHeaders,
-                    IBlobSigner blobSigner,
-                    IClock clock)
+                internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
                 {
-                    StorageClientImpl.ValidateBucketName(bucket);
+                    options = options.ToExpiration(clock);
 
                     var now = clock.GetCurrentDateTimeUtc();
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
-                    int expirySeconds = (int) (expiration - now).TotalSeconds;
+                    int expirySeconds = (int) (options.Expiration.Value - now).TotalSeconds;
                     if (expirySeconds <= 0)
                     {
-                        throw new ArgumentOutOfRangeException(nameof(expiration), "Expiration must be at least 1 second");
+                        throw new ArgumentOutOfRangeException(nameof(options.Expiration), "Expiration must be at least 1 second");
                     }
                     if (expirySeconds > MaxExpirySecondsInclusive)
                     {
-                        throw new ArgumentOutOfRangeException(nameof(expiration), "Expiration must not be greater than 7 days.");
+                        throw new ArgumentOutOfRangeException(nameof(options.Expiration), "Expiration must not be greater than 7 days.");
                     }
 
                     string expiryText = expirySeconds.ToString(CultureInfo.InvariantCulture);
@@ -115,9 +91,9 @@ namespace Google.Cloud.Storage.V1
                     string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
-                    headers["host"] = HostHeaderValue;
-                    AddHeaders(headers, requestHeaders);
-                    AddHeaders(headers, contentHeaders);
+                    headers.AddHeader("host", HostHeaderValue);
+                    headers.AddHeaders(template.RequestHeaders);
+                    headers.AddHeaders(template.ContentHeaders);
                     var canonicalHeaders = string.Join("", headers.Select(pair => $"{pair.Key}:{pair.Value}\n"));
                     var signedHeaders = string.Join(";", headers.Keys.Select(k => k.ToLowerInvariant()));
 
@@ -130,28 +106,25 @@ namespace Google.Cloud.Storage.V1
                         { "X-Goog-SignedHeaders", signedHeaders }
                     };
 
-                    if (requestMethod == null)
+                    var effectiveRequestMethod = template.HttpMethod;
+                    if (effectiveRequestMethod == ResumableHttpMethod)
                     {
-                        requestMethod = HttpMethod.Get;
-                    }
-                    else if (requestMethod == ResumableHttpMethod)
-                    {
-                        requestMethod = HttpMethod.Post;
+                        effectiveRequestMethod = HttpMethod.Post;
                         queryParameters["X-Goog-Resumable"] ="Start";
                     }
 
                     _canonicalQueryString = string.Join("&", queryParameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
-                    _resourcePath = $"/{bucket}";
-                    if (!string.IsNullOrEmpty(objectName))
+                    _resourcePath = $"/{template.Bucket}";
+                    if (!string.IsNullOrEmpty(template.ObjectName))
                     {
                         // EscapeDataString escapes slashes, which we *don't* want to escape here. The simplest option is to
                         // split the path into segments by slashes, escape each segment, then join the escaped segments together again.
-                        var segments = objectName.Split('/');
+                        var segments = template.ObjectName.Split('/');
                         var escaped = string.Join("/", segments.Select(Uri.EscapeDataString));
                         _resourcePath = _resourcePath + "/" + escaped;
                     }
 
-                    var canonicalRequest = $"{requestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
+                    var canonicalRequest = $"{effectiveRequestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
 
                     string hashHex;
                     using (var sha256 = SHA256.Create())
@@ -160,33 +133,6 @@ namespace Google.Cloud.Storage.V1
                     }
 
                     _blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
-
-                    void AddHeaders(SortedDictionary<string, string> canonicalized, IDictionary<string, IEnumerable<string>> headersToAdd)
-                    {
-                        if (headersToAdd == null)
-                        {
-                            return;
-                        }
-                        foreach (var pair in headersToAdd)
-                        {
-                            if (pair.Value == null)
-                            {
-                                continue;
-                            }
-                            var headerName = pair.Key.ToLowerInvariant();
-                            // Note: the comma-space separating here is because this is what HttpClient does.
-                            // Google Cloud Storage itself will just use commas if it receives multiple values for the same header name,
-                            // but HttpClient coalesces the values itself. This approach means that if the same request is made from .NET
-                            // with the signed URL, it will succeed - but it does mean that the signed URL won't be valid when used from
-                            // another platform that sends actual multiple values.
-                            var value = string.Join(", ", pair.Value.Select(PrepareHeaderValue)).Trim();
-                            if (canonicalized.TryGetValue(headerName, out var existingValue))
-                            {
-                                value = $"{existingValue}, {value}";
-                            }
-                            canonicalized[headerName] = value;
-                        }
-                    }
                 }
 
                 internal string GetResult(string signature) =>
