@@ -86,6 +86,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 
 * [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Storage.V1/latest) (beta)
 * [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/latest) (beta)
+* [Memorystore for Memcache](https://cloud.google.com/memorystore/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1Beta2/latest) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/latest) (beta)
 * [Phishing Protection](https://cloud.google.com/phishing-protection/)- [API docs](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/latest) (beta)
 * [reCAPTCHA Enterprise](https://cloud.google.com/recaptcha-enterprise/)- [API docs](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/latest) (beta)
