@@ -39,9 +39,18 @@ details around authentication, and the schema of requests and
 responses.
 
 The samples below provide a starting point for ASP.NET Core and
-ASP.NET.
+ASP.NET. Note that by default, ASP.NET Core 3.x does not allow
+synchronous IO, and the Google.Protobuf library does not yet support
+asynchronous parsing from a reader, so you need to asynchronously
+read the JSON directly as a string first, then parse the string.
+It's likely that in the future, Google.Protobuf will allow
+asynchronous parsing.
 
-### Web hook template code for ASP.NET Core
+### Web hook template code for ASP.NET Core (asynchronous-only)
+
+{{sample:AgentsClient.WebhookAsync}}
+
+### Web hook template code for ASP.NET Core (synchronous parsing)
 
 {{sample:AgentsClient.Webhook}}
 
