@@ -91,19 +91,23 @@ namespace Google.Cloud.Tools.ProjectGenerator
         {
             { CompatibilityAnalyzer, "0.2.12-alpha" },
             { ConfigureAwaitAnalyzer, "1.0.1" },
-            { SourceLinkPackage, "2.8.3" }
+            { SourceLinkPackage, "2.8.3" },
+            { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
         {
             { "CommandLineParser", "2.6.0" },
-            { "Google.Cloud.SampleUtil", "project"}
+            { "Google.Cloud.SampleUtil", "project"},
+            { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
         private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
+        private const string ReferenceAssembliesPackage = "Microsoft.NETFramework.ReferenceAssemblies";
+        private const string ReferenceAssembliesVersion = "1.0.0";
 
         /// <summary>
         /// For packages which need a PrivateAssets attribute in dependencies, this dictionary provides the value of the attribute.
@@ -114,7 +118,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { CompatibilityAnalyzer, "All" },
             { ConfigureAwaitAnalyzer, "All" },
             { SourceLinkPackage, "All" },
-            { CSharpWorkspacesPackage, "All" }
+            { CSharpWorkspacesPackage, "All" },
+            { ReferenceAssembliesPackage, "All" }
         };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
@@ -422,7 +427,6 @@ shell.run(
                 // Build-related properties
                 new XElement("Version", api.Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
-                new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(targetFrameworks, "")),
                 new XElement("LangVersion", "latest"),
                 new XElement("GenerateDocumentationFile", api.Type != ApiType.Analyzers),
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
@@ -624,12 +628,9 @@ shell.run(
             string beforeHash = GetFileHash(file);
             XElement doc;
             // If the file already exists, load it and replace the elements (leaving any further PropertyGroup and ItemGroup elements).
-            // Make sure there's an appropriate import for stripping desktop builds on non-Windows platforms.
             if (File.Exists(file))
             {
                 doc = XElement.Load(file);
-                doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\StripDesktopOnNonWindows.xml").Remove();
-                doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
                 doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
             }
