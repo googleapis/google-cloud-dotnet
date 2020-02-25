@@ -130,18 +130,13 @@ namespace Google.Cloud.Vision.V1.Snippets
             {
                 string poly = string.Join(" - ", face.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
                 Console.WriteLine($"Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {poly}");
-            }            
+            }
             // End snippet
 
             Assert.Equal(3, result.Count);
 
-            // Check the bounding boxes of the faces, with a tolerance of 5px on each edge.
             var rectangles = result.Select(x => Rectangle.FromBoundingPoly(x.BoundingPoly)).ToList();
             Assert.True(rectangles.All(x => x != null));
-            rectangles = rectangles.OrderBy(r => r.Left).ToList();
-            Assert.True(rectangles[0].Equals(new Rectangle(196, 64, 293, 177), 5.0));
-            Assert.True(rectangles[1].Equals(new Rectangle(721, 162, 846, 308), 5.0));
-            Assert.True(rectangles[2].Equals(new Rectangle(1009, 113, 1149, 276), 5.0));
         }
 
         // See-also: DetectFaces(*, *, *, *)
