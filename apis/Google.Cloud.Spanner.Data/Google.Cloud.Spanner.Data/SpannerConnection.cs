@@ -110,6 +110,40 @@ namespace Google.Cloud.Spanner.Data
 
         internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
 
+        private QueryOptions _queryOptions = null;
+        private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+
+        // Query options provided at a connection level will be overridden by query options
+        // set through environment variables.
+        private void ApplyQueryOptionsFromEnvironment()
+        {
+            string optimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? "";
+            if (string.IsNullOrEmpty(optimizerVersion))
+            {
+                return;
+            }
+
+            if (_queryOptions == null)
+            {
+                _queryOptions = new QueryOptions();
+            }
+
+            _queryOptions.OptimizerVersion = optimizerVersion;
+        }
+
+        /// <summary>
+        /// Query options to use throughout the lifetime of the connection when
+        /// running SQL and streaming SQL requests.
+        /// </summary>
+        public QueryOptions QueryOptions
+        {
+            get => _queryOptions;
+            set {
+                _queryOptions = (QueryOptions) value;
+                ApplyQueryOptionsFromEnvironment();
+            }
+        }
+
         /// <summary>
         /// Creates a SpannerConnection with no datasource or credential specified.
         /// </summary>
