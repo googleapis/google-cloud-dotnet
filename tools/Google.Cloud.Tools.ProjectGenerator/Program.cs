@@ -82,7 +82,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "xunit.runner.visualstudio", "2.4.1" },
             { "Xunit.SkippableFact", "1.3.12" },
             { "Moq", "4.12.0" },
-            { "System.Linq.Async", "4.0.0" }
+            { "System.Linq.Async", "4.0.0" },
+            { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
@@ -560,7 +561,7 @@ shell.run(
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", testTargetFrameworks),
-                    new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
+                    new XElement("TestTargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
                     new XElement("LangVersion", "latest"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
