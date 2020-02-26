@@ -45,6 +45,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Description = "description2cf9da67",
                 ClientId = "client_id729dfe2b",
                 Scopes = { "scopes35c99a1e", },
+#pragma warning disable CS0612
+                TransferType = TransferType.Batch,
+                SupportsMultipleTransfers = true,
+#pragma warning restore CS0612
                 UpdateDeadlineSeconds = -1468953716,
                 DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
@@ -82,6 +86,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Description = "description2cf9da67",
                 ClientId = "client_id729dfe2b",
                 Scopes = { "scopes35c99a1e", },
+#pragma warning disable CS0612
+                TransferType = TransferType.Batch,
+                SupportsMultipleTransfers = true,
+#pragma warning restore CS0612
                 UpdateDeadlineSeconds = -1468953716,
                 DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
@@ -121,6 +129,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Description = "description2cf9da67",
                 ClientId = "client_id729dfe2b",
                 Scopes = { "scopes35c99a1e", },
+#pragma warning disable CS0612
+                TransferType = TransferType.Batch,
+                SupportsMultipleTransfers = true,
+#pragma warning restore CS0612
                 UpdateDeadlineSeconds = -1468953716,
                 DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
@@ -158,6 +170,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Description = "description2cf9da67",
                 ClientId = "client_id729dfe2b",
                 Scopes = { "scopes35c99a1e", },
+#pragma warning disable CS0612
+                TransferType = TransferType.Batch,
+                SupportsMultipleTransfers = true,
+#pragma warning restore CS0612
                 UpdateDeadlineSeconds = -1468953716,
                 DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
@@ -197,6 +213,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Description = "description2cf9da67",
                 ClientId = "client_id729dfe2b",
                 Scopes = { "scopes35c99a1e", },
+#pragma warning disable CS0612
+                TransferType = TransferType.Batch,
+                SupportsMultipleTransfers = true,
+#pragma warning restore CS0612
                 UpdateDeadlineSeconds = -1468953716,
                 DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
@@ -234,6 +254,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Description = "description2cf9da67",
                 ClientId = "client_id729dfe2b",
                 Scopes = { "scopes35c99a1e", },
+#pragma warning disable CS0612
+                TransferType = TransferType.Batch,
+                SupportsMultipleTransfers = true,
+#pragma warning restore CS0612
                 UpdateDeadlineSeconds = -1468953716,
                 DefaultSchedule = "default_schedule3d57f6d3",
                 SupportsCustomSchedule = true,
