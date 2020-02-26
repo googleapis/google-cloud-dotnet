@@ -90,7 +90,9 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/latest) (beta)
 * [Phishing Protection](https://cloud.google.com/phishing-protection/)- [API docs](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/latest) (beta)
 * [reCAPTCHA Enterprise](https://cloud.google.com/recaptcha-enterprise/)- [API docs](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/latest) (beta)
-* [Secret Manager](https://cloud.google.com/secret-manager) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/latest) (beta)
+* [Secret Manager](https://cloud.google.com/secret-manager): Packages for both the stable API and the beta API are available; both packages are currently in beta:
+  - [V1 API docs](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1/latest) (beta)
+  - [V1Beta1 API docs](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/latest) (beta)
 * [Google Cloud Web Risk](https://cloud.google.com/web-risk/) - [API docs](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/latest) (Beta)
 
 See the [API documentation](https://googleapis.dev/dotnet/latest) for details of the status
