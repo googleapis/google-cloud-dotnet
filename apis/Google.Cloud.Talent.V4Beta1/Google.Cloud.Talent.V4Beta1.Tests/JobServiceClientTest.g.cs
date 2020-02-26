@@ -76,6 +76,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -140,6 +143,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -206,6 +212,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -270,6 +279,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -336,6 +348,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -400,6 +415,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -466,6 +484,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -530,6 +551,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -596,6 +620,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -660,6 +687,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -725,6 +755,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -788,6 +821,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -853,6 +889,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -916,6 +955,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -981,6 +1023,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -1044,6 +1089,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -1110,6 +1158,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -1174,6 +1225,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -1236,6 +1290,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
@@ -1296,6 +1353,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Qualifications = "qualifications920abb76",
                 Responsibilities = "responsibilities978e5c9b",
                 PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
                 JobStartTime = new wkt::Timestamp(),
                 JobEndTime = new wkt::Timestamp(),
                 PostingPublishTime = new wkt::Timestamp(),
