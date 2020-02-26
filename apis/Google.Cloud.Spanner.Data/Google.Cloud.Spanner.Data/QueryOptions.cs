@@ -59,5 +59,13 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static QueryOptions FromProto(
             V1.ExecuteSqlRequest.Types.QueryOptions proto) => proto == null ? null : new QueryOptions(proto);
+
+        /// <summary>
+        /// Get proto version of the query options.
+        /// </summary>
+        public V1.ExecuteSqlRequest.Types.QueryOptions ToProto()
+        {
+            return Proto.Clone();
+        }
     }
 }
