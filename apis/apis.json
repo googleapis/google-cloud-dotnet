@@ -868,6 +868,24 @@
     }
   },
   {
+    "id": "Google.Cloud.SecretManager.V1",
+    "generator": "micro",
+    "protoPath": "google/cloud/secretmanager/v1",
+    "productName": "Secret Manager",
+    "productUrl": "https://cloud.google.com/secret-manager",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Secret Manager API.",
+    "dependencies": {
+      "Google.Cloud.Iam.V1": "2.0.0-beta01"
+    },
+    "tags": [
+      "secret",
+      "secrets",
+      "security"
+    ]
+  },
+  {
     "id": "Google.Cloud.SecretManager.V1Beta1",
     "generator": "micro",
     "protoPath": "google/cloud/secrets/v1beta1",
@@ -876,7 +894,7 @@
     "version": "2.0.0-beta01",
     "releaseLevelOverride": "beta",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Secret Manager API.",
+    "description": "Recommended Google client library to access the Secret Manager API version v1beta1.",
     "dependencies": {
       "Google.Cloud.Iam.V1": "2.0.0-beta01"
     },
