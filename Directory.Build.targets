@@ -1,0 +1,13 @@
+<Project>
+  <!-- 
+    - When we want to specialize which target frameworks are
+    - used to run (rather than build) tests, we specify
+    - the TestTargetFrameworks property. This target copies
+    - that to TargetFrameworks just before running the VSTest target.
+    -->
+  <Target Name="_CopyTestTargetFrameworksToTargetFrameworks" BeforeTargets="VSTest" Condition="'$(TestTargetFrameworks)'!=''">
+    <PropertyGroup>
+      <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+    </PropertyGroup>
+  </Target>
+</Project>
