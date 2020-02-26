@@ -55,6 +55,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -89,6 +100,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -125,6 +147,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -159,6 +192,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -195,6 +239,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -229,6 +284,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -265,6 +331,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -299,6 +376,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -336,6 +424,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -371,6 +470,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -408,6 +518,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -443,6 +564,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -480,6 +612,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -515,6 +658,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -552,6 +706,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -587,6 +752,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -624,6 +800,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -659,6 +846,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -696,6 +894,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -731,6 +940,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -768,6 +988,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -803,6 +1034,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -839,6 +1081,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
@@ -873,6 +1126,17 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     UptimeCheckRegion.RegionUnspecified,
                 },
+#pragma warning disable CS0612
+                InternalCheckers =
+#pragma warning restore CS0612
+                {
+#pragma warning disable CS0612
+                    new InternalChecker(),
+#pragma warning restore CS0612
+                },
+#pragma warning disable CS0612
+                IsInternal = true,
+#pragma warning restore CS0612
             };
             mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UptimeCheckConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
