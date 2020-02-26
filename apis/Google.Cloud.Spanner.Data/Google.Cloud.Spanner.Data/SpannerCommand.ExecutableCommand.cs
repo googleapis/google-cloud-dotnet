@@ -59,6 +59,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerTransaction Transaction { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
+            internal QueryOptions QueryOptions { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -68,6 +69,7 @@ namespace Google.Cloud.Spanner.Data
                 Partition = command.Partition;
                 Parameters = command.Parameters;
                 Transaction = command._transaction;
+                QueryOptions = command.QueryOptions;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -346,6 +348,11 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Sql = CommandTextBuilder.ToString()
                 };
+
+                if (QueryOptions != null)
+                {
+                    request.QueryOptions = QueryOptions.ToProto();
+                }
 
                 // See comment at the start of GetMutations.
                 SpannerConversionOptions options = null;
