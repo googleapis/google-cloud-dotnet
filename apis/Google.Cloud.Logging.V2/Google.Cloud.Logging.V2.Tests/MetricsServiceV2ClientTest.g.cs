@@ -41,6 +41,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -74,6 +77,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -109,6 +115,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -142,6 +151,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -177,6 +189,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -210,6 +225,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -246,6 +264,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -280,6 +301,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -316,6 +340,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -350,6 +377,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -386,6 +416,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -420,6 +453,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -456,6 +492,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -490,6 +529,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -526,6 +568,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -560,6 +605,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -596,6 +644,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =
@@ -630,6 +681,9 @@ namespace Google.Cloud.Logging.V2.Tests
                 MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                Version = LogMetric.Types.ApiVersion.V2,
+#pragma warning restore CS0612
                 MetricDescriptor = new ga::MetricDescriptor(),
                 ValueExtractor = "value_extractor09b994a6",
                 LabelExtractors =

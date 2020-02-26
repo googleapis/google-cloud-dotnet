@@ -42,8 +42,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -70,8 +77,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -100,8 +114,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -128,8 +149,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -158,8 +186,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -186,8 +221,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -218,8 +260,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -248,8 +297,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -279,8 +335,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -308,8 +371,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -339,8 +409,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -368,8 +445,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -399,8 +483,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -428,8 +519,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -459,8 +557,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -488,8 +593,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -519,8 +631,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -548,8 +667,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -581,8 +707,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -612,8 +745,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -644,8 +784,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -674,8 +821,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -706,8 +860,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -736,8 +897,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -767,8 +935,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -796,8 +971,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -827,8 +1009,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -856,8 +1045,15 @@ namespace Google.Cloud.Logging.V2.Tests
                 SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
+#pragma warning disable CS0612
+                OutputVersionFormat = LogSink.Types.VersionFormat.V2,
+#pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
+#pragma warning disable CS0612
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
