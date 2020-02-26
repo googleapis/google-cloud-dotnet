@@ -85,5 +85,61 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(command.Parameters.SequenceEqual(command2.Parameters));
         }
 
+        [Fact]
+        public void CommandHasConnectionQueryOptions()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var queryOptions = new QueryOptions{ OptimizerVersion = "1" };
+            connection.QueryOptions = queryOptions;
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            Assert.Equal(queryOptions, command.QueryOptions);
+        }
+
+        [Fact]
+        public void CommandHasOptimizerVersionFromEnvironment()
+        {
+            // Save existing value of environment variable.
+            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+            string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
+            const string envOptimizerVersion = "2";
+            Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
+
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            connection.QueryOptions = new QueryOptions{ OptimizerVersion = "1" };
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            // Optimizer version set through environment variable has higher
+            // precedence than version set through connection.
+            Assert.Equal(envOptimizerVersion, command.QueryOptions.OptimizerVersion);
+
+            // Set the environment back.
+            Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
+        }
+
+        [Fact]
+        public void CommandHasOptimizerVersionSetOnCommand()
+        {
+            // Save existing value of environment variable.
+            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+            string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
+            const string envOptimizerVersion = "2";
+            Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
+
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            connection.QueryOptions = new QueryOptions{ OptimizerVersion = "1" };
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            var commandOptimizerVersion = "3";
+            command.QueryOptions = new QueryOptions{ OptimizerVersion = commandOptimizerVersion };
+            // Optimizer version set at a command level has higher precedence
+            // than version set through the connection or the environment
+            // variable.
+            Assert.Equal(commandOptimizerVersion, command.QueryOptions.OptimizerVersion);
+
+            // Set the environment back.
+            Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
+        }
+
     }
 }
