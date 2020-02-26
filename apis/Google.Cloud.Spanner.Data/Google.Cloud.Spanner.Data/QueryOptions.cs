@@ -13,13 +13,14 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using System;
 
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Immutable class representing query options.
     /// </summary>
-    public sealed class QueryOptions
+    public sealed class QueryOptions : IEquatable<QueryOptions>
     {
         /// <summary>
         /// An option to control the selection of optimizer version.
@@ -66,6 +67,32 @@ namespace Google.Cloud.Spanner.Data
         public V1.ExecuteSqlRequest.Types.QueryOptions ToProto()
         {
             return Proto.Clone();
+        }
+
+        /// <inheritdoc />
+        public bool Equals(QueryOptions other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+            return OptimizerVersion == other.OptimizerVersion;
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as QueryOptions);
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return OptimizerVersion.GetHashCode();
+            }
         }
     }
 }
