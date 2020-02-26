@@ -82,6 +82,7 @@ Beta:
 - [Google.Cloud.RecaptchaEnterprise.V1Beta1](Google.Cloud.RecaptchaEnterprise.V1Beta1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html)
+- [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html)
 - [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html)
 - [Google.Cloud.Speech.V1P1Beta1](Google.Cloud.Speech.V1P1Beta1/index.html)
 - [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html)
