@@ -690,6 +690,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
+                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
             };
             // Make the request
             ResultSet response = spannerClient.ExecuteSql(request);
@@ -721,6 +722,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
+                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
             };
             // Make the request
             ResultSet response = await spannerClient.ExecuteSqlAsync(request);
@@ -751,6 +753,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
+                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
             };
             // Make the request, returning a streaming response
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);

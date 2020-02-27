@@ -622,6 +622,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
                 Seqno = 4367695630312265944L,
+                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
             };
             ResultSet expectedResponse = new ResultSet
             {
@@ -660,6 +661,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
                 Seqno = 4367695630312265944L,
+                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
             };
             ResultSet expectedResponse = new ResultSet
             {
