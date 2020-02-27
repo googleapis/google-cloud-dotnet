@@ -3,7 +3,7 @@
 //     source: google/firestore/v1/firestore.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -42,7 +41,6 @@ namespace Google.Cloud.Firestore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.Document> __Marshaller_google_firestore_v1_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.Document.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsRequest> __Marshaller_google_firestore_v1_ListDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> __Marshaller_google_firestore_v1_ListDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CreateDocumentRequest> __Marshaller_google_firestore_v1_CreateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest> __Marshaller_google_firestore_v1_UpdateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest> __Marshaller_google_firestore_v1_DeleteDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
@@ -61,6 +59,7 @@ namespace Google.Cloud.Firestore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenResponse> __Marshaller_google_firestore_v1_ListenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListenResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest> __Marshaller_google_firestore_v1_ListCollectionIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> __Marshaller_google_firestore_v1_ListCollectionIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CreateDocumentRequest> __Marshaller_google_firestore_v1_CreateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_GetDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
@@ -75,13 +74,6 @@ namespace Google.Cloud.Firestore.V1 {
         "ListDocuments",
         __Marshaller_google_firestore_v1_ListDocumentsRequest,
         __Marshaller_google_firestore_v1_ListDocumentsResponse);
-
-    static readonly grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_CreateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateDocument",
-        __Marshaller_google_firestore_v1_CreateDocumentRequest,
-        __Marshaller_google_firestore_v1_Document);
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_UpdateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
@@ -153,6 +145,13 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_ListCollectionIdsRequest,
         __Marshaller_google_firestore_v1_ListCollectionIdsResponse);
 
+    static readonly grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_CreateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDocument",
+        __Marshaller_google_firestore_v1_CreateDocumentRequest,
+        __Marshaller_google_firestore_v1_Document);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -181,17 +180,6 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> ListDocuments(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates a new document.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.Document> CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -313,6 +301,17 @@ namespace Google.Cloud.Firestore.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Creates a new document.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.Document> CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for Firestore</summary>
@@ -425,50 +424,6 @@ namespace Google.Cloud.Firestore.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> ListDocumentsAsync(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDocuments, null, options, request);
-      }
-      /// <summary>
-      /// Creates a new document.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1.Document CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a new document.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1.Document CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateDocument, null, options, request);
-      }
-      /// <summary>
-      /// Creates a new document.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a new document.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateDocument, null, options, request);
       }
       /// <summary>
       /// Updates or inserts a document.
@@ -824,6 +779,50 @@ namespace Google.Cloud.Firestore.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCollectionIds, null, options, request);
       }
+      /// <summary>
+      /// Creates a new document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Firestore.V1.Document CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Firestore.V1.Document CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDocument, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDocument, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override FirestoreClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -838,7 +837,6 @@ namespace Google.Cloud.Firestore.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetDocument, serviceImpl.GetDocument)
           .AddMethod(__Method_ListDocuments, serviceImpl.ListDocuments)
-          .AddMethod(__Method_CreateDocument, serviceImpl.CreateDocument)
           .AddMethod(__Method_UpdateDocument, serviceImpl.UpdateDocument)
           .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument)
           .AddMethod(__Method_BatchGetDocuments, serviceImpl.BatchGetDocuments)
@@ -848,7 +846,8 @@ namespace Google.Cloud.Firestore.V1 {
           .AddMethod(__Method_RunQuery, serviceImpl.RunQuery)
           .AddMethod(__Method_Write, serviceImpl.Write)
           .AddMethod(__Method_Listen, serviceImpl.Listen)
-          .AddMethod(__Method_ListCollectionIds, serviceImpl.ListCollectionIds).Build();
+          .AddMethod(__Method_ListCollectionIds, serviceImpl.ListCollectionIds)
+          .AddMethod(__Method_CreateDocument, serviceImpl.CreateDocument).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -859,7 +858,6 @@ namespace Google.Cloud.Firestore.V1 {
     {
       serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.GetDocument));
       serviceBinder.AddMethod(__Method_ListDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.ListDocumentsRequest, global::Google.Cloud.Firestore.V1.ListDocumentsResponse>(serviceImpl.ListDocuments));
-      serviceBinder.AddMethod(__Method_CreateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.CreateDocument));
       serviceBinder.AddMethod(__Method_UpdateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.UpdateDocument));
       serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDocument));
       serviceBinder.AddMethod(__Method_BatchGetDocuments, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse>(serviceImpl.BatchGetDocuments));
@@ -870,6 +868,7 @@ namespace Google.Cloud.Firestore.V1 {
       serviceBinder.AddMethod(__Method_Write, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse>(serviceImpl.Write));
       serviceBinder.AddMethod(__Method_Listen, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse>(serviceImpl.Listen));
       serviceBinder.AddMethod(__Method_ListCollectionIds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse>(serviceImpl.ListCollectionIds));
+      serviceBinder.AddMethod(__Method_CreateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.CreateDocument));
     }
 
   }

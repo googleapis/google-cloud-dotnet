@@ -48,7 +48,6 @@ namespace Google.Cloud.Firestore.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetDocumentSettings = existing.GetDocumentSettings;
             ListDocumentsSettings = existing.ListDocumentsSettings;
-            CreateDocumentSettings = existing.CreateDocumentSettings;
             UpdateDocumentSettings = existing.UpdateDocumentSettings;
             DeleteDocumentSettings = existing.DeleteDocumentSettings;
             BatchGetDocumentsSettings = existing.BatchGetDocumentsSettings;
@@ -61,6 +60,7 @@ namespace Google.Cloud.Firestore.V1
             ListenSettings = existing.ListenSettings;
             ListenStreamingSettings = existing.ListenStreamingSettings;
             ListCollectionIdsSettings = existing.ListCollectionIdsSettings;
+            CreateDocumentSettings = existing.CreateDocumentSettings;
             OnCopy(existing);
         }
 
@@ -95,18 +95,6 @@ namespace Google.Cloud.Firestore.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDocumentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.DeadlineExceeded)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>FirestoreClient.CreateDocument</c> and <c>FirestoreClient.CreateDocumentAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -238,6 +226,18 @@ namespace Google.Cloud.Firestore.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCollectionIdsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreClient.CreateDocument</c> and <c>FirestoreClient.CreateDocumentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FirestoreSettings"/> object.</returns>
@@ -404,33 +404,6 @@ namespace Google.Cloud.Firestore.V1
         /// <returns>A pageable asynchronous sequence of <see cref="Document"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, Document> ListDocumentsAsync(ListDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new document.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual Document CreateDocument(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new document.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Document> CreateDocumentAsync(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new document.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Document> CreateDocumentAsync(CreateDocumentRequest request, st::CancellationToken cancellationToken) =>
-            CreateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates or inserts a document.
@@ -981,6 +954,33 @@ namespace Google.Cloud.Firestore.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Creates a new document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Document CreateDocument(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Document> CreateDocumentAsync(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Document> CreateDocumentAsync(CreateDocumentRequest request, st::CancellationToken cancellationToken) =>
+            CreateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Firestore client wrapper implementation, for convenient use.</summary>
@@ -989,8 +989,6 @@ namespace Google.Cloud.Firestore.V1
         private readonly gaxgrpc::ApiCall<GetDocumentRequest, Document> _callGetDocument;
 
         private readonly gaxgrpc::ApiCall<ListDocumentsRequest, ListDocumentsResponse> _callListDocuments;
-
-        private readonly gaxgrpc::ApiCall<CreateDocumentRequest, Document> _callCreateDocument;
 
         private readonly gaxgrpc::ApiCall<UpdateDocumentRequest, Document> _callUpdateDocument;
 
@@ -1012,6 +1010,8 @@ namespace Google.Cloud.Firestore.V1
 
         private readonly gaxgrpc::ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> _callListCollectionIds;
 
+        private readonly gaxgrpc::ApiCall<CreateDocumentRequest, Document> _callCreateDocument;
+
         /// <summary>
         /// Constructs a client wrapper for the Firestore service, with the specified gRPC client and settings.
         /// </summary>
@@ -1028,9 +1028,6 @@ namespace Google.Cloud.Firestore.V1
             _callListDocuments = clientHelper.BuildApiCall<ListDocumentsRequest, ListDocumentsResponse>(grpcClient.ListDocumentsAsync, grpcClient.ListDocuments, effectiveSettings.ListDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent).WithGoogleRequestParam("collection_id", request => request.CollectionId);
             Modify_ApiCall(ref _callListDocuments);
             Modify_ListDocumentsApiCall(ref _callListDocuments);
-            _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, Document>(grpcClient.CreateDocumentAsync, grpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent).WithGoogleRequestParam("collection_id", request => request.CollectionId);
-            Modify_ApiCall(ref _callCreateDocument);
-            Modify_CreateDocumentApiCall(ref _callCreateDocument);
             _callUpdateDocument = clientHelper.BuildApiCall<UpdateDocumentRequest, Document>(grpcClient.UpdateDocumentAsync, grpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings).WithGoogleRequestParam("document.name", request => request.Document?.Name);
             Modify_ApiCall(ref _callUpdateDocument);
             Modify_UpdateDocumentApiCall(ref _callUpdateDocument);
@@ -1061,6 +1058,9 @@ namespace Google.Cloud.Firestore.V1
             _callListCollectionIds = clientHelper.BuildApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse>(grpcClient.ListCollectionIdsAsync, grpcClient.ListCollectionIds, effectiveSettings.ListCollectionIdsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCollectionIds);
             Modify_ListCollectionIdsApiCall(ref _callListCollectionIds);
+            _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, Document>(grpcClient.CreateDocumentAsync, grpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent).WithGoogleRequestParam("collection_id", request => request.CollectionId);
+            Modify_ApiCall(ref _callCreateDocument);
+            Modify_CreateDocumentApiCall(ref _callCreateDocument);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1073,8 +1073,6 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_GetDocumentApiCall(ref gaxgrpc::ApiCall<GetDocumentRequest, Document> call);
 
         partial void Modify_ListDocumentsApiCall(ref gaxgrpc::ApiCall<ListDocumentsRequest, ListDocumentsResponse> call);
-
-        partial void Modify_CreateDocumentApiCall(ref gaxgrpc::ApiCall<CreateDocumentRequest, Document> call);
 
         partial void Modify_UpdateDocumentApiCall(ref gaxgrpc::ApiCall<UpdateDocumentRequest, Document> call);
 
@@ -1096,6 +1094,8 @@ namespace Google.Cloud.Firestore.V1
 
         partial void Modify_ListCollectionIdsApiCall(ref gaxgrpc::ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> call);
 
+        partial void Modify_CreateDocumentApiCall(ref gaxgrpc::ApiCall<CreateDocumentRequest, Document> call);
+
         partial void OnConstruction(Firestore.FirestoreClient grpcClient, FirestoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Firestore client</summary>
@@ -1104,8 +1104,6 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1130,6 +1128,8 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_ListenRequestRequest(ref ListenRequest request);
 
         partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a single document.
@@ -1177,30 +1177,6 @@ namespace Google.Cloud.Firestore.V1
         {
             Modify_ListDocumentsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDocumentsRequest, ListDocumentsResponse, Document>(_callListDocuments, request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a new document.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override Document CreateDocument(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateDocumentRequest(ref request, ref callSettings);
-            return _callCreateDocument.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a new document.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Document> CreateDocumentAsync(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateDocumentRequest(ref request, ref callSettings);
-            return _callCreateDocument.Async(request, callSettings);
         }
 
         /// <summary>
@@ -1508,6 +1484,30 @@ namespace Google.Cloud.Firestore.V1
         {
             Modify_ListCollectionIdsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCollectionIdsRequest, ListCollectionIdsResponse, string>(_callListCollectionIds, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Document CreateDocument(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDocumentRequest(ref request, ref callSettings);
+            return _callCreateDocument.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Document> CreateDocumentAsync(CreateDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDocumentRequest(ref request, ref callSettings);
+            return _callCreateDocument.Async(request, callSettings);
         }
     }
 
