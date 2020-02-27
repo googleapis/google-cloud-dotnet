@@ -1528,9 +1528,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int FieldMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// If field_mask is present, specifies the subset of [][Instance] fields that
+    /// If field_mask is present, specifies the subset of [Instance][google.spanner.admin.instance.v1.Instance] fields that
     /// should be returned.
-    /// If absent, all [][Instance] fields are returned.
+    /// If absent, all [Instance][google.spanner.admin.instance.v1.Instance] fields are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
@@ -2306,7 +2306,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance instance_;
     /// <summary>
     /// Required. The instance to update, which must always include the instance
-    /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+    /// name.  Otherwise, only fields mentioned in [field_mask][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.Admin.Instance.V1.Instance Instance {
@@ -2320,9 +2320,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int FieldMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+    /// Required. A mask specifying which fields in [Instance][google.spanner.admin.instance.v1.Instance] should be updated.
     /// The field mask must always be specified; this prevents any future fields in
-    /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+    /// [Instance][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
     /// about them.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

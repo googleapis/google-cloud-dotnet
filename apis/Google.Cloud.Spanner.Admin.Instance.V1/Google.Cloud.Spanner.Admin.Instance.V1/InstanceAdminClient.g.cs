@@ -1534,12 +1534,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// name.  Otherwise, only fields mentioned in [field_mask][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// Required. A mask specifying which fields in [Instance][google.spanner.admin.instance.v1.Instance] should be updated.
         /// The field mask must always be specified; this prevents any future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// [Instance][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
         /// about them.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1595,12 +1595,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// name.  Otherwise, only fields mentioned in [field_mask][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// Required. A mask specifying which fields in [Instance][google.spanner.admin.instance.v1.Instance] should be updated.
         /// The field mask must always be specified; this prevents any future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// [Instance][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
         /// about them.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1656,12 +1656,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// name.  Otherwise, only fields mentioned in [field_mask][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
+        /// Required. A mask specifying which fields in [Instance][google.spanner.admin.instance.v1.Instance] should be updated.
         /// The field mask must always be specified; this prevents any future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
+        /// [Instance][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
         /// about them.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
