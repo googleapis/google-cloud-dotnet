@@ -175,47 +175,6 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateDocument</summary>
-        public void CreateDocumentRequestObject()
-        {
-            // Snippet: CreateDocument(CreateDocumentRequest, CallSettings)
-            // Create client
-            FirestoreClient firestoreClient = FirestoreClient.Create();
-            // Initialize request argument(s)
-            CreateDocumentRequest request = new CreateDocumentRequest
-            {
-                Parent = "",
-                CollectionId = "",
-                DocumentId = "",
-                Document = new Document(),
-                Mask = new DocumentMask(),
-            };
-            // Make the request
-            Document response = firestoreClient.CreateDocument(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDocumentAsync</summary>
-        public async Task CreateDocumentRequestObjectAsync()
-        {
-            // Snippet: CreateDocumentAsync(CreateDocumentRequest, CallSettings)
-            // Additional: CreateDocumentAsync(CreateDocumentRequest, CancellationToken)
-            // Create client
-            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateDocumentRequest request = new CreateDocumentRequest
-            {
-                Parent = "",
-                CollectionId = "",
-                DocumentId = "",
-                Document = new Document(),
-                Mask = new DocumentMask(),
-            };
-            // Make the request
-            Document response = await firestoreClient.CreateDocumentAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for UpdateDocument</summary>
         public void UpdateDocumentRequestObject()
         {
@@ -877,6 +836,47 @@ namespace Google.Cloud.Firestore.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDocument</summary>
+        public void CreateDocumentRequestObject()
+        {
+            // Snippet: CreateDocument(CreateDocumentRequest, CallSettings)
+            // Create client
+            FirestoreClient firestoreClient = FirestoreClient.Create();
+            // Initialize request argument(s)
+            CreateDocumentRequest request = new CreateDocumentRequest
+            {
+                Parent = "",
+                CollectionId = "",
+                DocumentId = "",
+                Document = new Document(),
+                Mask = new DocumentMask(),
+            };
+            // Make the request
+            Document response = firestoreClient.CreateDocument(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDocumentAsync</summary>
+        public async Task CreateDocumentRequestObjectAsync()
+        {
+            // Snippet: CreateDocumentAsync(CreateDocumentRequest, CallSettings)
+            // Additional: CreateDocumentAsync(CreateDocumentRequest, CancellationToken)
+            // Create client
+            FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDocumentRequest request = new CreateDocumentRequest
+            {
+                Parent = "",
+                CollectionId = "",
+                DocumentId = "",
+                Document = new Document(),
+                Mask = new DocumentMask(),
+            };
+            // Make the request
+            Document response = await firestoreClient.CreateDocumentAsync(request);
             // End snippet
         }
     }
