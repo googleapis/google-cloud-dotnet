@@ -3,7 +3,7 @@
 ## API versioning
 
 API versions appear in the package names of some packages. See the
-[package-names.md](package names) documentation for more details of
+[package names](package-names.md) documentation for more details of
 when this occurs.
 
 The stable releases of APIs only have a major version number (e.g.
