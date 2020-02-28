@@ -155,7 +155,21 @@ namespace Google.Cloud.Storage.V1
                         _resourcePath = _resourcePath + "/" + escaped;
                     }
 
-                    var canonicalRequest = $"{requestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
+                    string payloadHash = "UNSIGNED-PAYLOAD";
+                    var payloadHashHeaders = headers.Where(header =>
+                        header.Key.Equals("X-Goog-Content-SHA256", StringComparison.OrdinalIgnoreCase) ||
+                        header.Key.Equals("X-Amz-Content-SHA256", StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                    if (payloadHashHeaders.Count > 1)
+                    {
+                        throw new ArgumentException($"Only one of X-Goog-Content-SHA256 and/or X-Amz-Content-SHA256 can be specified.");
+                    }
+                    if (payloadHashHeaders.Count > 0)
+                    {
+                        payloadHash = payloadHashHeaders[0].Value;
+                    }
+
+                    var canonicalRequest = $"{requestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\n{payloadHash}";
 
                     string hashHex;
                     using (var sha256 = SHA256.Create())
