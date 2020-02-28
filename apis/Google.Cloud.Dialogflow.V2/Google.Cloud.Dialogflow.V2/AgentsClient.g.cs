@@ -59,6 +59,7 @@ namespace Google.Cloud.Dialogflow.V2
             ImportAgentOperationsSettings = existing.ImportAgentOperationsSettings.Clone();
             RestoreAgentSettings = existing.RestoreAgentSettings;
             RestoreAgentOperationsSettings = existing.RestoreAgentOperationsSettings.Clone();
+            GetValidationResultSettings = existing.GetValidationResultSettings;
             OnCopy(existing);
         }
 
@@ -252,6 +253,18 @@ namespace Google.Cloud.Dialogflow.V2
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentsClient.GetValidationResult</c> and <c>AgentsClient.GetValidationResultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetValidationResultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AgentsSettings"/> object.</returns>
@@ -1264,6 +1277,36 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> PollOnceRestoreAgentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreAgentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Gets agent validation result. Agent validation is performed during
+        /// training time and is updated automatically when training is completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ValidationResult GetValidationResult(GetValidationResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets agent validation result. Agent validation is performed during
+        /// training time and is updated automatically when training is completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValidationResult> GetValidationResultAsync(GetValidationResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets agent validation result. Agent validation is performed during
+        /// training time and is updated automatically when training is completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValidationResult> GetValidationResultAsync(GetValidationResultRequest request, st::CancellationToken cancellationToken) =>
+            GetValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Agents client wrapper implementation, for convenient use.</summary>
@@ -1284,6 +1327,8 @@ namespace Google.Cloud.Dialogflow.V2
         private readonly gaxgrpc::ApiCall<ImportAgentRequest, lro::Operation> _callImportAgent;
 
         private readonly gaxgrpc::ApiCall<RestoreAgentRequest, lro::Operation> _callRestoreAgent;
+
+        private readonly gaxgrpc::ApiCall<GetValidationResultRequest, ValidationResult> _callGetValidationResult;
 
         /// <summary>
         /// Constructs a client wrapper for the Agents service, with the specified gRPC client and settings.
@@ -1323,6 +1368,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callRestoreAgent = clientHelper.BuildApiCall<RestoreAgentRequest, lro::Operation>(grpcClient.RestoreAgentAsync, grpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRestoreAgent);
             Modify_RestoreAgentApiCall(ref _callRestoreAgent);
+            _callGetValidationResult = clientHelper.BuildApiCall<GetValidationResultRequest, ValidationResult>(grpcClient.GetValidationResultAsync, grpcClient.GetValidationResult, effectiveSettings.GetValidationResultSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGetValidationResult);
+            Modify_GetValidationResultApiCall(ref _callGetValidationResult);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1344,6 +1392,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_RestoreAgentApiCall(ref gaxgrpc::ApiCall<RestoreAgentRequest, lro::Operation> call);
 
+        partial void Modify_GetValidationResultApiCall(ref gaxgrpc::ApiCall<GetValidationResultRequest, ValidationResult> call);
+
         partial void OnConstruction(Agents.AgentsClient grpcClient, AgentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Agents client</summary>
@@ -1364,6 +1414,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_ImportAgentRequest(ref ImportAgentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestoreAgentRequest(ref RestoreAgentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetValidationResultRequest(ref GetValidationResultRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves the specified agent.
@@ -1609,6 +1661,32 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_RestoreAgentRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, wkt::Struct>(await _callRestoreAgent.Async(request, callSettings).ConfigureAwait(false), RestoreAgentOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets agent validation result. Agent validation is performed during
+        /// training time and is updated automatically when training is completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ValidationResult GetValidationResult(GetValidationResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetValidationResultRequest(ref request, ref callSettings);
+            return _callGetValidationResult.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets agent validation result. Agent validation is performed during
+        /// training time and is updated automatically when training is completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ValidationResult> GetValidationResultAsync(GetValidationResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetValidationResultRequest(ref request, ref callSettings);
+            return _callGetValidationResult.Async(request, callSettings);
         }
     }
 
