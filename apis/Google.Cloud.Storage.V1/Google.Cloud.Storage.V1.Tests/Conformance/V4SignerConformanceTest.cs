@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using Xunit;
+using static Google.Cloud.Storage.V1.UrlSigner;
 
 namespace Google.Cloud.Storage.V1.Tests.Conformance
 {
@@ -41,14 +42,16 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
             var clock = new FakeClock(timestamp);
             var signer = UrlSigner
                 .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
-                .WithSigningVersion(SigningVersion.V4)
                 .WithClock(clock);
 
-            var actualUrl = signer.Sign(test.Bucket, test.Object,
-                duration: TimeSpan.FromSeconds(test.Expiration),
-                requestMethod: s_methods[test.Method],
-                requestHeaders: test.Headers.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)),
-                contentHeaders: null);
+            var requestTemplate = RequestTemplate
+                .FromBucket(test.Bucket)
+                .WithObjectName(test.Object)
+                .WithHttpMethod(s_methods[test.Method])
+                .WithRequestHeaders(test.Headers.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)));
+            var options = Options.FromDuration(TimeSpan.FromSeconds(test.Expiration)).WithSigningVersion(SigningVersion.V4);
+
+            var actualUrl = signer.Sign(requestTemplate, options);
 
             // We almost always want the complete URL afterwards, which xUnit doesn't give us.
             if (test.ExpectedUrl != actualUrl)

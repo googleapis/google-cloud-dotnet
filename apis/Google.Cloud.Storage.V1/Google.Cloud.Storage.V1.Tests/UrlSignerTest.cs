@@ -14,13 +14,12 @@
 
 using Google.Apis.Auth.OAuth2;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.UrlSigner;
 
 #if NET461
 using RsaKey = System.Security.Cryptography.RSACryptoServiceProvider;
@@ -55,29 +54,29 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         [Fact]
-        public void Sign_Validations()
+        public async Task Sign_Validations()
         {
             var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
 
+            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, null));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(null, null));
+
+            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, Options.FromDuration(TimeSpan.Zero)));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(null, Options.FromDuration(TimeSpan.Zero)));
+
+            Assert.Throws<ArgumentNullException>(() => signer.Sign(RequestTemplate.FromBucket("bucket"), null));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(RequestTemplate.FromBucket("bucket"), null));
+
             // Bucket names cannot be null or contain uppercase letters (among other rules).
             // Make sure we verify the presence and format of the bucket name in all overloads.
-            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", TimeSpan.FromDays(1), new HttpRequestMessage()));
-            Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", TimeSpan.FromDays(1), new HttpRequestMessage()));
+            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", TimeSpan.FromDays(1)));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(null, "objectName", TimeSpan.FromDays(1)));
+            Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", TimeSpan.FromDays(1)));
+            await Assert.ThrowsAsync<ArgumentException>(() => signer.SignAsync("BUCKETNAME", "objectName", TimeSpan.FromDays(1)));
 
-            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", DateTimeOffset.UtcNow, new HttpRequestMessage()));
-            Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", DateTimeOffset.UtcNow, new HttpRequestMessage()));
-
-            var emptyHeaders = new Dictionary<string, IEnumerable<string>>();
-            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", TimeSpan.FromDays(1), HttpMethod.Get, emptyHeaders, emptyHeaders));
-            Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", TimeSpan.FromDays(1), HttpMethod.Get, emptyHeaders, emptyHeaders));
-
-            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", DateTimeOffset.UtcNow, HttpMethod.Get, emptyHeaders, emptyHeaders));
-            Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", DateTimeOffset.UtcNow, HttpMethod.Get, emptyHeaders, emptyHeaders));
-
-            // Make sure exceptions are not thrown for things which may be null or uppercase.
-            signer.Sign("bucketname", null, TimeSpan.FromDays(1), null);
-            // Our UrlSigner is entirely synchronous - it's fine to just wait
-            signer.SignAsync("bucketname", null, TimeSpan.FromDays(1), request: null).Wait();
+            // Make sure exceptions are not thrown for things which may be null or uppercase.	
+            signer.Sign("bucketname", null, TimeSpan.FromDays(1), null, null);
+            await signer.SignAsync("bucketname", null, TimeSpan.FromDays(1), null, null);
         }
 
         private class FakeBlobSigner : UrlSigner.IBlobSigner
