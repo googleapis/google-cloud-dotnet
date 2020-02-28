@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.UrlSigner;
 
 namespace Google.Cloud.Storage.V1.Tests
 {
@@ -28,77 +29,83 @@ namespace Google.Cloud.Storage.V1.Tests
         public class V2SignerTest
         {
             [Fact]
-            public void DefaultHttpMethodIsGet()
-            {
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(CreateFakeServiceAccountCredential())
-                    .WithSigningVersion(SigningVersion.V2);
-                var bucketName = "bucket-name";
-                var objectName = "object-name";
-                var expiration = DateTimeOffset.UtcNow + TimeSpan.FromDays(1);
-                var url1 = signer.Sign(bucketName, objectName, expiration, requestMethod: null);
-                var url2 = signer.Sign(bucketName, objectName, expiration, requestMethod: HttpMethod.Get);
-                Assert.Equal(url1, url2);
-            }
-
-            [Fact]
             public void EncryptionKeyAndHashAreIgnored()
             {
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(CreateFakeServiceAccountCredential())
+                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
                     .WithSigningVersion(SigningVersion.V2);
-                var bucketName = "bucket-name";
-                var objectName = "object-name";
-                var expiration = DateTimeOffset.UtcNow + TimeSpan.FromDays(1);
-                var url1 = signer.Sign(bucketName, objectName, expiration, requestHeaders: new Dictionary<string, IEnumerable<string>> {
-                    { EncryptionKey.AlgorithmHeader, new [] { EncryptionKey.AlgorithmValue } }
-                });
-                var url2 = signer.Sign(bucketName, objectName, expiration, requestHeaders: new Dictionary<string, IEnumerable<string>> {
-                    { EncryptionKey.AlgorithmHeader, new [] { EncryptionKey.AlgorithmValue } },
-                    { EncryptionKey.KeyHeader, new [] { "abc" } },
-                    { EncryptionKey.KeyHashHeader, new [] { "def" } }
-                });
+
+                var algorithmTemplate = baseRequestTemplate.WithRequestHeaders(
+                    new Dictionary<string, IEnumerable<string>>
+                    {
+                        { EncryptionKey.AlgorithmHeader, new [] { EncryptionKey.AlgorithmValue }}
+                    });
+
+                var keyAndHashTemplate = baseRequestTemplate.WithRequestHeaders(
+                    new Dictionary<string, IEnumerable<string>>
+                    {
+                        { EncryptionKey.AlgorithmHeader, new [] { EncryptionKey.AlgorithmValue }},
+                        { EncryptionKey.KeyHeader, new [] { "abc" } },
+                        { EncryptionKey.KeyHashHeader, new [] { "def" } }
+                    });
+
+                var url1 = signer.Sign(algorithmTemplate, options);
+                var url2 = signer.Sign(keyAndHashTemplate, options);
                 Assert.Equal(url1, url2);
 
                 // However, make sure the encryption algorithm is not ignored.
-                var url3 = signer.Sign(bucketName, objectName, expiration);
+                var url3 = signer.Sign(baseRequestTemplate, options);
                 Assert.NotEqual(url1, url3);
             }
 
             [Fact]
             public void ResumableEquivalentToPostWithStartHeader()
             {
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(CreateFakeServiceAccountCredential())
+                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
                     .WithSigningVersion(SigningVersion.V2);
-                var bucketName = "bucket-name";
-                var objectName = "object-name";
-                var expiration = DateTimeOffset.UtcNow + TimeSpan.FromDays(1);
-                var url1 = signer.Sign(bucketName, objectName, expiration, UrlSigner.ResumableHttpMethod);
-                var url2 = signer.Sign(bucketName, objectName, expiration, HttpMethod.Post,
-                    new Dictionary<string, IEnumerable<string>> { { "x-goog-resumable", new[] { "start" } } });
+
+                var resumableTemplate = baseRequestTemplate.WithHttpMethod(ResumableHttpMethod);
+                var startHeaderTemplate = baseRequestTemplate
+                    .WithHttpMethod(HttpMethod.Post)
+                    .WithRequestHeaders(
+                    new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "x-goog-resumable", new[] { "start" } }
+                    });
+
+                var url1 = signer.Sign(resumableTemplate, options);
+                var url2 = signer.Sign(startHeaderTemplate, options);
                 Assert.Equal(url1, url2);
             }
 
             [Fact]
             public void BlobSignerSync()
             {
-                var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner()).WithSigningVersion(SigningVersion.V2);
-                var bucketName = "bucket-name";
-                var objectName = "object-name";
-                var expiration = new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc);
-                var url = signer.Sign(bucketName, objectName, expiration);
+                var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
+                var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc))
+                    .WithSigningVersion(SigningVersion.V2);
+
+                var url = signer.Sign(baseRequestTemplate, options);
                 Assert.Equal("https://storage.googleapis.com/bucket-name/object-name?GoogleAccessId=FakeId&Expires=30&Signature=AAA%3D", url);
             }
 
             [Fact]
             public async Task BlobSignerAsync()
             {
-                var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner()).WithSigningVersion(SigningVersion.V2);
-                var bucketName = "bucket-name";
-                var objectName = "object-name";
-                var expiration = new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc);
-                var url = await signer.SignAsync(bucketName, objectName, expiration);
+                var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
+                var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
+                var options = Options
+                    .FromExpiration(new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc))
+                    .WithSigningVersion(SigningVersion.V2);
+
+                var url = await signer.SignAsync(baseRequestTemplate, options);
                 Assert.Equal("https://storage.googleapis.com/bucket-name/object-name?GoogleAccessId=FakeId&Expires=30&Signature=BBB%3D", url);
             }
         }

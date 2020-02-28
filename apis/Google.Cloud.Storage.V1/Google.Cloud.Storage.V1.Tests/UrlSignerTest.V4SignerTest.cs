@@ -17,8 +17,8 @@ using Google.Cloud.Storage.V1.Tests.Conformance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using Xunit;
+using static Google.Cloud.Storage.V1.UrlSigner;
 
 namespace Google.Cloud.Storage.V1.Tests
 {
@@ -33,17 +33,37 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public void SampleRequest()
             {
-                var bucket = "jessefrank2";
-                var obj = "kitten.png";
                 var clock = new FakeClock(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc));
-                var expiry = TimeSpan.FromHours(1);
+                var requestTemplate = RequestTemplate.FromBucket("jessefrank2").WithObjectName("kitten.png");
+                var options = Options.FromDuration(TimeSpan.FromHours(1)).WithSigningVersion(SigningVersion.V4);
                 var serviceAccount = CreateFakeServiceAccountCredential("test-account@spec-test-ruby-samples.iam.gserviceaccount.com");
                 var signer = UrlSigner
                     .FromServiceAccountCredential(serviceAccount)
-                    .WithSigningVersion(SigningVersion.V4)
                     .WithClock(clock);
 
-                var uriString = signer.Sign(bucket, obj, expiry, HttpMethod.Get);
+                var uriString = signer.Sign(requestTemplate, options);
+                var parameters = ExtractQueryParameters(uriString);
+
+                Assert.Equal("GOOG4-RSA-SHA256", parameters["X-Goog-Algorithm"]);
+                Assert.Equal("test-account%40spec-test-ruby-samples.iam.gserviceaccount.com%2F20181119%2Fauto%2Fstorage%2Fgoog4_request", parameters["X-Goog-Credential"]);
+                Assert.Equal("20181119T055654Z", parameters["X-Goog-Date"]);
+                Assert.Equal("3600", parameters["X-Goog-Expires"]);
+                Assert.Equal("host", parameters["X-Goog-SignedHeaders"]);
+
+                // No check for the exact signature.
+            }
+
+            // The data in this test is from an example in the Ruby implementation.
+            [Fact]
+            public void SampleRequest_ExplicitParams()
+            {
+                var clock = new FakeClock(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc));
+                var serviceAccount = CreateFakeServiceAccountCredential("test-account@spec-test-ruby-samples.iam.gserviceaccount.com");
+                var signer = UrlSigner
+                    .FromServiceAccountCredential(serviceAccount)
+                    .WithClock(clock);
+
+                var uriString = signer.Sign("jessefrank2", "kitten.png", TimeSpan.FromHours(1), signingVersion: SigningVersion.V4);
                 var parameters = ExtractQueryParameters(uriString);
 
                 Assert.Equal("GOOG4-RSA-SHA256", parameters["X-Goog-Algorithm"]);
@@ -74,10 +94,11 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 var signer = UrlSigner
                     .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
-                    .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
+                var requestTemplate = RequestTemplate.FromBucket("bucket").WithObjectName("object");
+                var options = Options.FromDuration(TimeSpan.FromSeconds(seconds)).WithSigningVersion(SigningVersion.V4);
 
-                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign("bucket", "object", TimeSpan.FromSeconds(seconds), HttpMethod.Get));
+                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign(requestTemplate, options));
             }
 
             [Fact]
@@ -85,11 +106,13 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 var signer = UrlSigner
                     .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
-                    .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
+                var requestTemplate = RequestTemplate.FromBucket("bucket").WithObjectName("object");
+                var options = Options.FromDuration(TimeSpan.FromDays(7)).WithSigningVersion(SigningVersion.V4);
+
                 // Just testing that no exception is thrown.
-                signer.Sign("bucket", "object", TimeSpan.FromDays(7), HttpMethod.Get);
+                signer.Sign(requestTemplate, options);
             }
         }
     }
