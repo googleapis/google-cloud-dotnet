@@ -47,31 +47,31 @@ namespace Google.Cloud.Dialogflow.V2 {
             "emVTcGVlY2hDb25maWcSFQoNc3BlYWtpbmdfcmF0ZRgBIAEoARINCgVwaXRj",
             "aBgCIAEoARIWCg52b2x1bWVfZ2Fpbl9kYhgDIAEoARIaChJlZmZlY3RzX3By",
             "b2ZpbGVfaWQYBSADKAkSPwoFdm9pY2UYBCABKAsyMC5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLNAQoRT3V0cHV0",
-            "QXVkaW9Db25maWcSRwoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nEhkKEXNh",
-            "bXBsZV9yYXRlX2hlcnR6GAIgASgFElQKGHN5bnRoZXNpemVfc3BlZWNoX2Nv",
-            "bmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN5bnRo",
-            "ZXNpemVTcGVlY2hDb25maWcq+wEKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9f",
-            "RU5DT0RJTkdfVU5TUEVDSUZJRUQQABIcChhBVURJT19FTkNPRElOR19MSU5F",
-            "QVJfMTYQARIXChNBVURJT19FTkNPRElOR19GTEFDEAISGAoUQVVESU9fRU5D",
-            "T0RJTkdfTVVMQVcQAxIWChJBVURJT19FTkNPRElOR19BTVIQBBIZChVBVURJ",
-            "T19FTkNPRElOR19BTVJfV0IQBRIbChdBVURJT19FTkNPRElOR19PR0dfT1BV",
-            "UxAGEikKJUFVRElPX0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZVEUQ",
-            "Byp2ChJTcGVlY2hNb2RlbFZhcmlhbnQSJAogU1BFRUNIX01PREVMX1ZBUklB",
-            "TlRfVU5TUEVDSUZJRUQQABIWChJVU0VfQkVTVF9BVkFJTEFCTEUQARIQCgxV",
-            "U0VfU1RBTkRBUkQQAhIQCgxVU0VfRU5IQU5DRUQQAyqNAQoPU3NtbFZvaWNl",
-            "R2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASGgoW",
-            "U1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwKGFNTTUxfVk9JQ0VfR0VOREVS",
-            "X0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VOREVSX05FVVRSQUwQAyqkAQoT",
-            "T3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdf",
-            "VU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJTkdfTElORUFS",
-            "XzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxACEiIKHk9VVFBV",
-            "VF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADQp8BCh5jb20uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjJCEEF1ZGlvQ29uZmlnUHJvdG9QAVpEZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dm",
-            "bG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LlYyYgZwcm90bzM="));
+            "ZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLSAQoRT3V0cHV0",
+            "QXVkaW9Db25maWcSTAoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nQgPgQQIS",
+            "GQoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAUSVAoYc3ludGhlc2l6ZV9zcGVl",
+            "Y2hfY29uZmlnGAMgASgLMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "U3ludGhlc2l6ZVNwZWVjaENvbmZpZyr7AQoNQXVkaW9FbmNvZGluZxIeChpB",
+            "VURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5H",
+            "X0xJTkVBUl8xNhABEhcKE0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJ",
+            "T19FTkNPRElOR19NVUxBVxADEhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkK",
+            "FUFVRElPX0VOQ09ESU5HX0FNUl9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09H",
+            "R19PUFVTEAYSKQolQVVESU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJf",
+            "QllURRAHKnYKElNwZWVjaE1vZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxf",
+            "VkFSSUFOVF9VTlNQRUNJRklFRBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRAB",
+            "EhAKDFVTRV9TVEFOREFSRBACEhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21s",
+            "Vm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQ",
+            "ABIaChZTU01MX1ZPSUNFX0dFTkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9H",
+            "RU5ERVJfRkVNQUxFEAISHQoZU1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBAD",
+            "KqQBChNPdXRwdXRBdWRpb0VuY29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNP",
+            "RElOR19VTlNQRUNJRklFRBAAEiMKH09VVFBVVF9BVURJT19FTkNPRElOR19M",
+            "SU5FQVJfMTYQARIdChlPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzEAISIgoe",
+            "T1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEANCnwEKHmNvbS5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVkaW9Db25maWdQcm90b1ABWkRn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rp",
+            "YWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3Vk",
+            "LkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1590,7 +1590,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SampleRateHertzFieldNumber = 2;
     private int sampleRateHertz_;
     /// <summary>
-    /// Optional. The synthesis sample rate (in hertz) for this audio. If not
+    /// The synthesis sample rate (in hertz) for this audio. If not
     /// provided, then the synthesizer will use the default sample rate based on
     /// the audio encoding. If this is different from the voice's natural sample
     /// rate, then the synthesizer will honor this request by converting to the
@@ -1608,7 +1608,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SynthesizeSpeechConfigFieldNumber = 3;
     private global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig synthesizeSpeechConfig_;
     /// <summary>
-    /// Optional. Configuration of how speech should be synthesized.
+    /// Configuration of how speech should be synthesized.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig SynthesizeSpeechConfig {

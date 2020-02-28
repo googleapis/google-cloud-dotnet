@@ -18,6 +18,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
 {
     using Google.Api.Gax.Grpc;
     using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -37,6 +38,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
                 InputAudio = ByteString.Empty,
+                OutputAudioConfigMask = new FieldMask(),
             };
             // Make the request
             DetectIntentResponse response = sessionsClient.DetectIntent(request);
@@ -58,6 +60,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
                 InputAudio = ByteString.Empty,
+                OutputAudioConfigMask = new FieldMask(),
             };
             // Make the request
             DetectIntentResponse response = await sessionsClient.DetectIntentAsync(request);
@@ -159,6 +162,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                     QueryInput = new QueryInput(),
                     OutputAudioConfig = new OutputAudioConfig(),
                     InputAudio = ByteString.Empty,
+                    OutputAudioConfigMask = new FieldMask(),
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

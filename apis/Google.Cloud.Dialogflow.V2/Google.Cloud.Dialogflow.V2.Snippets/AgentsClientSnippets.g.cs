@@ -1045,5 +1045,40 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for GetValidationResult</summary>
+        public void GetValidationResultRequestObject()
+        {
+            // Snippet: GetValidationResult(GetValidationResultRequest, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            GetValidationResultRequest request = new GetValidationResultRequest
+            {
+                Parent = "",
+                LanguageCode = "",
+            };
+            // Make the request
+            ValidationResult response = agentsClient.GetValidationResult(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetValidationResultAsync</summary>
+        public async Task GetValidationResultRequestObjectAsync()
+        {
+            // Snippet: GetValidationResultAsync(GetValidationResultRequest, CallSettings)
+            // Additional: GetValidationResultAsync(GetValidationResultRequest, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetValidationResultRequest request = new GetValidationResultRequest
+            {
+                Parent = "",
+                LanguageCode = "",
+            };
+            // Make the request
+            ValidationResult response = await agentsClient.GetValidationResultAsync(request);
+            // End snippet
+        }
     }
 }

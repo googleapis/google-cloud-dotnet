@@ -3,7 +3,7 @@
 //     source: google/cloud/dialogflow/v2/agent.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -70,6 +69,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ExportAgentRequest> __Marshaller_google_cloud_dialogflow_v2_ExportAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ExportAgentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ImportAgentRequest> __Marshaller_google_cloud_dialogflow_v2_ImportAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ImportAgentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest> __Marshaller_google_cloud_dialogflow_v2_RestoreAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest> __Marshaller_google_cloud_dialogflow_v2_GetValidationResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ValidationResult> __Marshaller_google_cloud_dialogflow_v2_ValidationResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ValidationResult.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GetAgentRequest, global::Google.Cloud.Dialogflow.V2.Agent> __Method_GetAgent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GetAgentRequest, global::Google.Cloud.Dialogflow.V2.Agent>(
         grpc::MethodType.Unary,
@@ -126,6 +127,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         "RestoreAgent",
         __Marshaller_google_cloud_dialogflow_v2_RestoreAgentRequest,
         __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest, global::Google.Cloud.Dialogflow.V2.ValidationResult> __Method_GetValidationResult = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest, global::Google.Cloud.Dialogflow.V2.ValidationResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetValidationResult",
+        __Marshaller_google_cloud_dialogflow_v2_GetValidationResultRequest,
+        __Marshaller_google_cloud_dialogflow_v2_ValidationResult);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -242,6 +250,18 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreAgent(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets agent validation result. Agent validation is performed during
+      /// training time and is updated automatically when training is completed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.ValidationResult> GetValidationResult(global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -707,6 +727,54 @@ namespace Google.Cloud.Dialogflow.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreAgent, null, options, request);
       }
+      /// <summary>
+      /// Gets agent validation result. Agent validation is performed during
+      /// training time and is updated automatically when training is completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.ValidationResult GetValidationResult(global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetValidationResult(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets agent validation result. Agent validation is performed during
+      /// training time and is updated automatically when training is completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.ValidationResult GetValidationResult(global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetValidationResult, null, options, request);
+      }
+      /// <summary>
+      /// Gets agent validation result. Agent validation is performed during
+      /// training time and is updated automatically when training is completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.ValidationResult> GetValidationResultAsync(global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetValidationResultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets agent validation result. Agent validation is performed during
+      /// training time and is updated automatically when training is completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.ValidationResult> GetValidationResultAsync(global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetValidationResult, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AgentsClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -726,7 +794,8 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_TrainAgent, serviceImpl.TrainAgent)
           .AddMethod(__Method_ExportAgent, serviceImpl.ExportAgent)
           .AddMethod(__Method_ImportAgent, serviceImpl.ImportAgent)
-          .AddMethod(__Method_RestoreAgent, serviceImpl.RestoreAgent).Build();
+          .AddMethod(__Method_RestoreAgent, serviceImpl.RestoreAgent)
+          .AddMethod(__Method_GetValidationResult, serviceImpl.GetValidationResult).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -743,6 +812,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       serviceBinder.AddMethod(__Method_ExportAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ExportAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportAgent));
       serviceBinder.AddMethod(__Method_ImportAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ImportAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportAgent));
       serviceBinder.AddMethod(__Method_RestoreAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreAgent));
+      serviceBinder.AddMethod(__Method_GetValidationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest, global::Google.Cloud.Dialogflow.V2.ValidationResult>(serviceImpl.GetValidationResult));
     }
 
   }

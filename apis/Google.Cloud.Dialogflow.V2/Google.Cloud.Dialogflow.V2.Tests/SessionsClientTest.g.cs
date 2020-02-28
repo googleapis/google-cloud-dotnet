@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -39,6 +40,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
                 InputAudio = proto::ByteString.CopyFromUtf8("input_audio0acdfb28"),
+                OutputAudioConfigMask = new wkt::FieldMask(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
@@ -66,6 +68,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
                 InputAudio = proto::ByteString.CopyFromUtf8("input_audio0acdfb28"),
+                OutputAudioConfigMask = new wkt::FieldMask(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {

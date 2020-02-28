@@ -473,5 +473,55 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             await client.DeleteAgentAsync(request.ParentAsProjectName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetValidationResultRequestObject()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetValidationResultRequest request = new GetValidationResultRequest
+            {
+                Parent = "parent7858e4d0",
+                LanguageCode = "language_code2f6c7160",
+            };
+            ValidationResult expectedResponse = new ValidationResult
+            {
+                ValidationErrors =
+                {
+                    new ValidationError(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            ValidationResult response = client.GetValidationResult(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetValidationResultRequestObjectAsync()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetValidationResultRequest request = new GetValidationResultRequest
+            {
+                Parent = "parent7858e4d0",
+                LanguageCode = "language_code2f6c7160",
+            };
+            ValidationResult expectedResponse = new ValidationResult
+            {
+                ValidationErrors =
+                {
+                    new ValidationError(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            ValidationResult responseCallSettings = await client.GetValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ValidationResult responseCancellationToken = await client.GetValidationResultAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
