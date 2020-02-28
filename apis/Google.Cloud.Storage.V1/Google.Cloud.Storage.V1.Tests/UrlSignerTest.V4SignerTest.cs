@@ -17,8 +17,8 @@ using Google.Cloud.Storage.V1.Tests.Conformance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using Xunit;
+using static Google.Cloud.Storage.V1.UrlSigner;
 
 namespace Google.Cloud.Storage.V1.Tests
 {
@@ -33,17 +33,16 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public void SampleRequest()
             {
-                var bucket = "jessefrank2";
-                var obj = "kitten.png";
                 var clock = new FakeClock(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc));
-                var expiry = TimeSpan.FromHours(1);
+                var requestTemplate = RequestTemplate.FromBucket("jessefrank2").WithObjectName("kitten.png");
+                var options = Options.FromDuration(TimeSpan.FromHours(1));
                 var serviceAccount = CreateFakeServiceAccountCredential("test-account@spec-test-ruby-samples.iam.gserviceaccount.com");
                 var signer = UrlSigner
                     .FromServiceAccountCredential(serviceAccount)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(clock);
 
-                var uriString = signer.Sign(bucket, obj, expiry, HttpMethod.Get);
+                var uriString = signer.Sign(requestTemplate, options);
                 var parameters = ExtractQueryParameters(uriString);
 
                 Assert.Equal("GOOG4-RSA-SHA256", parameters["X-Goog-Algorithm"]);
@@ -76,8 +75,10 @@ namespace Google.Cloud.Storage.V1.Tests
                     .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
+                var requestTemplate = RequestTemplate.FromBucket("bucket").WithObjectName("object");
+                var options = Options.FromDuration(TimeSpan.FromSeconds(seconds));
 
-                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign("bucket", "object", TimeSpan.FromSeconds(seconds), HttpMethod.Get));
+                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign(requestTemplate, options));
             }
 
             [Fact]
@@ -88,8 +89,11 @@ namespace Google.Cloud.Storage.V1.Tests
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
+                var requestTemplate = RequestTemplate.FromBucket("bucket").WithObjectName("object");
+                var options = Options.FromDuration(TimeSpan.FromDays(7));
+
                 // Just testing that no exception is thrown.
-                signer.Sign("bucket", "object", TimeSpan.FromDays(7), HttpMethod.Get);
+                signer.Sign(requestTemplate, options);
             }
         }
     }

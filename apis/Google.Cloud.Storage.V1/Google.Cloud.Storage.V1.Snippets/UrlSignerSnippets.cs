@@ -49,14 +49,17 @@ namespace Google.Cloud.Storage.V1.Snippets
             var httpClient = new HttpClient();
 
             // Sample: SignedURLGet
-            // Additional: Sign(string,string,TimeSpan,*,*,*)
+            // Additional: Sign(*,*)
+            // Create a request template that will be used to create the signed URL.
+            UrlSigner.RequestTemplate requestTemplate = UrlSigner.RequestTemplate
+                .FromBucket(bucketName)
+                .WithObjectName(objectName)
+                .WithHttpMethod(HttpMethod.Get);
+            // Create options specifying for how long the signer URL will be valid.
+            UrlSigner.Options options = UrlSigner.Options.FromDuration(TimeSpan.FromHours(1));
             // Create a signed URL which can be used to get a specific object for one hour.
             UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
-            string url = urlSigner.Sign(
-                bucketName,
-                objectName,
-                TimeSpan.FromHours(1),
-                HttpMethod.Get);
+            string url = urlSigner.Sign(requestTemplate, options);
 
             // Get the content at the created URL.
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -65,13 +68,6 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             Assert.Equal(_fixture.HelloWorldContent, content);
         }
-
-        // See-also: Sign(string,string,TimeSpan,*,*,*)
-        // Member: Sign(string,string,TimeSpan,*)
-        // Member: Sign(string,string,DateTimeOffset?,*)
-        // Member: Sign(string,string,DateTimeOffset?,*,*,*)
-        // See [Sign](ref) for an example using an alternative overload.
-        // End see-also
 
         [Fact]
         public async Task WithSigningVersion()
@@ -83,16 +79,19 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             // Sample: WithSigningVersion
             // Additional: WithSigningVersion(SigningVersion)
+            // Create a request template that will be used to create the signed URL.
+            UrlSigner.RequestTemplate requestTemplate = UrlSigner.RequestTemplate
+                .FromBucket(bucketName)
+                .WithObjectName(objectName)
+                .WithHttpMethod(HttpMethod.Get);
+            // Create options specifying for how long the signer URL will be valid.
+            UrlSigner.Options options = UrlSigner.Options.FromDuration(TimeSpan.FromHours(1));
             // Create a signed URL which can be used to get a specific object for one hour,
             // using the V4 signing process.
             UrlSigner urlSigner = UrlSigner
                 .FromServiceAccountCredential(credential)
                 .WithSigningVersion(SigningVersion.V4);
-            string url = urlSigner.Sign(
-                bucketName,
-                objectName,
-                TimeSpan.FromHours(1),
-                HttpMethod.Get);
+            string url = urlSigner.Sign(requestTemplate, options);
 
             // Get the content at the created URL.
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -110,17 +109,21 @@ namespace Google.Cloud.Storage.V1.Snippets
             var httpClient = new HttpClient();
 
             // Sample: SignedURLPut
-            // Create a signed URL which allows the requester to PUT data with the text/plain content-type.
-            UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
+            // Create a request template that will be used to create the signed URL.
             var destination = "places/world.txt";
-            string url = urlSigner.Sign(
-                bucketName,
-                destination,
-                TimeSpan.FromHours(1),
-                HttpMethod.Put,
-                contentHeaders: new Dictionary<string, IEnumerable<string>> {
+            UrlSigner.RequestTemplate requestTemplate = UrlSigner.RequestTemplate
+                .FromBucket(bucketName)
+                .WithObjectName(destination)
+                .WithHttpMethod(HttpMethod.Put)
+                .WithContentHeaders(new Dictionary<string, IEnumerable<string>> 
+                {
                     { "Content-Type", new[] { "text/plain" } }
                 });
+            // Create options specifying for how long the signer URL will be valid.
+            UrlSigner.Options options = UrlSigner.Options.FromDuration(TimeSpan.FromHours(1));
+            // Create a signed URL which allows the requester to PUT data with the text/plain content-type.
+            UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
+            string url = urlSigner.Sign(requestTemplate, options);
 
             // Upload the content into the bucket using the signed URL.
             string source = "world.txt";
@@ -217,6 +220,14 @@ namespace Google.Cloud.Storage.V1.Snippets
                 HttpClientInitializer = iamCredential
             });
 
+            // Create a request template that will be used to create the signed URL.
+            UrlSigner.RequestTemplate requestTemplate = UrlSigner.RequestTemplate
+                .FromBucket(bucketName)
+                .WithObjectName(objectName)
+                .WithHttpMethod(HttpMethod.Get);
+            // Create options specifying for how long the signer URL will be valid.
+            UrlSigner.Options options = UrlSigner.Options.FromDuration(TimeSpan.FromHours(1));
+
             // Create a URL signer that will use the IAM service for signing. This signer is thread-safe,
             // and would typically occur as a dependency, e.g. in an ASP.NET Core controller, where the
             // same instance can be reused for each request.
@@ -224,11 +235,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             UrlSigner urlSigner = UrlSigner.FromBlobSigner(blobSigner);
 
             // Use the URL signer to sign a request for the test object for the next hour.
-            string url = await urlSigner.SignAsync(
-                bucketName,
-                objectName,
-                TimeSpan.FromHours(1),
-                HttpMethod.Get);
+            string url = await urlSigner.SignAsync(requestTemplate, options);
 
             // Prove we can fetch the content of the test object with a simple unauthenticated GET request.
             HttpResponseMessage response = await httpClient.GetAsync(url);
