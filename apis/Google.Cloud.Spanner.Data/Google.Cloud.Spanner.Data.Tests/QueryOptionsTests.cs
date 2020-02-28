@@ -13,19 +13,13 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using System;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
     public class QueryOptionsTests
     {
-        [Fact]
-        public void FromProtoFromNullProto()
-        {
-            var queryOptions = QueryOptions.FromProto(null);
-            Assert.Null(queryOptions);
-        }
-
         [Fact]
         public void FromProtoFromEmptyProto()
         {
@@ -44,8 +38,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void SetAndGetOptimizerVersion()
         {
-            var queryOptions = new QueryOptions();
-            queryOptions.OptimizerVersion = "latest";
+            var queryOptions = new QueryOptions().WithOptimizerVersion("latest");
             Assert.Equal("latest", queryOptions.OptimizerVersion);
         }
     }

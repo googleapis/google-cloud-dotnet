@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using System;
 
@@ -23,22 +24,36 @@ namespace Google.Cloud.Spanner.Data
     public sealed class QueryOptions : IEquatable<QueryOptions>
     {
         /// <summary>
-        /// An option to control the selection of optimizer version.
-        ///
-        /// This parameter allows individual queries to pick different query
-        /// optimizer versions.
-        ///
-        /// Specifying "latest" as a value instructs Cloud Spanner to use the
-        /// latest supported query optimizer version. If not specified, Cloud Spanner
-        /// uses optimizer version set at the database level options. Any other
-        /// positive integer (from the list of supported optimizer versions)
-        /// overrides the default optimizer version for query execution.
+        /// The query optimizer version configured in the options.
         /// </summary>
         public string OptimizerVersion
         {
-            get { return Proto.OptimizerVersion; }
-            set { Proto.OptimizerVersion = value; }
+            get => Proto.OptimizerVersion;
         }
+
+        /// <summary>
+        /// Clones the options and sets the optimizer version to the given value.
+        /// </summary>
+        /// <returns>
+        /// A clone of the options with the updated optimizer version.
+        /// </returns>
+        /// <remarks>
+        /// <para>The parameter allows individual queries to pick different query
+        /// optimizer versions.</para>
+        /// <para>Specifying "latest" as a value instructs Cloud Spanner to use the
+        /// latest supported query optimizer version. If not specified, Cloud Spanner
+        /// uses optimizer version set at the database level options. Any other
+        /// positive integer (from the list of supported optimizer versions)
+        /// overrides the default optimizer version for query execution.</para>
+        /// </remarks>
+        /// <param name="optimizerVersion">Optimizer version to set.</param>
+        public QueryOptions WithOptimizerVersion(string optimizerVersion)
+        {
+           var protoCopy = Proto.Clone();
+           protoCopy.OptimizerVersion = optimizerVersion;
+           return new QueryOptions(protoCopy);
+        }
+
 
         /// <summary>
         /// The proto representation of the query options. Must not be mutated
@@ -56,29 +71,30 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Set query options from the proto.
+        /// Set query options from the given proto.
         /// </summary>
+        /// <remarks>
+        /// The given proto should not be null. The given proto is cloned.
+        /// </remarks>
+        /// <param name="proto">The proto to construct <see cref="QueryOptions"/> from.</param>
         public static QueryOptions FromProto(
-            V1.ExecuteSqlRequest.Types.QueryOptions proto) => proto == null ? null : new QueryOptions(proto);
+            V1.ExecuteSqlRequest.Types.QueryOptions proto)
+        {
+            GaxPreconditions.CheckNotNull(proto, nameof(proto));
+            return new QueryOptions(proto.Clone());
+        }
 
         /// <summary>
         /// Get proto version of the query options.
         /// </summary>
-        public V1.ExecuteSqlRequest.Types.QueryOptions ToProto()
-        {
-            return Proto.Clone();
-        }
+        public V1.ExecuteSqlRequest.Types.QueryOptions ToProto() => Proto.Clone();
 
         /// <inheritdoc />
         public bool Equals(QueryOptions other)
         {
-            if (ReferenceEquals(null, other))
+            if (other is null)
             {
                 return false;
-            }
-            if (ReferenceEquals(this, other))
-            {
-                return true;
             }
             return OptimizerVersion == other.OptimizerVersion;
         }
@@ -87,12 +103,6 @@ namespace Google.Cloud.Spanner.Data
         public override bool Equals(object obj) => Equals(obj as QueryOptions);
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                return OptimizerVersion.GetHashCode();
-            }
-        }
+        public override int GetHashCode() => Proto.GetHashCode();
     }
 }
