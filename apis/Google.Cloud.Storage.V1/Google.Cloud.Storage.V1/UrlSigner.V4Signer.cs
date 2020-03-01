@@ -49,6 +49,7 @@ namespace Google.Cloud.Storage.V1
                     requestTemplate.HttpMethod,
                     requestTemplate.RequestHeaders,
                     requestTemplate.ContentHeaders,
+                    requestTemplate.QueryParameters,
                     blobSigner,
                     clock);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign);
@@ -71,6 +72,7 @@ namespace Google.Cloud.Storage.V1
                     requestTemplate.HttpMethod,
                     requestTemplate.RequestHeaders,
                     requestTemplate.ContentHeaders,
+                    requestTemplate.QueryParameters,
                     blobSigner,
                     clock);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
@@ -96,6 +98,7 @@ namespace Google.Cloud.Storage.V1
                     HttpMethod requestMethod,
                     IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
                     IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders,
+                    IReadOnlyDictionary<string, IReadOnlyCollection<string>> customQueryParameters,
                     IBlobSigner blobSigner,
                     IClock clock)
                 {
@@ -119,32 +122,28 @@ namespace Google.Cloud.Storage.V1
                     string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
-                    headers["host"] = HostHeaderValue;
-                    AddHeaders(headers, requestHeaders);
-                    AddHeaders(headers, contentHeaders);
+                    headers.AddHeader("host", HostHeaderValue);
+                    headers.AddHeaders(requestHeaders);
+                    headers.AddHeaders(contentHeaders);
                     var canonicalHeaders = string.Join("", headers.Select(pair => $"{pair.Key}:{pair.Value}\n"));
                     var signedHeaders = string.Join(";", headers.Keys.Select(k => k.ToLowerInvariant()));
 
-                    var queryParameters = new SortedDictionary<string, string>(StringComparer.Ordinal)
-                    {
-                        { "X-Goog-Algorithm", Algorithm },
-                        { "X-Goog-Credential", $"{blobSigner.Id}/{credentialScope}" },
-                        { "X-Goog-Date", timestamp },
-                        { "X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture) },
-                        { "X-Goog-SignedHeaders", signedHeaders }
-                    };
+                    var queryParameters = new SortedSet<string>(StringComparer.Ordinal);
+                    queryParameters.AddQueryParameter("X-Goog-Algorithm", Algorithm);
+                    queryParameters.AddQueryParameter("X-Goog-Credential", $"{blobSigner.Id}/{credentialScope}");
+                    queryParameters.AddQueryParameter("X-Goog-Date", timestamp);
+                    queryParameters.AddQueryParameter("X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture));
+                    queryParameters.AddQueryParameter("X-Goog-SignedHeaders", signedHeaders);
 
-                    if (requestMethod == null)
-                    {
-                        requestMethod = HttpMethod.Get;
-                    }
-                    else if (requestMethod == ResumableHttpMethod)
+                    if (requestMethod == ResumableHttpMethod)
                     {
                         requestMethod = HttpMethod.Post;
-                        queryParameters["X-Goog-Resumable"] ="Start";
+                        queryParameters.AddQueryParameter("X-Goog-Resumable", "Start");
                     }
 
-                    _canonicalQueryString = string.Join("&", queryParameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
+                    queryParameters.AddQueryParameters(customQueryParameters);
+
+                    _canonicalQueryString = string.Join("&", queryParameters);
                     _resourcePath = $"/{bucket}";
                     if (!string.IsNullOrEmpty(objectName))
                     {
@@ -178,33 +177,6 @@ namespace Google.Cloud.Storage.V1
                     }
 
                     _blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
-
-                    void AddHeaders(SortedDictionary<string, string> canonicalized, IReadOnlyDictionary<string, IReadOnlyCollection<string>> headersToAdd)
-                    {
-                        if (headersToAdd == null)
-                        {
-                            return;
-                        }
-                        foreach (var pair in headersToAdd)
-                        {
-                            if (pair.Value == null)
-                            {
-                                continue;
-                            }
-                            var headerName = pair.Key.ToLowerInvariant();
-                            // Note: the comma-space separating here is because this is what HttpClient does.
-                            // Google Cloud Storage itself will just use commas if it receives multiple values for the same header name,
-                            // but HttpClient coalesces the values itself. This approach means that if the same request is made from .NET
-                            // with the signed URL, it will succeed - but it does mean that the signed URL won't be valid when used from
-                            // another platform that sends actual multiple values.
-                            var value = string.Join(", ", pair.Value.Select(v => PrepareHeaderValue(v, true))).Trim();
-                            if (canonicalized.TryGetValue(headerName, out var existingValue))
-                            {
-                                value = $"{existingValue}, {value}";
-                            }
-                            canonicalized[headerName] = value;
-                        }
-                    }
                 }
 
                 internal string GetResult(string signature) =>

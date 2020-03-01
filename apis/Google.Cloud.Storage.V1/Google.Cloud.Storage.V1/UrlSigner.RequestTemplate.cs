@@ -114,18 +114,28 @@ namespace Google.Cloud.Storage.V1
             /// </remarks>
             public IReadOnlyDictionary<string, IReadOnlyCollection<string>> ContentHeaders { get; }
 
+            /// <summary>
+            /// The query parameters which will be included with the request. Won't be null.
+            /// If null is specified in <see cref="WithQueryParameters(IEnumerable{KeyValuePair{string, IEnumerable{string}}})"/>
+            /// or <see cref="WithQueryParameters(IReadOnlyDictionary{string, IReadOnlyCollection{string}})"/> then an empty dictionary
+            /// will be used.
+            /// </summary>
+            public IReadOnlyDictionary<string, IReadOnlyCollection<string>> QueryParameters { get; }
+
             private RequestTemplate(
                 string bucket,
                 string objectName,
                 HttpMethod httpMethod,
                 IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
-                IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders)
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders,
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> queryParameters)
             {
                 Bucket = StorageClientImpl.ValidateBucketName(bucket);
                 ObjectName = objectName;
                 HttpMethod = httpMethod ?? HttpMethod.Get;
-                RequestHeaders = requestHeaders ?? HeadersExtensions.s_empty;
-                ContentHeaders = contentHeaders ?? HeadersExtensions.s_empty;
+                RequestHeaders = requestHeaders ?? UrlSignerHelperExtensions.s_empty;
+                ContentHeaders = contentHeaders ?? UrlSignerHelperExtensions.s_empty;
+                QueryParameters = queryParameters ?? UrlSignerHelperExtensions.s_empty;
             }
 
             /// <summary>
@@ -135,7 +145,7 @@ namespace Google.Cloud.Storage.V1
             /// Must not be null.</param>
             /// <returns>A new request template.</returns>
             public static RequestTemplate FromBucket(string bucket) =>
-                new RequestTemplate(bucket, null, null, null, null);
+                new RequestTemplate(bucket, null, null, null, null, null);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -144,7 +154,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="bucket">The new bucket name. Must not be null.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithBucket(string bucket) =>
-                new RequestTemplate(bucket, ObjectName, HttpMethod, RequestHeaders, ContentHeaders);
+                new RequestTemplate(bucket, ObjectName, HttpMethod, RequestHeaders, ContentHeaders, QueryParameters);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -154,7 +164,7 @@ namespace Google.Cloud.Storage.V1
             /// will refer to the bucket instead of an object.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithObjectName(string objectName) =>
-                new RequestTemplate(Bucket, objectName, HttpMethod, RequestHeaders, ContentHeaders);
+                new RequestTemplate(Bucket, objectName, HttpMethod, RequestHeaders, ContentHeaders, QueryParameters);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -164,7 +174,7 @@ namespace Google.Cloud.Storage.V1
             /// <see cref="HttpMethod.Get"/> will be used.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithHttpMethod(HttpMethod method) =>
-                new RequestTemplate(Bucket, ObjectName, method, RequestHeaders, ContentHeaders);
+                new RequestTemplate(Bucket, ObjectName, method, RequestHeaders, ContentHeaders, QueryParameters);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -174,7 +184,7 @@ namespace Google.Cloud.Storage.V1
             /// an empty collection will be used.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithRequestHeaders(IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders) =>
-                new RequestTemplate(Bucket, ObjectName, HttpMethod, requestHeaders, ContentHeaders);
+                new RequestTemplate(Bucket, ObjectName, HttpMethod, requestHeaders, ContentHeaders, QueryParameters);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -184,7 +194,7 @@ namespace Google.Cloud.Storage.V1
             /// an empty collection will be used.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithRequestHeaders(IEnumerable<KeyValuePair<string, IEnumerable<string>>> requestHeaders) =>
-                new RequestTemplate(Bucket, ObjectName, HttpMethod, requestHeaders.AsReadOnly(), ContentHeaders);
+                new RequestTemplate(Bucket, ObjectName, HttpMethod, requestHeaders.AsReadOnly(), ContentHeaders, QueryParameters);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -194,7 +204,7 @@ namespace Google.Cloud.Storage.V1
             /// an empty collection will be used.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithContentHeaders(IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders) =>
-                new RequestTemplate(Bucket, ObjectName, HttpMethod, RequestHeaders, contentHeaders);
+                new RequestTemplate(Bucket, ObjectName, HttpMethod, RequestHeaders, contentHeaders, QueryParameters);
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -204,7 +214,27 @@ namespace Google.Cloud.Storage.V1
             /// an empty collection will be used.</param>
             /// <returns>A new request template.</returns>
             public RequestTemplate WithContentHeaders(IEnumerable<KeyValuePair<string, IEnumerable<string>>> contentHeaders) =>
-                new RequestTemplate(Bucket, ObjectName, HttpMethod, RequestHeaders, contentHeaders.AsReadOnly());
+                new RequestTemplate(Bucket, ObjectName, HttpMethod, RequestHeaders, contentHeaders.AsReadOnly(), QueryParameters);
+
+            /// <summary>
+            /// Returns a new request template with all the same settings as this one
+            /// except for the query parameters.
+            /// </summary>
+            /// <param name="queryParameters">The new query parameters. May be null, in which case
+            /// an empty collection will be used.</param>
+            /// <returns>A new request template.</returns>
+            public RequestTemplate WithQueryParameters(IReadOnlyDictionary<string, IReadOnlyCollection<string>> queryParameters) =>
+                new RequestTemplate(Bucket, ObjectName, HttpMethod, RequestHeaders, ContentHeaders, queryParameters);
+
+            /// <summary>
+            /// Returns a new request template with all the same settings as this one
+            /// except for the query parameters.
+            /// </summary>
+            /// <param name="queryParameters">The new query parameters. May be null, in which case
+            /// an empty collection will be used.</param>
+            /// <returns>A new request template.</returns>
+            public RequestTemplate WithQueryParameters(IEnumerable<KeyValuePair<string, IEnumerable<string>>> queryParameters) =>
+                new RequestTemplate(Bucket, ObjectName, HttpMethod, RequestHeaders, ContentHeaders, queryParameters.AsReadOnly());
 
             /// <summary>
             /// Returns a new request template with all the same settings as this one
@@ -220,7 +250,8 @@ namespace Google.Cloud.Storage.V1
                     ObjectName,
                     requestMessage?.Method,
                     requestMessage?.Headers.AsReadOnly(),
-                    requestMessage?.Content?.Headers.AsReadOnly());
+                    requestMessage?.Content?.Headers.AsReadOnly(),
+                    requestMessage?.RequestUri.QueryAsReadOnly());
         }
     }
 }

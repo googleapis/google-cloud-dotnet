@@ -44,6 +44,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Null(requestTemplate.ObjectName);
                 Assert.Empty(requestTemplate.RequestHeaders);
                 Assert.Empty(requestTemplate.ContentHeaders);
+                Assert.Empty(requestTemplate.QueryParameters);
                 Assert.Equal(HttpMethod.Get, requestTemplate.HttpMethod);
             }
 
@@ -93,7 +94,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var newRequestTemplate = requestTemplate.WithRequestHeaders(headers);
 
-                var expectedHeaders = ToExpectedHeaders(headers);
+                var expectedHeaders = ToExpectedEntries(headers);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
                 Assert.Equal(expectedHeaders, newRequestTemplate.RequestHeaders);
             }
@@ -110,12 +111,29 @@ namespace Google.Cloud.Storage.V1.Tests
                 };
                 var newRequestTemplate = requestTemplate.WithContentHeaders(headers);
 
-                var expectedHeaders = ToExpectedHeaders(headers);
+                var expectedHeaders = ToExpectedEntries(headers);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
                 Assert.Equal(expectedHeaders, newRequestTemplate.ContentHeaders);
             }
 
-            private IReadOnlyDictionary<string, IReadOnlyCollection<string>> ToExpectedHeaders(
+            [Fact]
+            public void WithQueryParameters()
+            {
+                var requestTemplate = RequestTemplate.FromBucket("bucket-name");
+
+                var queryParameters = new Dictionary<string, IEnumerable<string>>
+                {
+                    { "query1", new List<string> { "value1", "value2"} },
+                    { "query2", new List<string> {"value3"} }
+                };
+                var newRequestTemplate = requestTemplate.WithQueryParameters(queryParameters);
+
+                var expectedParameters = ToExpectedEntries(queryParameters);
+                Assert.NotSame(requestTemplate, newRequestTemplate);
+                Assert.Equal(expectedParameters, newRequestTemplate.QueryParameters);
+            }
+
+            private IReadOnlyDictionary<string, IReadOnlyCollection<string>> ToExpectedEntries(
                 IDictionary<string, IEnumerable<string>> headers) =>
                 new ReadOnlyDictionary<string, IReadOnlyCollection<string>>(
                     headers.ToDictionary(
@@ -127,7 +145,7 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 var requestTemplate = RequestTemplate.FromBucket("bucket-name");
 
-                var message = new HttpRequestMessage(HttpMethod.Post, "will.be.ignored.com");
+                var message = new HttpRequestMessage(HttpMethod.Post, "http://will.be.ignored.com?param1=value1&param2=value2&param1=value3");
                 message.Headers.Add("requestHeader", "value1");
                 using (MemoryStream stream = new MemoryStream())
                 {
@@ -140,6 +158,10 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Equal(HttpMethod.Post, newRequestTemplate.HttpMethod);
                 Assert.Collection(newRequestTemplate.RequestHeaders, pair => AssertHeader(pair, "requestHeader", "value1"));
                 Assert.Collection(newRequestTemplate.ContentHeaders, pair => AssertHeader(pair, "contentHeader", "value2"));
+                Assert.Equal(2, newRequestTemplate.QueryParameters.Count);
+                Assert.Equal(2, newRequestTemplate.QueryParameters["param1"].Count);
+                Assert.Equal(1, newRequestTemplate.QueryParameters["param2"].Count);
+                Assert.Equal("value2", newRequestTemplate.QueryParameters["param2"].First());
 
                 void AssertHeader(KeyValuePair<string, IReadOnlyCollection<string>> pair, string header, string value)
                 {

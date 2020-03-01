@@ -213,7 +213,7 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// Prepares a header value for signing, trimming both ends and collapsing internal whitespace.
         /// </summary>
-        private static string PrepareHeaderValue(string value, bool collapseTabs)
+        internal static string PrepareHeaderValue(string value, bool collapseTabs)
         {
             // Remove leading/trailing whitespace
             value = value.Trim();

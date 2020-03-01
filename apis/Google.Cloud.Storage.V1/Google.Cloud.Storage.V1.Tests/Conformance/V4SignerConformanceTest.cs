@@ -49,7 +49,8 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
                 .FromBucket(test.Bucket)
                 .WithObjectName(test.Object)
                 .WithHttpMethod(s_methods[test.Method])
-                .WithRequestHeaders(test.Headers.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)));
+                .WithRequestHeaders(test.Headers.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)))
+                .WithQueryParameters(test.QueryParameters.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)));
             var options = Options.FromDuration(TimeSpan.FromSeconds(test.Expiration));
 
             var actualUrl = signer.Sign(requestTemplate, options);
