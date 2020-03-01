@@ -28,10 +28,17 @@ namespace Google.Cloud.Storage.V1
             Path,
 
             /// <summary>
-            /// The signed URL will be generated using the Virtual-hosted style:
+            /// The signed URL will be generated using the Virtual-Hosted style:
             /// https://mybucket.storage.googleapis.com/myobject.
             /// </summary>
-            VirtualHosted
+            VirtualHosted,
+
+            /// <summary>
+            /// The signed URL will be generated using a client code provided host that
+            /// is associated to the given bucket:
+            /// https://mydomain.tld/my-object.
+            /// </summary>
+            BucketBoundDomain
         }
     }
 }

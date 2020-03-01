@@ -50,7 +50,16 @@ namespace Google.Cloud.Storage.V1
             /// </summary>
             public string Scheme { get; }
 
-            private Options(TimeSpan? duration, DateTimeOffset? expiration, UrlStyle? urlStyle, string scheme)
+            /// <summary>
+            /// A bucket bound host to use for generating the signed URL.
+            /// If <see cref="UrlStyle"/> is <see cref="UrlStyle.BucketBoundDomain"/> this won't be null.
+            /// It will be null otherwise.
+            /// Use <see cref="WithBucketBoundDomain(string)"/> to set.
+            /// </summary>
+            public string BucketBoundDomain { get; }
+
+            private Options(
+                TimeSpan? duration, DateTimeOffset? expiration, UrlStyle? urlStyle, string scheme, string bucketBoundDomain)
             {
                 GaxPreconditions.CheckArgument(
                     duration.HasValue != expiration.HasValue,
@@ -58,11 +67,17 @@ namespace Google.Cloud.Storage.V1
                     "One and only one of {0} or {1} must be specified",
                     nameof(duration),
                     nameof(expiration));
+                GaxPreconditions.CheckArgument(
+                    (bucketBoundDomain == null && urlStyle != UrlStyle.BucketBoundDomain) ||
+                    (bucketBoundDomain != null && urlStyle == UrlStyle.BucketBoundDomain),
+                    nameof(bucketBoundDomain),
+                    $"For using a bucket bound domain to generate the signed URL, please use the {nameof(WithBucketBoundDomain)} method.");
 
                 Duration = duration;
                 Expiration = expiration;
                 UrlStyle = urlStyle ?? UrlStyle.Path;
                 Scheme = scheme ?? "https";
+                BucketBoundDomain = bucketBoundDomain;
             }
 
             /// <summary>
@@ -71,7 +86,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="duration">The duration to create these options with.</param>
             /// <returns>A new options set.</returns>
             public static Options FromDuration(TimeSpan duration) =>
-                new Options(duration, null, null, null);
+                new Options(duration, null, null, null, null);
 
             /// <summary>
             /// Creates a new <see cref="UrlSigner.Options"/> from the given expiration.
@@ -79,7 +94,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="expiration">The expiration to create these options with.</param>
             /// <returns>A new options set.</returns>
             public static Options FromExpiration(DateTimeOffset expiration) =>
-                new Options(null, expiration, null, null);
+                new Options(null, expiration, null, null, null);
 
             /// <summary>
             /// If this set of options was duration based, this method will return a new set
@@ -98,7 +113,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="duration">The new duration.</param>
             /// <returns>A new set of options with the given duration.</returns>
             public Options WithDuration(TimeSpan duration) =>
-                new Options(duration, null, UrlStyle, Scheme);
+                new Options(duration, null, UrlStyle, Scheme, BucketBoundDomain);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one but expiration based.
@@ -106,7 +121,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="expiration">The new expiration.</param>
             /// <returns>A new set of options with the given expiration.</returns>
             public Options WithExpiration(DateTimeOffset expiration) =>
-                new Options(null, expiration, UrlStyle, Scheme);
+                new Options(null, expiration, UrlStyle, Scheme, BucketBoundDomain);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one except for the
@@ -115,7 +130,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="urlStyle">The new url style.</param>
             /// <returns>A new set ofoptions with the given url style.</returns>
             public Options WithUrlStyle(UrlStyle urlStyle) =>
-                new Options(Duration, Expiration, urlStyle, Scheme);
+                new Options(Duration, Expiration, urlStyle, Scheme, null);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one except for the scheme.
@@ -123,7 +138,17 @@ namespace Google.Cloud.Storage.V1
             /// <param name="scheme">The new scheme.</param>
             /// <returns>A new set of options with the given scheme.</returns>
             public Options WithScheme(string scheme) =>
-                new Options(Duration, Expiration, UrlStyle, scheme);
+                new Options(Duration, Expiration, UrlStyle, scheme, BucketBoundDomain);
+
+            /// <summary>
+            /// Returns a new set of options with the same values as this one except for bucket bound domain
+            /// and the url style which will be set to <see cref="UrlStyle.BucketBoundDomain"/>.
+            /// </summary>
+            /// <param name="bucketBoundDomain">The new bucket bound domain.</param>
+            /// <returns>A new set of options with the given bucket bound domain and the url style set to
+            /// <see cref="UrlStyle.BucketBoundDomain"/>.</returns>
+            public Options WithBucketBoundDomain(string bucketBoundDomain) =>
+                new Options(Duration, Expiration, UrlStyle.BucketBoundDomain, Scheme, bucketBoundDomain);
         }
     }
 }

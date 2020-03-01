@@ -61,7 +61,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
                     options = options.WithUrlStyle(UrlStyle.VirtualHosted);
                     break;
                 case SigningV4Test.Types.UrlStyle.BucketBoundDomain:
-                    options = options.WithUrlStyle(UrlStyle.Path);
+                    options = options.WithBucketBoundDomain(test.BucketBoundDomain);
                     break;
                 default:
                     break;

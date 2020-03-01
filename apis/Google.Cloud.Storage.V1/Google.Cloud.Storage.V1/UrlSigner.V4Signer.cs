@@ -52,6 +52,7 @@ namespace Google.Cloud.Storage.V1
                     requestTemplate.QueryParameters,
                     options.UrlStyle,
                     options.Scheme,
+                    options.BucketBoundDomain,
                     blobSigner,
                     clock);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign);
@@ -77,6 +78,7 @@ namespace Google.Cloud.Storage.V1
                     requestTemplate.QueryParameters,
                     options.UrlStyle,
                     options.Scheme,
+                    options.BucketBoundDomain,
                     blobSigner,
                     clock);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
@@ -107,12 +109,27 @@ namespace Google.Cloud.Storage.V1
                     IReadOnlyDictionary<string, IReadOnlyCollection<string>> customQueryParameters,
                     UrlStyle urlStyle,
                     string scheme,
+                    string bucketBoundDomain,
                     IBlobSigner blobSigner,
                     IClock clock)
                 {
                     StorageClientImpl.ValidateBucketName(bucket);
-                    _host = $"{(urlStyle == UrlStyle.VirtualHosted ? $"{bucket}." : string.Empty)}{StorageHost}";
-                    _resourcePath = urlStyle == UrlStyle.Path ? $"/{bucket}" : string.Empty;
+                    _resourcePath = string.Empty;
+                    switch (urlStyle)
+                    {
+                        case UrlStyle.Path:
+                            _host = StorageHost;
+                            _resourcePath = $"/{bucket}";
+                            break;
+                        case UrlStyle.VirtualHosted:
+                            _host = $"{bucket}.{StorageHost}";
+                            break;
+                        case UrlStyle.BucketBoundDomain:
+                            _host = bucketBoundDomain;
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException(nameof(urlStyle));
+                    }
                     _scheme = scheme;
 
                     var now = clock.GetCurrentDateTimeUtc();

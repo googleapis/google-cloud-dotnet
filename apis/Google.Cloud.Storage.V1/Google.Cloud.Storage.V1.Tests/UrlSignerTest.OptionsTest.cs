@@ -32,6 +32,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Equal(TimeSpan.FromMinutes(1), options.Duration);
                 Assert.Equal(UrlStyle.Path, options.UrlStyle);
                 Assert.Equal("https", options.Scheme);
+                Assert.Null(options.BucketBoundDomain);
             }
 
             [Fact]
@@ -101,7 +102,19 @@ namespace Google.Cloud.Storage.V1.Tests
             }
 
             [Fact]
-            public void WithUrlStyle()
+            public void WithBucketStyleDomain()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newUrlStyle = options.WithBucketBoundDomain("my.bucket.bound.domain");
+
+                Assert.NotSame(options, newUrlStyle);
+                Assert.Equal(UrlStyle.BucketBoundDomain, newUrlStyle.UrlStyle);
+                Assert.Equal("my.bucket.bound.domain", newUrlStyle.BucketBoundDomain);
+            }
+
+            [Fact]
+            public void WithUrlStyle_Valid()
             {
                 var options = Options.FromDuration(TimeSpan.FromMinutes(1));
 
@@ -109,6 +122,29 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 Assert.NotSame(options, newUrlStyle);
                 Assert.Equal(UrlStyle.VirtualHosted, newUrlStyle.UrlStyle);
+                Assert.Null(newUrlStyle.BucketBoundDomain);
+            }
+
+            [Fact]
+            public void WithUrlStyle_BucketBoundDomain()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Throws<ArgumentException>(() => options.WithUrlStyle(UrlStyle.BucketBoundDomain));
+            }
+
+            [Fact]
+            public void WithUrlStyle_FromBucketBoundDomainToOther()
+            {
+                var options = Options
+                    .FromDuration(TimeSpan.FromMinutes(1))
+                    .WithBucketBoundDomain("my.bucket.bound.domain");
+
+                var newUrlStyle = options.WithUrlStyle(UrlStyle.VirtualHosted);
+
+                Assert.NotSame(options, newUrlStyle);
+                Assert.Equal(UrlStyle.VirtualHosted, newUrlStyle.UrlStyle);
+                Assert.Null(newUrlStyle.BucketBoundDomain);
             }
 
             [Fact]
