@@ -30,6 +30,8 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 Assert.Null(options.Expiration);
                 Assert.Equal(TimeSpan.FromMinutes(1), options.Duration);
+                Assert.Equal(UrlStyle.Path, options.UrlStyle);
+                Assert.Equal("https", options.Scheme);
             }
 
             [Fact]
@@ -41,6 +43,8 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 Assert.Null(options.Duration);
                 Assert.Equal(now, options.Expiration);
+                Assert.Equal(UrlStyle.Path, options.UrlStyle);
+                Assert.Equal("https", options.Scheme);
             }
 
             [Fact]
@@ -94,6 +98,28 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Same(expiration, anotherExpiration);
                 Assert.Null(anotherExpiration.Duration);
                 Assert.Equal(now, anotherExpiration.Expiration);
+            }
+
+            [Fact]
+            public void WithUrlStyle()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newUrlStyle = options.WithUrlStyle(UrlStyle.VirtualHosted);
+
+                Assert.NotSame(options, newUrlStyle);
+                Assert.Equal(UrlStyle.VirtualHosted, newUrlStyle.UrlStyle);
+            }
+
+            [Fact]
+            public void WithScheme()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newScheme = options.WithScheme("http");
+
+                Assert.NotSame(options, newScheme);
+                Assert.Equal("http", newScheme.Scheme);
             }
         }
     }

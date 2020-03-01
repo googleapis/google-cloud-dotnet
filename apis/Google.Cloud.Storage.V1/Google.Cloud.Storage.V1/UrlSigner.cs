@@ -36,7 +36,6 @@ namespace Google.Cloud.Storage.V1
         private static readonly ISigner s_v4Signer = new V4Signer();
 
         private const string GoogHeaderPrefix = "x-goog-";
-        private const string StorageHost = "https://storage.googleapis.com";
 
         /// <summary>
         /// Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.

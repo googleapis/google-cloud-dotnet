@@ -32,8 +32,8 @@ namespace Google.Cloud.Storage.V1
         {
             private const string ScopeSuffix = "storage/goog4_request";
             private const string DefaultRegion = "auto";
-            private const string HostHeaderValue = "storage.googleapis.com";
             private const string Algorithm = "GOOG4-RSA-SHA256";
+            private const string StorageHost = "storage.googleapis.com";
 
             private static readonly int MaxExpirySecondsInclusive = (int) TimeSpan.FromDays(7).TotalSeconds;
 
@@ -50,6 +50,8 @@ namespace Google.Cloud.Storage.V1
                     requestTemplate.RequestHeaders,
                     requestTemplate.ContentHeaders,
                     requestTemplate.QueryParameters,
+                    options.UrlStyle,
+                    options.Scheme,
                     blobSigner,
                     clock);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign);
@@ -73,6 +75,8 @@ namespace Google.Cloud.Storage.V1
                     requestTemplate.RequestHeaders,
                     requestTemplate.ContentHeaders,
                     requestTemplate.QueryParameters,
+                    options.UrlStyle,
+                    options.Scheme,
                     blobSigner,
                     clock);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
@@ -90,6 +94,8 @@ namespace Google.Cloud.Storage.V1
                 private string _resourcePath;
                 private string _canonicalQueryString;
                 internal byte[] _blobToSign;
+                private string _scheme;
+                private string _host;
 
                 internal SigningState(
                     string bucket,
@@ -99,10 +105,15 @@ namespace Google.Cloud.Storage.V1
                     IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
                     IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders,
                     IReadOnlyDictionary<string, IReadOnlyCollection<string>> customQueryParameters,
+                    UrlStyle urlStyle,
+                    string scheme,
                     IBlobSigner blobSigner,
                     IClock clock)
                 {
                     StorageClientImpl.ValidateBucketName(bucket);
+                    _host = $"{(urlStyle == UrlStyle.VirtualHosted ? $"{bucket}." : string.Empty)}{StorageHost}";
+                    _resourcePath = urlStyle == UrlStyle.Path ? $"/{bucket}" : string.Empty;
+                    _scheme = scheme;
 
                     var now = clock.GetCurrentDateTimeUtc();
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
@@ -122,7 +133,7 @@ namespace Google.Cloud.Storage.V1
                     string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
-                    headers.AddHeader("host", HostHeaderValue);
+                    headers.AddHeader("host", _host);
                     headers.AddHeaders(requestHeaders);
                     headers.AddHeaders(contentHeaders);
                     var canonicalHeaders = string.Join("", headers.Select(pair => $"{pair.Key}:{pair.Value}\n"));
@@ -142,9 +153,8 @@ namespace Google.Cloud.Storage.V1
                     }
 
                     queryParameters.AddQueryParameters(customQueryParameters);
-
                     _canonicalQueryString = string.Join("&", queryParameters);
-                    _resourcePath = $"/{bucket}";
+                    
                     if (!string.IsNullOrEmpty(objectName))
                     {
                         // EscapeDataString escapes slashes, which we *don't* want to escape here. The simplest option is to
@@ -180,7 +190,7 @@ namespace Google.Cloud.Storage.V1
                 }
 
                 internal string GetResult(string signature) =>
-                    $"{StorageHost}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
+                    $"{_scheme}://{_host}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
             }
 
             private const string HexCharacters = "0123456789abcdef";

@@ -29,6 +29,8 @@ namespace Google.Cloud.Storage.V1
     {
         private sealed class V2Signer : ISigner
         {
+            private const string StorageHost = "https://storage.googleapis.com";
+
             public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
                 var state = new SigningState(
