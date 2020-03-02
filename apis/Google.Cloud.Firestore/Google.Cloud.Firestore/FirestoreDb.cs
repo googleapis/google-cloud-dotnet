@@ -101,7 +101,7 @@ namespace Google.Cloud.Firestore
         /// <param name="client">The client to use for RPC operations. May be null, in which case a client will be created with default credentials.</param>
         /// <returns>A new instance.</returns>
         public static FirestoreDb Create(string projectId = null, FirestoreClient client = null) =>
-            Create(projectId ?? Platform.Instance().ProjectId, null, client ?? FirestoreClient.Create(), null);
+            new FirestoreDbBuilder { ProjectId = projectId ?? Platform.Instance().ProjectId, Client = client }.Build();
 
         /// <summary>
         /// Asynchronously creates an instance for the specified project, using the specified <see cref="FirestoreClient"/> for RPC operations.
@@ -111,12 +111,12 @@ namespace Google.Cloud.Firestore
         /// <param name="client">The client to use for RPC operations. May be null, in which case a client will be created with default credentials.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result of the task is the new instance.</returns>
         public static async Task<FirestoreDb> CreateAsync(string projectId = null, FirestoreClient client = null) =>
-            Create(
-                projectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId,
-                DefaultDatabaseId,
-                client ?? await FirestoreClient.CreateAsync().ConfigureAwait(false),
-                null
-            );
+            await new FirestoreDbBuilder
+            {
+                ProjectId = projectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId,
+                Client = client
+            }
+            .BuildAsync().ConfigureAwait(false);
 
         /// <summary>
         /// Creates an instance for the specified project and database, using the specified <see cref="FirestoreClient"/>
