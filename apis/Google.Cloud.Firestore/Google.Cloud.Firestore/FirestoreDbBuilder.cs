@@ -29,6 +29,7 @@ namespace Google.Cloud.Firestore
     public sealed class FirestoreDbBuilder : ClientBuilderBase<FirestoreDb>
     {
         private const string EmulatorHostVariable = "FIRESTORE_EMULATOR_HOST";
+        private static readonly FirestoreSettings s_defaultSettings = AddGcclVersionHeader(new FirestoreSettings());
 
         /// <summary>
         /// The settings to use for RPCs, or null for the default settings.
@@ -57,6 +58,11 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public ConverterRegistry ConverterRegistry { get; set; }
 
+        /// <summary>
+        /// The client to use, or null to build a new one.
+        /// </summary>
+        internal FirestoreClient Client { get; set; }
+
         private EmulatorDetection _emulatorDetection;
 
         /// <summary>
@@ -76,10 +82,14 @@ namespace Google.Cloud.Firestore
         public override FirestoreDb Build()
         {
             var projectId = ProjectId ?? Platform.Instance().ProjectId;
-            var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
-            clientBuilder.Settings = Settings;
-            ApplyEmulatorSettings(clientBuilder);
-            var client = clientBuilder.Build();
+            var client = Client;
+            if (client == null)
+            {
+                var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
+                clientBuilder.Settings = GetEffectiveSettings();
+                ApplyEmulatorSettings(clientBuilder);
+                client = clientBuilder.Build();
+            }
             return BuildFromClient(projectId, client);
         }
 
@@ -87,10 +97,14 @@ namespace Google.Cloud.Firestore
         public override async Task<FirestoreDb> BuildAsync(CancellationToken cancellationToken = default)
         {
             var projectId = ProjectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId;
-            var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
-            clientBuilder.Settings = Settings;
-            ApplyEmulatorSettings(clientBuilder);
-            var client = await clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+            var client = Client;
+            if (client == null)
+            {
+                var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
+                clientBuilder.Settings = GetEffectiveSettings();
+                ApplyEmulatorSettings(clientBuilder);
+                client = await clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+            }
             return BuildFromClient(projectId, client);
         }
 
@@ -113,6 +127,25 @@ namespace Google.Cloud.Firestore
 
         private FirestoreDb BuildFromClient(string projectId, FirestoreClient client) =>
             FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger, ConverterRegistry);
+
+        /// <summary>
+        /// Returns the effective settings for a new client, including the "gccl" version header.
+        /// We maintain a single settings object which is "the default settings with gccl version added" for the
+        /// common case where no extra settings have been specified; otherwise, we need to clone those settings and
+        /// add the header.
+        /// </summary>
+        private FirestoreSettings GetEffectiveSettings() => Settings == null ? s_defaultSettings : AddGcclVersionHeader(Settings);
+
+        /// <summary>
+        /// Returns a new FirestoreSettings based on the specified one, which has the "gccl" version
+        /// header (part of the x-goog-api-client header) added to specify the version of the Google.Cloud.Firestore library.
+        /// </summary>
+        private static FirestoreSettings AddGcclVersionHeader(FirestoreSettings settings)
+        {
+            var clone = settings.Clone();
+            clone.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(FirestoreDb));
+            return clone;
+        }
 
         private void ApplyEmulatorSettings(FirestoreClientBuilder clientBuilder)
         {
