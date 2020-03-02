@@ -71,9 +71,17 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The SpannerSettings used by this SessionPoolManager. These are expected to remain unaltered for the lifetime of the manager.
-        /// Currently the default settings are used in all cases.
+        /// Currently the default settings are used in all cases, but with the "gccl" version header added to specify the version of Google.Cloud.Spanner.Data
+        /// being used.
         /// </summary>
-        internal SpannerSettings SpannerSettings { get; } = SpannerSettings.GetDefault();
+        internal SpannerSettings SpannerSettings { get; } = CreateSpannerSettingsWithVersionHeader();
+
+        private static SpannerSettings CreateSpannerSettingsWithVersionHeader()
+        {
+            var settings = new SpannerSettings();
+            settings.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(SessionPoolManager));
+            return settings;
+        }
 
         /// <summary>
         /// Constructor for test purposes, allowing the SpannerClient creation to be customized (e.g. for

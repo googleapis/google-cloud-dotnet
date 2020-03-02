@@ -44,6 +44,15 @@ namespace Google.Cloud.Spanner.Data
             private static readonly TransactionOptions s_partitionedDmlTransactionOptions = new TransactionOptions { PartitionedDml = new PartitionedDml() };
             private static readonly TransactionOptions s_readWriteOptions = new TransactionOptions { ReadWrite = new ReadWrite() };
 
+            private static readonly DatabaseAdminSettings s_databaseAdminSettings = CreateDatabaseAdminSettings();
+
+            private static DatabaseAdminSettings CreateDatabaseAdminSettings()
+            {
+                var settings = new DatabaseAdminSettings();
+                settings.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(SpannerCommand));
+                return settings;
+            }
+
             internal SpannerConnection Connection { get; }
             internal SpannerCommandTextBuilder CommandTextBuilder { get; }
             internal int CommandTimeout { get; }
@@ -203,7 +212,11 @@ namespace Google.Cloud.Spanner.Data
                 var channel = new Channel(channelOptions.Endpoint, credentials);
                 try
                 {
-                    var databaseAdminClient = new DatabaseAdminClientBuilder { CallInvoker = channel.CreateCallInvoker() }.Build();
+                    var databaseAdminClient = new DatabaseAdminClientBuilder
+                    {
+                        CallInvoker = channel.CreateCallInvoker(),
+                        Settings = s_databaseAdminSettings
+                    }.Build();
                     if (CommandTextBuilder.IsCreateDatabaseCommand)
                     {
                         var parent = new InstanceName(Connection.Project, Connection.SpannerInstance);
