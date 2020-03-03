@@ -979,6 +979,7 @@
       "Spanner"
     ],
     "dependencies": {
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta02",
       "Google.LongRunning": "2.0.0-beta01",
       "Google.Cloud.Iam.V1": "2.0.0-beta01",
       "Google.Cloud.Spanner.Common.V1": "project"
@@ -1003,8 +1004,8 @@
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
-      "Google.Api.Gax.Testing": "default",
-      "Google.Api.Gax.Grpc.Testing": "default"
+      "Google.Api.Gax.Testing": "3.0.0-beta02",
+      "Google.Api.Gax.Grpc.Testing": "3.0.0-beta02"
     }
   },
   {
@@ -1017,7 +1018,7 @@
       "Spanner"
     ],
     "dependencies": {
-      "Google.Api.Gax": "3.0.0-beta01"
+      "Google.Api.Gax": "3.0.0-beta02"
     }
   },
   {
@@ -1035,6 +1036,7 @@
       "Spanner"
     ],
     "dependencies": {
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta02",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
