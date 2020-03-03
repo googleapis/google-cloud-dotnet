@@ -438,7 +438,7 @@ shell.run(
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
                 new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC"),
-                new XElement("Authors", "Google Inc."),
+                new XElement("Authors", "Google LLC"),
                 new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
                 new XElement("PackageLicenseFile", "LICENSE"),
                 new XElement("PackageProjectUrl", "https://github.com/googleapis/google-cloud-dotnet"),
