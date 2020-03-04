@@ -37,25 +37,25 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             CreateIndexRequest request = new CreateIndexRequest
             {
                 ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
-                Index = new Index(),
+                Index = new gcfav::Index(),
             };
             // Make the request
-            Operation<Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(request);
+            Operation<gcfav::Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Index result = completedResponse.Result;
+            gcfav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
+            Operation<gcfav::Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Index retrievedResult = retrievedResponse.Result;
+                gcfav::Index retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -71,25 +71,25 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             CreateIndexRequest request = new CreateIndexRequest
             {
                 ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
-                Index = new Index(),
+                Index = new gcfav::Index(),
             };
             // Make the request
-            Operation<Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(request);
+            Operation<gcfav::Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Index result = completedResponse.Result;
+            gcfav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcfav::Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Index retrievedResult = retrievedResponse.Result;
+                gcfav::Index retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -102,24 +102,24 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
-            Index index = new Index();
+            gcfav::Index index = new gcfav::Index();
             // Make the request
-            Operation<Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(parent, index);
+            Operation<gcfav::Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Index result = completedResponse.Result;
+            gcfav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
+            Operation<gcfav::Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Index retrievedResult = retrievedResponse.Result;
+                gcfav::Index retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -133,24 +133,24 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
-            Index index = new Index();
+            gcfav::Index index = new gcfav::Index();
             // Make the request
-            Operation<Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(parent, index);
+            Operation<gcfav::Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Index result = completedResponse.Result;
+            gcfav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcfav::Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Index retrievedResult = retrievedResponse.Result;
+                gcfav::Index retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -163,24 +163,24 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
             CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
-            Index index = new Index();
+            gcfav::Index index = new gcfav::Index();
             // Make the request
-            Operation<Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(parent, index);
+            Operation<gcfav::Index, IndexOperationMetadata> response = firestoreAdminClient.CreateIndex(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Index result = completedResponse.Result;
+            gcfav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
+            Operation<gcfav::Index, IndexOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Index retrievedResult = retrievedResponse.Result;
+                gcfav::Index retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -194,24 +194,24 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
-            Index index = new Index();
+            gcfav::Index index = new gcfav::Index();
             // Make the request
-            Operation<Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(parent, index);
+            Operation<gcfav::Index, IndexOperationMetadata> response = await firestoreAdminClient.CreateIndexAsync(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Index result = completedResponse.Result;
+            gcfav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcfav::Index, IndexOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Index retrievedResult = retrievedResponse.Result;
+                gcfav::Index retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -229,10 +229,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexes(request);
+            PagedEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexes(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Index item in response)
+            foreach (gcfav::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -243,7 +243,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Index item in page)
+                foreach (gcfav::Index item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -252,10 +252,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Index> singlePage = response.ReadPage(pageSize);
+            Page<gcfav::Index> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Index item in singlePage)
+            foreach (gcfav::Index item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -278,10 +278,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexesAsync(request);
+            PagedAsyncEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Index item) =>
+            await response.ForEachAsync((gcfav::Index item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -292,7 +292,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Index item in page)
+                foreach (gcfav::Index item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -301,10 +301,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Index> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfav::Index> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Index item in singlePage)
+            foreach (gcfav::Index item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -323,10 +323,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
             // Make the request
-            PagedEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexes(parent);
+            PagedEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Index item in response)
+            foreach (gcfav::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -337,7 +337,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Index item in page)
+                foreach (gcfav::Index item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -346,10 +346,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Index> singlePage = response.ReadPage(pageSize);
+            Page<gcfav::Index> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Index item in singlePage)
+            foreach (gcfav::Index item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -368,10 +368,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]";
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexesAsync(parent);
+            PagedAsyncEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Index item) =>
+            await response.ForEachAsync((gcfav::Index item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -382,7 +382,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Index item in page)
+                foreach (gcfav::Index item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -391,10 +391,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Index> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfav::Index> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Index item in singlePage)
+            foreach (gcfav::Index item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -413,10 +413,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
             // Make the request
-            PagedEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexes(parent);
+            PagedEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Index item in response)
+            foreach (gcfav::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -427,7 +427,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Index item in page)
+                foreach (gcfav::Index item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -436,10 +436,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Index> singlePage = response.ReadPage(pageSize);
+            Page<gcfav::Index> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Index item in singlePage)
+            foreach (gcfav::Index item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -458,10 +458,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             CollectionGroupName parent = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]");
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, Index> response = firestoreAdminClient.ListIndexesAsync(parent);
+            PagedAsyncEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Index item) =>
+            await response.ForEachAsync((gcfav::Index item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -472,7 +472,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Index item in page)
+                foreach (gcfav::Index item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -481,10 +481,10 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Index> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfav::Index> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Index item in singlePage)
+            foreach (gcfav::Index item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -506,7 +506,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             // Make the request
-            Index response = firestoreAdminClient.GetIndex(request);
+            gcfav::Index response = firestoreAdminClient.GetIndex(request);
             // End snippet
         }
 
@@ -523,7 +523,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
             };
             // Make the request
-            Index response = await firestoreAdminClient.GetIndexAsync(request);
+            gcfav::Index response = await firestoreAdminClient.GetIndexAsync(request);
             // End snippet
         }
 
@@ -536,7 +536,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/indexes/[INDEX]";
             // Make the request
-            Index response = firestoreAdminClient.GetIndex(name);
+            gcfav::Index response = firestoreAdminClient.GetIndex(name);
             // End snippet
         }
 
@@ -550,7 +550,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/databases/[DATABASE]/collectionGroups/[COLLECTION]/indexes/[INDEX]";
             // Make the request
-            Index response = await firestoreAdminClient.GetIndexAsync(name);
+            gcfav::Index response = await firestoreAdminClient.GetIndexAsync(name);
             // End snippet
         }
 
@@ -563,7 +563,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             IndexName name = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]");
             // Make the request
-            Index response = firestoreAdminClient.GetIndex(name);
+            gcfav::Index response = firestoreAdminClient.GetIndex(name);
             // End snippet
         }
 
@@ -577,7 +577,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             IndexName name = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]");
             // Make the request
-            Index response = await firestoreAdminClient.GetIndexAsync(name);
+            gcfav::Index response = await firestoreAdminClient.GetIndexAsync(name);
             // End snippet
         }
 
