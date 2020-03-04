@@ -20,14 +20,14 @@ jobs:
     - name: "Non-Cloud APIs"
       env: API_REGEX='!Google\.Cloud'
 
-# Install the .NET Core 1.0 runtime as that's what we test against
+# Install the .NET Core 2.1 runtime as that's what we test against
 addons:
   apt:
     sources:
     - sourceline: 'deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main'
       key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
     packages:
-    - dotnet-sharedframework-microsoft.netcore.app-1.0.5
+    - dotnet-runtime-2.1
 
 # Autosynth pushes directly to the main fork, rather than a separate fork.
 # We want to build the PR, but not the branch directly, partly as change
