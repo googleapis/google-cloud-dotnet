@@ -29,6 +29,18 @@ namespace Google.Cloud.SecurityCenter.V1
         }
     }
 
+    public partial class CreateNotificationConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateSourceRequest
     {
         /// <summary>
@@ -38,6 +50,30 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteNotificationConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::NotificationConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::NotificationConfigName NotificationConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::NotificationConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNotificationConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::NotificationConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::NotificationConfigName NotificationConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::NotificationConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -83,6 +119,18 @@ namespace Google.Cloud.SecurityCenter.V1
         public SourceName ParentAsSourceName
         {
             get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListNotificationConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

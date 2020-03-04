@@ -26,8 +26,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cjpnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvb3JnYW5pemF0aW9u",
             "X3NldHRpbmdzLnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
-            "djEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8iigQKFE9yZ2FuaXphdGlvblNldHRpbmdzEgwKBG5h",
+            "djEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkv",
+            "cmVzb3VyY2UucHJvdG8iigQKFE9yZ2FuaXphdGlvblNldHRpbmdzEgwKBG5h",
             "bWUYASABKAkSHgoWZW5hYmxlX2Fzc2V0X2Rpc2NvdmVyeRgCIAEoCBJpChZh",
             "c3NldF9kaXNjb3ZlcnlfY29uZmlnGAMgASgLMkkuZ29vZ2xlLmNsb3VkLnNl",
             "Y3VyaXR5Y2VudGVyLnYxLk9yZ2FuaXphdGlvblNldHRpbmdzLkFzc2V0RGlz",
@@ -46,7 +46,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "clxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser, new[]{ "Name", "EnableAssetDiscovery", "AssetDiscoveryConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Parser, new[]{ "ProjectIds", "InclusionMode" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) }, null, null)})
           }));
