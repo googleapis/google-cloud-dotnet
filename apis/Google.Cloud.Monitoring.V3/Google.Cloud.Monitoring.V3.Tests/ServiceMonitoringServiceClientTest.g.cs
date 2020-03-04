@@ -807,7 +807,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -833,7 +833,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -860,7 +860,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -885,7 +885,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -912,7 +912,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -937,7 +937,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -964,7 +964,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -989,7 +989,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1067,7 +1067,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1091,7 +1091,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1117,7 +1117,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1243,7 +1243,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1269,7 +1269,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
@@ -1293,7 +1293,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             {
                 ServiceLevelObjectiveName = ServiceLevelObjectiveName.FromProjectServiceServiceLevelObjective("[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]"),
                 ServiceLevelIndicator = new ServiceLevelIndicator(),
-                Goal = 9.5452680033302554E+17,
+                Goal = 9.545268003330255E+17,
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
