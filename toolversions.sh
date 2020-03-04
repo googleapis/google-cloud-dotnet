@@ -121,7 +121,7 @@ install_microgenerator() {
     declare -r GENERATOR_ROOT=$REPO_ROOT/gapic-generator-csharp
   fi
   
-  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/netcoreapp2.2/$RUNTIME/publish/Google.Api.Generator$EXTENSION
+  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/netcoreapp3.1/$RUNTIME/publish/Google.Api.Generator$EXTENSION
   
   if [[ $RUNNING_ON_KOKORO == "true" && -f $GAPIC_PLUGIN ]]
   then
