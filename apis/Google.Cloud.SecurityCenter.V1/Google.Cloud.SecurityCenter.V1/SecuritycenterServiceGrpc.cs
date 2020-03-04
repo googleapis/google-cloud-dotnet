@@ -3,7 +3,7 @@
 //     source: google/cloud/securitycenter/v1/securitycenter_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -35,8 +34,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Source> __Marshaller_google_cloud_securitycenter_v1_Source = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.Source.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest> __Marshaller_google_cloud_securitycenter_v1_CreateFindingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Finding> __Marshaller_google_cloud_securitycenter_v1_Finding = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.Finding.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_CreateNotificationConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Marshaller_google_cloud_securitycenter_v1_NotificationConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_GetNotificationConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest> __Marshaller_google_cloud_securitycenter_v1_GetOrganizationSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest> __Marshaller_google_cloud_securitycenter_v1_GetSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.GetSourceRequest.Parser.ParseFrom);
@@ -48,6 +52,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse> __Marshaller_google_cloud_securitycenter_v1_ListAssetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest> __Marshaller_google_cloud_securitycenter_v1_ListFindingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest> __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest> __Marshaller_google_cloud_securitycenter_v1_ListSourcesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse> __Marshaller_google_cloud_securitycenter_v1_ListSourcesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest> __Marshaller_google_cloud_securitycenter_v1_RunAssetDiscoveryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser.ParseFrom);
@@ -57,6 +63,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateNotificationConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateOrganizationSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSourceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser.ParseFrom);
@@ -76,12 +83,33 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_CreateFindingRequest,
         __Marshaller_google_cloud_securitycenter_v1_Finding);
 
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Method_CreateNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNotificationConfig",
+        __Marshaller_google_cloud_securitycenter_v1_CreateNotificationConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_NotificationConfig);
+
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteNotificationConfig",
+        __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest,
+        __Marshaller_google_protobuf_Empty);
+
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
+
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Method_GetNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNotificationConfig",
+        __Marshaller_google_cloud_securitycenter_v1_GetNotificationConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_NotificationConfig);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Method_GetOrganizationSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(
         grpc::MethodType.Unary,
@@ -125,6 +153,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_ListFindingsRequest,
         __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse);
 
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> __Method_ListNotificationConfigs = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListNotificationConfigs",
+        __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsResponse);
+
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse> __Method_ListSources = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -166,6 +201,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "UpdateFinding",
         __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest,
         __Marshaller_google_cloud_securitycenter_v1_Finding);
+
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Method_UpdateNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateNotificationConfig",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateNotificationConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_NotificationConfig);
 
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Method_UpdateOrganizationSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(
         grpc::MethodType.Unary,
@@ -222,12 +264,45 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Creates a notification config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> CreateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a notification config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfig(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets the access control policy on the specified Source.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a notification config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> GetNotificationConfig(global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -307,6 +382,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Lists notification configs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> ListNotificationConfigs(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists all sources belonging to an organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -374,6 +460,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.Finding> UpdateFinding(global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///
+      /// Updates a notification config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> UpdateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -529,6 +627,94 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFinding, null, options, request);
       }
       /// <summary>
+      /// Creates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.NotificationConfig CreateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.NotificationConfig CreateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> CreateNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> CreateNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationConfig(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationConfig(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
+      }
+      /// <summary>
       /// Gets the access control policy on the specified Source.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -571,6 +757,50 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.NotificationConfig GetNotificationConfig(global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.NotificationConfig GetNotificationConfig(global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> GetNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> GetNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNotificationConfig, null, options, request);
       }
       /// <summary>
       /// Gets the settings for an organization.
@@ -869,6 +1099,50 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListFindings, null, options, request);
       }
       /// <summary>
+      /// Lists notification configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse ListNotificationConfigs(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNotificationConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists notification configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse ListNotificationConfigs(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListNotificationConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists notification configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> ListNotificationConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNotificationConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists notification configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> ListNotificationConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListNotificationConfigs, null, options, request);
+      }
+      /// <summary>
       /// Lists all sources belonging to an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1157,6 +1431,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateFinding, null, options, request);
       }
       /// <summary>
+      ///
+      /// Updates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.NotificationConfig UpdateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///
+      /// Updates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.SecurityCenter.V1.NotificationConfig UpdateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      ///
+      /// Updates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> UpdateNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///
+      /// Updates a notification config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> UpdateNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateNotificationConfig, null, options, request);
+      }
+      /// <summary>
       /// Updates an organization's settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1302,19 +1624,24 @@ namespace Google.Cloud.SecurityCenter.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateSource, serviceImpl.CreateSource)
           .AddMethod(__Method_CreateFinding, serviceImpl.CreateFinding)
+          .AddMethod(__Method_CreateNotificationConfig, serviceImpl.CreateNotificationConfig)
+          .AddMethod(__Method_DeleteNotificationConfig, serviceImpl.DeleteNotificationConfig)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
+          .AddMethod(__Method_GetNotificationConfig, serviceImpl.GetNotificationConfig)
           .AddMethod(__Method_GetOrganizationSettings, serviceImpl.GetOrganizationSettings)
           .AddMethod(__Method_GetSource, serviceImpl.GetSource)
           .AddMethod(__Method_GroupAssets, serviceImpl.GroupAssets)
           .AddMethod(__Method_GroupFindings, serviceImpl.GroupFindings)
           .AddMethod(__Method_ListAssets, serviceImpl.ListAssets)
           .AddMethod(__Method_ListFindings, serviceImpl.ListFindings)
+          .AddMethod(__Method_ListNotificationConfigs, serviceImpl.ListNotificationConfigs)
           .AddMethod(__Method_ListSources, serviceImpl.ListSources)
           .AddMethod(__Method_RunAssetDiscovery, serviceImpl.RunAssetDiscovery)
           .AddMethod(__Method_SetFindingState, serviceImpl.SetFindingState)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_UpdateFinding, serviceImpl.UpdateFinding)
+          .AddMethod(__Method_UpdateNotificationConfig, serviceImpl.UpdateNotificationConfig)
           .AddMethod(__Method_UpdateOrganizationSettings, serviceImpl.UpdateOrganizationSettings)
           .AddMethod(__Method_UpdateSource, serviceImpl.UpdateSource)
           .AddMethod(__Method_UpdateSecurityMarks, serviceImpl.UpdateSecurityMarks).Build();
@@ -1328,19 +1655,24 @@ namespace Google.Cloud.SecurityCenter.V1 {
     {
       serviceBinder.AddMethod(__Method_CreateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.CreateSource));
       serviceBinder.AddMethod(__Method_CreateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.CreateFinding));
+      serviceBinder.AddMethod(__Method_CreateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.CreateNotificationConfig));
+      serviceBinder.AddMethod(__Method_DeleteNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNotificationConfig));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_GetNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.GetNotificationConfig));
       serviceBinder.AddMethod(__Method_GetOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.GetOrganizationSettings));
       serviceBinder.AddMethod(__Method_GetSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.GetSource));
       serviceBinder.AddMethod(__Method_GroupAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest, global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse>(serviceImpl.GroupAssets));
       serviceBinder.AddMethod(__Method_GroupFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest, global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse>(serviceImpl.GroupFindings));
       serviceBinder.AddMethod(__Method_ListAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse>(serviceImpl.ListAssets));
       serviceBinder.AddMethod(__Method_ListFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse>(serviceImpl.ListFindings));
+      serviceBinder.AddMethod(__Method_ListNotificationConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse>(serviceImpl.ListNotificationConfigs));
       serviceBinder.AddMethod(__Method_ListSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(serviceImpl.ListSources));
       serviceBinder.AddMethod(__Method_RunAssetDiscovery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest, global::Google.LongRunning.Operation>(serviceImpl.RunAssetDiscovery));
       serviceBinder.AddMethod(__Method_SetFindingState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.SetFindingState));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_UpdateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.UpdateFinding));
+      serviceBinder.AddMethod(__Method_UpdateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.UpdateNotificationConfig));
       serviceBinder.AddMethod(__Method_UpdateOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.UpdateOrganizationSettings));
       serviceBinder.AddMethod(__Method_UpdateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.UpdateSource));
       serviceBinder.AddMethod(__Method_UpdateSecurityMarks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest, global::Google.Cloud.SecurityCenter.V1.SecurityMarks>(serviceImpl.UpdateSecurityMarks));

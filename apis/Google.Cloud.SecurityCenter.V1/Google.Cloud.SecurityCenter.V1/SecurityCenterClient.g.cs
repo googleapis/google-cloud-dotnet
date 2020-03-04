@@ -50,13 +50,17 @@ namespace Google.Cloud.SecurityCenter.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateSourceSettings = existing.CreateSourceSettings;
             CreateFindingSettings = existing.CreateFindingSettings;
+            CreateNotificationConfigSettings = existing.CreateNotificationConfigSettings;
+            DeleteNotificationConfigSettings = existing.DeleteNotificationConfigSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
+            GetNotificationConfigSettings = existing.GetNotificationConfigSettings;
             GetOrganizationSettingsSettings = existing.GetOrganizationSettingsSettings;
             GetSourceSettings = existing.GetSourceSettings;
             GroupAssetsSettings = existing.GroupAssetsSettings;
             GroupFindingsSettings = existing.GroupFindingsSettings;
             ListAssetsSettings = existing.ListAssetsSettings;
             ListFindingsSettings = existing.ListFindingsSettings;
+            ListNotificationConfigsSettings = existing.ListNotificationConfigsSettings;
             ListSourcesSettings = existing.ListSourcesSettings;
             RunAssetDiscoverySettings = existing.RunAssetDiscoverySettings;
             RunAssetDiscoveryOperationsSettings = existing.RunAssetDiscoveryOperationsSettings.Clone();
@@ -64,6 +68,7 @@ namespace Google.Cloud.SecurityCenter.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateFindingSettings = existing.UpdateFindingSettings;
+            UpdateNotificationConfigSettings = existing.UpdateNotificationConfigSettings;
             UpdateOrganizationSettingsSettings = existing.UpdateOrganizationSettingsSettings;
             UpdateSourceSettings = existing.UpdateSourceSettings;
             UpdateSecurityMarksSettings = existing.UpdateSecurityMarksSettings;
@@ -98,6 +103,32 @@ namespace Google.Cloud.SecurityCenter.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.CreateNotificationConfig</c> and
+        /// <c>SecurityCenterClient.CreateNotificationConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.DeleteNotificationConfig</c> and
+        /// <c>SecurityCenterClient.DeleteNotificationConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SecurityCenterClient.GetIamPolicy</c> and <c>SecurityCenterClient.GetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
@@ -110,6 +141,22 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetNotificationConfig</c> and <c>SecurityCenterClient.GetNotificationConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -201,6 +248,22 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListNotificationConfigs</c> and <c>SecurityCenterClient.ListNotificationConfigsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNotificationConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -297,6 +360,19 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateFindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.UpdateNotificationConfig</c> and
+        /// <c>SecurityCenterClient.UpdateNotificationConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -490,8 +566,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -510,8 +586,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -530,8 +606,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -546,8 +622,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -566,8 +642,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -586,8 +662,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="source">
-        /// Required. The Source being created, only the display_name and description will be
-        /// used. All other fields will be ignored.
+        /// Required. The Source being created, only the display_name and description
+        /// will be used. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -638,8 +714,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -665,8 +741,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -692,8 +768,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -714,8 +790,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -741,8 +817,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -768,13 +844,427 @@ namespace Google.Cloud.SecurityCenter.V1
         /// greater than 0 characters in length.
         /// </param>
         /// <param name="finding">
-        /// Required. The Finding being created. The name and security_marks will be ignored as
-        /// they are both output only fields on this resource.
+        /// Required. The Finding being created. The name and security_marks will be
+        /// ignored as they are both output only fields on this resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Finding> CreateFindingAsync(SourceName parent, string findingId, Finding finding, st::CancellationToken cancellationToken) =>
             CreateFindingAsync(parent, findingId, finding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(CreateNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(string parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(string parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(string parent, string configId, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, configId, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(gagr::OrganizationName parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::OrganizationName parent, string configId, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="configId">
+        /// Required.
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be between 1 and 128 characters, and contains alphanumeric
+        /// characters, underscores or hyphens only.
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::OrganizationName parent, string configId, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, configId, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(string parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(string parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(string parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig CreateNotificationConfig(gagr::OrganizationName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfig(new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::OrganizationName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new notification config's parent. Its format
+        /// is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="notificationConfig">
+        /// Required. The notification config being created. The name and the service
+        /// account will be ignored as they are both output only fields on this
+        /// resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(gagr::OrganizationName parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteNotificationConfig(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteNotificationConfigAsync(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteNotificationConfigAsync(DeleteNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to delete. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteNotificationConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotificationConfig(new DeleteNotificationConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to delete. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteNotificationConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotificationConfigAsync(new DeleteNotificationConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to delete. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteNotificationConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to delete. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteNotificationConfig(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotificationConfig(new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to delete. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteNotificationConfigAsync(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotificationConfigAsync(new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to delete. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteNotificationConfigAsync(NotificationConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy on the specified Source.
@@ -888,6 +1378,117 @@ namespace Google.Cloud.SecurityCenter.V1
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig GetNotificationConfig(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(GetNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to get. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig GetNotificationConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotificationConfig(new GetNotificationConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to get. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotificationConfigAsync(new GetNotificationConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to get. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to get. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig GetNotificationConfig(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotificationConfig(new GetNotificationConfigRequest
+            {
+                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to get. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotificationConfigAsync(new GetNotificationConfigRequest
+            {
+                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the notification config to get. Its format is
+        /// "organizations/[organization_id]/notificationConfigs/[config_id]".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(NotificationConfigName name, st::CancellationToken cancellationToken) =>
+            GetNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -918,8 +1519,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -933,8 +1534,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -948,8 +1549,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -960,8 +1561,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -975,8 +1576,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -990,8 +1591,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Gets the settings for an organization.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the organization to get organization settings for. Its format is
-        /// "organizations/[organization_id]/organizationSettings".
+        /// Required. Name of the organization to get organization settings for. Its
+        /// format is "organizations/[organization_id]/organizationSettings".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1169,9 +1770,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -1217,9 +1818,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -1265,9 +1866,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -1313,9 +1914,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// organizations/{organization_id}/sources/-
         /// </param>
         /// <param name="groupBy">
-        /// Required. Expression that defines what assets fields to use for grouping (including
-        /// `state_change`). The string value should follow SQL syntax: comma separated
-        /// list of fields. For example: "parent,resource_name".
+        /// Required. Expression that defines what assets fields to use for grouping
+        /// (including `state_change`). The string value should follow SQL syntax:
+        /// comma separated list of fields. For example: "parent,resource_name".
         /// 
         /// The following fields are supported:
         /// 
@@ -1396,6 +1997,124 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs.
+        /// Its format is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigs(new ListNotificationConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs.
+        /// Its format is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs.
+        /// Its format is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigs(new ListNotificationConfigsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization to list notification configs.
+        /// Its format is "organizations/[organization_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNotificationConfigsAsync(new ListNotificationConfigsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1417,8 +2136,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1442,8 +2161,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1467,8 +2186,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1492,8 +2211,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should be
-        /// "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should
+        /// be "organizations/[organization_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1591,8 +2310,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1611,8 +2330,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1631,8 +2350,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1648,8 +2367,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1668,8 +2387,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1688,8 +2407,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// error.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of the organization to run asset discovery for. Its format is
-        /// "organizations/[organization_id]".
+        /// Required. Name of the organization to run asset discovery for. Its format
+        /// is "organizations/[organization_id]".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2212,8 +2931,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -2232,8 +2951,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -2252,8 +2971,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// finding creation to succeed.
         /// </summary>
         /// <param name="finding">
-        /// Required. The finding resource to update or create if it does not already exist.
-        /// parent, security_marks, and update_time will be ignored.
+        /// Required. The finding resource to update or create if it does not already
+        /// exist. parent, security_marks, and update_time will be ignored.
         /// 
         /// In the case of creation, the finding id portion of the name must be
         /// alphanumeric and less than or equal to 32 characters and greater than 0
@@ -2263,6 +2982,128 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Finding> UpdateFindingAsync(Finding finding, st::CancellationToken cancellationToken) =>
             UpdateFindingAsync(finding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig UpdateNotificationConfig(UpdateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> UpdateNotificationConfigAsync(UpdateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> UpdateNotificationConfigAsync(UpdateNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="notificationConfig">
+        /// Required. The notification config to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig UpdateNotificationConfig(NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNotificationConfig(new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="notificationConfig">
+        /// Required. The notification config to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> UpdateNotificationConfigAsync(NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNotificationConfigAsync(new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="notificationConfig">
+        /// Required. The notification config to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> UpdateNotificationConfigAsync(NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
+            UpdateNotificationConfigAsync(notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="notificationConfig">
+        /// Required. The notification config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The FieldMask to use when updating the notification config.
+        /// 
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotificationConfig UpdateNotificationConfig(NotificationConfig notificationConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNotificationConfig(new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="notificationConfig">
+        /// Required. The notification config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The FieldMask to use when updating the notification config.
+        /// 
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> UpdateNotificationConfigAsync(NotificationConfig notificationConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNotificationConfigAsync(new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="notificationConfig">
+        /// Required. The notification config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The FieldMask to use when updating the notification config.
+        /// 
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotificationConfig> UpdateNotificationConfigAsync(NotificationConfig notificationConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateNotificationConfigAsync(notificationConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an organization's settings.
@@ -2470,7 +3311,13 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<CreateFindingRequest, Finding> _callCreateFinding;
 
+        private readonly gaxgrpc::ApiCall<CreateNotificationConfigRequest, NotificationConfig> _callCreateNotificationConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> _callDeleteNotificationConfig;
+
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<GetNotificationConfigRequest, NotificationConfig> _callGetNotificationConfig;
 
         private readonly gaxgrpc::ApiCall<GetOrganizationSettingsRequest, OrganizationSettings> _callGetOrganizationSettings;
 
@@ -2484,6 +3331,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<ListFindingsRequest, ListFindingsResponse> _callListFindings;
 
+        private readonly gaxgrpc::ApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse> _callListNotificationConfigs;
+
         private readonly gaxgrpc::ApiCall<ListSourcesRequest, ListSourcesResponse> _callListSources;
 
         private readonly gaxgrpc::ApiCall<RunAssetDiscoveryRequest, lro::Operation> _callRunAssetDiscovery;
@@ -2495,6 +3344,8 @@ namespace Google.Cloud.SecurityCenter.V1
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
         private readonly gaxgrpc::ApiCall<UpdateFindingRequest, Finding> _callUpdateFinding;
+
+        private readonly gaxgrpc::ApiCall<UpdateNotificationConfigRequest, NotificationConfig> _callUpdateNotificationConfig;
 
         private readonly gaxgrpc::ApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings> _callUpdateOrganizationSettings;
 
@@ -2519,9 +3370,18 @@ namespace Google.Cloud.SecurityCenter.V1
             _callCreateFinding = clientHelper.BuildApiCall<CreateFindingRequest, Finding>(grpcClient.CreateFindingAsync, grpcClient.CreateFinding, effectiveSettings.CreateFindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFinding);
             Modify_CreateFindingApiCall(ref _callCreateFinding);
+            _callCreateNotificationConfig = clientHelper.BuildApiCall<CreateNotificationConfigRequest, NotificationConfig>(grpcClient.CreateNotificationConfigAsync, grpcClient.CreateNotificationConfig, effectiveSettings.CreateNotificationConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateNotificationConfig);
+            Modify_CreateNotificationConfigApiCall(ref _callCreateNotificationConfig);
+            _callDeleteNotificationConfig = clientHelper.BuildApiCall<DeleteNotificationConfigRequest, wkt::Empty>(grpcClient.DeleteNotificationConfigAsync, grpcClient.DeleteNotificationConfig, effectiveSettings.DeleteNotificationConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteNotificationConfig);
+            Modify_DeleteNotificationConfigApiCall(ref _callDeleteNotificationConfig);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>(grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callGetNotificationConfig = clientHelper.BuildApiCall<GetNotificationConfigRequest, NotificationConfig>(grpcClient.GetNotificationConfigAsync, grpcClient.GetNotificationConfig, effectiveSettings.GetNotificationConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNotificationConfig);
+            Modify_GetNotificationConfigApiCall(ref _callGetNotificationConfig);
             _callGetOrganizationSettings = clientHelper.BuildApiCall<GetOrganizationSettingsRequest, OrganizationSettings>(grpcClient.GetOrganizationSettingsAsync, grpcClient.GetOrganizationSettings, effectiveSettings.GetOrganizationSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOrganizationSettings);
             Modify_GetOrganizationSettingsApiCall(ref _callGetOrganizationSettings);
@@ -2540,6 +3400,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callListFindings = clientHelper.BuildApiCall<ListFindingsRequest, ListFindingsResponse>(grpcClient.ListFindingsAsync, grpcClient.ListFindings, effectiveSettings.ListFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFindings);
             Modify_ListFindingsApiCall(ref _callListFindings);
+            _callListNotificationConfigs = clientHelper.BuildApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse>(grpcClient.ListNotificationConfigsAsync, grpcClient.ListNotificationConfigs, effectiveSettings.ListNotificationConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNotificationConfigs);
+            Modify_ListNotificationConfigsApiCall(ref _callListNotificationConfigs);
             _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>(grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSources);
             Modify_ListSourcesApiCall(ref _callListSources);
@@ -2558,6 +3421,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callUpdateFinding = clientHelper.BuildApiCall<UpdateFindingRequest, Finding>(grpcClient.UpdateFindingAsync, grpcClient.UpdateFinding, effectiveSettings.UpdateFindingSettings).WithGoogleRequestParam("finding.name", request => request.Finding?.Name);
             Modify_ApiCall(ref _callUpdateFinding);
             Modify_UpdateFindingApiCall(ref _callUpdateFinding);
+            _callUpdateNotificationConfig = clientHelper.BuildApiCall<UpdateNotificationConfigRequest, NotificationConfig>(grpcClient.UpdateNotificationConfigAsync, grpcClient.UpdateNotificationConfig, effectiveSettings.UpdateNotificationConfigSettings).WithGoogleRequestParam("notification_config.name", request => request.NotificationConfig?.Name);
+            Modify_ApiCall(ref _callUpdateNotificationConfig);
+            Modify_UpdateNotificationConfigApiCall(ref _callUpdateNotificationConfig);
             _callUpdateOrganizationSettings = clientHelper.BuildApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings>(grpcClient.UpdateOrganizationSettingsAsync, grpcClient.UpdateOrganizationSettings, effectiveSettings.UpdateOrganizationSettingsSettings).WithGoogleRequestParam("organization_settings.name", request => request.OrganizationSettings?.Name);
             Modify_ApiCall(ref _callUpdateOrganizationSettings);
             Modify_UpdateOrganizationSettingsApiCall(ref _callUpdateOrganizationSettings);
@@ -2576,7 +3442,13 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_CreateFindingApiCall(ref gaxgrpc::ApiCall<CreateFindingRequest, Finding> call);
 
+        partial void Modify_CreateNotificationConfigApiCall(ref gaxgrpc::ApiCall<CreateNotificationConfigRequest, NotificationConfig> call);
+
+        partial void Modify_DeleteNotificationConfigApiCall(ref gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> call);
+
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_GetNotificationConfigApiCall(ref gaxgrpc::ApiCall<GetNotificationConfigRequest, NotificationConfig> call);
 
         partial void Modify_GetOrganizationSettingsApiCall(ref gaxgrpc::ApiCall<GetOrganizationSettingsRequest, OrganizationSettings> call);
 
@@ -2590,6 +3462,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_ListFindingsApiCall(ref gaxgrpc::ApiCall<ListFindingsRequest, ListFindingsResponse> call);
 
+        partial void Modify_ListNotificationConfigsApiCall(ref gaxgrpc::ApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse> call);
+
         partial void Modify_ListSourcesApiCall(ref gaxgrpc::ApiCall<ListSourcesRequest, ListSourcesResponse> call);
 
         partial void Modify_RunAssetDiscoveryApiCall(ref gaxgrpc::ApiCall<RunAssetDiscoveryRequest, lro::Operation> call);
@@ -2601,6 +3475,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
         partial void Modify_UpdateFindingApiCall(ref gaxgrpc::ApiCall<UpdateFindingRequest, Finding> call);
+
+        partial void Modify_UpdateNotificationConfigApiCall(ref gaxgrpc::ApiCall<UpdateNotificationConfigRequest, NotificationConfig> call);
 
         partial void Modify_UpdateOrganizationSettingsApiCall(ref gaxgrpc::ApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings> call);
 
@@ -2617,7 +3493,13 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_CreateFindingRequest(ref CreateFindingRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateNotificationConfigRequest(ref CreateNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteNotificationConfigRequest(ref DeleteNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNotificationConfigRequest(ref GetNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetOrganizationSettingsRequest(ref GetOrganizationSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2631,6 +3513,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_ListFindingsRequest(ref ListFindingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListNotificationConfigsRequest(ref ListNotificationConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListSourcesRequest(ref ListSourcesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunAssetDiscoveryRequest(ref RunAssetDiscoveryRequest request, ref gaxgrpc::CallSettings settings);
@@ -2642,6 +3526,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateFindingRequest(ref UpdateFindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateNotificationConfigRequest(ref UpdateNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateOrganizationSettingsRequest(ref UpdateOrganizationSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2700,6 +3586,54 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NotificationConfig CreateNotificationConfig(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNotificationConfigRequest(ref request, ref callSettings);
+            return _callCreateNotificationConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NotificationConfig> CreateNotificationConfigAsync(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNotificationConfigRequest(ref request, ref callSettings);
+            return _callCreateNotificationConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteNotificationConfig(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNotificationConfigRequest(ref request, ref callSettings);
+            _callDeleteNotificationConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteNotificationConfigAsync(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNotificationConfigRequest(ref request, ref callSettings);
+            return _callDeleteNotificationConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets the access control policy on the specified Source.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2721,6 +3655,30 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NotificationConfig GetNotificationConfig(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNotificationConfigRequest(ref request, ref callSettings);
+            return _callGetNotificationConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NotificationConfig> GetNotificationConfigAsync(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNotificationConfigRequest(ref request, ref callSettings);
+            return _callGetNotificationConfig.Async(request, callSettings);
         }
 
         /// <summary>
@@ -2890,6 +3848,30 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNotificationConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNotificationConfigsRequest, ListNotificationConfigsResponse, NotificationConfig>(_callListNotificationConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists notification configs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNotificationConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNotificationConfigsRequest, ListNotificationConfigsResponse, NotificationConfig>(_callListNotificationConfigs, request, callSettings);
+        }
+
+        /// <summary>
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3049,6 +4031,30 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NotificationConfig UpdateNotificationConfig(UpdateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNotificationConfigRequest(ref request, ref callSettings);
+            return _callUpdateNotificationConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a notification config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NotificationConfig> UpdateNotificationConfigAsync(UpdateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNotificationConfigRequest(ref request, ref callSettings);
+            return _callUpdateNotificationConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Updates an organization's settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3137,6 +4143,10 @@ namespace Google.Cloud.SecurityCenter.V1
     {
     }
 
+    public partial class ListNotificationConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSourcesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -3169,6 +4179,14 @@ namespace Google.Cloud.SecurityCenter.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Types.ListFindingsResult> GetEnumerator() => ListFindingsResults.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNotificationConfigsResponse : gaxgrpc::IPageResponse<NotificationConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NotificationConfig> GetEnumerator() => NotificationConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

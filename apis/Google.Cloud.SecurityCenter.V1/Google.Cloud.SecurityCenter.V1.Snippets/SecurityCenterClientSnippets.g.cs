@@ -221,6 +221,250 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateNotificationConfig</summary>
+        public void CreateNotificationConfigRequestObject()
+        {
+            // Snippet: CreateNotificationConfig(CreateNotificationConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "",
+                NotificationConfig = new NotificationConfig(),
+            };
+            // Make the request
+            NotificationConfig response = securityCenterClient.CreateNotificationConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfigAsync</summary>
+        public async Task CreateNotificationConfigRequestObjectAsync()
+        {
+            // Snippet: CreateNotificationConfigAsync(CreateNotificationConfigRequest, CallSettings)
+            // Additional: CreateNotificationConfigAsync(CreateNotificationConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "",
+                NotificationConfig = new NotificationConfig(),
+            };
+            // Make the request
+            NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfig</summary>
+        public void CreateNotificationConfig1()
+        {
+            // Snippet: CreateNotificationConfig(string, string, NotificationConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            string configId = "";
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, configId, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfigAsync</summary>
+        public async Task CreateNotificationConfig1Async()
+        {
+            // Snippet: CreateNotificationConfigAsync(string, string, NotificationConfig, CallSettings)
+            // Additional: CreateNotificationConfigAsync(string, string, NotificationConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            string configId = "";
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, configId, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfig</summary>
+        public void CreateNotificationConfig1ResourceNames()
+        {
+            // Snippet: CreateNotificationConfig(OrganizationName, string, NotificationConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            string configId = "";
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, configId, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfigAsync</summary>
+        public async Task CreateNotificationConfig1ResourceNamesAsync()
+        {
+            // Snippet: CreateNotificationConfigAsync(OrganizationName, string, NotificationConfig, CallSettings)
+            // Additional: CreateNotificationConfigAsync(OrganizationName, string, NotificationConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            string configId = "";
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, configId, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfig</summary>
+        public void CreateNotificationConfig2()
+        {
+            // Snippet: CreateNotificationConfig(string, NotificationConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfigAsync</summary>
+        public async Task CreateNotificationConfig2Async()
+        {
+            // Snippet: CreateNotificationConfigAsync(string, NotificationConfig, CallSettings)
+            // Additional: CreateNotificationConfigAsync(string, NotificationConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfig</summary>
+        public void CreateNotificationConfig2ResourceNames()
+        {
+            // Snippet: CreateNotificationConfig(OrganizationName, NotificationConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = securityCenterClient.CreateNotificationConfig(parent, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotificationConfigAsync</summary>
+        public async Task CreateNotificationConfig2ResourceNamesAsync()
+        {
+            // Snippet: CreateNotificationConfigAsync(OrganizationName, NotificationConfig, CallSettings)
+            // Additional: CreateNotificationConfigAsync(OrganizationName, NotificationConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotificationConfig</summary>
+        public void DeleteNotificationConfigRequestObject()
+        {
+            // Snippet: DeleteNotificationConfig(DeleteNotificationConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            // Make the request
+            securityCenterClient.DeleteNotificationConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotificationConfigAsync</summary>
+        public async Task DeleteNotificationConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteNotificationConfigAsync(DeleteNotificationConfigRequest, CallSettings)
+            // Additional: DeleteNotificationConfigAsync(DeleteNotificationConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            // Make the request
+            await securityCenterClient.DeleteNotificationConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotificationConfig</summary>
+        public void DeleteNotificationConfig()
+        {
+            // Snippet: DeleteNotificationConfig(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/notificationConfigs/[NOTIFICATION_CONFIG]";
+            // Make the request
+            securityCenterClient.DeleteNotificationConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotificationConfigAsync</summary>
+        public async Task DeleteNotificationConfigAsync()
+        {
+            // Snippet: DeleteNotificationConfigAsync(string, CallSettings)
+            // Additional: DeleteNotificationConfigAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/notificationConfigs/[NOTIFICATION_CONFIG]";
+            // Make the request
+            await securityCenterClient.DeleteNotificationConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotificationConfig</summary>
+        public void DeleteNotificationConfigResourceNames()
+        {
+            // Snippet: DeleteNotificationConfig(NotificationConfigName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            // Make the request
+            securityCenterClient.DeleteNotificationConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotificationConfigAsync</summary>
+        public async Task DeleteNotificationConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteNotificationConfigAsync(NotificationConfigName, CallSettings)
+            // Additional: DeleteNotificationConfigAsync(NotificationConfigName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            // Make the request
+            await securityCenterClient.DeleteNotificationConfigAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicyRequestObject()
         {
@@ -307,6 +551,93 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await securityCenterClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationConfig</summary>
+        public void GetNotificationConfigRequestObject()
+        {
+            // Snippet: GetNotificationConfig(GetNotificationConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            // Make the request
+            NotificationConfig response = securityCenterClient.GetNotificationConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationConfigAsync</summary>
+        public async Task GetNotificationConfigRequestObjectAsync()
+        {
+            // Snippet: GetNotificationConfigAsync(GetNotificationConfigRequest, CallSettings)
+            // Additional: GetNotificationConfigAsync(GetNotificationConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            // Make the request
+            NotificationConfig response = await securityCenterClient.GetNotificationConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationConfig</summary>
+        public void GetNotificationConfig()
+        {
+            // Snippet: GetNotificationConfig(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/notificationConfigs/[NOTIFICATION_CONFIG]";
+            // Make the request
+            NotificationConfig response = securityCenterClient.GetNotificationConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationConfigAsync</summary>
+        public async Task GetNotificationConfigAsync()
+        {
+            // Snippet: GetNotificationConfigAsync(string, CallSettings)
+            // Additional: GetNotificationConfigAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/notificationConfigs/[NOTIFICATION_CONFIG]";
+            // Make the request
+            NotificationConfig response = await securityCenterClient.GetNotificationConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationConfig</summary>
+        public void GetNotificationConfigResourceNames()
+        {
+            // Snippet: GetNotificationConfig(NotificationConfigName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            // Make the request
+            NotificationConfig response = securityCenterClient.GetNotificationConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotificationConfigAsync</summary>
+        public async Task GetNotificationConfigResourceNamesAsync()
+        {
+            // Snippet: GetNotificationConfigAsync(NotificationConfigName, CallSettings)
+            // Additional: GetNotificationConfigAsync(NotificationConfigName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationConfigName name = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]");
+            // Make the request
+            NotificationConfig response = await securityCenterClient.GetNotificationConfigAsync(name);
             // End snippet
         }
 
@@ -1079,6 +1410,282 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ListFindingsResponse.Types.ListFindingsResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotificationConfigs</summary>
+        public void ListNotificationConfigsRequestObject()
+        {
+            // Snippet: ListNotificationConfigs(ListNotificationConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NotificationConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNotificationConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotificationConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotificationConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotificationConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotificationConfigs</summary>
+        public async Task ListNotificationConfigsRequestObjectAsync()
+        {
+            // Snippet: ListNotificationConfigsAsync(ListNotificationConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NotificationConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNotificationConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotificationConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotificationConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotificationConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotificationConfigs</summary>
+        public void ListNotificationConfigs()
+        {
+            // Snippet: ListNotificationConfigs(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NotificationConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNotificationConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotificationConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotificationConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotificationConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotificationConfigs</summary>
+        public async Task ListNotificationConfigsAsync()
+        {
+            // Snippet: ListNotificationConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NotificationConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNotificationConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotificationConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotificationConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotificationConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotificationConfigs</summary>
+        public void ListNotificationConfigsResourceNames()
+        {
+            // Snippet: ListNotificationConfigs(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NotificationConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNotificationConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotificationConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotificationConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotificationConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotificationConfigs</summary>
+        public async Task ListNotificationConfigsResourceNamesAsync()
+        {
+            // Snippet: ListNotificationConfigsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> response = securityCenterClient.ListNotificationConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NotificationConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNotificationConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotificationConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotificationConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotificationConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1891,6 +2498,97 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             Finding finding = new Finding();
             // Make the request
             Finding response = await securityCenterClient.UpdateFindingAsync(finding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotificationConfig</summary>
+        public void UpdateNotificationConfigRequestObject()
+        {
+            // Snippet: UpdateNotificationConfig(UpdateNotificationConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            NotificationConfig response = securityCenterClient.UpdateNotificationConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotificationConfigAsync</summary>
+        public async Task UpdateNotificationConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateNotificationConfigAsync(UpdateNotificationConfigRequest, CallSettings)
+            // Additional: UpdateNotificationConfigAsync(UpdateNotificationConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            NotificationConfig response = await securityCenterClient.UpdateNotificationConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotificationConfig</summary>
+        public void UpdateNotificationConfig1()
+        {
+            // Snippet: UpdateNotificationConfig(NotificationConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = securityCenterClient.UpdateNotificationConfig(notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotificationConfigAsync</summary>
+        public async Task UpdateNotificationConfig1Async()
+        {
+            // Snippet: UpdateNotificationConfigAsync(NotificationConfig, CallSettings)
+            // Additional: UpdateNotificationConfigAsync(NotificationConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationConfig notificationConfig = new NotificationConfig();
+            // Make the request
+            NotificationConfig response = await securityCenterClient.UpdateNotificationConfigAsync(notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotificationConfig</summary>
+        public void UpdateNotificationConfig2()
+        {
+            // Snippet: UpdateNotificationConfig(NotificationConfig, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            NotificationConfig notificationConfig = new NotificationConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            NotificationConfig response = securityCenterClient.UpdateNotificationConfig(notificationConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNotificationConfigAsync</summary>
+        public async Task UpdateNotificationConfig2Async()
+        {
+            // Snippet: UpdateNotificationConfigAsync(NotificationConfig, FieldMask, CallSettings)
+            // Additional: UpdateNotificationConfigAsync(NotificationConfig, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            NotificationConfig notificationConfig = new NotificationConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            NotificationConfig response = await securityCenterClient.UpdateNotificationConfigAsync(notificationConfig, updateMask);
             // End snippet
         }
 

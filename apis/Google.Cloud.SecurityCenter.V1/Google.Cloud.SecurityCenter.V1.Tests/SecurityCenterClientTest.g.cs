@@ -405,6 +405,371 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void CreateNotificationConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "config_id908a73d1",
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.CreateNotificationConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "config_id908a73d1",
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationConfig1()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "config_id908a73d1",
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.CreateNotificationConfig(request.Parent, request.ConfigId, request.NotificationConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationConfig1Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "config_id908a73d1",
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.Parent, request.ConfigId, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.Parent, request.ConfigId, request.NotificationConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationConfig1ResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "config_id908a73d1",
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.CreateNotificationConfig(request.ParentAsOrganizationName, request.ConfigId, request.NotificationConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationConfig1ResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ConfigId = "config_id908a73d1",
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.ConfigId, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.ConfigId, request.NotificationConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationConfig2()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.CreateNotificationConfig(request.Parent, request.NotificationConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationConfig2Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.Parent, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.Parent, request.NotificationConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateNotificationConfig2ResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.CreateNotificationConfig(request.ParentAsOrganizationName, request.NotificationConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateNotificationConfig2ResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateNotificationConfigRequest request = new CreateNotificationConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.CreateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.CreateNotificationConfigAsync(request.ParentAsOrganizationName, request.NotificationConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteNotificationConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteNotificationConfig(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationConfigAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteNotificationConfig()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteNotificationConfig(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationConfigAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteNotificationConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationConfigAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteNotificationConfigResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteNotificationConfig(request.NotificationConfigName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteNotificationConfigResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteNotificationConfigRequest request = new DeleteNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteNotificationConfigAsync(request.NotificationConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteNotificationConfigAsync(request.NotificationConfigName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
@@ -558,6 +923,156 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.GetNotificationConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.GetNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.GetNotificationConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationConfig()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.GetNotificationConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationConfigAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.GetNotificationConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.GetNotificationConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetNotificationConfigResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.GetNotificationConfig(request.NotificationConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetNotificationConfigResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetNotificationConfigRequest request = new GetNotificationConfigRequest
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.GetNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.GetNotificationConfigAsync(request.NotificationConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.GetNotificationConfigAsync(request.NotificationConfigName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1538,6 +2053,160 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             Finding responseCallSettings = await client.UpdateFindingAsync(request.Finding, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.UpdateFindingAsync(request.Finding, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateNotificationConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.UpdateNotificationConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateNotificationConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.UpdateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.UpdateNotificationConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateNotificationConfig1()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.UpdateNotificationConfig(request.NotificationConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateNotificationConfig1Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.UpdateNotificationConfigAsync(request.NotificationConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.UpdateNotificationConfigAsync(request.NotificationConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateNotificationConfig2()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig response = client.UpdateNotificationConfig(request.NotificationConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateNotificationConfig2Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateNotificationConfigRequest request = new UpdateNotificationConfigRequest
+            {
+                NotificationConfig = new NotificationConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            NotificationConfig expectedResponse = new NotificationConfig
+            {
+                NotificationConfigName = NotificationConfigName.FromOrganizationNotificationConfig("[ORGANIZATION]", "[NOTIFICATION_CONFIG]"),
+                Description = "description2cf9da67",
+                PubsubTopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ServiceAccount = "service_accounta3c1b923",
+                StreamingConfig = new NotificationConfig.Types.StreamingConfig(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateNotificationConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NotificationConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            NotificationConfig responseCallSettings = await client.UpdateNotificationConfigAsync(request.NotificationConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            NotificationConfig responseCancellationToken = await client.UpdateNotificationConfigAsync(request.NotificationConfig, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

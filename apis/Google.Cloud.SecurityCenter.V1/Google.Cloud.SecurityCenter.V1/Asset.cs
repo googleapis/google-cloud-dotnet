@@ -25,11 +25,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYXNzZXQucHJvdG8S",
-            "Hmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90bxozZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3Yx",
-            "L3NlY3VyaXR5X21hcmtzLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29n",
-            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIpIHCgVBc3NldBIMCgRuYW1lGAEg",
+            "Hmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRocZ29vZ2xlL2FwaS9h",
+            "bm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoz",
+            "Z29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3NlY3VyaXR5X21hcmtz",
+            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpIHCgVBc3NldBIMCgRuYW1lGAEg",
             "ASgJEmIKGnNlY3VyaXR5X2NlbnRlcl9wcm9wZXJ0aWVzGAIgASgLMj4uZ29v",
             "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkFzc2V0LlNlY3VyaXR5Q2Vu",
             "dGVyUHJvcGVydGllcxJaChNyZXNvdXJjZV9wcm9wZXJ0aWVzGAcgAygLMj0u",
@@ -56,7 +56,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxW",
             "MeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset), global::Google.Cloud.SecurityCenter.V1.Asset.Parser, new[]{ "Name", "SecurityCenterProperties", "ResourceProperties", "SecurityMarks", "CreateTime", "UpdateTime", "IamPolicy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties), global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties.Parser, new[]{ "ResourceName", "ResourceType", "ResourceParent", "ResourceProject", "ResourceOwners", "ResourceDisplayName", "ResourceParentDisplayName", "ResourceProjectDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy), global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy.Parser, new[]{ "PolicyBlob" }, null, null, null, null),

@@ -25,8 +25,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc291cmNlLnByb3Rv",
-            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
+            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i",
             "mwEKBlNvdXJjZRIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
             "CRITCgtkZXNjcmlwdGlvbhgDIAEoCTpY6kFVCiRzZWN1cml0eWNlbnRlci5n",
             "b29nbGVhcGlzLmNvbS9Tb3VyY2USLW9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
@@ -37,7 +37,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
             "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Source), global::Google.Cloud.SecurityCenter.V1.Source.Parser, new[]{ "Name", "DisplayName", "Description" }, null, null, null, null)
           }));
