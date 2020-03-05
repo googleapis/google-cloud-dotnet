@@ -3,7 +3,7 @@
 //     source: google/cloud/automl/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -268,6 +267,14 @@ namespace Google.Cloud.AutoML.V1 {
 
       /// <summary>
       /// Imports data into a dataset.
+      /// For Tables this method can only be called on an empty Dataset.
+      ///
+      /// For Tables:
+      /// *   A
+      /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+      ///     parameter must be explicitly set.
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -369,11 +376,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
       ///
-      /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
-      /// Only applicable for Text Classification, Image Object Detection; all other
-      /// domains manage deployment automatically.
+      /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+      /// deployment automatically.
       ///
       /// Returns an empty response in the
       /// [response][google.longrunning.Operation.response] field when it completes.
@@ -389,7 +396,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Undeploys a model. If the model is not deployed this method has no effect.
       ///
-      /// Only applicable for Text Classification, Image Object Detection;
+      /// Only applicable for Text Classification, Image Object Detection and Tables;
       /// all other domains manage deployment automatically.
       ///
       /// Returns an empty response in the
@@ -705,6 +712,14 @@ namespace Google.Cloud.AutoML.V1 {
       }
       /// <summary>
       /// Imports data into a dataset.
+      /// For Tables this method can only be called on an empty Dataset.
+      ///
+      /// For Tables:
+      /// *   A
+      /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+      ///     parameter must be explicitly set.
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -717,6 +732,14 @@ namespace Google.Cloud.AutoML.V1 {
       }
       /// <summary>
       /// Imports data into a dataset.
+      /// For Tables this method can only be called on an empty Dataset.
+      ///
+      /// For Tables:
+      /// *   A
+      /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+      ///     parameter must be explicitly set.
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -727,6 +750,14 @@ namespace Google.Cloud.AutoML.V1 {
       }
       /// <summary>
       /// Imports data into a dataset.
+      /// For Tables this method can only be called on an empty Dataset.
+      ///
+      /// For Tables:
+      /// *   A
+      /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+      ///     parameter must be explicitly set.
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -739,6 +770,14 @@ namespace Google.Cloud.AutoML.V1 {
       }
       /// <summary>
       /// Imports data into a dataset.
+      /// For Tables this method can only be called on an empty Dataset.
+      ///
+      /// For Tables:
+      /// *   A
+      /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+      ///     parameter must be explicitly set.
+      /// Returns an empty response in the
+      /// [response][google.longrunning.Operation.response] field when it completes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1100,11 +1139,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
       ///
-      /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
-      /// Only applicable for Text Classification, Image Object Detection; all other
-      /// domains manage deployment automatically.
+      /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+      /// deployment automatically.
       ///
       /// Returns an empty response in the
       /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1123,11 +1162,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
       ///
-      /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
-      /// Only applicable for Text Classification, Image Object Detection; all other
-      /// domains manage deployment automatically.
+      /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+      /// deployment automatically.
       ///
       /// Returns an empty response in the
       /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1144,11 +1183,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
       ///
-      /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
-      /// Only applicable for Text Classification, Image Object Detection; all other
-      /// domains manage deployment automatically.
+      /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+      /// deployment automatically.
       ///
       /// Returns an empty response in the
       /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1167,11 +1206,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
       ///
-      /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+      /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
-      /// Only applicable for Text Classification, Image Object Detection; all other
-      /// domains manage deployment automatically.
+      /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+      /// deployment automatically.
       ///
       /// Returns an empty response in the
       /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1186,7 +1225,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Undeploys a model. If the model is not deployed this method has no effect.
       ///
-      /// Only applicable for Text Classification, Image Object Detection;
+      /// Only applicable for Text Classification, Image Object Detection and Tables;
       /// all other domains manage deployment automatically.
       ///
       /// Returns an empty response in the
@@ -1204,7 +1243,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Undeploys a model. If the model is not deployed this method has no effect.
       ///
-      /// Only applicable for Text Classification, Image Object Detection;
+      /// Only applicable for Text Classification, Image Object Detection and Tables;
       /// all other domains manage deployment automatically.
       ///
       /// Returns an empty response in the
@@ -1220,7 +1259,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Undeploys a model. If the model is not deployed this method has no effect.
       ///
-      /// Only applicable for Text Classification, Image Object Detection;
+      /// Only applicable for Text Classification, Image Object Detection and Tables;
       /// all other domains manage deployment automatically.
       ///
       /// Returns an empty response in the
@@ -1238,7 +1277,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Undeploys a model. If the model is not deployed this method has no effect.
       ///
-      /// Only applicable for Text Classification, Image Object Detection;
+      /// Only applicable for Text Classification, Image Object Detection and Tables;
       /// all other domains manage deployment automatically.
       ///
       /// Returns an empty response in the

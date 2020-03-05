@@ -25,12 +25,12 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRlbXMucHJvdG8SFmdv",
-            "b2dsZS5jbG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8aJWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZ2VvbWV0cnkucHJvdG8a",
-            "H2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJvdG8aKWdvb2dsZS9jbG91",
-            "ZC9hdXRvbWwvdjEvdGV4dF9zZWdtZW50LnByb3RvGhlnb29nbGUvcHJvdG9i",
-            "dWYvYW55LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
-            "HGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8iPQoFSW1hZ2USFQoLaW1h",
+            "b2dsZS5jbG91ZC5hdXRvbWwudjEaJWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
+            "Z2VvbWV0cnkucHJvdG8aH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJv",
+            "dG8aKWdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvdGV4dF9zZWdtZW50LnByb3Rv",
+            "Ghlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGh5nb29nbGUvcHJvdG9idWYv",
+            "ZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
+            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iPQoFSW1hZ2USFQoLaW1h",
             "Z2VfYnl0ZXMYASABKAxIABIVCg10aHVtYm5haWxfdXJpGAQgASgJQgYKBGRh",
             "dGEiRgoLVGV4dFNuaXBwZXQSDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5",
             "cGUYAiABKAkSEwoLY29udGVudF91cmkYBCABKAki6gEKEkRvY3VtZW50RGlt",
@@ -65,7 +65,7 @@ namespace Google.Cloud.AutoML.V1 {
             "LlYxygIWR29vZ2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6",
             "OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.GeometryReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Image), global::Google.Cloud.AutoML.V1.Image.Parser, new[]{ "ImageBytes", "ThumbnailUri" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSnippet), global::Google.Cloud.AutoML.V1.TextSnippet.Parser, new[]{ "Content", "MimeType", "ContentUri" }, null, null, null, null),
@@ -333,11 +333,9 @@ namespace Google.Cloud.AutoML.V1 {
     public const int MimeTypeFieldNumber = 2;
     private string mimeType_ = "";
     /// <summary>
-    /// Optional. The format of
-    /// [content][google.cloud.automl.v1.TextSnippet.content]. Currently the only
-    /// two allowed values are "text/html" and "text/plain". If left blank, the
-    /// format is automatically determined from the type of the uploaded
-    /// [content][google.cloud.automl.v1.TextSnippet.content].
+    /// Optional. The format of [content][google.cloud.automl.v1.TextSnippet.content]. Currently the only two allowed
+    /// values are "text/html" and "text/plain". If left blank, the format is
+    /// automatically determined from the type of the uploaded [content][google.cloud.automl.v1.TextSnippet.content].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MimeType {
@@ -976,9 +974,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Describes the layout information of a
-      /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the
-      /// document.
+      /// Describes the layout information of a [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the document.
       /// </summary>
       public sealed partial class Layout : pb::IMessage<Layout> {
         private static readonly pb::MessageParser<Layout> _parser = new pb::MessageParser<Layout>(() => new Layout());
@@ -1022,7 +1018,7 @@ namespace Google.Cloud.AutoML.V1 {
         private global::Google.Cloud.AutoML.V1.TextSegment textSegment_;
         /// <summary>
         /// Text Segment that represents a segment in
-        /// [document_text][google.cloud.automl.v1.Document.document_text].
+        /// [document_text][google.cloud.automl.v1p1beta.Document.document_text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.AutoML.V1.TextSegment TextSegment {
@@ -1036,9 +1032,8 @@ namespace Google.Cloud.AutoML.V1 {
         public const int PageNumberFieldNumber = 2;
         private int pageNumber_;
         /// <summary>
-        /// Page number of the
-        /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
-        /// the original document, starts from 1.
+        /// Page number of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the original document, starts
+        /// from 1.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int PageNumber {
@@ -1052,14 +1047,13 @@ namespace Google.Cloud.AutoML.V1 {
         public const int BoundingPolyFieldNumber = 3;
         private global::Google.Cloud.AutoML.V1.BoundingPoly boundingPoly_;
         /// <summary>
-        /// The position of the
-        /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
-        /// the page. Contains exactly 4
+        /// The position of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the page.
+        /// Contains exactly 4
         ///
-        /// [normalized_vertices][google.cloud.automl.v1.BoundingPoly.normalized_vertices]
+        /// [normalized_vertices][google.cloud.automl.v1p1beta.BoundingPoly.normalized_vertices]
         /// and they are connected by edges in the order provided, which will
         /// represent a rectangle parallel to the frame. The
-        /// [NormalizedVertex-s][google.cloud.automl.v1.NormalizedVertex] are
+        /// [NormalizedVertex-s][google.cloud.automl.v1p1beta.NormalizedVertex] are
         /// relative to the page.
         /// Coordinates are based on top-left as point (0,0).
         /// </summary>
@@ -1075,9 +1069,7 @@ namespace Google.Cloud.AutoML.V1 {
         public const int TextSegmentTypeFieldNumber = 4;
         private global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType textSegmentType_ = global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType.Unspecified;
         /// <summary>
-        /// The type of the
-        /// [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in
-        /// document.
+        /// The type of the [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.AutoML.V1.Document.Types.Layout.Types.TextSegmentType TextSegmentType {

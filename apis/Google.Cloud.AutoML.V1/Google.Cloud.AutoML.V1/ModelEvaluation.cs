@@ -25,14 +25,14 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvYXV0b21sL3YxL21vZGVsX2V2YWx1YXRpb24ucHJv",
-            "dG8SFmdvb2dsZS5jbG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aK2dvb2ds",
-            "ZS9jbG91ZC9hdXRvbWwvdjEvY2xhc3NpZmljYXRpb24ucHJvdG8aJmdvb2ds",
-            "ZS9jbG91ZC9hdXRvbWwvdjEvZGV0ZWN0aW9uLnByb3RvGixnb29nbGUvY2xv",
-            "dWQvYXV0b21sL3YxL3RleHRfZXh0cmFjdGlvbi5wcm90bxorZ29vZ2xlL2Ns",
-            "b3VkL2F1dG9tbC92MS90ZXh0X3NlbnRpbWVudC5wcm90bxooZ29vZ2xlL2Ns",
-            "b3VkL2F1dG9tbC92MS90cmFuc2xhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byK0BQoPTW9kZWxFdmFsdWF0aW9uEmQKIWNs",
+            "dG8SFmdvb2dsZS5jbG91ZC5hdXRvbWwudjEaGWdvb2dsZS9hcGkvcmVzb3Vy",
+            "Y2UucHJvdG8aK2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvY2xhc3NpZmljYXRp",
+            "b24ucHJvdG8aJmdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZGV0ZWN0aW9uLnBy",
+            "b3RvGixnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RleHRfZXh0cmFjdGlvbi5w",
+            "cm90bxorZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS90ZXh0X3NlbnRpbWVudC5w",
+            "cm90bxooZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS90cmFuc2xhdGlvbi5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2Fw",
+            "aS9hbm5vdGF0aW9ucy5wcm90byK+BgoPTW9kZWxFdmFsdWF0aW9uEmQKIWNs",
             "YXNzaWZpY2F0aW9uX2V2YWx1YXRpb25fbWV0cmljcxgIIAEoCzI3Lmdvb2ds",
             "ZS5jbG91ZC5hdXRvbWwudjEuQ2xhc3NpZmljYXRpb25FdmFsdWF0aW9uTWV0",
             "cmljc0gAEl4KHnRyYW5zbGF0aW9uX2V2YWx1YXRpb25fbWV0cmljcxgJIAEo",
@@ -47,13 +47,16 @@ namespace Google.Cloud.AutoML.V1 {
             "YWx1YXRpb25NZXRyaWNzSAASDAoEbmFtZRgBIAEoCRIaChJhbm5vdGF0aW9u",
             "X3NwZWNfaWQYAiABKAkSFAoMZGlzcGxheV9uYW1lGA8gASgJEi8KC2NyZWF0",
             "ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIfChdl",
-            "dmFsdWF0ZWRfZXhhbXBsZV9jb3VudBgGIAEoBUIJCgdtZXRyaWNzQqoBChpj",
-            "b20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRvbWyq",
-            "AhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9N",
-            "bFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
+            "dmFsdWF0ZWRfZXhhbXBsZV9jb3VudBgGIAEoBTqHAepBgwEKJWF1dG9tbC5n",
+            "b29nbGVhcGlzLmNvbS9Nb2RlbEV2YWx1YXRpb24SWnByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfS9tb2Rl",
+            "bEV2YWx1YXRpb25zL3ttb2RlbF9ldmFsdWF0aW9ufUIJCgdtZXRyaWNzQqoB",
+            "Chpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRv",
+            "bWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1",
+            "dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Cloud.AutoML.V1.DetectionReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextExtractionReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSentimentReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Cloud.AutoML.V1.DetectionReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextExtractionReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSentimentReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ModelEvaluation), global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser, new[]{ "ClassificationEvaluationMetrics", "TranslationEvaluationMetrics", "ImageObjectDetectionEvaluationMetrics", "TextSentimentEvaluationMetrics", "TextExtractionEvaluationMetrics", "Name", "AnnotationSpecId", "DisplayName", "CreateTime", "EvaluatedExampleCount" }, new[]{ "Metrics" }, null, null, null)
           }));
@@ -124,7 +127,10 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "classification_evaluation_metrics" field.</summary>
     public const int ClassificationEvaluationMetricsFieldNumber = 8;
     /// <summary>
-    /// Model evaluation metrics for image, text classification.
+    /// Model evaluation metrics for image, text, video and tables
+    /// classification.
+    /// Tables problem is considered a classification when the target column
+    /// is CATEGORY DataType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.ClassificationEvaluationMetrics ClassificationEvaluationMetrics {
@@ -212,8 +218,15 @@ namespace Google.Cloud.AutoML.V1 {
     public const int AnnotationSpecIdFieldNumber = 2;
     private string annotationSpecId_ = "";
     /// <summary>
-    /// Output only. The ID of the annotation spec that the model evaluation
-    /// applies to. The The ID is empty for the overall model evaluation.
+    /// Output only. The ID of the annotation spec that the model evaluation applies to. The
+    /// The ID is empty for the overall model evaluation.
+    /// For Tables annotation specs in the dataset do not exist and this ID is
+    /// always not set, but for CLASSIFICATION
+    ///
+    /// [prediction_type-s][google.cloud.automl.v1.TablesModelMetadata.prediction_type]
+    /// the
+    /// [display_name][google.cloud.automl.v1.ModelEvaluation.display_name]
+    /// field is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AnnotationSpecId {
@@ -232,7 +245,12 @@ namespace Google.Cloud.AutoML.V1 {
     /// at the moment when the model was trained. Because this field returns a
     /// value at model training time, for different models trained from the same
     /// dataset, the values may differ, since display names could had been changed
-    /// between the two model's trainings.
+    /// between the two model's trainings. For Tables CLASSIFICATION
+    ///
+    /// [prediction_type-s][google.cloud.automl.v1.TablesModelMetadata.prediction_type]
+    /// distinct values of the target column at the moment of the model evaluation
+    /// are populated here.
+    /// The display_name is empty for the overall model evaluation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {

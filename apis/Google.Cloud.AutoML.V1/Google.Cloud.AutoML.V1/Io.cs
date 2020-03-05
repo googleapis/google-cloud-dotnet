@@ -25,8 +25,8 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvY2xvdWQvYXV0b21sL3YxL2lvLnByb3RvEhZnb29nbGUuY2xv",
-            "dWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9n",
-            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIsABCgtJbnB1dENvbmZp",
+            "dWQuYXV0b21sLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIsABCgtJbnB1dENvbmZp",
             "ZxI3CgpnY3Nfc291cmNlGAEgASgLMiEuZ29vZ2xlLmNsb3VkLmF1dG9tbC52",
             "MS5HY3NTb3VyY2VIABI/CgZwYXJhbXMYAiADKAsyLy5nb29nbGUuY2xvdWQu",
             "YXV0b21sLnYxLklucHV0Q29uZmlnLlBhcmFtc0VudHJ5Gi0KC1BhcmFtc0Vu",
@@ -53,7 +53,7 @@ namespace Google.Cloud.AutoML.V1 {
             "QXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6",
             "Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.InputConfig), global::Google.Cloud.AutoML.V1.InputConfig.Parser, new[]{ "GcsSource", "Params" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.BatchPredictInputConfig), global::Google.Cloud.AutoML.V1.BatchPredictInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
@@ -70,8 +70,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
   #region Messages
   /// <summary>
-  /// Input configuration for
-  /// [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] action.
+  /// Input configuration for [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] action.
   ///
   /// The format of input depends on dataset_metadata the Dataset into which
   /// the import is happening has. As input source the
@@ -163,6 +162,103 @@ namespace Google.Cloud.AutoML.V1 {
   ///     TRAIN,gs://folder/image1.png,bike,.7,.6,,,.8,.9,,
   ///     UNASSIGNED,gs://folder/im2.png,car,0.1,0.1,0.2,0.1,0.2,0.3,0.1,0.3
   ///     TEST,gs://folder/im3.png,,,,,,,,,
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
+  /// &lt;h4>AutoML Video Intelligence&lt;/h4>
+  ///
+  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  ///
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/video-intelligence/automl/docs/prepare) for
+  /// more information.
+  ///
+  /// CSV file(s) with each line in format:
+  ///
+  ///     ML_USE,GCS_FILE_PATH
+  ///
+  /// For `ML_USE`, do not use `VALIDATE`.
+  ///
+  /// `GCS_FILE_PATH` is the path to another .csv file that describes training
+  /// example for a given `ML_USE`, using the following row format:
+  ///
+  ///     GCS_FILE_PATH,(LABEL,TIME_SEGMENT_START,TIME_SEGMENT_END | ,,)
+  ///
+  /// Here `GCS_FILE_PATH` leads to a video of up to 50GB in size and up
+  /// to 3h duration. Supported extensions: .MOV, .MPEG4, .MP4, .AVI.
+  ///
+  /// `TIME_SEGMENT_START` and `TIME_SEGMENT_END` must be within the
+  /// length of the video, and the end time must be after the start time. Any
+  /// segment of a video which has one or more labels on it, is considered a
+  /// hard negative for all other labels. Any segment with no labels on
+  /// it is considered to be unknown. If a whole video is unknown, then
+  /// it should be mentioned just once with ",," in place of `LABEL,
+  /// TIME_SEGMENT_START,TIME_SEGMENT_END`.
+  ///
+  /// Sample top level CSV file:
+  ///
+  ///     TRAIN,gs://folder/train_videos.csv
+  ///     TEST,gs://folder/test_videos.csv
+  ///     UNASSIGNED,gs://folder/other_videos.csv
+  ///
+  /// Sample rows of a CSV file for a particular ML_USE:
+  ///
+  ///     gs://folder/video1.avi,car,120,180.000021
+  ///     gs://folder/video1.avi,bike,150,180.000021
+  ///     gs://folder/vid2.avi,car,0,60.5
+  ///     gs://folder/vid3.avi,,,
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Object Tracking&lt;/h5>
+  ///
+  /// See [Preparing your training
+  /// data](/video-intelligence/automl/object-tracking/docs/prepare) for more
+  /// information.
+  ///
+  /// CSV file(s) with each line in format:
+  ///
+  ///     ML_USE,GCS_FILE_PATH
+  ///
+  /// For `ML_USE`, do not use `VALIDATE`.
+  ///
+  /// `GCS_FILE_PATH` is the path to another .csv file that describes training
+  /// example for a given `ML_USE`, using the following row format:
+  ///
+  ///     GCS_FILE_PATH,LABEL,[INSTANCE_ID],TIMESTAMP,BOUNDING_BOX
+  ///
+  /// or
+  ///
+  ///     GCS_FILE_PATH,,,,,,,,,,
+  ///
+  /// Here `GCS_FILE_PATH` leads to a video of up to 50GB in size and up
+  /// to 3h duration. Supported extensions: .MOV, .MPEG4, .MP4, .AVI.
+  /// Providing `INSTANCE_ID`s can help to obtain a better model. When
+  /// a specific labeled entity leaves the video frame, and shows up
+  /// afterwards it is not required, albeit preferable, that the same
+  /// `INSTANCE_ID` is given to it.
+  ///
+  /// `TIMESTAMP` must be within the length of the video, the
+  /// `BOUNDING_BOX` is assumed to be drawn on the closest video's frame
+  /// to the `TIMESTAMP`. Any mentioned by the `TIMESTAMP` frame is expected
+  /// to be exhaustively labeled and no more than 500 `BOUNDING_BOX`-es per
+  /// frame are allowed. If a whole video is unknown, then it should be
+  /// mentioned just once with ",,,,,,,,,," in place of `LABEL,
+  /// [INSTANCE_ID],TIMESTAMP,BOUNDING_BOX`.
+  ///
+  /// Sample top level CSV file:
+  ///
+  ///      TRAIN,gs://folder/train_videos.csv
+  ///      TEST,gs://folder/test_videos.csv
+  ///      UNASSIGNED,gs://folder/other_videos.csv
+  ///
+  /// Seven sample rows of a CSV file for a particular ML_USE:
+  ///
+  ///      gs://folder/video1.avi,car,1,12.10,0.8,0.8,0.9,0.8,0.9,0.9,0.8,0.9
+  ///      gs://folder/video1.avi,car,1,12.90,0.4,0.8,0.5,0.8,0.5,0.9,0.4,0.9
+  ///      gs://folder/video1.avi,car,2,12.10,.4,.2,.5,.2,.5,.3,.4,.3
+  ///      gs://folder/video1.avi,car,2,12.90,.8,.2,,,.9,.3,,
+  ///      gs://folder/video1.avi,bike,,12.50,.45,.45,,,.55,.55,,
+  ///      gs://folder/video2.avi,car,1,0,.1,.9,,,.9,.1,,
+  ///      gs://folder/video2.avi,,,,,,,,,,,
   ///   &lt;/section>
   /// &lt;/div>
   ///
@@ -262,8 +358,10 @@ namespace Google.Cloud.AutoML.V1 {
   /// **JSONL files that reference documents**
   ///
   /// .JSONL files contain, per line, a JSON document that wraps a
-  /// `input_config` that contains the path to a source PDF document.
+  /// `input_config` that contains the path to a source document.
   /// Multiple JSON documents can be separated using line breaks (\n).
+  ///
+  /// Supported document extensions: .PDF, .TIF, .TIFF
   ///
   /// For example:
   ///
@@ -278,19 +376,19 @@ namespace Google.Cloud.AutoML.V1 {
   ///     {
   ///       "document": {
   ///         "input_config": {
-  ///           "gcs_source": { "input_uris": [ "gs://folder/document2.pdf" ]
+  ///           "gcs_source": { "input_uris": [ "gs://folder/document2.tif" ]
   ///           }
   ///         }
   ///       }
   ///     }
   ///
-  /// **In-line JSONL files with PDF layout information**
+  /// **In-line JSONL files with document layout information**
   ///
-  /// **Note:** You can only annotate PDF files using the UI. The format described
-  /// below applies to annotated PDF files exported using the UI or `exportData`.
+  /// **Note:** You can only annotate documents using the UI. The format described
+  /// below applies to annotated documents exported using the UI or `exportData`.
   ///
-  /// In-line .JSONL files for PDF documents contain, per line, a JSON document
-  /// that wraps a `document` field that provides the textual content of the PDF
+  /// In-line .JSONL files for documents contain, per line, a JSON document
+  /// that wraps a `document` field that provides the textual content of the
   /// document and the layout information.
   ///
   /// For example:
@@ -378,8 +476,9 @@ namespace Google.Cloud.AutoML.V1 {
   ///     10MB or less in size.
   ///
   ///     For the `MULTICLASS` classification type, at most one `LABEL` is allowed.
+  ///
   ///     The `ML_USE` and `LABEL` columns are optional.
-  ///     Supported file extensions: .TXT, .PDF, .ZIP
+  ///     Supported file extensions: .TXT, .PDF, .TIF, .TIFF, .ZIP
   ///
   /// A maximum of 100 unique labels are allowed per CSV row.
   ///
@@ -422,7 +521,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     128kB or less in size.
   ///
   ///     The `ML_USE` and `SENTIMENT` columns are optional.
-  ///     Supported file extensions: .TXT, .PDF, .ZIP
+  ///     Supported file extensions: .TXT, .PDF, .TIF, .TIFF, .ZIP
   ///
   /// *  `SENTIMENT` - An integer between 0 and
   ///     Dataset.text_sentiment_dataset_metadata.sentiment_max
@@ -450,6 +549,52 @@ namespace Google.Cloud.AutoML.V1 {
   ///   &lt;/section>
   /// &lt;/div>
   ///
+  /// &lt;h4>AutoML Tables&lt;/h4>&lt;div class="ui-datasection-main">&lt;section
+  /// class="selected">
+  ///
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/automl-tables/docs/prepare) for more
+  /// information.
+  ///
+  /// You can use either
+  /// [gcs_source][google.cloud.automl.v1.InputConfig.gcs_source] or
+  /// [bigquery_source][google.cloud.automl.v1.InputConfig.bigquery_source].
+  /// All input is concatenated into a
+  /// single
+  ///
+  /// [primary_table_spec_id][google.cloud.automl.v1.TablesDatasetMetadata.primary_table_spec_id]
+  ///
+  /// **For gcs_source:**
+  ///
+  /// CSV file(s), where the first row of the first file is the header,
+  /// containing unique column names. If the first row of a subsequent
+  /// file is the same as the header, then it is also treated as a
+  /// header. All other rows contain values for the corresponding
+  /// columns.
+  ///
+  /// Each .CSV file by itself must be 10GB or smaller, and their total
+  /// size must be 100GB or smaller.
+  ///
+  /// First three sample rows of a CSV file:
+  /// &lt;pre>
+  /// "Id","First Name","Last Name","Dob","Addresses"
+  ///
+  /// "1","John","Doe","1968-01-22","[{"status":"current","address":"123_First_Avenue","city":"Seattle","state":"WA","zip":"11111","numberOfYears":"1"},{"status":"previous","address":"456_Main_Street","city":"Portland","state":"OR","zip":"22222","numberOfYears":"5"}]"
+  ///
+  /// "2","Jane","Doe","1980-10-16","[{"status":"current","address":"789_Any_Avenue","city":"Albany","state":"NY","zip":"33333","numberOfYears":"2"},{"status":"previous","address":"321_Main_Street","city":"Hoboken","state":"NJ","zip":"44444","numberOfYears":"3"}]}
+  /// &lt;/pre>
+  /// **For bigquery_source:**
+  ///
+  /// An URI of a BigQuery table. The user data size of the BigQuery
+  /// table must be 100GB or smaller.
+  ///
+  /// An imported table must have between 2 and 1,000 columns, inclusive,
+  /// and between 1000 and 100,000,000 rows, inclusive. There are at most 5
+  /// import data running in parallel.
+  ///
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
   /// **Input field definitions:**
   ///
   /// `ML_USE`
@@ -468,6 +613,11 @@ namespace Google.Cloud.AutoML.V1 {
   ///   For each label an AnnotationSpec is created which display_name
   ///   becomes the label; AnnotationSpecs are given back in predictions.
   ///
+  /// `INSTANCE_ID`
+  /// : A positive integer that identifies a specific instance of a
+  ///   labeled entity on an example. Used e.g. to track two cars on
+  ///   a video while being able to tell apart which one is which.
+  ///
   /// `BOUNDING_BOX`
   /// : (`VERTEX,VERTEX,VERTEX,VERTEX` | `VERTEX,,,VERTEX,,`)
   ///   A rectangle parallel to the frame of the example (image,
@@ -484,6 +634,23 @@ namespace Google.Cloud.AutoML.V1 {
   ///   image or video in given dimension. For fractions the
   ///   leading non-decimal 0 can be omitted (i.e. 0.3 = .3).
   ///   Point 0,0 is in top left.
+  ///
+  /// `TIME_SEGMENT_START`
+  /// : (`TIME_OFFSET`)
+  ///   Expresses a beginning, inclusive, of a time segment
+  ///   within an example that has a time dimension
+  ///   (e.g. video).
+  ///
+  /// `TIME_SEGMENT_END`
+  /// : (`TIME_OFFSET`)
+  ///   Expresses an end, exclusive, of a time segment within
+  ///   n example that has a time dimension (e.g. video).
+  ///
+  /// `TIME_OFFSET`
+  /// : A number of seconds as measured from the start of an
+  ///   example (e.g. video). Fractions are allowed, up to a
+  ///   microsecond precision. "inf" is allowed, and it means the end
+  ///   of the example.
   ///
   /// `TEXT_SNIPPET`
   /// : The content of a text snippet, UTF-8 encoded, enclosed within
@@ -545,9 +712,8 @@ namespace Google.Cloud.AutoML.V1 {
     public const int GcsSourceFieldNumber = 1;
     /// <summary>
     /// The Google Cloud Storage location for the input content.
-    /// For [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData],
-    /// `gcs_source` points to a CSV file with a structure described in
-    /// [InputConfig][google.cloud.automl.v1.InputConfig].
+    /// For [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData], `gcs_source` points to a CSV file with
+    /// a structure described in [InputConfig][google.cloud.automl.v1.InputConfig].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.GcsSource GcsSource {
@@ -567,6 +733,14 @@ namespace Google.Cloud.AutoML.V1 {
     /// Additional domain-specific parameters describing the semantic of the
     /// imported data, any string must be up to 25000
     /// characters long.
+    ///
+    /// &lt;h4>AutoML Tables&lt;/h4>
+    ///
+    /// `schema_inference_version`
+    /// : (integer) This value must be supplied.
+    ///   The version of the
+    ///   algorithm to use for the initial inference of the
+    ///   column data types of the imported table. Allowed values: "1".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Params {
@@ -709,6 +883,82 @@ namespace Google.Cloud.AutoML.V1 {
   /// non-terminal symbols defined near the end of this comment. The formats
   /// are:
   ///
+  /// &lt;h4>AutoML Vision&lt;/h4>
+  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  ///
+  /// One or more CSV files where each line is a single column:
+  ///
+  ///     GCS_FILE_PATH
+  ///
+  /// The Google Cloud Storage location of an image of up to
+  /// 30MB in size. Supported extensions: .JPEG, .GIF, .PNG.
+  /// This path is treated as the ID in the batch predict output.
+  ///
+  /// Sample rows:
+  ///
+  ///     gs://folder/image1.jpeg
+  ///     gs://folder/image2.gif
+  ///     gs://folder/image3.png
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Object Detection&lt;/h5>
+  ///
+  /// One or more CSV files where each line is a single column:
+  ///
+  ///     GCS_FILE_PATH
+  ///
+  /// The Google Cloud Storage location of an image of up to
+  /// 30MB in size. Supported extensions: .JPEG, .GIF, .PNG.
+  /// This path is treated as the ID in the batch predict output.
+  ///
+  /// Sample rows:
+  ///
+  ///     gs://folder/image1.jpeg
+  ///     gs://folder/image2.gif
+  ///     gs://folder/image3.png
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
+  /// &lt;h4>AutoML Video Intelligence&lt;/h4>
+  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  ///
+  /// One or more CSV files where each line is a single column:
+  ///
+  ///     GCS_FILE_PATH,TIME_SEGMENT_START,TIME_SEGMENT_END
+  ///
+  /// `GCS_FILE_PATH` is the Google Cloud Storage location of video up to 50GB in
+  /// size and up to 3h in duration duration.
+  /// Supported extensions: .MOV, .MPEG4, .MP4, .AVI.
+  ///
+  /// `TIME_SEGMENT_START` and `TIME_SEGMENT_END` must be within the
+  /// length of the video, and the end time must be after the start time.
+  ///
+  /// Sample rows:
+  ///
+  ///     gs://folder/video1.mp4,10,40
+  ///     gs://folder/video1.mp4,20,60
+  ///     gs://folder/vid2.mov,0,inf
+  ///
+  /// &lt;/section>&lt;section>&lt;h5>Object Tracking&lt;/h5>
+  ///
+  /// One or more CSV files where each line is a single column:
+  ///
+  ///     GCS_FILE_PATH,TIME_SEGMENT_START,TIME_SEGMENT_END
+  ///
+  /// `GCS_FILE_PATH` is the Google Cloud Storage location of video up to 50GB in
+  /// size and up to 3h in duration duration.
+  /// Supported extensions: .MOV, .MPEG4, .MP4, .AVI.
+  ///
+  /// `TIME_SEGMENT_START` and `TIME_SEGMENT_END` must be within the
+  /// length of the video, and the end time must be after the start time.
+  ///
+  /// Sample rows:
+  ///
+  ///     gs://folder/video1.mp4,10,40
+  ///     gs://folder/video1.mp4,20,60
+  ///     gs://folder/vid2.mov,0,inf
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
   /// &lt;h4>AutoML Natural Language&lt;/h4>
   /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
   ///
@@ -717,13 +967,15 @@ namespace Google.Cloud.AutoML.V1 {
   ///     GCS_FILE_PATH
   ///
   /// `GCS_FILE_PATH` is the Google Cloud Storage location of a text file.
-  /// Supported file extensions: .TXT, .PDF
+  /// Supported file extensions: .TXT, .PDF, .TIF, .TIFF
+  ///
   /// Text files can be no larger than 10MB in size.
   ///
   /// Sample rows:
   ///
   ///     gs://folder/text1.txt
   ///     gs://folder/text2.pdf
+  ///     gs://folder/text3.tif
   ///
   /// &lt;/section>&lt;section>&lt;h5>Sentiment Analysis&lt;/h5>
   /// One or more CSV files where each line is a single column:
@@ -731,13 +983,15 @@ namespace Google.Cloud.AutoML.V1 {
   ///     GCS_FILE_PATH
   ///
   /// `GCS_FILE_PATH` is the Google Cloud Storage location of a text file.
-  /// Supported file extensions: .TXT, .PDF
+  /// Supported file extensions: .TXT, .PDF, .TIF, .TIFF
+  ///
   /// Text files can be no larger than 128kB in size.
   ///
   /// Sample rows:
   ///
   ///     gs://folder/text1.txt
   ///     gs://folder/text2.pdf
+  ///     gs://folder/text3.tif
   ///
   /// &lt;/section>&lt;section>&lt;h5>Entity Extraction&lt;/h5>
   ///
@@ -753,9 +1007,10 @@ namespace Google.Cloud.AutoML.V1 {
   /// be UTF-8 NFC encoded (ASCII already is). The IDs provided should be
   /// unique.
   ///
-  /// Each document JSONL file contains, per line, a proto that wraps a
-  /// Document proto with `input_config` set. Only PDF documents are
-  /// currently supported, and each PDF document cannot exceed 2MB in size.
+  /// Each document JSONL file contains, per line, a proto that wraps a Document
+  /// proto with `input_config` set. Each document cannot exceed 2MB in size.
+  ///
+  /// Supported document extensions: .PDF, .TIF, .TIFF
   ///
   /// Each JSONL file must not exceed 100MB in size, and no more than 20
   /// JSONL files may be passed.
@@ -803,11 +1058,64 @@ namespace Google.Cloud.AutoML.V1 {
   ///      {
   ///        "document": {
   ///          "input_config": {
-  ///            "gcs_source": { "input_uris": [ "gs://folder/document2.pdf" ]
+  ///            "gcs_source": { "input_uris": [ "gs://folder/document2.tif" ]
   ///            }
   ///          }
   ///        }
   ///      }
+  ///   &lt;/section>
+  /// &lt;/div>
+  ///
+  /// &lt;h4>AutoML Tables&lt;/h4>&lt;div class="ui-datasection-main">&lt;section
+  /// class="selected">
+  ///
+  /// See [Preparing your training
+  /// data](https://cloud.google.com/automl-tables/docs/predict-batch) for more
+  /// information.
+  ///
+  /// You can use either
+  /// [gcs_source][google.cloud.automl.v1.BatchPredictInputConfig.gcs_source]
+  /// or
+  /// [bigquery_source][BatchPredictInputConfig.bigquery_source].
+  ///
+  /// **For gcs_source:**
+  ///
+  /// CSV file(s), each by itself 10GB or smaller and total size must be
+  /// 100GB or smaller, where first file must have a header containing
+  /// column names. If the first row of a subsequent file is the same as
+  /// the header, then it is also treated as a header. All other rows
+  /// contain values for the corresponding columns.
+  ///
+  /// The column names must contain the model's
+  ///
+  /// [input_feature_column_specs'][google.cloud.automl.v1.TablesModelMetadata.input_feature_column_specs]
+  /// [display_name-s][google.cloud.automl.v1.ColumnSpec.display_name]
+  /// (order doesn't matter). The columns corresponding to the model's
+  /// input feature column specs must contain values compatible with the
+  /// column spec's data types. Prediction on all the rows, i.e. the CSV
+  /// lines, will be attempted.
+  ///
+  /// Sample rows from a CSV file:
+  /// &lt;pre>
+  /// "First Name","Last Name","Dob","Addresses"
+  ///
+  /// "John","Doe","1968-01-22","[{"status":"current","address":"123_First_Avenue","city":"Seattle","state":"WA","zip":"11111","numberOfYears":"1"},{"status":"previous","address":"456_Main_Street","city":"Portland","state":"OR","zip":"22222","numberOfYears":"5"}]"
+  ///
+  /// "Jane","Doe","1980-10-16","[{"status":"current","address":"789_Any_Avenue","city":"Albany","state":"NY","zip":"33333","numberOfYears":"2"},{"status":"previous","address":"321_Main_Street","city":"Hoboken","state":"NJ","zip":"44444","numberOfYears":"3"}]}
+  /// &lt;/pre>
+  /// **For bigquery_source:**
+  ///
+  /// The URI of a BigQuery table. The user data size of the BigQuery
+  /// table must be 100GB or smaller.
+  ///
+  /// The column names must contain the model's
+  ///
+  /// [input_feature_column_specs'][google.cloud.automl.v1.TablesModelMetadata.input_feature_column_specs]
+  /// [display_name-s][google.cloud.automl.v1.ColumnSpec.display_name]
+  /// (order doesn't matter). The columns corresponding to the model's
+  /// input feature column specs must contain values compatible with the
+  /// column spec's data types. Prediction on all the rows of the table
+  /// will be attempted.
   ///   &lt;/section>
   /// &lt;/div>
   ///
@@ -816,6 +1124,23 @@ namespace Google.Cloud.AutoML.V1 {
   /// `GCS_FILE_PATH`
   /// : The path to a file on Google Cloud Storage. For example,
   ///   "gs://folder/video.avi".
+  ///
+  /// `TIME_SEGMENT_START`
+  /// : (`TIME_OFFSET`)
+  ///   Expresses a beginning, inclusive, of a time segment
+  ///   within an example that has a time dimension
+  ///   (e.g. video).
+  ///
+  /// `TIME_SEGMENT_END`
+  /// : (`TIME_OFFSET`)
+  ///   Expresses an end, exclusive, of a time segment within
+  ///   n example that has a time dimension (e.g. video).
+  ///
+  /// `TIME_OFFSET`
+  /// : A number of seconds as measured from the start of an
+  ///   example (e.g. video). Fractions are allowed, up to a
+  ///   microsecond precision. "inf" is allowed, and it means the end
+  ///   of the example.
   ///
   ///  **Errors:**
   ///
@@ -1140,76 +1465,37 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Output configuration for ExportData.
-  ///
-  /// As destination the
-  /// [gcs_destination][google.cloud.automl.v1.OutputConfig.gcs_destination]
-  /// must be set unless specified otherwise for a domain. If gcs_destination is
-  /// set then in the given directory a new directory is created. Its name
-  /// will be "export_data-&lt;dataset-display-name>-&lt;timestamp-of-export-call>",
-  /// where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format.
-  /// Only ground truth annotations are exported (not approved annotations are
-  /// not exported).
-  ///
-  /// The outputs correspond to how the data was imported, and may be used as
-  /// input to import data. The output formats are represented as EBNF with literal
-  /// commas and same non-terminal symbols definitions are these in import data's
-  /// [InputConfig][google.cloud.automl.v1.InputConfig]:
-  ///
-  ///  *  For Image Classification:
-  ///         CSV file(s) `image_classification_1.csv`,
-  ///         `image_classification_2.csv`,...,`image_classification_N.csv`with
-  ///         each line in format:
-  ///         ML_USE,GCS_FILE_PATH,LABEL,LABEL,...
-  ///         where GCS_FILE_PATHs point at the original, source locations of the
-  ///         imported images.
-  ///         For MULTICLASS classification type, there can be at most one LABEL
-  ///         per example.
-  ///
-  ///  *  For Image Object Detection:
-  ///         CSV file(s) `image_object_detection_1.csv`,
-  ///         `image_object_detection_2.csv`,...,`image_object_detection_N.csv`
-  ///         with each line in format:
-  ///         ML_USE,GCS_FILE_PATH,[LABEL],(BOUNDING_BOX | ,,,,,,,)
-  ///         where GCS_FILE_PATHs point at the original, source locations of the
-  ///         imported images.
-  ///
-  ///  *  For Text Classification:
-  ///         In the created directory CSV file(s) `text_classification_1.csv`,
-  ///         `text_classification_2.csv`, ...,`text_classification_N.csv` will be
-  ///         created where N depends on the total number of examples exported.
-  ///         Each line in the CSV is of the format:
-  ///         ML_USE,GCS_FILE_PATH,LABEL,LABEL,...
-  ///         where GCS_FILE_PATHs point at the exported .txt files containing
-  ///         the text content of the imported example. For MULTICLASS
-  ///         classification type, there will be at most one LABEL per example.
-  ///
-  ///  *  For Text Sentiment:
-  ///         In the created directory CSV file(s) `text_sentiment_1.csv`,
-  ///         `text_sentiment_2.csv`, ...,`text_sentiment_N.csv` will be
-  ///         created where N depends on the total number of examples exported.
-  ///         Each line in the CSV is of the format:
-  ///         ML_USE,GCS_FILE_PATH,SENTIMENT
-  ///         where GCS_FILE_PATHs point at the exported .txt files containing
-  ///         the text content of the imported example.
-  ///
-  ///  *  For Text Extraction:
-  ///         CSV file `text_extraction.csv`, with each line in format:
-  ///         ML_USE,GCS_FILE_PATH
-  ///         GCS_FILE_PATH leads to a .JSONL (i.e. JSON Lines) file which
-  ///         contains, per line, a proto that wraps a TextSnippet proto (in json
-  ///         representation) followed by AnnotationPayload protos (called
-  ///         annotations). If initially documents had been imported, the JSONL
-  ///         will point at the original, source locations of the imported
-  ///         documents.
-  ///
-  ///  *  For Translation:
+  /// *  For Translation:
   ///         CSV file `translation.csv`, with each line in format:
   ///         ML_USE,GCS_FILE_PATH
   ///         GCS_FILE_PATH leads to a .TSV file which describes examples that have
   ///         given ML_USE, using the following row format per line:
   ///         TEXT_SNIPPET (in source language) \t TEXT_SNIPPET (in target
   ///         language)
+  ///
+  ///   *  For Tables:
+  ///         Output depends on whether the dataset was imported from Google Cloud
+  ///         Storage or BigQuery.
+  ///         Google Cloud Storage case:
+  ///
+  /// [gcs_destination][google.cloud.automl.v1p1beta.OutputConfig.gcs_destination]
+  ///           must be set. Exported are CSV file(s) `tables_1.csv`,
+  ///           `tables_2.csv`,...,`tables_N.csv` with each having as header line
+  ///           the table's column names, and all other lines contain values for
+  ///           the header columns.
+  ///         BigQuery case:
+  ///
+  /// [bigquery_destination][google.cloud.automl.v1p1beta.OutputConfig.bigquery_destination]
+  ///           pointing to a BigQuery project must be set. In the given project a
+  ///           new dataset will be created with name
+  ///
+  /// `export_data_&lt;automl-dataset-display-name>_&lt;timestamp-of-export-call>`
+  ///           where &lt;automl-dataset-display-name> will be made
+  ///           BigQuery-dataset-name compatible (e.g. most special characters will
+  ///           become underscores), and timestamp will be in
+  ///           YYYY_MM_DDThh_mm_ss_sssZ "based on ISO-8601" format. In that
+  ///           dataset a new table called `primary_table` will be created, and
+  ///           filled with precisely the same data as this obtained on import.
   /// </summary>
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig> {
     private static readonly pb::MessageParser<OutputConfig> _parser = new pb::MessageParser<OutputConfig>(() => new OutputConfig());
@@ -1253,9 +1539,9 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Required. The Google Cloud Storage location where the output is to be
-    /// written to. For Image Object Detection, Text Extraction in the given
-    /// directory a new directory will be created with name:
+    /// Required. The Google Cloud Storage location where the output is to be written to.
+    /// For Image Object Detection, Text Extraction, Video Classification and
+    /// Tables, in the given directory a new directory will be created with name:
     /// export_data-&lt;dataset-display-name>-&lt;timestamp-of-export-call> where
     /// timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. All export
     /// output will be written into that directory.
@@ -1397,6 +1683,101 @@ namespace Google.Cloud.AutoML.V1 {
   /// where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. The contents
   /// of it depends on the ML problem the predictions are made for.
   ///
+  ///  *  For Image Classification:
+  ///         In the created directory files `image_classification_1.jsonl`,
+  ///         `image_classification_2.jsonl`,...,`image_classification_N.jsonl`
+  ///         will be created, where N may be 1, and depends on the
+  ///         total number of the successfully predicted images and annotations.
+  ///         A single image will be listed only once with all its annotations,
+  ///         and its annotations will never be split across files.
+  ///         Each .JSONL file will contain, per line, a JSON representation of a
+  ///         proto that wraps image's "ID" : "&lt;id_value>" followed by a list of
+  ///         zero or more AnnotationPayload protos (called annotations), which
+  ///         have classification detail populated.
+  ///         If prediction for any image failed (partially or completely), then an
+  ///         additional `errors_1.jsonl`, `errors_2.jsonl`,..., `errors_N.jsonl`
+  ///         files will be created (N depends on total number of failed
+  ///         predictions). These files will have a JSON representation of a proto
+  ///         that wraps the same "ID" : "&lt;id_value>" but here followed by
+  ///         exactly one
+  ///
+  /// [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///         containing only `code` and `message`fields.
+  ///
+  ///  *  For Image Object Detection:
+  ///         In the created directory files `image_object_detection_1.jsonl`,
+  ///         `image_object_detection_2.jsonl`,...,`image_object_detection_N.jsonl`
+  ///         will be created, where N may be 1, and depends on the
+  ///         total number of the successfully predicted images and annotations.
+  ///         Each .JSONL file will contain, per line, a JSON representation of a
+  ///         proto that wraps image's "ID" : "&lt;id_value>" followed by a list of
+  ///         zero or more AnnotationPayload protos (called annotations), which
+  ///         have image_object_detection detail populated. A single image will
+  ///         be listed only once with all its annotations, and its annotations
+  ///         will never be split across files.
+  ///         If prediction for any image failed (partially or completely), then
+  ///         additional `errors_1.jsonl`, `errors_2.jsonl`,..., `errors_N.jsonl`
+  ///         files will be created (N depends on total number of failed
+  ///         predictions). These files will have a JSON representation of a proto
+  ///         that wraps the same "ID" : "&lt;id_value>" but here followed by
+  ///         exactly one
+  ///
+  /// [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///         containing only `code` and `message`fields.
+  ///  *  For Video Classification:
+  ///         In the created directory a video_classification.csv file, and a .JSON
+  ///         file per each video classification requested in the input (i.e. each
+  ///         line in given CSV(s)), will be created.
+  ///
+  ///         The format of video_classification.csv is:
+  ///
+  /// GCS_FILE_PATH,TIME_SEGMENT_START,TIME_SEGMENT_END,JSON_FILE_NAME,STATUS
+  ///         where:
+  ///         GCS_FILE_PATH,TIME_SEGMENT_START,TIME_SEGMENT_END = matches 1 to 1
+  ///             the prediction input lines (i.e. video_classification.csv has
+  ///             precisely the same number of lines as the prediction input had.)
+  ///         JSON_FILE_NAME = Name of .JSON file in the output directory, which
+  ///             contains prediction responses for the video time segment.
+  ///         STATUS = "OK" if prediction completed successfully, or an error code
+  ///             with message otherwise. If STATUS is not "OK" then the .JSON file
+  ///             for that line may not exist or be empty.
+  ///
+  ///         Each .JSON file, assuming STATUS is "OK", will contain a list of
+  ///         AnnotationPayload protos in JSON format, which are the predictions
+  ///         for the video time segment the file is assigned to in the
+  ///         video_classification.csv. All AnnotationPayload protos will have
+  ///         video_classification field set, and will be sorted by
+  ///         video_classification.type field (note that the returned types are
+  ///         governed by `classifaction_types` parameter in
+  ///         [PredictService.BatchPredictRequest.params][]).
+  ///
+  ///  *  For Video Object Tracking:
+  ///         In the created directory a video_object_tracking.csv file will be
+  ///         created, and multiple files video_object_trackinng_1.json,
+  ///         video_object_trackinng_2.json,..., video_object_trackinng_N.json,
+  ///         where N is the number of requests in the input (i.e. the number of
+  ///         lines in given CSV(s)).
+  ///
+  ///         The format of video_object_tracking.csv is:
+  ///
+  /// GCS_FILE_PATH,TIME_SEGMENT_START,TIME_SEGMENT_END,JSON_FILE_NAME,STATUS
+  ///         where:
+  ///         GCS_FILE_PATH,TIME_SEGMENT_START,TIME_SEGMENT_END = matches 1 to 1
+  ///             the prediction input lines (i.e. video_object_tracking.csv has
+  ///             precisely the same number of lines as the prediction input had.)
+  ///         JSON_FILE_NAME = Name of .JSON file in the output directory, which
+  ///             contains prediction responses for the video time segment.
+  ///         STATUS = "OK" if prediction completed successfully, or an error
+  ///             code with message otherwise. If STATUS is not "OK" then the .JSON
+  ///             file for that line may not exist or be empty.
+  ///
+  ///         Each .JSON file, assuming STATUS is "OK", will contain a list of
+  ///         AnnotationPayload protos in JSON format, which are the predictions
+  ///         for each frame of the video time segment the file is assigned to in
+  ///         video_object_tracking.csv. All AnnotationPayload protos will have
+  ///         video_object_tracking field set.
   ///  *  For Text Classification:
   ///         In the created directory files `text_classification_1.jsonl`,
   ///         `text_classification_2.jsonl`,...,`text_classification_N.jsonl`
@@ -1404,18 +1785,18 @@ namespace Google.Cloud.AutoML.V1 {
   ///         total number of inputs and annotations found.
   ///
   ///         Each .JSONL file will contain, per line, a JSON representation of a
-  ///         proto that wraps input text (or pdf) file in
+  ///         proto that wraps input text file (or document) in
   ///         the text snippet (or document) proto and a list of
   ///         zero or more AnnotationPayload protos (called annotations), which
-  ///         have classification detail populated. A single text (or pdf) file
-  ///         will be listed only once with all its annotations, and its
+  ///         have classification detail populated. A single text file (or
+  ///         document) will be listed only once with all its annotations, and its
   ///         annotations will never be split across files.
   ///
-  ///         If prediction for any text (or pdf) file failed (partially or
+  ///         If prediction for any input file (or document) failed (partially or
   ///         completely), then additional `errors_1.jsonl`, `errors_2.jsonl`,...,
   ///         `errors_N.jsonl` files will be created (N depends on total number of
   ///         failed predictions). These files will have a JSON representation of a
-  ///         proto that wraps input text (or pdf) file followed by exactly one
+  ///         proto that wraps input file followed by exactly one
   ///
   /// [`google.rpc.Status`](https:
   /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
@@ -1428,18 +1809,18 @@ namespace Google.Cloud.AutoML.V1 {
   ///         total number of inputs and annotations found.
   ///
   ///         Each .JSONL file will contain, per line, a JSON representation of a
-  ///         proto that wraps input text (or pdf) file in
+  ///         proto that wraps input text file (or document) in
   ///         the text snippet (or document) proto and a list of
   ///         zero or more AnnotationPayload protos (called annotations), which
-  ///         have text_sentiment detail populated. A single text (or pdf) file
-  ///         will be listed only once with all its annotations, and its
+  ///         have text_sentiment detail populated. A single text file (or
+  ///         document) will be listed only once with all its annotations, and its
   ///         annotations will never be split across files.
   ///
-  ///         If prediction for any text (or pdf) file failed (partially or
+  ///         If prediction for any input file (or document) failed (partially or
   ///         completely), then additional `errors_1.jsonl`, `errors_2.jsonl`,...,
   ///         `errors_N.jsonl` files will be created (N depends on total number of
   ///         failed predictions). These files will have a JSON representation of a
-  ///         proto that wraps input text (or pdf) file followed by exactly one
+  ///         proto that wraps input file followed by exactly one
   ///
   /// [`google.rpc.Status`](https:
   /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
@@ -1475,9 +1856,103 @@ namespace Google.Cloud.AutoML.V1 {
   ///         failed predictions). These files will have a JSON representation of a
   ///         proto that wraps either the "id" : "&lt;id_value>" (in case of inline)
   ///         or the document proto (in case of document) but here followed by
-  ///         exactly one [`google.rpc.Status`](https:
+  ///         exactly one
+  ///
+  /// [`google.rpc.Status`](https:
   /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
   ///         containing only `code` and `message`.
+  ///
+  ///  *  For Tables:
+  ///         Output depends on whether
+  ///
+  /// [gcs_destination][google.cloud.automl.v1p1beta.BatchPredictOutputConfig.gcs_destination]
+  ///         or
+  ///
+  /// [bigquery_destination][google.cloud.automl.v1p1beta.BatchPredictOutputConfig.bigquery_destination]
+  ///         is set (either is allowed).
+  ///         Google Cloud Storage case:
+  ///           In the created directory files `tables_1.csv`, `tables_2.csv`,...,
+  ///           `tables_N.csv` will be created, where N may be 1, and depends on
+  ///           the total number of the successfully predicted rows.
+  ///           For all CLASSIFICATION
+  ///
+  /// [prediction_type-s][google.cloud.automl.v1p1beta.TablesModelMetadata.prediction_type]:
+  ///             Each .csv file will contain a header, listing all columns'
+  ///
+  /// [display_name-s][google.cloud.automl.v1p1beta.ColumnSpec.display_name]
+  ///             given on input followed by M target column names in the format of
+  ///
+  /// "&lt;[target_column_specs][google.cloud.automl.v1p1beta.TablesModelMetadata.target_column_spec]
+  ///
+  /// [display_name][google.cloud.automl.v1p1beta.ColumnSpec.display_name]>_&lt;target
+  ///             value>_score" where M is the number of distinct target values,
+  ///             i.e. number of distinct values in the target column of the table
+  ///             used to train the model. Subsequent lines will contain the
+  ///             respective values of successfully predicted rows, with the last,
+  ///             i.e. the target, columns having the corresponding prediction
+  ///             [scores][google.cloud.automl.v1p1beta.TablesAnnotation.score].
+  ///           For REGRESSION and FORECASTING
+  ///
+  /// [prediction_type-s][google.cloud.automl.v1p1beta.TablesModelMetadata.prediction_type]:
+  ///             Each .csv file will contain a header, listing all columns'
+  ///             [display_name-s][google.cloud.automl.v1p1beta.display_name]
+  ///             given on input followed by the predicted target column with name
+  ///             in the format of
+  ///
+  /// "predicted_&lt;[target_column_specs][google.cloud.automl.v1p1beta.TablesModelMetadata.target_column_spec]
+  ///
+  /// [display_name][google.cloud.automl.v1p1beta.ColumnSpec.display_name]>"
+  ///             Subsequent lines will contain the respective values of
+  ///             successfully predicted rows, with the last, i.e. the target,
+  ///             column having the predicted target value.
+  ///             If prediction for any rows failed, then an additional
+  ///             `errors_1.csv`, `errors_2.csv`,..., `errors_N.csv` will be
+  ///             created (N depends on total number of failed rows). These files
+  ///             will have analogous format as `tables_*.csv`, but always with a
+  ///             single target column having
+  ///
+  /// [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///             represented as a JSON string, and containing only `code` and
+  ///             `message`.
+  ///         BigQuery case:
+  ///
+  /// [bigquery_destination][google.cloud.automl.v1p1beta.OutputConfig.bigquery_destination]
+  ///           pointing to a BigQuery project must be set. In the given project a
+  ///           new dataset will be created with name
+  ///           `prediction_&lt;model-display-name>_&lt;timestamp-of-prediction-call>`
+  ///           where &lt;model-display-name> will be made
+  ///           BigQuery-dataset-name compatible (e.g. most special characters will
+  ///           become underscores), and timestamp will be in
+  ///           YYYY_MM_DDThh_mm_ss_sssZ "based on ISO-8601" format. In the dataset
+  ///           two tables will be created, `predictions`, and `errors`.
+  ///           The `predictions` table's column names will be the input columns'
+  ///
+  /// [display_name-s][google.cloud.automl.v1p1beta.ColumnSpec.display_name]
+  ///           followed by the target column with name in the format of
+  ///
+  /// "predicted_&lt;[target_column_specs][google.cloud.automl.v1p1beta.TablesModelMetadata.target_column_spec]
+  ///
+  /// [display_name][google.cloud.automl.v1p1beta.ColumnSpec.display_name]>"
+  ///           The input feature columns will contain the respective values of
+  ///           successfully predicted rows, with the target column having an
+  ///           ARRAY of
+  ///
+  /// [AnnotationPayloads][google.cloud.automl.v1p1beta.AnnotationPayload],
+  ///           represented as STRUCT-s, containing
+  ///           [TablesAnnotation][google.cloud.automl.v1p1beta.TablesAnnotation].
+  ///           The `errors` table contains rows for which the prediction has
+  ///           failed, it has analogous input columns while the target column name
+  ///           is in the format of
+  ///
+  /// "errors_&lt;[target_column_specs][google.cloud.automl.v1p1beta.TablesModelMetadata.target_column_spec]
+  ///
+  /// [display_name][google.cloud.automl.v1p1beta.ColumnSpec.display_name]>",
+  ///           and as a value has
+  ///
+  /// [`google.rpc.Status`](https:
+  /// //github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
+  ///           represented as a STRUCT, and containing only `code` and `message`.
   /// </summary>
   public sealed partial class BatchPredictOutputConfig : pb::IMessage<BatchPredictOutputConfig> {
     private static readonly pb::MessageParser<BatchPredictOutputConfig> _parser = new pb::MessageParser<BatchPredictOutputConfig>(() => new BatchPredictOutputConfig());
@@ -1521,8 +1996,8 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Required. The Google Cloud Storage location of the directory where the
-    /// output is to be written to.
+    /// Required. The Google Cloud Storage location of the directory where the output is to
+    /// be written to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.GcsDestination GcsDestination {
@@ -1695,9 +2170,8 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Required. The Google Cloud Storage location where the model is to be
-    /// written to. This location may only be set for the following model
-    /// formats:
+    /// Required. The Google Cloud Storage location where the model is to be written to.
+    /// This location may only be set for the following model formats:
     ///   "tflite", "edgetpu_tflite", "tf_saved_model", "tf_js", "core_ml".
     ///
     ///  Under the directory given as the destination a new one with name
@@ -1726,7 +2200,8 @@ namespace Google.Cloud.AutoML.V1 {
     ///
     /// *  For Image Classification mobile-low-latency-1, mobile-versatile-1,
     ///        mobile-high-accuracy-1:
-    ///      "tflite" (default), "edgetpu_tflite", "tf_saved_model", "tf_js".
+    ///      "tflite" (default), "edgetpu_tflite", "tf_saved_model", "tf_js",
+    ///      "docker".
     ///
     /// *  For Image Classification mobile-core-ml-low-latency-1,
     ///        mobile-core-ml-versatile-1, mobile-core-ml-high-accuracy-1:
@@ -1742,7 +2217,14 @@ namespace Google.Cloud.AutoML.V1 {
     ///                    devices.
     /// * tf_saved_model - A tensorflow model in SavedModel format.
     /// * tf_js - A [TensorFlow.js](https://www.tensorflow.org/js) model that can
-    ///           be used in the browser and in Node.js using JavaScript.x`
+    ///           be used in the browser and in Node.js using JavaScript.
+    /// * docker - Used for Docker containers. Use the params field to customize
+    ///            the container. The container is verified to work correctly on
+    ///            ubuntu 16.04 operating system. See more at
+    ///            [containers
+    ///
+    /// quickstart](https:
+    /// //cloud.google.com/vision/automl/docs/containers-gcs-quickstart)
     /// * core_ml - Used for iOS mobile devices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1762,6 +2244,10 @@ namespace Google.Cloud.AutoML.V1 {
     /// Additional model-type and format specific parameters describing the
     /// requirements for the to be exported model files, any string must be up to
     /// 25000 characters long.
+    ///
+    ///  * For `docker` format:
+    ///     `cpu_architecture` - (string) "x86_64" (default).
+    ///     `gpu_architecture` - (string) "none" (default), "nvidia".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Params {

@@ -228,6 +228,8 @@ namespace Google.Cloud.AutoML.V1 {
 
   /// <summary>
   /// Model evaluation metrics for classification problems.
+  /// Note: For Video Classification this metrics only describe quality of the
+  /// Video Classification predictions of "segment_classification" type.
   /// </summary>
   public sealed partial class ClassificationEvaluationMetrics : pb::IMessage<ClassificationEvaluationMetrics> {
     private static readonly pb::MessageParser<ClassificationEvaluationMetrics> _parser = new pb::MessageParser<ClassificationEvaluationMetrics>(() => new ClassificationEvaluationMetrics());
@@ -709,10 +711,7 @@ namespace Google.Cloud.AutoML.V1 {
         public const int F1ScoreAt1FieldNumber = 7;
         private float f1ScoreAt1_;
         /// <summary>
-        /// Output only. The harmonic mean of
-        /// [recall_at1][google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfidenceMetricsEntry.recall_at1]
-        /// and
-        /// [precision_at1][google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfidenceMetricsEntry.precision_at1].
+        /// Output only. The harmonic mean of [recall_at1][google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfidenceMetricsEntry.recall_at1] and [precision_at1][google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfidenceMetricsEntry.precision_at1].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float F1ScoreAt1 {
@@ -1120,6 +1119,10 @@ namespace Google.Cloud.AutoML.V1 {
         private readonly pbc::RepeatedField<string> annotationSpecId_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Output only. IDs of the annotation specs used in the confusion matrix.
+        /// For Tables CLASSIFICATION
+        ///
+        /// [prediction_type][google.cloud.automl.v1p1beta.TablesModelMetadata.prediction_type]
+        /// only list of [annotation_spec_display_name-s][] is populated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> AnnotationSpecId {
@@ -1133,7 +1136,12 @@ namespace Google.Cloud.AutoML.V1 {
         private readonly pbc::RepeatedField<string> displayName_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Output only. Display name of the annotation specs used in the confusion
-        /// matrix, as they were at the moment of the evaluation.
+        /// matrix, as they were at the moment of the evaluation. For Tables
+        /// CLASSIFICATION
+        ///
+        /// [prediction_type-s][google.cloud.automl.v1p1beta.TablesModelMetadata.prediction_type],
+        /// distinct values of the target column at the moment of the model
+        /// evaluation are populated here.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> DisplayName {
@@ -1300,9 +1308,7 @@ namespace Google.Cloud.AutoML.V1 {
             /// Output only. Value of the specific cell in the confusion matrix.
             /// The number of values each row has (i.e. the length of the row) is equal
             /// to the length of the `annotation_spec_id` field or, if that one is not
-            /// populated, length of the
-            /// [display_name][google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfusionMatrix.display_name]
-            /// field.
+            /// populated, length of the [display_name][google.cloud.automl.v1.ClassificationEvaluationMetrics.ConfusionMatrix.display_name] field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public pbc::RepeatedField<int> ExampleCount {

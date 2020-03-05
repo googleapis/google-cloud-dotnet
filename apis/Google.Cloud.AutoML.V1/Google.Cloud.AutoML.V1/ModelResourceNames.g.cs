@@ -30,12 +30,12 @@ namespace Google.Cloud.AutoML.V1
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>.
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/models/{model}</c>.
             /// </summary>
             ProjectLocationModel = 1
         }
 
-        private static gax::PathTemplate s_projectLocationModel = new gax::PathTemplate("projects/{project_id}/locations/{location_id}/models/{model_id}");
+        private static gax::PathTemplate s_projectLocationModel = new gax::PathTemplate("projects/{project}/locations/{location}/models/{model}");
 
         /// <summary>Creates a <see cref="ModelName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -46,8 +46,8 @@ namespace Google.Cloud.AutoML.V1
             new ModelName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="ModelName"/> with the pattern
-        /// <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>.
+        /// Creates a <see cref="ModelName"/> with the pattern <c>projects/{project}/locations/{location}/models/{model}</c>
+        /// .
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -58,28 +58,28 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ModelName"/> with pattern
-        /// <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>.
+        /// <c>projects/{project}/locations/{location}/models/{model}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="modelId">The <c>Model</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ModelName"/> with pattern
-        /// <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>.
+        /// <c>projects/{project}/locations/{location}/models/{model}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string modelId) =>
             FormatProjectLocationModel(projectId, locationId, modelId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ModelName"/> with pattern
-        /// <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>.
+        /// <c>projects/{project}/locations/{location}/models/{model}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="modelId">The <c>Model</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ModelName"/> with pattern
-        /// <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>.
+        /// <c>projects/{project}/locations/{location}/models/{model}</c>.
         /// </returns>
         public static string FormatProjectLocationModel(string projectId, string locationId, string modelId) =>
             s_projectLocationModel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(modelId, nameof(modelId)));
@@ -88,9 +88,7 @@ namespace Google.Cloud.AutoML.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project_id}/locations/{location_id}/models/{model_id}</c></description>
-        /// </item>
+        /// <item><description><c>projects/{project}/locations/{location}/models/{model}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="modelName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -104,9 +102,7 @@ namespace Google.Cloud.AutoML.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project_id}/locations/{location_id}/models/{model_id}</c></description>
-        /// </item>
+        /// <item><description><c>projects/{project}/locations/{location}/models/{model}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -126,9 +122,7 @@ namespace Google.Cloud.AutoML.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project_id}/locations/{location_id}/models/{model_id}</c></description>
-        /// </item>
+        /// <item><description><c>projects/{project}/locations/{location}/models/{model}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="modelName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -145,9 +139,7 @@ namespace Google.Cloud.AutoML.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project_id}/locations/{location_id}/models/{model_id}</c></description>
-        /// </item>
+        /// <item><description><c>projects/{project}/locations/{location}/models/{model}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -193,7 +185,7 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="ModelName"/> class from the component parts of pattern
-        /// <c>projects/{project_id}/locations/{location_id}/models/{model_id}</c>
+        /// <c>projects/{project}/locations/{location}/models/{model}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>

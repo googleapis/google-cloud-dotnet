@@ -25,11 +25,11 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXV0b21sL3YxL2ltYWdlLnByb3RvEhZnb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
-            "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGixnb29nbGUvY2xvdWQvYXV0",
-            "b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90bxorZ29vZ2xlL2Nsb3VkL2F1",
-            "dG9tbC92MS9jbGFzc2lmaWNhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byJtCiJJbWFnZUNsYXNzaWZpY2F0aW9uRGF0YXNl",
+            "Y2xvdWQuYXV0b21sLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGixn",
+            "b29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90bxor",
+            "Z29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9jbGFzc2lmaWNhdGlvbi5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9h",
+            "bm5vdGF0aW9ucy5wcm90byJtCiJJbWFnZUNsYXNzaWZpY2F0aW9uRGF0YXNl",
             "dE1ldGFkYXRhEkcKE2NsYXNzaWZpY2F0aW9uX3R5cGUYASABKA4yKi5nb29n",
             "bGUuY2xvdWQuYXV0b21sLnYxLkNsYXNzaWZpY2F0aW9uVHlwZSIlCiNJbWFn",
             "ZU9iamVjdERldGVjdGlvbkRhdGFzZXRNZXRhZGF0YSLUAQogSW1hZ2VDbGFz",
@@ -50,7 +50,7 @@ namespace Google.Cloud.AutoML.V1 {
             "dG9tbKoCFkdvb2dsZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRc",
             "QXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata.Parser, null, null, null, null, null),
@@ -431,38 +431,34 @@ namespace Google.Cloud.AutoML.V1 {
     ///               This is the default value.
     /// *   `mobile-low-latency-1` - A model that, in addition to providing
     ///               prediction via AutoML API, can also be exported (see
-    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel])
-    ///               and used on a mobile or edge device with TensorFlow
-    ///               afterwards. Expected to have low latency, but may have lower
-    ///               prediction quality than other models.
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile or edge device
+    ///               with TensorFlow afterwards. Expected to have low latency, but
+    ///               may have lower prediction quality than other models.
     /// *   `mobile-versatile-1` - A model that, in addition to providing
     ///               prediction via AutoML API, can also be exported (see
-    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel])
-    ///               and used on a mobile or edge device with TensorFlow
-    ///               afterwards.
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile or edge device
+    ///               with TensorFlow afterwards.
     /// *   `mobile-high-accuracy-1` - A model that, in addition to providing
     ///               prediction via AutoML API, can also be exported (see
-    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel])
-    ///               and used on a mobile or edge device with TensorFlow
-    ///               afterwards.  Expected to have a higher latency, but should
-    ///               also have a higher prediction quality than other models.
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile or edge device
+    ///               with TensorFlow afterwards.  Expected to have a higher
+    ///               latency, but should also have a higher prediction quality
+    ///               than other models.
     /// *   `mobile-core-ml-low-latency-1` - A model that, in addition to providing
     ///               prediction via AutoML API, can also be exported (see
-    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel])
-    ///               and used on a mobile device with Core ML afterwards. Expected
-    ///               to have low latency, but may have lower prediction quality
-    ///               than other models.
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile device with Core
+    ///               ML afterwards. Expected to have low latency, but may have
+    ///               lower prediction quality than other models.
     /// *   `mobile-core-ml-versatile-1` - A model that, in addition to providing
     ///               prediction via AutoML API, can also be exported (see
-    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel])
-    ///               and used on a mobile device with Core ML afterwards.
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile device with Core
+    ///               ML afterwards.
     /// *   `mobile-core-ml-high-accuracy-1` - A model that, in addition to
     ///               providing prediction via AutoML API, can also be exported
-    ///               (see
-    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel])
-    ///               and used on a mobile device with Core ML afterwards. Expected
-    ///               to have a higher latency, but should also have a higher
-    ///               prediction quality than other models.
+    ///               (see [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile device with
+    ///               Core ML afterwards.  Expected to have a higher latency, but
+    ///               should also have a higher prediction quality than other
+    ///               models.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ModelType {
@@ -737,6 +733,21 @@ namespace Google.Cloud.AutoML.V1 {
     /// *   `cloud-low-latency-1` -  A model to be used via prediction
     ///               calls to AutoML API. Expected to have low latency, but may
     ///               have lower prediction quality than other models.
+    /// *   `mobile-low-latency-1` - A model that, in addition to providing
+    ///               prediction via AutoML API, can also be exported (see
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile or edge device
+    ///               with TensorFlow afterwards. Expected to have low latency, but
+    ///               may have lower prediction quality than other models.
+    /// *   `mobile-versatile-1` - A model that, in addition to providing
+    ///               prediction via AutoML API, can also be exported (see
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile or edge device
+    ///               with TensorFlow afterwards.
+    /// *   `mobile-high-accuracy-1` - A model that, in addition to providing
+    ///               prediction via AutoML API, can also be exported (see
+    ///               [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]) and used on a mobile or edge device
+    ///               with TensorFlow afterwards.  Expected to have a higher
+    ///               latency, but should also have a higher prediction quality
+    ///               than other models.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ModelType {
