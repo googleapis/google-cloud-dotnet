@@ -832,7 +832,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                ReturnImmediately = false,
                 MaxMessages = 0,
             };
             // Make the request
@@ -851,7 +850,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                ReturnImmediately = false,
                 MaxMessages = 0,
             };
             // Make the request
@@ -1096,6 +1094,60 @@ namespace Google.Cloud.PubSub.V1.Snippets
             };
             // Make the request
             Snapshot response = await subscriberServiceApiClient.GetSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshot</summary>
+        public void GetSnapshot()
+        {
+            // Snippet: GetSnapshot(string, CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            string snapshot = "projects/[PROJECT]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Snapshot response = subscriberServiceApiClient.GetSnapshot(snapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshotAsync</summary>
+        public async Task GetSnapshotAsync()
+        {
+            // Snippet: GetSnapshotAsync(string, CallSettings)
+            // Additional: GetSnapshotAsync(string, CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            string snapshot = "projects/[PROJECT]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Snapshot response = await subscriberServiceApiClient.GetSnapshotAsync(snapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshot</summary>
+        public void GetSnapshotResourceNames()
+        {
+            // Snippet: GetSnapshot(SnapshotName, CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            SnapshotName snapshot = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]");
+            // Make the request
+            Snapshot response = subscriberServiceApiClient.GetSnapshot(snapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshotAsync</summary>
+        public async Task GetSnapshotResourceNamesAsync()
+        {
+            // Snippet: GetSnapshotAsync(SnapshotName, CallSettings)
+            // Additional: GetSnapshotAsync(SnapshotName, CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            SnapshotName snapshot = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]");
+            // Make the request
+            Snapshot response = await subscriberServiceApiClient.GetSnapshotAsync(snapshot);
             // End snippet
         }
 
