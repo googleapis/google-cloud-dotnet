@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -114,11 +115,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetDatasetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AutoMlClient.ListDatasets</c>
@@ -126,11 +130,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListDatasetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListDatasetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AutoMlClient.UpdateDataset</c>
@@ -150,11 +157,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteDatasetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>AutoMlClient.DeleteDataset</c> and
@@ -240,11 +250,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAnnotationSpecSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetAnnotationSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AutoMlClient.CreateModel</c>
@@ -282,11 +295,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AutoMlClient.ListModels</c>
@@ -294,11 +310,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListModelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListModelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AutoMlClient.DeleteModel</c>
@@ -306,11 +325,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>AutoMlClient.DeleteModel</c> and
@@ -438,11 +460,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetModelEvaluationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetModelEvaluationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -450,11 +475,14 @@ namespace Google.Cloud.AutoML.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListModelEvaluationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListModelEvaluationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AutoMlSettings"/> object.</returns>
@@ -628,6 +656,106 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<Dataset, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatasetOperationsClient, callSettings);
 
         /// <summary>
+        /// Creates a dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project to create the dataset for.
+        /// </param>
+        /// <param name="dataset">
+        /// Required. The dataset to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Dataset, OperationMetadata> CreateDataset(string parent, Dataset dataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDataset(new CreateDatasetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Dataset = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project to create the dataset for.
+        /// </param>
+        /// <param name="dataset">
+        /// Required. The dataset to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(string parent, Dataset dataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetAsync(new CreateDatasetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Dataset = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project to create the dataset for.
+        /// </param>
+        /// <param name="dataset">
+        /// Required. The dataset to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(string parent, Dataset dataset, st::CancellationToken cancellationToken) =>
+            CreateDatasetAsync(parent, dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project to create the dataset for.
+        /// </param>
+        /// <param name="dataset">
+        /// Required. The dataset to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Dataset, OperationMetadata> CreateDataset(gagr::LocationName parent, Dataset dataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDataset(new CreateDatasetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Dataset = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project to create the dataset for.
+        /// </param>
+        /// <param name="dataset">
+        /// Required. The dataset to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(gagr::LocationName parent, Dataset dataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetAsync(new CreateDatasetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Dataset = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project to create the dataset for.
+        /// </param>
+        /// <param name="dataset">
+        /// Required. The dataset to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Dataset, OperationMetadata>> CreateDatasetAsync(gagr::LocationName parent, Dataset dataset, st::CancellationToken cancellationToken) =>
+            CreateDatasetAsync(parent, dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -655,6 +783,84 @@ namespace Google.Cloud.AutoML.V1
             GetDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets a dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Dataset GetDataset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataset(new GetDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Dataset> GetDatasetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetAsync(new GetDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Dataset> GetDatasetAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Dataset GetDataset(DatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataset(new GetDatasetRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Dataset> GetDatasetAsync(DatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetAsync(new GetDatasetRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Dataset> GetDatasetAsync(DatasetName name, st::CancellationToken cancellationToken) =>
+            GetDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists datasets in a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -671,6 +877,102 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A pageable asynchronous sequence of <see cref="Dataset"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(ListDatasetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists datasets in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list datasets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Dataset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetsResponse, Dataset> ListDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasets(new ListDatasetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists datasets in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list datasets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Dataset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasetsAsync(new ListDatasetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists datasets in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list datasets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Dataset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetsResponse, Dataset> ListDatasets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasets(new ListDatasetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists datasets in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list datasets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Dataset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetsResponse, Dataset> ListDatasetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasetsAsync(new ListDatasetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Updates a dataset.
@@ -698,6 +1000,56 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Dataset> UpdateDatasetAsync(UpdateDatasetRequest request, st::CancellationToken cancellationToken) =>
             UpdateDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Dataset UpdateDataset(Dataset dataset, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDataset(new UpdateDatasetRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Dataset> UpdateDatasetAsync(Dataset dataset, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatasetAsync(new UpdateDatasetRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Dataset> UpdateDatasetAsync(Dataset dataset, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDatasetAsync(dataset, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a dataset and all of its contents.
@@ -765,7 +1117,117 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatasetOperationsClient, callSettings);
 
         /// <summary>
+        /// Deletes a dataset and all of its contents.
+        /// Returns empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDataset(new DeleteDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset and all of its contents.
+        /// Returns empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetAsync(new DeleteDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset and all of its contents.
+        /// Returns empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a dataset and all of its contents.
+        /// Returns empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataset(DatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDataset(new DeleteDatasetRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset and all of its contents.
+        /// Returns empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetAsync(DatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetAsync(new DeleteDatasetRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset and all of its contents.
+        /// Returns empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetAsync(DatasetName name, st::CancellationToken cancellationToken) =>
+            DeleteDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -775,6 +1237,14 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -784,6 +1254,14 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -816,6 +1294,166 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceImportDataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Dataset name. Dataset must already exist. All imported
+        /// annotations and examples will be added.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The desired input location and its domain specific semantics,
+        /// if any.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ImportData(string name, InputConfig inputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ImportData(new ImportDataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Dataset name. Dataset must already exist. All imported
+        /// annotations and examples will be added.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The desired input location and its domain specific semantics,
+        /// if any.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ImportDataAsync(string name, InputConfig inputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ImportDataAsync(new ImportDataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Dataset name. Dataset must already exist. All imported
+        /// annotations and examples will be added.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The desired input location and its domain specific semantics,
+        /// if any.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ImportDataAsync(string name, InputConfig inputConfig, st::CancellationToken cancellationToken) =>
+            ImportDataAsync(name, inputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Dataset name. Dataset must already exist. All imported
+        /// annotations and examples will be added.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The desired input location and its domain specific semantics,
+        /// if any.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ImportData(DatasetName name, InputConfig inputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ImportData(new ImportDataRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Dataset name. Dataset must already exist. All imported
+        /// annotations and examples will be added.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The desired input location and its domain specific semantics,
+        /// if any.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ImportDataAsync(DatasetName name, InputConfig inputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ImportDataAsync(new ImportDataRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Dataset name. Dataset must already exist. All imported
+        /// annotations and examples will be added.
+        /// </param>
+        /// <param name="inputConfig">
+        /// Required. The desired input location and its domain specific semantics,
+        /// if any.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ImportDataAsync(DatasetName name, InputConfig inputConfig, st::CancellationToken cancellationToken) =>
+            ImportDataAsync(name, inputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Exports dataset's data to the provided output location.
@@ -877,6 +1515,118 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportDataOperationsClient, callSettings);
 
         /// <summary>
+        /// Exports dataset's data to the provided output location.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ExportData(string name, OutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportData(new ExportDataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports dataset's data to the provided output location.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportDataAsync(string name, OutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportDataAsync(new ExportDataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports dataset's data to the provided output location.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportDataAsync(string name, OutputConfig outputConfig, st::CancellationToken cancellationToken) =>
+            ExportDataAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports dataset's data to the provided output location.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ExportData(DatasetName name, OutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportData(new ExportDataRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports dataset's data to the provided output location.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportDataAsync(DatasetName name, OutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportDataAsync(new ExportDataRequest
+            {
+                DatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports dataset's data to the provided output location.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the dataset.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportDataAsync(DatasetName name, OutputConfig outputConfig, st::CancellationToken cancellationToken) =>
+            ExportDataAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an annotation spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -902,6 +1652,84 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(GetAnnotationSpecRequest request, st::CancellationToken cancellationToken) =>
             GetAnnotationSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnnotationSpec GetAnnotationSpec(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnnotationSpec(new GetAnnotationSpecRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnnotationSpecAsync(new GetAnnotationSpecRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAnnotationSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnnotationSpec GetAnnotationSpec(AnnotationSpecName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnnotationSpec(new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(AnnotationSpecName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnnotationSpecAsync(new GetAnnotationSpecRequest
+            {
+                AnnotationSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an annotation spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the annotation spec to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnnotationSpec> GetAnnotationSpecAsync(AnnotationSpecName name, st::CancellationToken cancellationToken) =>
+            GetAnnotationSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a model.
@@ -969,6 +1797,130 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<Model, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateModelOperationsClient, callSettings);
 
         /// <summary>
+        /// Creates a model.
+        /// Returns a Model in the [response][google.longrunning.Operation.response]
+        /// field when it completes.
+        /// When you create a model, several model evaluations are created for it:
+        /// a global evaluation, and one evaluation for each annotation spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent project where the model is being created.
+        /// </param>
+        /// <param name="model">
+        /// Required. The model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Model, OperationMetadata> CreateModel(string parent, Model model, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModel(new CreateModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Model = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a model.
+        /// Returns a Model in the [response][google.longrunning.Operation.response]
+        /// field when it completes.
+        /// When you create a model, several model evaluations are created for it:
+        /// a global evaluation, and one evaluation for each annotation spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent project where the model is being created.
+        /// </param>
+        /// <param name="model">
+        /// Required. The model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Model, OperationMetadata>> CreateModelAsync(string parent, Model model, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModelAsync(new CreateModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Model = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a model.
+        /// Returns a Model in the [response][google.longrunning.Operation.response]
+        /// field when it completes.
+        /// When you create a model, several model evaluations are created for it:
+        /// a global evaluation, and one evaluation for each annotation spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent project where the model is being created.
+        /// </param>
+        /// <param name="model">
+        /// Required. The model to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Model, OperationMetadata>> CreateModelAsync(string parent, Model model, st::CancellationToken cancellationToken) =>
+            CreateModelAsync(parent, model, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a model.
+        /// Returns a Model in the [response][google.longrunning.Operation.response]
+        /// field when it completes.
+        /// When you create a model, several model evaluations are created for it:
+        /// a global evaluation, and one evaluation for each annotation spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent project where the model is being created.
+        /// </param>
+        /// <param name="model">
+        /// Required. The model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Model, OperationMetadata> CreateModel(gagr::LocationName parent, Model model, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModel(new CreateModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Model = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a model.
+        /// Returns a Model in the [response][google.longrunning.Operation.response]
+        /// field when it completes.
+        /// When you create a model, several model evaluations are created for it:
+        /// a global evaluation, and one evaluation for each annotation spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent project where the model is being created.
+        /// </param>
+        /// <param name="model">
+        /// Required. The model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Model, OperationMetadata>> CreateModelAsync(gagr::LocationName parent, Model model, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModelAsync(new CreateModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Model = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a model.
+        /// Returns a Model in the [response][google.longrunning.Operation.response]
+        /// field when it completes.
+        /// When you create a model, several model evaluations are created for it:
+        /// a global evaluation, and one evaluation for each annotation spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent project where the model is being created.
+        /// </param>
+        /// <param name="model">
+        /// Required. The model to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Model, OperationMetadata>> CreateModelAsync(gagr::LocationName parent, Model model, st::CancellationToken cancellationToken) =>
+            CreateModelAsync(parent, model, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -996,6 +1948,84 @@ namespace Google.Cloud.AutoML.V1
             GetModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets a model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Model GetModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModel(new GetModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> GetModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelAsync(new GetModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> GetModelAsync(string name, st::CancellationToken cancellationToken) =>
+            GetModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Model GetModel(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModel(new GetModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> GetModelAsync(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelAsync(new GetModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> GetModelAsync(ModelName name, st::CancellationToken cancellationToken) =>
+            GetModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists models.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1012,6 +2042,102 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(ListModelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists models.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project, from which to list the models.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModels(new ListModelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists models.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project, from which to list the models.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelsAsync(new ListModelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists models.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project, from which to list the models.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModels(new ListModelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists models.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project, from which to list the models.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelsAsync(new ListModelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Deletes a model.
@@ -1079,6 +2205,108 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteModelOperationsClient, callSettings);
 
         /// <summary>
+        /// Deletes a model.
+        /// Returns `google.protobuf.Empty` in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model being deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModel(new DeleteModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a model.
+        /// Returns `google.protobuf.Empty` in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model being deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelAsync(new DeleteModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a model.
+        /// Returns `google.protobuf.Empty` in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model being deleted.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteModelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a model.
+        /// Returns `google.protobuf.Empty` in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model being deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteModel(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModel(new DeleteModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a model.
+        /// Returns `google.protobuf.Empty` in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model being deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteModelAsync(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelAsync(new DeleteModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a model.
+        /// Returns `google.protobuf.Empty` in the
+        /// [response][google.longrunning.Operation.response] field when it completes,
+        /// and `delete_details` in the
+        /// [metadata][google.longrunning.Operation.metadata] field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model being deleted.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteModelAsync(ModelName name, st::CancellationToken cancellationToken) =>
+            DeleteModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates a model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1106,15 +2334,65 @@ namespace Google.Cloud.AutoML.V1
             UpdateModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The model which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Model UpdateModel(Model model, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateModel(new UpdateModelRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The model which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> UpdateModelAsync(Model model, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateModelAsync(new UpdateModelRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The model which replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Model> UpdateModelAsync(Model model, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateModelAsync(model, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deploys a model. If a model is already deployed, deploying it with the
         /// same parameters has no effect. Deploying with different parametrs
         /// (as e.g. changing
         /// 
-        /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
         /// will reset the deployment state without pausing the model's availability.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection; all other
-        /// domains manage deployment automatically.
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
         /// 
         /// Returns an empty response in the
         /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1130,11 +2408,11 @@ namespace Google.Cloud.AutoML.V1
         /// same parameters has no effect. Deploying with different parametrs
         /// (as e.g. changing
         /// 
-        /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
         /// will reset the deployment state without pausing the model's availability.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection; all other
-        /// domains manage deployment automatically.
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
         /// 
         /// Returns an empty response in the
         /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1150,11 +2428,11 @@ namespace Google.Cloud.AutoML.V1
         /// same parameters has no effect. Deploying with different parametrs
         /// (as e.g. changing
         /// 
-        /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
         /// will reset the deployment state without pausing the model's availability.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection; all other
-        /// domains manage deployment automatically.
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
         /// 
         /// Returns an empty response in the
         /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1192,9 +2470,153 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployModelOperationsClient, callSettings);
 
         /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        /// 
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// will reset the deployment state without pausing the model's availability.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeployModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployModel(new DeployModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        /// 
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// will reset the deployment state without pausing the model's availability.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeployModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployModelAsync(new DeployModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        /// 
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// will reset the deployment state without pausing the model's availability.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to deploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeployModelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeployModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        /// 
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// will reset the deployment state without pausing the model's availability.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeployModel(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployModel(new DeployModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        /// 
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// will reset the deployment state without pausing the model's availability.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeployModelAsync(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployModelAsync(new DeployModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys a model. If a model is already deployed, deploying it with the
+        /// same parameters has no effect. Deploying with different parametrs
+        /// (as e.g. changing
+        /// 
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// will reset the deployment state without pausing the model's availability.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to deploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeployModelAsync(ModelName name, st::CancellationToken cancellationToken) =>
+            DeployModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Undeploys a model. If the model is not deployed this method has no effect.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection;
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
         /// all other domains manage deployment automatically.
         /// 
         /// Returns an empty response in the
@@ -1209,7 +2631,7 @@ namespace Google.Cloud.AutoML.V1
         /// <summary>
         /// Undeploys a model. If the model is not deployed this method has no effect.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection;
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
         /// all other domains manage deployment automatically.
         /// 
         /// Returns an empty response in the
@@ -1224,7 +2646,7 @@ namespace Google.Cloud.AutoML.V1
         /// <summary>
         /// Undeploys a model. If the model is not deployed this method has no effect.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection;
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
         /// all other domains manage deployment automatically.
         /// 
         /// Returns an empty response in the
@@ -1261,6 +2683,120 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceUndeployModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UndeployModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
+        /// all other domains manage deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> UndeployModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployModel(new UndeployModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
+        /// all other domains manage deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UndeployModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployModelAsync(new UndeployModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
+        /// all other domains manage deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UndeployModelAsync(string name, st::CancellationToken cancellationToken) =>
+            UndeployModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
+        /// all other domains manage deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> UndeployModel(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployModel(new UndeployModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
+        /// all other domains manage deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UndeployModelAsync(ModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployModelAsync(new UndeployModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys a model. If the model is not deployed this method has no effect.
+        /// 
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
+        /// all other domains manage deployment automatically.
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the model to undeploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UndeployModelAsync(ModelName name, st::CancellationToken cancellationToken) =>
+            UndeployModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Exports a trained, "export-able", model to a user specified Google Cloud
@@ -1334,6 +2870,142 @@ namespace Google.Cloud.AutoML.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportModelOperationsClient, callSettings);
 
         /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model to export.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ExportModel(string name, ModelExportOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportModel(new ExportModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model to export.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportModelAsync(string name, ModelExportOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportModelAsync(new ExportModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model to export.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and configuration.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportModelAsync(string name, ModelExportOutputConfig outputConfig, st::CancellationToken cancellationToken) =>
+            ExportModelAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model to export.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ExportModel(ModelName name, ModelExportOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportModel(new ExportModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model to export.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportModelAsync(ModelName name, ModelExportOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ExportModelAsync(new ExportModelRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports a trained, "export-able", model to a user specified Google Cloud
+        /// Storage location. A model is considered export-able if and only if it has
+        /// an export format defined for it in
+        /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
+        /// 
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model to export.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and configuration.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ExportModelAsync(ModelName name, ModelExportOutputConfig outputConfig, st::CancellationToken cancellationToken) =>
+            ExportModelAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a model evaluation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1361,6 +3033,84 @@ namespace Google.Cloud.AutoML.V1
             GetModelEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets a model evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name for the model evaluation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelEvaluation GetModelEvaluation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelEvaluation(new GetModelEvaluationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name for the model evaluation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> GetModelEvaluationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelEvaluationAsync(new GetModelEvaluationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name for the model evaluation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> GetModelEvaluationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetModelEvaluationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a model evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name for the model evaluation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelEvaluation GetModelEvaluation(ModelEvaluationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelEvaluation(new GetModelEvaluationRequest
+            {
+                ModelEvaluationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name for the model evaluation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> GetModelEvaluationAsync(ModelEvaluationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelEvaluationAsync(new GetModelEvaluationRequest
+            {
+                ModelEvaluationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a model evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name for the model evaluation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelEvaluation> GetModelEvaluationAsync(ModelEvaluationName name, st::CancellationToken cancellationToken) =>
+            GetModelEvaluationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists model evaluations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1377,6 +3127,166 @@ namespace Google.Cloud.AutoML.V1
         /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluation"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(ListModelEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists model evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the model to list the model evaluations for.
+        /// If modelId is set as "-", this will list model evaluations from across all
+        /// models of the parent location.
+        /// </param>
+        /// <param name="filter">
+        /// Required. An expression for filtering the results of the request.
+        /// 
+        /// * `annotation_spec_id` - for =, !=  or existence. See example below for
+        /// the last.
+        /// 
+        /// Some examples of using the filter are:
+        /// 
+        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// annotation spec with ID different than 4.
+        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// aggregate of all annotation specs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelEvaluation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluations(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelEvaluations(new ListModelEvaluationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists model evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the model to list the model evaluations for.
+        /// If modelId is set as "-", this will list model evaluations from across all
+        /// models of the parent location.
+        /// </param>
+        /// <param name="filter">
+        /// Required. An expression for filtering the results of the request.
+        /// 
+        /// * `annotation_spec_id` - for =, !=  or existence. See example below for
+        /// the last.
+        /// 
+        /// Some examples of using the filter are:
+        /// 
+        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// annotation spec with ID different than 4.
+        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// aggregate of all annotation specs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelEvaluationsAsync(new ListModelEvaluationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists model evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the model to list the model evaluations for.
+        /// If modelId is set as "-", this will list model evaluations from across all
+        /// models of the parent location.
+        /// </param>
+        /// <param name="filter">
+        /// Required. An expression for filtering the results of the request.
+        /// 
+        /// * `annotation_spec_id` - for =, !=  or existence. See example below for
+        /// the last.
+        /// 
+        /// Some examples of using the filter are:
+        /// 
+        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// annotation spec with ID different than 4.
+        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// aggregate of all annotation specs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelEvaluation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluations(ModelName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelEvaluations(new ListModelEvaluationsRequest
+            {
+                ParentAsModelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists model evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the model to list the model evaluations for.
+        /// If modelId is set as "-", this will list model evaluations from across all
+        /// models of the parent location.
+        /// </param>
+        /// <param name="filter">
+        /// Required. An expression for filtering the results of the request.
+        /// 
+        /// * `annotation_spec_id` - for =, !=  or existence. See example below for
+        /// the last.
+        /// 
+        /// Some examples of using the filter are:
+        /// 
+        /// * `annotation_spec_id!=4` --&amp;gt; The model evaluation was done for
+        /// annotation spec with ID different than 4.
+        /// * `NOT annotation_spec_id:*` --&amp;gt; The model evaluation was done for
+        /// aggregate of all annotation specs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(ModelName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelEvaluationsAsync(new ListModelEvaluationsRequest
+            {
+                ParentAsModelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>AutoMl client wrapper implementation, for convenient use.</summary>
@@ -1712,6 +3622,14 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1724,6 +3642,14 @@ namespace Google.Cloud.AutoML.V1
 
         /// <summary>
         /// Imports data into a dataset.
+        /// For Tables this method can only be called on an empty Dataset.
+        /// 
+        /// For Tables:
+        /// *   A
+        /// [schema_inference_version][google.cloud.automl.v1.InputConfig.params]
+        /// parameter must be explicitly set.
+        /// Returns an empty response in the
+        /// [response][google.longrunning.Operation.response] field when it completes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1939,11 +3865,11 @@ namespace Google.Cloud.AutoML.V1
         /// same parameters has no effect. Deploying with different parametrs
         /// (as e.g. changing
         /// 
-        /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
         /// will reset the deployment state without pausing the model's availability.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection; all other
-        /// domains manage deployment automatically.
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
         /// 
         /// Returns an empty response in the
         /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1962,11 +3888,11 @@ namespace Google.Cloud.AutoML.V1
         /// same parameters has no effect. Deploying with different parametrs
         /// (as e.g. changing
         /// 
-        /// [node_number][google.cloud.automl.v1.ImageObjectDetectionModelDeploymentMetadata.node_number])
+        /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
         /// will reset the deployment state without pausing the model's availability.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection; all other
-        /// domains manage deployment automatically.
+        /// Only applicable for Text Classification, Image Object Detection , Tables, and Image Segmentation; all other domains manage
+        /// deployment automatically.
         /// 
         /// Returns an empty response in the
         /// [response][google.longrunning.Operation.response] field when it completes.
@@ -1986,7 +3912,7 @@ namespace Google.Cloud.AutoML.V1
         /// <summary>
         /// Undeploys a model. If the model is not deployed this method has no effect.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection;
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
         /// all other domains manage deployment automatically.
         /// 
         /// Returns an empty response in the
@@ -2004,7 +3930,7 @@ namespace Google.Cloud.AutoML.V1
         /// <summary>
         /// Undeploys a model. If the model is not deployed this method has no effect.
         /// 
-        /// Only applicable for Text Classification, Image Object Detection;
+        /// Only applicable for Text Classification, Image Object Detection and Tables;
         /// all other domains manage deployment automatically.
         /// 
         /// Returns an empty response in the

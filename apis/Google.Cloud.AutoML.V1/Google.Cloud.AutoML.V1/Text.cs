@@ -25,8 +25,8 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RleHQucHJvdG8SFmdvb2dsZS5j",
-            "bG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "K2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvY2xhc3NpZmljYXRpb24ucHJvdG8i",
+            "bG91ZC5hdXRvbWwudjEaK2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvY2xhc3Np",
+            "ZmljYXRpb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
             "bAohVGV4dENsYXNzaWZpY2F0aW9uRGF0YXNldE1ldGFkYXRhEkcKE2NsYXNz",
             "aWZpY2F0aW9uX3R5cGUYASABKA4yKi5nb29nbGUuY2xvdWQuYXV0b21sLnYx",
             "LkNsYXNzaWZpY2F0aW9uVHlwZSJqCh9UZXh0Q2xhc3NpZmljYXRpb25Nb2Rl",
@@ -41,7 +41,7 @@ namespace Google.Cloud.AutoML.V1 {
             "VjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6",
             "QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata), global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
@@ -574,11 +574,12 @@ namespace Google.Cloud.AutoML.V1 {
     public const int SentimentMaxFieldNumber = 1;
     private int sentimentMax_;
     /// <summary>
-    /// Required. A sentiment is expressed as an integer ordinal, where higher
-    /// value means a more positive sentiment. The range of sentiments that will be
-    /// used is between 0 and sentiment_max (inclusive on both ends), and all the
-    /// values in the range must be represented in the dataset before a model can
-    /// be created. sentiment_max value must be between 1 and 10 (inclusive).
+    /// Required. A sentiment is expressed as an integer ordinal, where higher value
+    /// means a more positive sentiment. The range of sentiments that will be used
+    /// is between 0 and sentiment_max (inclusive on both ends), and all the values
+    /// in the range must be represented in the dataset before a model can be
+    /// created.
+    /// sentiment_max value must be between 1 and 10 (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SentimentMax {

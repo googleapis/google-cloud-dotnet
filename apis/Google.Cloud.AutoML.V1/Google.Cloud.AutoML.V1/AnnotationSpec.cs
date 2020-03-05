@@ -25,15 +25,19 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90",
-            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90byJLCg5Bbm5vdGF0aW9uU3BlYxIMCgRuYW1lGAEgASgJEhQK",
-            "DGRpc3BsYXlfbmFtZRgCIAEoCRIVCg1leGFtcGxlX2NvdW50GAkgASgFQqoB",
-            "Chpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjxnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9tbC92MTthdXRv",
-            "bWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xlXENsb3VkXEF1",
-            "dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnByb3RvMw=="));
+            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJj",
+            "ZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLWAQoOQW5u",
+            "b3RhdGlvblNwZWMSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiAB",
+            "KAkSFQoNZXhhbXBsZV9jb3VudBgJIAEoBTqIAepBhAEKJGF1dG9tbC5nb29n",
+            "bGVhcGlzLmNvbS9Bbm5vdGF0aW9uU3BlYxJccHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFzZXRzL3tkYXRhc2V0fS9hbm5v",
+            "dGF0aW9uU3BlY3Mve2Fubm90YXRpb25fc3BlY31CqgEKGmNvbS5nb29nbGUu",
+            "Y2xvdWQuYXV0b21sLnYxUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvYXV0b21sL3YxO2F1dG9tbKoCFkdvb2dsZS5D",
+            "bG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZR29v",
+            "Z2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.AnnotationSpec), global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser, new[]{ "Name", "DisplayName", "ExampleCount" }, null, null, null, null)
           }));
@@ -102,10 +106,8 @@ namespace Google.Cloud.AutoML.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required.
-    /// The name of the annotation spec to show in the interface. The name can be
+    /// Required. The name of the annotation spec to show in the interface. The name can be
     /// up to 32 characters long and must match the regexp `[a-zA-Z0-9_]+`.
-    /// (_), and ASCII digits 0-9.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {

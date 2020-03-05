@@ -26,139 +26,161 @@ namespace Google.Cloud.AutoML.V1 {
           string.Concat(
             "CiRnb29nbGUvY2xvdWQvYXV0b21sL3YxL3NlcnZpY2UucHJvdG8SFmdvb2ds",
             "ZS5jbG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
-            "dG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvGi9nb29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25f",
-            "cGF5bG9hZC5wcm90bxosZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9hbm5vdGF0",
-            "aW9uX3NwZWMucHJvdG8aJGdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZGF0YXNl",
-            "dC5wcm90bxoiZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9pbWFnZS5wcm90bxof",
-            "Z29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9pby5wcm90bxoiZ29vZ2xlL2Nsb3Vk",
-            "L2F1dG9tbC92MS9tb2RlbC5wcm90bxotZ29vZ2xlL2Nsb3VkL2F1dG9tbC92",
-            "MS9tb2RlbF9ldmFsdWF0aW9uLnByb3RvGidnb29nbGUvY2xvdWQvYXV0b21s",
-            "L3YxL29wZXJhdGlvbnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVy",
-            "YXRpb25zLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90",
-            "byJYChRDcmVhdGVEYXRhc2V0UmVxdWVzdBIOCgZwYXJlbnQYASABKAkSMAoH",
-            "ZGF0YXNldBgCIAEoCzIfLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRGF0YXNl",
-            "dCIhChFHZXREYXRhc2V0UmVxdWVzdBIMCgRuYW1lGAEgASgJIlwKE0xpc3RE",
-            "YXRhc2V0c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEg4KBmZpbHRlchgDIAEo",
-            "CRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgGIAEoCSJiChRM",
-            "aXN0RGF0YXNldHNSZXNwb25zZRIxCghkYXRhc2V0cxgBIAMoCzIfLmdvb2ds",
-            "ZS5jbG91ZC5hdXRvbWwudjEuRGF0YXNldBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkieQoUVXBkYXRlRGF0YXNldFJlcXVlc3QSMAoHZGF0YXNldBgBIAEo",
-            "CzIfLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRGF0YXNldBIvCgt1cGRhdGVf",
-            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siJAoURGVs",
-            "ZXRlRGF0YXNldFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJcChFJbXBvcnREYXRh",
-            "UmVxdWVzdBIMCgRuYW1lGAEgASgJEjkKDGlucHV0X2NvbmZpZxgDIAEoCzIj",
-            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuSW5wdXRDb25maWciXgoRRXhwb3J0",
-            "RGF0YVJlcXVlc3QSDAoEbmFtZRgBIAEoCRI7Cg1vdXRwdXRfY29uZmlnGAMg",
-            "ASgLMiQuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5PdXRwdXRDb25maWciKAoY",
-            "R2V0QW5ub3RhdGlvblNwZWNSZXF1ZXN0EgwKBG5hbWUYASABKAkiUgoSQ3Jl",
-            "YXRlTW9kZWxSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIsCgVtb2RlbBgEIAEo",
-            "CzIdLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTW9kZWwiHwoPR2V0TW9kZWxS",
-            "ZXF1ZXN0EgwKBG5hbWUYASABKAkiWgoRTGlzdE1vZGVsc1JlcXVlc3QSDgoG",
-            "cGFyZW50GAEgASgJEg4KBmZpbHRlchgDIAEoCRIRCglwYWdlX3NpemUYBCAB",
-            "KAUSEgoKcGFnZV90b2tlbhgGIAEoCSJbChJMaXN0TW9kZWxzUmVzcG9uc2US",
-            "LAoFbW9kZWwYASADKAsyHS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVs",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIiChJEZWxldGVNb2RlbFJlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCSJzChJVcGRhdGVNb2RlbFJlcXVlc3QSLAoFbW9k",
-            "ZWwYASABKAsyHS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsEi8KC3Vw",
-            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK+",
-            "AgoSRGVwbG95TW9kZWxSZXF1ZXN0En8KMGltYWdlX29iamVjdF9kZXRlY3Rp",
-            "b25fbW9kZWxfZGVwbG95bWVudF9tZXRhZGF0YRgCIAEoCzJDLmdvb2dsZS5j",
-            "bG91ZC5hdXRvbWwudjEuSW1hZ2VPYmplY3REZXRlY3Rpb25Nb2RlbERlcGxv",
-            "eW1lbnRNZXRhZGF0YUgAEnwKLmltYWdlX2NsYXNzaWZpY2F0aW9uX21vZGVs",
-            "X2RlcGxveW1lbnRfbWV0YWRhdGEYBCABKAsyQi5nb29nbGUuY2xvdWQuYXV0",
-            "b21sLnYxLkltYWdlQ2xhc3NpZmljYXRpb25Nb2RlbERlcGxveW1lbnRNZXRh",
-            "ZGF0YUgAEgwKBG5hbWUYASABKAlCGwoZbW9kZWxfZGVwbG95bWVudF9tZXRh",
-            "ZGF0YSIkChRVbmRlcGxveU1vZGVsUmVxdWVzdBIMCgRuYW1lGAEgASgJImoK",
-            "EkV4cG9ydE1vZGVsUmVxdWVzdBIMCgRuYW1lGAEgASgJEkYKDW91dHB1dF9j",
-            "b25maWcYAyABKAsyLy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsRXhw",
-            "b3J0T3V0cHV0Q29uZmlnIikKGUdldE1vZGVsRXZhbHVhdGlvblJlcXVlc3QS",
-            "DAoEbmFtZRgBIAEoCSJkChtMaXN0TW9kZWxFdmFsdWF0aW9uc1JlcXVlc3QS",
-            "DgoGcGFyZW50GAEgASgJEg4KBmZpbHRlchgDIAEoCRIRCglwYWdlX3NpemUY",
-            "BCABKAUSEgoKcGFnZV90b2tlbhgGIAEoCSJ6ChxMaXN0TW9kZWxFdmFsdWF0",
-            "aW9uc1Jlc3BvbnNlEkEKEG1vZGVsX2V2YWx1YXRpb24YASADKAsyJy5nb29n",
-            "bGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsRXZhbHVhdGlvbhIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkyhBoKBkF1dG9NbBK6AQoNQ3JlYXRlRGF0YXNldBIs",
-            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQ3JlYXRlRGF0YXNldFJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlyC0+STAjciLC92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2RhdGFzZXRzOgdkYXRh",
-            "c2V0ykEcCgdEYXRhc2V0EhFPcGVyYXRpb25NZXRhZGF0YRKOAQoKR2V0RGF0",
-            "YXNldBIpLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2V0RGF0YXNldFJlcXVl",
-            "c3QaHy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRhdGFzZXQiNILT5JMCLhIs",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNldHMvKn0S",
-            "nwEKDExpc3REYXRhc2V0cxIrLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTGlz",
-            "dERhdGFzZXRzUmVxdWVzdBosLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTGlz",
-            "dERhdGFzZXRzUmVzcG9uc2UiNILT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vZGF0YXNldHMSpQEKDVVwZGF0ZURhdGFzZXQS",
-            "LC5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlVwZGF0ZURhdGFzZXRSZXF1ZXN0",
-            "Gh8uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5EYXRhc2V0IkWC0+STAj8yNC92",
-            "MS97ZGF0YXNldC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YXNl",
-            "dHMvKn06B2RhdGFzZXQSvwEKDURlbGV0ZURhdGFzZXQSLC5nb29nbGUuY2xv",
-            "dWQuYXV0b21sLnYxLkRlbGV0ZURhdGFzZXRSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJhgtPkkwIuKiwvdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9kYXRhc2V0cy8qfcpBKgoVZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRLHAQoKSW1wb3J0RGF0YRIp",
-            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuSW1wb3J0RGF0YVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm+C0+STAjwiNy92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFzZXRzLyp9OmltcG9ydERh",
-            "dGE6ASrKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
-            "YWRhdGESxwEKCkV4cG9ydERhdGESKS5nb29nbGUuY2xvdWQuYXV0b21sLnYx",
-            "LkV4cG9ydERhdGFSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJvgtPkkwI8IjcvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9kYXRhc2V0cy8qfTpleHBvcnREYXRhOgEqykEqChVnb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRhErUBChFHZXRBbm5vdGF0aW9u",
-            "U3BlYxIwLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2V0QW5ub3RhdGlvblNw",
-            "ZWNSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Bbm5vdGF0aW9u",
-            "U3BlYyJGgtPkkwJAEj4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9kYXRhc2V0cy8qL2Fubm90YXRpb25TcGVjcy8qfRKwAQoLQ3JlYXRlTW9k",
-            "ZWwSKi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkNyZWF0ZU1vZGVsUmVxdWVz",
-            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVoLT5JMCMyIqL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vbW9kZWxzOgVtb2Rl",
-            "bMpBGgoFTW9kZWwSEU9wZXJhdGlvbk1ldGFkYXRhEoYBCghHZXRNb2RlbBIn",
-            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2V0TW9kZWxSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmNsb3VkLmF1dG9tbC52MS5Nb2RlbCIygtPkkwIsEiovdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn0SlwEKCkxpc3RNb2Rl",
-            "bHMSKS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkxpc3RNb2RlbHNSZXF1ZXN0",
-            "GiouZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5MaXN0TW9kZWxzUmVzcG9uc2Ui",
-            "MoLT5JMCLBIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "bW9kZWxzErkBCgtEZWxldGVNb2RlbBIqLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
-            "djEuRGVsZXRlTW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJfgtPkkwIsKiovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9tb2RlbHMvKn3KQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3Bl",
-            "cmF0aW9uTWV0YWRhdGESmQEKC1VwZGF0ZU1vZGVsEiouZ29vZ2xlLmNsb3Vk",
-            "LmF1dG9tbC52MS5VcGRhdGVNb2RlbFJlcXVlc3QaHS5nb29nbGUuY2xvdWQu",
-            "YXV0b21sLnYxLk1vZGVsIj+C0+STAjkyMC92MS97bW9kZWwubmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfToFbW9kZWwSwwEKC0RlcGxv",
-            "eU1vZGVsEiouZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5EZXBsb3lNb2RlbFJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAjYi",
-            "MS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfTpk",
-            "ZXBsb3k6ASrKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9u",
-            "TWV0YWRhdGESyQEKDVVuZGVwbG95TW9kZWwSLC5nb29nbGUuY2xvdWQuYXV0",
-            "b21sLnYxLlVuZGVwbG95TW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLk9wZXJhdGlvbiJrgtPkkwI4IjMvdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9tb2RlbHMvKn06dW5kZXBsb3k6ASrKQSoKFWdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGESwwEKC0V4cG9ydE1v",
-            "ZGVsEiouZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5FeHBvcnRNb2RlbFJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAjYiMS92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfTpleHBv",
-            "cnQ6ASrKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
-            "YWRhdGEStwEKEkdldE1vZGVsRXZhbHVhdGlvbhIxLmdvb2dsZS5jbG91ZC5h",
-            "dXRvbWwudjEuR2V0TW9kZWxFdmFsdWF0aW9uUmVxdWVzdBonLmdvb2dsZS5j",
-            "bG91ZC5hdXRvbWwudjEuTW9kZWxFdmFsdWF0aW9uIkWC0+STAj8SPS92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qL21vZGVsRXZh",
-            "bHVhdGlvbnMvKn0SyAEKFExpc3RNb2RlbEV2YWx1YXRpb25zEjMuZ29vZ2xl",
-            "LmNsb3VkLmF1dG9tbC52MS5MaXN0TW9kZWxFdmFsdWF0aW9uc1JlcXVlc3Qa",
-            "NC5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkxpc3RNb2RlbEV2YWx1YXRpb25z",
-            "UmVzcG9uc2UiRYLT5JMCPxI9L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9tb2RlbHMvKn0vbW9kZWxFdmFsdWF0aW9ucxpJykEVYXV0b21s",
-            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybUK3AQoaY29tLmdvb2dsZS5jbG91ZC5hdXRv",
-            "bWwudjFCC0F1dG9NbFByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvYXV0b21sL3YxO2F1dG9tbKoCFkdvb2ds",
-            "ZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZ",
-            "R29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
+            "dG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGi9n",
+            "b29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25fcGF5bG9hZC5wcm90",
+            "bxosZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9hbm5vdGF0aW9uX3NwZWMucHJv",
+            "dG8aJGdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZGF0YXNldC5wcm90bxoiZ29v",
+            "Z2xlL2Nsb3VkL2F1dG9tbC92MS9pbWFnZS5wcm90bxofZ29vZ2xlL2Nsb3Vk",
+            "L2F1dG9tbC92MS9pby5wcm90bxoiZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9t",
+            "b2RlbC5wcm90bxotZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9tb2RlbF9ldmFs",
+            "dWF0aW9uLnByb3RvGidnb29nbGUvY2xvdWQvYXV0b21sL3YxL29wZXJhdGlv",
+            "bnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3Rv",
+            "GiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byKIAQoUQ3JlYXRl",
+            "RGF0YXNldFJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0",
+            "aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhI1CgdkYXRhc2V0GAIgASgL",
+            "Mh8uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5EYXRhc2V0QgPgQQIiSAoRR2V0",
+            "RGF0YXNldFJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1hdXRvbWwu",
+            "Z29vZ2xlYXBpcy5jb20vRGF0YXNldCKHAQoTTGlzdERhdGFzZXRzUmVxdWVz",
+            "dBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFw",
+            "aXMuY29tL0xvY2F0aW9uEg4KBmZpbHRlchgDIAEoCRIRCglwYWdlX3NpemUY",
+            "BCABKAUSEgoKcGFnZV90b2tlbhgGIAEoCSJiChRMaXN0RGF0YXNldHNSZXNw",
+            "b25zZRIxCghkYXRhc2V0cxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
+            "djEuRGF0YXNldBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkigwEKFFVwZGF0",
+            "ZURhdGFzZXRSZXF1ZXN0EjUKB2RhdGFzZXQYASABKAsyHy5nb29nbGUuY2xv",
+            "dWQuYXV0b21sLnYxLkRhdGFzZXRCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJLChREZWxldGVE",
+            "YXRhc2V0UmVxdWVzdBIzCgRuYW1lGAEgASgJQiXgQQL6QR8KHWF1dG9tbC5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhc2V0IogBChFJbXBvcnREYXRhUmVxdWVzdBIz",
+            "CgRuYW1lGAEgASgJQiXgQQL6QR8KHWF1dG9tbC5nb29nbGVhcGlzLmNvbS9E",
+            "YXRhc2V0Ej4KDGlucHV0X2NvbmZpZxgDIAEoCzIjLmdvb2dsZS5jbG91ZC5h",
+            "dXRvbWwudjEuSW5wdXRDb25maWdCA+BBAiKKAQoRRXhwb3J0RGF0YVJlcXVl",
+            "c3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1hdXRvbWwuZ29vZ2xlYXBpcy5j",
+            "b20vRGF0YXNldBJACg1vdXRwdXRfY29uZmlnGAMgASgLMiQuZ29vZ2xlLmNs",
+            "b3VkLmF1dG9tbC52MS5PdXRwdXRDb25maWdCA+BBAiJWChhHZXRBbm5vdGF0",
+            "aW9uU3BlY1JlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRhdXRvbWwu",
+            "Z29vZ2xlYXBpcy5jb20vQW5ub3RhdGlvblNwZWMiggEKEkNyZWF0ZU1vZGVs",
+            "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdv",
+            "b2dsZWFwaXMuY29tL0xvY2F0aW9uEjEKBW1vZGVsGAQgASgLMh0uZ29vZ2xl",
+            "LmNsb3VkLmF1dG9tbC52MS5Nb2RlbEID4EECIkQKD0dldE1vZGVsUmVxdWVz",
+            "dBIxCgRuYW1lGAEgASgJQiPgQQL6QR0KG2F1dG9tbC5nb29nbGVhcGlzLmNv",
+            "bS9Nb2RlbCKFAQoRTGlzdE1vZGVsc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
+            "QingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIO",
+            "CgZmaWx0ZXIYAyABKAkSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2VfdG9r",
+            "ZW4YBiABKAkiWwoSTGlzdE1vZGVsc1Jlc3BvbnNlEiwKBW1vZGVsGAEgAygL",
+            "Mh0uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Nb2RlbBIXCg9uZXh0X3BhZ2Vf",
+            "dG9rZW4YAiABKAkiRwoSRGVsZXRlTW9kZWxSZXF1ZXN0EjEKBG5hbWUYASAB",
+            "KAlCI+BBAvpBHQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsIn0KElVw",
+            "ZGF0ZU1vZGVsUmVxdWVzdBIxCgVtb2RlbBgBIAEoCzIdLmdvb2dsZS5jbG91",
+            "ZC5hdXRvbWwudjEuTW9kZWxCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiLjAgoSRGVwbG95TW9k",
+            "ZWxSZXF1ZXN0En8KMGltYWdlX29iamVjdF9kZXRlY3Rpb25fbW9kZWxfZGVw",
+            "bG95bWVudF9tZXRhZGF0YRgCIAEoCzJDLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
+            "djEuSW1hZ2VPYmplY3REZXRlY3Rpb25Nb2RlbERlcGxveW1lbnRNZXRhZGF0",
+            "YUgAEnwKLmltYWdlX2NsYXNzaWZpY2F0aW9uX21vZGVsX2RlcGxveW1lbnRf",
+            "bWV0YWRhdGEYBCABKAsyQi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkltYWdl",
+            "Q2xhc3NpZmljYXRpb25Nb2RlbERlcGxveW1lbnRNZXRhZGF0YUgAEjEKBG5h",
+            "bWUYASABKAlCI+BBAvpBHQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVs",
+            "QhsKGW1vZGVsX2RlcGxveW1lbnRfbWV0YWRhdGEiSQoUVW5kZXBsb3lNb2Rl",
+            "bFJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChthdXRvbWwuZ29vZ2xl",
+            "YXBpcy5jb20vTW9kZWwilAEKEkV4cG9ydE1vZGVsUmVxdWVzdBIxCgRuYW1l",
+            "GAEgASgJQiPgQQL6QR0KG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBJL",
+            "Cg1vdXRwdXRfY29uZmlnGAMgASgLMi8uZ29vZ2xlLmNsb3VkLmF1dG9tbC52",
+            "MS5Nb2RlbEV4cG9ydE91dHB1dENvbmZpZ0ID4EECIlgKGUdldE1vZGVsRXZh",
+            "bHVhdGlvblJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVhdXRvbWwu",
+            "Z29vZ2xlYXBpcy5jb20vTW9kZWxFdmFsdWF0aW9uIo4BChtMaXN0TW9kZWxF",
+            "dmFsdWF0aW9uc1JlcXVlc3QSMwoGcGFyZW50GAEgASgJQiPgQQL6QR0KG2F1",
+            "dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBITCgZmaWx0ZXIYAyABKAlCA+BB",
+            "AhIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgGIAEoCSJ6ChxM",
+            "aXN0TW9kZWxFdmFsdWF0aW9uc1Jlc3BvbnNlEkEKEG1vZGVsX2V2YWx1YXRp",
+            "b24YASADKAsyJy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsRXZhbHVh",
+            "dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAky6BsKBkF1dG9NbBLLAQoN",
+            "Q3JlYXRlRGF0YXNldBIsLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQ3JlYXRl",
+            "RGF0YXNldFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "Im2C0+STAjciLC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L2RhdGFzZXRzOgdkYXRhc2V02kEOcGFyZW50LGRhdGFzZXTKQRwKB0RhdGFz",
+            "ZXQSEU9wZXJhdGlvbk1ldGFkYXRhEpUBCgpHZXREYXRhc2V0EikuZ29vZ2xl",
+            "LmNsb3VkLmF1dG9tbC52MS5HZXREYXRhc2V0UmVxdWVzdBofLmdvb2dsZS5j",
+            "bG91ZC5hdXRvbWwudjEuRGF0YXNldCI7gtPkkwIuEiwvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhc2V0cy8qfdpBBG5hbWUSqAEKDExp",
+            "c3REYXRhc2V0cxIrLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTGlzdERhdGFz",
+            "ZXRzUmVxdWVzdBosLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTGlzdERhdGFz",
+            "ZXRzUmVzcG9uc2UiPYLT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vZGF0YXNldHPaQQZwYXJlbnQSuwEKDVVwZGF0ZURhdGFz",
+            "ZXQSLC5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlVwZGF0ZURhdGFzZXRSZXF1",
+            "ZXN0Gh8uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5EYXRhc2V0IluC0+STAj8y",
+            "NC92MS97ZGF0YXNldC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0",
+            "YXNldHMvKn06B2RhdGFzZXTaQRNkYXRhc2V0LHVwZGF0ZV9tYXNrEsYBCg1E",
+            "ZWxldGVEYXRhc2V0EiwuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5EZWxldGVE",
+            "YXRhc2V0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "aILT5JMCLiosL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0",
+            "YXNldHMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9w",
+            "ZXJhdGlvbk1ldGFkYXRhEtwBCgpJbXBvcnREYXRhEikuZ29vZ2xlLmNsb3Vk",
+            "LmF1dG9tbC52MS5JbXBvcnREYXRhUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24igwGC0+STAjwiNy92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2RhdGFzZXRzLyp9OmltcG9ydERhdGE6ASraQRFuYW1l",
+            "LGlucHV0X2NvbmZpZ8pBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVy",
+            "YXRpb25NZXRhZGF0YRLdAQoKRXhwb3J0RGF0YRIpLmdvb2dsZS5jbG91ZC5h",
+            "dXRvbWwudjEuRXhwb3J0RGF0YVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uIoQBgtPkkwI8IjcvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9kYXRhc2V0cy8qfTpleHBvcnREYXRhOgEq2kESbmFtZSxv",
+            "dXRwdXRfY29uZmlnykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJh",
+            "dGlvbk1ldGFkYXRhErwBChFHZXRBbm5vdGF0aW9uU3BlYxIwLmdvb2dsZS5j",
+            "bG91ZC5hdXRvbWwudjEuR2V0QW5ub3RhdGlvblNwZWNSZXF1ZXN0GiYuZ29v",
+            "Z2xlLmNsb3VkLmF1dG9tbC52MS5Bbm5vdGF0aW9uU3BlYyJNgtPkkwJAEj4v",
+            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhc2V0cy8qL2Fu",
+            "bm90YXRpb25TcGVjcy8qfdpBBG5hbWUSvwEKC0NyZWF0ZU1vZGVsEiouZ29v",
+            "Z2xlLmNsb3VkLmF1dG9tbC52MS5DcmVhdGVNb2RlbFJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImWC0+STAjMiKi92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L21vZGVsczoFbW9kZWzaQQxwYXJl",
+            "bnQsbW9kZWzKQRoKBU1vZGVsEhFPcGVyYXRpb25NZXRhZGF0YRKNAQoIR2V0",
+            "TW9kZWwSJy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkdldE1vZGVsUmVxdWVz",
+            "dBodLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTW9kZWwiOYLT5JMCLBIqL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxzLyp92kEEbmFt",
+            "ZRKgAQoKTGlzdE1vZGVscxIpLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTGlz",
+            "dE1vZGVsc1JlcXVlc3QaKi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkxpc3RN",
+            "b2RlbHNSZXNwb25zZSI7gtPkkwIsEiovdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qfS9tb2RlbHPaQQZwYXJlbnQSwAEKC0RlbGV0ZU1vZGVs",
+            "EiouZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5EZWxldGVNb2RlbFJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImaC0+STAiwqKi92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfdpBBG5hbWXK",
+            "QSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES",
+            "rQEKC1VwZGF0ZU1vZGVsEiouZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5VcGRh",
+            "dGVNb2RlbFJlcXVlc3QaHS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVs",
+            "IlOC0+STAjkyMC92MS97bW9kZWwubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL21vZGVscy8qfToFbW9kZWzaQRFtb2RlbCx1cGRhdGVfbWFzaxLKAQoL",
+            "RGVwbG95TW9kZWwSKi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkRlcGxveU1v",
+            "ZGVsUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT",
+            "5JMCNiIxL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxz",
+            "Lyp9OmRlcGxveToBKtpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRIRT3BlcmF0aW9uTWV0YWRhdGES0AEKDVVuZGVwbG95TW9kZWwSLC5nb29n",
+            "bGUuY2xvdWQuYXV0b21sLnYxLlVuZGVwbG95TW9kZWxSZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJygtPkkwI4IjMvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06dW5kZXBsb3k6ASra",
+            "QQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1l",
+            "dGFkYXRhEtgBCgtFeHBvcnRNb2RlbBIqLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
+            "djEuRXhwb3J0TW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiJ+gtPkkwI2IjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9tb2RlbHMvKn06ZXhwb3J0OgEq2kESbmFtZSxvdXRwdXRfY29uZmln",
+            "ykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRh",
+            "Er4BChJHZXRNb2RlbEV2YWx1YXRpb24SMS5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxLkdldE1vZGVsRXZhbHVhdGlvblJlcXVlc3QaJy5nb29nbGUuY2xvdWQu",
+            "YXV0b21sLnYxLk1vZGVsRXZhbHVhdGlvbiJMgtPkkwI/Ej0vdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKi9tb2RlbEV2YWx1YXRp",
+            "b25zLyp92kEEbmFtZRLYAQoUTGlzdE1vZGVsRXZhbHVhdGlvbnMSMy5nb29n",
+            "bGUuY2xvdWQuYXV0b21sLnYxLkxpc3RNb2RlbEV2YWx1YXRpb25zUmVxdWVz",
+            "dBo0Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuTGlzdE1vZGVsRXZhbHVhdGlv",
+            "bnNSZXNwb25zZSJVgtPkkwI/Ej0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL21vZGVscy8qfS9tb2RlbEV2YWx1YXRpb25z2kENcGFyZW50",
+            "LGZpbHRlchpJykEVYXV0b21sLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK3AQoaY29t",
+            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjFCC0F1dG9NbFByb3RvUAFaPGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXV0b21s",
+            "L3YxO2F1dG9tbKoCFkdvb2dsZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29nbGVc",
+            "Q2xvdWRcQXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.DatasetReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelEvaluationReflection.Descriptor, global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.DatasetReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelEvaluationReflection.Descriptor, global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.CreateDatasetRequest), global::Google.Cloud.AutoML.V1.CreateDatasetRequest.Parser, new[]{ "Parent", "Dataset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.GetDatasetRequest), global::Google.Cloud.AutoML.V1.GetDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -188,8 +210,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for
-  /// [AutoMl.CreateDataset][google.cloud.automl.v1.AutoMl.CreateDataset].
+  /// Request message for [AutoMl.CreateDataset][google.cloud.automl.v1.AutoMl.CreateDataset].
   /// </summary>
   public sealed partial class CreateDatasetRequest : pb::IMessage<CreateDatasetRequest> {
     private static readonly pb::MessageParser<CreateDatasetRequest> _parser = new pb::MessageParser<CreateDatasetRequest>(() => new CreateDatasetRequest());
@@ -230,7 +251,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The resource name of the project to create the dataset for.
+    /// Required. The resource name of the project to create the dataset for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -244,7 +265,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int DatasetFieldNumber = 2;
     private global::Google.Cloud.AutoML.V1.Dataset dataset_;
     /// <summary>
-    /// The dataset to create.
+    /// Required. The dataset to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.Dataset Dataset {
@@ -361,8 +382,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.GetDataset][google.cloud.automl.v1.AutoMl.GetDataset].
+  /// Request message for [AutoMl.GetDataset][google.cloud.automl.v1.AutoMl.GetDataset].
   /// </summary>
   public sealed partial class GetDatasetRequest : pb::IMessage<GetDatasetRequest> {
     private static readonly pb::MessageParser<GetDatasetRequest> _parser = new pb::MessageParser<GetDatasetRequest>(() => new GetDatasetRequest());
@@ -402,7 +422,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the dataset to retrieve.
+    /// Required. The resource name of the dataset to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -497,8 +517,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.ListDatasets][google.cloud.automl.v1.AutoMl.ListDatasets].
+  /// Request message for [AutoMl.ListDatasets][google.cloud.automl.v1.AutoMl.ListDatasets].
   /// </summary>
   public sealed partial class ListDatasetsRequest : pb::IMessage<ListDatasetsRequest> {
     private static readonly pb::MessageParser<ListDatasetsRequest> _parser = new pb::MessageParser<ListDatasetsRequest>(() => new ListDatasetsRequest());
@@ -541,7 +560,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The resource name of the project from which to list datasets.
+    /// Required. The resource name of the project from which to list datasets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -558,8 +577,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// An expression for filtering the results of the request.
     ///
     ///   * `dataset_metadata` - for existence of the case (e.g.
-    ///             image_classification_dataset_metadata:*). Some examples of
-    ///             using the filter are:
+    ///             image_classification_dataset_metadata:*). Some examples of using the filter are:
     ///
     ///   * `translation_dataset_metadata:*` --> The dataset has
     ///                                          translation_dataset_metadata.
@@ -593,8 +611,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>
     /// A token identifying a page of results for the server to return
     /// Typically obtained via
-    /// [ListDatasetsResponse.next_page_token][google.cloud.automl.v1.ListDatasetsResponse.next_page_token]
-    /// of the previous
+    /// [ListDatasetsResponse.next_page_token][google.cloud.automl.v1.ListDatasetsResponse.next_page_token] of the previous
     /// [AutoMl.ListDatasets][google.cloud.automl.v1.AutoMl.ListDatasets] call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -738,8 +755,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [AutoMl.ListDatasets][google.cloud.automl.v1.AutoMl.ListDatasets].
+  /// Response message for [AutoMl.ListDatasets][google.cloud.automl.v1.AutoMl.ListDatasets].
   /// </summary>
   public sealed partial class ListDatasetsResponse : pb::IMessage<ListDatasetsResponse> {
     private static readonly pb::MessageParser<ListDatasetsResponse> _parser = new pb::MessageParser<ListDatasetsResponse>(() => new ListDatasetsResponse());
@@ -794,9 +810,7 @@ namespace Google.Cloud.AutoML.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to
-    /// [ListDatasetsRequest.page_token][google.cloud.automl.v1.ListDatasetsRequest.page_token]
-    /// to obtain that page.
+    /// Pass to [ListDatasetsRequest.page_token][google.cloud.automl.v1.ListDatasetsRequest.page_token] to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -900,8 +914,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.UpdateDataset][google.cloud.automl.v1.AutoMl.UpdateDataset]
+  /// Request message for [AutoMl.UpdateDataset][google.cloud.automl.v1.AutoMl.UpdateDataset]
   /// </summary>
   public sealed partial class UpdateDatasetRequest : pb::IMessage<UpdateDatasetRequest> {
     private static readonly pb::MessageParser<UpdateDatasetRequest> _parser = new pb::MessageParser<UpdateDatasetRequest>(() => new UpdateDatasetRequest());
@@ -942,7 +955,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int DatasetFieldNumber = 1;
     private global::Google.Cloud.AutoML.V1.Dataset dataset_;
     /// <summary>
-    /// The dataset which replaces the resource on the server.
+    /// Required. The dataset which replaces the resource on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.Dataset Dataset {
@@ -1079,8 +1092,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.DeleteDataset][google.cloud.automl.v1.AutoMl.DeleteDataset].
+  /// Request message for [AutoMl.DeleteDataset][google.cloud.automl.v1.AutoMl.DeleteDataset].
   /// </summary>
   public sealed partial class DeleteDatasetRequest : pb::IMessage<DeleteDatasetRequest> {
     private static readonly pb::MessageParser<DeleteDatasetRequest> _parser = new pb::MessageParser<DeleteDatasetRequest>(() => new DeleteDatasetRequest());
@@ -1120,7 +1132,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the dataset to delete.
+    /// Required. The resource name of the dataset to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1215,8 +1227,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData].
+  /// Request message for [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData].
   /// </summary>
   public sealed partial class ImportDataRequest : pb::IMessage<ImportDataRequest> {
     private static readonly pb::MessageParser<ImportDataRequest> _parser = new pb::MessageParser<ImportDataRequest>(() => new ImportDataRequest());
@@ -1390,8 +1401,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.ExportData][google.cloud.automl.v1.AutoMl.ExportData].
+  /// Request message for [AutoMl.ExportData][google.cloud.automl.v1.AutoMl.ExportData].
   /// </summary>
   public sealed partial class ExportDataRequest : pb::IMessage<ExportDataRequest> {
     private static readonly pb::MessageParser<ExportDataRequest> _parser = new pb::MessageParser<ExportDataRequest>(() => new ExportDataRequest());
@@ -1563,8 +1573,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.GetAnnotationSpec][google.cloud.automl.v1.AutoMl.GetAnnotationSpec].
+  /// Request message for [AutoMl.GetAnnotationSpec][google.cloud.automl.v1.AutoMl.GetAnnotationSpec].
   /// </summary>
   public sealed partial class GetAnnotationSpecRequest : pb::IMessage<GetAnnotationSpecRequest> {
     private static readonly pb::MessageParser<GetAnnotationSpecRequest> _parser = new pb::MessageParser<GetAnnotationSpecRequest>(() => new GetAnnotationSpecRequest());
@@ -1604,7 +1613,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the annotation spec to retrieve.
+    /// Required. The resource name of the annotation spec to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1699,8 +1708,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.CreateModel][google.cloud.automl.v1.AutoMl.CreateModel].
+  /// Request message for [AutoMl.CreateModel][google.cloud.automl.v1.AutoMl.CreateModel].
   /// </summary>
   public sealed partial class CreateModelRequest : pb::IMessage<CreateModelRequest> {
     private static readonly pb::MessageParser<CreateModelRequest> _parser = new pb::MessageParser<CreateModelRequest>(() => new CreateModelRequest());
@@ -1741,7 +1749,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Resource name of the parent project where the model is being created.
+    /// Required. Resource name of the parent project where the model is being created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1755,7 +1763,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ModelFieldNumber = 4;
     private global::Google.Cloud.AutoML.V1.Model model_;
     /// <summary>
-    /// The model to create.
+    /// Required. The model to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.Model Model {
@@ -1872,8 +1880,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.GetModel][google.cloud.automl.v1.AutoMl.GetModel].
+  /// Request message for [AutoMl.GetModel][google.cloud.automl.v1.AutoMl.GetModel].
   /// </summary>
   public sealed partial class GetModelRequest : pb::IMessage<GetModelRequest> {
     private static readonly pb::MessageParser<GetModelRequest> _parser = new pb::MessageParser<GetModelRequest>(() => new GetModelRequest());
@@ -1913,7 +1920,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the model.
+    /// Required. Resource name of the model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2008,8 +2015,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.ListModels][google.cloud.automl.v1.AutoMl.ListModels].
+  /// Request message for [AutoMl.ListModels][google.cloud.automl.v1.AutoMl.ListModels].
   /// </summary>
   public sealed partial class ListModelsRequest : pb::IMessage<ListModelsRequest> {
     private static readonly pb::MessageParser<ListModelsRequest> _parser = new pb::MessageParser<ListModelsRequest>(() => new ListModelsRequest());
@@ -2052,7 +2058,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Resource name of the project, from which to list the models.
+    /// Required. Resource name of the project, from which to list the models.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2069,7 +2075,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// An expression for filtering the results of the request.
     ///
     ///   * `model_metadata` - for existence of the case (e.g.
-    ///             image_classification_model_metadata:*).
+    ///             video_classification_model_metadata:*).
     ///   * `dataset_id` - for = or !=. Some examples of using the filter are:
     ///
     ///   * `image_classification_model_metadata:*` --> The model has
@@ -2104,8 +2110,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>
     /// A token identifying a page of results for the server to return
     /// Typically obtained via
-    /// [ListModelsResponse.next_page_token][google.cloud.automl.v1.ListModelsResponse.next_page_token]
-    /// of the previous
+    /// [ListModelsResponse.next_page_token][google.cloud.automl.v1.ListModelsResponse.next_page_token] of the previous
     /// [AutoMl.ListModels][google.cloud.automl.v1.AutoMl.ListModels] call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2249,8 +2254,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [AutoMl.ListModels][google.cloud.automl.v1.AutoMl.ListModels].
+  /// Response message for [AutoMl.ListModels][google.cloud.automl.v1.AutoMl.ListModels].
   /// </summary>
   public sealed partial class ListModelsResponse : pb::IMessage<ListModelsResponse> {
     private static readonly pb::MessageParser<ListModelsResponse> _parser = new pb::MessageParser<ListModelsResponse>(() => new ListModelsResponse());
@@ -2305,9 +2309,7 @@ namespace Google.Cloud.AutoML.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to
-    /// [ListModelsRequest.page_token][google.cloud.automl.v1.ListModelsRequest.page_token]
-    /// to obtain that page.
+    /// Pass to [ListModelsRequest.page_token][google.cloud.automl.v1.ListModelsRequest.page_token] to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -2411,8 +2413,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.DeleteModel][google.cloud.automl.v1.AutoMl.DeleteModel].
+  /// Request message for [AutoMl.DeleteModel][google.cloud.automl.v1.AutoMl.DeleteModel].
   /// </summary>
   public sealed partial class DeleteModelRequest : pb::IMessage<DeleteModelRequest> {
     private static readonly pb::MessageParser<DeleteModelRequest> _parser = new pb::MessageParser<DeleteModelRequest>(() => new DeleteModelRequest());
@@ -2452,7 +2453,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the model being deleted.
+    /// Required. Resource name of the model being deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2547,8 +2548,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.UpdateModel][google.cloud.automl.v1.AutoMl.UpdateModel]
+  /// Request message for [AutoMl.UpdateModel][google.cloud.automl.v1.AutoMl.UpdateModel]
   /// </summary>
   public sealed partial class UpdateModelRequest : pb::IMessage<UpdateModelRequest> {
     private static readonly pb::MessageParser<UpdateModelRequest> _parser = new pb::MessageParser<UpdateModelRequest>(() => new UpdateModelRequest());
@@ -2589,7 +2589,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ModelFieldNumber = 1;
     private global::Google.Cloud.AutoML.V1.Model model_;
     /// <summary>
-    /// The model which replaces the resource on the server.
+    /// Required. The model which replaces the resource on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.Model Model {
@@ -2726,8 +2726,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.DeployModel][google.cloud.automl.v1.AutoMl.DeployModel].
+  /// Request message for [AutoMl.DeployModel][google.cloud.automl.v1.AutoMl.DeployModel].
   /// </summary>
   public sealed partial class DeployModelRequest : pb::IMessage<DeployModelRequest> {
     private static readonly pb::MessageParser<DeployModelRequest> _parser = new pb::MessageParser<DeployModelRequest>(() => new DeployModelRequest());
@@ -2804,7 +2803,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the model to deploy.
+    /// Required. Resource name of the model to deploy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2971,8 +2970,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.UndeployModel][google.cloud.automl.v1.AutoMl.UndeployModel].
+  /// Request message for [AutoMl.UndeployModel][google.cloud.automl.v1.AutoMl.UndeployModel].
   /// </summary>
   public sealed partial class UndeployModelRequest : pb::IMessage<UndeployModelRequest> {
     private static readonly pb::MessageParser<UndeployModelRequest> _parser = new pb::MessageParser<UndeployModelRequest>(() => new UndeployModelRequest());
@@ -3012,7 +3010,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the model to undeploy.
+    /// Required. Resource name of the model to undeploy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3107,9 +3105,9 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel]. Models need
-  /// to be enabled for exporting, otherwise an error code will be returned.
+  /// Request message for [AutoMl.ExportModel][google.cloud.automl.v1.AutoMl.ExportModel].
+  /// Models need to be enabled for exporting, otherwise an error code will be
+  /// returned.
   /// </summary>
   public sealed partial class ExportModelRequest : pb::IMessage<ExportModelRequest> {
     private static readonly pb::MessageParser<ExportModelRequest> _parser = new pb::MessageParser<ExportModelRequest>(() => new ExportModelRequest());
@@ -3281,8 +3279,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.GetModelEvaluation][google.cloud.automl.v1.AutoMl.GetModelEvaluation].
+  /// Request message for [AutoMl.GetModelEvaluation][google.cloud.automl.v1.AutoMl.GetModelEvaluation].
   /// </summary>
   public sealed partial class GetModelEvaluationRequest : pb::IMessage<GetModelEvaluationRequest> {
     private static readonly pb::MessageParser<GetModelEvaluationRequest> _parser = new pb::MessageParser<GetModelEvaluationRequest>(() => new GetModelEvaluationRequest());
@@ -3322,7 +3319,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name for the model evaluation.
+    /// Required. Resource name for the model evaluation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3417,8 +3414,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations].
+  /// Request message for [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations].
   /// </summary>
   public sealed partial class ListModelEvaluationsRequest : pb::IMessage<ListModelEvaluationsRequest> {
     private static readonly pb::MessageParser<ListModelEvaluationsRequest> _parser = new pb::MessageParser<ListModelEvaluationsRequest>(() => new ListModelEvaluationsRequest());
@@ -3461,7 +3457,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Resource name of the model to list the model evaluations for.
+    /// Required. Resource name of the model to list the model evaluations for.
     /// If modelId is set as "-", this will list model evaluations from across all
     /// models of the parent location.
     /// </summary>
@@ -3477,7 +3473,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// An expression for filtering the results of the request.
+    /// Required. An expression for filtering the results of the request.
     ///
     ///   * `annotation_spec_id` - for =, !=  or existence. See example below for
     ///                          the last.
@@ -3517,10 +3513,8 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>
     /// A token identifying a page of results for the server to return.
     /// Typically obtained via
-    /// [ListModelEvaluationsResponse.next_page_token][google.cloud.automl.v1.ListModelEvaluationsResponse.next_page_token]
-    /// of the previous
-    /// [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations]
-    /// call.
+    /// [ListModelEvaluationsResponse.next_page_token][google.cloud.automl.v1.ListModelEvaluationsResponse.next_page_token] of the previous
+    /// [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations] call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -3663,8 +3657,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations].
+  /// Response message for [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations].
   /// </summary>
   public sealed partial class ListModelEvaluationsResponse : pb::IMessage<ListModelEvaluationsResponse> {
     private static readonly pb::MessageParser<ListModelEvaluationsResponse> _parser = new pb::MessageParser<ListModelEvaluationsResponse>(() => new ListModelEvaluationsResponse());
@@ -3719,11 +3712,8 @@ namespace Google.Cloud.AutoML.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to the
-    /// [ListModelEvaluationsRequest.page_token][google.cloud.automl.v1.ListModelEvaluationsRequest.page_token]
-    /// field of a new
-    /// [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations]
-    /// request to obtain that page.
+    /// Pass to the [ListModelEvaluationsRequest.page_token][google.cloud.automl.v1.ListModelEvaluationsRequest.page_token] field of a new
+    /// [AutoMl.ListModelEvaluations][google.cloud.automl.v1.AutoMl.ListModelEvaluations] request to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {

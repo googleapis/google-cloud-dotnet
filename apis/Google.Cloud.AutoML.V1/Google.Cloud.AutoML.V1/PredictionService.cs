@@ -26,50 +26,54 @@ namespace Google.Cloud.AutoML.V1 {
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvYXV0b21sL3YxL3ByZWRpY3Rpb25fc2VydmljZS5w",
             "cm90bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRocZ29vZ2xlL2FwaS9hbm5v",
-            "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aGWdvb2ds",
-            "ZS9hcGkvcmVzb3VyY2UucHJvdG8aL2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
-            "YW5ub3RhdGlvbl9wYXlsb2FkLnByb3RvGidnb29nbGUvY2xvdWQvYXV0b21s",
-            "L3YxL2RhdGFfaXRlbXMucHJvdG8aH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
-            "aW8ucHJvdG8aJ2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvb3BlcmF0aW9ucy5w",
-            "cm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8iygEK",
-            "DlByZWRpY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkSNwoHcGF5bG9hZBgCIAEo",
-            "CzImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRXhhbXBsZVBheWxvYWQSQgoG",
-            "cGFyYW1zGAMgAygLMjIuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5QcmVkaWN0",
-            "UmVxdWVzdC5QYXJhbXNFbnRyeRotCgtQYXJhbXNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIosCCg9QcmVkaWN0UmVzcG9uc2USOgoH",
-            "cGF5bG9hZBgBIAMoCzIpLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQW5ub3Rh",
-            "dGlvblBheWxvYWQSQgoScHJlcHJvY2Vzc2VkX2lucHV0GAMgASgLMiYuZ29v",
-            "Z2xlLmNsb3VkLmF1dG9tbC52MS5FeGFtcGxlUGF5bG9hZBJHCghtZXRhZGF0",
-            "YRgCIAMoCzI1Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJlc3Bv",
-            "bnNlLk1ldGFkYXRhRW50cnkaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIqsCChNCYXRjaFByZWRpY3RSZXF1ZXN0",
-            "EgwKBG5hbWUYASABKAkSRQoMaW5wdXRfY29uZmlnGAMgASgLMi8uZ29vZ2xl",
-            "LmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RJbnB1dENvbmZpZxJHCg1v",
-            "dXRwdXRfY29uZmlnGAQgASgLMjAuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5C",
-            "YXRjaFByZWRpY3RPdXRwdXRDb25maWcSRwoGcGFyYW1zGAUgAygLMjcuZ29v",
-            "Z2xlLmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RSZXF1ZXN0LlBhcmFt",
-            "c0VudHJ5Gi0KC1BhcmFtc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEikQEKEkJhdGNoUHJlZGljdFJlc3VsdBJKCghtZXRhZGF0YRgB",
-            "IAMoCzI4Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQmF0Y2hQcmVkaWN0UmVz",
-            "dWx0Lk1ldGFkYXRhRW50cnkaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBMsUDChFQcmVkaWN0aW9uU2VydmljZRKZ",
-            "AQoHUHJlZGljdBImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJl",
-            "cXVlc3QaJy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLlByZWRpY3RSZXNwb25z",
-            "ZSI9gtPkkwI3IjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9t",
-            "b2RlbHMvKn06cHJlZGljdDoBKhLIAQoMQmF0Y2hQcmVkaWN0EisuZ29vZ2xl",
-            "LmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJsgtPkkwI8IjcvdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06YmF0Y2hQcmVkaWN0OgEq",
-            "ykEnChJCYXRjaFByZWRpY3RSZXN1bHQSEU9wZXJhdGlvbk1ldGFkYXRhGknK",
-            "QRVhdXRvbWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBChpjb20uZ29vZ2xlLmNs",
-            "b3VkLmF1dG9tbC52MUIWUHJlZGljdGlvblNlcnZpY2VQcm90b1ABWjxnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2F1dG9t",
-            "bC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIWR29vZ2xl",
-            "XENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFi",
-            "BnByb3RvMw=="));
+            "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2ds",
+            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
+            "Y2UucHJvdG8aL2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvYW5ub3RhdGlvbl9w",
+            "YXlsb2FkLnByb3RvGidnb29nbGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRl",
+            "bXMucHJvdG8aH2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvaW8ucHJvdG8aJ2dv",
+            "b2dsZS9jbG91ZC9hdXRvbWwvdjEvb3BlcmF0aW9ucy5wcm90bxojZ29vZ2xl",
+            "L2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8i9AEKDlByZWRpY3RSZXF1",
+            "ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobYXV0b21sLmdvb2dsZWFwaXMu",
+            "Y29tL01vZGVsEjwKB3BheWxvYWQYAiABKAsyJi5nb29nbGUuY2xvdWQuYXV0",
+            "b21sLnYxLkV4YW1wbGVQYXlsb2FkQgPgQQISQgoGcGFyYW1zGAMgAygLMjIu",
+            "Z29vZ2xlLmNsb3VkLmF1dG9tbC52MS5QcmVkaWN0UmVxdWVzdC5QYXJhbXNF",
+            "bnRyeRotCgtQYXJhbXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIosCCg9QcmVkaWN0UmVzcG9uc2USOgoHcGF5bG9hZBgBIAMoCzIp",
+            "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQW5ub3RhdGlvblBheWxvYWQSQgoS",
+            "cHJlcHJvY2Vzc2VkX2lucHV0GAMgASgLMiYuZ29vZ2xlLmNsb3VkLmF1dG9t",
+            "bC52MS5FeGFtcGxlUGF5bG9hZBJHCghtZXRhZGF0YRgCIAMoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJlc3BvbnNlLk1ldGFkYXRhRW50",
+            "cnkaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBItoCChNCYXRjaFByZWRpY3RSZXF1ZXN0EjEKBG5hbWUYASABKAlC",
+            "I+BBAvpBHQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEkoKDGlucHV0",
+            "X2NvbmZpZxgDIAEoCzIvLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQmF0Y2hQ",
+            "cmVkaWN0SW5wdXRDb25maWdCA+BBAhJMCg1vdXRwdXRfY29uZmlnGAQgASgL",
+            "MjAuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RPdXRwdXRD",
+            "b25maWdCA+BBAhJHCgZwYXJhbXMYBSADKAsyNy5nb29nbGUuY2xvdWQuYXV0",
+            "b21sLnYxLkJhdGNoUHJlZGljdFJlcXVlc3QuUGFyYW1zRW50cnkaLQoLUGFy",
+            "YW1zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKRAQoS",
+            "QmF0Y2hQcmVkaWN0UmVzdWx0EkoKCG1ldGFkYXRhGAEgAygLMjguZ29vZ2xl",
+            "LmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RSZXN1bHQuTWV0YWRhdGFF",
+            "bnRyeRovCg1NZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEyhQQKEVByZWRpY3Rpb25TZXJ2aWNlEq8BCgdQcmVkaWN0EiYu",
+            "Z29vZ2xlLmNsb3VkLmF1dG9tbC52MS5QcmVkaWN0UmVxdWVzdBonLmdvb2ds",
+            "ZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJlc3BvbnNlIlOC0+STAjciMi92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfTpwcmVk",
+            "aWN0OgEq2kETbmFtZSxwYXlsb2FkLHBhcmFtcxLyAQoMQmF0Y2hQcmVkaWN0",
+            "EisuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5CYXRjaFByZWRpY3RSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKVAYLT5JMCPCI3L3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxzLyp9OmJhdGNo",
+            "UHJlZGljdDoBKtpBJm5hbWUsaW5wdXRfY29uZmlnLG91dHB1dF9jb25maWcs",
+            "cGFyYW1zykEnChJCYXRjaFByZWRpY3RSZXN1bHQSEU9wZXJhdGlvbk1ldGFk",
+            "YXRhGknKQRVhdXRvbWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBChpjb20uZ29v",
+            "Z2xlLmNsb3VkLmF1dG9tbC52MUIWUHJlZGljdGlvblNlcnZpY2VQcm90b1AB",
+            "Wjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2F1dG9tbC92MTthdXRvbWyqAhZHb29nbGUuQ2xvdWQuQXV0b01MLlYxygIW",
+            "R29vZ2xlXENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9N",
+            "TDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationPayloadReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictRequest), global::Google.Cloud.AutoML.V1.PredictRequest.Parser, new[]{ "Name", "Payload", "Params" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.PredictResponse), global::Google.Cloud.AutoML.V1.PredictResponse.Parser, new[]{ "Payload", "PreprocessedInput", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -82,8 +86,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for
-  /// [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
+  /// Request message for [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
   /// </summary>
   public sealed partial class PredictRequest : pb::IMessage<PredictRequest> {
     private static readonly pb::MessageParser<PredictRequest> _parser = new pb::MessageParser<PredictRequest>(() => new PredictRequest());
@@ -125,7 +128,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the model requested to serve the prediction.
+    /// Required. Name of the model requested to serve the prediction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -159,19 +162,34 @@ namespace Google.Cloud.AutoML.V1 {
     /// Additional domain-specific parameters, any string must be up to 25000
     /// characters long.
     ///
-    /// *  For Image Classification:
+    /// &lt;h4>AutoML Vision Classification&lt;/h4>
     ///
-    ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
-    ///     makes predictions for an image, it will only produce results that have
-    ///     at least this confidence score. The default is 0.5.
+    /// `score_threshold`
+    /// : (float) A value from 0.0 to 1.0. When the model
+    ///   makes predictions for an image, it will only produce results that have
+    ///   at least this confidence score. The default is 0.5.
     ///
-    ///  *  For Image Object Detection:
-    ///    `score_threshold` - (float) When Model detects objects on the image,
-    ///        it will only produce bounding boxes which have at least this
-    ///        confidence score. Value in 0 to 1 range, default is 0.5.
-    ///    `max_bounding_box_count` - (int64) No more than this number of bounding
-    ///        boxes will be returned in the response. Default is 100, the
-    ///        requested value may be limited by server.
+    /// &lt;h4>AutoML Vision Object Detection&lt;/h4>
+    ///
+    /// `score_threshold`
+    /// : (float) When Model detects objects on the image,
+    ///   it will only produce bounding boxes which have at least this
+    ///   confidence score. Value in 0 to 1 range, default is 0.5.
+    ///
+    /// `max_bounding_box_count`
+    /// : (int64) The maximum number of bounding
+    ///   boxes returned. The default is 100. The
+    ///   number of returned bounding boxes might be limited by the server.
+    ///
+    /// &lt;h4>AutoML Tables&lt;/h4>
+    ///
+    /// `feature_importance`
+    /// : (boolean) Whether
+    ///
+    /// [feature_importance][google.cloud.automl.v1.TablesModelColumnInfo.feature_importance]
+    ///   is populated in the returned list of
+    ///   [TablesAnnotation][google.cloud.automl.v1.TablesAnnotation]
+    ///   objects. The default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Params {
@@ -294,8 +312,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
+  /// Response message for [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
   /// </summary>
   public sealed partial class PredictResponse : pb::IMessage<PredictResponse> {
     private static readonly pb::MessageParser<PredictResponse> _parser = new pb::MessageParser<PredictResponse>(() => new PredictResponse());
@@ -340,7 +357,8 @@ namespace Google.Cloud.AutoML.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AutoML.V1.AnnotationPayload> payload_ = new pbc::RepeatedField<global::Google.Cloud.AutoML.V1.AnnotationPayload>();
     /// <summary>
     /// Prediction result.
-    /// Translation and Text Sentiment will return precisely one payload.
+    /// AutoML Translation and AutoML Natural Language Sentiment Analysis
+    /// return precisely one payload.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.AutoML.V1.AnnotationPayload> Payload {
@@ -353,17 +371,12 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>
     /// The preprocessed example that AutoML actually makes prediction on.
     /// Empty if AutoML does not preprocess the input example.
-    /// * For Text Extraction:
-    ///   If the input is a .pdf file, the OCR'ed text will be provided in
-    ///   [document_text][google.cloud.automl.v1.Document.document_text].
     ///
-    /// * For Text Classification:
-    ///   If the input is a .pdf file, the OCR'ed trucated text will be provided in
-    ///   [document_text][google.cloud.automl.v1.Document.document_text].
-    ///
-    /// * For Text Sentiment:
-    ///   If the input is a .pdf file, the OCR'ed trucated text will be provided in
-    ///   [document_text][google.cloud.automl.v1.Document.document_text].
+    /// For AutoML Natural Language (Classification, Entity Extraction, and
+    /// Sentiment Analysis), if the input is a document, the recognized text is
+    /// returned in the
+    /// [document_text][google.cloud.automl.v1.Document.document_text]
+    /// property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AutoML.V1.ExamplePayload PreprocessedInput {
@@ -381,19 +394,22 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>
     /// Additional domain-specific prediction response metadata.
     ///
-    /// * For Image Object Detection:
-    ///  `max_bounding_box_count` - (int64) At most that many bounding boxes per
-    ///      image could have been returned.
+    /// &lt;h4>AutoML Vision Object Detection&lt;/h4>
     ///
-    /// * For Text Sentiment:
-    ///  `sentiment_score` - (float, deprecated) A value between -1 and 1,
-    ///      -1 maps to least positive sentiment, while 1 maps to the most positive
-    ///      one and the higher the score, the more positive the sentiment in the
-    ///      document is. Yet these values are relative to the training data, so
-    ///      e.g. if all data was positive then -1 will be also positive (though
-    ///      the least).
-    ///      The sentiment_score shouldn't be confused with "score" or "magnitude"
-    ///      from the previous Natural Language Sentiment Analysis API.
+    /// `max_bounding_box_count`
+    /// : (int64) The maximum number of bounding boxes to return per image.
+    ///
+    /// &lt;h4>AutoML Natural Language Sentiment Analysis&lt;/h4>
+    ///
+    /// `sentiment_score`
+    /// : (float, deprecated) A value between -1 and 1,
+    ///   -1 maps to least positive sentiment, while 1 maps to the most positive
+    ///   one and the higher the score, the more positive the sentiment in the
+    ///   document is. Yet these values are relative to the training data, so
+    ///   e.g. if all data was positive then -1 is also positive (though
+    ///   the least).
+    ///   `sentiment_score` is not the same as "score" and "magnitude"
+    ///   from Sentiment Analysis in the Natural Language API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Metadata {
@@ -509,8 +525,7 @@ namespace Google.Cloud.AutoML.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [PredictionService.BatchPredict][google.cloud.automl.v1.PredictionService.BatchPredict].
+  /// Request message for [PredictionService.BatchPredict][google.cloud.automl.v1.PredictionService.BatchPredict].
   /// </summary>
   public sealed partial class BatchPredictRequest : pb::IMessage<BatchPredictRequest> {
     private static readonly pb::MessageParser<BatchPredictRequest> _parser = new pb::MessageParser<BatchPredictRequest>(() => new BatchPredictRequest());
@@ -553,7 +568,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the model requested to serve the batch prediction.
+    /// Required. Name of the model requested to serve the batch prediction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -601,26 +616,85 @@ namespace Google.Cloud.AutoML.V1 {
     /// Additional domain-specific parameters for the predictions, any string must
     /// be up to 25000 characters long.
     ///
-    /// *  For Text Classification:
+    /// &lt;h4>AutoML Natural Language Classification&lt;/h4>
     ///
-    ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
-    ///         makes predictions for a text snippet, it will only produce results
-    ///         that have at least this confidence score. The default is 0.5.
+    /// `score_threshold`
+    /// : (float) A value from 0.0 to 1.0. When the model
+    ///   makes predictions for a text snippet, it will only produce results
+    ///   that have at least this confidence score. The default is 0.5.
     ///
-    /// *  For Image Classification:
+    /// &lt;h4>AutoML Vision Classification&lt;/h4>
     ///
-    ///    `score_threshold` - (float) A value from 0.0 to 1.0. When the model
-    ///         makes predictions for an image, it will only produce results that
-    ///         have at least this confidence score. The default is 0.5.
+    /// `score_threshold`
+    /// : (float) A value from 0.0 to 1.0. When the model
+    ///   makes predictions for an image, it will only produce results that
+    ///   have at least this confidence score. The default is 0.5.
     ///
-    /// *  For Image Object Detection:
+    /// &lt;h4>AutoML Vision Object Detection&lt;/h4>
     ///
-    ///    `score_threshold` - (float) When Model detects objects on the image,
-    ///        it will only produce bounding boxes which have at least this
-    ///        confidence score. Value in 0 to 1 range, default is 0.5.
-    ///    `max_bounding_box_count` - (int64) No more than this number of bounding
-    ///        boxes will be produced per image. Default is 100, the
-    ///        requested value may be limited by server.
+    /// `score_threshold`
+    /// : (float) When Model detects objects on the image,
+    ///   it will only produce bounding boxes which have at least this
+    ///   confidence score. Value in 0 to 1 range, default is 0.5.
+    ///
+    /// `max_bounding_box_count`
+    /// : (int64) The maximum number of bounding
+    ///   boxes returned per image. The default is 100, the
+    ///   number of bounding boxes returned might be limited by the server.
+    /// &lt;h4>AutoML Video Intelligence Classification&lt;/h4>
+    ///
+    /// `score_threshold`
+    /// : (float) A value from 0.0 to 1.0. When the model
+    ///   makes predictions for a video, it will only produce results that
+    ///   have at least this confidence score. The default is 0.5.
+    ///
+    /// `segment_classification`
+    /// : (boolean) Set to true to request
+    ///   segment-level classification. AutoML Video Intelligence returns
+    ///   labels and their confidence scores for the entire segment of the
+    ///   video that user specified in the request configuration.
+    ///   The default is true.
+    ///
+    /// `shot_classification`
+    /// : (boolean) Set to true to request shot-level
+    ///   classification. AutoML Video Intelligence determines the boundaries
+    ///   for each camera shot in the entire segment of the video that user
+    ///   specified in the request configuration. AutoML Video Intelligence
+    ///   then returns labels and their confidence scores for each detected
+    ///   shot, along with the start and end time of the shot.
+    ///   The default is false.
+    ///
+    ///   WARNING: Model evaluation is not done for this classification type,
+    ///   the quality of it depends on training data, but there are no metrics
+    ///   provided to describe that quality.
+    ///
+    /// `1s_interval_classification`
+    /// : (boolean) Set to true to request
+    ///   classification for a video at one-second intervals. AutoML Video
+    ///   Intelligence returns labels and their confidence scores for each
+    ///   second of the entire segment of the video that user specified in the
+    ///   request configuration. The default is false.
+    ///
+    ///   WARNING: Model evaluation is not done for this classification
+    ///   type, the quality of it depends on training data, but there are no
+    ///   metrics provided to describe that quality.
+    ///
+    /// &lt;h4>AutoML Video Intelligence Object Tracking&lt;/h4>
+    ///
+    /// `score_threshold`
+    /// : (float) When Model detects objects on video frames,
+    ///   it will only produce bounding boxes which have at least this
+    ///   confidence score. Value in 0 to 1 range, default is 0.5.
+    ///
+    /// `max_bounding_box_count`
+    /// : (int64) The maximum number of bounding
+    ///   boxes returned per image. The default is 100, the
+    ///   number of bounding boxes returned might be limited by the server.
+    ///
+    /// `min_bounding_box_size`
+    /// : (float) Only bounding boxes with shortest edge
+    ///   at least that long as a relative value of video frame size are
+    ///   returned. Value in 0 to 1 range. Default is 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Params {
@@ -767,8 +841,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Result of the Batch Predict. This message is returned in
   /// [response][google.longrunning.Operation.response] of the operation returned
-  /// by the
-  /// [PredictionService.BatchPredict][google.cloud.automl.v1.PredictionService.BatchPredict].
+  /// by the [PredictionService.BatchPredict][google.cloud.automl.v1.PredictionService.BatchPredict].
   /// </summary>
   public sealed partial class BatchPredictResult : pb::IMessage<BatchPredictResult> {
     private static readonly pb::MessageParser<BatchPredictResult> _parser = new pb::MessageParser<BatchPredictResult>(() => new BatchPredictResult());
@@ -812,9 +885,15 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>
     /// Additional domain-specific prediction response metadata.
     ///
-    /// *  For Image Object Detection:
-    ///  `max_bounding_box_count` - (int64) At most that many bounding boxes per
-    ///      image could have been returned.
+    /// &lt;h4>AutoML Vision Object Detection&lt;/h4>
+    ///
+    /// `max_bounding_box_count`
+    /// : (int64) The maximum number of bounding boxes returned per image.
+    ///
+    /// &lt;h4>AutoML Video Intelligence Object Tracking&lt;/h4>
+    ///
+    /// `max_bounding_box_count`
+    /// : (int64) The maximum number of bounding boxes returned per frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Metadata {

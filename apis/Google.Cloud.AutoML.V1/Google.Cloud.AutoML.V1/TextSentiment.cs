@@ -25,9 +25,9 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RleHRfc2VudGltZW50LnByb3Rv",
-            "EhZnb29nbGUuY2xvdWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvGitnb29nbGUvY2xvdWQvYXV0b21sL3YxL2NsYXNzaWZpY2F0",
-            "aW9uLnByb3RvIiwKF1RleHRTZW50aW1lbnRBbm5vdGF0aW9uEhEKCXNlbnRp",
+            "EhZnb29nbGUuY2xvdWQuYXV0b21sLnYxGitnb29nbGUvY2xvdWQvYXV0b21s",
+            "L3YxL2NsYXNzaWZpY2F0aW9uLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
+            "b25zLnByb3RvIiwKF1RleHRTZW50aW1lbnRBbm5vdGF0aW9uEhEKCXNlbnRp",
             "bWVudBgBIAEoBSKgAgoeVGV4dFNlbnRpbWVudEV2YWx1YXRpb25NZXRyaWNz",
             "EhEKCXByZWNpc2lvbhgBIAEoAhIOCgZyZWNhbGwYAiABKAISEAoIZjFfc2Nv",
             "cmUYAyABKAISGwoTbWVhbl9hYnNvbHV0ZV9lcnJvchgEIAEoAhIaChJtZWFu",
@@ -41,7 +41,7 @@ namespace Google.Cloud.AutoML.V1 {
             "XENsb3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFi",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentAnnotation), global::Google.Cloud.AutoML.V1.TextSentimentAnnotation.Parser, new[]{ "Sentiment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics), global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics.Parser, new[]{ "Precision", "Recall", "F1Score", "MeanAbsoluteError", "MeanSquaredError", "LinearKappa", "QuadraticKappa", "ConfusionMatrix" }, null, null, null, null)
@@ -93,9 +93,9 @@ namespace Google.Cloud.AutoML.V1 {
     private int sentiment_;
     /// <summary>
     /// Output only. The sentiment with the semantic, as given to the
-    /// [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] when
-    /// populating the dataset from which the model used for the prediction had
-    /// been trained. The sentiment values are between 0 and
+    /// [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] when populating the dataset from which the model used
+    /// for the prediction had been trained.
+    /// The sentiment values are between 0 and
     /// Dataset.text_sentiment_dataset_metadata.sentiment_max (inclusive),
     /// with higher value meaning more positive sentiment. They are completely
     /// relative, i.e. 0 means least positive sentiment and sentiment_max means
