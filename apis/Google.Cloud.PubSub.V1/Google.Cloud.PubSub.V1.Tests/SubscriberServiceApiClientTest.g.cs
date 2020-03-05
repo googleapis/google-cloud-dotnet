@@ -865,7 +865,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+#pragma warning disable CS0612
                 ReturnImmediately = false,
+#pragma warning restore CS0612
                 MaxMessages = 453182879,
             };
             PullResponse expectedResponse = new PullResponse
@@ -889,7 +891,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+#pragma warning disable CS0612
                 ReturnImmediately = false,
+#pragma warning restore CS0612
                 MaxMessages = 453182879,
             };
             PullResponse expectedResponse = new PullResponse
@@ -915,7 +919,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+#pragma warning disable CS0612
                 ReturnImmediately = false,
+#pragma warning restore CS0612
                 MaxMessages = 453182879,
             };
             PullResponse expectedResponse = new PullResponse
@@ -927,7 +933,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             PullResponse response = client.Pull(request.Subscription, request.ReturnImmediately, request.MaxMessages);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -939,7 +947,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+#pragma warning disable CS0612
                 ReturnImmediately = false,
+#pragma warning restore CS0612
                 MaxMessages = 453182879,
             };
             PullResponse expectedResponse = new PullResponse
@@ -951,9 +961,13 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             PullResponse responseCallSettings = await client.PullAsync(request.Subscription, request.ReturnImmediately, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             PullResponse responseCancellationToken = await client.PullAsync(request.Subscription, request.ReturnImmediately, request.MaxMessages, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -965,7 +979,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+#pragma warning disable CS0612
                 ReturnImmediately = false,
+#pragma warning restore CS0612
                 MaxMessages = 453182879,
             };
             PullResponse expectedResponse = new PullResponse
@@ -977,7 +993,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             PullResponse response = client.Pull(request.SubscriptionAsSubscriptionName, request.ReturnImmediately, request.MaxMessages);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -989,7 +1007,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+#pragma warning disable CS0612
                 ReturnImmediately = false,
+#pragma warning restore CS0612
                 MaxMessages = 453182879,
             };
             PullResponse expectedResponse = new PullResponse
@@ -1001,9 +1021,13 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             PullResponse responseCallSettings = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.ReturnImmediately, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             PullResponse responseCancellationToken = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.ReturnImmediately, request.MaxMessages, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1161,6 +1185,122 @@ namespace Google.Cloud.PubSub.V1.Tests
             Snapshot responseCallSettings = await client.GetSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Snapshot responseCancellationToken = await client.GetSnapshotAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSnapshot()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            GetSnapshotRequest request = new GetSnapshotRequest
+            {
+                SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+            };
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ExpireTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot response = client.GetSnapshot(request.Snapshot);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSnapshotAsync()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            GetSnapshotRequest request = new GetSnapshotRequest
+            {
+                SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+            };
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ExpireTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot responseCallSettings = await client.GetSnapshotAsync(request.Snapshot, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Snapshot responseCancellationToken = await client.GetSnapshotAsync(request.Snapshot, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSnapshotResourceNames()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            GetSnapshotRequest request = new GetSnapshotRequest
+            {
+                SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+            };
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ExpireTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot response = client.GetSnapshot(request.SnapshotAsSnapshotName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSnapshotResourceNamesAsync()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            GetSnapshotRequest request = new GetSnapshotRequest
+            {
+                SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+            };
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                ExpireTime = new wkt::Timestamp(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Snapshot>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot responseCallSettings = await client.GetSnapshotAsync(request.SnapshotAsSnapshotName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Snapshot responseCancellationToken = await client.GetSnapshotAsync(request.SnapshotAsSnapshotName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

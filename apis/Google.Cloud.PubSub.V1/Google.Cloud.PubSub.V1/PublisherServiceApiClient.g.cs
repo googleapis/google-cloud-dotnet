@@ -995,6 +995,126 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists the names of the snapshots on this topic. Snapshots are used in
+        /// &amp;lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&amp;gt;Seek&amp;lt;/a&amp;gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The name of the topic that snapshots are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshots(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTopicSnapshots(new ListTopicSnapshotsRequest
+            {
+                Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic. Snapshots are used in
+        /// &amp;lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&amp;gt;Seek&amp;lt;/a&amp;gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The name of the topic that snapshots are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshotsAsync(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTopicSnapshotsAsync(new ListTopicSnapshotsRequest
+            {
+                Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic. Snapshots are used in
+        /// &amp;lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&amp;gt;Seek&amp;lt;/a&amp;gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The name of the topic that snapshots are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshots(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTopicSnapshots(new ListTopicSnapshotsRequest
+            {
+                TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic. Snapshots are used in
+        /// &amp;lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&amp;gt;Seek&amp;lt;/a&amp;gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The name of the topic that snapshots are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshotsAsync(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTopicSnapshotsAsync(new ListTopicSnapshotsRequest
+            {
+                TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old

@@ -762,6 +762,16 @@ namespace Google.Cloud.PubSub.V1
         }
     }
 
+    public partial class ListTopicSnapshotsRequest
+    {
+        /// <summary><see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.</summary>
+        public TopicName TopicAsTopicName
+        {
+            get => string.IsNullOrEmpty(Topic) ? null : TopicName.Parse(Topic, allowUnparsed: true);
+            set => Topic = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteTopicRequest
     {
         /// <summary><see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.</summary>
