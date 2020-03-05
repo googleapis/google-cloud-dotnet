@@ -234,7 +234,7 @@ namespace Google.Cloud.Spanner.Data
                 _queryOptions = new QueryOptions();
             }
 
-            _queryOptions.OptimizerVersion = options.OptimizerVersion;
+            _queryOptions = _queryOptions.WithOptimizerVersion(options.OptimizerVersion);
         }
 
         /// <summary>

@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.Data
                 _queryOptions = new QueryOptions();
             }
 
-            _queryOptions.OptimizerVersion = optimizerVersion;
+            _queryOptions = _queryOptions.WithOptimizerVersion(optimizerVersion);
         }
 
         /// <summary>

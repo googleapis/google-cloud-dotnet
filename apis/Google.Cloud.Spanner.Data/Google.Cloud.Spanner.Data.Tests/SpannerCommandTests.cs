@@ -89,7 +89,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandHasConnectionQueryOptions()
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            var queryOptions = new QueryOptions{ OptimizerVersion = "1" };
+            var queryOptions = new QueryOptions().WithOptimizerVersion("1");
             connection.QueryOptions = queryOptions;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
 
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            connection.QueryOptions = new QueryOptions{ OptimizerVersion = "1" };
+            connection.QueryOptions = new QueryOptions().WithOptimizerVersion("1");
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             // Optimizer version set through environment variable has higher
@@ -127,11 +127,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
 
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            connection.QueryOptions = new QueryOptions{ OptimizerVersion = "1" };
+            connection.QueryOptions = new QueryOptions().WithOptimizerVersion("1");
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             var commandOptimizerVersion = "3";
-            command.QueryOptions = new QueryOptions{ OptimizerVersion = commandOptimizerVersion };
+            command.QueryOptions = new QueryOptions().WithOptimizerVersion("3");
             // Optimizer version set at a command level has higher precedence
             // than version set through the connection or the environment
             // variable.
