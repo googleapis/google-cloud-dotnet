@@ -8,7 +8,9 @@ then
  mkdir coverage
 fi
 
-if ! compgen -G "coverage/*.dvcr"
+rm -f coverage/all.dvcr
+
+if ! compgen -G "coverage/*.dvcr" > /dev/null
 then
   echo "No coverage reports found to merge."
   # This isn't an error
@@ -43,13 +45,11 @@ while (( "$#" )); do
   shift
 done
 
-rm -f coverage/all.dvcr
-
 echo "Merging reports..."
-$DOTCOVER merge -Source=$(echo coverage/*.dvcr | sed 's/ /;/g') -Output=coverage/all.dvcr ""
+$DOTCOVER merge --Source="$(echo coverage/*.dvcr | sed 's/ /;/g')" --Output=coverage/all.dvcr ""
 
 echo "Generating detailed xml report..."
-$DOTCOVER report -Source=coverage/all.dvcr -Output=coverage/coverage.xml -ReportType=DetailedXML ""
+$DOTCOVER report --Source=coverage/all.dvcr --Output=coverage/coverage.xml --ReportType=DetailedXML ""
 
 # We assume the tools solution has already been restored as part of the build
 echo "Filtering xml report..."
