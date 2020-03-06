@@ -50,5 +50,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal("http://google.com", wrapper.GetUri());
             Assert.Equal("", wrapper.GetUserAgent());
         }
+
+        [Fact]
+        public void NoContextToWrap()
+        {
+            var wrapper = new HttpContextWrapper(null);
+            Assert.Null(wrapper.GetHttpMethod());
+            Assert.Null(wrapper.GetUri());
+            Assert.Null(wrapper.GetUserAgent());
+        }
     }
 }
