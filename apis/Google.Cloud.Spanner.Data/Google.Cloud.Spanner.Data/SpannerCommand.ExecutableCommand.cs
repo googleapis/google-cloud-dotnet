@@ -53,6 +53,8 @@ namespace Google.Cloud.Spanner.Data
                 return settings;
             }
 
+            private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+
             internal SpannerConnection Connection { get; }
             internal SpannerCommandTextBuilder CommandTextBuilder { get; }
             internal int CommandTimeout { get; }
@@ -337,6 +339,43 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
+            // Based on the QueryOptions set at various levels (connection, environment and command),
+            // constructs the QueryOptions proto to set in the ExecuteSqlRequest.
+            // Options set at the SpannerCommand-level has the highest precedence.
+            // Options set at the environment variable level has the next highest precedence.
+            // Options set at the connection level has the lowest precedence.
+            private V1.ExecuteSqlRequest.Types.QueryOptions GetEffectiveQueryOptions()
+            {
+                string optimizerVersion = "";
+
+                // Query options set at the command level have the highest precedence.
+                if (QueryOptions != null)
+                {
+                    optimizerVersion = QueryOptions.OptimizerVersion;
+                }
+
+                // Query options set through an environment variable have the next highest precedence.
+                if (string.IsNullOrEmpty(optimizerVersion))
+                {
+                    optimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? "";
+                }
+
+                // Query options set through the connection have the lowest highest precedence.
+                if (string.IsNullOrEmpty(optimizerVersion) && Connection.QueryOptions != null)
+                {
+                    optimizerVersion = Connection.QueryOptions.OptimizerVersion;
+                }
+
+                if (string.IsNullOrEmpty(optimizerVersion))
+                {
+                    return null;
+                }
+
+                var queryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions();
+                queryOptionsProto.OptimizerVersion = optimizerVersion;
+                return queryOptionsProto;
+            }
+
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
                 if (Partition != null)
@@ -349,10 +388,7 @@ namespace Google.Cloud.Spanner.Data
                     Sql = CommandTextBuilder.ToString()
                 };
 
-                if (QueryOptions != null)
-                {
-                    request.QueryOptions = QueryOptions.ToProto();
-                }
+                request.QueryOptions = GetEffectiveQueryOptions();
 
                 // See comment at the start of GetMutations.
                 SpannerConversionOptions options = null;
