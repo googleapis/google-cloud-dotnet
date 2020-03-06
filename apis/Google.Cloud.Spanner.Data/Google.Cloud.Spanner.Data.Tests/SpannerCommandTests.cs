@@ -12,9 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Tests;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Moq;
 using System;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -85,15 +91,33 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(command.Parameters.SequenceEqual(command2.Parameters));
         }
 
+        /*
         [Fact]
         public void CommandHasConnectionQueryOptions()
         {
-            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            var queryOptions = new QueryOptions().WithOptimizerVersion("1");
+            const string optimzerVersion = "1";
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                .Setup(client => client.ExecuteSqlAsync(It.IsNotNull<ExecuteSqlRequest>(), It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimzerVersion == optimizerVersion)))
+                .Returns<ExecuteSqlRequest, CallSettings>((request, _) =>
+                {
+                    ResultSet response = new ResultSet();
+
+                    return Task.FromResult(response);
+                });
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            var queryOptions = new QueryOptions().WithOptimizerVersion(optimizerVersion);
             connection.QueryOptions = queryOptions;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            Assert.Equal(queryOptions, command.QueryOptions);
+            using (var reader = await command.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    // Do nothing.
+                }
+            }
         }
 
         [Fact]
@@ -141,5 +165,26 @@ namespace Google.Cloud.Spanner.Data.Tests
             Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
         }
 
+        private SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
+        {
+            var spannerClient = spannerClientMock.Object;
+            var sessionPoolOptions = new SessionPoolOptions
+            {
+                MaintenanceLoopDelay = TimeSpan.Zero
+            };
+
+            var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
+            sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
+            sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
+
+            SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
+            {
+                DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database),
+                SessionPoolManager = sessionPoolManager
+            };
+
+            return new SpannerConnection(builder);
+        }
+        */
     }
 }
