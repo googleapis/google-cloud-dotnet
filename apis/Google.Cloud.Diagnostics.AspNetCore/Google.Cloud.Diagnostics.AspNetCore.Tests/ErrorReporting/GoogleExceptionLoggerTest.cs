@@ -50,6 +50,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
+        public void Log_NoContext_NoAccessorContext()
+        {
+            var mockAccessor = new Mock<IHttpContextAccessor>();
+            mockAccessor.Setup(a => a.HttpContext).Returns<DefaultHttpContext>(null);
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
+
+            logger.Log(_exception);
+            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+        }
+
+        [Fact]
         public async Task LogAsync()
         {
             var mockAccessor = new Mock<IHttpContextAccessor>();
