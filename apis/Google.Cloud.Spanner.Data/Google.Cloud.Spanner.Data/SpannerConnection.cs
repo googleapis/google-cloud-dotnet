@@ -111,25 +111,6 @@ namespace Google.Cloud.Spanner.Data
         internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
 
         private QueryOptions _queryOptions = null;
-        private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
-
-        // Query options provided at a connection level will be overridden by query options
-        // set through environment variables.
-        private void ApplyQueryOptionsFromEnvironment()
-        {
-            string optimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? "";
-            if (string.IsNullOrEmpty(optimizerVersion))
-            {
-                return;
-            }
-
-            if (_queryOptions == null)
-            {
-                _queryOptions = new QueryOptions();
-            }
-
-            _queryOptions = _queryOptions.WithOptimizerVersion(optimizerVersion);
-        }
 
         /// <summary>
         /// Query options to use throughout the lifetime of the connection when
@@ -138,10 +119,7 @@ namespace Google.Cloud.Spanner.Data
         public QueryOptions QueryOptions
         {
             get => _queryOptions;
-            set {
-                _queryOptions = (QueryOptions) value;
-                ApplyQueryOptionsFromEnvironment();
-            }
+            set => _queryOptions = (QueryOptions) value;
         }
 
         /// <summary>
@@ -447,7 +425,7 @@ namespace Google.Cloud.Spanner.Data
             string databaseTable,
             SpannerParameterCollection primaryKeys = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null,
-            primaryKeys) { QueryOptions = QueryOptions };
+            primaryKeys);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to insert rows into a Spanner database table.
@@ -464,7 +442,7 @@ namespace Google.Cloud.Spanner.Data
             string databaseTable,
             SpannerParameterCollection insertedColumns = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateInsertTextBuilder(databaseTable), this, null,
-            insertedColumns) { QueryOptions = QueryOptions };
+            insertedColumns);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to insert or update rows into a Spanner database table.
@@ -481,7 +459,7 @@ namespace Google.Cloud.Spanner.Data
             string databaseTable,
             SpannerParameterCollection insertUpdateColumns = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateInsertOrUpdateTextBuilder(databaseTable), this,
-            null, insertUpdateColumns) { QueryOptions = QueryOptions };
+            null, insertUpdateColumns);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to select rows using a SQL query statement.
@@ -497,7 +475,7 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateSelectCommand(string sqlQueryStatement, SpannerParameterCollection selectParameters = null) =>
-            new SpannerCommand(SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null, selectParameters) { QueryOptions = QueryOptions };
+            new SpannerCommand(SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null, selectParameters);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> from a <see cref="CommandPartition"/>.
@@ -510,7 +488,7 @@ namespace Google.Cloud.Spanner.Data
         /// creating the <see cref="CommandPartition"/>.  See <see cref="SpannerConnection.BeginReadOnlyTransaction(TransactionId)"/>.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateCommandWithPartition(CommandPartition partition, SpannerTransaction transaction) =>
-            new SpannerCommand(this, transaction, partition) { QueryOptions = QueryOptions };
+            new SpannerCommand(this, transaction, partition);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to update rows in a Spanner database table.
@@ -525,7 +503,7 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateUpdateCommand(string databaseTable, SpannerParameterCollection updateColumns = null) =>
-            new SpannerCommand(SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null, updateColumns) { QueryOptions = QueryOptions };
+            new SpannerCommand(SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null, updateColumns);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a DDL (CREATE/DROP TABLE, etc) statement.
@@ -537,7 +515,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDdlCommand(
             string ddlStatement, params string[] extraDdlStatements) =>
-            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this) { QueryOptions = QueryOptions };
+            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a general DML (UPDATE, INSERT, DELETE) statement.
@@ -555,7 +533,7 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDmlCommand(string dmlStatement, SpannerParameterCollection dmlParameters = null) =>
-            new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters) { QueryOptions = QueryOptions };
+            new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters);
 
         /// <summary>
         /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements with this connection, without using a transaction.
