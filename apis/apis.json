@@ -460,6 +460,7 @@
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
       "Grpc.Core": "2.27.0",
+      "System.Collections.Immutable": "1.4.0",
       "System.Linq.Async": "4.0.0"
     },
     "testDependencies": {
