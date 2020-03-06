@@ -508,6 +508,7 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("global", r.Type);
             Assert.Equal(1, r.Labels.Count);
             Assert.Equal(s_projectId, r.Labels["project_id"]);
+            Assert.Equal(s_projectId, uploadedEntries[0].LogNameAsLogName.ProjectId);
         }
 
         [Fact]
@@ -516,7 +517,7 @@ namespace Google.Cloud.Logging.NLog.Tests
             const string json = @"
 {
   'project': {
-    'projectId': '" + s_projectId + @"'
+    'projectId': 'gce_project_id'
   },
   'instance': {
     'id': 'FakeInstanceId',
@@ -535,15 +536,19 @@ namespace Google.Cloud.Logging.NLog.Tests
             var r = uploadedEntries[0].Resource;
             Assert.Equal("gce_instance", r.Type);
             Assert.Equal(3, r.Labels.Count);
-            Assert.Equal(s_projectId, r.Labels["project_id"]);
+            // This is the monitored resource project ID.
+            Assert.Equal("gce_project_id", r.Labels["project_id"]);
             Assert.Equal("FakeInstanceId", r.Labels["instance_id"]);
             Assert.Equal("FakeZone", r.Labels["zone"]);
+            // If the project ID is configured, it is used as the target for writing
+            // logs, even if the code is running on GCP.
+            Assert.Equal(s_projectId, uploadedEntries[0].LogNameAsLogName.ProjectId);
         }
 
         [Fact]
         public async Task GaePlatform()
         {
-            var platform = new Platform(new GaePlatformDetails(s_projectId, "FakeInstanceId", "FakeService", "FakeVersion"));
+            var platform = new Platform(new GaePlatformDetails("gae_project_id", "FakeInstanceId", "FakeService", "FakeVersion"));
             var uploadedEntries = await RunTestWorkingServer(
                 googleTarget =>
                 {
@@ -554,9 +559,36 @@ namespace Google.Cloud.Logging.NLog.Tests
             var r = uploadedEntries[0].Resource;
             Assert.Equal("gae_app", r.Type);
             Assert.Equal(3, r.Labels.Count);
-            Assert.Equal(s_projectId, r.Labels["project_id"]);
+            // This is the monitored resource project ID.
+            Assert.Equal("gae_project_id", r.Labels["project_id"]);
             Assert.Equal("FakeService", r.Labels["module_id"]);
             Assert.Equal("FakeVersion", r.Labels["version_id"]);
+            // If the project ID is configured, it is used as the target for writing
+            // logs, even if the code is running on GCP.
+            Assert.Equal(s_projectId, uploadedEntries[0].LogNameAsLogName.ProjectId);
+        }
+
+        [Fact]
+        public async Task GaePlatform_NoConfiguredProjectId()
+        {
+            var platform = new Platform(new GaePlatformDetails("gae_project_id", "FakeInstanceId", "FakeService", "FakeVersion"));
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    LogInfo("Message0");
+                    return Task.FromResult(0);
+                }, platform: platform, enableResourceTypeDetection: true, configFn: target => target.ProjectId = null);
+            Assert.Equal(1, uploadedEntries.Count);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("gae_app", r.Type);
+            Assert.Equal(3, r.Labels.Count);
+            // This is the monitored resource project ID.
+            Assert.Equal("gae_project_id", r.Labels["project_id"]);
+            Assert.Equal("FakeService", r.Labels["module_id"]);
+            Assert.Equal("FakeVersion", r.Labels["version_id"]);
+            // If the project ID is not configured, then the target will be the project where
+            // the monitored resource is at.
+            Assert.Equal("gae_project_id", uploadedEntries[0].LogNameAsLogName.ProjectId);
         }
     }
 }

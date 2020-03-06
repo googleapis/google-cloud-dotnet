@@ -288,22 +288,27 @@ namespace Google.Cloud.Logging.NLog
 
         private void ActivateLogIdAndResource(string logId)
         {
-            string projectId = null;
+            // Project ID of the project where the resource that is being monitored lives.
+            string monitoredProjectId = null;
+            // Project ID of the project where the entries are to be written.
+            string targetProjectId = null;
             MonitoredResource resource = null;
+
             if (!DisableResourceTypeDetection)
             {
                 resource = MonitoredResourceBuilder.FromPlatform(_platform);
-                resource.Labels.TryGetValue("project_id", out projectId);
+                resource.Labels.TryGetValue("project_id", out monitoredProjectId);
             }
+            targetProjectId = ProjectId?.Render(LogEventInfo.CreateNullEvent());
 
-            if (projectId == null)
+            if (monitoredProjectId == null)
             {
                 // Either platform detection is disabled, or it detected an unknown platform.
                 // So use the manually configured projectId and override the resource.
-                projectId = GaxPreconditions.CheckNotNull(ProjectId?.Render(LogEventInfo.CreateNullEvent()), nameof(ProjectId));
+                monitoredProjectId = GaxPreconditions.CheckNotNull(targetProjectId, nameof(ProjectId));
                 if (ResourceType == null)
                 {
-                    resource = new MonitoredResource { Type = "global", Labels = { { "project_id", projectId } } };
+                    resource = new MonitoredResource { Type = "global", Labels = { { "project_id", monitoredProjectId } } };
                 }
                 else
                 {
@@ -312,8 +317,14 @@ namespace Google.Cloud.Logging.NLog
                 }
             }
 
+            if (targetProjectId == null)
+            {
+                // If there was no configured projectId, then use the same as the monitored resoure.
+                targetProjectId = monitoredProjectId;
+            }
+
             _resource = resource;
-            var logName = new LogName(projectId, logId);
+            var logName = new LogName(targetProjectId, logId);
             _logName = logName.ToString();
             _logNameToWrite = logName;
         }
