@@ -220,32 +220,13 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        // When query options are set, merge the new set of options into the existing options.
-        private void MergeQueryOptions(QueryOptions options)
-        {
-            // Nothing to merge.
-            if (options == null || string.IsNullOrEmpty(options.OptimizerVersion))
-            {
-                return;
-            }
-
-            if (_queryOptions == null)
-            {
-                _queryOptions = new QueryOptions();
-            }
-
-            _queryOptions = _queryOptions.WithOptimizerVersion(options.OptimizerVersion);
-        }
-
         /// <summary>
         /// Query options to use when running SQL and streaming SQL commands.
-        /// When a new set of options is set, the new fields will be merged
-        /// into the fields in the existing options.
         /// </summary>
         public QueryOptions QueryOptions
         {
             get => _queryOptions;
-            set => MergeQueryOptions(value);
+            set => _queryOptions = (QueryOptions) value;
         }
 
         /// <inheritdoc />
