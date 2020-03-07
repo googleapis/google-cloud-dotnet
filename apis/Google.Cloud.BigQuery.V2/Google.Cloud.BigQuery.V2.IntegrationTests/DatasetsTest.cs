@@ -13,16 +13,13 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
 {
-    // Note: some of these tests fetch the dataset in a way that looks unnecessary.
-    // Currently, the etag changes between a dataset being created and it first being fetched,
-    // which breaks the "create, update" approach. I'm investigating why this happens.
-
     [Collection(nameof(BigQueryFixture))]
     public class DatasetsTest
     {
@@ -87,7 +84,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var created = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var created = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
             var fetched = client.GetDataset(id);
             Assert.Equal(created.Resource.ETag, fetched.Resource.ETag);
         }
@@ -108,7 +105,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = Locations.Tokyo } );
+            var created = client.CreateDataset(id, new Dataset { Location = Locations.Tokyo } );
             Assert.Equal(Locations.Tokyo, created.Resource.Location);
         }
 
@@ -118,8 +115,202 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(Locations.Tokyo);
             var id = _fixture.CreateDatasetId();
 
-            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = Locations.EuropeanUnion });
+            var created = client.CreateDataset(id, new Dataset { Location = Locations.EuropeanUnion });
             Assert.Equal(Locations.EuropeanUnion, created.Resource.Location);
+        }
+
+        [Fact]
+        public void CreateDataset_NoDataset()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var created = client.CreateDataset(id);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public async Task CreateDatasetAsync_NoDataset()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var created = await client.CreateDatasetAsync(id);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void CreateDataset_DatasetNoReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var dataset = new Dataset();
+
+            var created = client.CreateDataset(id, dataset);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public async Task CreateDatasetAsync_DatasetNoReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var dataset = new Dataset();
+
+            var created = await client.CreateDatasetAsync(id, dataset);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void CreateDataset_DatasetSameReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var dataset = new Dataset 
+            { 
+                DatasetReference = new DatasetReference 
+                { 
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = id
+                } 
+            };
+
+            var created = client.CreateDataset(id, dataset);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public async Task CreateDatasetAsync_DatasetSameReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = id
+                }
+            };
+
+            var created = await client.CreateDatasetAsync(id, dataset);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void CreateDataset_DatasetDifferentReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var anotherId = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = anotherId
+                }
+            };
+
+            Assert.Throws<ArgumentException>(() => client.CreateDataset(id, dataset));
+        }
+
+        [Fact]
+        public async Task CreateDatasetAsync_DatasetDifferentReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var anotherId = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = anotherId
+                }
+            };
+
+            await Assert.ThrowsAsync<ArgumentException>(() => client.CreateDatasetAsync(id, dataset));
+        }
+
+        [Fact]
+        public void GetOrCreateDataset_DatasetSameReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = id
+                }
+            };
+
+            var created = client.GetOrCreateDataset(id, resource: dataset);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public async Task GetOrCreateDatasetAsync_DatasetSameReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = id
+                }
+            };
+
+            var created = await client.GetOrCreateDatasetAsync(id, resource: dataset);
+            Assert.Equal(_fixture.ProjectId, created.Reference.ProjectId);
+            Assert.Equal(id, created.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void GetOrCreateDataset_DatasetDifferentReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var anotherId = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = anotherId
+                }
+            };
+
+            Assert.Throws<ArgumentException>(() => client.GetOrCreateDataset(id, resource: dataset));
+        }
+
+        [Fact]
+        public async Task GetOrCreateDatasetAsync_DatasetDifferentReference()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+            var anotherId = _fixture.CreateDatasetId();
+            var dataset = new Dataset
+            {
+                DatasetReference = new DatasetReference
+                {
+                    ProjectId = _fixture.ProjectId,
+                    DatasetId = anotherId
+                }
+            };
+
+            await Assert.ThrowsAsync<ArgumentException>(() => client.GetOrCreateDatasetAsync(id, resource: dataset));
         }
 
         [Fact]
@@ -128,7 +319,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify locally...
             original.Resource.Description = "Description2";
@@ -153,7 +344,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetDataset(id);
@@ -174,7 +365,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
             var patched = original.Patch(new Dataset { Description = "Description2" }, matchETag: false);
 
             // Check the results of the patch
@@ -194,7 +385,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetDataset(id);
@@ -212,7 +403,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetDataset(id);
@@ -238,7 +429,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = await client.CreateDatasetAsync(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify locally...
             original.Resource.Description = "Description2";
@@ -263,7 +454,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = await client.CreateDatasetAsync(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetDatasetAsync(id);
@@ -284,7 +475,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = await client.CreateDatasetAsync(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
             var patched = await original.PatchAsync(new Dataset { Description = "Description2" }, matchETag: false);
 
             // Check the results of the patch
@@ -304,7 +495,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = await client.CreateDatasetAsync(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetDatasetAsync(id);
@@ -322,7 +513,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var original = await client.CreateDatasetAsync(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetDatasetAsync(id);

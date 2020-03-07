@@ -14,7 +14,6 @@
 
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
-using System;
 using Xunit;
 using static Google.Apis.Bigquery.v2.DatasetsResource;
 
@@ -22,44 +21,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
 {
     public class CreateDatasetOptionsTest
     {
+        // The test doesn't do anything yet... but neither does the code.
         [Fact]
         public void ModifyRequest()
         {
-            EncryptionConfiguration config = new EncryptionConfiguration { KmsKeyName = "dataset_default_key" };
-            var options = new CreateDatasetOptions
-            {
-                DefaultTableExpiration = TimeSpan.FromSeconds(10),
-                Description = "A description",
-                FriendlyName = "A friendly name",
-                Location = "EU",
-                DefaultEncryptionConfiguration = config,
-                DefaultPartitionExpiration = TimeSpan.FromSeconds(20)
-            };
-            Dataset dataset = new Dataset { Location = "US" };
-            InsertRequest request = new InsertRequest(new BigqueryService(), dataset, "project");
-            options.ModifyRequest(dataset, request);
-            Assert.Equal(10 * 1000, dataset.DefaultTableExpirationMs);
-            Assert.Equal("A description", dataset.Description);
-            Assert.Equal("A friendly name", dataset.FriendlyName);
-            Assert.Equal("EU", dataset.Location);
-            Assert.Equal(20 * 1000, dataset.DefaultPartitionExpirationMs);
-            Assert.Equal(config, dataset.DefaultEncryptionConfiguration);
-        }
-
-        [Fact]
-        public void ModifyRequest_NoLocation()
-        {
-            // When the options don't specify a location, we should keep the one in the original Dataset.
-            var options = new CreateDatasetOptions
-            {
-                DefaultTableExpiration = TimeSpan.FromSeconds(10),
-                Description = "A description",
-                FriendlyName = "A friendly name",
-            };
-            Dataset dataset = new Dataset { Location = "US" };
-            InsertRequest request = new InsertRequest(new BigqueryService(), dataset, "project");
-            options.ModifyRequest(dataset, request);
-            Assert.Equal("US", dataset.Location);
+            var options = new CreateDatasetOptions();
+            InsertRequest request = new InsertRequest(new BigqueryService(), new Dataset(), "project");
+            options.ModifyRequest(request);
         }
     }
 }

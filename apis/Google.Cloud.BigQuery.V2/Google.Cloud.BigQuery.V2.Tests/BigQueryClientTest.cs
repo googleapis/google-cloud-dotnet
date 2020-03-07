@@ -175,11 +175,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var datasetId = "dataset";
             var reference = GetDatasetReference(datasetId);
+            var dataset = new Dataset();
             var options = new CreateDatasetOptions();
             VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), GetDataset(reference)),
-                client => client.CreateDataset(MatchesWhenSerialized(reference), options),
-                client => client.CreateDataset(datasetId, options),
-                client => client.CreateDataset(ProjectId, datasetId, options));
+                client => client.CreateDataset(MatchesWhenSerialized(reference), dataset, options),
+                client => client.CreateDataset(datasetId, dataset, options),
+                client => client.CreateDataset(ProjectId, datasetId, dataset, options));
         }
 
         [Fact]
@@ -242,10 +243,11 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var reference = GetDatasetReference(datasetId);
             var getOptions = new GetDatasetOptions();
             var createOptions = new CreateDatasetOptions();
+            var dataset = new Dataset();
             VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), GetDataset(reference)),
-                client => client.GetOrCreateDataset(MatchesWhenSerialized(reference), getOptions, createOptions),
-                client => client.GetOrCreateDataset(datasetId, getOptions, createOptions),
-                client => client.GetOrCreateDataset(ProjectId, datasetId, getOptions, createOptions));
+                client => client.GetOrCreateDataset(MatchesWhenSerialized(reference), getOptions, dataset, createOptions),
+                client => client.GetOrCreateDataset(datasetId, getOptions, dataset, createOptions),
+                client => client.GetOrCreateDataset(ProjectId, datasetId, getOptions, dataset, createOptions));
         }
 
         [Fact]
@@ -753,11 +755,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var reference = GetDatasetReference(datasetId);
             var options = new CreateDatasetOptions();
+            var dataset = new Dataset();
             var token = new CancellationTokenSource().Token;
             VerifyEquivalentAsync(new BigQueryDataset(new DerivedBigQueryClient(), GetDataset(reference)),
-                client => client.CreateDatasetAsync(MatchesWhenSerialized(reference), options, token),
-                client => client.CreateDatasetAsync(datasetId, options, token),
-                client => client.CreateDatasetAsync(ProjectId, datasetId, options, token));
+                client => client.CreateDatasetAsync(MatchesWhenSerialized(reference), dataset, options, token),
+                client => client.CreateDatasetAsync(datasetId, dataset, options, token),
+                client => client.CreateDatasetAsync(ProjectId, datasetId, dataset, options, token));
         }
 
         [Fact]
@@ -794,11 +797,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var reference = GetDatasetReference(datasetId);
             var getOptions = new GetDatasetOptions();
             var createOptions = new CreateDatasetOptions();
+            var dataset = new Dataset();
             var token = new CancellationTokenSource().Token;
             VerifyEquivalentAsync(new BigQueryDataset(new DerivedBigQueryClient(), GetDataset(reference)),
-                client => client.GetOrCreateDatasetAsync(MatchesWhenSerialized(reference), getOptions, createOptions, token),
-                client => client.GetOrCreateDatasetAsync(datasetId, getOptions, createOptions, token),
-                client => client.GetOrCreateDatasetAsync(ProjectId, datasetId, getOptions, createOptions, token));
+                client => client.GetOrCreateDatasetAsync(MatchesWhenSerialized(reference), getOptions, dataset, createOptions, token),
+                client => client.GetOrCreateDatasetAsync(datasetId, getOptions, dataset, createOptions, token),
+                client => client.GetOrCreateDatasetAsync(ProjectId, datasetId, getOptions, dataset, createOptions, token));
         }
 
         [Fact]

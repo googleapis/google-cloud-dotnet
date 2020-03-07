@@ -78,44 +78,52 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override BigQueryDataset CreateDataset(DatasetReference datasetReference, CreateDatasetOptions options = null)
+        public override BigQueryDataset CreateDataset(DatasetReference datasetReference, Dataset resource = null, CreateDatasetOptions options = null)
         {
-            var request = CreateInsertDatasetRequest(datasetReference, options);
+            var request = CreateInsertDatasetRequest(datasetReference, resource, options);
             return new BigQueryDataset(this, request.Execute());
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, Dataset resource = null, CreateDatasetOptions options = null, CancellationToken cancellationToken = default)
         {
-            var request = CreateInsertDatasetRequest(datasetReference, options);
+            var request = CreateInsertDatasetRequest(datasetReference, resource, options);
             return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
         }
 
         /// <inheritdoc />
-        public override BigQueryDataset GetOrCreateDataset(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null)
+        public override BigQueryDataset GetOrCreateDataset(DatasetReference datasetReference, GetDatasetOptions getOptions = null, Dataset resource = null, CreateDatasetOptions createOptions = null)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxPreconditions.CheckArgument(
+                resource?.DatasetReference == null || datasetReference.ReferencesSameAs(resource.DatasetReference),
+                nameof(resource.DatasetReference),
+                $"If {nameof(resource.DatasetReference)} is specified, it must be the same as {nameof(datasetReference)}");
             try
             {
                 return GetDataset(datasetReference, getOptions);
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return CreateDataset(datasetReference, createOptions);
+                return CreateDataset(datasetReference, resource, createOptions);
             }
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, Dataset resource = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxPreconditions.CheckArgument(
+                resource?.DatasetReference == null || datasetReference.ReferencesSameAs(resource.DatasetReference),
+                nameof(resource.DatasetReference),
+                $"If {nameof(resource.DatasetReference)} is specified, it must be the same as {nameof(datasetReference)}");
             try
             {
                 return await GetDatasetAsync(datasetReference, getOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return await CreateDatasetAsync(datasetReference, createOptions, cancellationToken).ConfigureAwait(false); ;
+                return await CreateDatasetAsync(datasetReference, resource, createOptions, cancellationToken).ConfigureAwait(false); ;
             }
         }
 
@@ -179,12 +187,20 @@ namespace Google.Cloud.BigQuery.V2
             return request;
         }
 
-        private InsertRequest CreateInsertDatasetRequest(DatasetReference datasetReference, CreateDatasetOptions options)
+        private InsertRequest CreateInsertDatasetRequest(DatasetReference datasetReference, Dataset resource, CreateDatasetOptions options)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var dataset = new Dataset { DatasetReference = datasetReference, Location = DefaultLocation };
-            var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
-            options?.ModifyRequest(dataset, request);
+            GaxPreconditions.CheckArgument(
+                resource?.DatasetReference == null || datasetReference.ReferencesSameAs(resource.DatasetReference),
+                nameof(resource.DatasetReference),
+                $"If {nameof(resource.DatasetReference)} is specified, it must be the same as {nameof(datasetReference)}");
+
+            resource ??= new Dataset ();
+            resource.DatasetReference ??= datasetReference;
+            resource.Location ??= DefaultLocation;
+
+            var request = Service.Datasets.Insert(resource, datasetReference.ProjectId);
+            options?.ModifyRequest(request);
             return request;
         }
 

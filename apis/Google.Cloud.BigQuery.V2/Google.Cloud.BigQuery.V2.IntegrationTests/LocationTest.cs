@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2.Data;
 using System.Linq;
 using Xunit;
 
@@ -97,7 +98,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             // Create a dataset; it should be in Tokyo.
             var datasetId = _fixture.CreateDatasetId();
-            var dataset = client.CreateDataset(datasetId, new CreateDatasetOptions { Location = Locations.Tokyo });
+            var dataset = client.CreateDataset(datasetId, new Dataset { Location = Locations.Tokyo });
             Assert.Equal(Locations.Tokyo, dataset.Resource.Location);
 
             // Create a table in the dataset
