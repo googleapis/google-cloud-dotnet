@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-03-11
+
+- [Commit 8d040c3](https://github.com/googleapis/google-cloud-dotnet/commit/8d040c3): Adds StackdriverLoggingConfig and Queue.StackdriverLoggingConfig
+
 # Version 2.0.0-beta01, released 2020-02-19
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
