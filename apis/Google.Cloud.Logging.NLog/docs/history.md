@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.0.0-beta02, released 2020-03-10
+
+- [Commit 528388f](https://github.com/googleapis/google-cloud-dotnet/commit/528388f): Configured Project ID takes precedence over Project ID of project in which the code is running for using as log writing target.
+
 # Version 3.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
