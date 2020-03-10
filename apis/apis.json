@@ -218,12 +218,12 @@
       "Datastore"
     ],
     "dependencies": {
-      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta01",
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta03",
       "Grpc.Core": "2.27.0",
       "System.Linq.Async": "4.0.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "3.0.0-beta01"
+      "Google.Api.Gax.Grpc.Testing": "3.0.0-beta03"
     }
   },
   {
