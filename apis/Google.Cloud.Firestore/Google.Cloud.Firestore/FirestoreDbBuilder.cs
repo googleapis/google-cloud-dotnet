@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -28,7 +29,10 @@ namespace Google.Cloud.Firestore
     /// </summary>
     public sealed class FirestoreDbBuilder : ClientBuilderBase<FirestoreDb>
     {
-        private const string EmulatorHostVariable = "FIRESTORE_EMULATOR_HOST";
+        private const string s_emulatorHostVariable = "FIRESTORE_EMULATOR_HOST";
+        private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostVariable };
+        private static readonly CallSettings BearerOwnerSettings = CallSettings.FromHeader("Authorization", "Bearer owner");
+
         private static readonly FirestoreSettings s_defaultSettings = AddGcclVersionHeader(new FirestoreSettings());
 
         /// <summary>
@@ -63,8 +67,6 @@ namespace Google.Cloud.Firestore
         /// </summary>
         internal FirestoreClient Client { get; set; }
 
-        private EmulatorDetection _emulatorDetection;
-
         /// <summary>
         /// Specifies how the builder responds to the presence of the FIRESTORE_EMULATOR_HOST emulator environment variable.
         /// </summary>
@@ -72,22 +74,27 @@ namespace Google.Cloud.Firestore
         /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that the environment variable is
         /// ignored.
         /// </remarks>
-        public EmulatorDetection EmulatorDetection
+        public new EmulatorDetection EmulatorDetection
         {
-            get => _emulatorDetection;
-            set => _emulatorDetection = GaxPreconditions.CheckEnumValue(value, nameof(value));
+            get => base.EmulatorDetection;
+            set => base.EmulatorDetection = value;
         }
 
         /// <inheritdoc />
         public override FirestoreDb Build()
         {
+            var emulatorBuilder = MaybeUseEmulator();
+            if (emulatorBuilder is object)
+            {
+                return emulatorBuilder.Build();
+            }
+
             var projectId = ProjectId ?? Platform.Instance().ProjectId;
             var client = Client;
             if (client == null)
             {
                 var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
                 clientBuilder.Settings = GetEffectiveSettings();
-                ApplyEmulatorSettings(clientBuilder);
                 client = clientBuilder.Build();
             }
             return BuildFromClient(projectId, client);
@@ -96,13 +103,19 @@ namespace Google.Cloud.Firestore
         /// <inheritdoc />
         public override async Task<FirestoreDb> BuildAsync(CancellationToken cancellationToken = default)
         {
+            var emulatorBuilder = MaybeUseEmulator();
+            if (emulatorBuilder is object)
+            {
+                return await emulatorBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
+            }
+
             var projectId = ProjectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId;
+
             var client = Client;
             if (client == null)
             {
                 var clientBuilder = FirestoreClientBuilder.FromOtherBuilder(this);
                 clientBuilder.Settings = GetEffectiveSettings();
-                ApplyEmulatorSettings(clientBuilder);
                 client = await clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
             }
             return BuildFromClient(projectId, client);
@@ -147,19 +160,17 @@ namespace Google.Cloud.Firestore
             return clone;
         }
 
-        private void ApplyEmulatorSettings(FirestoreClientBuilder clientBuilder)
+        private FirestoreDbBuilder MaybeUseEmulator()
         {
-            if (EmulatorDetection == EmulatorDetection.None)
+            var environment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
+            if (environment is null)
             {
-                return;
+                return null;
             }
-
-            // Note: we treat present-but-empty environment variables as if they were absent.
-            string hostAndPort = Environment.GetEnvironmentVariable(EmulatorHostVariable)?.Trim() ?? "";
-
             // The emulator output includes something like this:
             // export FIRESTORE_EMULATOR_HOST=::1:8918
             // We need to translate that into "ipv6:[::1]:8918" for gRPC
+            string hostAndPort = environment[s_emulatorHostVariable];
             if (hostAndPort.StartsWith("::"))
             {
                 int colonPortIndex = hostAndPort.LastIndexOf(':');
@@ -168,46 +179,17 @@ namespace Google.Cloud.Firestore
                 hostAndPort = $"ipv6:[{host}]{colonPort}";
             }
 
-            var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : hostAndPort;
-
-            // Possibly return early or fail, based on whether or not we've got an endpoint.
-            switch (EmulatorDetection)
+            var settings = Settings?.Clone() ?? new FirestoreSettings();
+            settings.CallSettings = settings.CallSettings.MergedWith(BearerOwnerSettings);
+            // Note: we don't set EmulatorDetection here, so it defaults to None - if we
+            // copied our existing value in here, we'd recurse infinitely (until we overflowed the stack).
+            return new FirestoreDbBuilder
             {
-                case EmulatorDetection.ProductionOnly:
-                    GaxPreconditions.CheckState(endpoint == null,
-                        "Emulator environment variable is set, contrary to use of {0}.{1}",
-                        nameof(EmulatorDetection), nameof(EmulatorDetection.ProductionOnly));
-                    return;
-                case EmulatorDetection.EmulatorOnly:
-                    GaxPreconditions.CheckState(
-                        endpoint != null,
-                        "Expected {0} environment variable to be set", EmulatorHostVariable);
-                    break;
-                case EmulatorDetection.EmulatorOrProduction:
-                    if (endpoint == null)
-                    {
-                        return;
-                    }
-                    break;
-            }
-
-            // Check the user hasn't specified anything they shouldn't.
-            GaxPreconditions.CheckState(clientBuilder.Endpoint == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.Endpoint));
-            GaxPreconditions.CheckState(clientBuilder.CallInvoker == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.CallInvoker));
-            GaxPreconditions.CheckState(clientBuilder.ChannelCredentials == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.ChannelCredentials));
-            GaxPreconditions.CheckState(clientBuilder.CredentialsPath == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.CredentialsPath));
-            GaxPreconditions.CheckState(clientBuilder.JsonCredentials == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.JsonCredentials));
-            GaxPreconditions.CheckState(clientBuilder.Scopes == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.Scopes));
-            GaxPreconditions.CheckState(clientBuilder.TokenAccessMethod == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.TokenAccessMethod));
-
-            // Set the endpoint, channel credentials and header mutation.
-            clientBuilder.Endpoint = endpoint;
-            clientBuilder.ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure;
-            if (clientBuilder.Settings == null)
-            {
-                clientBuilder.Settings = new FirestoreSettings();
-            }
-            clientBuilder.Settings.CallSettings = clientBuilder.Settings.CallSettings.MergedWith(CallSettings.FromHeader("Authorization", "Bearer owner"));
+                Endpoint = hostAndPort,
+                Settings = settings,
+                ProjectId = ProjectId,
+                ChannelCredentials = ChannelCredentials.Insecure
+            };
         }
     }
 }
