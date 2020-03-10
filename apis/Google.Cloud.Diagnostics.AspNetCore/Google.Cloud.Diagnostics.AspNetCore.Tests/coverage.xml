@@ -10,9 +10,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Diagnostics.Common</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Cloud.Diagnostics.AspNetCore.Analyzers</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

@@ -300,7 +300,7 @@
     ],
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
-      "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "project",
+      "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "2.0.0-beta01",
       "Grpc.Core": "default",
       "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
       "Microsoft.AspNetCore.Http": "2.1.1",
