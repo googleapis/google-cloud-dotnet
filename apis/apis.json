@@ -955,7 +955,9 @@
     "dependencies": {
       "Google.Cloud.Iam.V1": "2.0.0-beta01"
     },
-    "tags": [ "services" ]
+    "tags": [
+      "services"
+    ]
   },
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
