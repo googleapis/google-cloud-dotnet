@@ -285,7 +285,7 @@
   },
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "4.0.0-beta01",
+    "version": "4.0.0-beta02",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -339,7 +339,7 @@
   },
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "4.0.0-beta01",
+    "version": "4.0.0-beta02",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",

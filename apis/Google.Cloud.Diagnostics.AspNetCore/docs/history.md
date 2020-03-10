@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.0.0-beta02, released 2020-03-10
+
+- [Commit 5bc0cf5](https://github.com/googleapis/google-cloud-dotnet/commit/5bc0cf5): GoogleExceptionLogger accepts null HttpContext.
+
 # Version 4.0.0-beta01, released 2020-02-19
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
