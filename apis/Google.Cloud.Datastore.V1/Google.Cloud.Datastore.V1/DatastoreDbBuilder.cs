@@ -26,12 +26,15 @@ namespace Google.Cloud.Datastore.V1
     /// </summary>
     public sealed partial class DatastoreDbBuilder : ClientBuilderBase<DatastoreDb>
     {
+        internal const string s_emulatorHostVariable = "DATASTORE_EMULATOR_HOST";
+        internal const string s_emulatorProjectVariable = "DATASTORE_PROJECT_ID";
+        private static readonly string[] s_requiredEmulatorVariables = { s_emulatorHostVariable };
+        private static readonly string[] s_allEmulatorVariables = { s_emulatorHostVariable, s_emulatorProjectVariable };
+
         /// <summary>
         /// The settings to use for RPCs, or null for the default settings.
         /// </summary>
         public DatastoreSettings Settings { get; set; }
-
-        private EmulatorDetection _emulatorDetection;
 
         /// <summary>
         /// Specifies how the builder responds to the presence of emulator environment variables as described
@@ -41,10 +44,10 @@ namespace Google.Cloud.Datastore.V1
         /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that environment variables are
         /// ignored.
         /// </remarks>
-        public EmulatorDetection EmulatorDetection
+        public new EmulatorDetection EmulatorDetection
         {
-            get => _emulatorDetection;
-            set => _emulatorDetection = GaxPreconditions.CheckEnumValue(value, nameof(value));
+            get => base.EmulatorDetection;
+            set => base.EmulatorDetection = value;
         }
 
         /// <summary>
@@ -54,70 +57,12 @@ namespace Google.Cloud.Datastore.V1
         public string ProjectId { get; set; }
         
         /// <summary>
-        /// Common code for handling the emulator configuration.
-        /// </summary>
-        private ConfiguredBuilder PrepareBuilder()
-        {
-            var clientBuilder = new DatastoreClientBuilder(this);
-            clientBuilder.Settings = Settings;
-            string projectId = ProjectId;
-
-            if (EmulatorDetection != EmulatorDetection.None)
-            {
-                var emulatorConfig = EmulatorConfiguration.FromEnvironment();
-                switch (EmulatorDetection)
-                {
-                    case EmulatorDetection.ProductionOnly:
-                        GaxPreconditions.CheckState(
-                            emulatorConfig.ProjectId == null && emulatorConfig.Endpoint == null,
-                            "Emulator environment variables are set, contrary to use of {0}.{1}",
-                            nameof(EmulatorDetection), nameof(EmulatorDetection.ProductionOnly));
-                        break;
-                    case EmulatorDetection.EmulatorOnly:
-                        GaxPreconditions.CheckState(
-                            emulatorConfig.Endpoint != null,
-                            "Expected {0} environment variable to be set", EmulatorConfiguration.EmulatorHostVariable);
-                        ApplyEmulatorConfiguration();
-                        break;
-                    case EmulatorDetection.EmulatorOrProduction:
-                        if (emulatorConfig.Endpoint != null)
-                        {
-                            ApplyEmulatorConfiguration();
-                        }
-                        else
-                        {
-                            GaxPreconditions.CheckState(emulatorConfig.ProjectId == null, "{0} should not be set when {1} is not", EmulatorConfiguration.EmulatorProjectVariable, EmulatorConfiguration.EmulatorHostVariable);
-                        }
-                        break;
-                }
-
-                void ApplyEmulatorConfiguration()
-                {
-                    // TODO: Do we want to require this? Or should a configured emulator override any credentials?
-                    GaxPreconditions.CheckState(clientBuilder.Endpoint == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.Endpoint));
-                    GaxPreconditions.CheckState(clientBuilder.CallInvoker == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.CallInvoker));
-                    GaxPreconditions.CheckState(clientBuilder.ChannelCredentials == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.ChannelCredentials));
-                    GaxPreconditions.CheckState(clientBuilder.CredentialsPath == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.CredentialsPath));
-                    GaxPreconditions.CheckState(clientBuilder.JsonCredentials == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.JsonCredentials));
-                    GaxPreconditions.CheckState(clientBuilder.Scopes == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.Scopes));
-                    GaxPreconditions.CheckState(clientBuilder.TokenAccessMethod == null, "{0} should not be set when connecting to an emulator", nameof(clientBuilder.TokenAccessMethod));
-                    clientBuilder.Endpoint = emulatorConfig.Endpoint;
-                    clientBuilder.ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure;
-                    projectId = projectId ?? emulatorConfig.ProjectId;
-                }
-            }
-            GaxPreconditions.CheckState(!string.IsNullOrEmpty(projectId), "The project ID must be configured");
-            return new ConfiguredBuilder(projectId, NamespaceId, clientBuilder);
-        }
-
-        /// <summary>
         /// The namespace ID, or null to use the default.
         /// </summary>
         public string NamespaceId { get; set; }
 
         /// <inheritdoc />
-        public override DatastoreDb Build() =>
-            PrepareBuilder().Build();
+        public override DatastoreDb Build() => PrepareBuilder().Build();
 
         /// <inheritdoc />
         public override Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken = default) =>
@@ -140,29 +85,32 @@ namespace Google.Cloud.Datastore.V1
         protected override GrpcAdapter DefaultGrpcAdapter =>
             throw new InvalidOperationException($"This property should never execute in {nameof(DatastoreDbBuilder)}");
 
-        private class EmulatorConfiguration
+        /// <summary>
+        /// Common code for handling project ID, namespace ID and emulator detection.
+        /// </summary>
+        private ConfiguredBuilder PrepareBuilder()
         {
-            internal const string EmulatorHostVariable = "DATASTORE_EMULATOR_HOST";
-            internal const string EmulatorProjectVariable = "DATASTORE_PROJECT_ID";
-            internal string Endpoint { get; }
-            internal string ProjectId { get; }
-
-            private EmulatorConfiguration(string endpoint, string projectId)
+            var environment = GetEmulatorEnvironment(s_requiredEmulatorVariables, s_allEmulatorVariables);
+            if (environment is object)
             {
-                Endpoint = endpoint;
-                ProjectId = projectId;
+                // Note: this is a recursive call, but because EmulatorDetection defaults to None,
+                // it will only recurse once.
+                return new DatastoreDbBuilder
+                {
+                    Endpoint = environment[s_emulatorHostVariable],
+                    Settings = Settings,
+                    ProjectId = ProjectId ?? environment[s_emulatorProjectVariable],
+                    NamespaceId = NamespaceId
+                }.PrepareBuilder();
             }
+            GaxPreconditions.CheckState(!string.IsNullOrEmpty(ProjectId), "The project ID must be configured");
 
-            internal static EmulatorConfiguration FromEnvironment()
-            {
-                // Note: we treat present-but-empty environment variables as if they were absent.
-                string hostAndPort = Environment.GetEnvironmentVariable(EmulatorHostVariable)?.Trim();
-                string projectId = Environment.GetEnvironmentVariable(EmulatorProjectVariable)?.Trim();
-                var endpoint = string.IsNullOrEmpty(hostAndPort) ? null : hostAndPort;
-                return new EmulatorConfiguration(endpoint, projectId == "" ? null : projectId);
-            }
+            var clientBuilder = new DatastoreClientBuilder(this);
+            clientBuilder.Settings = Settings;
+            return new ConfiguredBuilder(ProjectId, NamespaceId, clientBuilder);
         }
 
+        // Convenience class for storing the project ID, namespace ID and a DatastoreClientBuilder for sync/async building.
         private class ConfiguredBuilder
         {
             private string _projectId;
