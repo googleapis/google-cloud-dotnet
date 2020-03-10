@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
@@ -35,6 +36,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string MasterBranch = "master";
 
         private const string SetVersionCommand = "set-version";
+        private const string IncrementVersionCommand = "increment-version";
         private const string ShowCommand = "show";
         private const string CompareCommand = "compare";
         private const string UpdateHistoryCommand = "update-history";
@@ -55,6 +57,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     case SetVersionCommand:
                         SetVersion(commandArgs);
+                        break;
+                    case IncrementVersionCommand:
+                        IncrementVersion(commandArgs);
                         break;
                     case ShowCommand:
                         ShowVersions(commandArgs);
@@ -92,6 +97,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             Console.WriteLine($"{nameof(ReleaseManager)} commands:");
             Console.WriteLine("");
             Console.WriteLine($"{SetVersionCommand} <id> <new-version>: Set a version in apis.json and generate project files");
+            Console.WriteLine($"{IncrementVersionCommand} <id>: Increment a version in apis.json and generate project files");
             Console.WriteLine($"{ShowCommand}: Show the versions changes in the current PR");
             Console.WriteLine($"{CompareCommand}: Compare each changed version with the previous release");
             Console.WriteLine($"{UpdateHistoryCommand}: Update the release history file for each changed version");
@@ -104,15 +110,65 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"{SetVersionCommand} requires two arguments: the package ID and the new version");
             }
-            string id = args[0];
-            string version = args[1];
-            var catalog = ApiMetadata.LoadApis();
+            SetVersion(args[0], args[1]);
+        }
 
+        private static void IncrementVersion(string[] args)
+        {
+            if (args.Length != 1)
+            {
+                throw new UserErrorException($"{SetVersionCommand} requires one argument: the package ID");
+            }
+            string id = args[0];
+
+            // It's slightly inefficient that we load the API catalog once here and once later on, and the code duplication
+            // is annoying too, but it's insignficant really - and at least the code is simple.
+
+            var catalog = ApiMetadata.LoadApis();
             var api = catalog.FirstOrDefault(x => x.Id == id);
             if (api == null)
             {
                 throw new UserErrorException($"API '{id}' not found in API catalog.");
             }
+            var version = IncrementStructuredVersion(api.StructuredVersion).ToString();
+            SetVersion(id, version);
+
+            StructuredVersion IncrementStructuredVersion(StructuredVersion originalVersion)
+            {
+                // Any GA version just increments the minor version.
+                if (originalVersion.Prerelease is null)
+                {
+                    return new StructuredVersion(originalVersion.Major, originalVersion.Minor + 1, 0, null);
+                }
+
+                // For prereleases, expect something like "beta01" which should be incremented to "beta02".
+                var prereleasePattern = new Regex(@"^([^\d]*)(\d+)$");
+                var match = prereleasePattern.Match(originalVersion.Prerelease);
+                if (!match.Success)
+                {
+                    throw new UserErrorException($"Don't know how to auto-increment version '{originalVersion}'");
+                }
+                var prefix = match.Groups[1].Value;
+                var suffix = match.Groups[2].Value;
+                if (!int.TryParse(suffix, out var counter))
+                {
+                    throw new UserErrorException($"Don't know how to auto-increment version '{originalVersion}'");
+                }
+                counter++;
+                var newSuffix = counter.ToString().PadLeft(suffix.Length, '0');
+                return new StructuredVersion(originalVersion.Major, originalVersion.Minor, originalVersion.Patch, $"{prefix}{newSuffix}");
+            }
+        }
+
+        private static void SetVersion(string id, string version)
+        {
+            var catalog = ApiMetadata.LoadApis();
+            var api = catalog.FirstOrDefault(x => x.Id == id);
+            if (api == null)
+            {
+                throw new UserErrorException($"API '{id}' not found in API catalog.");
+            }
+
             string oldVersion = api.Version;
             api.Version = version;
             var layout = DirectoryLayout.ForApi(id);

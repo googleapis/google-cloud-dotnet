@@ -161,6 +161,13 @@ updates `apis.json` and regenerates the project and metadata files.
 The output includes the old version and the new version, so you can
 check this is really what you meant to do.
 
+    As an alternative to `set-version`, you can run
+    `./prepare-release.sh increment-version <api>` which will increment
+    the minor version for GA libraries (e.g. 3.1.0 to 3.2.0) or the
+    prerelease version of non-GA libraries (e.g. 3.0.0-beta01 to 3.0.0-beta02).
+    This just avoids you having to look up the current version number
+    if you don't already know it.
+
 2. Run `./prepare-release.sh compare`. This will compare the
 previously released NuGet packages with the current source code,
 showing you what's changed. Check there's nothing unexpected.
