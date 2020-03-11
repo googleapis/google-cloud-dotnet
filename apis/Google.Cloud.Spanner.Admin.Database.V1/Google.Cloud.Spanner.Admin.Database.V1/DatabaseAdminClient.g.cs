@@ -404,8 +404,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public DatabaseAdminSettings Settings { get; set; }
 
+        partial void PartialBuild(ref DatabaseAdminClient client);
+        partial void PartialBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<DatabaseAdminClient> task);
+
         /// <inheritdoc/>
         public override DatabaseAdminClient Build()
+        {
+            DatabaseAdminClient client = null;
+            PartialBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        private DatabaseAdminClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
@@ -413,7 +423,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <inheritdoc/>
-        public override async stt::Task<DatabaseAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        public override stt::Task<DatabaseAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<DatabaseAdminClient> task = null;
+            PartialBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private async stt::Task<DatabaseAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

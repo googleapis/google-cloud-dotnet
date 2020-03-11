@@ -974,6 +974,7 @@
       "Spanner"
     ],
     "dependencies": {
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0-beta03",
       "Google.LongRunning": "2.0.0-beta01",
       "Google.Cloud.Iam.V1": "2.0.0-beta01",
       "Google.Cloud.Spanner.Common.V1": "project"
