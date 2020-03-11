@@ -29,37 +29,37 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKGdvb2ds",
             "ZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24ucHJvdG8aF2dvb2dsZS9h",
-            "cGkvY2xpZW50LnByb3RvIpsEChRDb21wbGV0ZVF1ZXJ5UmVxdWVzdBI7CgZw",
-            "YXJlbnQYASABKAlCK+BBAvpBJQojam9icy5nb29nbGVhcGlzLmNvbS9UZW5h",
-            "bnRPclByb2plY3QSEgoFcXVlcnkYAiABKAlCA+BBAhIWCg5sYW5ndWFnZV9j",
-            "b2RlcxgDIAMoCRIWCglwYWdlX3NpemUYBCABKAVCA+BBAhIxCgdjb21wYW55",
-            "GAUgASgJQiD6QR0KG2pvYnMuZ29vZ2xlYXBpcy5jb20vQ29tcGFueRJQCgVz",
-            "Y29wZRgGIAEoDjJBLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21w",
-            "bGV0ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uU2NvcGUSTgoEdHlwZRgHIAEo",
-            "DjJALmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wbGV0ZVF1ZXJ5",
-            "UmVxdWVzdC5Db21wbGV0aW9uVHlwZSJLCg9Db21wbGV0aW9uU2NvcGUSIAoc",
-            "Q09NUExFVElPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgoKBlRFTkFOVBABEgoK",
-            "BlBVQkxJQxACImAKDkNvbXBsZXRpb25UeXBlEh8KG0NPTVBMRVRJT05fVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg0KCUpPQl9USVRMRRABEhAKDENPTVBBTllfTkFN",
-            "RRACEgwKCENPTUJJTkVEEAMixQIKFUNvbXBsZXRlUXVlcnlSZXNwb25zZRJf",
-            "ChJjb21wbGV0aW9uX3Jlc3VsdHMYASADKAsyQy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlc3BvbnNlLkNvbXBsZXRpb25S",
-            "ZXN1bHQSPwoIbWV0YWRhdGEYAiABKAsyLS5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuUmVzcG9uc2VNZXRhZGF0YRqJAQoQQ29tcGxldGlvblJlc3Vs",
-            "dBISCgpzdWdnZXN0aW9uGAEgASgJEk4KBHR5cGUYAiABKA4yQC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlcXVlc3QuQ29t",
-            "cGxldGlvblR5cGUSEQoJaW1hZ2VfdXJpGAMgASgJMtUCCgpDb21wbGV0aW9u",
-            "EtgBCg1Db21wbGV0ZVF1ZXJ5EjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLkNvbXBsZXRlUXVlcnlSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXNwb25zZSJggtPkkwJaEi8vdjRi",
-            "ZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfTpjb21wbGV0ZVon",
-            "EiUvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9OmNvbXBsZXRlGmzKQRNq",
-            "b2JzLmdvb2dsZWFwaXMuY29t0kFTaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2pvYnNChAEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTFCFkNvbXBsZXRpb25TZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRh",
-            "MTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
+            "cGkvY2xpZW50LnByb3RvIpMEChRDb21wbGV0ZVF1ZXJ5UmVxdWVzdBIzCgZw",
+            "YXJlbnQYASABKAlCI+BBAvpBHRIbam9icy5nb29nbGVhcGlzLmNvbS9Db21w",
+            "YW55EhIKBXF1ZXJ5GAIgASgJQgPgQQISFgoObGFuZ3VhZ2VfY29kZXMYAyAD",
+            "KAkSFgoJcGFnZV9zaXplGAQgASgFQgPgQQISMQoHY29tcGFueRgFIAEoCUIg",
+            "+kEdChtqb2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkSUAoFc2NvcGUYBiAB",
+            "KA4yQS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVy",
+            "eVJlcXVlc3QuQ29tcGxldGlvblNjb3BlEk4KBHR5cGUYByABKA4yQC5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlcXVlc3Qu",
+            "Q29tcGxldGlvblR5cGUiSwoPQ29tcGxldGlvblNjb3BlEiAKHENPTVBMRVRJ",
+            "T05fU0NPUEVfVU5TUEVDSUZJRUQQABIKCgZURU5BTlQQARIKCgZQVUJMSUMQ",
+            "AiJgCg5Db21wbGV0aW9uVHlwZRIfChtDT01QTEVUSU9OX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABINCglKT0JfVElUTEUQARIQCgxDT01QQU5ZX05BTUUQAhIMCghD",
+            "T01CSU5FRBADIsUCChVDb21wbGV0ZVF1ZXJ5UmVzcG9uc2USXwoSY29tcGxl",
+            "dGlvbl9yZXN1bHRzGAEgAygLMkMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLkNvbXBsZXRlUXVlcnlSZXNwb25zZS5Db21wbGV0aW9uUmVzdWx0Ej8K",
+            "CG1ldGFkYXRhGAIgASgLMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LlJlc3BvbnNlTWV0YWRhdGEaiQEKEENvbXBsZXRpb25SZXN1bHQSEgoKc3Vn",
+            "Z2VzdGlvbhgBIAEoCRJOCgR0eXBlGAIgASgOMkAuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXF1ZXN0LkNvbXBsZXRpb25U",
+            "eXBlEhEKCWltYWdlX3VyaRgDIAEoCTLVAgoKQ29tcGxldGlvbhLYAQoNQ29t",
+            "cGxldGVRdWVyeRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21w",
+            "bGV0ZVF1ZXJ5UmVxdWVzdBoyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5Db21wbGV0ZVF1ZXJ5UmVzcG9uc2UiYILT5JMCWhIvL3Y0YmV0YTEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn06Y29tcGxldGVaJxIlL3Y0YmV0",
+            "YTEve3BhcmVudD1wcm9qZWN0cy8qfTpjb21wbGV0ZRpsykETam9icy5nb29n",
+            "bGVhcGlzLmNvbdJBU2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9qb2JzQoQBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhZD",
+            "b21wbGV0aW9uU2VydmljZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50",
+            "ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -438,33 +438,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Suggest job titles for jobs autocomplete.
         ///
-        /// For
-        /// [CompletionType.JOB_TITLE][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.JOB_TITLE]
-        /// type, only open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
-        /// are returned.
+        /// For [CompletionType.JOB_TITLE][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.JOB_TITLE] type, only open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are returned.
         /// </summary>
         [pbr::OriginalName("JOB_TITLE")] JobTitle = 1,
         /// <summary>
         /// Suggest company names for jobs autocomplete.
         ///
-        /// For
-        /// [CompletionType.COMPANY_NAME][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMPANY_NAME]
-        /// type, only companies having open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
-        /// are returned.
+        /// For [CompletionType.COMPANY_NAME][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMPANY_NAME] type,
+        /// only companies having open jobs with the same [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are
+        /// returned.
         /// </summary>
         [pbr::OriginalName("COMPANY_NAME")] CompanyName = 2,
         /// <summary>
         /// Suggest both job titles and company names for jobs autocomplete.
         ///
-        /// For
-        /// [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED]
-        /// type, only open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
-        /// or companies having open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
-        /// are returned.
+        /// For [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED] type, only open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] or companies having open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are returned.
         /// </summary>
         [pbr::OriginalName("COMBINED")] Combined = 3,
       }

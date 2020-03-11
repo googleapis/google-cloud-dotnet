@@ -18,6 +18,16 @@ using gctv = Google.Cloud.Talent.V4Beta1;
 
 namespace Google.Cloud.Talent.V4Beta1
 {
+    public partial class ListProfilesRequest
+    {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateProfileRequest
     {
         /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

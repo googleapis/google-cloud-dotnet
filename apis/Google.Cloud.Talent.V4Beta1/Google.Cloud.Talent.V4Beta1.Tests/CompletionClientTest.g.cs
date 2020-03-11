@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<Completion.CompletionClient> mockGrpcClient = new moq::Mock<Completion.CompletionClient>(moq::MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Query = "queryf0c71c1b",
                 LanguageCodes =
                 {
@@ -64,7 +65,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<Completion.CompletionClient> mockGrpcClient = new moq::Mock<Completion.CompletionClient>(moq::MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Query = "queryf0c71c1b",
                 LanguageCodes =
                 {

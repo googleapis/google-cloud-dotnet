@@ -332,6 +332,60 @@ namespace Google.Cloud.Talent.V4Beta1
             }, callSettings);
 
         /// <summary>
+        /// Lists profiles by filter. The order is unspecified.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the profile is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenants/bar".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Profile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListProfilesResponse, Profile> ListProfiles(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListProfiles(new ListProfilesRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists profiles by filter. The order is unspecified.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the tenant under which the profile is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}". For example,
+        /// "projects/foo/tenants/bar".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Profile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListProfilesResponse, Profile> ListProfilesAsync(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListProfilesAsync(new ListProfilesRequest
+            {
+                ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

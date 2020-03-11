@@ -1823,8 +1823,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The maximum allowed value is 5000. Otherwise an error is thrown.
     ///
-    /// The maximum allowed value is 5000. Otherwise an error is thrown.
-    ///
     /// For example, 0 means to  return results starting from the first matching
     /// job, and 10 means to return from the 11th job. This can be used for
     /// pagination, (for example, pageSize = 10 and offset = 10 means to return
@@ -2438,10 +2436,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int RankingExpressionFieldNumber = 2;
         private string rankingExpression_ = "";
         /// <summary>
-        /// Required. Controls over how job documents get ranked on top of existing
-        /// relevance score (determined by API algorithm). A combination of the
-        /// ranking expression and relevance score is used to determine job's final
-        /// ranking position.
+        /// Required. Controls over how job documents get ranked on top of existing relevance
+        /// score (determined by API algorithm). A combination of the ranking
+        /// expression and relevance score is used to determine job's final ranking
+        /// position.
         ///
         /// The syntax for this expression is a subset of Google SQL syntax.
         ///

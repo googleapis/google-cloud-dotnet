@@ -25,44 +25,44 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvYXBwbGljYXRpb24ucHJv",
-            "dG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRofZ29vZ2xlL2FwaS9m",
-            "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2NvbW1vbi5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
-            "YnVmL3dyYXBwZXJzLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvGhxn",
-            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIpkJCgtBcHBsaWNhdGlvbhIM",
+            "dG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9h",
+            "bm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
+            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxooZ29vZ2xlL2Nsb3Vk",
+            "L3RhbGVudC92NGJldGExL2NvbW1vbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnBy",
+            "b3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvIpwJCgtBcHBsaWNhdGlvbhIM",
             "CgRuYW1lGAEgASgJEhgKC2V4dGVybmFsX2lkGB8gASgJQgPgQQISFAoHcHJv",
-            "ZmlsZRgCIAEoCUID4EEDEikKA2pvYhgEIAEoCUIc+kEZChdqb2JzLmdvb2ds",
-            "ZWFwaXMuY29tL0pvYhIxCgdjb21wYW55GAUgASgJQiD6QR0KG2pvYnMuZ29v",
-            "Z2xlYXBpcy5jb20vQ29tcGFueRIrChBhcHBsaWNhdGlvbl9kYXRlGAcgASgL",
-            "MhEuZ29vZ2xlLnR5cGUuRGF0ZRJNCgVzdGFnZRgLIAEoDjI5Lmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5BcHBsaWNhdGlvbi5BcHBsaWNhdGlvblN0",
-            "YWdlQgPgQQISSAoFc3RhdGUYDSABKA4yOS5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuQXBwbGljYXRpb24uQXBwbGljYXRpb25TdGF0ZRI6CgppbnRl",
-            "cnZpZXdzGBAgAygLMiYuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLklu",
-            "dGVydmlldxIsCghyZWZlcnJhbBgSIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5C",
-            "b29sVmFsdWUSNAoLY3JlYXRlX3RpbWUYEyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQISLwoLdXBkYXRlX3RpbWUYFCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEhUKDW91dGNvbWVfbm90ZXMYFSABKAkS",
-            "NQoHb3V0Y29tZRgWIAEoDjIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5PdXRjb21lEjEKCGlzX21hdGNoGBwgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkJvb2xWYWx1ZUID4EEDEh4KEWpvYl90aXRsZV9zbmlwcGV0GB0gASgJQgPg",
-            "QQMikAEKEEFwcGxpY2F0aW9uU3RhdGUSIQodQVBQTElDQVRJT05fU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxABEhYKEkNBTkRJREFURV9X",
-            "SVRIRFJFVxACEhUKEUVNUExPWUVSX1dJVEhEUkVXEAMSDQoJQ09NUExFVEVE",
-            "EAQSCgoGQ0xPU0VEEAUiqQEKEEFwcGxpY2F0aW9uU3RhZ2USIQodQVBQTElD",
-            "QVRJT05fU1RBR0VfVU5TUEVDSUZJRUQQABIHCgNORVcQARIKCgZTQ1JFRU4Q",
-            "AhIZChVISVJJTkdfTUFOQUdFUl9SRVZJRVcQAxINCglJTlRFUlZJRVcQBBIS",
-            "Cg5PRkZFUl9FWFRFTkRFRBAFEhIKDk9GRkVSX0FDQ0VQVEVEEAYSCwoHU1RB",
-            "UlRFRBAHOnfqQXQKH2pvYnMuZ29vZ2xlYXBpcy5jb20vQXBwbGljYXRpb24S",
-            "UXByb2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0ZW5hbnR9L3Byb2ZpbGVz",
-            "L3twcm9maWxlfS9hcHBsaWNhdGlvbnMve2FwcGxpY2F0aW9ufUKGAQofY29t",
-            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIYQXBwbGljYXRpb25SZXNv",
-            "dXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90",
-            "bzM="));
+            "ZmlsZRgCIAEoCUID4EEDEiwKA2pvYhgEIAEoCUIf+kEZChdqb2JzLmdvb2ds",
+            "ZWFwaXMuY29tL0pvYuBBAhIxCgdjb21wYW55GAUgASgJQiD6QR0KG2pvYnMu",
+            "Z29vZ2xlYXBpcy5jb20vQ29tcGFueRIrChBhcHBsaWNhdGlvbl9kYXRlGAcg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRJNCgVzdGFnZRgLIAEoDjI5Lmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5BcHBsaWNhdGlvbi5BcHBsaWNhdGlv",
+            "blN0YWdlQgPgQQISSAoFc3RhdGUYDSABKA4yOS5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuQXBwbGljYXRpb24uQXBwbGljYXRpb25TdGF0ZRI6Cgpp",
+            "bnRlcnZpZXdzGBAgAygLMiYuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkludGVydmlldxIsCghyZWZlcnJhbBgSIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5Cb29sVmFsdWUSNAoLY3JlYXRlX3RpbWUYEyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQISLwoLdXBkYXRlX3RpbWUYFCABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDW91dGNvbWVfbm90ZXMYFSAB",
+            "KAkSNQoHb3V0Y29tZRgWIAEoDjIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5PdXRjb21lEjEKCGlzX21hdGNoGBwgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkJvb2xWYWx1ZUID4EEDEh4KEWpvYl90aXRsZV9zbmlwcGV0GB0gASgJ",
+            "QgPgQQMikAEKEEFwcGxpY2F0aW9uU3RhdGUSIQodQVBQTElDQVRJT05fU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxABEhYKEkNBTkRJREFU",
+            "RV9XSVRIRFJFVxACEhUKEUVNUExPWUVSX1dJVEhEUkVXEAMSDQoJQ09NUExF",
+            "VEVEEAQSCgoGQ0xPU0VEEAUiqQEKEEFwcGxpY2F0aW9uU3RhZ2USIQodQVBQ",
+            "TElDQVRJT05fU1RBR0VfVU5TUEVDSUZJRUQQABIHCgNORVcQARIKCgZTQ1JF",
+            "RU4QAhIZChVISVJJTkdfTUFOQUdFUl9SRVZJRVcQAxINCglJTlRFUlZJRVcQ",
+            "BBISCg5PRkZFUl9FWFRFTkRFRBAFEhIKDk9GRkVSX0FDQ0VQVEVEEAYSCwoH",
+            "U1RBUlRFRBAHOnfqQXQKH2pvYnMuZ29vZ2xlYXBpcy5jb20vQXBwbGljYXRp",
+            "b24SUXByb2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0ZW5hbnR9L3Byb2Zp",
+            "bGVzL3twcm9maWxlfS9hcHBsaWNhdGlvbnMve2FwcGxpY2F0aW9ufUKGAQof",
+            "Y29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIYQXBwbGljYXRpb25S",
+            "ZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Application), global::Google.Cloud.Talent.V4Beta1.Application.Parser, new[]{ "Name", "ExternalId", "Profile", "Job", "Company", "ApplicationDate", "Stage", "State", "Interviews", "Referral", "CreateTime", "UpdateTime", "OutcomeNotes", "Outcome", "IsMatch", "JobTitleSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState), typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) }, null, null)
           }));
@@ -182,9 +182,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobFieldNumber = 4;
     private string job_ = "";
     /// <summary>
-    /// One of either a job or a company is required.
-    ///
-    /// Resource name of the job which the candidate applied for.
+    /// Required. Resource name of the job which the candidate applied for.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}". For example,
@@ -202,8 +200,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CompanyFieldNumber = 5;
     private string company_ = "";
     /// <summary>
-    /// One of either a job or a company is required.
-    ///
     /// Resource name of the company which the candidate applied for.
     ///
     /// The format is
@@ -236,8 +232,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StageFieldNumber = 11;
     private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage stage_ = global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified;
     /// <summary>
-    /// Required. What is the most recent stage of the application (that is, new, screen,
-    /// send cv, hired, finished work)?  This field is intentionally not
+    /// Required. What is the most recent stage of the application (that is, new,
+    /// screen, send cv, hired, finished work)?  This field is intentionally not
     /// comprehensive of every possible status, but instead, represents statuses
     /// that would be used to indicate to the ML models good / bad matches.
     /// </summary>
