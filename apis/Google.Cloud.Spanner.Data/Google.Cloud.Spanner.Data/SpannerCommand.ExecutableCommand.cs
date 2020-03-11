@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data
                 return settings;
             }
 
-            private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+            private const string SpannerOptimizerVersionVariable = "SPANNER_QUERY_OPTIMIZER_VERSION";
 
             internal SpannerConnection Connection { get; }
             internal SpannerCommandTextBuilder CommandTextBuilder { get; }
