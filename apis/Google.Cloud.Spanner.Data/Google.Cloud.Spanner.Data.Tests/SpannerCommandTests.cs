@@ -113,7 +113,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandHasOptimizerVersionFromEnvironment()
         {
             // Save existing value of environment variable.
-            const string optimizerVersionVariable = "SPANNER_QUERY_OPTIMIZER_VERSION";
+            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
             string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
             const string envOptimizerVersion = "2";
             Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
@@ -141,7 +141,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandHasOptimizerVersionSetOnCommand()
         {
             // Save existing value of environment variable.
-            const string optimizerVersionVariable = "SPANNER_QUERY_OPTIMIZER_VERSION";
+            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
             string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
             const string envOptimizerVersion = "2";
             Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
