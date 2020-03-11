@@ -175,8 +175,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .Setup(client => client.ExecuteStreamingSql(
-                    It.Is<ExecuteSqlRequest>(
-                        request => request.QueryOptions.OptimizerVersion == optimizerVersion),
+                    It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == optimizerVersion),
                     It.IsAny<CallSettings>()))
                 .Returns<ExecuteSqlRequest, CallSettings>((request, _) =>
                 {

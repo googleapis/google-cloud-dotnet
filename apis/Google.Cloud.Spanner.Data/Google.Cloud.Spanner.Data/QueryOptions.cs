@@ -26,10 +26,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The query optimizer version configured in the options.
         /// </summary>
-        public string OptimizerVersion
-        {
-            get => Proto.OptimizerVersion;
-        }
+        public string OptimizerVersion { get => Proto.OptimizerVersion; }
 
         /// <summary>
         /// Clones the options and sets the optimizer version to the given value.
@@ -77,8 +74,7 @@ namespace Google.Cloud.Spanner.Data
         /// The given proto should not be null. The given proto is cloned.
         /// </remarks>
         /// <param name="proto">The proto to construct <see cref="QueryOptions"/> from.</param>
-        public static QueryOptions FromProto(
-            V1.ExecuteSqlRequest.Types.QueryOptions proto)
+        public static QueryOptions FromProto(V1.ExecuteSqlRequest.Types.QueryOptions proto)
         {
             GaxPreconditions.CheckNotNull(proto, nameof(proto));
             return new QueryOptions(proto.Clone());
