@@ -346,33 +346,27 @@ namespace Google.Cloud.Spanner.Data
             // Options set at the connection level has the lowest precedence.
             private V1.ExecuteSqlRequest.Types.QueryOptions GetEffectiveQueryOptions()
             {
-                string optimizerVersion = "";
+                var queryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions();
+
+                // Query options set through the connection have the lowest precedence.
+                if (Connection.QueryOptions != null)
+                {
+                    queryOptionsProto.MergeFrom(Connection.QueryOptions.ToProto());
+                }
+
+                // Query options set through an environment variable have the next highest precedence.
+                var envQueryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions
+                {
+                    OptimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? ""
+                };
+                queryOptionsProto.MergeFrom(envQueryOptionsProto);
 
                 // Query options set at the command level have the highest precedence.
                 if (QueryOptions != null)
                 {
-                    optimizerVersion = QueryOptions.OptimizerVersion;
+                    queryOptionsProto.MergeFrom(QueryOptions.ToProto());
                 }
 
-                // Query options set through an environment variable have the next highest precedence.
-                if (string.IsNullOrEmpty(optimizerVersion))
-                {
-                    optimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? "";
-                }
-
-                // Query options set through the connection have the lowest highest precedence.
-                if (string.IsNullOrEmpty(optimizerVersion) && Connection.QueryOptions != null)
-                {
-                    optimizerVersion = Connection.QueryOptions.OptimizerVersion;
-                }
-
-                if (string.IsNullOrEmpty(optimizerVersion))
-                {
-                    return null;
-                }
-
-                var queryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions();
-                queryOptionsProto.OptimizerVersion = optimizerVersion;
                 return queryOptionsProto;
             }
 
