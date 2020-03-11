@@ -125,4 +125,35 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             set => Database = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListDatabaseOperationsRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcscv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcscv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RestoreDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcscv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcscv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
+        }
+    }
 }

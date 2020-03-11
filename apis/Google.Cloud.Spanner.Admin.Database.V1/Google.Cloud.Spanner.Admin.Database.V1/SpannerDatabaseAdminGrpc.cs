@@ -28,7 +28,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   ///
   /// The Cloud Spanner Database Admin API can be used to create, drop, and
   /// list databases. It also enables updating the schema of pre-existing
-  /// databases.
+  /// databases. It can be also used to create, delete and list backups for a
+  /// database and to restore from an existing backup.
   /// </summary>
   public static partial class DatabaseAdmin
   {
@@ -50,6 +51,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest> __Marshaller_google_spanner_admin_database_v1_CreateBackupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest> __Marshaller_google_spanner_admin_database_v1_GetBackupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> __Marshaller_google_spanner_admin_database_v1_Backup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.Backup.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest> __Marshaller_google_spanner_admin_database_v1_UpdateBackupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest> __Marshaller_google_spanner_admin_database_v1_DeleteBackupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest> __Marshaller_google_spanner_admin_database_v1_ListBackupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse> __Marshaller_google_spanner_admin_database_v1_ListBackupsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest> __Marshaller_google_spanner_admin_database_v1_RestoreDatabaseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest> __Marshaller_google_spanner_admin_database_v1_ListDatabaseOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse> __Marshaller_google_spanner_admin_database_v1_ListDatabaseOperationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest> __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(
         grpc::MethodType.Unary,
@@ -113,6 +126,62 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest, global::Google.LongRunning.Operation> __Method_CreateBackup = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackup",
+        __Marshaller_google_spanner_admin_database_v1_CreateBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackup",
+        __Marshaller_google_spanner_admin_database_v1_GetBackupRequest,
+        __Marshaller_google_spanner_admin_database_v1_Backup);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup> __Method_UpdateBackup = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackup",
+        __Marshaller_google_spanner_admin_database_v1_UpdateBackupRequest,
+        __Marshaller_google_spanner_admin_database_v1_Backup);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBackup = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackup",
+        __Marshaller_google_spanner_admin_database_v1_DeleteBackupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse> __Method_ListBackups = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackups",
+        __Marshaller_google_spanner_admin_database_v1_ListBackupsRequest,
+        __Marshaller_google_spanner_admin_database_v1_ListBackupsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation> __Method_RestoreDatabase = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestoreDatabase",
+        __Marshaller_google_spanner_admin_database_v1_RestoreDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse> __Method_ListDatabaseOperations = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDatabaseOperations",
+        __Marshaller_google_spanner_admin_database_v1_ListDatabaseOperationsRequest,
+        __Marshaller_google_spanner_admin_database_v1_ListDatabaseOperationsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> __Method_ListBackupOperations = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupOperations",
+        __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsRequest,
+        __Marshaller_google_spanner_admin_database_v1_ListBackupOperationsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -183,6 +252,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
+      /// Completed backups for the database will be retained according to their
+      /// `expire_time`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -206,10 +277,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      /// Sets the access control policy on a database resource.
+      /// Sets the access control policy on a database or backup resource.
       /// Replaces any existing policy.
       ///
       /// Authorization requires `spanner.databases.setIamPolicy`
+      /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.setIamPolicy`
       /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -221,12 +294,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      /// Gets the access control policy for a database resource.
-      /// Returns an empty policy if a database exists but does
-      /// not have a policy set.
+      /// Gets the access control policy for a database or backup resource.
+      /// Returns an empty policy if a database or backup exists but does not have a
+      /// policy set.
       ///
       /// Authorization requires `spanner.databases.getIamPolicy` permission on
       /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.getIamPolicy`
+      /// permission on [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -237,17 +312,154 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      /// Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database or backup
+      /// resource.
       ///
       /// Attempting this RPC on a non-existent Cloud Spanner database will
       /// result in a NOT_FOUND error if the user has
       /// `spanner.databases.list` permission on the containing Cloud
       /// Spanner instance. Otherwise returns an empty set of permissions.
+      /// Calling this method on a backup that does not exist will
+      /// result in a NOT_FOUND error if the user has
+      /// `spanner.backups.list` permission on the containing instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Starts creating a new Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track creation of the backup. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
+      /// There can be only one pending backup creation per database. Backup creation
+      /// of different databases can run concurrently.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> GetBackup(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> UpdateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackup(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists completed and pending backups.
+      /// Backups returned are ordered by `create_time` in descending order,
+      /// starting from the most recent `create_time`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse> ListBackups(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a new database by restoring from a completed backup. The new
+      /// database must be in the same project and in an instance with the same
+      /// instance configuration as the instance containing
+      /// the backup. The returned database [long-running
+      /// operation][google.longrunning.Operation] has a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`,
+      /// and can be used to track the progress of the operation, and to cancel it.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type
+      /// is [Database][google.spanner.admin.database.v1.Database], if
+      /// successful. Cancelling the returned operation will stop the restore and
+      /// delete the database.
+      /// There can be only one database being restored into an instance at a time.
+      /// Once the restore operation completes, a new restore operation can be
+      /// initiated, without waiting for the optimize operation associated with the
+      /// first restore to complete.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists database [longrunning-operations][google.longrunning.Operation].
+      /// A database operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse> ListDatabaseOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the backup [long-running operations][google.longrunning.Operation] in
+      /// the given instance. A backup operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.progress.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> ListBackupOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -507,6 +719,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
+      /// Completed backups for the database will be retained according to their
+      /// `expire_time`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -519,6 +733,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
+      /// Completed backups for the database will be retained according to their
+      /// `expire_time`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -529,6 +745,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
+      /// Completed backups for the database will be retained according to their
+      /// `expire_time`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -541,6 +759,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
+      /// Completed backups for the database will be retained according to their
+      /// `expire_time`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -602,10 +822,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabaseDdl, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy on a database resource.
+      /// Sets the access control policy on a database or backup resource.
       /// Replaces any existing policy.
       ///
       /// Authorization requires `spanner.databases.setIamPolicy`
+      /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.setIamPolicy`
       /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -618,10 +840,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy on a database resource.
+      /// Sets the access control policy on a database or backup resource.
       /// Replaces any existing policy.
       ///
       /// Authorization requires `spanner.databases.setIamPolicy`
+      /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.setIamPolicy`
       /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -632,10 +856,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy on a database resource.
+      /// Sets the access control policy on a database or backup resource.
       /// Replaces any existing policy.
       ///
       /// Authorization requires `spanner.databases.setIamPolicy`
+      /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.setIamPolicy`
       /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -648,10 +874,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy on a database resource.
+      /// Sets the access control policy on a database or backup resource.
       /// Replaces any existing policy.
       ///
       /// Authorization requires `spanner.databases.setIamPolicy`
+      /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.setIamPolicy`
       /// permission on [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -662,12 +890,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a database resource.
-      /// Returns an empty policy if a database exists but does
-      /// not have a policy set.
+      /// Gets the access control policy for a database or backup resource.
+      /// Returns an empty policy if a database or backup exists but does not have a
+      /// policy set.
       ///
       /// Authorization requires `spanner.databases.getIamPolicy` permission on
       /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.getIamPolicy`
+      /// permission on [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -679,12 +909,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a database resource.
-      /// Returns an empty policy if a database exists but does
-      /// not have a policy set.
+      /// Gets the access control policy for a database or backup resource.
+      /// Returns an empty policy if a database or backup exists but does not have a
+      /// policy set.
       ///
       /// Authorization requires `spanner.databases.getIamPolicy` permission on
       /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.getIamPolicy`
+      /// permission on [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -694,12 +926,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a database resource.
-      /// Returns an empty policy if a database exists but does
-      /// not have a policy set.
+      /// Gets the access control policy for a database or backup resource.
+      /// Returns an empty policy if a database or backup exists but does not have a
+      /// policy set.
       ///
       /// Authorization requires `spanner.databases.getIamPolicy` permission on
       /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.getIamPolicy`
+      /// permission on [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -711,12 +945,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a database resource.
-      /// Returns an empty policy if a database exists but does
-      /// not have a policy set.
+      /// Gets the access control policy for a database or backup resource.
+      /// Returns an empty policy if a database or backup exists but does not have a
+      /// policy set.
       ///
       /// Authorization requires `spanner.databases.getIamPolicy` permission on
       /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// For backups, authorization requires `spanner.backups.getIamPolicy`
+      /// permission on [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -726,12 +962,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database or backup
+      /// resource.
       ///
       /// Attempting this RPC on a non-existent Cloud Spanner database will
       /// result in a NOT_FOUND error if the user has
       /// `spanner.databases.list` permission on the containing Cloud
       /// Spanner instance. Otherwise returns an empty set of permissions.
+      /// Calling this method on a backup that does not exist will
+      /// result in a NOT_FOUND error if the user has
+      /// `spanner.backups.list` permission on the containing instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -743,12 +983,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database or backup
+      /// resource.
       ///
       /// Attempting this RPC on a non-existent Cloud Spanner database will
       /// result in a NOT_FOUND error if the user has
       /// `spanner.databases.list` permission on the containing Cloud
       /// Spanner instance. Otherwise returns an empty set of permissions.
+      /// Calling this method on a backup that does not exist will
+      /// result in a NOT_FOUND error if the user has
+      /// `spanner.backups.list` permission on the containing instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -758,12 +1002,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database or backup
+      /// resource.
       ///
       /// Attempting this RPC on a non-existent Cloud Spanner database will
       /// result in a NOT_FOUND error if the user has
       /// `spanner.databases.list` permission on the containing Cloud
       /// Spanner instance. Otherwise returns an empty set of permissions.
+      /// Calling this method on a backup that does not exist will
+      /// result in a NOT_FOUND error if the user has
+      /// `spanner.backups.list` permission on the containing instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -775,12 +1023,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database or backup
+      /// resource.
       ///
       /// Attempting this RPC on a non-existent Cloud Spanner database will
       /// result in a NOT_FOUND error if the user has
       /// `spanner.databases.list` permission on the containing Cloud
       /// Spanner instance. Otherwise returns an empty set of permissions.
+      /// Calling this method on a backup that does not exist will
+      /// result in a NOT_FOUND error if the user has
+      /// `spanner.backups.list` permission on the containing instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -788,6 +1040,538 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
+      }
+      /// <summary>
+      /// Starts creating a new Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track creation of the backup. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
+      /// There can be only one pending backup creation per database. Backup creation
+      /// of different databases can run concurrently.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts creating a new Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track creation of the backup. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
+      /// There can be only one pending backup creation per database. Backup creation
+      /// of different databases can run concurrently.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Starts creating a new Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track creation of the backup. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
+      /// There can be only one pending backup creation per database. Backup creation
+      /// of different databases can run concurrently.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts creating a new Cloud Spanner Backup.
+      /// The returned backup [long-running operation][google.longrunning.Operation]
+      /// will have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
+      /// and can be used to track creation of the backup. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
+      /// There can be only one pending backup creation per database. Backup creation
+      /// of different databases can run concurrently.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Backup GetBackup(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Backup GetBackup(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> GetBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> GetBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Backup UpdateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Backup UpdateBackup(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> UpdateBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Backup> UpdateBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackup(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackup(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Lists completed and pending backups.
+      /// Backups returned are ordered by `create_time` in descending order,
+      /// starting from the most recent `create_time`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse ListBackups(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists completed and pending backups.
+      /// Backups returned are ordered by `create_time` in descending order,
+      /// starting from the most recent `create_time`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse ListBackups(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Lists completed and pending backups.
+      /// Backups returned are ordered by `create_time` in descending order,
+      /// starting from the most recent `create_time`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists completed and pending backups.
+      /// Backups returned are ordered by `create_time` in descending order,
+      /// starting from the most recent `create_time`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Create a new database by restoring from a completed backup. The new
+      /// database must be in the same project and in an instance with the same
+      /// instance configuration as the instance containing
+      /// the backup. The returned database [long-running
+      /// operation][google.longrunning.Operation] has a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`,
+      /// and can be used to track the progress of the operation, and to cancel it.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type
+      /// is [Database][google.spanner.admin.database.v1.Database], if
+      /// successful. Cancelling the returned operation will stop the restore and
+      /// delete the database.
+      /// There can be only one database being restored into an instance at a time.
+      /// Once the restore operation completes, a new restore operation can be
+      /// initiated, without waiting for the optimize operation associated with the
+      /// first restore to complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation RestoreDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a new database by restoring from a completed backup. The new
+      /// database must be in the same project and in an instance with the same
+      /// instance configuration as the instance containing
+      /// the backup. The returned database [long-running
+      /// operation][google.longrunning.Operation] has a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`,
+      /// and can be used to track the progress of the operation, and to cancel it.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type
+      /// is [Database][google.spanner.admin.database.v1.Database], if
+      /// successful. Cancelling the returned operation will stop the restore and
+      /// delete the database.
+      /// There can be only one database being restored into an instance at a time.
+      /// Once the restore operation completes, a new restore operation can be
+      /// initiated, without waiting for the optimize operation associated with the
+      /// first restore to complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation RestoreDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestoreDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Create a new database by restoring from a completed backup. The new
+      /// database must be in the same project and in an instance with the same
+      /// instance configuration as the instance containing
+      /// the backup. The returned database [long-running
+      /// operation][google.longrunning.Operation] has a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`,
+      /// and can be used to track the progress of the operation, and to cancel it.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type
+      /// is [Database][google.spanner.admin.database.v1.Database], if
+      /// successful. Cancelling the returned operation will stop the restore and
+      /// delete the database.
+      /// There can be only one database being restored into an instance at a time.
+      /// Once the restore operation completes, a new restore operation can be
+      /// initiated, without waiting for the optimize operation associated with the
+      /// first restore to complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a new database by restoring from a completed backup. The new
+      /// database must be in the same project and in an instance with the same
+      /// instance configuration as the instance containing
+      /// the backup. The returned database [long-running
+      /// operation][google.longrunning.Operation] has a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`,
+      /// and can be used to track the progress of the operation, and to cancel it.
+      /// The [metadata][google.longrunning.Operation.metadata] field type is
+      /// [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type
+      /// is [Database][google.spanner.admin.database.v1.Database], if
+      /// successful. Cancelling the returned operation will stop the restore and
+      /// delete the database.
+      /// There can be only one database being restored into an instance at a time.
+      /// Once the restore operation completes, a new restore operation can be
+      /// initiated, without waiting for the optimize operation associated with the
+      /// first restore to complete.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestoreDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Lists database [longrunning-operations][google.longrunning.Operation].
+      /// A database operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse ListDatabaseOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabaseOperations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists database [longrunning-operations][google.longrunning.Operation].
+      /// A database operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse ListDatabaseOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDatabaseOperations, null, options, request);
+      }
+      /// <summary>
+      /// Lists database [longrunning-operations][google.longrunning.Operation].
+      /// A database operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse> ListDatabaseOperationsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabaseOperationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists database [longrunning-operations][google.longrunning.Operation].
+      /// A database operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse> ListDatabaseOperationsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDatabaseOperations, null, options, request);
+      }
+      /// <summary>
+      /// Lists the backup [long-running operations][google.longrunning.Operation] in
+      /// the given instance. A backup operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.progress.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse ListBackupOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupOperations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the backup [long-running operations][google.longrunning.Operation] in
+      /// the given instance. A backup operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.progress.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse ListBackupOperations(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupOperations, null, options, request);
+      }
+      /// <summary>
+      /// Lists the backup [long-running operations][google.longrunning.Operation] in
+      /// the given instance. A backup operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.progress.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> ListBackupOperationsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupOperationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the backup [long-running operations][google.longrunning.Operation] in
+      /// the given instance. A backup operation has a name of the form
+      /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation>`.
+      /// The long-running operation
+      /// [metadata][google.longrunning.Operation.metadata] field type
+      /// `metadata.type_url` describes the type of the metadata. Operations returned
+      /// include those that have completed/failed/canceled within the last 7 days,
+      /// and pending operations. Operations returned are ordered by
+      /// `operation.metadata.value.progress.start_time` in descending order starting
+      /// from the most recently started operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse> ListBackupOperationsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupOperations, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DatabaseAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -809,7 +1593,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_GetDatabaseDdl, serviceImpl.GetDatabaseDdl)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
+          .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
+          .AddMethod(__Method_UpdateBackup, serviceImpl.UpdateBackup)
+          .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
+          .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
+          .AddMethod(__Method_RestoreDatabase, serviceImpl.RestoreDatabase)
+          .AddMethod(__Method_ListDatabaseOperations, serviceImpl.ListDatabaseOperations)
+          .AddMethod(__Method_ListBackupOperations, serviceImpl.ListBackupOperations).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -827,6 +1619,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
+      serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup>(serviceImpl.GetBackup));
+      serviceBinder.AddMethod(__Method_UpdateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Backup>(serviceImpl.UpdateBackup));
+      serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackup));
+      serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse>(serviceImpl.ListBackups));
+      serviceBinder.AddMethod(__Method_RestoreDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreDatabase));
+      serviceBinder.AddMethod(__Method_ListDatabaseOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse>(serviceImpl.ListDatabaseOperations));
+      serviceBinder.AddMethod(__Method_ListBackupOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse>(serviceImpl.ListBackupOperations));
     }
 
   }

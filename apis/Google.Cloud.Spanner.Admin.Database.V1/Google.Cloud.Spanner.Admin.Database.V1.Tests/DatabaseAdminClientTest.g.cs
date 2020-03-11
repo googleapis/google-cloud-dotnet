@@ -44,7 +44,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Database expectedResponse = new Database
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                State = Database.Types.State.Unspecified,
+                State = Database.Types.State.Ready,
+                CreateTime = new wkt::Timestamp(),
+                RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -65,7 +67,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Database expectedResponse = new Database
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                State = Database.Types.State.Unspecified,
+                State = Database.Types.State.Ready,
+                CreateTime = new wkt::Timestamp(),
+                RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -88,7 +92,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Database expectedResponse = new Database
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                State = Database.Types.State.Unspecified,
+                State = Database.Types.State.Ready,
+                CreateTime = new wkt::Timestamp(),
+                RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -109,7 +115,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Database expectedResponse = new Database
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                State = Database.Types.State.Unspecified,
+                State = Database.Types.State.Ready,
+                CreateTime = new wkt::Timestamp(),
+                RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -132,7 +140,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Database expectedResponse = new Database
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                State = Database.Types.State.Unspecified,
+                State = Database.Types.State.Ready,
+                CreateTime = new wkt::Timestamp(),
+                RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -153,7 +163,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Database expectedResponse = new Database
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                State = Database.Types.State.Unspecified,
+                State = Database.Types.State.Ready,
+                CreateTime = new wkt::Timestamp(),
+                RestoreInfo = new RestoreInfo(),
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -892,6 +904,409 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackupRequestObject()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupRequestObjectAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackup()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackupResourceNames()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request.BackupName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupResourceNamesAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateBackupRequestObject()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.UpdateBackup(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateBackupRequestObjectAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.UpdateBackupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateBackup()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.UpdateBackup(request.Backup, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateBackupAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                Database = "databased8eee011",
+                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+                ReferencingDatabases =
+                {
+                    "referencing_databasesb1d5a380",
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBackupRequestObject()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBackup(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBackupRequestObjectAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBackupAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBackup()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBackup(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBackupAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBackupAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBackupResourceNames()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBackup(request.BackupName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBackupResourceNamesAsync()
+        {
+            moq::Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new moq::Mock<DatabaseAdmin.DatabaseAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBackupAsync(request.BackupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }
