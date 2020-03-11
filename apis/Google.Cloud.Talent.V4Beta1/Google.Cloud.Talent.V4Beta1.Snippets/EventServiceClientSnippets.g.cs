@@ -16,6 +16,7 @@
 
 namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
+    using Google.Api.Gax.ResourceNames;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -30,7 +31,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             // Make the request
@@ -48,7 +49,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             // Make the request
@@ -63,7 +64,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             EventServiceClient eventServiceClient = EventServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/tenants/[TENANT]";
+            string parent = "projects/[PROJECT]";
             ClientEvent clientEvent = new ClientEvent();
             // Make the request
             ClientEvent response = eventServiceClient.CreateClientEvent(parent, clientEvent);
@@ -78,7 +79,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             EventServiceClient eventServiceClient = await EventServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/tenants/[TENANT]";
+            string parent = "projects/[PROJECT]";
             ClientEvent clientEvent = new ClientEvent();
             // Make the request
             ClientEvent response = await eventServiceClient.CreateClientEventAsync(parent, clientEvent);
@@ -86,13 +87,13 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateClientEvent</summary>
-        public void CreateClientEventResourceNames()
+        public void CreateClientEventResourceNames1()
         {
-            // Snippet: CreateClientEvent(TenantOrProjectName, ClientEvent, CallSettings)
+            // Snippet: CreateClientEvent(ProjectName, ClientEvent, CallSettings)
             // Create client
             EventServiceClient eventServiceClient = EventServiceClient.Create();
             // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             ClientEvent clientEvent = new ClientEvent();
             // Make the request
             ClientEvent response = eventServiceClient.CreateClientEvent(parent, clientEvent);
@@ -100,14 +101,43 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for CreateClientEventAsync</summary>
-        public async Task CreateClientEventResourceNamesAsync()
+        public async Task CreateClientEventResourceNames1Async()
         {
-            // Snippet: CreateClientEventAsync(TenantOrProjectName, ClientEvent, CallSettings)
-            // Additional: CreateClientEventAsync(TenantOrProjectName, ClientEvent, CancellationToken)
+            // Snippet: CreateClientEventAsync(ProjectName, ClientEvent, CallSettings)
+            // Additional: CreateClientEventAsync(ProjectName, ClientEvent, CancellationToken)
             // Create client
             EventServiceClient eventServiceClient = await EventServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            ClientEvent clientEvent = new ClientEvent();
+            // Make the request
+            ClientEvent response = await eventServiceClient.CreateClientEventAsync(parent, clientEvent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClientEvent</summary>
+        public void CreateClientEventResourceNames2()
+        {
+            // Snippet: CreateClientEvent(TenantName, ClientEvent, CallSettings)
+            // Create client
+            EventServiceClient eventServiceClient = EventServiceClient.Create();
+            // Initialize request argument(s)
+            TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
+            ClientEvent clientEvent = new ClientEvent();
+            // Make the request
+            ClientEvent response = eventServiceClient.CreateClientEvent(parent, clientEvent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClientEventAsync</summary>
+        public async Task CreateClientEventResourceNames2Async()
+        {
+            // Snippet: CreateClientEventAsync(TenantName, ClientEvent, CallSettings)
+            // Additional: CreateClientEventAsync(TenantName, ClientEvent, CancellationToken)
+            // Create client
+            EventServiceClient eventServiceClient = await EventServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
             ClientEvent clientEvent = new ClientEvent();
             // Make the request
             ClientEvent response = await eventServiceClient.CreateClientEventAsync(parent, clientEvent);

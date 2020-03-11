@@ -16,6 +16,7 @@
 
 namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
+    using Google.Api.Gax.ResourceNames;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -30,7 +31,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Query = "",
                 LanguageCodes = { "", },
                 PageSize = 0,
@@ -53,7 +54,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Query = "",
                 LanguageCodes = { "", },
                 PageSize = 0,
