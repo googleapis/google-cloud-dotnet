@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using Grpc.Core;
 using System;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace Google.Cloud.Talent.V4Beta1.CleanTestData
             string projectId = args[0];
             var companyClient = CompanyServiceClient.Create();
             var jobClient = JobServiceClient.Create();
-            var parentName = TenantOrProjectName.FromProject(projectId);
+            var parentName = ProjectName.FromProject(projectId);
 
             var testCompanies = companyClient.ListCompanies(parentName)
                 .Where(cn => cn.ExternalId.StartsWith("test-"))
