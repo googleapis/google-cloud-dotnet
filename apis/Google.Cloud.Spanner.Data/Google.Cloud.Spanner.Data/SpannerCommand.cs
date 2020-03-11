@@ -41,7 +41,6 @@ namespace Google.Cloud.Spanner.Data
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
         private SpannerTransaction _transaction;
-        private QueryOptions _queryOptions = null;
 
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>, using a default command timeout.
@@ -223,11 +222,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Query options to use when running SQL and streaming SQL commands.
         /// </summary>
-        public QueryOptions QueryOptions
-        {
-            get => _queryOptions;
-            set => _queryOptions = (QueryOptions) value;
-        }
+        public QueryOptions QueryOptions { get; set; }
 
         /// <inheritdoc />
         protected override DbConnection DbConnection

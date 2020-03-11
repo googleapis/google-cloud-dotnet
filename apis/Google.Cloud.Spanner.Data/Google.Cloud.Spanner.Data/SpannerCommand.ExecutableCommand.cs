@@ -379,10 +379,9 @@ namespace Google.Cloud.Spanner.Data
 
                 var request = new ExecuteSqlRequest
                 {
-                    Sql = CommandTextBuilder.ToString()
+                    Sql = CommandTextBuilder.ToString(),
+                    QueryOptions = GetEffectiveQueryOptions()
                 };
-
-                request.QueryOptions = GetEffectiveQueryOptions();
 
                 // See comment at the start of GetMutations.
                 SpannerConversionOptions options = null;
