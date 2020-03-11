@@ -140,16 +140,34 @@ namespace Google.LongRunning
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public OperationsSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref OperationsClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OperationsClient> task);
+
         /// <inheritdoc/>
         public override OperationsClient Build()
+        {
+            OperationsClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<OperationsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<OperationsClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private OperationsClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return OperationsClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<OperationsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<OperationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

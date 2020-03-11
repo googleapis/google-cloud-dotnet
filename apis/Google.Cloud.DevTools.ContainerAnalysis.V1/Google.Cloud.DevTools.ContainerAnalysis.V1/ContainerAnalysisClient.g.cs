@@ -103,16 +103,34 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ContainerAnalysisSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ContainerAnalysisClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ContainerAnalysisClient> task);
+
         /// <inheritdoc/>
         public override ContainerAnalysisClient Build()
+        {
+            ContainerAnalysisClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ContainerAnalysisClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ContainerAnalysisClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ContainerAnalysisClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ContainerAnalysisClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ContainerAnalysisClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ContainerAnalysisClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

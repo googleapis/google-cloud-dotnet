@@ -226,16 +226,34 @@ namespace Google.Cloud.Dataproc.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public WorkflowTemplateServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref WorkflowTemplateServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<WorkflowTemplateServiceClient> task);
+
         /// <inheritdoc/>
         public override WorkflowTemplateServiceClient Build()
+        {
+            WorkflowTemplateServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<WorkflowTemplateServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<WorkflowTemplateServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private WorkflowTemplateServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return WorkflowTemplateServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<WorkflowTemplateServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<WorkflowTemplateServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

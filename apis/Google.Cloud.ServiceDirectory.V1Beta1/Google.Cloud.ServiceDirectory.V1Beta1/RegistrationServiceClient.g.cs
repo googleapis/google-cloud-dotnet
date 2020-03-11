@@ -355,16 +355,34 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public RegistrationServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref RegistrationServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<RegistrationServiceClient> task);
+
         /// <inheritdoc/>
         public override RegistrationServiceClient Build()
+        {
+            RegistrationServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<RegistrationServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<RegistrationServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private RegistrationServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return RegistrationServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<RegistrationServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<RegistrationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

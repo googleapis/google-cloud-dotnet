@@ -151,16 +151,34 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ProfileServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ProfileServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ProfileServiceClient> task);
+
         /// <inheritdoc/>
         public override ProfileServiceClient Build()
+        {
+            ProfileServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ProfileServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ProfileServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ProfileServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ProfileServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ProfileServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ProfileServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

@@ -456,16 +456,34 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public BigtableInstanceAdminSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref BigtableInstanceAdminClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<BigtableInstanceAdminClient> task);
+
         /// <inheritdoc/>
         public override BigtableInstanceAdminClient Build()
+        {
+            BigtableInstanceAdminClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<BigtableInstanceAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<BigtableInstanceAdminClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private BigtableInstanceAdminClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return BigtableInstanceAdminClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<BigtableInstanceAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<BigtableInstanceAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

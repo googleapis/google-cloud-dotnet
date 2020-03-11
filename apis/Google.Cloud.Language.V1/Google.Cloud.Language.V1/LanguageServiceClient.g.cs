@@ -159,16 +159,34 @@ namespace Google.Cloud.Language.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public LanguageServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref LanguageServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<LanguageServiceClient> task);
+
         /// <inheritdoc/>
         public override LanguageServiceClient Build()
+        {
+            LanguageServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<LanguageServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<LanguageServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private LanguageServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return LanguageServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<LanguageServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<LanguageServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

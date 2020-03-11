@@ -273,16 +273,34 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public FirestoreAdminSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref FirestoreAdminClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<FirestoreAdminClient> task);
+
         /// <inheritdoc/>
         public override FirestoreAdminClient Build()
+        {
+            FirestoreAdminClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<FirestoreAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<FirestoreAdminClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private FirestoreAdminClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return FirestoreAdminClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<FirestoreAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<FirestoreAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

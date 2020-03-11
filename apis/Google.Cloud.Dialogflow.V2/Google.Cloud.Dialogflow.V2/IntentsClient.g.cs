@@ -205,16 +205,34 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public IntentsSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref IntentsClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<IntentsClient> task);
+
         /// <inheritdoc/>
         public override IntentsClient Build()
+        {
+            IntentsClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<IntentsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<IntentsClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private IntentsClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return IntentsClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<IntentsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<IntentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

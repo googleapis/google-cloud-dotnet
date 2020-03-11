@@ -288,16 +288,34 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public SubscriberServiceApiSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref SubscriberServiceApiClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SubscriberServiceApiClient> task);
+
         /// <inheritdoc/>
         public override SubscriberServiceApiClient Build()
+        {
+            SubscriberServiceApiClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<SubscriberServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<SubscriberServiceApiClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private SubscriberServiceApiClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return SubscriberServiceApiClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<SubscriberServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<SubscriberServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

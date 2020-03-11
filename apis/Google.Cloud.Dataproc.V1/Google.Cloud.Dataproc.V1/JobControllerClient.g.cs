@@ -160,16 +160,34 @@ namespace Google.Cloud.Dataproc.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public JobControllerSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref JobControllerClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<JobControllerClient> task);
+
         /// <inheritdoc/>
         public override JobControllerClient Build()
+        {
+            JobControllerClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<JobControllerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<JobControllerClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private JobControllerClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return JobControllerClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<JobControllerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<JobControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

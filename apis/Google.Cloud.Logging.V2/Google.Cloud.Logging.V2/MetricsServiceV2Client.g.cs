@@ -142,16 +142,34 @@ namespace Google.Cloud.Logging.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public MetricsServiceV2Settings Settings { get; set; }
 
+        partial void InterceptBuild(ref MetricsServiceV2Client client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<MetricsServiceV2Client> task);
+
         /// <inheritdoc/>
         public override MetricsServiceV2Client Build()
+        {
+            MetricsServiceV2Client client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<MetricsServiceV2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<MetricsServiceV2Client> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private MetricsServiceV2Client BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return MetricsServiceV2Client.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<MetricsServiceV2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<MetricsServiceV2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

@@ -228,16 +228,34 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public NotificationChannelServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref NotificationChannelServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<NotificationChannelServiceClient> task);
+
         /// <inheritdoc/>
         public override NotificationChannelServiceClient Build()
+        {
+            NotificationChannelServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<NotificationChannelServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<NotificationChannelServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private NotificationChannelServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return NotificationChannelServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<NotificationChannelServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<NotificationChannelServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

@@ -254,16 +254,34 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public InstanceAdminSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref InstanceAdminClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<InstanceAdminClient> task);
+
         /// <inheritdoc/>
         public override InstanceAdminClient Build()
+        {
+            InstanceAdminClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<InstanceAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<InstanceAdminClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private InstanceAdminClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return InstanceAdminClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<InstanceAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<InstanceAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

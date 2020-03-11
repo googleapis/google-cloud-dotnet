@@ -101,16 +101,34 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public VideoIntelligenceServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref VideoIntelligenceServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<VideoIntelligenceServiceClient> task);
+
         /// <inheritdoc/>
         public override VideoIntelligenceServiceClient Build()
+        {
+            VideoIntelligenceServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<VideoIntelligenceServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<VideoIntelligenceServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private VideoIntelligenceServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return VideoIntelligenceServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<VideoIntelligenceServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<VideoIntelligenceServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

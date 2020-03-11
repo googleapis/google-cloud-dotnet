@@ -411,16 +411,34 @@ namespace Google.Cloud.Vision.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ProductSearchSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ProductSearchClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ProductSearchClient> task);
+
         /// <inheritdoc/>
         public override ProductSearchClient Build()
+        {
+            ProductSearchClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ProductSearchClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ProductSearchClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ProductSearchClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ProductSearchClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ProductSearchClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ProductSearchClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

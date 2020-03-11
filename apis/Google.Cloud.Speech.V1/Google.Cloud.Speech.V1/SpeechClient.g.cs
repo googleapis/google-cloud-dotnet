@@ -126,16 +126,34 @@ namespace Google.Cloud.Speech.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public SpeechSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref SpeechClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SpeechClient> task);
+
         /// <inheritdoc/>
         public override SpeechClient Build()
+        {
+            SpeechClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<SpeechClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<SpeechClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private SpeechClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return SpeechClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<SpeechClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<SpeechClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

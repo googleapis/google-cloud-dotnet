@@ -195,16 +195,34 @@ namespace Google.Cloud.Billing.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public CloudBillingSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref CloudBillingClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CloudBillingClient> task);
+
         /// <inheritdoc/>
         public override CloudBillingClient Build()
+        {
+            CloudBillingClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<CloudBillingClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<CloudBillingClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private CloudBillingClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return CloudBillingClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<CloudBillingClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<CloudBillingClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

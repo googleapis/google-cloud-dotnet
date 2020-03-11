@@ -94,16 +94,34 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ErrorGroupServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ErrorGroupServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ErrorGroupServiceClient> task);
+
         /// <inheritdoc/>
         public override ErrorGroupServiceClient Build()
+        {
+            ErrorGroupServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ErrorGroupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ErrorGroupServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ErrorGroupServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ErrorGroupServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ErrorGroupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ErrorGroupServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

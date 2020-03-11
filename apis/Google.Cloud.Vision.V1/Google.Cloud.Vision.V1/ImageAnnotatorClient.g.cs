@@ -167,16 +167,34 @@ namespace Google.Cloud.Vision.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ImageAnnotatorSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ImageAnnotatorClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ImageAnnotatorClient> task);
+
         /// <inheritdoc/>
         public override ImageAnnotatorClient Build()
+        {
+            ImageAnnotatorClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ImageAnnotatorClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ImageAnnotatorClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ImageAnnotatorClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ImageAnnotatorClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ImageAnnotatorClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ImageAnnotatorClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

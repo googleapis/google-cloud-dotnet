@@ -240,16 +240,34 @@ namespace Google.Cloud.Translate.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public TranslationServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref TranslationServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TranslationServiceClient> task);
+
         /// <inheritdoc/>
         public override TranslationServiceClient Build()
+        {
+            TranslationServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<TranslationServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<TranslationServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private TranslationServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return TranslationServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<TranslationServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<TranslationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

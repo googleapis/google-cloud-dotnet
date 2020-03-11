@@ -112,16 +112,34 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ErrorStatsServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ErrorStatsServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ErrorStatsServiceClient> task);
+
         /// <inheritdoc/>
         public override ErrorStatsServiceClient Build()
+        {
+            ErrorStatsServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ErrorStatsServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ErrorStatsServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ErrorStatsServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ErrorStatsServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ErrorStatsServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ErrorStatsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

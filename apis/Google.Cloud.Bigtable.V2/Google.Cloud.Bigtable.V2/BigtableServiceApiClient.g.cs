@@ -133,16 +133,34 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public BigtableServiceApiSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref BigtableServiceApiClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<BigtableServiceApiClient> task);
+
         /// <inheritdoc/>
         public override BigtableServiceApiClient Build()
+        {
+            BigtableServiceApiClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<BigtableServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<BigtableServiceApiClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private BigtableServiceApiClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return BigtableServiceApiClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<BigtableServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<BigtableServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
