@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-03-12
+
+- [Commit 8da93ef](https://github.com/googleapis/google-cloud-dotnet/commit/8da93ef): Adds support for notifications.
+- [Commit 11173de](https://github.com/googleapis/google-cloud-dotnet/commit/11173de): Amended retry configuration
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
