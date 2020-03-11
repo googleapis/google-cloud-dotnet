@@ -84,6 +84,11 @@ namespace Google.Cloud.Spanner.Data
             return new QueryOptions(proto.Clone());
         }
 
+        /// <summary>
+        /// Get proto version of the query options.
+        /// </summary>
+        public V1.ExecuteSqlRequest.Types.QueryOptions ToProto() => Proto.Clone();
+
         /// <inheritdoc />
         public bool Equals(QueryOptions other)
         {
