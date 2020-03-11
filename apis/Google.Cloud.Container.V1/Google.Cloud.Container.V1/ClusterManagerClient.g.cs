@@ -498,16 +498,34 @@ namespace Google.Cloud.Container.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ClusterManagerSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ClusterManagerClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ClusterManagerClient> task);
+
         /// <inheritdoc/>
         public override ClusterManagerClient Build()
+        {
+            ClusterManagerClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ClusterManagerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ClusterManagerClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ClusterManagerClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ClusterManagerClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ClusterManagerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ClusterManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

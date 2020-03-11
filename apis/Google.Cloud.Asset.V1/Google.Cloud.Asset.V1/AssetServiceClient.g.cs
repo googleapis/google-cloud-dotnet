@@ -176,16 +176,34 @@ namespace Google.Cloud.Asset.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public AssetServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref AssetServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<AssetServiceClient> task);
+
         /// <inheritdoc/>
         public override AssetServiceClient Build()
+        {
+            AssetServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<AssetServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<AssetServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private AssetServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return AssetServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<AssetServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<AssetServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

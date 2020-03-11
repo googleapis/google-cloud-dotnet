@@ -439,16 +439,34 @@ namespace Google.Cloud.Kms.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public KeyManagementServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref KeyManagementServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<KeyManagementServiceClient> task);
+
         /// <inheritdoc/>
         public override KeyManagementServiceClient Build()
+        {
+            KeyManagementServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<KeyManagementServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<KeyManagementServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private KeyManagementServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return KeyManagementServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<KeyManagementServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<KeyManagementServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

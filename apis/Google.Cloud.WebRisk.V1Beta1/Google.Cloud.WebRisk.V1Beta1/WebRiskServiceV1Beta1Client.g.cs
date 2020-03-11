@@ -113,16 +113,34 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public WebRiskServiceV1Beta1Settings Settings { get; set; }
 
+        partial void InterceptBuild(ref WebRiskServiceV1Beta1Client client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<WebRiskServiceV1Beta1Client> task);
+
         /// <inheritdoc/>
         public override WebRiskServiceV1Beta1Client Build()
+        {
+            WebRiskServiceV1Beta1Client client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<WebRiskServiceV1Beta1Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<WebRiskServiceV1Beta1Client> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private WebRiskServiceV1Beta1Client BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return WebRiskServiceV1Beta1Client.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<WebRiskServiceV1Beta1Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<WebRiskServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

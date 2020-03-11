@@ -160,16 +160,34 @@ namespace Google.Cloud.OsLogin.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public OsLoginServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref OsLoginServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OsLoginServiceClient> task);
+
         /// <inheritdoc/>
         public override OsLoginServiceClient Build()
+        {
+            OsLoginServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<OsLoginServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<OsLoginServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private OsLoginServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return OsLoginServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<OsLoginServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<OsLoginServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

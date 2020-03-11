@@ -158,16 +158,34 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public GroupServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref GroupServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<GroupServiceClient> task);
+
         /// <inheritdoc/>
         public override GroupServiceClient Build()
+        {
+            GroupServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<GroupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<GroupServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private GroupServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return GroupServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<GroupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<GroupServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

@@ -153,16 +153,34 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ContextsSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ContextsClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ContextsClient> task);
+
         /// <inheritdoc/>
         public override ContextsClient Build()
+        {
+            ContextsClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ContextsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ContextsClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ContextsClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ContextsClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ContextsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ContextsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

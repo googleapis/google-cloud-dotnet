@@ -79,16 +79,34 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public PhishingProtectionServiceV1Beta1Settings Settings { get; set; }
 
+        partial void InterceptBuild(ref PhishingProtectionServiceV1Beta1Client client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<PhishingProtectionServiceV1Beta1Client> task);
+
         /// <inheritdoc/>
         public override PhishingProtectionServiceV1Beta1Client Build()
+        {
+            PhishingProtectionServiceV1Beta1Client client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<PhishingProtectionServiceV1Beta1Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<PhishingProtectionServiceV1Beta1Client> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private PhishingProtectionServiceV1Beta1Client BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<PhishingProtectionServiceV1Beta1Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<PhishingProtectionServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

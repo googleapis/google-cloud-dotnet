@@ -178,16 +178,34 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public CloudSchedulerSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref CloudSchedulerClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CloudSchedulerClient> task);
+
         /// <inheritdoc/>
         public override CloudSchedulerClient Build()
+        {
+            CloudSchedulerClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<CloudSchedulerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<CloudSchedulerClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private CloudSchedulerClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return CloudSchedulerClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<CloudSchedulerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<CloudSchedulerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

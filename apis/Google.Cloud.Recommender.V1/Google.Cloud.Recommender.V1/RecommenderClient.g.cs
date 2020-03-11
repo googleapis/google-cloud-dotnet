@@ -136,16 +136,34 @@ namespace Google.Cloud.Recommender.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public RecommenderSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref RecommenderClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<RecommenderClient> task);
+
         /// <inheritdoc/>
         public override RecommenderClient Build()
+        {
+            RecommenderClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<RecommenderClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<RecommenderClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private RecommenderClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return RecommenderClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<RecommenderClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<RecommenderClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

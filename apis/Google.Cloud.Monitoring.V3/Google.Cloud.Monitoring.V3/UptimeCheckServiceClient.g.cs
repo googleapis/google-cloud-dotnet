@@ -161,16 +161,34 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public UptimeCheckServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref UptimeCheckServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<UptimeCheckServiceClient> task);
+
         /// <inheritdoc/>
         public override UptimeCheckServiceClient Build()
+        {
+            UptimeCheckServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<UptimeCheckServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<UptimeCheckServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private UptimeCheckServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return UptimeCheckServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<UptimeCheckServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<UptimeCheckServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

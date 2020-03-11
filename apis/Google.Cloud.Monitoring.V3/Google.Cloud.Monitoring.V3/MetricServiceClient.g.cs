@@ -192,16 +192,34 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public MetricServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref MetricServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<MetricServiceClient> task);
+
         /// <inheritdoc/>
         public override MetricServiceClient Build()
+        {
+            MetricServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<MetricServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<MetricServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private MetricServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return MetricServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<MetricServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<MetricServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

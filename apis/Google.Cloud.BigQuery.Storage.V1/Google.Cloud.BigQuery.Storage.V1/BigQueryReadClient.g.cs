@@ -102,16 +102,34 @@ namespace Google.Cloud.BigQuery.Storage.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public BigQueryReadSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref BigQueryReadClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<BigQueryReadClient> task);
+
         /// <inheritdoc/>
         public override BigQueryReadClient Build()
+        {
+            BigQueryReadClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<BigQueryReadClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<BigQueryReadClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private BigQueryReadClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return BigQueryReadClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<BigQueryReadClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<BigQueryReadClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

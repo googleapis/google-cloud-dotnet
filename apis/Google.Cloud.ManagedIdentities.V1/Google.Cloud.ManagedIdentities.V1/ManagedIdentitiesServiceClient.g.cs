@@ -340,16 +340,34 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ManagedIdentitiesServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ManagedIdentitiesServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ManagedIdentitiesServiceClient> task);
+
         /// <inheritdoc/>
         public override ManagedIdentitiesServiceClient Build()
+        {
+            ManagedIdentitiesServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ManagedIdentitiesServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ManagedIdentitiesServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ManagedIdentitiesServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ManagedIdentitiesServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ManagedIdentitiesServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ManagedIdentitiesServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

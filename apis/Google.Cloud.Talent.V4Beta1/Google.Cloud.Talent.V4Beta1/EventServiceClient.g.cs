@@ -75,16 +75,34 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public EventServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref EventServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<EventServiceClient> task);
+
         /// <inheritdoc/>
         public override EventServiceClient Build()
+        {
+            EventServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<EventServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<EventServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private EventServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return EventServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<EventServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<EventServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

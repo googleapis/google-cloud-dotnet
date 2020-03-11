@@ -108,16 +108,34 @@ namespace Google.Cloud.AutoML.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public PredictionServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref PredictionServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<PredictionServiceClient> task);
+
         /// <inheritdoc/>
         public override PredictionServiceClient Build()
+        {
+            PredictionServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<PredictionServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<PredictionServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private PredictionServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return PredictionServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<PredictionServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<PredictionServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

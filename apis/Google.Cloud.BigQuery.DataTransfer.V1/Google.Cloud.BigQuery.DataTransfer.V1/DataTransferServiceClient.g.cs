@@ -287,16 +287,34 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public DataTransferServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref DataTransferServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<DataTransferServiceClient> task);
+
         /// <inheritdoc/>
         public override DataTransferServiceClient Build()
+        {
+            DataTransferServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<DataTransferServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<DataTransferServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private DataTransferServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return DataTransferServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<DataTransferServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<DataTransferServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

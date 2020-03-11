@@ -145,16 +145,34 @@ namespace Google.Cloud.Dataproc.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public AutoscalingPolicyServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref AutoscalingPolicyServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<AutoscalingPolicyServiceClient> task);
+
         /// <inheritdoc/>
         public override AutoscalingPolicyServiceClient Build()
+        {
+            AutoscalingPolicyServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<AutoscalingPolicyServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<AutoscalingPolicyServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private AutoscalingPolicyServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return AutoscalingPolicyServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<AutoscalingPolicyServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<AutoscalingPolicyServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

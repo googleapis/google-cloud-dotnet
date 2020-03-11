@@ -269,16 +269,34 @@ namespace Grafeas.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public GrafeasSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref GrafeasClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<GrafeasClient> task);
+
         /// <inheritdoc/>
         public override GrafeasClient Build()
+        {
+            GrafeasClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<GrafeasClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<GrafeasClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private GrafeasClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return GrafeasClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<GrafeasClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<GrafeasClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

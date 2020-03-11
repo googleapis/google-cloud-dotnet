@@ -299,16 +299,34 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public SpannerSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref SpannerClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SpannerClient> task);
+
         /// <inheritdoc/>
         public override SpannerClient Build()
+        {
+            SpannerClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<SpannerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<SpannerClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private SpannerClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return SpannerClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<SpannerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<SpannerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

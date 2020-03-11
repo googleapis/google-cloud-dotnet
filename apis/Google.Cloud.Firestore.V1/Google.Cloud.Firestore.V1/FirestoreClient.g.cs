@@ -252,16 +252,34 @@ namespace Google.Cloud.Firestore.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public FirestoreSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref FirestoreClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<FirestoreClient> task);
+
         /// <inheritdoc/>
         public override FirestoreClient Build()
+        {
+            FirestoreClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<FirestoreClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<FirestoreClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private FirestoreClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return FirestoreClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<FirestoreClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<FirestoreClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

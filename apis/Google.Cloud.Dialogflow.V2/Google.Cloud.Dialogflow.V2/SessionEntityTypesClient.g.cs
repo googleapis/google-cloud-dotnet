@@ -143,16 +143,34 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public SessionEntityTypesSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref SessionEntityTypesClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SessionEntityTypesClient> task);
+
         /// <inheritdoc/>
         public override SessionEntityTypesClient Build()
+        {
+            SessionEntityTypesClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<SessionEntityTypesClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<SessionEntityTypesClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private SessionEntityTypesClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return SessionEntityTypesClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<SessionEntityTypesClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<SessionEntityTypesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

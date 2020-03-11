@@ -78,16 +78,34 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public LookupServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref LookupServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<LookupServiceClient> task);
+
         /// <inheritdoc/>
         public override LookupServiceClient Build()
+        {
+            LookupServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<LookupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<LookupServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private LookupServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return LookupServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<LookupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<LookupServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

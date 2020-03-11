@@ -139,16 +139,34 @@ namespace Google.Cloud.Debugger.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public Debugger2Settings Settings { get; set; }
 
+        partial void InterceptBuild(ref Debugger2Client client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<Debugger2Client> task);
+
         /// <inheritdoc/>
         public override Debugger2Client Build()
+        {
+            Debugger2Client client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<Debugger2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<Debugger2Client> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private Debugger2Client BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return Debugger2Client.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<Debugger2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<Debugger2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

@@ -139,16 +139,34 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public TenantServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref TenantServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TenantServiceClient> task);
+
         /// <inheritdoc/>
         public override TenantServiceClient Build()
+        {
+            TenantServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<TenantServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<TenantServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private TenantServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return TenantServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<TenantServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<TenantServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

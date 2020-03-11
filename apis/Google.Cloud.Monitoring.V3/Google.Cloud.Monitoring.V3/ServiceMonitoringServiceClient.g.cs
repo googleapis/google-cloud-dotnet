@@ -224,16 +224,34 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ServiceMonitoringServiceSettings Settings { get; set; }
 
+        partial void InterceptBuild(ref ServiceMonitoringServiceClient client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ServiceMonitoringServiceClient> task);
+
         /// <inheritdoc/>
         public override ServiceMonitoringServiceClient Build()
+        {
+            ServiceMonitoringServiceClient client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ServiceMonitoringServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ServiceMonitoringServiceClient> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ServiceMonitoringServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ServiceMonitoringServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ServiceMonitoringServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ServiceMonitoringServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);

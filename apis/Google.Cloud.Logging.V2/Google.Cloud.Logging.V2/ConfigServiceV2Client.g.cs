@@ -242,16 +242,34 @@ namespace Google.Cloud.Logging.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ConfigServiceV2Settings Settings { get; set; }
 
+        partial void InterceptBuild(ref ConfigServiceV2Client client);
+
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ConfigServiceV2Client> task);
+
         /// <inheritdoc/>
         public override ConfigServiceV2Client Build()
+        {
+            ConfigServiceV2Client client = null;
+            InterceptBuild(ref client);
+            return client ?? BuildImpl();
+        }
+
+        /// <inheritdoc/>
+        public override stt::Task<ConfigServiceV2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            stt::Task<ConfigServiceV2Client> task = null;
+            InterceptBuildAsync(cancellationToken, ref task);
+            return task ?? BuildAsyncImpl(cancellationToken);
+        }
+
+        private ConfigServiceV2Client BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
             return ConfigServiceV2Client.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
-        public override async stt::Task<ConfigServiceV2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        private async stt::Task<ConfigServiceV2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
