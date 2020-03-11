@@ -32,96 +32,166 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "djEvaWFtX3BvbGljeS5wcm90bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJv",
             "dG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGhtnb29n",
             "bGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8i9gEKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSPwoFc3Rh",
-            "dGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5E",
-            "YXRhYmFzZS5TdGF0ZSI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAjpi6kFfCh9zcGFubmVyLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFiYXNlEjxwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
-            "Y2VzL3tpbnN0YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX0idgoUTGlzdERh",
-            "dGFiYXNlc1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5u",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEQoJcGFnZV9zaXplGAMgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YBCABKAkibwoVTGlzdERhdGFiYXNlc1Jlc3BvbnNl",
-            "Ej0KCWRhdGFiYXNlcxgBIAMoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWluLmRh",
-            "dGFiYXNlLnYxLkRhdGFiYXNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKJ",
-            "AQoVQ3JlYXRlRGF0YWJhc2VSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC",
-            "+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEh0KEGNyZWF0",
-            "ZV9zdGF0ZW1lbnQYAiABKAlCA+BBAhIYChBleHRyYV9zdGF0ZW1lbnRzGAMg",
-            "AygJIlAKFkNyZWF0ZURhdGFiYXNlTWV0YWRhdGESNgoIZGF0YWJhc2UYASAB",
-            "KAlCJPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZSJLChJH",
-            "ZXREYXRhYmFzZVJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9zcGFu",
-            "bmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlIoQBChhVcGRhdGVEYXRhYmFz",
-            "ZURkbFJlcXVlc3QSOQoIZGF0YWJhc2UYASABKAlCJ+BBAvpBIQofc3Bhbm5l",
-            "ci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRIXCgpzdGF0ZW1lbnRzGAIgAygJ",
-            "QgPgQQISFAoMb3BlcmF0aW9uX2lkGAMgASgJIp4BChlVcGRhdGVEYXRhYmFz",
-            "ZURkbE1ldGFkYXRhEjYKCGRhdGFiYXNlGAEgASgJQiT6QSEKH3NwYW5uZXIu",
-            "Z29vZ2xlYXBpcy5jb20vRGF0YWJhc2USEgoKc3RhdGVtZW50cxgCIAMoCRI1",
-            "ChFjb21taXRfdGltZXN0YW1wcxgDIAMoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXAiUAoTRHJvcERhdGFiYXNlUmVxdWVzdBI5CghkYXRhYmFzZRgB",
-            "IAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNl",
-            "IlIKFUdldERhdGFiYXNlRGRsUmVxdWVzdBI5CghkYXRhYmFzZRgBIAEoCUIn",
-            "4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlIiwKFkdl",
-            "dERhdGFiYXNlRGRsUmVzcG9uc2USEgoKc3RhdGVtZW50cxgBIAMoCTKtEQoN",
-            "RGF0YWJhc2VBZG1pbhLAAQoNTGlzdERhdGFiYXNlcxI2Lmdvb2dsZS5zcGFu",
-            "bmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFzZXNSZXF1ZXN0Gjcu",
-            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuTGlzdERhdGFiYXNl",
-            "c1Jlc3BvbnNlIj6C0+STAi8SLS92MS97cGFyZW50PXByb2plY3RzLyovaW5z",
-            "dGFuY2VzLyp9L2RhdGFiYXNlc9pBBnBhcmVudBKkAgoOQ3JlYXRlRGF0YWJh",
-            "c2USNy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5DcmVhdGVE",
-            "YXRhYmFzZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "IrkBgtPkkwIyIi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "fS9kYXRhYmFzZXM6ASraQRdwYXJlbnQsY3JlYXRlX3N0YXRlbWVudMpBZAop",
-            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2USN2dv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkNyZWF0ZURhdGFiYXNl",
-            "TWV0YWRhdGESrQEKC0dldERhdGFiYXNlEjQuZ29vZ2xlLnNwYW5uZXIuYWRt",
-            "aW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VSZXF1ZXN0GiouZ29vZ2xlLnNw",
-            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2UiPILT5JMCLxItL3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp92kEE",
-            "bmFtZRKdAgoRVXBkYXRlRGF0YWJhc2VEZGwSOi5nb29nbGUuc3Bhbm5lci5h",
-            "ZG1pbi5kYXRhYmFzZS52MS5VcGRhdGVEYXRhYmFzZURkbFJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqwBgtPkkwI6MjUvdjEve2Rh",
-            "dGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L2Rk",
-            "bDoBKtpBE2RhdGFiYXNlLHN0YXRlbWVudHPKQVMKFWdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eRI6Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuVXBk",
-            "YXRlRGF0YWJhc2VEZGxNZXRhZGF0YRKjAQoMRHJvcERhdGFiYXNlEjUuZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRHJvcERhdGFiYXNlUmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwIzKjEvdjEve2Rh",
-            "dGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp92kEI",
-            "ZGF0YWJhc2USzQEKDkdldERhdGFiYXNlRGRsEjcuZ29vZ2xlLnNwYW5uZXIu",
-            "YWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VEZGxSZXF1ZXN0GjguZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VEZGxS",
-            "ZXNwb25zZSJIgtPkkwI3EjUvdjEve2RhdGFiYXNlPXByb2plY3RzLyovaW5z",
-            "dGFuY2VzLyovZGF0YWJhc2VzLyp9L2RkbNpBCGRhdGFiYXNlEusBCgxTZXRJ",
-            "YW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJlcXVlc3Qa",
-            "FS5nb29nbGUuaWFtLnYxLlBvbGljeSKfAYLT5JMChgEiPi92MS97cmVzb3Vy",
-            "Y2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn06c2V0SWFt",
-            "UG9saWN5OgEqWkEiPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5j",
-            "ZXMvKi9iYWNrdXBzLyp9OnNldElhbVBvbGljeToBKtpBD3Jlc291cmNlLHBv",
-            "bGljeRLkAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Q",
-            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kimAGC0+STAoYB",
-            "Ij4vdjEve3Jlc291cmNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
-            "c2VzLyp9OmdldElhbVBvbGljeToBKlpBIjwvdjEve3Jlc291cmNlPXByb2pl",
-            "Y3RzLyovaW5zdGFuY2VzLyovYmFja3Vwcy8qfTpnZXRJYW1Qb2xpY3k6ASra",
-            "QQhyZXNvdXJjZRKcAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlh",
-            "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52",
-            "MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSKwAYLT5JMCkgEiRC92MS97",
+            "c3RhbXAucHJvdG8aLWdvb2dsZS9zcGFubmVyL2FkbWluL2RhdGFiYXNlL3Yx",
+            "L2JhY2t1cC5wcm90bxotZ29vZ2xlL3NwYW5uZXIvYWRtaW4vZGF0YWJhc2Uv",
+            "djEvY29tbW9uLnByb3RvIqsBCgtSZXN0b3JlSW5mbxJICgtzb3VyY2VfdHlw",
+            "ZRgBIAEoDjIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJl",
+            "c3RvcmVTb3VyY2VUeXBlEkMKC2JhY2t1cF9pbmZvGAIgASgLMiwuZ29vZ2xl",
+            "LnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQmFja3VwSW5mb0gAQg0KC3Nv",
+            "dXJjZV9pbmZvIpYDCghEYXRhYmFzZRIRCgRuYW1lGAEgASgJQgPgQQISRAoF",
+            "c3RhdGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
+            "MS5EYXRhYmFzZS5TdGF0ZUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKDHJlc3RvcmVfaW5m",
+            "bxgEIAEoCzItLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJl",
+            "c3RvcmVJbmZvQgPgQQMiTQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIMCghDUkVBVElORxABEgkKBVJFQURZEAISFAoQUkVBRFlfT1BUSU1JWklO",
+            "RxADOmLqQV8KH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USPHBy",
+            "b2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9kYXRhYmFz",
+            "ZXMve2RhdGFiYXNlfSJ2ChRMaXN0RGF0YWJhc2VzUmVxdWVzdBI3CgZwYXJl",
+            "bnQYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0",
+            "YW5jZRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJv",
+            "ChVMaXN0RGF0YWJhc2VzUmVzcG9uc2USPQoJZGF0YWJhc2VzGAEgAygLMiou",
+            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2USFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIo4BChVDcmVhdGVEYXRhYmFzZVJlcXVl",
+            "c3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBp",
+            "cy5jb20vSW5zdGFuY2USHQoQY3JlYXRlX3N0YXRlbWVudBgCIAEoCUID4EEC",
+            "Eh0KEGV4dHJhX3N0YXRlbWVudHMYAyADKAlCA+BBASJQChZDcmVhdGVEYXRh",
+            "YmFzZU1ldGFkYXRhEjYKCGRhdGFiYXNlGAEgASgJQiT6QSEKH3NwYW5uZXIu",
+            "Z29vZ2xlYXBpcy5jb20vRGF0YWJhc2UiSwoSR2V0RGF0YWJhc2VSZXF1ZXN0",
+            "EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhYmFzZSKEAQoYVXBkYXRlRGF0YWJhc2VEZGxSZXF1ZXN0EjkKCGRh",
+            "dGFiYXNlGAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20v",
+            "RGF0YWJhc2USFwoKc3RhdGVtZW50cxgCIAMoCUID4EECEhQKDG9wZXJhdGlv",
+            "bl9pZBgDIAEoCSKeAQoZVXBkYXRlRGF0YWJhc2VEZGxNZXRhZGF0YRI2Cghk",
+            "YXRhYmFzZRgBIAEoCUIk+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFiYXNlEhIKCnN0YXRlbWVudHMYAiADKAkSNQoRY29tbWl0X3RpbWVzdGFt",
+            "cHMYAyADKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIlAKE0Ryb3BE",
+            "YXRhYmFzZVJlcXVlc3QSOQoIZGF0YWJhc2UYASABKAlCJ+BBAvpBIQofc3Bh",
+            "bm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZSJSChVHZXREYXRhYmFzZURk",
+            "bFJlcXVlc3QSOQoIZGF0YWJhc2UYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhYmFzZSIsChZHZXREYXRhYmFzZURkbFJlc3Bv",
+            "bnNlEhIKCnN0YXRlbWVudHMYASADKAkijwEKHUxpc3REYXRhYmFzZU9wZXJh",
+            "dGlvbnNSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9zcGFubmVy",
+            "Lmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEg4KBmZpbHRlchgCIAEoCRIRCglw",
+            "YWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJsCh5MaXN0RGF0",
+            "YWJhc2VPcGVyYXRpb25zUmVzcG9uc2USMQoKb3BlcmF0aW9ucxgBIAMoCzId",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24SFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJIqsBChZSZXN0b3JlRGF0YWJhc2VSZXF1ZXN0EjcKBnBhcmVu",
+            "dBgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3Rh",
+            "bmNlEhgKC2RhdGFiYXNlX2lkGAIgASgJQgPgQQISNAoGYmFja3VwGAMgASgJ",
+            "QiL6QR8KHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwSABCCAoGc291",
+            "cmNlIucCChdSZXN0b3JlRGF0YWJhc2VNZXRhZGF0YRIMCgRuYW1lGAEgASgJ",
+            "EkgKC3NvdXJjZV90eXBlGAIgASgOMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
+            "ZGF0YWJhc2UudjEuUmVzdG9yZVNvdXJjZVR5cGUSQwoLYmFja3VwX2luZm8Y",
+            "AyABKAsyLC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNr",
+            "dXBJbmZvSAASRQoIcHJvZ3Jlc3MYBCABKAsyMy5nb29nbGUuc3Bhbm5lci5h",
+            "ZG1pbi5kYXRhYmFzZS52MS5PcGVyYXRpb25Qcm9ncmVzcxIvCgtjYW5jZWxf",
+            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKAogb3B0",
+            "aW1pemVfZGF0YWJhc2Vfb3BlcmF0aW9uX25hbWUYBiABKAlCDQoLc291cmNl",
+            "X2luZm8idwogT3B0aW1pemVSZXN0b3JlZERhdGFiYXNlTWV0YWRhdGESDAoE",
+            "bmFtZRgBIAEoCRJFCghwcm9ncmVzcxgCIAEoCzIzLmdvb2dsZS5zcGFubmVy",
+            "LmFkbWluLmRhdGFiYXNlLnYxLk9wZXJhdGlvblByb2dyZXNzKjUKEVJlc3Rv",
+            "cmVTb3VyY2VUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZCQUNLVVAQ",
+            "ATLyHgoNRGF0YWJhc2VBZG1pbhLAAQoNTGlzdERhdGFiYXNlcxI2Lmdvb2ds",
+            "ZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFzZXNSZXF1",
+            "ZXN0GjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuTGlzdERh",
+            "dGFiYXNlc1Jlc3BvbnNlIj6C0+STAi8SLS92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyp9L2RhdGFiYXNlc9pBBnBhcmVudBKkAgoOQ3JlYXRl",
+            "RGF0YWJhc2USNy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5D",
+            "cmVhdGVEYXRhYmFzZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIrkBgtPkkwIyIi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3Rh",
+            "bmNlcy8qfS9kYXRhYmFzZXM6ASraQRdwYXJlbnQsY3JlYXRlX3N0YXRlbWVu",
+            "dMpBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJh",
+            "c2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkNyZWF0ZURh",
+            "dGFiYXNlTWV0YWRhdGESrQEKC0dldERhdGFiYXNlEjQuZ29vZ2xlLnNwYW5u",
+            "ZXIuYWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VSZXF1ZXN0GiouZ29v",
+            "Z2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2UiPILT5JMC",
+            "LxItL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2Vz",
+            "Lyp92kEEbmFtZRKdAgoRVXBkYXRlRGF0YWJhc2VEZGwSOi5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5kYXRhYmFzZS52MS5VcGRhdGVEYXRhYmFzZURkbFJlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqwBgtPkkwI6MjUv",
+            "djEve2RhdGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2Vz",
+            "Lyp9L2RkbDoBKtpBE2RhdGFiYXNlLHN0YXRlbWVudHPKQVMKFWdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRI6Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2Uu",
+            "djEuVXBkYXRlRGF0YWJhc2VEZGxNZXRhZGF0YRKjAQoMRHJvcERhdGFiYXNl",
+            "EjUuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRHJvcERhdGFi",
+            "YXNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwIzKjEv",
+            "djEve2RhdGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2Vz",
+            "Lyp92kEIZGF0YWJhc2USzQEKDkdldERhdGFiYXNlRGRsEjcuZ29vZ2xlLnNw",
+            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VEZGxSZXF1ZXN0",
+            "GjguZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJh",
+            "c2VEZGxSZXNwb25zZSJIgtPkkwI3EjUvdjEve2RhdGFiYXNlPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L2RkbNpBCGRhdGFiYXNlEusB",
+            "CgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJl",
+            "cXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKfAYLT5JMChgEiPi92MS97",
             "cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn06",
-            "dGVzdElhbVBlcm1pc3Npb25zOgEqWkciQi92MS97cmVzb3VyY2U9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9OnRlc3RJYW1QZXJtaXNzaW9u",
-            "czoBKtpBFHJlc291cmNlLHBlcm1pc3Npb25zGnjKQRZzcGFubmVyLmdvb2ds",
-            "ZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L3NwYW5uZXIuYWRtaW5CrAIKJGNvbS5nb29nbGUuc3Bhbm5lci5hZG1pbi5k",
-            "YXRhYmFzZS52MUIZU3Bhbm5lckRhdGFiYXNlQWRtaW5Qcm90b1ABWkhnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3NwYW5uZXIvYWRt",
-            "aW4vZGF0YWJhc2UvdjE7ZGF0YWJhc2WqAiZHb29nbGUuQ2xvdWQuU3Bhbm5l",
-            "ci5BZG1pbi5EYXRhYmFzZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFk",
-            "bWluXERhdGFiYXNlXFYx6kFKCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0lu",
-            "c3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5j",
-            "ZX1iBnByb3RvMw=="));
+            "c2V0SWFtUG9saWN5OgEqWkEiPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9p",
+            "bnN0YW5jZXMvKi9iYWNrdXBzLyp9OnNldElhbVBvbGljeToBKtpBD3Jlc291",
+            "cmNlLHBvbGljeRLkAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5H",
+            "ZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kimAGC",
+            "0+STAoYBIj4vdjEve3Jlc291cmNlPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
+            "ZGF0YWJhc2VzLyp9OmdldElhbVBvbGljeToBKlpBIjwvdjEve3Jlc291cmNl",
+            "PXByb2plY3RzLyovaW5zdGFuY2VzLyovYmFja3Vwcy8qfTpnZXRJYW1Qb2xp",
+            "Y3k6ASraQQhyZXNvdXJjZRKcAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29v",
+            "Z2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xl",
+            "LmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSKwAYLT5JMCkgEi",
+            "RC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFz",
+            "ZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWkciQi92MS97cmVzb3VyY2U9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9OnRlc3RJYW1QZXJt",
+            "aXNzaW9uczoBKtpBFHJlc291cmNlLHBlcm1pc3Npb25zEv4BCgxDcmVhdGVC",
+            "YWNrdXASNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5DcmVh",
+            "dGVCYWNrdXBSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biKXAYLT5JMCNSIrL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMv",
+            "Kn0vYmFja3VwczoGYmFja3Vw2kEXcGFyZW50LGJhY2t1cCxiYWNrdXBfaWTK",
+            "QT8KBkJhY2t1cBI1Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEu",
+            "Q3JlYXRlQmFja3VwTWV0YWRhdGESpQEKCUdldEJhY2t1cBIyLmdvb2dsZS5z",
+            "cGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkdldEJhY2t1cFJlcXVlc3QaKC5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXAiOoLT5JMC",
+            "LRIrL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovYmFja3Vwcy8q",
+            "fdpBBG5hbWUSyAEKDFVwZGF0ZUJhY2t1cBI1Lmdvb2dsZS5zcGFubmVyLmFk",
+            "bWluLmRhdGFiYXNlLnYxLlVwZGF0ZUJhY2t1cFJlcXVlc3QaKC5nb29nbGUu",
+            "c3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXAiV4LT5JMCPDIyL3Yx",
+            "L3tiYWNrdXAubmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2JhY2t1cHMv",
+            "Kn06BmJhY2t1cNpBEmJhY2t1cCx1cGRhdGVfbWFzaxKZAQoMRGVsZXRlQmFj",
+            "a3VwEjUuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGVsZXRl",
+            "QmFja3VwUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI6gtPkkwIt",
+            "KisvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9",
+            "2kEEbmFtZRK4AQoLTGlzdEJhY2t1cHMSNC5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5kYXRhYmFzZS52MS5MaXN0QmFja3Vwc1JlcXVlc3QaNS5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5kYXRhYmFzZS52MS5MaXN0QmFja3Vwc1Jlc3BvbnNlIjyC",
+            "0+STAi0SKy92MS97cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2Jh",
+            "Y2t1cHPaQQZwYXJlbnQSsQIKD1Jlc3RvcmVEYXRhYmFzZRI4Lmdvb2dsZS5z",
+            "cGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJlc3RvcmVEYXRhYmFzZVJlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIsQBgtPkkwI6IjUv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9kYXRhYmFzZXM6",
+            "cmVzdG9yZToBKtpBGXBhcmVudCxkYXRhYmFzZV9pZCxiYWNrdXDKQWUKKWdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkRhdGFiYXNlEjhnb29n",
+            "bGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5SZXN0b3JlRGF0YWJhc2VN",
+            "ZXRhZGF0YRLkAQoWTGlzdERhdGFiYXNlT3BlcmF0aW9ucxI/Lmdvb2dsZS5z",
+            "cGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFzZU9wZXJhdGlv",
+            "bnNSZXF1ZXN0GkAuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEu",
+            "TGlzdERhdGFiYXNlT3BlcmF0aW9uc1Jlc3BvbnNlIkeC0+STAjgSNi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2RhdGFiYXNlT3BlcmF0",
+            "aW9uc9pBBnBhcmVudBLcAQoUTGlzdEJhY2t1cE9wZXJhdGlvbnMSPS5nb29n",
+            "bGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5MaXN0QmFja3VwT3BlcmF0",
+            "aW9uc1JlcXVlc3QaPi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
+            "MS5MaXN0QmFja3VwT3BlcmF0aW9uc1Jlc3BvbnNlIkWC0+STAjYSNC92MS97",
+            "cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2JhY2t1cE9wZXJhdGlv",
+            "bnPaQQZwYXJlbnQaeMpBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23SQVxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1pbkKs",
+            "AgokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxQhlTcGFu",
+            "bmVyRGF0YWJhc2VBZG1pblByb3RvUAFaSGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci9hZG1pbi9kYXRhYmFzZS92MTtk",
+            "YXRhYmFzZaoCJkdvb2dsZS5DbG91ZC5TcGFubmVyLkFkbWluLkRhdGFiYXNl",
+            "LlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJcQWRtaW5cRGF0YWJhc2VcVjHq",
+            "QUoKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USJ3Byb2plY3Rz",
+            "L3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database), global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser, new[]{ "Name", "State" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) }, null, null),
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.BackupReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.CommonReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo.Parser, new[]{ "SourceType", "BackupInfo" }, new[]{ "SourceInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database), global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser, new[]{ "Name", "State", "CreateTime", "RestoreInfo" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.Parser, new[]{ "Databases", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest), global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.Parser, new[]{ "Parent", "CreateStatement", "ExtraStatements" }, null, null, null, null),
@@ -131,13 +201,238 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata), global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.Parser, new[]{ "Database", "Statements", "CommitTimestamps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest), global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.Parser, new[]{ "Database" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.Parser, new[]{ "Database" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.Parser, new[]{ "Statements" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.Parser, new[]{ "Statements" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest.Parser, new[]{ "Parent", "DatabaseId", "Backup" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseMetadata), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseMetadata.Parser, new[]{ "Name", "SourceType", "BackupInfo", "Progress", "CancelTime", "OptimizeDatabaseOperationName" }, new[]{ "SourceInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.OptimizeRestoredDatabaseMetadata), global::Google.Cloud.Spanner.Admin.Database.V1.OptimizeRestoredDatabaseMetadata.Parser, new[]{ "Name", "Progress" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Indicates the type of the restore source.
+  /// </summary>
+  public enum RestoreSourceType {
+    /// <summary>
+    /// No restore associated.
+    /// </summary>
+    [pbr::OriginalName("TYPE_UNSPECIFIED")] TypeUnspecified = 0,
+    /// <summary>
+    /// A backup was used as the source of the restore.
+    /// </summary>
+    [pbr::OriginalName("BACKUP")] Backup = 1,
+  }
+
+  #endregion
+
   #region Messages
+  /// <summary>
+  /// Information about the database restore.
+  /// </summary>
+  public sealed partial class RestoreInfo : pb::IMessage<RestoreInfo> {
+    private static readonly pb::MessageParser<RestoreInfo> _parser = new pb::MessageParser<RestoreInfo>(() => new RestoreInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RestoreInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreInfo(RestoreInfo other) : this() {
+      sourceType_ = other.sourceType_;
+      switch (other.SourceInfoCase) {
+        case SourceInfoOneofCase.BackupInfo:
+          BackupInfo = other.BackupInfo.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreInfo Clone() {
+      return new RestoreInfo(this);
+    }
+
+    /// <summary>Field number for the "source_type" field.</summary>
+    public const int SourceTypeFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType sourceType_ = global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified;
+    /// <summary>
+    /// The type of the restore source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType SourceType {
+      get { return sourceType_; }
+      set {
+        sourceType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "backup_info" field.</summary>
+    public const int BackupInfoFieldNumber = 2;
+    /// <summary>
+    /// Information about the backup used to restore the database. The backup
+    /// may no longer exist.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo BackupInfo {
+      get { return sourceInfoCase_ == SourceInfoOneofCase.BackupInfo ? (global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo) sourceInfo_ : null; }
+      set {
+        sourceInfo_ = value;
+        sourceInfoCase_ = value == null ? SourceInfoOneofCase.None : SourceInfoOneofCase.BackupInfo;
+      }
+    }
+
+    private object sourceInfo_;
+    /// <summary>Enum of possible cases for the "source_info" oneof.</summary>
+    public enum SourceInfoOneofCase {
+      None = 0,
+      BackupInfo = 2,
+    }
+    private SourceInfoOneofCase sourceInfoCase_ = SourceInfoOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceInfoOneofCase SourceInfoCase {
+      get { return sourceInfoCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSourceInfo() {
+      sourceInfoCase_ = SourceInfoOneofCase.None;
+      sourceInfo_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RestoreInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RestoreInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SourceType != other.SourceType) return false;
+      if (!object.Equals(BackupInfo, other.BackupInfo)) return false;
+      if (SourceInfoCase != other.SourceInfoCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) hash ^= SourceType.GetHashCode();
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) hash ^= BackupInfo.GetHashCode();
+      hash ^= (int) sourceInfoCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SourceType);
+      }
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BackupInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
+      }
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackupInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RestoreInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) {
+        SourceType = other.SourceType;
+      }
+      switch (other.SourceInfoCase) {
+        case SourceInfoOneofCase.BackupInfo:
+          if (BackupInfo == null) {
+            BackupInfo = new global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo();
+          }
+          BackupInfo.MergeFrom(other.BackupInfo);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SourceType = (global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo subBuilder = new global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo();
+            if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+              subBuilder.MergeFrom(BackupInfo);
+            }
+            input.ReadMessage(subBuilder);
+            BackupInfo = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// A Cloud Spanner database.
   /// </summary>
@@ -149,7 +444,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -168,6 +463,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public Database(Database other) : this() {
       name_ = other.name_;
       state_ = other.state_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      restoreInfo_ = other.restoreInfo_ != null ? other.restoreInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -208,6 +505,35 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
     }
 
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. If exists, the time at which the database creation started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "restore_info" field.</summary>
+    public const int RestoreInfoFieldNumber = 4;
+    private global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo restoreInfo_;
+    /// <summary>
+    /// Output only. Applicable only for restored databases. Contains information
+    /// about the restore source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo RestoreInfo {
+      get { return restoreInfo_; }
+      set {
+        restoreInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Database);
@@ -223,6 +549,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(RestoreInfo, other.RestoreInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -231,6 +559,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (restoreInfo_ != null) hash ^= RestoreInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -252,6 +582,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) State);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (restoreInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RestoreInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -265,6 +603,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       if (State != global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (restoreInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RestoreInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -283,6 +627,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (other.State != global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.Unspecified) {
         State = other.State;
       }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.restoreInfo_ != null) {
+        if (restoreInfo_ == null) {
+          RestoreInfo = new global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo();
+        }
+        RestoreInfo.MergeFrom(other.RestoreInfo);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -300,6 +656,20 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           }
           case 16: {
             State = (global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (restoreInfo_ == null) {
+              RestoreInfo = new global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo();
+            }
+            input.ReadMessage(RestoreInfo);
             break;
           }
         }
@@ -327,6 +697,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         /// The database is fully created and ready for use.
         /// </summary>
         [pbr::OriginalName("READY")] Ready = 2,
+        /// <summary>
+        /// The database is fully created and ready for use, but is still
+        /// being optimized for performance and cannot handle full load.
+        ///
+        /// In this state, the database still references the backup
+        /// it was restore from, preventing the backup
+        /// from being deleted. When optimizations are complete, the full performance
+        /// of the database will be restored, and the database will transition to
+        /// `READY` state.
+        /// </summary>
+        [pbr::OriginalName("READY_OPTIMIZING")] ReadyOptimizing = 3,
       }
 
     }
@@ -345,7 +726,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -546,7 +927,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -706,7 +1087,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -773,7 +1154,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> extraStatements_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// An optional list of DDL statements to run inside the newly created
+    /// Optional. A list of DDL statements to run inside the newly created
     /// database. Statements can create tables, indexes, etc. These
     /// statements execute atomically with the creation of the database:
     /// if there is an error in any statement, the database is not created.
@@ -904,7 +1285,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1039,7 +1420,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1190,7 +1571,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1398,7 +1779,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1582,7 +1963,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1717,7 +2098,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1852,7 +2233,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1961,6 +2342,1214 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             break;
           case 10: {
             statements_.AddEntriesFrom(input, _repeated_statements_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [ListDatabaseOperations][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseOperations].
+  /// </summary>
+  public sealed partial class ListDatabaseOperationsRequest : pb::IMessage<ListDatabaseOperationsRequest> {
+    private static readonly pb::MessageParser<ListDatabaseOperationsRequest> _parser = new pb::MessageParser<ListDatabaseOperationsRequest>(() => new ListDatabaseOperationsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListDatabaseOperationsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDatabaseOperationsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDatabaseOperationsRequest(ListDatabaseOperationsRequest other) : this() {
+      parent_ = other.parent_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDatabaseOperationsRequest Clone() {
+      return new ListDatabaseOperationsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The instance of the database operations.
+    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// An expression that filters the list of returned operations.
+    ///
+    /// A filter expression consists of a field name, a
+    /// comparison operator, and a value for filtering.
+    /// The value must be a string, a number, or a boolean. The comparison operator
+    /// must be one of: `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, or `:`.
+    /// Colon `:` is the contains operator. Filter rules are not case sensitive.
+    ///
+    /// The following fields in the [Operation][google.longrunning.Operation]
+    /// are eligible for filtering:
+    ///
+    ///   * `name` - The name of the long-running operation
+    ///   * `done` - False if the operation is in progress, else true.
+    ///   * `metadata.@type` - the type of metadata. For example, the type string
+    ///      for [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata] is
+    ///      `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`.
+    ///   * `metadata.&lt;field_name>` - any field in metadata.value.
+    ///   * `error` - Error associated with the long-running operation.
+    ///   * `response.@type` - the type of response.
+    ///   * `response.&lt;field_name>` - any field in response.value.
+    ///
+    /// You can combine multiple expressions by enclosing each expression in
+    /// parentheses. By default, expressions are combined with AND logic. However,
+    /// you can specify AND, OR, and NOT logic explicitly.
+    ///
+    /// Here are a few examples:
+    ///
+    ///   * `done:true` - The operation is complete.
+    ///   * `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata) AND` &lt;br/>
+    ///     `(metadata.source_type:BACKUP) AND` &lt;br/>
+    ///     `(metadata.backup_info.backup:backup_howl) AND` &lt;br/>
+    ///     `(metadata.name:restored_howl) AND` &lt;br/>
+    ///     `(metadata.progress.start_time &lt; \"2018-03-28T14:50:00Z\") AND` &lt;br/>
+    ///     `(error:*)` - Return operations where:
+    ///     * The operation's metadata type is [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+    ///     * The database is restored from a backup.
+    ///     * The backup name contains "backup_howl".
+    ///     * The restored database's name contains "restored_howl".
+    ///     * The operation started before 2018-03-28T14:50:00Z.
+    ///     * The operation resulted in an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Number of operations to be returned in the response. If 0 or
+    /// less, defaults to the server's maximum allowed page size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// If non-empty, `page_token` should contain a
+    /// [next_page_token][google.spanner.admin.database.v1.ListDatabaseOperationsResponse.next_page_token]
+    /// from a previous [ListDatabaseOperationsResponse][google.spanner.admin.database.v1.ListDatabaseOperationsResponse] to the
+    /// same `parent` and with the same `filter`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListDatabaseOperationsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListDatabaseOperationsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListDatabaseOperationsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The response for
+  /// [ListDatabaseOperations][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseOperations].
+  /// </summary>
+  public sealed partial class ListDatabaseOperationsResponse : pb::IMessage<ListDatabaseOperationsResponse> {
+    private static readonly pb::MessageParser<ListDatabaseOperationsResponse> _parser = new pb::MessageParser<ListDatabaseOperationsResponse>(() => new ListDatabaseOperationsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListDatabaseOperationsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDatabaseOperationsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDatabaseOperationsResponse(ListDatabaseOperationsResponse other) : this() {
+      operations_ = other.operations_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListDatabaseOperationsResponse Clone() {
+      return new ListDatabaseOperationsResponse(this);
+    }
+
+    /// <summary>Field number for the "operations" field.</summary>
+    public const int OperationsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.LongRunning.Operation> _repeated_operations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.LongRunning.Operation.Parser);
+    private readonly pbc::RepeatedField<global::Google.LongRunning.Operation> operations_ = new pbc::RepeatedField<global::Google.LongRunning.Operation>();
+    /// <summary>
+    /// The list of matching database [long-running
+    /// operations][google.longrunning.Operation]. Each operation's name will be
+    /// prefixed by the database's name. The operation's
+    /// [metadata][google.longrunning.Operation.metadata] field type
+    /// `metadata.type_url` describes the type of the metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.LongRunning.Operation> Operations {
+      get { return operations_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// `next_page_token` can be sent in a subsequent
+    /// [ListDatabaseOperations][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseOperations]
+    /// call to fetch more of the matching metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListDatabaseOperationsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListDatabaseOperationsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!operations_.Equals(other.operations_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= operations_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      operations_.WriteTo(output, _repeated_operations_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += operations_.CalculateSize(_repeated_operations_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListDatabaseOperationsResponse other) {
+      if (other == null) {
+        return;
+      }
+      operations_.Add(other.operations_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            operations_.AddEntriesFrom(input, _repeated_operations_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [RestoreDatabase][google.spanner.admin.database.v1.DatabaseAdmin.RestoreDatabase].
+  /// </summary>
+  public sealed partial class RestoreDatabaseRequest : pb::IMessage<RestoreDatabaseRequest> {
+    private static readonly pb::MessageParser<RestoreDatabaseRequest> _parser = new pb::MessageParser<RestoreDatabaseRequest>(() => new RestoreDatabaseRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RestoreDatabaseRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreDatabaseRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreDatabaseRequest(RestoreDatabaseRequest other) : this() {
+      parent_ = other.parent_;
+      databaseId_ = other.databaseId_;
+      switch (other.SourceCase) {
+        case SourceOneofCase.Backup:
+          Backup = other.Backup;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreDatabaseRequest Clone() {
+      return new RestoreDatabaseRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the instance in which to create the
+    /// restored database. This instance must be in the same project and
+    /// have the same instance configuration as the instance containing
+    /// the source backup. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "database_id" field.</summary>
+    public const int DatabaseIdFieldNumber = 2;
+    private string databaseId_ = "";
+    /// <summary>
+    /// Required. The id of the database to create and restore to. This
+    /// database must not already exist. The `database_id` appended to
+    /// `parent` forms the full database name of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database_id>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatabaseId {
+      get { return databaseId_; }
+      set {
+        databaseId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "backup" field.</summary>
+    public const int BackupFieldNumber = 3;
+    /// <summary>
+    /// Name of the backup from which to restore.  Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Backup {
+      get { return sourceCase_ == SourceOneofCase.Backup ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.Backup;
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      Backup = 3,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RestoreDatabaseRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RestoreDatabaseRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (DatabaseId != other.DatabaseId) return false;
+      if (Backup != other.Backup) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (DatabaseId.Length != 0) hash ^= DatabaseId.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.Backup) hash ^= Backup.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (DatabaseId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatabaseId);
+      }
+      if (sourceCase_ == SourceOneofCase.Backup) {
+        output.WriteRawTag(26);
+        output.WriteString(Backup);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (DatabaseId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatabaseId);
+      }
+      if (sourceCase_ == SourceOneofCase.Backup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Backup);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RestoreDatabaseRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.DatabaseId.Length != 0) {
+        DatabaseId = other.DatabaseId;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.Backup:
+          Backup = other.Backup;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            DatabaseId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Backup = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Metadata type for the long-running operation returned by
+  /// [RestoreDatabase][google.spanner.admin.database.v1.DatabaseAdmin.RestoreDatabase].
+  /// </summary>
+  public sealed partial class RestoreDatabaseMetadata : pb::IMessage<RestoreDatabaseMetadata> {
+    private static readonly pb::MessageParser<RestoreDatabaseMetadata> _parser = new pb::MessageParser<RestoreDatabaseMetadata>(() => new RestoreDatabaseMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RestoreDatabaseMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreDatabaseMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreDatabaseMetadata(RestoreDatabaseMetadata other) : this() {
+      name_ = other.name_;
+      sourceType_ = other.sourceType_;
+      progress_ = other.progress_ != null ? other.progress_.Clone() : null;
+      cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
+      optimizeDatabaseOperationName_ = other.optimizeDatabaseOperationName_;
+      switch (other.SourceInfoCase) {
+        case SourceInfoOneofCase.BackupInfo:
+          BackupInfo = other.BackupInfo.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RestoreDatabaseMetadata Clone() {
+      return new RestoreDatabaseMetadata(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the database being created and restored to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_type" field.</summary>
+    public const int SourceTypeFieldNumber = 2;
+    private global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType sourceType_ = global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified;
+    /// <summary>
+    /// The type of the restore source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType SourceType {
+      get { return sourceType_; }
+      set {
+        sourceType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "backup_info" field.</summary>
+    public const int BackupInfoFieldNumber = 3;
+    /// <summary>
+    /// Information about the backup used to restore the database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo BackupInfo {
+      get { return sourceInfoCase_ == SourceInfoOneofCase.BackupInfo ? (global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo) sourceInfo_ : null; }
+      set {
+        sourceInfo_ = value;
+        sourceInfoCase_ = value == null ? SourceInfoOneofCase.None : SourceInfoOneofCase.BackupInfo;
+      }
+    }
+
+    /// <summary>Field number for the "progress" field.</summary>
+    public const int ProgressFieldNumber = 4;
+    private global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress progress_;
+    /// <summary>
+    /// The progress of the
+    /// [RestoreDatabase][google.spanner.admin.database.v1.DatabaseAdmin.RestoreDatabase]
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress Progress {
+      get { return progress_; }
+      set {
+        progress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cancel_time" field.</summary>
+    public const int CancelTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp cancelTime_;
+    /// <summary>
+    /// The time at which cancellation of this operation was received.
+    /// [Operations.CancelOperation][google.longrunning.Operations.CancelOperation]
+    /// starts asynchronous cancellation on a long-running operation. The server
+    /// makes a best effort to cancel the operation, but success is not guaranteed.
+    /// Clients can use
+    /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+    /// other methods to check whether the cancellation succeeded or whether the
+    /// operation completed despite cancellation. On successful cancellation,
+    /// the operation is not deleted; instead, it becomes an operation with
+    /// an [Operation.error][google.longrunning.Operation.error] value with a
+    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to `Code.CANCELLED`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CancelTime {
+      get { return cancelTime_; }
+      set {
+        cancelTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "optimize_database_operation_name" field.</summary>
+    public const int OptimizeDatabaseOperationNameFieldNumber = 6;
+    private string optimizeDatabaseOperationName_ = "";
+    /// <summary>
+    /// If exists, the name of the long-running operation that will be used to
+    /// track the post-restore optimization process to optimize the performance of
+    /// the restored database, and remove the dependency on the restore source.
+    /// The name is of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`
+    /// where the &lt;database> is the name of database being created and restored to.
+    /// The metadata type of the  long-running operation is
+    /// [OptimizeRestoredDatabaseMetadata][google.spanner.admin.database.v1.OptimizeRestoredDatabaseMetadata]. This long-running operation will be
+    /// automatically created by the system after the RestoreDatabase long-running
+    /// operation completes successfully. This operation will not be created if the
+    /// restore was not successful.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OptimizeDatabaseOperationName {
+      get { return optimizeDatabaseOperationName_; }
+      set {
+        optimizeDatabaseOperationName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object sourceInfo_;
+    /// <summary>Enum of possible cases for the "source_info" oneof.</summary>
+    public enum SourceInfoOneofCase {
+      None = 0,
+      BackupInfo = 3,
+    }
+    private SourceInfoOneofCase sourceInfoCase_ = SourceInfoOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceInfoOneofCase SourceInfoCase {
+      get { return sourceInfoCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSourceInfo() {
+      sourceInfoCase_ = SourceInfoOneofCase.None;
+      sourceInfo_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RestoreDatabaseMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RestoreDatabaseMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (SourceType != other.SourceType) return false;
+      if (!object.Equals(BackupInfo, other.BackupInfo)) return false;
+      if (!object.Equals(Progress, other.Progress)) return false;
+      if (!object.Equals(CancelTime, other.CancelTime)) return false;
+      if (OptimizeDatabaseOperationName != other.OptimizeDatabaseOperationName) return false;
+      if (SourceInfoCase != other.SourceInfoCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) hash ^= SourceType.GetHashCode();
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) hash ^= BackupInfo.GetHashCode();
+      if (progress_ != null) hash ^= Progress.GetHashCode();
+      if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
+      if (OptimizeDatabaseOperationName.Length != 0) hash ^= OptimizeDatabaseOperationName.GetHashCode();
+      hash ^= (int) sourceInfoCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SourceType);
+      }
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BackupInfo);
+      }
+      if (progress_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Progress);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CancelTime);
+      }
+      if (OptimizeDatabaseOperationName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OptimizeDatabaseOperationName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
+      }
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackupInfo);
+      }
+      if (progress_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Progress);
+      }
+      if (cancelTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CancelTime);
+      }
+      if (OptimizeDatabaseOperationName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OptimizeDatabaseOperationName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RestoreDatabaseMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.SourceType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType.TypeUnspecified) {
+        SourceType = other.SourceType;
+      }
+      if (other.progress_ != null) {
+        if (progress_ == null) {
+          Progress = new global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress();
+        }
+        Progress.MergeFrom(other.Progress);
+      }
+      if (other.cancelTime_ != null) {
+        if (cancelTime_ == null) {
+          CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CancelTime.MergeFrom(other.CancelTime);
+      }
+      if (other.OptimizeDatabaseOperationName.Length != 0) {
+        OptimizeDatabaseOperationName = other.OptimizeDatabaseOperationName;
+      }
+      switch (other.SourceInfoCase) {
+        case SourceInfoOneofCase.BackupInfo:
+          if (BackupInfo == null) {
+            BackupInfo = new global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo();
+          }
+          BackupInfo.MergeFrom(other.BackupInfo);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            SourceType = (global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo subBuilder = new global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo();
+            if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+              subBuilder.MergeFrom(BackupInfo);
+            }
+            input.ReadMessage(subBuilder);
+            BackupInfo = subBuilder;
+            break;
+          }
+          case 34: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress();
+            }
+            input.ReadMessage(Progress);
+            break;
+          }
+          case 42: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+          case 50: {
+            OptimizeDatabaseOperationName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Metadata type for the long-running operation used to track the progress
+  /// of optimizations performed on a newly restored database. This long-running
+  /// operation is automatically created by the system after the successful
+  /// completion of a database restore, and cannot be cancelled.
+  /// </summary>
+  public sealed partial class OptimizeRestoredDatabaseMetadata : pb::IMessage<OptimizeRestoredDatabaseMetadata> {
+    private static readonly pb::MessageParser<OptimizeRestoredDatabaseMetadata> _parser = new pb::MessageParser<OptimizeRestoredDatabaseMetadata>(() => new OptimizeRestoredDatabaseMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OptimizeRestoredDatabaseMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Database.V1.SpannerDatabaseAdminReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OptimizeRestoredDatabaseMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OptimizeRestoredDatabaseMetadata(OptimizeRestoredDatabaseMetadata other) : this() {
+      name_ = other.name_;
+      progress_ = other.progress_ != null ? other.progress_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OptimizeRestoredDatabaseMetadata Clone() {
+      return new OptimizeRestoredDatabaseMetadata(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the restored database being optimized.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "progress" field.</summary>
+    public const int ProgressFieldNumber = 2;
+    private global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress progress_;
+    /// <summary>
+    /// The progress of the post-restore optimizations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress Progress {
+      get { return progress_; }
+      set {
+        progress_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OptimizeRestoredDatabaseMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OptimizeRestoredDatabaseMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(Progress, other.Progress)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (progress_ != null) hash ^= Progress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (progress_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Progress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (progress_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Progress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OptimizeRestoredDatabaseMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.progress_ != null) {
+        if (progress_ == null) {
+          Progress = new global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress();
+        }
+        Progress.MergeFrom(other.Progress);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress();
+            }
+            input.ReadMessage(Progress);
             break;
           }
         }
