@@ -150,35 +150,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateJob</summary>
-        public void CreateJobResourceNames3()
-        {
-            // Snippet: CreateJob(TenantOrProjectName, Job, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            Job job = new Job();
-            // Make the request
-            Job response = jobServiceClient.CreateJob(parent, job);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateJobAsync</summary>
-        public async Task CreateJobResourceNames3Async()
-        {
-            // Snippet: CreateJobAsync(TenantOrProjectName, Job, CallSettings)
-            // Additional: CreateJobAsync(TenantOrProjectName, Job, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            Job job = new Job();
-            // Make the request
-            Job response = await jobServiceClient.CreateJobAsync(parent, job);
-            // End snippet
-        }
-
         /// <summary>Snippet for BatchCreateJobs</summary>
         public void BatchCreateJobsRequestObject()
         {
@@ -407,67 +378,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            IEnumerable<Job> jobs = new Job[] { new Job(), };
-            // Make the request
-            Operation<JobOperationResult, BatchOperationMetadata> response = await jobServiceClient.BatchCreateJobsAsync(parent, jobs);
-
-            // Poll until the returned long-running operation is complete
-            Operation<JobOperationResult, BatchOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            JobOperationResult result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<JobOperationResult, BatchOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceBatchCreateJobsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                JobOperationResult retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateJobs</summary>
-        public void BatchCreateJobsResourceNames3()
-        {
-            // Snippet: BatchCreateJobs(TenantOrProjectName, IEnumerable<Job>, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            IEnumerable<Job> jobs = new Job[] { new Job(), };
-            // Make the request
-            Operation<JobOperationResult, BatchOperationMetadata> response = jobServiceClient.BatchCreateJobs(parent, jobs);
-
-            // Poll until the returned long-running operation is complete
-            Operation<JobOperationResult, BatchOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            JobOperationResult result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<JobOperationResult, BatchOperationMetadata> retrievedResponse = jobServiceClient.PollOnceBatchCreateJobs(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                JobOperationResult retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateJobsAsync</summary>
-        public async Task BatchCreateJobsResourceNames3Async()
-        {
-            // Snippet: BatchCreateJobsAsync(TenantOrProjectName, IEnumerable<Job>, CallSettings)
-            // Additional: BatchCreateJobsAsync(TenantOrProjectName, IEnumerable<Job>, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
             IEnumerable<Job> jobs = new Job[] { new Job(), };
             // Make the request
             Operation<JobOperationResult, BatchOperationMetadata> response = await jobServiceClient.BatchCreateJobsAsync(parent, jobs);
@@ -891,67 +801,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for BatchUpdateJobs</summary>
-        public void BatchUpdateJobsResourceNames3()
-        {
-            // Snippet: BatchUpdateJobs(TenantOrProjectName, IEnumerable<Job>, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            IEnumerable<Job> jobs = new Job[] { new Job(), };
-            // Make the request
-            Operation<JobOperationResult, BatchOperationMetadata> response = jobServiceClient.BatchUpdateJobs(parent, jobs);
-
-            // Poll until the returned long-running operation is complete
-            Operation<JobOperationResult, BatchOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            JobOperationResult result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<JobOperationResult, BatchOperationMetadata> retrievedResponse = jobServiceClient.PollOnceBatchUpdateJobs(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                JobOperationResult retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchUpdateJobsAsync</summary>
-        public async Task BatchUpdateJobsResourceNames3Async()
-        {
-            // Snippet: BatchUpdateJobsAsync(TenantOrProjectName, IEnumerable<Job>, CallSettings)
-            // Additional: BatchUpdateJobsAsync(TenantOrProjectName, IEnumerable<Job>, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            IEnumerable<Job> jobs = new Job[] { new Job(), };
-            // Make the request
-            Operation<JobOperationResult, BatchOperationMetadata> response = await jobServiceClient.BatchUpdateJobsAsync(parent, jobs);
-
-            // Poll until the returned long-running operation is complete
-            Operation<JobOperationResult, BatchOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            JobOperationResult result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<JobOperationResult, BatchOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceBatchUpdateJobsAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                JobOperationResult retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
         /// <summary>Snippet for DeleteJob</summary>
         public void DeleteJobRequestObject()
         {
@@ -1155,35 +1004,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            string filter = "";
-            // Make the request
-            await jobServiceClient.BatchDeleteJobsAsync(parent, filter);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteJobs</summary>
-        public void BatchDeleteJobsResourceNames3()
-        {
-            // Snippet: BatchDeleteJobs(TenantOrProjectName, string, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            string filter = "";
-            // Make the request
-            jobServiceClient.BatchDeleteJobs(parent, filter);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteJobsAsync</summary>
-        public async Task BatchDeleteJobsResourceNames3Async()
-        {
-            // Snippet: BatchDeleteJobsAsync(TenantOrProjectName, string, CallSettings)
-            // Additional: BatchDeleteJobsAsync(TenantOrProjectName, string, CancellationToken)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
             string filter = "";
             // Make the request
             await jobServiceClient.BatchDeleteJobsAsync(parent, filter);
@@ -1528,98 +1348,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
             TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            string filter = "";
-            // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = jobServiceClient.ListJobsAsync(parent, filter);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Job item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListJobs</summary>
-        public void ListJobsResourceNames3()
-        {
-            // Snippet: ListJobs(TenantOrProjectName, string, string, int?, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = JobServiceClient.Create();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            string filter = "";
-            // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = jobServiceClient.ListJobs(parent, filter);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Job item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListJobs</summary>
-        public async Task ListJobsResourceNames3Async()
-        {
-            // Snippet: ListJobsAsync(TenantOrProjectName, string, string, int?, CallSettings)
-            // Create client
-            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
             string filter = "";
             // Make the request
             PagedAsyncEnumerable<ListJobsResponse, Job> response = jobServiceClient.ListJobsAsync(parent, filter);

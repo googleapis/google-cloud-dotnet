@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,7 +34,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -58,7 +59,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -85,7 +86,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -110,7 +111,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -132,12 +133,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateClientEventResourceNames()
+        public void CreateClientEventResourceNames1()
         {
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -151,18 +152,18 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
-            ClientEvent response = client.CreateClientEvent(request.ParentAsTenantOrProjectName, request.ClientEvent);
+            ClientEvent response = client.CreateClientEvent(request.ParentAsProjectName, request.ClientEvent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateClientEventResourceNamesAsync()
+        public async stt::Task CreateClientEventResourceNames1Async()
         {
             moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -176,9 +177,61 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
-            ClientEvent responseCallSettings = await client.CreateClientEventAsync(request.ParentAsTenantOrProjectName, request.ClientEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            ClientEvent responseCallSettings = await client.CreateClientEventAsync(request.ParentAsProjectName, request.ClientEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request.ParentAsTenantOrProjectName, request.ClientEvent, st::CancellationToken.None);
+            ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request.ParentAsProjectName, request.ClientEvent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateClientEventResourceNames2()
+        {
+            moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
+            CreateClientEventRequest request = new CreateClientEventRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ClientEvent = new ClientEvent(),
+            };
+            ClientEvent expectedResponse = new ClientEvent
+            {
+                RequestId = "request_id362c8df6",
+                EventId = "event_idaccf3744",
+                CreateTime = new wkt::Timestamp(),
+                JobEvent = new JobEvent(),
+                ProfileEvent = new ProfileEvent(),
+                EventNotes = "event_notes102ba330",
+            };
+            mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            ClientEvent response = client.CreateClientEvent(request.ParentAsTenantName, request.ClientEvent);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateClientEventResourceNames2Async()
+        {
+            moq::Mock<EventService.EventServiceClient> mockGrpcClient = new moq::Mock<EventService.EventServiceClient>(moq::MockBehavior.Strict);
+            CreateClientEventRequest request = new CreateClientEventRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ClientEvent = new ClientEvent(),
+            };
+            ClientEvent expectedResponse = new ClientEvent
+            {
+                RequestId = "request_id362c8df6",
+                EventId = "event_idaccf3744",
+                CreateTime = new wkt::Timestamp(),
+                JobEvent = new JobEvent(),
+                ProfileEvent = new ProfileEvent(),
+                EventNotes = "event_notes102ba330",
+            };
+            mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
+            ClientEvent responseCallSettings = await client.CreateClientEventAsync(request.ParentAsTenantName, request.ClientEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ClientEvent responseCancellationToken = await client.CreateClientEventAsync(request.ParentAsTenantName, request.ClientEvent, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

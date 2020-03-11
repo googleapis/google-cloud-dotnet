@@ -39,15 +39,6 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -65,10 +56,6 @@ namespace Google.Cloud.Talent.V4Beta1
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
-                }
-                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
-                {
-                    return tenantOrProject;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -119,15 +106,6 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -145,10 +123,6 @@ namespace Google.Cloud.Talent.V4Beta1
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
-                }
-                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
-                {
-                    return tenantOrProject;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -175,15 +149,6 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -201,10 +166,6 @@ namespace Google.Cloud.Talent.V4Beta1
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
-                }
-                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
-                {
-                    return tenantOrProject;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -231,15 +192,6 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -257,10 +209,6 @@ namespace Google.Cloud.Talent.V4Beta1
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
-                }
-                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
-                {
-                    return tenantOrProject;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -287,15 +235,6 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -313,10 +252,6 @@ namespace Google.Cloud.Talent.V4Beta1
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
-                }
-                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
-                {
-                    return tenantOrProject;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -343,15 +278,6 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -369,10 +295,6 @@ namespace Google.Cloud.Talent.V4Beta1
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
-                }
-                if (TenantOrProjectName.TryParse(Parent, out TenantOrProjectName tenantOrProject))
-                {
-                    return tenantOrProject;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }

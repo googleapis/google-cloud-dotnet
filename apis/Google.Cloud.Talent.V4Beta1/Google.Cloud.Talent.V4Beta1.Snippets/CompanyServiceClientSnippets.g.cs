@@ -148,35 +148,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for CreateCompany</summary>
-        public void CreateCompanyResourceNames3()
-        {
-            // Snippet: CreateCompany(TenantOrProjectName, Company, CallSettings)
-            // Create client
-            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            Company company = new Company();
-            // Make the request
-            Company response = companyServiceClient.CreateCompany(parent, company);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateCompanyAsync</summary>
-        public async Task CreateCompanyResourceNames3Async()
-        {
-            // Snippet: CreateCompanyAsync(TenantOrProjectName, Company, CallSettings)
-            // Additional: CreateCompanyAsync(TenantOrProjectName, Company, CancellationToken)
-            // Create client
-            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
-            Company company = new Company();
-            // Make the request
-            Company response = await companyServiceClient.CreateCompanyAsync(parent, company);
-            // End snippet
-        }
-
         /// <summary>Snippet for GetCompany</summary>
         public void GetCompanyRequestObject()
         {
@@ -422,7 +393,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListCompaniesRequest request = new ListCompaniesRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 RequireOpenJobs = false,
             };
             // Make the request
@@ -471,7 +442,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListCompaniesRequest request = new ListCompaniesRequest
             {
-                ParentAsTenantOrProjectName = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 RequireOpenJobs = false,
             };
             // Make the request
@@ -518,7 +489,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/tenants/[TENANT]";
+            string parent = "projects/[PROJECT]";
             // Make the request
             PagedEnumerable<ListCompaniesResponse, Company> response = companyServiceClient.ListCompanies(parent);
 
@@ -563,7 +534,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/tenants/[TENANT]";
+            string parent = "projects/[PROJECT]";
             // Make the request
             PagedAsyncEnumerable<ListCompaniesResponse, Company> response = companyServiceClient.ListCompaniesAsync(parent);
 
@@ -602,13 +573,13 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListCompanies</summary>
-        public void ListCompaniesResourceNames()
+        public void ListCompaniesResourceNames1()
         {
-            // Snippet: ListCompanies(TenantOrProjectName, string, int?, CallSettings)
+            // Snippet: ListCompanies(ProjectName, string, int?, CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
             PagedEnumerable<ListCompaniesResponse, Company> response = companyServiceClient.ListCompanies(parent);
 
@@ -647,13 +618,103 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         }
 
         /// <summary>Snippet for ListCompanies</summary>
-        public async Task ListCompaniesResourceNamesAsync()
+        public async Task ListCompaniesResourceNames1Async()
         {
-            // Snippet: ListCompaniesAsync(TenantOrProjectName, string, int?, CallSettings)
+            // Snippet: ListCompaniesAsync(ProjectName, string, int?, CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TenantOrProjectName parent = TenantOrProjectName.FromProjectTenant("[PROJECT]", "[TENANT]");
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListCompaniesResponse, Company> response = companyServiceClient.ListCompaniesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Company item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCompaniesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Company item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Company> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Company item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCompanies</summary>
+        public void ListCompaniesResourceNames2()
+        {
+            // Snippet: ListCompanies(TenantName, string, int?, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
+            // Make the request
+            PagedEnumerable<ListCompaniesResponse, Company> response = companyServiceClient.ListCompanies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Company item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCompaniesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Company item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Company> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Company item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCompanies</summary>
+        public async Task ListCompaniesResourceNames2Async()
+        {
+            // Snippet: ListCompaniesAsync(TenantName, string, int?, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TenantName parent = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]");
             // Make the request
             PagedAsyncEnumerable<ListCompaniesResponse, Company> response = companyServiceClient.ListCompaniesAsync(parent);
 

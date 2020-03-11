@@ -14,16 +14,50 @@
 
 // Generated code. DO NOT EDIT!
 
+using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
+
 namespace Google.Cloud.Talent.V4Beta1
 {
     public partial class CompleteQueryRequest
     {
         /// <summary>
-        /// <see cref="TenantOrProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public TenantOrProjectName ParentAsTenantOrProjectName
+        public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantOrProjectName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (TenantName.TryParse(Parent, out TenantName tenant))
+                {
+                    return tenant;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
 
