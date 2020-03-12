@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-03-12
+
+- [Commit 1d8b26a](https://github.com/googleapis/google-cloud-dotnet/commit/1d8b26a): Generator change to allow interception of builder methods
+- [Commit 9982d04](https://github.com/googleapis/google-cloud-dotnet/commit/9982d04): Feature: Logo recognition
+- [Commit ba6f275](https://github.com/googleapis/google-cloud-dotnet/commit/ba6f275): Documentation: Links in comments are now full URLs
+
 # Version 2.0.0-beta01, released 2020-02-19
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
