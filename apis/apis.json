@@ -1258,7 +1258,7 @@
     "protoPath": "google/cloud/videointelligence/v1",
     "productName": "Google Cloud Video Intelligence",
     "productUrl": "https://cloud.google.com/video-intelligence",
-    "version": "2.0.0-beta01",
+    "version": "2.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [
