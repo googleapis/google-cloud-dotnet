@@ -668,7 +668,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 $"INSERT INTO {table} (player, gameStarted, score) VALUES (@player, @gameStarted, @score)",
                 parameters)
                 .ThrowOnAnyError();
-            Assert.Null(results.SafeTotalRows);
+            Assert.Null(results.TotalRows);
             Assert.Equal(1, results.NumDmlAffectedRows);
 
             // This used to query the whole table; now it returns empty results (as we're using GetQueryResults rather than ListRows).
@@ -683,8 +683,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             string sql = "DECLARE accumulator INT64 DEFAULT 5; SELECT accumulator;";
             var results = client.ExecuteQuery(sql, null).ThrowOnAnyError();
 
-            Assert.True(results.SafeTotalRows.HasValue);
-            Assert.Equal<ulong>(1, results.SafeTotalRows.Value);
+            Assert.True(results.TotalRows.HasValue);
+            Assert.Equal<ulong>(1, results.TotalRows.Value);
 
             var row = results.Single();
             Assert.Equal((long)5, row[0]);
