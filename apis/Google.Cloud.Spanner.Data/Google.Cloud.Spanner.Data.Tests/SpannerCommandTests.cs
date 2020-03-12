@@ -177,12 +177,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .Setup(client => client.ExecuteStreamingSql(
                     It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == optimizerVersion),
                     It.IsAny<CallSettings>()))
-                .Returns<ExecuteSqlRequest, CallSettings>((request, _) =>
-                {
-                    // Returning null since we can't return a SpannerClient.ExecuteStreamingSqlStream()
-                    // since it's an abstract class.
-                    return null;
-                });
+                .Returns<ExecuteSqlRequest, CallSettings>((request, _) => null);
             return spannerClientMock;
         }
 

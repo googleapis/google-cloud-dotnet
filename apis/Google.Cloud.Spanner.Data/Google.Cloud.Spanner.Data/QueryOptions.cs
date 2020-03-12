@@ -86,14 +86,7 @@ namespace Google.Cloud.Spanner.Data
         public V1.ExecuteSqlRequest.Types.QueryOptions ToProto() => Proto.Clone();
 
         /// <inheritdoc />
-        public bool Equals(QueryOptions other)
-        {
-            if (other is null)
-            {
-                return false;
-            }
-            return OptimizerVersion == other.OptimizerVersion;
-        }
+        public bool Equals(QueryOptions other) => other is object && OptimizerVersion == other.OptimizerVersion;
 
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as QueryOptions);
