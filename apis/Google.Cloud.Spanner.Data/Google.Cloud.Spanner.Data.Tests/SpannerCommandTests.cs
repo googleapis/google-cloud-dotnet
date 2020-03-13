@@ -95,11 +95,11 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommandHasConnectionQueryOptions()
         {
-            const string optimizerVersion = "1";
-            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(optimizerVersion);
+            const string connOptimizerVersion = "1";
+            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(connOptimizerVersion);
 
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            var queryOptions = new QueryOptions().WithOptimizerVersion(optimizerVersion);
+            var queryOptions = new QueryOptions().WithOptimizerVersion(connOptimizerVersion);
             connection.QueryOptions = queryOptions;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
@@ -112,60 +112,51 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommandHasOptimizerVersionFromEnvironment()
         {
-            // Save existing value of environment variable.
-            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
-            string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
             const string envOptimizerVersion = "2";
-            Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
-
-            // Optimizer version set through environment variable has higher
-            // precedence than version set through connection.
-            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(envOptimizerVersion);
-
-            const string optimizerVersion = "1";
-            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            var queryOptions = new QueryOptions().WithOptimizerVersion(optimizerVersion);
-            connection.QueryOptions = queryOptions;
-
-            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            using (var reader = command.ExecuteReader())
+            RunActionWithEnvOptimizerVersion(() =>
             {
-                // Do nothing.
-            }
+                // Optimizer version set through environment variable has higher
+                // precedence than version set through connection.
+                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(envOptimizerVersion);
 
-            // Set the environment back.
-            Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
+                const string connOptimizerVersion = "1";
+                SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+                var queryOptions = new QueryOptions().WithOptimizerVersion(connOptimizerVersion);
+                connection.QueryOptions = queryOptions;
+
+                var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+                using (var reader = command.ExecuteReader())
+                {
+                    // Do nothing.
+                }
+            }, envOptimizerVersion);
+
         }
 
         [Fact]
         public void CommandHasOptimizerVersionSetOnCommand()
         {
-            // Save existing value of environment variable.
-            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
-            string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
             const string envOptimizerVersion = "2";
-            Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
-
-            var cmdOptimizerVersion = "3";
-            // Optimizer version set at a command level has higher precedence
-            // than version set through the connection or the environment
-            // variable.
-            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(cmdOptimizerVersion);
-
-            const string optimizerVersion = "1";
-            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            var queryOptions = new QueryOptions().WithOptimizerVersion(optimizerVersion);
-            connection.QueryOptions = queryOptions;
-
-            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            command.QueryOptions = new QueryOptions().WithOptimizerVersion(cmdOptimizerVersion);
-            using (var reader = command.ExecuteReader())
+            RunActionWithEnvOptimizerVersion(() =>
             {
-                // Do nothing.
-            }
+                var cmdOptimizerVersion = "3";
+                // Optimizer version set at a command level has higher precedence
+                // than version set through the connection or the environment
+                // variable.
+                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(cmdOptimizerVersion);
 
-            // Set the environment back.
-            Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
+                const string connOptimizerVersion = "1";
+                SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+                var queryOptions = new QueryOptions().WithOptimizerVersion(connOptimizerVersion);
+                connection.QueryOptions = queryOptions;
+
+                var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+                command.QueryOptions = new QueryOptions().WithOptimizerVersion(cmdOptimizerVersion);
+                using (var reader = command.ExecuteReader())
+                {
+                    // Do nothing.
+                }
+            }, envOptimizerVersion);
         }
 
         private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion)
@@ -200,6 +191,24 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
 
             return new SpannerConnection(builder);
+        }
+
+        private void RunActionWithEnvOptimizerVersion(Action action, string envOptimizerVersion)
+        {
+            // Save existing value of environment variable.
+            const string optimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+            string savedOptimizerVersion = Environment.GetEnvironmentVariable(optimizerVersionVariable);
+            Environment.SetEnvironmentVariable(optimizerVersionVariable, envOptimizerVersion);
+
+            try
+            {
+                action();
+            }
+            finally
+            {
+                // Set the environment back.
+                Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
+            }
         }
     }
 }
