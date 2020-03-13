@@ -14,7 +14,6 @@
 
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
-using System;
 using Xunit;
 using static Google.Apis.Bigquery.v2.TablesResource;
 
@@ -22,43 +21,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
 {
     public class CreateTableOptionsTest
     {
+        // The test doesn't do anything yet... but neither does the code.
         [Fact]
         public void PropertiesSetOnRequest()
         {
-            var options = new CreateTableOptions
-            {
-                Expiration = new DateTimeOffset(1970, 1, 1, 0, 0, 5, 0, TimeSpan.Zero),
-                Description = "A description",
-                FriendlyName = "A friendly name",
-                TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromDays(10)),
-                ExternalDataConfiguration = new ExternalDataConfiguration(),
-                EncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                Clustering = new Clustering { Fields = new[] { "x", "y", "z" } }
-            };
-            Table table = new Table();
-            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
-            options.ModifyRequest(table, request);
-            Assert.Equal(5 * 1000, table.ExpirationTime);
-            Assert.Equal("A description", table.Description);
-            Assert.Equal("A friendly name", table.FriendlyName);
-            Assert.Equal("DAY", table.TimePartitioning.Type);
-            Assert.Equal(10 * 24 * 60 * 60 * 1000L, table.TimePartitioning.ExpirationMs);
-            Assert.Same(options.ExternalDataConfiguration, table.ExternalDataConfiguration);
-            Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", table.EncryptionConfiguration.KmsKeyName);
-            Assert.Same(options.Clustering, table.Clustering);
-        }
-
-        [Fact]
-        public void ExternalConfigurationAndViewInvalid()
-        {
-            var options = new CreateTableOptions
-            {
-                ExternalDataConfiguration = new ExternalDataConfiguration(),
-                View = new ViewDefinition()
-            };
-            Table table = new Table();
-            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
-            Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
+            var options = new CreateTableOptions();
+            InsertRequest request = new InsertRequest(new BigqueryService(), new Table(), "project", "dataset");
+            options.ModifyRequest(request);
         }
     }
 }

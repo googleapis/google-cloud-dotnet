@@ -397,7 +397,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var viewDefinition = new ViewDefinition { Query = $"SELECT player, MAX(score) AS score FROM {table} WHERE player IS NOT NULL GROUP BY player ORDER BY 2 DESC", UseLegacySql = false };
-            var view = client.CreateTable(_fixture.DatasetId, "highscore_view", schema: null, options: new CreateTableOptions { View = viewDefinition });
+            var view = client.CreateTable(_fixture.DatasetId, "highscore_view", new Table { View = viewDefinition });
 
             // This is how a client can check that a BigQueryTable is a view.
             Assert.NotNull(view.Resource.View);
@@ -559,8 +559,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 MaxBadRecords = 1,
                 SourceUris = new[] { $"gs://{bucketName}/{objectName}" },
             };
-            var table = client.CreateTable(_fixture.DatasetId, _fixture.CreateTableId(),
-                schema, new CreateTableOptions { ExternalDataConfiguration = configuration });
+            var table = client.CreateTable(
+                _fixture.DatasetId, _fixture.CreateTableId(), new Table { ExternalDataConfiguration = configuration, Schema = schema });
 
             // Run a query
             var results = client.ExecuteQuery($"SELECT * FROM {table:legacy}", null, new QueryOptions { UseLegacySql = true });

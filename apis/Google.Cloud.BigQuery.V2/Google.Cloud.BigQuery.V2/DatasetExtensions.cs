@@ -26,7 +26,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Gets the default expiration period for tables created in this dataset.
         /// Tables will (by default) be automatically deleted this long after they are created,
-        /// unless otherwise specified, such as by <see cref="CreateTableOptions.Expiration"/>.
+        /// unless otherwise specified, such as by <see cref="Table.ExpirationTime"/>.
         /// </summary>
         /// <param name="dataset">The dataset for which to set the expiration for.
         /// Must not be null.</param>
@@ -37,7 +37,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Sets the default expiration period for tables created in this dataset.
         /// Tables will (by default) be automatically deleted this long after they are created,
-        /// unless otherwise specified, such as by <see cref="CreateTableOptions.Expiration"/>.
+        /// unless otherwise specified, such as by <see cref="Table.ExpirationTime"/>.
         /// </summary>
         /// <param name="dataset">The dataset for which to set the expiration for.
         /// Must not be null.</param>
@@ -53,7 +53,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Gets the default partition expiration period for all partitioned tables created in the dataset.
         /// Partitioned tables will (by default) be automatically deleted this long after they are created,
-        /// unless otherwise specified, such as by <see cref="CreateTableOptions.Expiration"/>.
+        /// unless otherwise specified, such as by <see cref="Table.ExpirationTime"/>.
         /// For partitioned tables, this values has priority over <see cref="Dataset.DefaultTableExpirationMs"/>.
         /// </summary>
         /// <param name="dataset">The dataset for which to set the expiration for.
@@ -65,7 +65,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Gets the default partition expiration period for all partitioned tables created in the dataset.
         /// Partitioned tables will (by default) be automatically deleted this long after they are created,
-        /// unless otherwise specified, such as by <see cref="CreateTableOptions.Expiration"/>.
+        /// unless otherwise specified, such as by <see cref="Table.ExpirationTime"/>.
         /// For partitioned tables, this values has priority over <see cref="Dataset.DefaultTableExpirationMs"/>.
         /// </summary>
         /// <param name="dataset">The dataset for which to set the expiration for.
@@ -85,7 +85,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetReference1">The first dataset reference to compare. Must not be null.</param>
         /// <param name="datasetReference2">The second dataset reference to compare.</param>
-        /// <returns>true isfthe specified dataset references refer to the same dataset, false otherwise.</returns>
+        /// <returns>true if the specified dataset references refer to the same dataset, false otherwise.</returns>
         internal static bool ReferencesSameAs(this DatasetReference datasetReference1, DatasetReference datasetReference2)
         {
             GaxPreconditions.CheckNotNull(datasetReference1, nameof(datasetReference1));

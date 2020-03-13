@@ -102,52 +102,69 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override BigQueryTable CreateTable(TableReference tableReference, TableSchema schema, CreateTableOptions options = null)
+        public override BigQueryTable CreateTable(TableReference tableReference, TableSchema schema, CreateTableOptions options = null) =>
+            CreateTable(tableReference, new Table { Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema)) }, options);
+
+        /// <inheritdoc />
+        public override Task<BigQueryTable> CreateTableAsync(
+            TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default) =>
+            CreateTableAsync(tableReference, new Table { Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema)) }, options, cancellationToken);
+
+        /// <inheritdoc />
+        public override BigQueryTable CreateTable(TableReference tableReference, Table resource, CreateTableOptions options = null)
         {
-            var request = CreateInsertTableRequest(tableReference, schema, options);
+            var request = CreateInsertTableRequest(tableReference, resource, options);
             var result = request.Execute();
             return new BigQueryTable(this, result);
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryTable> CreateTableAsync(TableReference tableReference, TableSchema schema,
-            CreateTableOptions options = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryTable> CreateTableAsync(
+            TableReference tableReference, Table resource, CreateTableOptions options = null, CancellationToken cancellationToken = default)
         {
-            var request = CreateInsertTableRequest(tableReference, schema, options);
+            var request = CreateInsertTableRequest(tableReference, resource, options);
             var result = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryTable(this, result);
         }
 
         /// <inheritdoc />
-        public override BigQueryTable GetOrCreateTable(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null)
+        public override BigQueryTable GetOrCreateTable(
+            TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
+            GetOrCreateTable(tableReference, new Table { Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema)) }, getOptions, createOptions);
+
+        /// <inheritdoc />
+        public override Task<BigQueryTable> GetOrCreateTableAsync(
+            TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
+            GetOrCreateTableAsync(tableReference, new Table { Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema)) }, getOptions, createOptions, cancellationToken);
+
+        /// <inheritdoc />
+        public override BigQueryTable GetOrCreateTable(TableReference tableReference, Table resource, GetTableOptions getOptions = null, CreateTableOptions createOptions = null)
         {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            CheckResourceForCreation(tableReference, resource);
 
             try
             {
-                // TODO: Validate the schema matches?
                 return GetTable(tableReference, getOptions);
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return CreateTable(tableReference, schema, createOptions);
+                return CreateTable(tableReference, resource, createOptions);
             }
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryTable> GetOrCreateTableAsync(TableReference tableReference, TableSchema schema,
-            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryTable> GetOrCreateTableAsync(
+            TableReference tableReference, Table resource, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default)
         {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            CheckResourceForCreation(tableReference, resource);
 
             try
             {
-                // TODO: Validate the schema matches?
                 return await GetTableAsync(tableReference, getOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return await CreateTableAsync(tableReference, schema, createOptions, cancellationToken).ConfigureAwait(false);
+                return await CreateTableAsync(tableReference, resource, createOptions, cancellationToken).ConfigureAwait(false);
             }
         }
 
@@ -213,14 +230,29 @@ namespace Google.Cloud.BigQuery.V2
             return request;
         }
 
-        private InsertRequest CreateInsertTableRequest(TableReference tableReference, TableSchema schema, CreateTableOptions options)
+        private InsertRequest CreateInsertTableRequest(TableReference tableReference, Table resource, CreateTableOptions options)
+        {
+            CheckResourceForCreation(tableReference, resource);
+
+            resource.TableReference ??= tableReference;
+
+            var request = Service.Tables.Insert(resource, tableReference.ProjectId, tableReference.DatasetId);
+            options?.ModifyRequest(request);
+            return request;
+        }
+
+        private void CheckResourceForCreation(TableReference tableReference, Table resource)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-
-            var table = new Table { TableReference = tableReference, Schema = schema };
-            var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
-            options?.ModifyRequest(table, request);
-            return request;
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            GaxPreconditions.CheckArgument(
+                resource.TableReference == null || tableReference.ReferencesSameAs(resource.TableReference),
+                nameof(resource.TableReference),
+                $"If {nameof(resource.TableReference)} is specified, it must be the same as {nameof(tableReference)}");
+            GaxPreconditions.CheckArgument(
+                !(resource.ExternalDataConfiguration is object && resource.View is object),
+                nameof(resource.ExternalDataConfiguration),
+                $"Cannot specify both {nameof(resource.ExternalDataConfiguration)} and {nameof(resource.View)}");
         }
 
         private DeleteRequest CreateDeleteTableRequest(TableReference tableReference, DeleteTableOptions options)
