@@ -261,7 +261,8 @@ namespace Google.Cloud.Spanner.Data
         {
             DesignTimeVisible = DesignTimeVisible,
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
-            CommandTimeout = CommandTimeout
+            CommandTimeout = CommandTimeout,
+            QueryOptions = QueryOptions
         };
 
         /// <inheritdoc />

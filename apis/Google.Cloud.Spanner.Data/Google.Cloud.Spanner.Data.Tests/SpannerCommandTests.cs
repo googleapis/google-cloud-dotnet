@@ -93,6 +93,18 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CloneWithQueryOptions()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("1");
+            var command2 = (SpannerCommand)command.Clone();
+            Assert.Same(command.SpannerConnection, command2.SpannerConnection);
+            Assert.Equal(command.CommandText, command2.CommandText);
+            Assert.Equal(command.QueryOptions, command2.QueryOptions);
+        }
+
+        [Fact]
         public void CommandHasConnectionQueryOptions()
         {
             const string connOptimizerVersion = "1";
