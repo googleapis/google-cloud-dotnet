@@ -51,7 +51,6 @@ namespace Google.Cloud.Spanner.Data
            return new QueryOptions(protoCopy);
         }
 
-
         /// <summary>
         /// The proto representation of the query options. Must not be mutated
         /// or exposed publicly.
