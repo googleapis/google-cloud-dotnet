@@ -31,14 +31,14 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void NoOptionsSet()
         {
-            var queryOptions = new QueryOptions();
+            var queryOptions = QueryOptions.Empty;
             Assert.Equal("", queryOptions.OptimizerVersion);
         }
 
         [Fact]
         public void SetAndGetOptimizerVersion()
         {
-            var queryOptions = new QueryOptions().WithOptimizerVersion("latest");
+            var queryOptions = QueryOptions.Empty.WithOptimizerVersion("latest");
             Assert.Equal("latest", queryOptions.OptimizerVersion);
         }
     }

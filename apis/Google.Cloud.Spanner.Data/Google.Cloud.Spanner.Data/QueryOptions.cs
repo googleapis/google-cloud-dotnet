@@ -63,9 +63,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates query options without specifying any options.
         /// </summary>
-        public QueryOptions() : this(new V1.ExecuteSqlRequest.Types.QueryOptions())
-        {
-        }
+        public static QueryOptions Empty { get; } = new QueryOptions(new V1.ExecuteSqlRequest.Types.QueryOptions());
 
         /// <summary>
         /// Set query options from the given proto.

@@ -99,7 +99,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(connOptimizerVersion);
 
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            var queryOptions = new QueryOptions().WithOptimizerVersion(connOptimizerVersion);
+            var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
             connection.QueryOptions = queryOptions;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
@@ -121,7 +121,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-                var queryOptions = new QueryOptions().WithOptimizerVersion(connOptimizerVersion);
+                var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
                 connection.QueryOptions = queryOptions;
 
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
@@ -147,11 +147,11 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-                var queryOptions = new QueryOptions().WithOptimizerVersion(connOptimizerVersion);
+                var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
                 connection.QueryOptions = queryOptions;
 
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-                command.QueryOptions = new QueryOptions().WithOptimizerVersion(cmdOptimizerVersion);
+                command.QueryOptions = QueryOptions.Empty.WithOptimizerVersion(cmdOptimizerVersion);
                 using (var reader = command.ExecuteReader())
                 {
                     // Do nothing.

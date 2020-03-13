@@ -39,7 +39,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = _fixture.GetConnection())
             {
-                connection.QueryOptions = new QueryOptions().WithOptimizerVersion("1");
+                connection.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("1");
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
-                cmd.QueryOptions = new QueryOptions().WithOptimizerVersion("1");
+                cmd.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("1");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.True(await reader.ReadAsync());
@@ -79,7 +79,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = _fixture.GetConnection())
             {
-                connection.QueryOptions = new QueryOptions().WithOptimizerVersion("invalid");
+                connection.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("invalid");
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
