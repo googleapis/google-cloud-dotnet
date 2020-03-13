@@ -60,7 +60,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         public string RegionLabel { get; }
         public TargetType TargetType { get; }
         public string ReturnType { get; }
-        public List<Parameter> AdditionalParameters { get; }
+        public List<List<Parameter>> AdditionalParametersGroups { get; }
         public XElement Comments { get; }
         public Parameter OptionsParameter { get; }
 
@@ -71,7 +71,12 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             RegionLabel = (string)element.Attribute("RegionLabel") ?? Name;
             string targetType = element.Attribute("TargetType").Value;
             ReturnType = element.Attribute("ReturnType").Value;
-            AdditionalParameters = element.Elements("AdditionalParameters").Elements("Parameter").Select(x => new Parameter(x)).ToList();
+            AdditionalParametersGroups = element.Elements("AdditionalParameters").Select(g => g.Elements("Parameter").Select(p => new Parameter(p)).ToList()).ToList();
+            if (AdditionalParametersGroups.Count == 0)
+            {
+                // Add an empty parameter list so that we don't have to check later on.
+                AdditionalParametersGroups.Add(new List<Parameter>());
+            }
             var options = element.Element("Options");
             OptionsParameter = new Parameter(
                 (string)options?.Attribute("Type") ?? $"{Name}Options",
@@ -94,17 +99,20 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         {
             List<string> code = new List<string>();
             var targetParameters = TargetParametersByType[TargetType];
-            GenerateDelegatingMethod(code, targetParameters.Skip(1), false);
-            code.Add("");
-            GenerateDelegatingMethod(code, targetParameters, false);
-            code.Add("");
-            GenerateImplementationMethod(code, false);
-            code.Add("");
-            GenerateDelegatingMethod(code, targetParameters.Skip(1), true);
-            code.Add("");
-            GenerateDelegatingMethod(code, targetParameters, true);
-            code.Add("");
-            GenerateImplementationMethod(code, true);
+            foreach (var aditionalParametersGroup in AdditionalParametersGroups)
+            {
+                GenerateDelegatingMethod(code, targetParameters.Skip(1), aditionalParametersGroup, false);
+                code.Add("");
+                GenerateDelegatingMethod(code, targetParameters, aditionalParametersGroup, false);
+                code.Add("");
+                GenerateImplementationMethod(code, aditionalParametersGroup, false);
+                code.Add("");
+                GenerateDelegatingMethod(code, targetParameters.Skip(1), aditionalParametersGroup, true);
+                code.Add("");
+                GenerateDelegatingMethod(code, targetParameters, aditionalParametersGroup, true);
+                code.Add("");
+                GenerateImplementationMethod(code, aditionalParametersGroup, true);
+            }
 
             // Indent everything...
             for (int i = 0; i < code.Count; i++)
@@ -114,16 +122,16 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             return code;
         }
 
-        private void GenerateDelegatingMethod(List<string> code, IEnumerable<Parameter> targetParameters, bool async)
+        private void GenerateDelegatingMethod(List<string> code, IEnumerable<Parameter> targetParameters, IEnumerable<Parameter> additionalParameters, bool async)
         {
             var parameters = new List<Parameter>
             {
                 targetParameters,
-                AdditionalParameters,
+                additionalParameters,
                 OptionsParameter,
                 { CancellationTokenParameter, async }
             };
-            GenerateComments(code, parameters, async, true);
+            GenerateComments(code, parameters, additionalParameters, async, true);
             string signature = GenerateSignature(parameters, async);
             code.Add($"{signature} =>");
 
@@ -132,19 +140,19 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             code.Add($"    {GetMethodName(async)}({getReferenceCall}, {string.Join(", ", remainingArguments)});");
         }
 
-        private void GenerateImplementationMethod(List<string> code, bool async)
+        private void GenerateImplementationMethod(List<string> code, IEnumerable<Parameter> additionalParameters, bool async)
         {
-            var parameters = GetImplementationMethodParameters(async);
-            GenerateComments(code, parameters, async, false);
+            var parameters = GetImplementationMethodParameters(additionalParameters, async);
+            GenerateComments(code, parameters, additionalParameters, async, false);
             string signature = GenerateSignature(parameters, async);
             code.Add($"{signature} =>");
             code.Add("    throw new NotImplementedException();");
         }
 
-        private List<Parameter> GetImplementationMethodParameters(bool async) => new List<Parameter>
+        private List<Parameter> GetImplementationMethodParameters(IEnumerable<Parameter> additionalParameters, bool async) => new List<Parameter>
             {
                 ReferenceParametersByType[TargetType],
-                AdditionalParameters,
+                additionalParameters,
                 OptionsParameter,
                 { CancellationTokenParameter, async }
             };
@@ -159,7 +167,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             return $"public virtual {methodReturnType} {GetMethodName(async)}({formattedParameters})";
         }
 
-        private void GenerateComments(List<string> code, IEnumerable<Parameter> parameters, bool async, bool delegating)
+        private void GenerateComments(List<string> code, IEnumerable<Parameter> parameters, IEnumerable<Parameter> additionalParameters, bool async, bool delegating)
         {
             // Order:
             // - summary (generate delegation comment)
@@ -168,7 +176,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             // - anything else (e.g. exceptions)
             // - returns
 
-            AddComments(code, GenerateSummaryComment(parameters, async, delegating));
+            AddComments(code, GenerateSummaryComment(parameters, additionalParameters, async, delegating));
             AddComments(code, CopyRemarksComment());
             AddComments(code, GenerateParamsComments(parameters, async));
             AddComments(code, CopyUnknownComments());
@@ -187,7 +195,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             code.AddRange(formatted);
         }
 
-        private List<string> GenerateSummaryComment(IEnumerable<Parameter> parameters, bool async, bool delegating)
+        private List<string> GenerateSummaryComment(IEnumerable<Parameter> parameters, IEnumerable<Parameter> additionalParameters, bool async, bool delegating)
         {
             XElement element = Comments.Element("summary");
             string text = element.ToString();
@@ -204,7 +212,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             }
             if (delegating)
             {
-                var implementationParameters = GetImplementationMethodParameters(async);
+                var implementationParameters = GetImplementationMethodParameters(additionalParameters, async);
                 string implementationMethod = $"{GetMethodName(async)}({string.Join(", ", implementationParameters.Select(p => p.XmlDocType))})";
                 string delegation = $"This method just creates a <see cref=\"{TargetType}Reference\"/> and delegates to <see cref=\"{implementationMethod}\"/>.";
                 text = text.Replace("</summary>", $"{delegation}\n</summary>");
