@@ -33,17 +33,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public QueryOptionsTests(ReadTableFixture fixture) =>
             _fixture = fixture;
 
-        private async Task<T> ExecuteAsync<T>(string sql)
-        {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand(sql);
-                var result = await cmd.ExecuteScalarAsync<T>();
-                return result;
-            }
-        }
-
-        // [START spanner_test_single_key_read_with_query_options]
+        // [START spanner_test_single_key_read_with_conn_level_query_options]
         [Fact]
         public async Task PointReadWithConnectionLevelQueryOptions()
         {
@@ -61,7 +51,27 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_single_key_read_with_query_options]
+        // [END spanner_test_single_key_read_with_conn_level_query_options]
+
+        // [START spanner_test_single_key_read_with_cmd_level_query_options]
+        [Fact]
+        public async Task PointReadWithQueryLevelOptions()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
+                cmd.QueryOptions = new QueryOptions().WithOptimizerVersion("1");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                    Assert.Equal("k1", reader.GetString(0));
+                    Assert.Equal("v1", reader.GetString(1));
+
+                    Assert.False(await reader.ReadAsync());
+                }
+            }
+        }
+        // [END spanner_test_single_key_read_with_cmd_level_query_options]
 
         // [START spanner_test_single_key_read_with_invalid_query_options]
         [Fact]
