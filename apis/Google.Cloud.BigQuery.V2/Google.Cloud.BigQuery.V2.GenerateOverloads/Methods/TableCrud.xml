@@ -13,9 +13,11 @@
   ﻿<Method Name="CreateTable"
        TargetType="Table"
        ReturnType="BigQueryTable">
-
     <AdditionalParameters>
-      <Parameter Name="schema" Type="TableSchema" Comment="The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view)." />
+      <Parameter Name="resource" Type="Table" Comment="The table resource representation to use for the creation. Must not be null. If this table's &lt;see cref=&quot;Table.TableReference&quot;/&gt; is specified, then it must be the same as the one obtained from the other parameters, else it will be set to the one obtained from the other parameters." />
+    </AdditionalParameters>
+    <AdditionalParameters>
+      <Parameter Name="schema" Type="TableSchema" Comment="The schema for the new table. Must not be null." />
     </AdditionalParameters>
     <Comments>
       <summary>
@@ -29,7 +31,11 @@
       TargetType="Table"
       ReturnType="BigQueryTable">
     <AdditionalParameters>
-      <Parameter Name="schema" Type="TableSchema" Comment="The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view)." />
+      <Parameter Name="resource" Type="Table" Comment="The table resource representation to use for the creation. Must not be null. If this table's &lt;see cref=&quot;Table.TableReference&quot;/&gt; is specified, then it must be the same as the one obtained from the other parameters, else it will be set to the one obtained from the other parameters." />
+      <Parameter Type="GetTableOptions" Name="getOptions" Comment="The options for the &quot;get&quot; operation. May be null, in which case defaults will be supplied." DefaultValue="null" />
+    </AdditionalParameters>
+    <AdditionalParameters>
+      <Parameter Name="schema" Type="TableSchema" Comment="The schema for the new table. Must not be null." />
       <Parameter Type="GetTableOptions" Name="getOptions" Comment="The options for the &quot;get&quot; operation. May be null, in which case defaults will be supplied." DefaultValue="null" />
     </AdditionalParameters>
     <Options Type="CreateTableOptions" Name="createOptions" Comment="The options for the &quot;create&quot; operation. May be null, in which case defaults will be supplied." />

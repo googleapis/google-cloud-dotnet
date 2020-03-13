@@ -173,11 +173,24 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.CreateTable(TableReference, TableSchema, CreateTableOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created table.</returns>
         public BigQueryTable CreateTable(string tableId, TableSchema schema, CreateTableOptions options = null) =>
             _client.CreateTable(GetTableReference(tableId), schema, options);
+
+        /// <summary>
+        /// Creates a table within this dataset.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.CreateTable(TableReference, Table, CreateTableOptions)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="table">The table resource representation to use for the creation. Must not be null.
+        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The newly created table.</returns>
+        public BigQueryTable CreateTable(string tableId, Table table, CreateTableOptions options = null) =>
+            _client.CreateTable(GetTableReference(tableId), table, options);
 
         /// <summary>
         /// Retrieves a table within this dataset.
@@ -194,12 +207,26 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The existing or new table.</returns>
         public BigQueryTable GetOrCreateTable(string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
             _client.GetOrCreateTable(GetTableReference(tableId), schema, getOptions, createOptions);
+
+        /// <summary>
+        /// Attempts to fetch the specified table within this dataset, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.GetOrCreateTable(TableReference, Table, GetTableOptions, CreateTableOptions)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="table">The table resource representation to use for the creation. Must not be null.
+        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The existing or new table.</returns>
+        public BigQueryTable GetOrCreateTable(string tableId, Table table, GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
+            _client.GetOrCreateTable(GetTableReference(tableId), table, getOptions, createOptions);
 
         /// <summary>
         /// Creates a <see cref="TableReference"/> for a table within this dataset.
@@ -392,13 +419,28 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.CreateTableAsync(TableReference, TableSchema, CreateTableOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the newly created table.</returns>
         public Task<BigQueryTable> CreateTableAsync(string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default) =>
             _client.CreateTableAsync(GetTableReference(tableId), schema, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a table within this dataset.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.CreateTableAsync(TableReference, Table, CreateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="table">The table resource representation to use for the creation. Must not be null.
+        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created table.</returns>
+        public Task<BigQueryTable> CreateTableAsync(string tableId, Table table, CreateTableOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.CreateTableAsync(GetTableReference(tableId), table, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously retrieves a table within this dataset.
@@ -417,7 +459,7 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -425,6 +467,22 @@ namespace Google.Cloud.BigQuery.V2
         /// the existing or new table.</returns>
         public Task<BigQueryTable> GetOrCreateTableAsync(string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
             _client.GetOrCreateTableAsync(GetTableReference(tableId), schema, getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Attempts to fetch the specified table within this dataset, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.GetOrCreateTableAsync(TableReference, Table, GetTableOptions, CreateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="table">The table resource representation to use for the creation. Must not be null.
+        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new table.</returns>
+        public Task<BigQueryTable> GetOrCreateTableAsync(string tableId, Table table, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
+            _client.GetOrCreateTableAsync(GetTableReference(tableId), table, getOptions, createOptions, cancellationToken);
 
         /// <summary>
         /// Asynchronously lists the models within this dataset.

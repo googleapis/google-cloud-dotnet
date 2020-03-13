@@ -141,15 +141,16 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 { "name", BigQueryDbType.String },
                 { "score", BigQueryDbType.Int64 }
             }.Build();
-            CreateTableOptions options = new CreateTableOptions
+            Table tableToCreate = new Table
             {
                 ExternalDataConfiguration = new ExternalDataConfiguration
                 {
                     SourceFormat = "CSV",
                     SourceUris = new[] { $"gs://{bucket}/{objectName}" }
-                }
+                },
+                Schema = schema
             };
-            BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
+            BigQueryTable table = client.CreateTable(datasetId, tableId, tableToCreate);
             BigQueryParameter[] parameters = null;
             List<BigQueryRow> rows = client.ExecuteQuery($"SELECT name, score FROM {table} ORDER BY score", parameters).ToList();
             foreach (BigQueryRow row in rows)
@@ -1931,8 +1932,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "message", BigQueryDbType.String }
             }.Build();
-            CreateTableOptions options = new CreateTableOptions { TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null) };
-            BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
+            Table tableToCreate = new Table 
+            { 
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
+                Schema = schema
+            };
+            BigQueryTable table = client.CreateTable(datasetId, tableId, tableToCreate);
             // Upload a single row to the table, using JSON rather than the streaming buffer, as
             // the _PARTITIONTIME column will be null while it's being served from the streaming buffer.
             // This code assumes the upload succeeds; normally, you should check the job results.

@@ -314,7 +314,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void CreateTableEquivalents()
+        public void CreateTableEquivalents_Schema()
         {
             var datasetId = "dataset";
             var tableId = "table";
@@ -326,6 +326,22 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateTable(datasetId, tableId, schema, options),
                 client => client.CreateTable(ProjectId, datasetId, tableId, schema, options),
                 client => new BigQueryDataset(client, GetDataset(datasetId)).CreateTable(tableId, schema, options));
+        }
+
+        [Fact]
+        public void CreateTableEquivalents_Table()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var table = new Table { Schema = schema };
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new CreateTableOptions();
+            VerifyEquivalent(new BigQueryTable(new DerivedBigQueryClient(), GetTable(reference)),
+                client => client.CreateTable(MatchesWhenSerialized(reference), table, options),
+                client => client.CreateTable(datasetId, tableId, table, options),
+                client => client.CreateTable(ProjectId, datasetId, tableId, table, options),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).CreateTable(tableId, table, options));
         }
 
         [Fact]
@@ -358,7 +374,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void GetOrCreateTableEquivalents()
+        public void GetOrCreateTableEquivalents_Schema()
         {
             var datasetId = "dataset";
             var tableId = "table";
@@ -371,6 +387,23 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.GetOrCreateTable(datasetId, tableId, schema, getOptions, createOptions),
                 client => client.GetOrCreateTable(ProjectId, datasetId, tableId, schema, getOptions, createOptions),
                 client => new BigQueryDataset(client, GetDataset(datasetId)).GetOrCreateTable(tableId, schema, getOptions, createOptions));
+        }
+
+        [Fact]
+        public void GetOrCreateTableEquivalents_Table()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var table = new Table { Schema = schema };
+            var reference = GetTableReference(datasetId, tableId);
+            var getOptions = new GetTableOptions();
+            var createOptions = new CreateTableOptions();
+            VerifyEquivalent(new BigQueryTable(new DerivedBigQueryClient(), GetTable(reference)),
+                client => client.GetOrCreateTable(MatchesWhenSerialized(reference), table, getOptions, createOptions),
+                client => client.GetOrCreateTable(datasetId, tableId, table, getOptions, createOptions),
+                client => client.GetOrCreateTable(ProjectId, datasetId, tableId, table, getOptions, createOptions),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).GetOrCreateTable(tableId, table, getOptions, createOptions));
         }
 
         [Fact]
@@ -903,7 +936,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void CreateTableAsyncEquivalents()
+        public void CreateTableAsyncEquivalents_Schema()
         {
             var datasetId = "dataset";
             var tableId = "table";
@@ -916,6 +949,23 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateTableAsync(datasetId, tableId, schema, options, token),
                 client => client.CreateTableAsync(ProjectId, datasetId, tableId, schema, options, token),
                 client => new BigQueryDataset(client, GetDataset(datasetId)).CreateTableAsync(tableId, schema, options, token));
+        }
+
+        [Fact]
+        public void CreateTableAsyncEquivalents_Table()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var table = new Table { Schema = schema };
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new CreateTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryTable(new DerivedBigQueryClient(), GetTable(reference)),
+                client => client.CreateTableAsync(MatchesWhenSerialized(reference), table, options, token),
+                client => client.CreateTableAsync(datasetId, tableId, table, options, token),
+                client => client.CreateTableAsync(ProjectId, datasetId, tableId, table, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).CreateTableAsync(tableId, table, options, token));
         }
 
         [Fact]
@@ -950,7 +1000,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void GetOrCreateTableAsyncEquivalents()
+        public void GetOrCreateTableAsyncEquivalents_Schema()
         {
             var datasetId = "dataset";
             var tableId = "table";
@@ -964,6 +1014,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.GetOrCreateTableAsync(datasetId, tableId, schema, getOptions, createOptions, token),
                 client => client.GetOrCreateTableAsync(ProjectId, datasetId, tableId, schema, getOptions, createOptions, token),
                 client => new BigQueryDataset(client, GetDataset(datasetId)).GetOrCreateTableAsync(tableId, schema, getOptions, createOptions, token));
+        }
+
+        [Fact]
+        public void GetOrCreateTableAsyncEquivalents_Table()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var table = new Table { Schema = schema };
+            var reference = GetTableReference(datasetId, tableId);
+            var getOptions = new GetTableOptions();
+            var createOptions = new CreateTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryTable(new DerivedBigQueryClient(), GetTable(reference)),
+                client => client.GetOrCreateTableAsync(MatchesWhenSerialized(reference), table, getOptions, createOptions, token),
+                client => client.GetOrCreateTableAsync(datasetId, tableId, table, getOptions, createOptions, token),
+                client => client.GetOrCreateTableAsync(ProjectId, datasetId, tableId, table, getOptions, createOptions, token),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).GetOrCreateTableAsync(tableId, table, getOptions, createOptions, token));
         }
 
         [Fact]
