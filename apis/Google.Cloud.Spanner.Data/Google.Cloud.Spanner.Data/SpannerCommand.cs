@@ -219,6 +219,11 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        /// <summary>
+        /// Query options to use when running SQL and streaming SQL commands.
+        /// </summary>
+        public QueryOptions QueryOptions { get; set; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -256,7 +261,8 @@ namespace Google.Cloud.Spanner.Data
         {
             DesignTimeVisible = DesignTimeVisible,
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
-            CommandTimeout = CommandTimeout
+            CommandTimeout = CommandTimeout,
+            QueryOptions = QueryOptions
         };
 
         /// <inheritdoc />

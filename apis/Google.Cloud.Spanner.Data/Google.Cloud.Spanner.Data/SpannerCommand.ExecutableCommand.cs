@@ -53,12 +53,15 @@ namespace Google.Cloud.Spanner.Data
                 return settings;
             }
 
+            private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+
             internal SpannerConnection Connection { get; }
             internal SpannerCommandTextBuilder CommandTextBuilder { get; }
             internal int CommandTimeout { get; }
             internal SpannerTransaction Transaction { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
+            internal QueryOptions QueryOptions { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -68,6 +71,7 @@ namespace Google.Cloud.Spanner.Data
                 Partition = command.Partition;
                 Parameters = command.Parameters;
                 Transaction = command._transaction;
+                QueryOptions = command.QueryOptions;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -335,6 +339,37 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
+            // Based on the QueryOptions set at various levels (connection, environment and command),
+            // constructs the QueryOptions proto to set in the ExecuteSqlRequest.
+            // Options set at the SpannerCommand-level has the highest precedence.
+            // Options set at the environment variable level has the next highest precedence.
+            // Options set at the connection level has the lowest precedence.
+            private V1.ExecuteSqlRequest.Types.QueryOptions GetEffectiveQueryOptions()
+            {
+                var queryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions();
+
+                // Query options set through the connection have the lowest precedence.
+                if (Connection.QueryOptions != null)
+                {
+                    queryOptionsProto.MergeFrom(Connection.QueryOptions.ToProto());
+                }
+
+                // Query options set through an environment variable have the next highest precedence.
+                var envQueryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions
+                {
+                    OptimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? ""
+                };
+                queryOptionsProto.MergeFrom(envQueryOptionsProto);
+
+                // Query options set at the command level have the highest precedence.
+                if (QueryOptions != null)
+                {
+                    queryOptionsProto.MergeFrom(QueryOptions.ToProto());
+                }
+
+                return queryOptionsProto;
+            }
+
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
                 if (Partition != null)
@@ -344,7 +379,8 @@ namespace Google.Cloud.Spanner.Data
 
                 var request = new ExecuteSqlRequest
                 {
-                    Sql = CommandTextBuilder.ToString()
+                    Sql = CommandTextBuilder.ToString(),
+                    QueryOptions = GetEffectiveQueryOptions()
                 };
 
                 // See comment at the start of GetMutations.

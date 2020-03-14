@@ -111,6 +111,12 @@ namespace Google.Cloud.Spanner.Data
         internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
 
         /// <summary>
+        /// Query options to use throughout the lifetime of the connection when
+        /// running SQL and streaming SQL requests.
+        /// </summary>
+        public QueryOptions QueryOptions { get; set; }
+
+        /// <summary>
         /// Creates a SpannerConnection with no datasource or credential specified.
         /// </summary>
         public SpannerConnection() : this(new SpannerConnectionStringBuilder())
