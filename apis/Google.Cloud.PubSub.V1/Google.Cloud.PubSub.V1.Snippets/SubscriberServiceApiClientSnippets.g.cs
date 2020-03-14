@@ -47,6 +47,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 EnableMessageOrdering = false,
                 ExpirationPolicy = new ExpirationPolicy(),
                 DeadLetterPolicy = new DeadLetterPolicy(),
+                RetryPolicy = new RetryPolicy(),
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
@@ -73,6 +74,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 EnableMessageOrdering = false,
                 ExpirationPolicy = new ExpirationPolicy(),
                 DeadLetterPolicy = new DeadLetterPolicy(),
+                RetryPolicy = new RetryPolicy(),
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
