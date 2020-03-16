@@ -4,8 +4,8 @@ set -e
 source ../toolversions.sh
 install_docfx
 
-declare -r PROTOBUF_BRANCH=3.8.x
-declare -r GRPC_BRANCH=v1.22.x
+declare -r PROTOBUF_BRANCH=3.11.x
+declare -r GRPC_BRANCH=v1.27.x
 
 # Blow away any previous files and clone the repo
 rm -rf dependencies
@@ -19,13 +19,20 @@ echo "Cloning repositories"
 git clone https://github.com/googleapis/gax-dotnet dependencies/gax-dotnet --quiet --depth=1 -b master
 git clone https://github.com/google/protobuf dependencies/protobuf --quiet --depth=1 -b $PROTOBUF_BRANCH
 git clone https://github.com/grpc/grpc dependencies/grpc --quiet --depth=1 -b $GRPC_BRANCH
-git clone https://github.com/google/google-api-dotnet-client dependencies/google-api-dotnet-client --quiet --depth=1 -b master
 
 # Copy docfx files
 cp dependencies-docfx/docfx-gax-dotnet.json dependencies/gax-dotnet/docfx.json
 cp dependencies-docfx/docfx-protobuf.json dependencies/protobuf/docfx.json
 cp dependencies-docfx/docfx-grpc.json dependencies/grpc/docfx.json
-cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-api-dotnet-client/docfx.json
+
+# Fetch the dependency maps for Google.Apis.*
+# TODO: Ideally this should be based on the actual dependency versions, but this is okay to start with.
+mkdir dependencies/xrefmaps
+curl -sSL https://googleapis.dev/dotnet/Google.Apis/latest/xrefmap.yml -o dependencies/xrefmaps/Google.Apis.xrefmap.yml
+curl -sSL https://googleapis.dev/dotnet/Google.Apis.Core/latest/xrefmap.yml -o dependencies/xrefmaps/Google.Apis.Core.xrefmap.yml
+curl -sSL https://googleapis.dev/dotnet/Google.Apis.Auth/latest/xrefmap.yml -o dependencies/xrefmaps/Google.Apis.Auth.xrefmap.yml
+curl -sSL https://googleapis.dev/dotnet/Google.Apis.Storage.v1/latest/xrefmap.yml -o dependencies/xrefmaps/Google.Apis.Storage.v1.xrefmap.yml
+curl -sSL https://googleapis.dev/dotnet/Google.Apis.Bigquery.v2/latest/xrefmap.yml -o dependencies/xrefmaps/Google.Apis.Bigquery.v2.xrefmap.yml
 
 # Restore packages and build metadata
 (cd dependencies/gax-dotnet;
@@ -38,18 +45,9 @@ cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-ap
 (cd dependencies/grpc; 
  $DOCFX metadata)
 
-(cd dependencies/google-api-dotnet-client;
- rm NuGet.config;
- dotnet restore Src/Support/GoogleApisClient.sln;
- dotnet new sln --name Generated;
- dotnet sln Generated.sln add Src/Generated/Google.Apis.Bigquery.v2/*.csproj;
- dotnet sln Generated.sln add Src/Generated/Google.Apis.Storage.v1/*.csproj;
- dotnet restore Generated.sln;
- $DOCFX metadata)
-
 # Copy the metadata into a single api directory, one subdirectory per package
 mkdir dependencies/api
-cp -r dependencies/{gax-dotnet,protobuf,grpc,google-api-dotnet-client}/api/* dependencies/api
+cp -r dependencies/{gax-dotnet,protobuf,grpc}/api/* dependencies/api
 for dir in dependencies/api/*
 do
   # Make the build scripts significantly simpler...
