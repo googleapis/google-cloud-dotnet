@@ -31,8 +31,8 @@
       TargetType="Dataset"
       ReturnType="BigQueryDataset">
     <AdditionalParameters>
-      <Parameter Type="GetDatasetOptions" Name="getOptions" Comment="The options for the &quot;get&quot; operation. May be null, in which case defaults will be supplied." DefaultValue="null" />
       <Parameter Name="resource" Type="Dataset" DefaultValue="null" Comment="The dataset resource representation to use for the creation. May be null in which case default values will be used." />
+      <Parameter Type="GetDatasetOptions" Name="getOptions" Comment="The options for the &quot;get&quot; operation. May be null, in which case defaults will be supplied." DefaultValue="null" />
     </AdditionalParameters>
     <Options Type="CreateDatasetOptions" Name="createOptions" Comment="The options for the &quot;create&quot; operation. May be null, in which case defaults will be supplied." />
     <Comments>

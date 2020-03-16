@@ -245,9 +245,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var createOptions = new CreateDatasetOptions();
             var dataset = new Dataset();
             VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), GetDataset(reference)),
-                client => client.GetOrCreateDataset(MatchesWhenSerialized(reference), getOptions, dataset, createOptions),
-                client => client.GetOrCreateDataset(datasetId, getOptions, dataset, createOptions),
-                client => client.GetOrCreateDataset(ProjectId, datasetId, getOptions, dataset, createOptions));
+                client => client.GetOrCreateDataset(MatchesWhenSerialized(reference), dataset, getOptions, createOptions),
+                client => client.GetOrCreateDataset(datasetId, dataset, getOptions, createOptions),
+                client => client.GetOrCreateDataset(ProjectId, datasetId, dataset, getOptions, createOptions));
         }
 
         [Fact]
@@ -833,9 +833,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var dataset = new Dataset();
             var token = new CancellationTokenSource().Token;
             VerifyEquivalentAsync(new BigQueryDataset(new DerivedBigQueryClient(), GetDataset(reference)),
-                client => client.GetOrCreateDatasetAsync(MatchesWhenSerialized(reference), getOptions, dataset, createOptions, token),
-                client => client.GetOrCreateDatasetAsync(datasetId, getOptions, dataset, createOptions, token),
-                client => client.GetOrCreateDatasetAsync(ProjectId, datasetId, getOptions, dataset, createOptions, token));
+                client => client.GetOrCreateDatasetAsync(MatchesWhenSerialized(reference), dataset, getOptions, createOptions, token),
+                client => client.GetOrCreateDatasetAsync(datasetId, dataset, getOptions, createOptions, token),
+                client => client.GetOrCreateDatasetAsync(ProjectId, datasetId, dataset, getOptions, createOptions, token));
         }
 
         [Fact]
