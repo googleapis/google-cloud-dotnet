@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Api.Gax;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -93,15 +94,15 @@ namespace Google.Cloud.Firestore
         public bool Equals(QuerySnapshot other) =>
             other != null &&
             Query.Equals(other.Query) &&
-            EqualityHelpers.ListsEqual(Documents, other.Documents) &&
-            EqualityHelpers.ListsEqual(Changes, other.Changes);
+            GaxEqualityHelpers.ListsEqual(Documents, other.Documents) &&
+            GaxEqualityHelpers.ListsEqual(Changes, other.Changes);
 
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as QuerySnapshot);
 
         /// <inheritdoc />
         public override int GetHashCode() =>
-            EqualityHelpers.CombineHashCodes(Query.GetHashCode(), EqualityHelpers.GetListHashCode(Documents), EqualityHelpers.GetListHashCode(Changes));
+            GaxEqualityHelpers.CombineHashCodes(Query.GetHashCode(), GaxEqualityHelpers.GetListHashCode(Documents), GaxEqualityHelpers.GetListHashCode(Changes));
 
         /// <summary>
         /// A lazy read-only list that's a projection over a list of snapshots.

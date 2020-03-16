@@ -141,7 +141,7 @@ namespace Google.Cloud.Firestore
         public override bool Equals(object obj) => obj is Timestamp blob && Equals(blob);
 
         /// <inheritdoc />
-        public override int GetHashCode() => EqualityHelpers.CombineHashCodes(_seconds.GetHashCode(), _nanoseconds.GetHashCode());
+        public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(_seconds.GetHashCode(), _nanoseconds.GetHashCode());
 
         /// <inheritdoc />
         public bool Equals(Timestamp other) => _seconds == other._seconds && _nanoseconds == other._nanoseconds;

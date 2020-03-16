@@ -82,7 +82,7 @@ namespace Google.Cloud.Firestore
         public override bool Equals(object obj) => obj is GeoPoint gp && Equals(gp);
 
         /// <inheritdoc />
-        public override int GetHashCode() => EqualityHelpers.CombineHashCodes(Latitude.GetHashCode(), Longitude.GetHashCode());
+        public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Latitude.GetHashCode(), Longitude.GetHashCode());
 
         /// <inheritdoc />
         public bool Equals(GeoPoint other) => Latitude == other.Latitude && Longitude == other.Longitude;

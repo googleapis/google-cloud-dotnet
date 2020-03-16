@@ -223,6 +223,6 @@ namespace Google.Cloud.Firestore
 
         /// <inheritdoc />
         public override int GetHashCode() =>
-            EqualityHelpers.CombineHashCodes(Reference.GetHashCode(), Document?.Fields.GetHashCode() ?? 0);
+            GaxEqualityHelpers.CombineHashCodes(Reference.GetHashCode(), Document?.Fields.GetHashCode() ?? 0);
     }
 }
