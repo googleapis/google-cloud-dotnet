@@ -248,7 +248,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // Snippet: GetOrCreateDataset(string, GetDatasetOptions, Dataset, CreateDatasetOptions)
+            // Snippet: GetOrCreateDataset(string, Dataset, GetDatasetOptions, CreateDatasetOptions)
             BigQueryClient client = BigQueryClient.Create(projectId);
             // If the dataset isn't found, it will be created.
             BigQueryDataset dataset = client.GetOrCreateDataset(datasetId);
@@ -258,7 +258,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
-        // See-also: GetOrCreateDataset(string, GetDatasetOptions, Dataset, CreateDatasetOptions)
+        // See-also: GetOrCreateDataset(string, Dataset, GetDatasetOptions, CreateDatasetOptions)
         // Member: GetOrCreateDataset(DatasetReference, *, *, *)
         // Member: GetOrCreateDataset(string, string, *, *, *)
         // See [GetOrCreateDataset](ref) for an example using an alternative overload.
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // Snippet: GetOrCreateDatasetAsync(string, GetDatasetOptions, Dataset, CreateDatasetOptions, *)
+            // Snippet: GetOrCreateDatasetAsync(string, Dataset, GetDatasetOptions, CreateDatasetOptions, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // If the dataset isn't found, it will be created.
             BigQueryDataset dataset = await client.GetOrCreateDatasetAsync(datasetId);
@@ -1280,7 +1280,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
-        // See-also: GetOrCreateDatasetAsync(string, GetDatasetOptions, Dataset, CreateDatasetOptions, *)
+        // See-also: GetOrCreateDatasetAsync(string, Dataset, GetDatasetOptions, CreateDatasetOptions, *)
         // Member: GetOrCreateDatasetAsync(DatasetReference, *, *, *, *)
         // Member: GetOrCreateDatasetAsync(string, string, *, *, *, *)
         // See [GetOrCreateDataset](ref) for an example using an alternative overload.
