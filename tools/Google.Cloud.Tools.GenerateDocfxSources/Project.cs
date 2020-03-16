@@ -41,18 +41,20 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         {
             get
             {
-                // We mostly only care about the explicit dependencies, but we should include Gax when we depend on Gax.Rest or Gax.Grpc.
+                // We mostly only care about the explicit dependencies, but we should include Gax when we depend on Gax.Rest or Gax.Grpc (or Gax.Grpc.GrpcCore).
                 var packageRefs = _project.Elements("ItemGroup").Elements("PackageReference").Select(x => (string) x.Attribute("Include"));
                 var projectRefs = _project.Elements("ItemGroup").Elements("ProjectReference").Select(ExtractProjectReference);
                 var dependencies = new HashSet<string>(packageRefs.Concat(projectRefs));
                 if (dependencies.Contains("Google.Api.Gax.Rest") ||
-                    dependencies.Contains("Google.Api.Gax.Grpc"))
+                    dependencies.Contains("Google.Api.Gax.Grpc") ||
+                    dependencies.Contains("Google.Api.Gax.Grpc.GrpcCore"))
                 {
                     dependencies.Add("Google.Api.Gax");
                 }
-                // Likewise add protobuf and GRPC whenever we depend on Gax.Rrpc...
+                // Likewise add protobuf and GRPC whenever we depend on Gax.Grpc...
                 // (It would be quite nice to do all this automatically...)
-                if (dependencies.Contains("Google.Api.Gax.Grpc"))
+                if (dependencies.Contains("Google.Api.Gax.Grpc") ||
+                    dependencies.Contains("Google.Api.Gax.Grpc.GrpcCore"))
                 {
                     dependencies.Add("Google.Protobuf");
                     dependencies.Add("Google.Api.CommonProtos");

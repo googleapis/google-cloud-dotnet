@@ -96,7 +96,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     continue;
                 }
             }
-
             var json = new JObject
             {
                 ["metadata"] = new JArray {
@@ -126,6 +125,16 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["_appTitle"] = api,
                         ["_disableContribution"] = true,
                         ["_appFooter"] = " "
+                    },
+                    ["xref"] = new JArray
+                    {
+                        // Include the xref maps for REST APIs even if we may not need them, for simplicity.
+                        // The directory is created in the build script.
+                        $"../../dependencies/xrefmaps/Google.Apis.xrefmap.yml",
+                        $"../../dependencies/xrefmaps/Google.Apis.Core.xrefmap.yml",
+                        $"../../dependencies/xrefmaps/Google.Apis.Auth.xrefmap.yml",
+                        $"../../dependencies/xrefmaps/Google.Apis.Storage.v1.xrefmap.yml",
+                        $"../../dependencies/xrefmaps/Google.Apis.BigQuery.v2.xrefmap.yml",
                     },
                     ["template"] = new JArray { "default", "../../docfx-template" },
                     ["overwrite"] = new JArray { "obj/snippets/*.md" },
