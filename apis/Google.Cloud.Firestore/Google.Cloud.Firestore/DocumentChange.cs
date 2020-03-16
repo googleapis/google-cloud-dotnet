@@ -104,6 +104,6 @@ namespace Google.Cloud.Firestore
 
         /// <inheritdoc />
         public override int GetHashCode() =>
-            EqualityHelpers.CombineHashCodes((int) ChangeType, OldIndex ?? -1, NewIndex ?? -1, Document.GetHashCode());
+            GaxEqualityHelpers.CombineHashCodes((int) ChangeType, OldIndex ?? -1, NewIndex ?? -1, Document.GetHashCode());
     }
 }

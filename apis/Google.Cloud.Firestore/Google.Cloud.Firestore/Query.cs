@@ -833,21 +833,21 @@ namespace Google.Cloud.Firestore
             return _root.Equals(other._root) &&
                 _offset == other._offset &&
                 _limit == other._limit &&
-                EqualityHelpers.ListsEqual(_orderings, other._orderings) &&
-                EqualityHelpers.ListsEqual(_filters, other._filters) &&
-                EqualityHelpers.ListsEqual(_projections, other._projections) &&
+                GaxEqualityHelpers.ListsEqual(_orderings, other._orderings) &&
+                GaxEqualityHelpers.ListsEqual(_filters, other._filters) &&
+                GaxEqualityHelpers.ListsEqual(_projections, other._projections) &&
                 Equals(_startAt, other._startAt) &&
                 Equals(_endAt, other._endAt);
         }
 
         /// <inheritdoc />
-        public override int GetHashCode() => EqualityHelpers.CombineHashCodes(
+        public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(
             _root.GetHashCode(),
             _offset,
             _limit ?? -1,
-            EqualityHelpers.GetListHashCode(_orderings),
-            EqualityHelpers.GetListHashCode(_filters),
-            EqualityHelpers.GetListHashCode(_projections),
+            GaxEqualityHelpers.GetListHashCode(_orderings),
+            GaxEqualityHelpers.GetListHashCode(_filters),
+            GaxEqualityHelpers.GetListHashCode(_projections),
             _startAt?.GetHashCode() ?? -1,
             _endAt?.GetHashCode() ?? -1);
 
@@ -913,7 +913,7 @@ namespace Google.Cloud.Firestore
             internal Direction Direction { get; }
             internal Order ToProto() => new Order { Direction = Direction, Field = Field.ToFieldReference() };
 
-            public override int GetHashCode() => EqualityHelpers.CombineHashCodes(Field.GetHashCode(), (int) Direction);
+            public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Field.GetHashCode(), (int) Direction);
 
             internal InternalOrdering(FieldPath field, Direction direction)
             {
@@ -994,7 +994,7 @@ namespace Google.Cloud.Firestore
                 Field.Equals(other.Field) && _op == other._op && Equals(_value, other._value);
 
             public override int GetHashCode() =>
-                EqualityHelpers.CombineHashCodes(Field.GetHashCode(), _op, _value?.GetHashCode() ?? -1);
+                GaxEqualityHelpers.CombineHashCodes(Field.GetHashCode(), _op, _value?.GetHashCode() ?? -1);
         }
 
         private sealed class DocumentSnapshotComparer : IComparer<DocumentSnapshot>
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.Firestore
                 AllDescendants == other.AllDescendants;
 
             public override int GetHashCode() =>
-                EqualityHelpers.CombineHashCodes(Database.GetHashCode(), ParentPath.GetHashCode(), CollectionId?.GetHashCode() ?? 0, AllDescendants ? 1 : 0);
+                GaxEqualityHelpers.CombineHashCodes(Database.GetHashCode(), ParentPath.GetHashCode(), CollectionId?.GetHashCode() ?? 0, AllDescendants ? 1 : 0);
         }
     }
 }

@@ -71,8 +71,22 @@ namespace Google.Cloud.Firestore
         internal DocumentMask ToProto() => new DocumentMask { FieldPaths = { _fieldPaths.Select(p => p.EncodedPath) } };
 
         // Note: even though this is order-sensitive (which is odd for set behavior), that's fine as we use a sorted set.
+        // It would be nice if we could use GaxEqualityHelpers, but GetListHashCode requires an IReadOnlyList<T>. It isn't
+        // worth adding it in there just for this.
+
         /// <inheritdoc />
-        public override int GetHashCode() => EqualityHelpers.GetEnumerableHashCode(_fieldPaths);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 3581;
+                foreach (var field in _fieldPaths)
+                {
+                    hash = (hash << 5) + hash + field.GetHashCode();
+                }
+                return hash;
+            }
+        }
 
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as FieldMask);
