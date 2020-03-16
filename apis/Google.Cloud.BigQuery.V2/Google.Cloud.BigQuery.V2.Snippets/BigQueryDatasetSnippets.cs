@@ -135,19 +135,23 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See [BigQueryClient.GetTable](ref) for an example using BigQueryClient.
         // End see-also
 
-        // See-also: BigQueryClient.GetOrCreateTable(string, string, *, *, *)
-        // Member: GetOrCreateTable(string, *, *, *)
-        // Member: GetOrCreateTableAsync(string, *, *, *, *)
+        // See-also: BigQueryClient.GetOrCreateTable(string, string, TableSchema, *, *)
+        // Member: GetOrCreateTable(string, TableSchema, *, *)
+        // Member: GetOrCreateTableAsync(string, TableSchema, *, *, *)
+        // Member: GetOrCreateTable(string, Table, *, *)
+        // Member: GetOrCreateTableAsync(string, Table, *, *, *)
         // See [BigQueryClient.GetOrCreateTable](ref) for an example using BigQueryClient.
         // End see-also
 
-        // See-also: BigQueryClient.CreateTable(string, string, *, *)
-        // Member: CreateTable(string, *, *)
+        // See-also: BigQueryClient.CreateTable(string, string, TableSchema, *)
+        // Member: CreateTable(string, TableSchema, *)
+        // Member: CreateTable(string, Table, *)
         // See [BigQueryClient.CreateTable](ref) for an example using BigQueryClient.
         // End see-also
 
-        // See-also: BigQueryClient.CreateTableAsync(string, string, *, *, *)
-        // Member: CreateTableAsync(string, *, *, *)
+        // See-also: BigQueryClient.CreateTableAsync(string, string, TableSchema, *, *)
+        // Member: CreateTableAsync(string, TableSchema, *, *)
+        // Member: CreateTableAsync(string, Table, *, *)
         // See [BigQueryClient.CreateTableAsync](ref) for an example using BigQueryClient.
         // End see-also
 

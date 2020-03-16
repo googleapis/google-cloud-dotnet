@@ -227,7 +227,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // Snippet: CreateDataset(string,CreateDatasetOptions)
+            // Snippet: CreateDataset(string,Dataset,CreateDatasetOptions)
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryDataset dataset = client.CreateDataset(datasetId);
             // Now populate tables in the dataset...
@@ -236,9 +236,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
-        // See-also: CreateDataset(string,CreateDatasetOptions)
-        // Member: CreateDataset(DatasetReference, *)
-        // Member: CreateDataset(string, string, *)
+        // See-also: CreateDataset(string, Dataset, CreateDatasetOptions)
+        // Member: CreateDataset(DatasetReference, Dataset, *)
+        // Member: CreateDataset(string, string, Dataset, *)
         // See [CreateDataset](ref) for an example using an alternative overload.
         // End see-also
 
@@ -248,7 +248,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // Snippet: GetOrCreateDataset(string, GetDatasetOptions, CreateDatasetOptions)
+            // Snippet: GetOrCreateDataset(string, GetDatasetOptions, Dataset, CreateDatasetOptions)
             BigQueryClient client = BigQueryClient.Create(projectId);
             // If the dataset isn't found, it will be created.
             BigQueryDataset dataset = client.GetOrCreateDataset(datasetId);
@@ -258,9 +258,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
-        // See-also: GetOrCreateDataset(string, GetDatasetOptions, CreateDatasetOptions)
-        // Member: GetOrCreateDataset(DatasetReference, *, *)
-        // Member: GetOrCreateDataset(string, string, *, *)
+        // See-also: GetOrCreateDataset(string, GetDatasetOptions, Dataset, CreateDatasetOptions)
+        // Member: GetOrCreateDataset(DatasetReference, *, *, *)
+        // Member: GetOrCreateDataset(string, string, *, *, *)
         // See [GetOrCreateDataset](ref) for an example using an alternative overload.
         // End see-also
 
@@ -321,7 +321,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.GenerateTableId();
 
-            // Snippet: CreateTable(string,string,*,*)
+            // Snippet: CreateTable(string,string,TableSchema,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             TableSchema schema = new TableSchemaBuilder
             {
@@ -338,9 +338,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(tableId, ids);
         }
 
-        // See-also: CreateTable(string, string, *, *)
-        // Member: CreateTable(TableReference, *, *)
-        // Member: CreateTable(string, string, string, *, *)
+        // See-also: CreateTable(string, string, TableSchema, *)
+        // Member: CreateTable(TableReference, TableSchema, *)
+        // Member: CreateTable(string, string, string, TableSchema, *)
+        // Member: CreateTable(string, string, Table, *)
+        // Member: CreateTable(TableReference, Table, *)
+        // Member: CreateTable(string, string, string, Table, *)
         // See [CreateTable](ref) for an example using an alternative overload.
         // End see-also
 
@@ -351,7 +354,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.GenerateTableId();
 
-            // Snippet: GetOrCreateTable(string,string,*,*,*)
+            // Snippet: GetOrCreateTable(string,string,TableSchema,*,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             TableSchema schema = new TableSchemaBuilder
             {
@@ -369,9 +372,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(tableId, ids);
         }
 
-        // See-also: GetOrCreateTable(string, string, *, *, *)
-        // Member: GetOrCreateTable(TableReference, *, *, *)
-        // Member: GetOrCreateTable(string, string, string, *, *, *)
+        // See-also: GetOrCreateTable(string, string, TableSchema, *, *)
+        // Member: GetOrCreateTable(TableReference, TableSchema, *, *)
+        // Member: GetOrCreateTable(string, string, string, TableSchema, *, *)
+        // Member: GetOrCreateTable(string, string, Table, *, *)
+        // Member: GetOrCreateTable(TableReference, TableSchema, *, *)
+        // Member: GetOrCreateTable(string, string, string, TableSchema, *, *)
         // See [GetOrCreateTable](ref) for an example using an alternative overload.
         // End see-also
 
@@ -1243,7 +1249,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // Snippet: CreateDatasetAsync(string,CreateDatasetOptions,CancellationToken)
+            // Snippet: CreateDatasetAsync(string,Dataset,CreateDatasetOptions,CancellationToken)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             BigQueryDataset dataset = await client.CreateDatasetAsync(datasetId);
             // Now populate tables in the dataset...
@@ -1252,9 +1258,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
-        // See-also: CreateDatasetAsync(string, CreateDatasetOptions, *)
-        // Member: CreateDatasetAsync(DatasetReference, *, *)
-        // Member: CreateDatasetAsync(string, string, *, *)
+        // See-also: CreateDatasetAsync(string, Dataset, CreateDatasetOptions, *)
+        // Member: CreateDatasetAsync(DatasetReference, *, *, *)
+        // Member: CreateDatasetAsync(string, string, *, *, *)
         // See [CreateDataset](ref) for an example using an alternative overload.
         // End see-also
 
@@ -1264,7 +1270,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // Snippet: GetOrCreateDatasetAsync(string, GetDatasetOptions, CreateDatasetOptions, *)
+            // Snippet: GetOrCreateDatasetAsync(string, GetDatasetOptions, Dataset, CreateDatasetOptions, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // If the dataset isn't found, it will be created.
             BigQueryDataset dataset = await client.GetOrCreateDatasetAsync(datasetId);
@@ -1274,9 +1280,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
-        // See-also: GetOrCreateDatasetAsync(string, GetDatasetOptions, CreateDatasetOptions, *)
-        // Member: GetOrCreateDatasetAsync(DatasetReference, *, *, *)
-        // Member: GetOrCreateDatasetAsync(string, string, *, *, *)
+        // See-also: GetOrCreateDatasetAsync(string, GetDatasetOptions, Dataset, CreateDatasetOptions, *)
+        // Member: GetOrCreateDatasetAsync(DatasetReference, *, *, *, *)
+        // Member: GetOrCreateDatasetAsync(string, string, *, *, *, *)
         // See [GetOrCreateDataset](ref) for an example using an alternative overload.
         // End see-also
 
@@ -1337,7 +1343,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.GenerateTableId();
 
-            // Snippet: CreateTableAsync(string,string,*,*,*)
+            // Snippet: CreateTableAsync(string,string,TableSchema,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             TableSchema schema = new TableSchemaBuilder
             {
@@ -1354,9 +1360,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(tableId, ids);
         }
 
-        // See-also: CreateTableAsync(string, string, *, *, *)
-        // Member: CreateTableAsync(TableReference, *, *, *)
-        // Member: CreateTableAsync(string, string, string, *, *, *)
+        // See-also: CreateTableAsync(string, string, TableSchema, *, *)
+        // Member: CreateTableAsync(TableReference, TableSchema, *, *)
+        // Member: CreateTableAsync(string, string, string, TableSchema, *, *)
+        // Member: CreateTableAsync(string, string, Table, *, *)
+        // Member: CreateTableAsync(TableReference, Table, *, *)
+        // Member: CreateTableAsync(string, string, string, Table, *, *)
         // See [CreateTableAsync](ref) for an example using an alternative overload.
         // End see-also
 
@@ -1367,7 +1376,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.GenerateTableId();
 
-            // Snippet: GetOrCreateTableAsync(string,string,*,*,*,*)
+            // Snippet: GetOrCreateTableAsync(string,string,TableSchema,*,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             TableSchema schema = new TableSchemaBuilder
             {
@@ -1385,9 +1394,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(tableId, ids);
         }
 
-        // See-also: GetOrCreateTableAsync(string, string, *, *, *, *)
-        // Member: GetOrCreateTableAsync(TableReference, *, *, *, *)
-        // Member: GetOrCreateTableAsync(string, string, string, *, *, *, *)
+        // See-also: GetOrCreateTableAsync(string, string, TableSchema, *, *, *)
+        // Member: GetOrCreateTableAsync(TableReference, TableSchema, *, *, *)
+        // Member: GetOrCreateTableAsync(string, string, string, TableSchema, *, *, *)
+        // Member: GetOrCreateTableAsync(string, string, Table, *, *, *)
+        // Member: GetOrCreateTableAsync(TableReference, Table, *, *, *)
+        // Member: GetOrCreateTableAsync(string, string, string, Table, *, *, *)
         // See [GetOrCreateTableAsync](ref) for an example using an alternative overload.
         // End see-also
 
