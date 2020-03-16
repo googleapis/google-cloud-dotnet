@@ -85,4 +85,9 @@ the request and want to put work into it.
 # Firestore: Expose sufficient state to manually restart a Listen operation
 
 - Issue: [#2513](https://github.com/googleapis/google-cloud-dotnet/issues/2513)
-- Status: Waiting for more user to request this, so we can gather suitable requirements.
+- Status: Waiting for more users to request this, so we can gather suitable requirements.
+
+# Diagnostics: Refactor buffering strategies so that they can be easily combined.
+
+- Issue: [#2163](https://github.com/googleapis/google-cloud-dotnet/issues/2163)
+- Status: Waiting for demand on this. To be reconsidered if we decide to merge the existing Diagnostics libraries into one
