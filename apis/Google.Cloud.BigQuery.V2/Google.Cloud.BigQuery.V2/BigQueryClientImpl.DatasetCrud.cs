@@ -92,7 +92,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override BigQueryDataset GetOrCreateDataset(DatasetReference datasetReference, GetDatasetOptions getOptions = null, Dataset resource = null, CreateDatasetOptions createOptions = null)
+        public override BigQueryDataset GetOrCreateDataset(DatasetReference datasetReference, Dataset resource = null, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckArgument(
@@ -110,7 +110,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, Dataset resource = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, Dataset resource = null, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckArgument(
