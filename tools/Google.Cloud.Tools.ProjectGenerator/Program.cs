@@ -439,6 +439,7 @@ shell.run(
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
                 new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC"),
                 new XElement("Authors", "Google LLC"),
+                new XElement("PackageIcon", "NuGetIcon.png"),
                 new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
                 new XElement("PackageLicenseFile", "LICENSE"),
                 new XElement("PackageProjectUrl", "https://github.com/googleapis/google-cloud-dotnet"),
@@ -455,6 +456,11 @@ shell.run(
                 new XAttribute("Include", "../../../LICENSE"),
                 new XAttribute("Pack", true),
                 new XAttribute("PackagePath", ""))); // Note: not $(PackageLicenseFile) as suggested in docs, due to us using a file with no extension
+            // Pack the icon file; this element isn't a dependency, but it still belongs in an ItemGroup...
+            dependenciesElement.Add(new XElement("None",
+                new XAttribute("Include", "../../../NuGetIcon.png"),
+                new XAttribute("Pack", true),
+                new XAttribute("PackagePath", "")));
 
             if (api.Type == ApiType.Analyzers)
             {
