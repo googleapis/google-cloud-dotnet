@@ -698,18 +698,12 @@ namespace Google.Cloud.Firestore
         private DocumentReference ConvertReference(object fieldValue, string parameterName)
         {
             string basePath = _root.AllDescendants ? ParentPath : $"{ParentPath}/{_root.CollectionId}";
-            DocumentReference reference;
-            switch (fieldValue)
+            var reference = fieldValue switch
             {
-                case string relativePath:
-                    reference = Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}");
-                    break;
-                case DocumentReference absoluteRef:
-                    reference = absoluteRef;
-                    break;
-                default:
-                    throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", parameterName);
-            }
+                string relativePath => Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}"),
+                DocumentReference absoluteRef => absoluteRef,
+                _ => throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", parameterName),
+            };
             GaxPreconditions.CheckArgument(
                 reference.Path.StartsWith(basePath + "/"),
                 parameterName,
@@ -822,7 +816,7 @@ namespace Google.Cloud.Firestore
             {
                 return true;
             }
-            if (ReferenceEquals(other, null))
+            if (other is null)
             {
                 return false;
             }
@@ -1007,7 +1001,6 @@ namespace Google.Cloud.Firestore
             {
                 GaxPreconditions.CheckArgument(x.Exists, nameof(x), "Document snapshot comparer for a query cannot be used with snapshots of missing documents");
                 GaxPreconditions.CheckArgument(y.Exists, nameof(y), "Document snapshot comparer for a query cannot be used with snapshots of missing documents");
-                var orderings = _query._orderings;
 
                 Direction lastDirection = Direction.Ascending;
                 foreach (var ordering in _query._orderings)

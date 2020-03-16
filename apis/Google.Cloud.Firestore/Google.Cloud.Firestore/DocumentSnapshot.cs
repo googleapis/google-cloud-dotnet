@@ -159,7 +159,7 @@ namespace Google.Cloud.Firestore
             var raw = ExtractValue(path);
             if (raw == null)
             {
-                value = default(T);
+                value = default;
                 return false;
             }
             var context = new DeserializationContext(this);
