@@ -25,46 +25,47 @@ namespace Google.Cloud.Logging.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbG9nZ2luZy92Mi9sb2dfZW50cnkucHJvdG8SEWdvb2dsZS5s",
-            "b2dnaW5nLnYyGiNnb29nbGUvYXBpL21vbml0b3JlZF9yZXNvdXJjZS5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xlL2xvZ2dpbmcv",
-            "dHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5cGUv",
-            "bG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3Rv",
-            "Ghxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLOBwoITG9nRW50cnkSEAoI",
-            "bG9nX25hbWUYDCABKAkSLwoIcmVzb3VyY2UYCCABKAsyHS5nb29nbGUuYXBp",
-            "Lk1vbml0b3JlZFJlc291cmNlEi0KDXByb3RvX3BheWxvYWQYAiABKAsyFC5n",
-            "b29nbGUucHJvdG9idWYuQW55SAASFgoMdGV4dF9wYXlsb2FkGAMgASgJSAAS",
-            "LwoManNvbl9wYXlsb2FkGAYgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
-            "dEgAEi0KCXRpbWVzdGFtcBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASNQoRcmVjZWl2ZV90aW1lc3RhbXAYGCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEjIKCHNldmVyaXR5GAogASgOMiAuZ29vZ2xlLmxv",
-            "Z2dpbmcudHlwZS5Mb2dTZXZlcml0eRIRCglpbnNlcnRfaWQYBCABKAkSNgoM",
-            "aHR0cF9yZXF1ZXN0GAcgASgLMiAuZ29vZ2xlLmxvZ2dpbmcudHlwZS5IdHRw",
-            "UmVxdWVzdBI3CgZsYWJlbHMYCyADKAsyJy5nb29nbGUubG9nZ2luZy52Mi5M",
-            "b2dFbnRyeS5MYWJlbHNFbnRyeRI7CghtZXRhZGF0YRgZIAEoCzIlLmdvb2ds",
-            "ZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2VNZXRhZGF0YUICGAESNwoJb3BlcmF0",
-            "aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnlPcGVyYXRp",
-            "b24SDQoFdHJhY2UYFiABKAkSDwoHc3Bhbl9pZBgbIAEoCRIVCg10cmFjZV9z",
-            "YW1wbGVkGB4gASgIEkIKD3NvdXJjZV9sb2NhdGlvbhgXIAEoCzIpLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLkxvZ0VudHJ5U291cmNlTG9jYXRpb24aLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATq9AepBuQEK",
-            "GmxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nEh1wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9ncy97bG9nfRInb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9s",
-            "b2dzL3tsb2d9Ehtmb2xkZXJzL3tmb2xkZXJ9L2xvZ3Mve2xvZ30SLGJpbGxp",
-            "bmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9sb2dzL3tsb2d9Gghsb2df",
-            "bmFtZUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0aW9uEgoKAmlkGAEg",
-            "ASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMgASgIEgwKBGxhc3QY",
-            "BCABKAgiRgoWTG9nRW50cnlTb3VyY2VMb2NhdGlvbhIMCgRmaWxlGAEgASgJ",
-            "EgwKBGxpbmUYAiABKAMSEAoIZnVuY3Rpb24YAyABKAlCmQEKFWNvbS5nb29n",
-            "bGUubG9nZ2luZy52MkINTG9nRW50cnlQcm90b1ABWjhnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2xvZ2dpbmcvdjI7bG9nZ2luZ/gB",
-            "AaoCF0dvb2dsZS5DbG91ZC5Mb2dnaW5nLlYyygIXR29vZ2xlXENsb3VkXExv",
-            "Z2dpbmdcVjJiBnByb3RvMw=="));
+            "b2dnaW5nLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGiNn",
+            "b29nbGUvYXBpL21vbml0b3JlZF9yZXNvdXJjZS5wcm90bxoZZ29vZ2xlL2Fw",
+            "aS9yZXNvdXJjZS5wcm90bxomZ29vZ2xlL2xvZ2dpbmcvdHlwZS9odHRwX3Jl",
+            "cXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5cGUvbG9nX3NldmVyaXR5",
+            "LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGhxnb29nbGUvcHJv",
+            "dG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9h",
+            "bm5vdGF0aW9ucy5wcm90byLSBwoITG9nRW50cnkSFQoIbG9nX25hbWUYDCAB",
+            "KAlCA+BBAhI0CghyZXNvdXJjZRgIIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRv",
+            "cmVkUmVzb3VyY2VCA+BBAhItCg1wcm90b19wYXlsb2FkGAIgASgLMhQuZ29v",
+            "Z2xlLnByb3RvYnVmLkFueUgAEhYKDHRleHRfcGF5bG9hZBgDIAEoCUgAEi8K",
+            "DGpzb25fcGF5bG9hZBgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RI",
+            "ABIyCgl0aW1lc3RhbXAYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQESOgoRcmVjZWl2ZV90aW1lc3RhbXAYGCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNwoIc2V2ZXJpdHkYCiABKA4yIC5n",
+            "b29nbGUubG9nZ2luZy50eXBlLkxvZ1NldmVyaXR5QgPgQQESFgoJaW5zZXJ0",
+            "X2lkGAQgASgJQgPgQQESOwoMaHR0cF9yZXF1ZXN0GAcgASgLMiAuZ29vZ2xl",
+            "LmxvZ2dpbmcudHlwZS5IdHRwUmVxdWVzdEID4EEBEjwKBmxhYmVscxgLIAMo",
+            "CzInLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5LkxhYmVsc0VudHJ5QgPg",
+            "QQESPAoJb3BlcmF0aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
+            "RW50cnlPcGVyYXRpb25CA+BBARISCgV0cmFjZRgWIAEoCUID4EEBEhQKB3Nw",
+            "YW5faWQYGyABKAlCA+BBARIaCg10cmFjZV9zYW1wbGVkGB4gASgIQgPgQQES",
+            "RwoPc291cmNlX2xvY2F0aW9uGBcgASgLMikuZ29vZ2xlLmxvZ2dpbmcudjIu",
+            "TG9nRW50cnlTb3VyY2VMb2NhdGlvbkID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6vQHqQbkBChpsb2dnaW5n",
+            "Lmdvb2dsZWFwaXMuY29tL0xvZxIdcHJvamVjdHMve3Byb2plY3R9L2xvZ3Mv",
+            "e2xvZ30SJ29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9ncy97bG9n",
+            "fRIbZm9sZGVycy97Zm9sZGVyfS9sb2dzL3tsb2d9EixiaWxsaW5nQWNjb3Vu",
+            "dHMve2JpbGxpbmdfYWNjb3VudH0vbG9ncy97bG9nfRoIbG9nX25hbWVCCQoH",
+            "cGF5bG9hZCJiChFMb2dFbnRyeU9wZXJhdGlvbhIPCgJpZBgBIAEoCUID4EEB",
+            "EhUKCHByb2R1Y2VyGAIgASgJQgPgQQESEgoFZmlyc3QYAyABKAhCA+BBARIR",
+            "CgRsYXN0GAQgASgIQgPgQQEiVQoWTG9nRW50cnlTb3VyY2VMb2NhdGlvbhIR",
+            "CgRmaWxlGAEgASgJQgPgQQESEQoEbGluZRgCIAEoA0ID4EEBEhUKCGZ1bmN0",
+            "aW9uGAMgASgJQgPgQQFCmQEKFWNvbS5nb29nbGUubG9nZ2luZy52MkINTG9n",
+            "RW50cnlQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2xvZ2dpbmcvdjI7bG9nZ2luZ/gBAaoCF0dvb2dsZS5DbG91ZC5M",
+            "b2dnaW5nLlYyygIXR29vZ2xlXENsb3VkXExvZ2dpbmdcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null, null)
           }));
@@ -109,7 +110,6 @@ namespace Google.Cloud.Logging.V2 {
       insertId_ = other.insertId_;
       httpRequest_ = other.httpRequest_ != null ? other.httpRequest_.Clone() : null;
       labels_ = other.labels_.Clone();
-      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       operation_ = other.operation_ != null ? other.operation_.Clone() : null;
       trace_ = other.trace_;
       spanId_ = other.spanId_;
@@ -146,9 +146,9 @@ namespace Google.Cloud.Logging.V2 {
     ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
     ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
     ///
-    /// A project number may optionally be used in place of PROJECT_ID. The project
-    /// number is translated to its corresponding PROJECT_ID internally and the
-    /// `log_name` field will contain PROJECT_ID in queries and exports.
+    /// A project number may be used in place of PROJECT_ID. The project number is
+    /// translated to its corresponding PROJECT_ID internally and the `log_name`
+    /// field will contain PROJECT_ID in queries and exports.
     ///
     /// `[LOG_ID]` must be URL-encoded within `log_name`. Example:
     /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -242,12 +242,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int TimestampFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     /// <summary>
-    /// Optional. The time the event described by the log entry occurred.  This
-    /// time is used to compute the log entry's age and to enforce the logs
-    /// retention period. If this field is omitted in a new log entry, then Logging
-    /// assigns it the current time.  Timestamps have nanosecond accuracy, but
-    /// trailing zeros in the fractional seconds might be omitted when the
-    /// timestamp is displayed.
+    /// Optional. The time the event described by the log entry occurred. This time is used
+    /// to compute the log entry's age and to enforce the logs retention period.
+    /// If this field is omitted in a new log entry, then Logging assigns it the
+    /// current time. Timestamps have nanosecond accuracy, but trailing zeros in
+    /// the fractional seconds might be omitted when the timestamp is displayed.
     ///
     /// Incoming log entries should have timestamps that are no more than the [logs
     /// retention period](/logging/quotas) in the past, and no more than 24 hours
@@ -281,8 +280,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int SeverityFieldNumber = 10;
     private global::Google.Cloud.Logging.Type.LogSeverity severity_ = global::Google.Cloud.Logging.Type.LogSeverity.Default;
     /// <summary>
-    /// Optional. The severity of the log entry. The default value is
-    /// `LogSeverity.DEFAULT`.
+    /// Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.Type.LogSeverity Severity {
@@ -296,8 +294,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int InsertIdFieldNumber = 4;
     private string insertId_ = "";
     /// <summary>
-    /// Optional. A unique identifier for the log entry. If you provide a value,
-    /// then Logging considers other log entries in the same project, with the same
+    /// Optional. A unique identifier for the log entry. If you provide a value, then
+    /// Logging considers other log entries in the same project, with the same
     /// `timestamp`, and with the same `insert_id` to be duplicates which are
     /// removed in a single query result. However, there are no guarantees of
     /// de-duplication in the export of logs.
@@ -320,8 +318,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int HttpRequestFieldNumber = 7;
     private global::Google.Cloud.Logging.Type.HttpRequest httpRequest_;
     /// <summary>
-    /// Optional. Information about the HTTP request associated with this log
-    /// entry, if applicable.
+    /// Optional. Information about the HTTP request associated with this log entry, if
+    /// applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.Type.HttpRequest HttpRequest {
@@ -345,29 +343,6 @@ namespace Google.Cloud.Logging.V2 {
       get { return labels_; }
     }
 
-    /// <summary>Field number for the "metadata" field.</summary>
-    public const int MetadataFieldNumber = 25;
-    private global::Google.Api.MonitoredResourceMetadata metadata_;
-    /// <summary>
-    /// Deprecated. Output only. Additional metadata about the monitored resource.
-    ///
-    /// Only `k8s_container`, `k8s_pod`, and `k8s_node` MonitoredResources have
-    /// this field populated for GKE versions older than 1.12.6. For GKE versions
-    /// 1.12.6 and above, the `metadata` field has been deprecated. The Kubernetes
-    /// pod labels that used to be in `metadata.userLabels` will now be present in
-    /// the `labels` field with a key prefix of `k8s-pod/`. The Stackdriver system
-    /// labels that were present in the `metadata.systemLabels` field will no
-    /// longer be available in the LogEntry.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Api.MonitoredResourceMetadata Metadata {
-      get { return metadata_; }
-      set {
-        metadata_ = value;
-      }
-    }
-
     /// <summary>Field number for the "operation" field.</summary>
     public const int OperationFieldNumber = 15;
     private global::Google.Cloud.Logging.V2.LogEntryOperation operation_;
@@ -387,9 +362,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int TraceFieldNumber = 22;
     private string trace_ = "";
     /// <summary>
-    /// Optional. Resource name of the trace associated with the log entry, if any.
-    /// If it contains a relative resource name, the name is assumed to be relative
-    /// to `//tracing.googleapis.com`. Example:
+    /// Optional. Resource name of the trace associated with the log entry, if any. If it
+    /// contains a relative resource name, the name is assumed to be relative to
+    /// `//tracing.googleapis.com`. Example:
     /// `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -408,7 +383,7 @@ namespace Google.Cloud.Logging.V2 {
     ///
     /// For Trace spans, this is the same format that the Trace API v2 uses: a
     /// 16-character hexadecimal encoding of an 8-byte array, such as
-    /// &lt;code>"000000000000004a"&lt;/code>.
+    /// `000000000000004a`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SpanId {
@@ -442,8 +417,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int SourceLocationFieldNumber = 23;
     private global::Google.Cloud.Logging.V2.LogEntrySourceLocation sourceLocation_;
     /// <summary>
-    /// Optional. Source code location information associated with the log entry,
-    /// if any.
+    /// Optional. Source code location information associated with the log entry, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogEntrySourceLocation SourceLocation {
@@ -497,7 +471,6 @@ namespace Google.Cloud.Logging.V2 {
       if (InsertId != other.InsertId) return false;
       if (!object.Equals(HttpRequest, other.HttpRequest)) return false;
       if (!Labels.Equals(other.Labels)) return false;
-      if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!object.Equals(Operation, other.Operation)) return false;
       if (Trace != other.Trace) return false;
       if (SpanId != other.SpanId) return false;
@@ -521,7 +494,6 @@ namespace Google.Cloud.Logging.V2 {
       if (InsertId.Length != 0) hash ^= InsertId.GetHashCode();
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
       hash ^= Labels.GetHashCode();
-      if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (operation_ != null) hash ^= Operation.GetHashCode();
       if (Trace.Length != 0) hash ^= Trace.GetHashCode();
       if (SpanId.Length != 0) hash ^= SpanId.GetHashCode();
@@ -594,10 +566,6 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(194, 1);
         output.WriteMessage(ReceiveTimestamp);
       }
-      if (metadata_ != null) {
-        output.WriteRawTag(202, 1);
-        output.WriteMessage(Metadata);
-      }
       if (SpanId.Length != 0) {
         output.WriteRawTag(218, 1);
         output.WriteString(SpanId);
@@ -645,9 +613,6 @@ namespace Google.Cloud.Logging.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpRequest);
       }
       size += labels_.CalculateSize(_map_labels_codec);
-      if (metadata_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
-      }
       if (operation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Operation);
       }
@@ -708,12 +673,6 @@ namespace Google.Cloud.Logging.V2 {
         HttpRequest.MergeFrom(other.HttpRequest);
       }
       labels_.Add(other.labels_);
-      if (other.metadata_ != null) {
-        if (metadata_ == null) {
-          Metadata = new global::Google.Api.MonitoredResourceMetadata();
-        }
-        Metadata.MergeFrom(other.Metadata);
-      }
       if (other.operation_ != null) {
         if (operation_ == null) {
           Operation = new global::Google.Cloud.Logging.V2.LogEntryOperation();
@@ -846,13 +805,6 @@ namespace Google.Cloud.Logging.V2 {
               ReceiveTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ReceiveTimestamp);
-            break;
-          }
-          case 202: {
-            if (metadata_ == null) {
-              Metadata = new global::Google.Api.MonitoredResourceMetadata();
-            }
-            input.ReadMessage(Metadata);
             break;
           }
           case 218: {

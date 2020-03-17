@@ -30,16 +30,120 @@ namespace Google.Cloud.Logging.V2.Tests
     public sealed class GeneratedConfigServiceV2ClientTest
     {
         [xunit::FactAttribute]
+        public void GetBucketRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetBucketRequest request = new GetBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            LogBucket expectedResponse = new LogBucket
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                RetentionDays = -710726207,
+                LifecycleState = LifecycleState.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogBucket response = client.GetBucket(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBucketRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetBucketRequest request = new GetBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            LogBucket expectedResponse = new LogBucket
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                RetentionDays = -710726207,
+                LifecycleState = LifecycleState.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogBucket responseCallSettings = await client.GetBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogBucket responseCancellationToken = await client.GetBucketAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateBucketRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateBucketRequest request = new UpdateBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Bucket = new LogBucket(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogBucket expectedResponse = new LogBucket
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                RetentionDays = -710726207,
+                LifecycleState = LifecycleState.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogBucket response = client.UpdateBucket(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateBucketRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateBucketRequest request = new UpdateBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Bucket = new LogBucket(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogBucket expectedResponse = new LogBucket
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                RetentionDays = -710726207,
+                LifecycleState = LifecycleState.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogBucket responseCallSettings = await client.UpdateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogBucket responseCancellationToken = await client.UpdateBucketAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetSinkRequestObject()
         {
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -47,10 +151,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -70,11 +170,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -82,10 +182,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -107,11 +203,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -119,10 +215,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -142,11 +234,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -154,10 +246,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -179,11 +267,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -191,10 +279,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -203,7 +287,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.GetSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink response = client.GetSink(request.SinkNameAsSinkName);
+            LogSink response = client.GetSink(request.SinkNameAsLogSinkName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -214,11 +298,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -226,10 +310,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -238,9 +318,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.GetSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink responseCallSettings = await client.GetSinkAsync(request.SinkNameAsSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogSink responseCallSettings = await client.GetSinkAsync(request.SinkNameAsLogSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogSink responseCancellationToken = await client.GetSinkAsync(request.SinkNameAsSinkName, st::CancellationToken.None);
+            LogSink responseCancellationToken = await client.GetSinkAsync(request.SinkNameAsLogSinkName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -257,7 +337,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -265,10 +345,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -294,7 +370,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -302,10 +378,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -332,7 +404,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -340,10 +412,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -368,7 +436,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -376,10 +444,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -406,7 +470,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -414,10 +478,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -442,7 +502,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -450,10 +510,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -480,7 +536,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -488,10 +544,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -516,7 +568,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -524,10 +576,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -554,7 +602,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -562,10 +610,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -590,7 +634,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -598,10 +642,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -628,7 +668,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -636,10 +676,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -664,7 +700,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -672,10 +708,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -697,14 +729,14 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UniqueWriterIdentity = false,
                 UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -712,10 +744,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -735,14 +763,14 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UniqueWriterIdentity = false,
                 UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -750,10 +778,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -775,13 +799,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -789,10 +813,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -812,13 +832,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -826,10 +846,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -851,13 +867,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -865,10 +881,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -877,7 +889,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink response = client.UpdateSink(request.SinkNameAsSinkName, request.Sink, request.UpdateMask);
+            LogSink response = client.UpdateSink(request.SinkNameAsLogSinkName, request.Sink, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -888,13 +900,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -902,10 +914,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -914,9 +922,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, request.UpdateMask, st::CancellationToken.None);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -927,12 +935,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -940,10 +948,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -963,12 +967,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -976,10 +980,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -1001,12 +1001,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -1014,10 +1014,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -1026,7 +1022,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink response = client.UpdateSink(request.SinkNameAsSinkName, request.Sink);
+            LogSink response = client.UpdateSink(request.SinkNameAsLogSinkName, request.Sink);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1037,12 +1033,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
-                SinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                LogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 DestinationAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -1050,10 +1046,6 @@ namespace Google.Cloud.Logging.V2.Tests
 #pragma warning restore CS0612
                 WriterIdentity = "writer_identityfa497f32",
                 IncludeChildren = true,
-#pragma warning disable CS0612
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-#pragma warning restore CS0612
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -1062,9 +1054,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogSink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogSink responseCallSettings = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsSinkName, request.Sink, st::CancellationToken.None);
+            LogSink responseCancellationToken = await client.UpdateSinkAsync(request.SinkNameAsLogSinkName, request.Sink, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1075,7 +1067,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1090,7 +1082,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1106,7 +1098,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1121,7 +1113,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1137,12 +1129,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            client.DeleteSink(request.SinkNameAsSinkName);
+            client.DeleteSink(request.SinkNameAsLogSinkName);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1152,13 +1144,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteSinkAsync(request.SinkNameAsSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteSinkAsync(request.SinkNameAsSinkName, st::CancellationToken.None);
+            await client.DeleteSinkAsync(request.SinkNameAsLogSinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSinkAsync(request.SinkNameAsLogSinkName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1168,11 +1160,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1192,11 +1184,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1218,11 +1210,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1242,11 +1234,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1268,11 +1260,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1281,7 +1273,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.GetExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion response = client.GetExclusion(request.ExclusionName);
+            LogExclusion response = client.GetExclusion(request.LogExclusionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1292,11 +1284,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1305,9 +1297,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.GetExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion responseCallSettings = await client.GetExclusionAsync(request.ExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogExclusion responseCallSettings = await client.GetExclusionAsync(request.LogExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogExclusion responseCancellationToken = await client.GetExclusionAsync(request.ExclusionName, st::CancellationToken.None);
+            LogExclusion responseCancellationToken = await client.GetExclusionAsync(request.LogExclusionName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1323,7 +1315,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1348,7 +1340,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1375,7 +1367,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1400,7 +1392,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1427,7 +1419,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1452,7 +1444,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1479,7 +1471,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1504,7 +1496,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1531,7 +1523,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1556,7 +1548,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1583,7 +1575,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1608,7 +1600,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1630,13 +1622,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1656,13 +1648,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1684,13 +1676,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1710,13 +1702,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1738,13 +1730,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1753,7 +1745,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion response = client.UpdateExclusion(request.ExclusionName, request.Exclusion, request.UpdateMask);
+            LogExclusion response = client.UpdateExclusion(request.LogExclusionName, request.Exclusion, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1764,13 +1756,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new wkt::FieldMask(),
             };
             LogExclusion expectedResponse = new LogExclusion
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
                 Disabled = false,
@@ -1779,9 +1771,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogExclusion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request.ExclusionName, request.Exclusion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogExclusion responseCallSettings = await client.UpdateExclusionAsync(request.LogExclusionName, request.Exclusion, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request.ExclusionName, request.Exclusion, request.UpdateMask, st::CancellationToken.None);
+            LogExclusion responseCancellationToken = await client.UpdateExclusionAsync(request.LogExclusionName, request.Exclusion, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1792,7 +1784,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1807,7 +1799,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1823,7 +1815,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1838,7 +1830,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1854,12 +1846,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            client.DeleteExclusion(request.ExclusionName);
+            client.DeleteExclusion(request.LogExclusionName);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1869,13 +1861,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteExclusionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteExclusionAsync(request.ExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteExclusionAsync(request.ExclusionName, st::CancellationToken.None);
+            await client.DeleteExclusionAsync(request.LogExclusionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteExclusionAsync(request.LogExclusionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1885,11 +1877,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetCmekSettingsRequest request = new GetCmekSettingsRequest
             {
-                Name = "name1c9368b0",
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
             };
             CmekSettings expectedResponse = new CmekSettings
             {
-                Name = "name1c9368b0",
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
                 KmsKeyName = "kms_key_name06bd122b",
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
@@ -1906,11 +1898,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
             GetCmekSettingsRequest request = new GetCmekSettingsRequest
             {
-                Name = "name1c9368b0",
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
             };
             CmekSettings expectedResponse = new CmekSettings
             {
-                Name = "name1c9368b0",
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
                 KmsKeyName = "kms_key_name06bd122b",
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
@@ -1935,7 +1927,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             CmekSettings expectedResponse = new CmekSettings
             {
-                Name = "name1c9368b0",
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
                 KmsKeyName = "kms_key_name06bd122b",
                 ServiceAccountId = "service_account_idc0b71d2a",
             };
@@ -1958,7 +1950,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             CmekSettings expectedResponse = new CmekSettings
             {
-                Name = "name1c9368b0",
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
                 KmsKeyName = "kms_key_name06bd122b",
                 ServiceAccountId = "service_account_idc0b71d2a",
             };

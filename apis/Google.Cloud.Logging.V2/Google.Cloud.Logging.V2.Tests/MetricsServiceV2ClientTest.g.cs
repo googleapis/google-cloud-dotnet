@@ -16,6 +16,7 @@
 
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -34,11 +35,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -70,11 +71,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -108,11 +109,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -144,11 +145,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -182,11 +183,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -207,7 +208,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.GetLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric response = client.GetLogMetric(request.MetricNameAsMetricName);
+            LogMetric response = client.GetLogMetric(request.MetricNameAsLogMetricName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -218,11 +219,11 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             GetLogMetricRequest request = new GetLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -243,9 +244,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.GetLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric responseCallSettings = await client.GetLogMetricAsync(request.MetricNameAsMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogMetric responseCallSettings = await client.GetLogMetricAsync(request.MetricNameAsLogMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogMetric responseCancellationToken = await client.GetLogMetricAsync(request.MetricNameAsMetricName, st::CancellationToken.None);
+            LogMetric responseCancellationToken = await client.GetLogMetricAsync(request.MetricNameAsLogMetricName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -256,12 +257,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -293,12 +294,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -332,12 +333,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -369,12 +370,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -408,12 +409,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -434,7 +435,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.CreateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric response = client.CreateLogMetric(request.ParentAsMetricName, request.Metric);
+            LogMetric response = client.CreateLogMetric(request.ParentAsProjectName, request.Metric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -445,12 +446,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
-                ParentAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -471,9 +472,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.CreateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric responseCallSettings = await client.CreateLogMetricAsync(request.ParentAsMetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogMetric responseCallSettings = await client.CreateLogMetricAsync(request.ParentAsProjectName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request.ParentAsMetricName, request.Metric, st::CancellationToken.None);
+            LogMetric responseCancellationToken = await client.CreateLogMetricAsync(request.ParentAsProjectName, request.Metric, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -484,12 +485,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -521,12 +522,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -560,12 +561,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -597,12 +598,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -636,12 +637,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -662,7 +663,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric response = client.UpdateLogMetric(request.MetricNameAsMetricName, request.Metric);
+            LogMetric response = client.UpdateLogMetric(request.MetricNameAsLogMetricName, request.Metric);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -673,12 +674,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Metric = new LogMetric(),
             };
             LogMetric expectedResponse = new LogMetric
             {
-                MetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                LogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
                 Description = "description2cf9da67",
                 Filter = "filtere47ac9b2",
 #pragma warning disable CS0612
@@ -699,9 +700,9 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request.MetricNameAsMetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            LogMetric responseCallSettings = await client.UpdateLogMetricAsync(request.MetricNameAsLogMetricName, request.Metric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request.MetricNameAsMetricName, request.Metric, st::CancellationToken.None);
+            LogMetric responseCancellationToken = await client.UpdateLogMetricAsync(request.MetricNameAsLogMetricName, request.Metric, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -712,7 +713,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -727,7 +728,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -743,7 +744,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -758,7 +759,7 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -774,12 +775,12 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            client.DeleteLogMetric(request.MetricNameAsMetricName);
+            client.DeleteLogMetric(request.MetricNameAsLogMetricName);
             mockGrpcClient.VerifyAll();
         }
 
@@ -789,13 +790,13 @@ namespace Google.Cloud.Logging.V2.Tests
             moq::Mock<MetricsServiceV2.MetricsServiceV2Client> mockGrpcClient = new moq::Mock<MetricsServiceV2.MetricsServiceV2Client>(moq::MockBehavior.Strict);
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = MetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
+                MetricNameAsLogMetricName = LogMetricName.FromProjectMetric("[PROJECT]", "[METRIC]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteLogMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricsServiceV2Client client = new MetricsServiceV2ClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteLogMetricAsync(request.MetricNameAsMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteLogMetricAsync(request.MetricNameAsMetricName, st::CancellationToken.None);
+            await client.DeleteLogMetricAsync(request.MetricNameAsLogMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteLogMetricAsync(request.MetricNameAsLogMetricName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }

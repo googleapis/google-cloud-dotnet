@@ -418,10 +418,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteLog(gagr::ProjectName logName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual void DeleteLog(LogName logName, gaxgrpc::CallSettings callSettings = null) =>
             DeleteLog(new DeleteLogRequest
             {
-                LogNameAsProjectName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
+                LogNameAsLogName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
             }, callSettings);
 
         /// <summary>
@@ -446,10 +446,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::ProjectName logName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task DeleteLogAsync(LogName logName, gaxgrpc::CallSettings callSettings = null) =>
             DeleteLogAsync(new DeleteLogRequest
             {
-                LogNameAsProjectName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
+                LogNameAsLogName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
             }, callSettings);
 
         /// <summary>
@@ -474,250 +474,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::ProjectName logName, st::CancellationToken cancellationToken) =>
-            DeleteLogAsync(logName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteLog(gagr::OrganizationName logName, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteLog(new DeleteLogRequest
-            {
-                LogNameAsOrganizationName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::OrganizationName logName, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteLogAsync(new DeleteLogRequest
-            {
-                LogNameAsOrganizationName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::OrganizationName logName, st::CancellationToken cancellationToken) =>
-            DeleteLogAsync(logName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteLog(gagr::FolderName logName, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteLog(new DeleteLogRequest
-            {
-                LogNameAsFolderName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::FolderName logName, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteLogAsync(new DeleteLogRequest
-            {
-                LogNameAsFolderName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::FolderName logName, st::CancellationToken cancellationToken) =>
-            DeleteLogAsync(logName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteLog(gagr::BillingAccountName logName, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteLog(new DeleteLogRequest
-            {
-                LogNameAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::BillingAccountName logName, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteLogAsync(new DeleteLogRequest
-            {
-                LogNameAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes all the log entries in a log. The log reappears if it receives new
-        /// entries. Log entries written shortly before the delete operation might not
-        /// be deleted. Entries received after the delete operation with a timestamp
-        /// before the operation will be deleted.
-        /// </summary>
-        /// <param name="logName">
-        /// Required. The resource name of the log to delete:
-        /// 
-        /// "projects/[PROJECT_ID]/logs/[LOG_ID]"
-        /// "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-        /// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-        /// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"`,
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogAsync(gagr::BillingAccountName logName, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task DeleteLogAsync(LogName logName, st::CancellationToken cancellationToken) =>
             DeleteLogAsync(logName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -788,10 +545,10 @@ namespace Google.Cloud.Logging.V2
         /// "projects/my-project-id/logs/syslog"
         /// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
         /// 
-        /// The permission &amp;lt;code&amp;gt;logging.logEntries.create&amp;lt;/code&amp;gt; is needed on each
-        /// project, organization, billing account, or folder that is receiving
-        /// new log entries, whether the resource is specified in
-        /// &amp;lt;code&amp;gt;logName&amp;lt;/code&amp;gt; or in an individual log entry.
+        /// The permission `logging.logEntries.create` is needed on each project,
+        /// organization, billing account, or folder that is receiving new log
+        /// entries, whether the resource is specified in `logName` or in an
+        /// individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -874,10 +631,10 @@ namespace Google.Cloud.Logging.V2
         /// "projects/my-project-id/logs/syslog"
         /// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
         /// 
-        /// The permission &amp;lt;code&amp;gt;logging.logEntries.create&amp;lt;/code&amp;gt; is needed on each
-        /// project, organization, billing account, or folder that is receiving
-        /// new log entries, whether the resource is specified in
-        /// &amp;lt;code&amp;gt;logName&amp;lt;/code&amp;gt; or in an individual log entry.
+        /// The permission `logging.logEntries.create` is needed on each project,
+        /// organization, billing account, or folder that is receiving new log
+        /// entries, whether the resource is specified in `logName` or in an
+        /// individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -960,10 +717,10 @@ namespace Google.Cloud.Logging.V2
         /// "projects/my-project-id/logs/syslog"
         /// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
         /// 
-        /// The permission &amp;lt;code&amp;gt;logging.logEntries.create&amp;lt;/code&amp;gt; is needed on each
-        /// project, organization, billing account, or folder that is receiving
-        /// new log entries, whether the resource is specified in
-        /// &amp;lt;code&amp;gt;logName&amp;lt;/code&amp;gt; or in an individual log entry.
+        /// The permission `logging.logEntries.create` is needed on each project,
+        /// organization, billing account, or folder that is receiving new log
+        /// entries, whether the resource is specified in `logName` or in an
+        /// individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -1034,10 +791,10 @@ namespace Google.Cloud.Logging.V2
         /// "projects/my-project-id/logs/syslog"
         /// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
         /// 
-        /// The permission &amp;lt;code&amp;gt;logging.logEntries.create&amp;lt;/code&amp;gt; is needed on each
-        /// project, organization, billing account, or folder that is receiving
-        /// new log entries, whether the resource is specified in
-        /// &amp;lt;code&amp;gt;logName&amp;lt;/code&amp;gt; or in an individual log entry.
+        /// The permission `logging.logEntries.create` is needed on each project,
+        /// organization, billing account, or folder that is receiving new log
+        /// entries, whether the resource is specified in `logName` or in an
+        /// individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -1120,10 +877,10 @@ namespace Google.Cloud.Logging.V2
         /// "projects/my-project-id/logs/syslog"
         /// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
         /// 
-        /// The permission &amp;lt;code&amp;gt;logging.logEntries.create&amp;lt;/code&amp;gt; is needed on each
-        /// project, organization, billing account, or folder that is receiving
-        /// new log entries, whether the resource is specified in
-        /// &amp;lt;code&amp;gt;logName&amp;lt;/code&amp;gt; or in an individual log entry.
+        /// The permission `logging.logEntries.create` is needed on each project,
+        /// organization, billing account, or folder that is receiving new log
+        /// entries, whether the resource is specified in `logName` or in an
+        /// individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -1206,10 +963,10 @@ namespace Google.Cloud.Logging.V2
         /// "projects/my-project-id/logs/syslog"
         /// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
         /// 
-        /// The permission &amp;lt;code&amp;gt;logging.logEntries.create&amp;lt;/code&amp;gt; is needed on each
-        /// project, organization, billing account, or folder that is receiving
-        /// new log entries, whether the resource is specified in
-        /// &amp;lt;code&amp;gt;logName&amp;lt;/code&amp;gt; or in an individual log entry.
+        /// The permission `logging.logEntries.create` is needed on each project,
+        /// organization, billing account, or folder that is receiving new log
+        /// entries, whether the resource is specified in `logName` or in an
+        /// individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -1914,7 +1671,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogs(new ListLogsRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -1944,7 +1701,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogsAsync(new ListLogsRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -1974,7 +1731,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogs(new ListLogsRequest
             {
-                ParentAsProjectName = parent,
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2004,7 +1761,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogsAsync(new ListLogsRequest
             {
-                ParentAsProjectName = parent,
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2034,7 +1791,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogs(new ListLogsRequest
             {
-                ParentAsOrganizationName = parent,
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2064,7 +1821,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogsAsync(new ListLogsRequest
             {
-                ParentAsOrganizationName = parent,
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2094,7 +1851,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogs(new ListLogsRequest
             {
-                ParentAsFolderName = parent,
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2124,7 +1881,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogsAsync(new ListLogsRequest
             {
-                ParentAsFolderName = parent,
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2154,7 +1911,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogs(new ListLogsRequest
             {
-                ParentAsBillingAccountName = parent,
+                ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2184,7 +1941,7 @@ namespace Google.Cloud.Logging.V2
         public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListLogsAsync(new ListLogsRequest
             {
-                ParentAsBillingAccountName = parent,
+                ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);

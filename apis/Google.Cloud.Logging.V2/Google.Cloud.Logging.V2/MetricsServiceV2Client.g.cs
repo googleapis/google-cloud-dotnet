@@ -478,10 +478,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual LogMetric GetLogMetric(MetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual LogMetric GetLogMetric(LogMetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
             GetLogMetric(new GetLogMetricRequest
             {
-                MetricNameAsMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                MetricNameAsLogMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
             }, callSettings);
 
         /// <summary>
@@ -494,10 +494,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LogMetric> GetLogMetricAsync(MetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<LogMetric> GetLogMetricAsync(LogMetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
             GetLogMetricAsync(new GetLogMetricRequest
             {
-                MetricNameAsMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                MetricNameAsLogMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
             }, callSettings);
 
         /// <summary>
@@ -510,7 +510,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LogMetric> GetLogMetricAsync(MetricName metricName, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<LogMetric> GetLogMetricAsync(LogMetricName metricName, st::CancellationToken cancellationToken) =>
             GetLogMetricAsync(metricName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -621,10 +621,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual LogMetric CreateLogMetric(MetricName parent, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual LogMetric CreateLogMetric(gagr::ProjectName parent, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
             CreateLogMetric(new CreateLogMetricRequest
             {
-                ParentAsMetricName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Metric = gax::GaxPreconditions.CheckNotNull(metric, nameof(metric)),
             }, callSettings);
 
@@ -644,10 +644,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LogMetric> CreateLogMetricAsync(MetricName parent, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<LogMetric> CreateLogMetricAsync(gagr::ProjectName parent, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
             CreateLogMetricAsync(new CreateLogMetricRequest
             {
-                ParentAsMetricName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Metric = gax::GaxPreconditions.CheckNotNull(metric, nameof(metric)),
             }, callSettings);
 
@@ -667,7 +667,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LogMetric> CreateLogMetricAsync(MetricName parent, LogMetric metric, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<LogMetric> CreateLogMetricAsync(gagr::ProjectName parent, LogMetric metric, st::CancellationToken cancellationToken) =>
             CreateLogMetricAsync(parent, metric, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -782,10 +782,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual LogMetric UpdateLogMetric(MetricName metricName, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual LogMetric UpdateLogMetric(LogMetricName metricName, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
             UpdateLogMetric(new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                MetricNameAsLogMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
                 Metric = gax::GaxPreconditions.CheckNotNull(metric, nameof(metric)),
             }, callSettings);
 
@@ -806,10 +806,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LogMetric> UpdateLogMetricAsync(MetricName metricName, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<LogMetric> UpdateLogMetricAsync(LogMetricName metricName, LogMetric metric, gaxgrpc::CallSettings callSettings = null) =>
             UpdateLogMetricAsync(new UpdateLogMetricRequest
             {
-                MetricNameAsMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                MetricNameAsLogMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
                 Metric = gax::GaxPreconditions.CheckNotNull(metric, nameof(metric)),
             }, callSettings);
 
@@ -830,7 +830,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LogMetric> UpdateLogMetricAsync(MetricName metricName, LogMetric metric, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<LogMetric> UpdateLogMetricAsync(LogMetricName metricName, LogMetric metric, st::CancellationToken cancellationToken) =>
             UpdateLogMetricAsync(metricName, metric, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -915,10 +915,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteLogMetric(MetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual void DeleteLogMetric(LogMetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
             DeleteLogMetric(new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                MetricNameAsLogMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
             }, callSettings);
 
         /// <summary>
@@ -931,10 +931,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogMetricAsync(MetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task DeleteLogMetricAsync(LogMetricName metricName, gaxgrpc::CallSettings callSettings = null) =>
             DeleteLogMetricAsync(new DeleteLogMetricRequest
             {
-                MetricNameAsMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                MetricNameAsLogMetricName = gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
             }, callSettings);
 
         /// <summary>
@@ -947,7 +947,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteLogMetricAsync(MetricName metricName, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task DeleteLogMetricAsync(LogMetricName metricName, st::CancellationToken cancellationToken) =>
             DeleteLogMetricAsync(metricName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 

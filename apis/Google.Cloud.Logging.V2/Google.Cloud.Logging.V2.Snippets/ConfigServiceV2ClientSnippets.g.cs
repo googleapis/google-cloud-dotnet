@@ -26,6 +26,622 @@ namespace Google.Cloud.Logging.V2.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedConfigServiceV2ClientSnippets
     {
+        /// <summary>Snippet for ListBuckets</summary>
+        public void ListBucketsRequestObject()
+        {
+            // Snippet: ListBuckets(ListBucketsRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListBucketsRequest request = new ListBucketsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBuckets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public async Task ListBucketsRequestObjectAsync()
+        {
+            // Snippet: ListBucketsAsync(ListBucketsRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListBucketsRequest request = new ListBucketsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBucketsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogBucket item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBucketsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public void ListBuckets()
+        {
+            // Snippet: ListBuckets(string, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBuckets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public async Task ListBucketsAsync()
+        {
+            // Snippet: ListBucketsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBucketsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogBucket item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBucketsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public void ListBucketsResourceNames1()
+        {
+            // Snippet: ListBuckets(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBuckets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public async Task ListBucketsResourceNames1Async()
+        {
+            // Snippet: ListBucketsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBucketsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogBucket item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBucketsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public void ListBucketsResourceNames2()
+        {
+            // Snippet: ListBuckets(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBuckets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public async Task ListBucketsResourceNames2Async()
+        {
+            // Snippet: ListBucketsAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBucketsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogBucket item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBucketsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public void ListBucketsResourceNames3()
+        {
+            // Snippet: ListBuckets(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBuckets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public async Task ListBucketsResourceNames3Async()
+        {
+            // Snippet: ListBucketsAsync(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBucketsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogBucket item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBucketsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public void ListBucketsResourceNames4()
+        {
+            // Snippet: ListBuckets(BillingAccountLocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            BillingAccountLocationName parent = BillingAccountLocationName.FromBillingAccountLocation("[BILLING_ACCOUNT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBuckets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBuckets</summary>
+        public async Task ListBucketsResourceNames4Async()
+        {
+            // Snippet: ListBucketsAsync(BillingAccountLocationName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            BillingAccountLocationName parent = BillingAccountLocationName.FromBillingAccountLocation("[BILLING_ACCOUNT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBucketsResponse, LogBucket> response = configServiceV2Client.ListBucketsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogBucket item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBucketsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucket</summary>
+        public void GetBucketRequestObject()
+        {
+            // Snippet: GetBucket(GetBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetBucketRequest request = new GetBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            LogBucket response = configServiceV2Client.GetBucket(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketAsync</summary>
+        public async Task GetBucketRequestObjectAsync()
+        {
+            // Snippet: GetBucketAsync(GetBucketRequest, CallSettings)
+            // Additional: GetBucketAsync(GetBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetBucketRequest request = new GetBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            LogBucket response = await configServiceV2Client.GetBucketAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBucket</summary>
+        public void UpdateBucketRequestObject()
+        {
+            // Snippet: UpdateBucket(UpdateBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateBucketRequest request = new UpdateBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Bucket = new LogBucket(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            LogBucket response = configServiceV2Client.UpdateBucket(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBucketAsync</summary>
+        public async Task UpdateBucketRequestObjectAsync()
+        {
+            // Snippet: UpdateBucketAsync(UpdateBucketRequest, CallSettings)
+            // Additional: UpdateBucketAsync(UpdateBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBucketRequest request = new UpdateBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Bucket = new LogBucket(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            LogBucket response = await configServiceV2Client.UpdateBucketAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSinks</summary>
         public void ListSinksRequestObject()
         {
@@ -581,7 +1197,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             // Make the request
             LogSink response = configServiceV2Client.GetSink(request);
@@ -598,7 +1214,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             GetSinkRequest request = new GetSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             // Make the request
             LogSink response = await configServiceV2Client.GetSinkAsync(request);
@@ -635,11 +1251,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for GetSink</summary>
         public void GetSinkResourceNames()
         {
-            // Snippet: GetSink(SinkName, CallSettings)
+            // Snippet: GetSink(LogSinkName, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             // Make the request
             LogSink response = configServiceV2Client.GetSink(sinkName);
             // End snippet
@@ -648,12 +1264,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for GetSinkAsync</summary>
         public async Task GetSinkResourceNamesAsync()
         {
-            // Snippet: GetSinkAsync(SinkName, CallSettings)
-            // Additional: GetSinkAsync(SinkName, CancellationToken)
+            // Snippet: GetSinkAsync(LogSinkName, CallSettings)
+            // Additional: GetSinkAsync(LogSinkName, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             // Make the request
             LogSink response = await configServiceV2Client.GetSinkAsync(sinkName);
             // End snippet
@@ -850,7 +1466,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UniqueWriterIdentity = false,
                 UpdateMask = new FieldMask(),
@@ -870,7 +1486,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             UpdateSinkRequest request = new UpdateSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
                 Sink = new LogSink(),
                 UniqueWriterIdentity = false,
                 UpdateMask = new FieldMask(),
@@ -914,11 +1530,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for UpdateSink</summary>
         public void UpdateSink1ResourceNames()
         {
-            // Snippet: UpdateSink(SinkName, LogSink, FieldMask, CallSettings)
+            // Snippet: UpdateSink(LogSinkName, LogSink, FieldMask, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             LogSink sink = new LogSink();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -929,12 +1545,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for UpdateSinkAsync</summary>
         public async Task UpdateSink1ResourceNamesAsync()
         {
-            // Snippet: UpdateSinkAsync(SinkName, LogSink, FieldMask, CallSettings)
-            // Additional: UpdateSinkAsync(SinkName, LogSink, FieldMask, CancellationToken)
+            // Snippet: UpdateSinkAsync(LogSinkName, LogSink, FieldMask, CallSettings)
+            // Additional: UpdateSinkAsync(LogSinkName, LogSink, FieldMask, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             LogSink sink = new LogSink();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -974,11 +1590,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for UpdateSink</summary>
         public void UpdateSink2ResourceNames()
         {
-            // Snippet: UpdateSink(SinkName, LogSink, CallSettings)
+            // Snippet: UpdateSink(LogSinkName, LogSink, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             LogSink sink = new LogSink();
             // Make the request
             LogSink response = configServiceV2Client.UpdateSink(sinkName, sink);
@@ -988,12 +1604,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for UpdateSinkAsync</summary>
         public async Task UpdateSink2ResourceNamesAsync()
         {
-            // Snippet: UpdateSinkAsync(SinkName, LogSink, CallSettings)
-            // Additional: UpdateSinkAsync(SinkName, LogSink, CancellationToken)
+            // Snippet: UpdateSinkAsync(LogSinkName, LogSink, CallSettings)
+            // Additional: UpdateSinkAsync(LogSinkName, LogSink, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             LogSink sink = new LogSink();
             // Make the request
             LogSink response = await configServiceV2Client.UpdateSinkAsync(sinkName, sink);
@@ -1009,7 +1625,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             // Make the request
             configServiceV2Client.DeleteSink(request);
@@ -1026,7 +1642,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             DeleteSinkRequest request = new DeleteSinkRequest
             {
-                SinkNameAsSinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]"),
+                SinkNameAsLogSinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]"),
             };
             // Make the request
             await configServiceV2Client.DeleteSinkAsync(request);
@@ -1063,11 +1679,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for DeleteSink</summary>
         public void DeleteSinkResourceNames()
         {
-            // Snippet: DeleteSink(SinkName, CallSettings)
+            // Snippet: DeleteSink(LogSinkName, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             // Make the request
             configServiceV2Client.DeleteSink(sinkName);
             // End snippet
@@ -1076,12 +1692,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for DeleteSinkAsync</summary>
         public async Task DeleteSinkResourceNamesAsync()
         {
-            // Snippet: DeleteSinkAsync(SinkName, CallSettings)
-            // Additional: DeleteSinkAsync(SinkName, CancellationToken)
+            // Snippet: DeleteSinkAsync(LogSinkName, CallSettings)
+            // Additional: DeleteSinkAsync(LogSinkName, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            SinkName sinkName = SinkName.FromProjectSink("[PROJECT]", "[SINK]");
+            LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             // Make the request
             await configServiceV2Client.DeleteSinkAsync(sinkName);
             // End snippet
@@ -1642,7 +2258,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             // Make the request
             LogExclusion response = configServiceV2Client.GetExclusion(request);
@@ -1659,7 +2275,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             GetExclusionRequest request = new GetExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             // Make the request
             LogExclusion response = await configServiceV2Client.GetExclusionAsync(request);
@@ -1696,11 +2312,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for GetExclusion</summary>
         public void GetExclusionResourceNames()
         {
-            // Snippet: GetExclusion(ExclusionName, CallSettings)
+            // Snippet: GetExclusion(LogExclusionName, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            ExclusionName name = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
+            LogExclusionName name = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
             // Make the request
             LogExclusion response = configServiceV2Client.GetExclusion(name);
             // End snippet
@@ -1709,12 +2325,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for GetExclusionAsync</summary>
         public async Task GetExclusionResourceNamesAsync()
         {
-            // Snippet: GetExclusionAsync(ExclusionName, CallSettings)
-            // Additional: GetExclusionAsync(ExclusionName, CancellationToken)
+            // Snippet: GetExclusionAsync(LogExclusionName, CallSettings)
+            // Additional: GetExclusionAsync(LogExclusionName, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            ExclusionName name = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
+            LogExclusionName name = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
             // Make the request
             LogExclusion response = await configServiceV2Client.GetExclusionAsync(name);
             // End snippet
@@ -1909,7 +2525,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new FieldMask(),
             };
@@ -1928,7 +2544,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             UpdateExclusionRequest request = new UpdateExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
                 Exclusion = new LogExclusion(),
                 UpdateMask = new FieldMask(),
             };
@@ -1971,11 +2587,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for UpdateExclusion</summary>
         public void UpdateExclusionResourceNames()
         {
-            // Snippet: UpdateExclusion(ExclusionName, LogExclusion, FieldMask, CallSettings)
+            // Snippet: UpdateExclusion(LogExclusionName, LogExclusion, FieldMask, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            ExclusionName name = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
+            LogExclusionName name = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
             LogExclusion exclusion = new LogExclusion();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -1986,12 +2602,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for UpdateExclusionAsync</summary>
         public async Task UpdateExclusionResourceNamesAsync()
         {
-            // Snippet: UpdateExclusionAsync(ExclusionName, LogExclusion, FieldMask, CallSettings)
-            // Additional: UpdateExclusionAsync(ExclusionName, LogExclusion, FieldMask, CancellationToken)
+            // Snippet: UpdateExclusionAsync(LogExclusionName, LogExclusion, FieldMask, CallSettings)
+            // Additional: UpdateExclusionAsync(LogExclusionName, LogExclusion, FieldMask, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            ExclusionName name = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
+            LogExclusionName name = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
             LogExclusion exclusion = new LogExclusion();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -2008,7 +2624,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             // Make the request
             configServiceV2Client.DeleteExclusion(request);
@@ -2025,7 +2641,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             DeleteExclusionRequest request = new DeleteExclusionRequest
             {
-                ExclusionName = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
+                LogExclusionName = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]"),
             };
             // Make the request
             await configServiceV2Client.DeleteExclusionAsync(request);
@@ -2062,11 +2678,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for DeleteExclusion</summary>
         public void DeleteExclusionResourceNames()
         {
-            // Snippet: DeleteExclusion(ExclusionName, CallSettings)
+            // Snippet: DeleteExclusion(LogExclusionName, CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            ExclusionName name = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
+            LogExclusionName name = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
             // Make the request
             configServiceV2Client.DeleteExclusion(name);
             // End snippet
@@ -2075,12 +2691,12 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for DeleteExclusionAsync</summary>
         public async Task DeleteExclusionResourceNamesAsync()
         {
-            // Snippet: DeleteExclusionAsync(ExclusionName, CallSettings)
-            // Additional: DeleteExclusionAsync(ExclusionName, CancellationToken)
+            // Snippet: DeleteExclusionAsync(LogExclusionName, CallSettings)
+            // Additional: DeleteExclusionAsync(LogExclusionName, CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            ExclusionName name = ExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
+            LogExclusionName name = LogExclusionName.FromProjectExclusion("[PROJECT]", "[EXCLUSION]");
             // Make the request
             await configServiceV2Client.DeleteExclusionAsync(name);
             // End snippet
@@ -2093,7 +2709,10 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            GetCmekSettingsRequest request = new GetCmekSettingsRequest { Name = "", };
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest
+            {
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
+            };
             // Make the request
             CmekSettings response = configServiceV2Client.GetCmekSettings(request);
             // End snippet
@@ -2107,7 +2726,10 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            GetCmekSettingsRequest request = new GetCmekSettingsRequest { Name = "", };
+            GetCmekSettingsRequest request = new GetCmekSettingsRequest
+            {
+                CmekSettingsName = CmekSettingsName.FromProject("[PROJECT]"),
+            };
             // Make the request
             CmekSettings response = await configServiceV2Client.GetCmekSettingsAsync(request);
             // End snippet
