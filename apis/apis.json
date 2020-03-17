@@ -1308,6 +1308,24 @@
     }
   },
   {
+    "id": "Google.Cloud.WebRisk.V1",
+    "generator": "micro",
+    "protoPath": "google/cloud/webrisk/v1",
+    "productName": "Google Cloud Web Risk",
+    "productUrl": "https://cloud.google.com/web-risk/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Web Risk API v1, which lets client applications check URLs against Google's constantly updated lists of unsafe web resources.",
+    "tags": [
+      "security",
+      "phishing",
+      "malware",
+      "safety",
+      "risk",
+      "url"
+    ]
+  },
+  {
     "id": "Google.Cloud.WebRisk.V1Beta1",
     "generator": "micro",
     "protoPath": "google/cloud/webrisk/v1beta1",
@@ -1316,7 +1334,7 @@
     "version": "2.0.0-beta01",
     "releaseLevelOverride": "beta",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Google Cloud Web Risk API, which lets client applications check URLs against Google's constantly updated lists of unsafe web resources.",
+    "description": "Recommended Google client library to access the Google Cloud Web Risk API v1beta1.",
     "tags": [
       "security",
       "phishing",
