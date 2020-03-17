@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.0.0, released 2020-03-17
+
+No API surface changes compared with 2.0.0-beta01, just dependency
+and implementation changes.
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 No significant changes since 1.1.0, other than depending on a new major version of Google.Api.CommonProtos.
