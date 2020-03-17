@@ -39,6 +39,6 @@ branches:
 script:
   - python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
   - touch build_timing_log.txt
-  - echo "Dotnet version: $(dotnet --version)"
+  - dotnet --version
   - ./build.sh --diff --regex $API_REGEX
   - ./processbuildtiminglog.sh
