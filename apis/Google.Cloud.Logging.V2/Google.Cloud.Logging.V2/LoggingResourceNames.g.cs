@@ -23,70 +23,11 @@ namespace Google.Cloud.Logging.V2
     public partial class DeleteLogRequest
     {
         /// <summary>
-        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="LogName"/> resource name property.
+        /// <see cref="gclv::LogName"/>-typed view over the <see cref="LogName"/> resource name property.
         /// </summary>
-        public gagr::ProjectName LogNameAsProjectName
+        public gclv::LogName LogNameAsLogName
         {
-            get => string.IsNullOrEmpty(LogName) ? null : gagr::ProjectName.Parse(LogName, allowUnparsed: true);
-            set => LogName = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="LogName"/> resource name property.
-        /// </summary>
-        public gagr::OrganizationName LogNameAsOrganizationName
-        {
-            get => string.IsNullOrEmpty(LogName) ? null : gagr::OrganizationName.Parse(LogName, allowUnparsed: true);
-            set => LogName = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="LogName"/> resource name property.
-        /// </summary>
-        public gagr::FolderName LogNameAsFolderName
-        {
-            get => string.IsNullOrEmpty(LogName) ? null : gagr::FolderName.Parse(LogName, allowUnparsed: true);
-            set => LogName = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="gagr::BillingAccountName"/>-typed view over the <see cref="LogName"/> resource name property.
-        /// </summary>
-        public gagr::BillingAccountName LogNameAsBillingAccountName
-        {
-            get => string.IsNullOrEmpty(LogName) ? null : gagr::BillingAccountName.Parse(LogName, allowUnparsed: true);
-            set => LogName = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="LogName"/> resource name property.
-        /// </summary>
-        public gax::IResourceName LogNameAsResourceName
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(LogName))
-                {
-                    return null;
-                }
-                if (gagr::ProjectName.TryParse(LogName, out gagr::ProjectName project))
-                {
-                    return project;
-                }
-                if (gagr::OrganizationName.TryParse(LogName, out gagr::OrganizationName organization))
-                {
-                    return organization;
-                }
-                if (gagr::FolderName.TryParse(LogName, out gagr::FolderName folder))
-                {
-                    return folder;
-                }
-                if (gagr::BillingAccountName.TryParse(LogName, out gagr::BillingAccountName billingAccount))
-                {
-                    return billingAccount;
-                }
-                return gax::UnparsedResourceName.Parse(LogName);
-            }
+            get => string.IsNullOrEmpty(LogName) ? null : gclv::LogName.Parse(LogName, allowUnparsed: true);
             set => LogName = value?.ToString() ?? "";
         }
     }

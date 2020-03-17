@@ -21,10 +21,10 @@ using sys = System;
 
 namespace Google.Cloud.Logging.V2
 {
-    /// <summary>Resource name for the <c>Metric</c> resource.</summary>
-    public sealed partial class MetricName : gax::IResourceName, sys::IEquatable<MetricName>
+    /// <summary>Resource name for the <c>LogMetric</c> resource.</summary>
+    public sealed partial class LogMetricName : gax::IResourceName, sys::IEquatable<LogMetricName>
     {
-        /// <summary>The possible contents of <see cref="MetricName"/>.</summary>
+        /// <summary>The possible contents of <see cref="LogMetricName"/>.</summary>
         public enum ResourceNameType
         {
             /// <summary>An unparsed resource name.</summary>
@@ -36,62 +36,63 @@ namespace Google.Cloud.Logging.V2
 
         private static gax::PathTemplate s_projectMetric = new gax::PathTemplate("projects/{project}/metrics/{metric}");
 
-        /// <summary>Creates a <see cref="MetricName"/> containing an unparsed resource name.</summary>
+        /// <summary>Creates a <see cref="LogMetricName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
         /// <returns>
-        /// A new instance of <see cref="MetricName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// A new instance of <see cref="LogMetricName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
         /// </returns>
-        public static MetricName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new MetricName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+        public static LogMetricName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new LogMetricName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="MetricName"/> with the pattern <c>projects/{project}/metrics/{metric}</c>.
+        /// Creates a <see cref="LogMetricName"/> with the pattern <c>projects/{project}/metrics/{metric}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="metricId">The <c>Metric</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="MetricName"/> constructed from the provided ids.</returns>
-        public static MetricName FromProjectMetric(string projectId, string metricId) =>
-            new MetricName(ResourceNameType.ProjectMetric, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), metricId: gax::GaxPreconditions.CheckNotNullOrEmpty(metricId, nameof(metricId)));
+        /// <returns>A new instance of <see cref="LogMetricName"/> constructed from the provided ids.</returns>
+        public static LogMetricName FromProjectMetric(string projectId, string metricId) =>
+            new LogMetricName(ResourceNameType.ProjectMetric, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), metricId: gax::GaxPreconditions.CheckNotNullOrEmpty(metricId, nameof(metricId)));
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="MetricName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="LogMetricName"/> with pattern
         /// <c>projects/{project}/metrics/{metric}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="metricId">The <c>Metric</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="MetricName"/> with pattern
+        /// The string representation of this <see cref="LogMetricName"/> with pattern
         /// <c>projects/{project}/metrics/{metric}</c>.
         /// </returns>
         public static string Format(string projectId, string metricId) => FormatProjectMetric(projectId, metricId);
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="MetricName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="LogMetricName"/> with pattern
         /// <c>projects/{project}/metrics/{metric}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="metricId">The <c>Metric</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="MetricName"/> with pattern
+        /// The string representation of this <see cref="LogMetricName"/> with pattern
         /// <c>projects/{project}/metrics/{metric}</c>.
         /// </returns>
         public static string FormatProjectMetric(string projectId, string metricId) =>
             s_projectMetric.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(metricId, nameof(metricId)));
 
-        /// <summary>Parses the given resource name string into a new <see cref="MetricName"/> instance.</summary>
+        /// <summary>Parses the given resource name string into a new <see cref="LogMetricName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/metrics/{metric}</c></description></item>
         /// </list>
         /// </remarks>
-        /// <param name="metricName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="MetricName"/> if successful.</returns>
-        public static MetricName Parse(string metricName) => Parse(metricName, false);
+        /// <param name="logMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LogMetricName"/> if successful.</returns>
+        public static LogMetricName Parse(string logMetricName) => Parse(logMetricName, false);
 
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="MetricName"/> instance; optionally allowing an
-        /// unparseable resource name.
+        /// Parses the given resource name string into a new <see cref="LogMetricName"/> instance; optionally allowing
+        /// an unparseable resource name.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -100,18 +101,18 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="metricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="logMetricName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
-        /// <returns>The parsed <see cref="MetricName"/> if successful.</returns>
-        public static MetricName Parse(string metricName, bool allowUnparsed) =>
-            TryParse(metricName, allowUnparsed, out MetricName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+        /// <returns>The parsed <see cref="LogMetricName"/> if successful.</returns>
+        public static LogMetricName Parse(string logMetricName, bool allowUnparsed) =>
+            TryParse(logMetricName, allowUnparsed, out LogMetricName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="MetricName"/> instance.
+        /// Tries to parse the given resource name string into a new <see cref="LogMetricName"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -119,15 +120,15 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><c>projects/{project}/metrics/{metric}</c></description></item>
         /// </list>
         /// </remarks>
-        /// <param name="metricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="logMetricName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="MetricName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="LogMetricName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string metricName, out MetricName result) => TryParse(metricName, false, out result);
+        public static bool TryParse(string logMetricName, out LogMetricName result) => TryParse(logMetricName, false, out result);
 
         /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="MetricName"/> instance; optionally
+        /// Tries to parse the given resource name string into a new <see cref="LogMetricName"/> instance; optionally
         /// allowing an unparseable resource name.
         /// </summary>
         /// <remarks>
@@ -137,28 +138,28 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="metricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="logMetricName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="MetricName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="LogMetricName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string metricName, bool allowUnparsed, out MetricName result)
+        public static bool TryParse(string logMetricName, bool allowUnparsed, out LogMetricName result)
         {
-            gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName));
+            gax::GaxPreconditions.CheckNotNull(logMetricName, nameof(logMetricName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectMetric.TryParseName(metricName, out resourceName))
+            if (s_projectMetric.TryParseName(logMetricName, out resourceName))
             {
                 result = FromProjectMetric(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
             {
-                if (gax::UnparsedResourceName.TryParse(metricName, out gax::UnparsedResourceName unparsedResourceName))
+                if (gax::UnparsedResourceName.TryParse(logMetricName, out gax::UnparsedResourceName unparsedResourceName))
                 {
                     result = FromUnparsed(unparsedResourceName);
                     return true;
@@ -168,7 +169,7 @@ namespace Google.Cloud.Logging.V2
             return false;
         }
 
-        private MetricName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string metricId = null, string projectId = null)
+        private LogMetricName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string metricId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
@@ -177,12 +178,12 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a new instance of a <see cref="MetricName"/> class from the component parts of pattern
+        /// Constructs a new instance of a <see cref="LogMetricName"/> class from the component parts of pattern
         /// <c>projects/{project}/metrics/{metric}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="metricId">The <c>Metric</c> ID. Must not be <c>null</c> or empty.</param>
-        public MetricName(string projectId, string metricId) : this(ResourceNameType.ProjectMetric, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), metricId: gax::GaxPreconditions.CheckNotNullOrEmpty(metricId, nameof(metricId)))
+        public LogMetricName(string projectId, string metricId) : this(ResourceNameType.ProjectMetric, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), metricId: gax::GaxPreconditions.CheckNotNullOrEmpty(metricId, nameof(metricId)))
         {
         }
 
@@ -223,26 +224,26 @@ namespace Google.Cloud.Logging.V2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as MetricName);
+        public override bool Equals(object obj) => Equals(obj as LogMetricName);
 
         /// <inheritdoc/>
-        public bool Equals(MetricName other) => ToString() == other?.ToString();
+        public bool Equals(LogMetricName other) => ToString() == other?.ToString();
 
         /// <inheritdoc/>
-        public static bool operator ==(MetricName a, MetricName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(LogMetricName a, LogMetricName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc/>
-        public static bool operator !=(MetricName a, MetricName b) => !(a == b);
+        public static bool operator !=(LogMetricName a, LogMetricName b) => !(a == b);
     }
 
     public partial class LogMetric
     {
         /// <summary>
-        /// <see cref="gclv::MetricName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gclv::LogMetricName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gclv::MetricName MetricName
+        public gclv::LogMetricName LogMetricName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gclv::MetricName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LogMetricName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -262,21 +263,23 @@ namespace Google.Cloud.Logging.V2
     public partial class GetLogMetricRequest
     {
         /// <summary>
-        /// <see cref="gclv::MetricName"/>-typed view over the <see cref="MetricName"/> resource name property.
+        /// <see cref="LogMetricName"/>-typed view over the <see cref="MetricName"/> resource name property.
         /// </summary>
-        public gclv::MetricName MetricNameAsMetricName
+        public LogMetricName MetricNameAsLogMetricName
         {
-            get => string.IsNullOrEmpty(MetricName) ? null : gclv::MetricName.Parse(MetricName, allowUnparsed: true);
+            get => string.IsNullOrEmpty(MetricName) ? null : LogMetricName.Parse(MetricName, allowUnparsed: true);
             set => MetricName = value?.ToString() ?? "";
         }
     }
 
     public partial class CreateLogMetricRequest
     {
-        /// <summary><see cref="MetricName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public MetricName ParentAsMetricName
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : MetricName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -284,11 +287,11 @@ namespace Google.Cloud.Logging.V2
     public partial class UpdateLogMetricRequest
     {
         /// <summary>
-        /// <see cref="gclv::MetricName"/>-typed view over the <see cref="MetricName"/> resource name property.
+        /// <see cref="LogMetricName"/>-typed view over the <see cref="MetricName"/> resource name property.
         /// </summary>
-        public gclv::MetricName MetricNameAsMetricName
+        public LogMetricName MetricNameAsLogMetricName
         {
-            get => string.IsNullOrEmpty(MetricName) ? null : gclv::MetricName.Parse(MetricName, allowUnparsed: true);
+            get => string.IsNullOrEmpty(MetricName) ? null : LogMetricName.Parse(MetricName, allowUnparsed: true);
             set => MetricName = value?.ToString() ?? "";
         }
     }
@@ -296,11 +299,11 @@ namespace Google.Cloud.Logging.V2
     public partial class DeleteLogMetricRequest
     {
         /// <summary>
-        /// <see cref="gclv::MetricName"/>-typed view over the <see cref="MetricName"/> resource name property.
+        /// <see cref="LogMetricName"/>-typed view over the <see cref="MetricName"/> resource name property.
         /// </summary>
-        public gclv::MetricName MetricNameAsMetricName
+        public LogMetricName MetricNameAsLogMetricName
         {
-            get => string.IsNullOrEmpty(MetricName) ? null : gclv::MetricName.Parse(MetricName, allowUnparsed: true);
+            get => string.IsNullOrEmpty(MetricName) ? null : LogMetricName.Parse(MetricName, allowUnparsed: true);
             set => MetricName = value?.ToString() ?? "";
         }
     }

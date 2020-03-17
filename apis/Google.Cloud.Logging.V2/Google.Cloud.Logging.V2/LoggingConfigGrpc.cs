@@ -3,7 +3,7 @@
 //     source: google/logging/v2/logging_config.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -31,6 +30,11 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.ConfigServiceV2";
 
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListBucketsRequest> __Marshaller_google_logging_v2_ListBucketsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListBucketsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListBucketsResponse> __Marshaller_google_logging_v2_ListBucketsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListBucketsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetBucketRequest> __Marshaller_google_logging_v2_GetBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetBucketRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogBucket> __Marshaller_google_logging_v2_LogBucket = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogBucket.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateBucketRequest> __Marshaller_google_logging_v2_UpdateBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateBucketRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksRequest> __Marshaller_google_logging_v2_ListSinksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksResponse> __Marshaller_google_logging_v2_ListSinksResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetSinkRequest> __Marshaller_google_logging_v2_GetSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser.ParseFrom);
@@ -49,6 +53,27 @@ namespace Google.Cloud.Logging.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetCmekSettingsRequest> __Marshaller_google_logging_v2_GetCmekSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetCmekSettingsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CmekSettings> __Marshaller_google_logging_v2_CmekSettings = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CmekSettings.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest> __Marshaller_google_logging_v2_UpdateCmekSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateCmekSettingsRequest.Parser.ParseFrom);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListBucketsRequest, global::Google.Cloud.Logging.V2.ListBucketsResponse> __Method_ListBuckets = new grpc::Method<global::Google.Cloud.Logging.V2.ListBucketsRequest, global::Google.Cloud.Logging.V2.ListBucketsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBuckets",
+        __Marshaller_google_logging_v2_ListBucketsRequest,
+        __Marshaller_google_logging_v2_ListBucketsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetBucketRequest, global::Google.Cloud.Logging.V2.LogBucket> __Method_GetBucket = new grpc::Method<global::Google.Cloud.Logging.V2.GetBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBucket",
+        __Marshaller_google_logging_v2_GetBucketRequest,
+        __Marshaller_google_logging_v2_LogBucket);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.Cloud.Logging.V2.LogBucket> __Method_UpdateBucket = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBucket",
+        __Marshaller_google_logging_v2_UpdateBucketRequest,
+        __Marshaller_google_logging_v2_LogBucket);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse> __Method_ListSinks = new grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(
         grpc::MethodType.Unary,
@@ -144,6 +169,49 @@ namespace Google.Cloud.Logging.V2 {
     [grpc::BindServiceMethod(typeof(ConfigServiceV2), "BindService")]
     public abstract partial class ConfigServiceV2Base
     {
+      /// <summary>
+      /// Lists buckets (Beta).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListBucketsResponse> ListBuckets(global::Google.Cloud.Logging.V2.ListBucketsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a bucket (Beta).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogBucket> GetBucket(global::Google.Cloud.Logging.V2.GetBucketRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a bucket. This method replaces the following fields in the
+      /// existing bucket with values from the new bucket: `retention_period`
+      ///
+      /// If the retention period is decreased and the bucket is locked,
+      /// FAILED_PRECONDITION will be returned.
+      ///
+      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
+      /// will be returned.
+      ///
+      /// A buckets region may not be modified after it is created.
+      /// This method is in Beta.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogBucket> UpdateBucket(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       /// <summary>
       /// Lists sinks.
       /// </summary>
@@ -331,6 +399,178 @@ namespace Google.Cloud.Logging.V2 {
       {
       }
 
+      /// <summary>
+      /// Lists buckets (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.ListBucketsResponse ListBuckets(global::Google.Cloud.Logging.V2.ListBucketsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBuckets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists buckets (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.ListBucketsResponse ListBuckets(global::Google.Cloud.Logging.V2.ListBucketsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBuckets, null, options, request);
+      }
+      /// <summary>
+      /// Lists buckets (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListBucketsResponse> ListBucketsAsync(global::Google.Cloud.Logging.V2.ListBucketsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBucketsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists buckets (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListBucketsResponse> ListBucketsAsync(global::Google.Cloud.Logging.V2.ListBucketsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBuckets, null, options, request);
+      }
+      /// <summary>
+      /// Gets a bucket (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogBucket GetBucket(global::Google.Cloud.Logging.V2.GetBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a bucket (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogBucket GetBucket(global::Google.Cloud.Logging.V2.GetBucketRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBucket, null, options, request);
+      }
+      /// <summary>
+      /// Gets a bucket (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogBucket> GetBucketAsync(global::Google.Cloud.Logging.V2.GetBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a bucket (Beta).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogBucket> GetBucketAsync(global::Google.Cloud.Logging.V2.GetBucketRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBucket, null, options, request);
+      }
+      /// <summary>
+      /// Updates a bucket. This method replaces the following fields in the
+      /// existing bucket with values from the new bucket: `retention_period`
+      ///
+      /// If the retention period is decreased and the bucket is locked,
+      /// FAILED_PRECONDITION will be returned.
+      ///
+      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
+      /// will be returned.
+      ///
+      /// A buckets region may not be modified after it is created.
+      /// This method is in Beta.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogBucket UpdateBucket(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a bucket. This method replaces the following fields in the
+      /// existing bucket with values from the new bucket: `retention_period`
+      ///
+      /// If the retention period is decreased and the bucket is locked,
+      /// FAILED_PRECONDITION will be returned.
+      ///
+      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
+      /// will be returned.
+      ///
+      /// A buckets region may not be modified after it is created.
+      /// This method is in Beta.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogBucket UpdateBucket(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBucket, null, options, request);
+      }
+      /// <summary>
+      /// Updates a bucket. This method replaces the following fields in the
+      /// existing bucket with values from the new bucket: `retention_period`
+      ///
+      /// If the retention period is decreased and the bucket is locked,
+      /// FAILED_PRECONDITION will be returned.
+      ///
+      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
+      /// will be returned.
+      ///
+      /// A buckets region may not be modified after it is created.
+      /// This method is in Beta.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogBucket> UpdateBucketAsync(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a bucket. This method replaces the following fields in the
+      /// existing bucket with values from the new bucket: `retention_period`
+      ///
+      /// If the retention period is decreased and the bucket is locked,
+      /// FAILED_PRECONDITION will be returned.
+      ///
+      /// If the bucket has a LifecycleState of DELETE_REQUESTED, FAILED_PRECONDITION
+      /// will be returned.
+      ///
+      /// A buckets region may not be modified after it is created.
+      /// This method is in Beta.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogBucket> UpdateBucketAsync(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBucket, null, options, request);
+      }
       /// <summary>
       /// Lists sinks.
       /// </summary>
@@ -991,6 +1231,9 @@ namespace Google.Cloud.Logging.V2 {
     public static grpc::ServerServiceDefinition BindService(ConfigServiceV2Base serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ListBuckets, serviceImpl.ListBuckets)
+          .AddMethod(__Method_GetBucket, serviceImpl.GetBucket)
+          .AddMethod(__Method_UpdateBucket, serviceImpl.UpdateBucket)
           .AddMethod(__Method_ListSinks, serviceImpl.ListSinks)
           .AddMethod(__Method_GetSink, serviceImpl.GetSink)
           .AddMethod(__Method_CreateSink, serviceImpl.CreateSink)
@@ -1011,6 +1254,9 @@ namespace Google.Cloud.Logging.V2 {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ConfigServiceV2Base serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_ListBuckets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListBucketsRequest, global::Google.Cloud.Logging.V2.ListBucketsResponse>(serviceImpl.ListBuckets));
+      serviceBinder.AddMethod(__Method_GetBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(serviceImpl.GetBucket));
+      serviceBinder.AddMethod(__Method_UpdateBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(serviceImpl.UpdateBucket));
       serviceBinder.AddMethod(__Method_ListSinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(serviceImpl.ListSinks));
       serviceBinder.AddMethod(__Method_GetSink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(serviceImpl.GetSink));
       serviceBinder.AddMethod(__Method_CreateSink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(serviceImpl.CreateSink));
