@@ -25,8 +25,8 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="3.0.0" />
     <ProjectReference Include="..\..\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj" />
-    <PackageReference Include="Google.Cloud.Iam.V1" Version="2.0.0-beta01" />
-    <PackageReference Include="Google.LongRunning" Version="2.0.0-beta01" />
+    <PackageReference Include="Google.Cloud.Iam.V1" Version="2.0.0" />
+    <PackageReference Include="Google.LongRunning" Version="2.0.0" />
     <PackageReference Include="Grpc.Core" Version="2.27.0" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
