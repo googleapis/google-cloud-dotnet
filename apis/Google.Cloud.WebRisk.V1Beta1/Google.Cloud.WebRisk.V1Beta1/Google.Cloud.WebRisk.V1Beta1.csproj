@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to access the Google Cloud Web Risk API, which lets client applications check URLs against Google's constantly updated lists of unsafe web resources.</Description>
+    <Description>Recommended Google client library to access the Google Cloud Web Risk API v1beta1.</Description>
     <PackageTags>security;phishing;malware;safety;risk;url;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
     <Authors>Google LLC</Authors>
