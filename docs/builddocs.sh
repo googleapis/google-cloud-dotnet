@@ -5,6 +5,9 @@ source ../toolversions.sh
 
 install_docfx
 
+# Some versions of docfx fail if VSINSTALLDIR is set.
+export VSINSTALLDIR=
+
 build_api_docs() {
   log_build_action "Building docs for $1"
   local api=$1
