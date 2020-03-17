@@ -1,5 +1,17 @@
 # Version history
 
+# Version 2.0.0, released 2020-03-17
+
+- [Commit c120b77](https://github.com/googleapis/google-cloud-dotnet/commit/c120b77):
+  - Feature: SparkR and Presto job support
+  - Feature: Lifecycle config support
+  - Feature: Reservation affinity support
+- [Commit 5ae3789](https://github.com/googleapis/google-cloud-dotnet/commit/5ae3789): Breaking changes around resource names, due to removing RegionOrLocationName
+
+Note that the breaking change here was expected;
+RegionOrLocationName didn't represent the name of a real resource,
+and we now have better options for handling parents of resources with multiple patterns.
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
