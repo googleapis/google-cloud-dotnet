@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.0.0, released 2020-03-17
+
+No API surface changes compared with 2.0.0-beta01, just dependencies
+and implementation changes.
+
 # Version 2.0.0-beta01, released 2020-03-05
 
 This is the first prerelease targeting GAX v3. Please see the
