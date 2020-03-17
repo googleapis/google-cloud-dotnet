@@ -10,8 +10,8 @@
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -31,7 +31,7 @@
     "description": "Recommended Google client library to access the AutoML API, which allows you to train high-quality custom machine learning models with minimal effort and machine learning expertise.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -105,8 +105,8 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Google.Cloud.Bigtable.Common.V2": "project",
       "Grpc.Core": "2.27.0"
     },
@@ -162,7 +162,7 @@
     "description": "Recommended Google client library to access the Google Cloud Billing API, which allows you to define a budget plan and the rules to execute as spend is tracked against that plan.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -200,7 +200,7 @@
       "Hadoop"
     ],
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
       "Grpc.Core": "2.27.0"
     }
@@ -278,7 +278,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Grafeas.V1": "project",
       "Grpc.Core": "2.27.0"
     }
@@ -380,7 +380,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "testDependencies": {
@@ -440,7 +440,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
@@ -487,7 +487,7 @@
       "firebase"
     ],
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
       "Grpc.Core": "2.27.0"
     }
@@ -506,7 +506,7 @@
       "games"
     ],
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
       "Grpc.Core": "2.27.0"
     }
@@ -545,7 +545,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
@@ -663,7 +663,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
@@ -678,7 +678,7 @@
     "description": "Recommended Google client library to administer Cloud Memorystore for Memcache (v1beta2).",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -794,7 +794,7 @@
     "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "testDependencies": {
@@ -843,7 +843,7 @@
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -862,7 +862,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01"
+      "Google.LongRunning": "2.0.0"
     },
     "tags": [
       "Redis",
@@ -897,7 +897,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Secret Manager API.",
     "dependencies": {
-      "Google.Cloud.Iam.V1": "2.0.0-beta01"
+      "Google.Cloud.Iam.V1": "2.0.0"
     },
     "tags": [
       "secret",
@@ -916,7 +916,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Secret Manager API version v1beta1.",
     "dependencies": {
-      "Google.Cloud.Iam.V1": "2.0.0-beta01"
+      "Google.Cloud.Iam.V1": "2.0.0"
     },
     "tags": [
       "secret",
@@ -935,8 +935,8 @@
     "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -955,8 +955,8 @@
     "description": "Recommended Google client library to access the Google Cloud Security Command Center API version v1p1beta1, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -972,7 +972,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Service Directory API version v1beta1.",
     "dependencies": {
-      "Google.Cloud.Iam.V1": "2.0.0-beta01"
+      "Google.Cloud.Iam.V1": "2.0.0"
     },
     "tags": [
       "services"
@@ -993,8 +993,8 @@
       "Spanner"
     ],
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
@@ -1014,8 +1014,8 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
@@ -1088,7 +1088,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
@@ -1106,7 +1106,7 @@
       "Speech"
     ],
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01"
+      "Google.LongRunning": "2.0.0"
     }
   },
   {
@@ -1144,7 +1144,7 @@
       "Jobs"
     ],
     "dependencies": {
-      "Google.LongRunning": "2.0.0-beta01"
+      "Google.LongRunning": "2.0.0"
     }
   },
   {
@@ -1161,7 +1161,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Iam.V1": "2.0.0-beta01",
+      "Google.Cloud.Iam.V1": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
@@ -1179,7 +1179,7 @@
       "Tasks"
     ],
     "dependencies": {
-      "Google.Cloud.Iam.V1": "2.0.0-beta01"
+      "Google.Cloud.Iam.V1": "2.0.0"
     }
   },
   {
@@ -1247,7 +1247,7 @@
     "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
@@ -1285,7 +1285,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
@@ -1303,7 +1303,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.LongRunning": "2.0.0-beta01",
+      "Google.LongRunning": "2.0.0",
       "Grpc.Core": "2.27.0"
     }
   },
