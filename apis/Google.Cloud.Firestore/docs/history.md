@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-03-18
+
+No API surface changes in Google.Cloud.Firestore compared with
+2.0.0-beta01, just dependency and implementation changes.
+
+The underlying Google.Cloud.Firestore.V1 protos have a new
+UpdateTransforms property, but that's not used yet.
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
