@@ -1767,6 +1767,345 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackupRequestObject()
+        {
+            // Snippet: CreateBackup(CreateBackupRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            CreateBackupRequest request = new CreateBackupRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                BackupId = "",
+                Backup = new Backup(),
+            };
+            // Make the request
+            Operation<Backup, CreateBackupMetadata> response = bigtableTableAdminClient.CreateBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CreateBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CreateBackupMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupRequestObjectAsync()
+        {
+            // Snippet: CreateBackupAsync(CreateBackupRequest, CallSettings)
+            // Additional: CreateBackupAsync(CreateBackupRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupRequest request = new CreateBackupRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                BackupId = "",
+                Backup = new Backup(),
+            };
+            // Make the request
+            Operation<Backup, CreateBackupMetadata> response = await bigtableTableAdminClient.CreateBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CreateBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CreateBackupMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupRequestObject()
+        {
+            // Snippet: GetBackup(GetBackupRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            // Make the request
+            Backup response = bigtableTableAdminClient.GetBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupRequestObjectAsync()
+        {
+            // Snippet: GetBackupAsync(GetBackupRequest, CallSettings)
+            // Additional: GetBackupAsync(GetBackupRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            // Make the request
+            Backup response = await bigtableTableAdminClient.GetBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackup</summary>
+        public void UpdateBackupRequestObject()
+        {
+            // Snippet: UpdateBackup(UpdateBackupRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Backup response = bigtableTableAdminClient.UpdateBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupAsync</summary>
+        public async Task UpdateBackupRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupAsync(UpdateBackupRequest, CallSettings)
+            // Additional: UpdateBackupAsync(UpdateBackupRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Backup response = await bigtableTableAdminClient.UpdateBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupRequestObject()
+        {
+            // Snippet: DeleteBackup(DeleteBackupRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            // Make the request
+            bigtableTableAdminClient.DeleteBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupAsync(DeleteBackupRequest, CallSettings)
+            // Additional: DeleteBackupAsync(DeleteBackupRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            // Make the request
+            await bigtableTableAdminClient.DeleteBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsRequestObject()
+        {
+            // Snippet: ListBackups(ListBackupsRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = bigtableTableAdminClient.ListBackups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public async Task ListBackupsRequestObjectAsync()
+        {
+            // Snippet: ListBackupsAsync(ListBackupsRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = bigtableTableAdminClient.ListBackupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreTable</summary>
+        public void RestoreTableRequestObject()
+        {
+            // Snippet: RestoreTable(RestoreTableRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            RestoreTableRequest request = new RestoreTableRequest
+            {
+                Parent = "",
+                TableId = "",
+                Backup = "",
+            };
+            // Make the request
+            Operation<Table, RestoreTableMetadata> response = bigtableTableAdminClient.RestoreTable(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, RestoreTableMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, RestoreTableMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceRestoreTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreTableAsync</summary>
+        public async Task RestoreTableRequestObjectAsync()
+        {
+            // Snippet: RestoreTableAsync(RestoreTableRequest, CallSettings)
+            // Additional: RestoreTableAsync(RestoreTableRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTableRequest request = new RestoreTableRequest
+            {
+                Parent = "",
+                TableId = "",
+                Backup = "",
+            };
+            // Make the request
+            Operation<Table, RestoreTableMetadata> response = await bigtableTableAdminClient.RestoreTableAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Table, RestoreTableMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Table result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Table, RestoreTableMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceRestoreTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Table retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicyRequestObject()
         {
