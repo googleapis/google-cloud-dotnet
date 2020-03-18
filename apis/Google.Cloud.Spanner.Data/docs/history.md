@@ -1,5 +1,16 @@
 # Version history
 
+# Version 3.0.0-beta02, released 2020-03-18
+
+- [Commit c5090d1](https://github.com/googleapis/google-cloud-dotnet/commit/c5090d1):
+  - feat: Adds the ability to set QueryOptions when running Cloud Spanner queries.
+- [Commit 36f1e1e](https://github.com/googleapis/google-cloud-dotnet/commit/36f1e1e): Apply gccl header for Spanner clients in Google.Cloud.Spanner.Data
+- [Commit f21fd27](https://github.com/googleapis/google-cloud-dotnet/commit/f21fd27):
+  - feat: Backup support in Database Admin API
+  - feat: List operations RPC in Database Admin API
+
+This release depends on the GA version of GAX 3.0.
+
 # Version 3.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
