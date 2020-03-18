@@ -1,5 +1,24 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-03-18
+
+- [Commit 2b4c06f](https://github.com/googleapis/google-cloud-dotnet/commit/2b4c06f):
+  - Table creation breaking change:
+  -   * All options have been removed from Google.Cloud.BigQuery.V2.TableCreateOptions.
+  -   * Table create operations overloads added that received a Google.Apis.Bigquery.v2.Data.Table instead.
+  -   * Extension methods have been added to help in setting some Google.Apis.Bigquery.v2.Data.Table properties.
+- [Commit d951c14](https://github.com/googleapis/google-cloud-dotnet/commit/d951c14):
+  - Dataset creation breaking change:
+  -   * All options have been removed from Google.Cloud.BigQuery.V2.DatasetCreateOptions.
+  -   * Dataset create operations now received a Google.Apis.Bigquery.v2.Data.Dataset instead.
+  -   * Extension methods have been added to help in setting some Google.Apis.Bigquery.v2.Data.Dataset properties.
+- [Commit acad11b](https://github.com/googleapis/google-cloud-dotnet/commit/acad11b):
+  - BigQueryResults breaking change.
+  -   * TotalRows is now ulong? instead of ulong.
+  -   * SafeTotalRows has been removed.
+  
+In addition to the above changes, this release now targets GAX 3.0.0 (GA).
+
 # Version 2.0.0-beta01, released 2020-02-20
 
 Breaking changes:
