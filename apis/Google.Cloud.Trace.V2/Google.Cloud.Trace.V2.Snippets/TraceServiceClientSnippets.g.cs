@@ -138,8 +138,8 @@ namespace Google.Cloud.Trace.V2.Snippets
                 TimeEvents = new Span.Types.TimeEvents(),
                 Links = new Span.Types.Links(),
                 Status = new Status(),
-                SameProcessAsParentSpan = new bool?(),
-                ChildSpanCount = new int?(),
+                SameProcessAsParentSpan = false,
+                ChildSpanCount = 0,
             };
             // Make the request
             Span response = traceServiceClient.CreateSpan(request);
@@ -167,8 +167,8 @@ namespace Google.Cloud.Trace.V2.Snippets
                 TimeEvents = new Span.Types.TimeEvents(),
                 Links = new Span.Types.Links(),
                 Status = new Status(),
-                SameProcessAsParentSpan = new bool?(),
-                ChildSpanCount = new int?(),
+                SameProcessAsParentSpan = false,
+                ChildSpanCount = 0,
             };
             // Make the request
             Span response = await traceServiceClient.CreateSpanAsync(request);

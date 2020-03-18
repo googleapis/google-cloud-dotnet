@@ -145,8 +145,8 @@ namespace Google.Cloud.Trace.V2.Tests
                 TimeEvents = new Span.Types.TimeEvents(),
                 Links = new Span.Types.Links(),
                 Status = new gr::Status(),
-                SameProcessAsParentSpan = new bool?(),
-                ChildSpanCount = new int?(),
+                SameProcessAsParentSpan = false,
+                ChildSpanCount = -1491694397,
             };
             Span expectedResponse = new Span
             {
@@ -161,8 +161,8 @@ namespace Google.Cloud.Trace.V2.Tests
                 TimeEvents = new Span.Types.TimeEvents(),
                 Links = new Span.Types.Links(),
                 Status = new gr::Status(),
-                SameProcessAsParentSpan = new bool?(),
-                ChildSpanCount = new int?(),
+                SameProcessAsParentSpan = false,
+                ChildSpanCount = -1491694397,
             };
             mockGrpcClient.Setup(x => x.CreateSpan(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
@@ -188,8 +188,8 @@ namespace Google.Cloud.Trace.V2.Tests
                 TimeEvents = new Span.Types.TimeEvents(),
                 Links = new Span.Types.Links(),
                 Status = new gr::Status(),
-                SameProcessAsParentSpan = new bool?(),
-                ChildSpanCount = new int?(),
+                SameProcessAsParentSpan = false,
+                ChildSpanCount = -1491694397,
             };
             Span expectedResponse = new Span
             {
@@ -204,8 +204,8 @@ namespace Google.Cloud.Trace.V2.Tests
                 TimeEvents = new Span.Types.TimeEvents(),
                 Links = new Span.Types.Links(),
                 Status = new gr::Status(),
-                SameProcessAsParentSpan = new bool?(),
-                ChildSpanCount = new int?(),
+                SameProcessAsParentSpan = false,
+                ChildSpanCount = -1491694397,
             };
             mockGrpcClient.Setup(x => x.CreateSpanAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Span>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
