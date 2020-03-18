@@ -1,5 +1,16 @@
 # Version history
 
+# Version 2.0.0-beta02, released 2020-03-18
+
+- [Commit 2096b6d](https://github.com/googleapis/google-cloud-dotnet/commit/2096b6d): Feature: Subscription.RetryPolicy
+- [Commit e4226b7](https://github.com/googleapis/google-cloud-dotnet/commit/e4226b7):
+  - Regenerate Google.Cloud.PubSub.V1 ([issue 4515](https://github.com/googleapis/google-cloud-dotnet/issues/4515))
+  - PullRequest.ReturnImmediately is now obsolete
+  - ListTopicSnapshots methods have new overloads accepting a topic name
+  - GetSnapshot methods have new overloads accepting a snapshot name
+
+Additionally, dependencies have been updated to target GAX 3.0.0.
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
