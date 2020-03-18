@@ -1,5 +1,10 @@
 # Version history
 
+# Version 4.0.0, released 2020-03-18
+
+No API surface changes compared with 4.0.0-beta02, just dependency
+and implementation changes.
+
 # Version 4.0.0-beta02, released 2020-03-10
 
 - [Commit 5bc0cf5](https://github.com/googleapis/google-cloud-dotnet/commit/5bc0cf5): GoogleExceptionLogger accepts null HttpContext.
