@@ -397,6 +397,64 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplate</summary>
+        public void CreateInspectTemplate1ResourceNames3()
+        {
+            // Snippet: CreateInspectTemplate(OrganizationLocationName, InspectTemplate, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            // Make the request
+            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
+        public async Task CreateInspectTemplate1ResourceNames3Async()
+        {
+            // Snippet: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, CallSettings)
+            // Additional: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            // Make the request
+            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplate</summary>
+        public void CreateInspectTemplate1ResourceNames4()
+        {
+            // Snippet: CreateInspectTemplate(LocationName, InspectTemplate, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            // Make the request
+            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
+        public async Task CreateInspectTemplate1ResourceNames4Async()
+        {
+            // Snippet: CreateInspectTemplateAsync(LocationName, InspectTemplate, CallSettings)
+            // Additional: CreateInspectTemplateAsync(LocationName, InspectTemplate, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            // Make the request
+            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplate</summary>
         public void CreateInspectTemplate2()
         {
             // Snippet: CreateInspectTemplate(string, InspectTemplate, string, CallSettings)
@@ -482,6 +540,68 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            string locationId = "";
+            // Make the request
+            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplate</summary>
+        public void CreateInspectTemplate2ResourceNames3()
+        {
+            // Snippet: CreateInspectTemplate(OrganizationLocationName, InspectTemplate, string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            string locationId = "";
+            // Make the request
+            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
+        public async Task CreateInspectTemplate2ResourceNames3Async()
+        {
+            // Snippet: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, string, CallSettings)
+            // Additional: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            string locationId = "";
+            // Make the request
+            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplate</summary>
+        public void CreateInspectTemplate2ResourceNames4()
+        {
+            // Snippet: CreateInspectTemplate(LocationName, InspectTemplate, string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            InspectTemplate inspectTemplate = new InspectTemplate();
+            string locationId = "";
+            // Make the request
+            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
+        public async Task CreateInspectTemplate2ResourceNames4Async()
+        {
+            // Snippet: CreateInspectTemplateAsync(LocationName, InspectTemplate, string, CallSettings)
+            // Additional: CreateInspectTemplateAsync(LocationName, InspectTemplate, string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             InspectTemplate inspectTemplate = new InspectTemplate();
             string locationId = "";
             // Make the request
@@ -1045,6 +1165,186 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInspectTemplates</summary>
+        public void ListInspectTemplatesResourceNames3()
+        {
+            // Snippet: ListInspectTemplates(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InspectTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InspectTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InspectTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InspectTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInspectTemplates</summary>
+        public async Task ListInspectTemplatesResourceNames3Async()
+        {
+            // Snippet: ListInspectTemplatesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InspectTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InspectTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InspectTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InspectTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInspectTemplates</summary>
+        public void ListInspectTemplatesResourceNames4()
+        {
+            // Snippet: ListInspectTemplates(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InspectTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InspectTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InspectTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InspectTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInspectTemplates</summary>
+        public async Task ListInspectTemplatesResourceNames4Async()
+        {
+            // Snippet: ListInspectTemplatesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InspectTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InspectTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InspectTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InspectTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteInspectTemplate</summary>
         public void DeleteInspectTemplateRequestObject()
         {
@@ -1259,6 +1559,64 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplate</summary>
+        public void CreateDeidentifyTemplate1ResourceNames3()
+        {
+            // Snippet: CreateDeidentifyTemplate(OrganizationLocationName, DeidentifyTemplate, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            // Make the request
+            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
+        public async Task CreateDeidentifyTemplate1ResourceNames3Async()
+        {
+            // Snippet: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, CallSettings)
+            // Additional: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            // Make the request
+            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
+        public void CreateDeidentifyTemplate1ResourceNames4()
+        {
+            // Snippet: CreateDeidentifyTemplate(LocationName, DeidentifyTemplate, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            // Make the request
+            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
+        public async Task CreateDeidentifyTemplate1ResourceNames4Async()
+        {
+            // Snippet: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, CallSettings)
+            // Additional: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            // Make the request
+            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
         public void CreateDeidentifyTemplate2()
         {
             // Snippet: CreateDeidentifyTemplate(string, DeidentifyTemplate, string, CallSettings)
@@ -1344,6 +1702,68 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            string locationId = "";
+            // Make the request
+            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
+        public void CreateDeidentifyTemplate2ResourceNames3()
+        {
+            // Snippet: CreateDeidentifyTemplate(OrganizationLocationName, DeidentifyTemplate, string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            string locationId = "";
+            // Make the request
+            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
+        public async Task CreateDeidentifyTemplate2ResourceNames3Async()
+        {
+            // Snippet: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, string, CallSettings)
+            // Additional: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            string locationId = "";
+            // Make the request
+            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
+        public void CreateDeidentifyTemplate2ResourceNames4()
+        {
+            // Snippet: CreateDeidentifyTemplate(LocationName, DeidentifyTemplate, string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
+            string locationId = "";
+            // Make the request
+            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
+        public async Task CreateDeidentifyTemplate2ResourceNames4Async()
+        {
+            // Snippet: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, string, CallSettings)
+            // Additional: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
             string locationId = "";
             // Make the request
@@ -1907,6 +2327,186 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDeidentifyTemplates</summary>
+        public void ListDeidentifyTemplatesResourceNames3()
+        {
+            // Snippet: ListDeidentifyTemplates(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeidentifyTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeidentifyTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeidentifyTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeidentifyTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeidentifyTemplates</summary>
+        public async Task ListDeidentifyTemplatesResourceNames3Async()
+        {
+            // Snippet: ListDeidentifyTemplatesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DeidentifyTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeidentifyTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeidentifyTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeidentifyTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeidentifyTemplates</summary>
+        public void ListDeidentifyTemplatesResourceNames4()
+        {
+            // Snippet: ListDeidentifyTemplates(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeidentifyTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeidentifyTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeidentifyTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeidentifyTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeidentifyTemplates</summary>
+        public async Task ListDeidentifyTemplatesResourceNames4Async()
+        {
+            // Snippet: ListDeidentifyTemplatesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DeidentifyTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeidentifyTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeidentifyTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeidentifyTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteDeidentifyTemplate</summary>
         public void DeleteDeidentifyTemplateRequestObject()
         {
@@ -2249,6 +2849,95 @@ namespace Google.Cloud.Dlp.V2.Snippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             JobTrigger response = await dlpServiceClient.UpdateJobTriggerAsync(name, jobTrigger, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectJobTrigger</summary>
+        public void HybridInspectJobTriggerRequestObject()
+        {
+            // Snippet: HybridInspectJobTrigger(HybridInspectJobTriggerRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
+            {
+                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
+                HybridItem = new HybridContentItem(),
+            };
+            // Make the request
+            HybridInspectResponse response = dlpServiceClient.HybridInspectJobTrigger(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectJobTriggerAsync</summary>
+        public async Task HybridInspectJobTriggerRequestObjectAsync()
+        {
+            // Snippet: HybridInspectJobTriggerAsync(HybridInspectJobTriggerRequest, CallSettings)
+            // Additional: HybridInspectJobTriggerAsync(HybridInspectJobTriggerRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
+            {
+                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
+                HybridItem = new HybridContentItem(),
+            };
+            // Make the request
+            HybridInspectResponse response = await dlpServiceClient.HybridInspectJobTriggerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectJobTrigger</summary>
+        public void HybridInspectJobTrigger()
+        {
+            // Snippet: HybridInspectJobTrigger(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/jobTriggers/[JOB_TRIGGER]";
+            // Make the request
+            HybridInspectResponse response = dlpServiceClient.HybridInspectJobTrigger(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectJobTriggerAsync</summary>
+        public async Task HybridInspectJobTriggerAsync()
+        {
+            // Snippet: HybridInspectJobTriggerAsync(string, CallSettings)
+            // Additional: HybridInspectJobTriggerAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/jobTriggers/[JOB_TRIGGER]";
+            // Make the request
+            HybridInspectResponse response = await dlpServiceClient.HybridInspectJobTriggerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectJobTrigger</summary>
+        public void HybridInspectJobTriggerResourceNames()
+        {
+            // Snippet: HybridInspectJobTrigger(JobTriggerName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            JobTriggerName name = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]");
+            // Make the request
+            HybridInspectResponse response = dlpServiceClient.HybridInspectJobTrigger(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectJobTriggerAsync</summary>
+        public async Task HybridInspectJobTriggerResourceNamesAsync()
+        {
+            // Snippet: HybridInspectJobTriggerAsync(JobTriggerName, CallSettings)
+            // Additional: HybridInspectJobTriggerAsync(JobTriggerName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            JobTriggerName name = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]");
+            // Make the request
+            HybridInspectResponse response = await dlpServiceClient.HybridInspectJobTriggerAsync(name);
             // End snippet
         }
 
@@ -3640,6 +4329,64 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoType</summary>
+        public void CreateStoredInfoType1ResourceNames3()
+        {
+            // Snippet: CreateStoredInfoType(OrganizationLocationName, StoredInfoTypeConfig, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            // Make the request
+            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
+        public async Task CreateStoredInfoType1ResourceNames3Async()
+        {
+            // Snippet: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, CallSettings)
+            // Additional: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoType</summary>
+        public void CreateStoredInfoType1ResourceNames4()
+        {
+            // Snippet: CreateStoredInfoType(LocationName, StoredInfoTypeConfig, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            // Make the request
+            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
+        public async Task CreateStoredInfoType1ResourceNames4Async()
+        {
+            // Snippet: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, CallSettings)
+            // Additional: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoType</summary>
         public void CreateStoredInfoType2()
         {
             // Snippet: CreateStoredInfoType(string, StoredInfoTypeConfig, string, CallSettings)
@@ -3725,6 +4472,68 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            string locationId = "";
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoType</summary>
+        public void CreateStoredInfoType2ResourceNames3()
+        {
+            // Snippet: CreateStoredInfoType(OrganizationLocationName, StoredInfoTypeConfig, string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            string locationId = "";
+            // Make the request
+            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
+        public async Task CreateStoredInfoType2ResourceNames3Async()
+        {
+            // Snippet: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, string, CallSettings)
+            // Additional: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            string locationId = "";
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoType</summary>
+        public void CreateStoredInfoType2ResourceNames4()
+        {
+            // Snippet: CreateStoredInfoType(LocationName, StoredInfoTypeConfig, string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
+            string locationId = "";
+            // Make the request
+            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
+        public async Task CreateStoredInfoType2ResourceNames4Async()
+        {
+            // Snippet: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, string, CallSettings)
+            // Additional: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             StoredInfoTypeConfig config = new StoredInfoTypeConfig();
             string locationId = "";
             // Make the request
@@ -4288,6 +5097,186 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListStoredInfoTypes</summary>
+        public void ListStoredInfoTypesResourceNames3()
+        {
+            // Snippet: ListStoredInfoTypes(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (StoredInfoType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (StoredInfoType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<StoredInfoType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (StoredInfoType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypes</summary>
+        public async Task ListStoredInfoTypesResourceNames3Async()
+        {
+            // Snippet: ListStoredInfoTypesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((StoredInfoType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (StoredInfoType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<StoredInfoType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (StoredInfoType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypes</summary>
+        public void ListStoredInfoTypesResourceNames4()
+        {
+            // Snippet: ListStoredInfoTypes(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (StoredInfoType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (StoredInfoType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<StoredInfoType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (StoredInfoType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypes</summary>
+        public async Task ListStoredInfoTypesResourceNames4Async()
+        {
+            // Snippet: ListStoredInfoTypesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((StoredInfoType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (StoredInfoType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<StoredInfoType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (StoredInfoType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteStoredInfoType</summary>
         public void DeleteStoredInfoTypeRequestObject()
         {
@@ -4372,6 +5361,128 @@ namespace Google.Cloud.Dlp.V2.Snippets
             StoredInfoTypeName name = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]");
             // Make the request
             await dlpServiceClient.DeleteStoredInfoTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectDlpJob</summary>
+        public void HybridInspectDlpJobRequestObject()
+        {
+            // Snippet: HybridInspectDlpJob(HybridInspectDlpJobRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+                HybridItem = new HybridContentItem(),
+            };
+            // Make the request
+            HybridInspectResponse response = dlpServiceClient.HybridInspectDlpJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectDlpJobAsync</summary>
+        public async Task HybridInspectDlpJobRequestObjectAsync()
+        {
+            // Snippet: HybridInspectDlpJobAsync(HybridInspectDlpJobRequest, CallSettings)
+            // Additional: HybridInspectDlpJobAsync(HybridInspectDlpJobRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+                HybridItem = new HybridContentItem(),
+            };
+            // Make the request
+            HybridInspectResponse response = await dlpServiceClient.HybridInspectDlpJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectDlpJob</summary>
+        public void HybridInspectDlpJob()
+        {
+            // Snippet: HybridInspectDlpJob(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/dlpJobs/[DLP_JOB]";
+            // Make the request
+            HybridInspectResponse response = dlpServiceClient.HybridInspectDlpJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectDlpJobAsync</summary>
+        public async Task HybridInspectDlpJobAsync()
+        {
+            // Snippet: HybridInspectDlpJobAsync(string, CallSettings)
+            // Additional: HybridInspectDlpJobAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/dlpJobs/[DLP_JOB]";
+            // Make the request
+            HybridInspectResponse response = await dlpServiceClient.HybridInspectDlpJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectDlpJob</summary>
+        public void HybridInspectDlpJobResourceNames()
+        {
+            // Snippet: HybridInspectDlpJob(DlpJobName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DlpJobName name = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]");
+            // Make the request
+            HybridInspectResponse response = dlpServiceClient.HybridInspectDlpJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for HybridInspectDlpJobAsync</summary>
+        public async Task HybridInspectDlpJobResourceNamesAsync()
+        {
+            // Snippet: HybridInspectDlpJobAsync(DlpJobName, CallSettings)
+            // Additional: HybridInspectDlpJobAsync(DlpJobName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DlpJobName name = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]");
+            // Make the request
+            HybridInspectResponse response = await dlpServiceClient.HybridInspectDlpJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishDlpJob</summary>
+        public void FinishDlpJobRequestObject()
+        {
+            // Snippet: FinishDlpJob(FinishDlpJobRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            FinishDlpJobRequest request = new FinishDlpJobRequest
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+            };
+            // Make the request
+            dlpServiceClient.FinishDlpJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishDlpJobAsync</summary>
+        public async Task FinishDlpJobRequestObjectAsync()
+        {
+            // Snippet: FinishDlpJobAsync(FinishDlpJobRequest, CallSettings)
+            // Additional: FinishDlpJobAsync(FinishDlpJobRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FinishDlpJobRequest request = new FinishDlpJobRequest
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+            };
+            // Make the request
+            await dlpServiceClient.FinishDlpJobAsync(request);
             // End snippet
         }
     }
