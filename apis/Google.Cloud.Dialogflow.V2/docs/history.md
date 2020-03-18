@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.0.0, released 2020-03-18
+
+- [Commit a19ee13](https://github.com/googleapis/google-cloud-dotnet/commit/a19ee13):
+  - Adds AgentsClient.GetValidationResult RPC with associated types
+  - Adds DetectIntentRequest.OutputAudioConfigMask
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
