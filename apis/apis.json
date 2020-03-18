@@ -828,10 +828,13 @@
     "protoPath": "google/cloud/recommender/v1",
     "productName": "Google Cloud Recommender",
     "productUrl": "https://cloud.google.com/recommender/",
-    "version": "2.0.0-beta01",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Recommended Google client library for the Recommender API, which provides usage recommendations for Cloud products and services.",
-    "dependencies": {},
+    "dependencies": {
+      "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
+      "Grpc.Core": "2.27.0"
+    },
     "tags": [
       "Recommender"
     ]
