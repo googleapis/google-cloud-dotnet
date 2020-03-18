@@ -221,7 +221,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     private string table_ = "";
     /// <summary>
     /// Immutable. Table that this ReadSession is reading from, in the form
-    /// `projects/{project_id}/datasets/{dataset_id}/tables/{table_id}
+    /// `projects/{project_id}/datasets/{dataset_id}/tables/{table_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Table {
