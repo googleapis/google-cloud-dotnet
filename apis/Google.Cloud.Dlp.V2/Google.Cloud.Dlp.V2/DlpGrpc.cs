@@ -3,7 +3,7 @@
 //     source: google/privacy/dlp/v2/dlp.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -67,6 +66,8 @@ namespace Google.Cloud.Dlp.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_CreateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.JobTrigger> __Marshaller_google_privacy_dlp_v2_JobTrigger = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.JobTrigger.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_UpdateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_HybridInspectJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Marshaller_google_privacy_dlp_v2_HybridInspectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.HybridInspectResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_GetJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetJobTriggerRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest> __Marshaller_google_privacy_dlp_v2_ListJobTriggersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Marshaller_google_privacy_dlp_v2_ListJobTriggersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser.ParseFrom);
@@ -86,6 +87,8 @@ namespace Google.Cloud.Dlp.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest> __Marshaller_google_privacy_dlp_v2_HybridInspectDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest> __Marshaller_google_privacy_dlp_v2_FinishDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.FinishDlpJobRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse> __Method_InspectContent = new grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(
         grpc::MethodType.Unary,
@@ -206,6 +209,13 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_UpdateJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Method_HybridInspectJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "HybridInspectJobTrigger",
+        __Marshaller_google_privacy_dlp_v2_HybridInspectJobTriggerRequest,
+        __Marshaller_google_privacy_dlp_v2_HybridInspectResponse);
+
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_GetJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -302,6 +312,20 @@ namespace Google.Cloud.Dlp.V2 {
         __ServiceName,
         "DeleteStoredInfoType",
         __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Method_HybridInspectDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "HybridInspectDlpJob",
+        __Marshaller_google_privacy_dlp_v2_HybridInspectDlpJobRequest,
+        __Marshaller_google_privacy_dlp_v2_HybridInspectResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_FinishDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FinishDlpJob",
+        __Marshaller_google_privacy_dlp_v2_FinishDlpJobRequest,
         __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -549,6 +573,22 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
+      /// Inspect hybrid content and store findings to a trigger. The inspection
+      /// will be processed asynchronously. To review the findings monitor the
+      /// jobs within the trigger.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectJobTrigger(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets a job trigger.
       /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
       /// </summary>
@@ -731,6 +771,37 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Inspect hybrid content and store findings to a job.
+      /// To review the findings inspect the job. Inspection will occur
+      /// asynchronously.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectDlpJob(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
+      /// of any enabled actions that have not yet run.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1697,6 +1768,70 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateJobTrigger, null, options, request);
       }
       /// <summary>
+      /// Inspect hybrid content and store findings to a trigger. The inspection
+      /// will be processed asynchronously. To review the findings monitor the
+      /// jobs within the trigger.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectJobTrigger(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return HybridInspectJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a trigger. The inspection
+      /// will be processed asynchronously. To review the findings monitor the
+      /// jobs within the trigger.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectJobTrigger(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_HybridInspectJobTrigger, null, options, request);
+      }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a trigger. The inspection
+      /// will be processed asynchronously. To review the findings monitor the
+      /// jobs within the trigger.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectJobTriggerAsync(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return HybridInspectJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a trigger. The inspection
+      /// will be processed asynchronously. To review the findings monitor the
+      /// jobs within the trigger.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectJobTriggerAsync(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_HybridInspectJobTrigger, null, options, request);
+      }
+      /// <summary>
       /// Gets a job trigger.
       /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
       /// </summary>
@@ -2444,6 +2579,130 @@ namespace Google.Cloud.Dlp.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
       }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a job.
+      /// To review the findings inspect the job. Inspection will occur
+      /// asynchronously.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectDlpJob(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return HybridInspectDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a job.
+      /// To review the findings inspect the job. Inspection will occur
+      /// asynchronously.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectDlpJob(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_HybridInspectDlpJob, null, options, request);
+      }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a job.
+      /// To review the findings inspect the job. Inspection will occur
+      /// asynchronously.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectDlpJobAsync(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return HybridInspectDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Inspect hybrid content and store findings to a job.
+      /// To review the findings inspect the job. Inspection will occur
+      /// asynchronously.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectDlpJobAsync(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_HybridInspectDlpJob, null, options, request);
+      }
+      /// <summary>
+      /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
+      /// of any enabled actions that have not yet run.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinishDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
+      /// of any enabled actions that have not yet run.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FinishDlpJob, null, options, request);
+      }
+      /// <summary>
+      /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
+      /// of any enabled actions that have not yet run.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJobAsync(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinishDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
+      /// of any enabled actions that have not yet run.
+      /// Early access feature is in a pre-release state and might change or have
+      /// limited support. For more information, see
+      /// https://cloud.google.com/products#product-launch-stages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJobAsync(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FinishDlpJob, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DlpServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -2473,6 +2732,7 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_DeleteDeidentifyTemplate, serviceImpl.DeleteDeidentifyTemplate)
           .AddMethod(__Method_CreateJobTrigger, serviceImpl.CreateJobTrigger)
           .AddMethod(__Method_UpdateJobTrigger, serviceImpl.UpdateJobTrigger)
+          .AddMethod(__Method_HybridInspectJobTrigger, serviceImpl.HybridInspectJobTrigger)
           .AddMethod(__Method_GetJobTrigger, serviceImpl.GetJobTrigger)
           .AddMethod(__Method_ListJobTriggers, serviceImpl.ListJobTriggers)
           .AddMethod(__Method_DeleteJobTrigger, serviceImpl.DeleteJobTrigger)
@@ -2486,7 +2746,9 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_UpdateStoredInfoType, serviceImpl.UpdateStoredInfoType)
           .AddMethod(__Method_GetStoredInfoType, serviceImpl.GetStoredInfoType)
           .AddMethod(__Method_ListStoredInfoTypes, serviceImpl.ListStoredInfoTypes)
-          .AddMethod(__Method_DeleteStoredInfoType, serviceImpl.DeleteStoredInfoType).Build();
+          .AddMethod(__Method_DeleteStoredInfoType, serviceImpl.DeleteStoredInfoType)
+          .AddMethod(__Method_HybridInspectDlpJob, serviceImpl.HybridInspectDlpJob)
+          .AddMethod(__Method_FinishDlpJob, serviceImpl.FinishDlpJob).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -2512,6 +2774,7 @@ namespace Google.Cloud.Dlp.V2 {
       serviceBinder.AddMethod(__Method_DeleteDeidentifyTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDeidentifyTemplate));
       serviceBinder.AddMethod(__Method_CreateJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(serviceImpl.CreateJobTrigger));
       serviceBinder.AddMethod(__Method_UpdateJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(serviceImpl.UpdateJobTrigger));
+      serviceBinder.AddMethod(__Method_HybridInspectJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(serviceImpl.HybridInspectJobTrigger));
       serviceBinder.AddMethod(__Method_GetJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(serviceImpl.GetJobTrigger));
       serviceBinder.AddMethod(__Method_ListJobTriggers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse>(serviceImpl.ListJobTriggers));
       serviceBinder.AddMethod(__Method_DeleteJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJobTrigger));
@@ -2526,6 +2789,8 @@ namespace Google.Cloud.Dlp.V2 {
       serviceBinder.AddMethod(__Method_GetStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(serviceImpl.GetStoredInfoType));
       serviceBinder.AddMethod(__Method_ListStoredInfoTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse>(serviceImpl.ListStoredInfoTypes));
       serviceBinder.AddMethod(__Method_DeleteStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteStoredInfoType));
+      serviceBinder.AddMethod(__Method_HybridInspectDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(serviceImpl.HybridInspectDlpJob));
+      serviceBinder.AddMethod(__Method_FinishDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.FinishDlpJob));
     }
 
   }
