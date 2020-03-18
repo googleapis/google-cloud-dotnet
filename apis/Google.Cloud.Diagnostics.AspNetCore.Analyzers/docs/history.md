@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0, released 2020-03-18
+
+No changes since 2.0.0-beta01.
+
 # Version 2.0.0-beta01, released 2020-02-19
 
 First beta of next major version. In theory this package does not
