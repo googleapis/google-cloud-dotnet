@@ -634,7 +634,7 @@
     "protoPath": "google/logging/v2",
     "productName": "Stackdriver Logging",
     "productUrl": "https://cloud.google.com/logging/",
-    "version": "3.0.0-beta01",
+    "version": "3.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [
@@ -643,7 +643,7 @@
     ],
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Cloud.Logging.Type": "3.0.0-beta01",
+      "Google.Cloud.Logging.Type": "3.0.0",
       "Grpc.Core": "2.27.0"
     }
   },

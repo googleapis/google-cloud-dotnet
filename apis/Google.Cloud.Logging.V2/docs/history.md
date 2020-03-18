@@ -1,5 +1,14 @@
 # Version history
 
+# Version 3.0.0, released 2020-03-18
+
+- [Commit 8727521](https://github.com/googleapis/google-cloud-dotnet/commit/8727521): Large set of changes, primarily to resource names
+
+The listed commit causes lots of breaking changes, but these were expected, and almost all are due to resource name changes.
+The logging API is primarily used from integration points, so probably doesn't affect much user code.
+
+Other changes are all just dependencies and implementation details.
+
 # Version 3.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
