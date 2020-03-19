@@ -18,54 +18,29 @@ cd ..
 export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_cloud-sharp-jenkins-compute-service-account"
 export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-service-account"
 export DOCS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73713_docuploader_service_account"
-export NUGET_API_KEY="$(cat "$KOKORO_KEYSTORE_DIR"/73609_google-cloud-nuget-api-key)"
 
-COMMITTISH=$COMMITTISH_OVERRIDE
-if [[ $COMMITTISH_OVERRIDE = "" ]]
-then
-  COMMITTISH=$(git rev-parse HEAD)
-else
-  COMMITTISH=$COMMITTISH_OVERRIDE
-fi
+# THIS DOES NOT DO A BUILD! It's just meant to copy our built API docs from github pages to googleapis.dev
 
-echo "Building with commit $COMMITTISH"
+rm -rf tmp
+git clone https://github.com/googleapis/google-cloud-dotnet.git tmp/gh-pages -b gh-pages --depth 1 -c core.autocrlf=input
 
-# Build the release and run the tests.
-./buildrelease.sh --ssh $COMMITTISH
+# Directory to reverse engineer docfx output from, based on github pages
+mkdir tmp/docfx_output
 
+# Directory to store fake nuget package files in (just so uploaddocs can find the names)
+mkdir tmp/nuget
 
-if [[ $SKIP_PAGES_UPLOAD = "" ]]
-then
-  echo "Pushing to GitHub pages"
-  # Add any docs changes if they exist.
-  cd ./releasebuild/releasedocs
-  git add --all
-  if ! git diff --quiet --cached; then git commit -m 'Regenerate docs'; git push; fi
-  cd ../..
-else
-  echo "Skipping push to GitHub pages"
-fi
+fake_release() {
+  API=$1
+  VERSION=$2
+  
+  mkdir tmp/docfx_output/$API
+  cp -r tmp/gh-pages/docs/$API tmp/docfx_output/$API/site
+  touch tmp/nuget/${API}.${VERSION}.nupkg
+}
 
-if [[ $SKIP_NUGET_PUSH = "" ]]
-then
-  echo "Pushing NuGet packages"
-  # Push the changes to nuget.
-  cd ./releasebuild/nuget
-  for pkg in *.nupkg; do dotnet nuget push -s https://api.nuget.org/v3/index.json -k $NUGET_API_KEY $pkg; done
-  cd ../..
-else
-  echo "Skipping NuGet push"
-fi
+fake_release Google.Cloud.AutoML.V1 2.0.0
+fake_release Google.Cloud.BigQuery.Storage.V1 2.0.0
 
-# Push documentation, if we've got the right credentials and haven't been asked to skip
-if [[ -f $DOCS_CREDENTIALS && $SKIP_GOOGLEAPISDEV_UPLOAD = "" ]]
-then
-  echo "Uploading documentation to googleapis.dev"
-  ./uploaddocs.sh releasebuild/nuget releasebuild/docs/output $DOCS_CREDENTIALS docs-staging
-else
-  echo "Skipping googleapis.dev upload"
-fi
-
-# Process the build log in releasebuild
-cd releasebuild
-./processbuildtiminglog.sh
+echo "Uploading documentation to googleapis.dev"
+./uploaddocs.sh tmp/nuget tmp/docfx_output $DOCS_CREDENTIALS docs-staging

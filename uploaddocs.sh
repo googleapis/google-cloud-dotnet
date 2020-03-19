@@ -22,7 +22,7 @@ do
   pair=$(basename $nupkg | sed -r 's/^(.*)\.([0-9]+\.[0-9]+\.[0-9]+(-.*)?)\.nupkg$/\1 \2/g')
   pkg=$(echo $pair | cut -d\  -f 1)
   version=$(echo $pair | cut -d\  -f 2)
-  
+
   # Currently we don't generate documentation for libraries such as
   # Google.Cloud.Spanner.V1.Common. When we've moved entirely to googleapis.dev,
   # we can change this to generate reference documentation for all packages.
@@ -49,7 +49,8 @@ do
     python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage"
-    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
+    echo "(Not really doing it, but would upload $PWD)"
+    echo python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
     
     popd > /dev/null
   else

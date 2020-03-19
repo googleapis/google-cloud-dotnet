@@ -1,0 +1,28 @@
+Google.Cloud.OrgPolicy.V1 version 2.0.0-beta02
+Google.Cloud.Trace (V1 and V2 packages) version 2.0.0
+Google.Cloud.Diagnostics.AspNetCore.Analyzers version 2.0.0
+Google.Cloud.BigQuery.V2 version 2.0.0-beta02
+Google.Cloud.Asset.V1 version 2.0.0-beta02
+Google.Cloud.Logging.NLog version 3.0.0
+Google.Cloud.Logging.Log4Net version 3.0.0
+Google.Cloud.Logging.V2 version 3.0.0
+Google.Cloud.Logging.Type version 3.0.0
+Google.Cloud.Language.V1 version 2.0.0
+Google.Cloud.Kms.V1 version 2.0.0-beta03
+Google.Cloud.Firestore and Google.Cloud.Firestore.V1 2.0.0-beta02
+Google.Cloud.Firestore.Admin.V1 version 2.0.0
+Google.Cloud.ErrorReporting.V1Beta1 version 2.0.0-beta02
+Google.Cloud.Dialogflow.V2 version 2.0.0
+Spanner libraries version 3.0.0-beta02
+Google.Cloud.Debugger.V2 version 2.0.0
+Google.Cloud.DevTools.Common version 2.0.0
+Google.Cloud.Datastore.V1 version 3.0.0
+Google.Cloud.Dataproc.V1 version 2.0.0
+Google.Cloud.Container.V1 version 2.0.0
+Google.Cloud.Billing.V1 version 2.0.0
+Bigtable packages version 2.0.0-beta02
+Google.Cloud.BigQuery.Storage.V1 version 2.0.0
+Google.Cloud.BigQuery.DataTransfer.V1 version 2.0.0
+Google.Cloud.AutoML.V1 version 2.0.0
+Google.Cloud.Iam.V1 version 2.0.0
+Google.LongRunning version 2.0.0
