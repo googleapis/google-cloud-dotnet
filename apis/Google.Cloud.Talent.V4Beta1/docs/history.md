@@ -2,6 +2,13 @@
 
 (This API has changed significantly over time, and the history is tricky to backfill. Future changes will be tracked more closely.)
 
+# Version 2.0.0-beta02, released 2020-03-19
+
+- [Commit aadcdb6](https://github.com/googleapis/google-cloud-dotnet/commit/aadcdb6): This removes the TenantOrProject resource, so is a breaking change. This "fake" resource predates the ability to refer to multiple parent resources.
+
+The mitigation for the breaking change is typically just to replace
+uses of `TenantOrProjectName` with `TenantName` or `ProjectName`.
+
 # Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
