@@ -230,7 +230,7 @@
     "id": "Google.Cloud.Debugger.V2",
     "generator": "micro",
     "protoPath": "google/devtools/clouddebugger/v2",
-    "productName": "Stackdriver Debugger",
+    "productName": "Google Cloud Debugger",
     "productUrl": "https://cloud.google.com/debugger/",
     "version": "2.0.0",
     "type": "grpc",
@@ -289,7 +289,7 @@
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
+    "description": "Google Cloud Logging Instrumentation Libraries for ASP.NET Core.",
     "tags": [
       "Error",
       "Reporting",
@@ -326,7 +326,7 @@
     "type": "analyzers",
     "targetFrameworks": "netstandard1.3",
     "testTargetFrameworks": "netcoreapp2.0",
-    "description": "Guidelines for using Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
+    "description": "Guidelines for using Google Cloud Logging Instrumentation Libraries for ASP.NET Core.",
     "tags": [
       "CodeAnalysis",
       "Analyzers",
@@ -343,7 +343,7 @@
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "description": "Google Stackdriver Instrumentation Libraries Common Components.",
+    "description": "Google Cloud Logging Instrumentation Libraries Common Components.",
     "tags": [
       "Error",
       "Reporting",
@@ -411,12 +411,12 @@
     "id": "Google.Cloud.ErrorReporting.V1Beta1",
     "generator": "micro",
     "protoPath": "google/devtools/clouderrorreporting/v1beta1",
-    "productName": "Stackdriver Error Reporting",
+    "productName": "Google Cloud Error Reporting",
     "productUrl": "https://cloud.google.com/error-reporting/",
     "version": "2.0.0-beta02",
     "releaseLevelOverride": "beta",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
+    "description": "Recommended Google client library to access the Google Cloud Error Reporting API, which groups and counts similar errors from cloud services. The Googe Cloud Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
     "tags": [
       "ErrorReporting",
       "Stackdriver"
@@ -515,6 +515,8 @@
     "id": "Google.Cloud.Iam.V1",
     "generator": "protogrpc",
     "protoPath": "google/iam/v1",
+    "productName": "Google Cloud Identity and Access Management (IAM)",
+    "productUrl": "https://cloud.google.com/iam/",
     "version": "2.0.0",
     "type": "grpc",
     "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
@@ -572,7 +574,7 @@
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "description": "Log4Net client library for the Google Stackdriver Logging API.",
+    "description": "Log4Net client library for the Google Cloud Logging API.",
     "tags": [
       "Log4Net",
       "Logging",
@@ -595,7 +597,7 @@
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "description": "NLog target for the Google Stackdriver Logging API.",
+    "description": "NLog target for the Google Cloud Logging API.",
     "tags": [
       "NLog",
       "Logging",
@@ -619,7 +621,7 @@
     "version": "3.0.0",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
-    "description": "Version-agnostic types for the Google Stackdriver Logging API.",
+    "description": "Version-agnostic types for the Google Cloud Logging API.",
     "tags": [
       "Logging",
       "Stackdriver"
@@ -632,11 +634,11 @@
     "id": "Google.Cloud.Logging.V2",
     "generator": "micro",
     "protoPath": "google/logging/v2",
-    "productName": "Stackdriver Logging",
+    "productName": "Google Cloud Logging",
     "productUrl": "https://cloud.google.com/logging/",
     "version": "3.0.0",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
+    "description": "Recommended Google client library to access the Google Cloud Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [
       "Logging",
       "Stackdriver"
@@ -690,11 +692,11 @@
     "id": "Google.Cloud.Monitoring.V3",
     "generator": "micro",
     "protoPath": "google/monitoring/v3",
-    "productName": "Stackdriver Monitoring",
+    "productName": "Google Cloud Monitoring",
     "productUrl": "https://cloud.google.com/monitoring/api/v3/",
     "version": "2.0.0",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
+    "description": "Recommended Google client library to access the Google Cloud Monitoring API, which manages your Google Cloud Monitoring data and configurations.",
     "tags": [
       "Monitoring",
       "Stackdriver"
@@ -976,6 +978,7 @@
   {
     "id": "Google.Cloud.ServiceDirectory.V1Beta1",
     "generator": "micro",
+    "shortDescription": "Service Directory API",
     "protoPath": "google/cloud/servicedirectory/v1beta1",
     "version": "1.0.0-beta02",
     "type": "grpc",
@@ -1213,7 +1216,7 @@
     "id": "Google.Cloud.Trace.V1",
     "generator": "micro",
     "protoPath": "google/devtools/cloudtrace/v1",
-    "productName": "Stackdriver Trace",
+    "productName": "Google Cloud Trace",
     "productUrl": "https://cloud.google.com/trace/",
     "version": "2.0.0",
     "type": "grpc",
@@ -1231,7 +1234,7 @@
     "id": "Google.Cloud.Trace.V2",
     "generator": "micro",
     "protoPath": "google/devtools/cloudtrace/v2",
-    "productName": "Stackdriver Trace",
+    "productName": "Google Cloud Trace",
     "productUrl": "https://cloud.google.com/trace/",
     "version": "2.0.0",
     "type": "grpc",
@@ -1357,6 +1360,7 @@
     "id": "Google.LongRunning",
     "generator": "micro",
     "protoPath": "google/longrunning",
+    "shortDescription": "Support for the Long-Running Operations API pattern",
     "version": "2.0.0",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
