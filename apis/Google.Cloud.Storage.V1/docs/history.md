@@ -1,5 +1,23 @@
 # Version history
 
+# Version 3.0.0-beta02, released 2020-03-19
+
+- [Commit cdc1f03](https://github.com/googleapis/google-cloud-dotnet/commit/cdc1f03):
+  - Fixes and new features for URL signing:
+  -   * V4 is now the default signing mechanism.
+  -   * V4: collapses tabs in header's values.
+  -   * V4: uses payload hash if provided. V2 ignores payload hash if provided (as it does with almost every other header).
+  -   * V4: supports signing of custom query parameters. V2 will throw if custom query parameters are set.
+  -   * V2 and V4: supports setting URL scheme (http or htpps only).
+  -   * V2 and V4: supports Virtual-hosted style URLs.
+  -   * V4: supports bucket bound domain URLs. V2 will throw if bucket bound domain is set.
+- [Commit 71ca7e8](https://github.com/googleapis/google-cloud-dotnet/commit/71ca7e8): Removes obsolete methods.
+
+There are breaking changes around `UrlSigner`; code that still
+compiles should be fine - otherwise, use the
+`UrlSigner.RequestTemplate` and `UrlSigner.Options` classes to
+specify options that were previously in method parameters.
+
 # Version 3.0.0-beta01, released 2020-02-20
 
 Upgrade dependencies to GAX v3. Currently there are no direct
