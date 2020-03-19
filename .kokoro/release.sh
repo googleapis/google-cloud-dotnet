@@ -52,7 +52,7 @@ fake_release Google.Cloud.Logging.Type 3.0.0
 fake_release Google.Cloud.Language.V1 2.0.0
 fake_release Google.Cloud.Kms.V1 2.0.0-beta03
 fake_release Google.Cloud.Firestore 2.0.0-beta02
-fake-release Google.Cloud.Firestore.V1 2.0.0-beta02
+fake_release Google.Cloud.Firestore.V1 2.0.0-beta02
 fake_release Google.Cloud.Firestore.Admin.V1 2.0.0
 fake_release Google.Cloud.ErrorReporting.V1Beta1 2.0.0-beta02
 fake_release Google.Cloud.Dialogflow.V2 2.0.0
