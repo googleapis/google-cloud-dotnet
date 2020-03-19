@@ -59,7 +59,7 @@ fake_release Google.Cloud.Dialogflow.V2 2.0.0
 fake_release Google.Cloud.Spanner.Common.V1 3.0.0-beta02
 fake_release Google.Cloud.Spanner.Data 3.0.0-beta02
 fake_release Google.Cloud.Spanner.Admin.Database.V1 3.0.0-beta02
-fake_release Google.Cloud.Spanner.Admin.Instance 3.0.0-beta02
+fake_release Google.Cloud.Spanner.Admin.Instance.V1 3.0.0-beta02
 fake_release Google.Cloud.Spanner.V1 3.0.0-beta02
 fake_release Google.Cloud.Debugger.V2 2.0.0
 fake_release Google.Cloud.DevTools.Common 2.0.0
