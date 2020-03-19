@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Google Stackdriver Instrumentation Libraries Common Components.</Description>
+    <Description>Google Cloud Logging Instrumentation Libraries Common Components.</Description>
     <PackageTags>Error;Reporting;Stackdriver;ExceptionLogger;Trace;Diagnostics;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
     <Authors>Google LLC</Authors>
