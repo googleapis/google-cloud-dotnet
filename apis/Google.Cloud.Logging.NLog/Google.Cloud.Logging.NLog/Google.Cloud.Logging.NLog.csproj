@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>NLog target for the Google Stackdriver Logging API.</Description>
+    <Description>NLog target for the Google Cloud Logging API.</Description>
     <PackageTags>NLog;Logging;Stackdriver;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
     <Authors>Google LLC</Authors>

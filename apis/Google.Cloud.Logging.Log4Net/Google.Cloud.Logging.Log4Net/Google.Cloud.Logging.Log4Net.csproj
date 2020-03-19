@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Log4Net client library for the Google Stackdriver Logging API.</Description>
+    <Description>Log4Net client library for the Google Cloud Logging API.</Description>
     <PackageTags>Log4Net;Logging;Stackdriver;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
     <Authors>Google LLC</Authors>
