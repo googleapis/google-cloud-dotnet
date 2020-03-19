@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.0.0, released 2020-03-19
+
+No API surface changes compared with 2.0.0-beta02, just dependency
+and implementation changes.
+
 # Version 2.0.0-beta02, released 2020-03-12
 
 - [Commit 8da93ef](https://github.com/googleapis/google-cloud-dotnet/commit/8da93ef): Adds support for notifications.
