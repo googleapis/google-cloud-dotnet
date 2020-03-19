@@ -9,7 +9,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Guidelines for using Google Cloud Logging Instrumentation Libraries for ASP.NET Core.</Description>
+    <Description>Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.</Description>
     <PackageTags>CodeAnalysis;Analyzers;CSharp;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
     <Authors>Google LLC</Authors>
