@@ -11,7 +11,7 @@
 # Available APIs
 
 This repository contains code for the following client libraries.
-Each package name link to the documentation for that package.
+Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
@@ -30,9 +30,9 @@ Each package name link to the documentation for that package.
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/latest) | 2.0.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/latest) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/latest) | 2.0.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
-| [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/latest) | 4.0.0 | Google Cloud Logging Instrumentation Libraries for ASP.NET Core |
-| [Google.Cloud.Diagnostics.AspNetCore.Analyzers](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore.Analyzers/latest) | 2.0.0 | Guidelines for using Google Cloud Logging Instrumentation Libraries for ASP.NET Core |
-| [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/latest) | 4.0.0 | Google Cloud Logging Instrumentation Libraries Common Components |
+| [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/latest) | 4.0.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
+| [Google.Cloud.Diagnostics.AspNetCore.Analyzers](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore.Analyzers/latest) | 2.0.0 | Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
+| [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/latest) | 4.0.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.V2](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.V2/latest) | 2.0.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/latest) | 2.0.0-beta02 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.ErrorReporting.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/latest) | 2.0.0-beta02 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |

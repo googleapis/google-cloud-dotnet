@@ -289,7 +289,7 @@
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "description": "Google Cloud Logging Instrumentation Libraries for ASP.NET Core.",
+    "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.",
     "tags": [
       "Error",
       "Reporting",
@@ -326,7 +326,7 @@
     "type": "analyzers",
     "targetFrameworks": "netstandard1.3",
     "testTargetFrameworks": "netcoreapp2.0",
-    "description": "Guidelines for using Google Cloud Logging Instrumentation Libraries for ASP.NET Core.",
+    "description": "Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.",
     "tags": [
       "CodeAnalysis",
       "Analyzers",
@@ -343,7 +343,7 @@
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
-    "description": "Google Cloud Logging Instrumentation Libraries Common Components.",
+    "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
     "tags": [
       "Error",
       "Reporting",
