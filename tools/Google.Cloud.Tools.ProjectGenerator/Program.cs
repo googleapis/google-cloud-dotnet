@@ -135,6 +135,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 Console.WriteLine($"API catalog contains {apis.Count} entries");
                 // Now we know we can parse the API catalog, let's reformat it.
                 ReformatApiCatalog();
+                RewriteReadme(root, apis);
                 HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
 
                 foreach (var api in apis)
@@ -170,6 +171,52 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 File.WriteAllText(path, formatted);
                 Console.WriteLine("Reformatted apis.json");
+            }
+        }
+
+        static void RewriteReadme(string root, List<ApiMetadata> apis)
+        {
+            var readmePath = Path.Combine(root, "README.md");
+            var existing = File.ReadAllLines(readmePath).ToList();
+
+            string headerLine = "| Package | Latest version | Description |";
+            string headerNext = "|---------|----------------|-------------|";
+            int headerIndex = existing.IndexOf(headerLine);
+
+            if (headerIndex == -1)
+            {
+                throw new UserErrorException($"Header line for library table not found.");
+            }
+
+            var linesBefore = existing.Take(headerIndex).ToList();
+            var linesAfter = existing.Skip(headerIndex).SkipWhile(line => line.StartsWith("|")).ToList();
+
+            var table = new List<string>();
+            table.Add(headerLine);
+            table.Add(headerNext);
+            foreach (var api in apis)
+            {
+                // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
+                // We can cross that bridge when we come to it.
+                if (api.Version == "1.0.0-beta00")
+                {
+                    continue;
+                }
+                string packageLink = $"[{api.Id}](https://googleapis.dev/dotnet/{api.Id}/latest)";
+                string productLink = api.ProductUrl is null
+                    // Note that NuGet descriptions are usually full sentences, ending in a period.
+                    // The product name or brief description is usually a sentence fragment, so if we *do*
+                    // use the full description, we trim any trailing periods.
+                    ? api.ProductName ?? api.ShortDescription ?? api.Description.TrimEnd('.') // No URL
+                    : $"[{api.ProductName}]({api.ProductUrl})"; // When there's a URL, assume we've got a name too
+                table.Add($"| {packageLink} | {api.Version} | {productLink} |");
+            }
+
+            var newContent = linesBefore.Concat(table).Concat(linesAfter);
+            if (!existing.SequenceEqual(newContent))
+            {
+                File.WriteAllLines(readmePath, newContent);
+                Console.WriteLine("Rewrote README.md");
             }
         }
 
