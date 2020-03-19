@@ -46,6 +46,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Labels = { { "", "" }, },
                 EnableMessageOrdering = false,
                 ExpirationPolicy = new ExpirationPolicy(),
+                Filter = "",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
             };
@@ -73,6 +74,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Labels = { { "", "" }, },
                 EnableMessageOrdering = false,
                 ExpirationPolicy = new ExpirationPolicy(),
+                Filter = "",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
             };
