@@ -39,8 +39,41 @@ fake_release() {
   touch tmp/nuget/${API}.${VERSION}.nupkg
 }
 
-fake_release Google.Cloud.AutoML.V1 2.0.0
-fake_release Google.Cloud.BigQuery.Storage.V1 2.0.0
+fake_release Google.Cloud.OrgPolicy.V1 2.0.0-beta02
+fake_release Google.Cloud.Trace.V1 2.0.0
+fake_release Google.Cloud.Trace.V2 2.0.0
+fake_release Google.Cloud.Diagnostics.AspNetCore.Analyzers 2.0.0
+fake_release Google.Cloud.BigQuery.V2 2.0.0-beta02
+fake_release Google.Cloud.Asset.V1 2.0.0-beta02
+fake_release Google.Cloud.Logging.NLog 3.0.0
+fake_release Google.Cloud.Logging.Log4Net 3.0.0
+fake_release Google.Cloud.Logging.V2 3.0.0
+fake_release Google.Cloud.Logging.Type 3.0.0
+fake_release Google.Cloud.Language.V1 2.0.0
+fake_release Google.Cloud.Kms.V1 2.0.0-beta03
+fake_release Google.Cloud.Firestore 2.0.0-beta02
+fake-release Google.Cloud.Firestore.V1 2.0.0-beta02
+fake_release Google.Cloud.Firestore.Admin.V1 2.0.0
+fake_release Google.Cloud.ErrorReporting.V1Beta1 2.0.0-beta02
+fake_release Google.Cloud.Dialogflow.V2 2.0.0
+fake_release Google.Cloud.Spanner.Common.V1 3.0.0-beta02
+fake_release Google.Cloud.Spanner.Data 3.0.0-beta02
+fake_release Google.Cloud.Spanner.Admin.Database.V1 3.0.0-beta02
+fake_release Google.Cloud.Spanner.Admin.Instance 3.0.0-beta02
+fake_release Google.Cloud.Spanner.V1 3.0.0-beta02
+fake_release Google.Cloud.Debugger.V2 2.0.0
+fake_release Google.Cloud.DevTools.Common 2.0.0
+fake_release Google.Cloud.Datastore.V1 3.0.0
+fake_release Google.Cloud.Dataproc.V1 2.0.0
+fake_release Google.Cloud.Container.V1 2.0.0
+fake_release Google.Cloud.Billing.V1 2.0.0
+fake_release Google.Cloud.Bigtable.V2 2.0.0-beta02
+fake_release Google.Cloud.Bigtable.Admin 2.0.0-beta02
+fake_release Google.Cloud.Bigtable.Common 2.0.0-beta02
+fake_release Google.Cloud.BigQuery.DataTransfer.V1 2.0.0
+fake_release Google.Cloud.Iam.V1 2.0.0
+fake_release Google.LongRunning 2.0.0
+
 
 echo "Uploading documentation to googleapis.dev"
 ./uploaddocs.sh tmp/nuget tmp/docfx_output $DOCS_CREDENTIALS docs-staging
