@@ -68,8 +68,8 @@ fake_release Google.Cloud.Dataproc.V1 2.0.0
 fake_release Google.Cloud.Container.V1 2.0.0
 fake_release Google.Cloud.Billing.V1 2.0.0
 fake_release Google.Cloud.Bigtable.V2 2.0.0-beta02
-fake_release Google.Cloud.Bigtable.Admin 2.0.0-beta02
-fake_release Google.Cloud.Bigtable.Common 2.0.0-beta02
+fake_release Google.Cloud.Bigtable.Admin.V2 2.0.0-beta02
+fake_release Google.Cloud.Bigtable.Common.V2 2.0.0-beta02
 fake_release Google.Cloud.BigQuery.DataTransfer.V1 2.0.0
 fake_release Google.Cloud.Iam.V1 2.0.0
 fake_release Google.LongRunning 2.0.0
