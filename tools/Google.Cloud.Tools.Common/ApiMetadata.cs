@@ -27,6 +27,7 @@ namespace Google.Cloud.Tools.Common
         private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
 
         public string Version { get; set; }
+        public string ReleasedVersion { get; set; }
         public string Id { get; set; }
         public ApiType Type { get; set; }
         public string TargetFrameworks { get; set; }
@@ -38,10 +39,20 @@ namespace Google.Cloud.Tools.Common
         public string ProductName { get; set; }
 
         /// <summary>
+        /// When the package isn't direclty for a product (so <see cref="ProductName "/>is null), this name appears
+        /// in the list of packages as a description. If <see cref="Description"/> is already short enough
+        /// for listing, this can be left empty.
+        /// </summary>
+        public string ShortDescription { get; set; }
+
+        /// <summary>
         /// API URL to include in documentation, e.g. "https://cloud.google.com/monitoring/api/v3/"
         /// </summary>
         public string ProductUrl { get; set; }
 
+        /// <summary>
+        /// The full description included in the NuGet package.
+        /// </summary>
         public string Description { get; set; }
 
         public List<string> Tags { get; set; } = new List<string>();
