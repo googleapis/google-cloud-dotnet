@@ -178,7 +178,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         static void RewriteReadme(string root, List<ApiMetadata> apis)
         {
             var readmePath = Path.Combine(root, "README.md");
-            RewriteApiTable(readmePath, apis, api => $"https://googleapis.dev/dotnet/{api.Id}/latest");
+            RewriteApiTable(readmePath, apis, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
         }
 
         static void RewriteDocsRootIndex(List<ApiMetadata> apis)
