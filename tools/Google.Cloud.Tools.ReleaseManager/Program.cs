@@ -254,7 +254,12 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
                 else
                 {
-                    idsToCheck.Add(diff.Id);
+                    // Found an API to compare. Build it locally first, so we know we're up-to-date.
+                    var api = diff.Id;
+                    idsToCheck.Add(api);
+                    Console.WriteLine($"Building {api} locally");
+                    var sourceRoot = DirectoryLayout.ForApi(api).SourceDirectory;
+                    Processes.RunDotnet(sourceRoot, "build", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", api);
                 }
             }
             CheckVersionCompatibility.Program.Main(idsToCheck.ToArray());
