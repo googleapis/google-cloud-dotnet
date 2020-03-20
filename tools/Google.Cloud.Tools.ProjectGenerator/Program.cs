@@ -136,6 +136,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 // Now we know we can parse the API catalog, let's reformat it.
                 ReformatApiCatalog();
                 RewriteReadme(root, apis);
+                RewriteDocsRootIndex(apis);
                 HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
 
                 foreach (var api in apis)
@@ -177,7 +178,23 @@ namespace Google.Cloud.Tools.ProjectGenerator
         static void RewriteReadme(string root, List<ApiMetadata> apis)
         {
             var readmePath = Path.Combine(root, "README.md");
-            var existing = File.ReadAllLines(readmePath).ToList();
+            RewriteApiTable(readmePath, apis, api => $"https://googleapis.dev/dotnet/{api.Id}/latest");
+        }
+
+        static void RewriteDocsRootIndex(List<ApiMetadata> apis)
+        {
+            var root = DirectoryLayout.ForRootDocs().DocsSourceDirectory;
+            var indexPath = Path.Combine(root, "index.md");
+            RewriteApiTable(indexPath, apis, api => $"{api.Id}/index.html");
+        }
+
+        /// <summary>
+        /// README.md and docs/root/index.md use the same table, but with slightly different links. This
+        /// method is the common code, with a URL provider to indicate how to link to an API's documentation.
+        /// </summary>
+        static void RewriteApiTable(string path, List<ApiMetadata> apis, Func<ApiMetadata, string> urlProvider)
+        {
+            var existing = File.ReadAllLines(path).ToList();
 
             string headerLine = "| Package | Latest version | Description |";
             string headerNext = "|---------|----------------|-------------|";
@@ -202,7 +219,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 {
                     continue;
                 }
-                string packageLink = $"[{api.Id}](https://googleapis.dev/dotnet/{api.Id}/latest)";
+                string packageLink = $"[{api.Id}]({urlProvider(api)})";
                 string productLink = api.ProductUrl is null
                     // Note that NuGet descriptions are usually full sentences, ending in a period.
                     // The product name or brief description is usually a sentence fragment, so if we *do*
@@ -215,8 +232,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             var newContent = linesBefore.Concat(table).Concat(linesAfter);
             if (!existing.SequenceEqual(newContent))
             {
-                File.WriteAllLines(readmePath, newContent);
-                Console.WriteLine("Rewrote README.md");
+                File.WriteAllLines(path, newContent);
+                Console.WriteLine($"Rewrote {Path.GetFileName(path)}");
             }
         }
 
