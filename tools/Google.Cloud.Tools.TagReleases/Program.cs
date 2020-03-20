@@ -85,8 +85,7 @@ namespace Google.Cloud.Tools.TagReleases
 
             await MakeReleasesAsync(client, newReleases, commit);
             Console.WriteLine();
-            Console.WriteLine($"Release tags created. Please start the Kokoro release job with commit hash \"{commit.Sha}\" and wait for an email with the result.");
-            Console.WriteLine($"For a manual release, run ./buildrelease.sh {commit.Sha}");
+            Console.WriteLine($"Done. Please start the Kokoro release job with any of the above tags as the committish.");
             return 0;
         }
 
@@ -174,9 +173,11 @@ namespace Google.Cloud.Tools.TagReleases
             var originalMessage = commit.Commit.Message;
             var unwrappedMessage = string.Join("\n", UnwrapLines(originalMessage.Split('\n')));
 
+            Console.WriteLine("Creating releases with tags:");
             foreach (var api in newReleases)
             {
-                var gitRelease = new NewRelease($"{api.Id}-{api.Version}")
+                var tag = $"{api.Id}-{api.Version}";
+                var gitRelease = new NewRelease(tag)
                 {
                     Prerelease = !api.IsReleaseVersion,
                     Name = $"{api.Version} release of {api.Id}",
@@ -185,7 +186,7 @@ namespace Google.Cloud.Tools.TagReleases
                 };
                 // We could parallelize, but there's very little point.
                 await client.Repository.Release.Create(RepositoryOwner, RepositoryName, gitRelease);
-                Console.WriteLine($"Created release for {api.Id}");
+                Console.WriteLine(tag);
             }
         }
 
