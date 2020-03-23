@@ -1357,6 +1357,21 @@
     ]
   },
   {
+    "id": "Google.Identity.AccessContextManager.Type",
+    "generator": "proto",
+    "protoPath": "google/identity/accesscontextmanager/type",
+    "version": "1.0.0-beta00",
+    "type": "other",
+    "targetFrameworks": "netstandard2.0;net461",
+    "description": "Version-agnostic types for the Google Identity Access Context Manager API.",
+    "tags": [
+      "identity"
+    ],
+    "dependencies": {
+      "Google.Api.CommonProtos": "2.0.0"
+    }
+  },
+  {
     "id": "Google.LongRunning",
     "generator": "micro",
     "protoPath": "google/longrunning",
