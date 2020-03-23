@@ -12,8 +12,6 @@
   href: call-settings.md
 - name: Resource clean-up
   href: cleanup.md
-- name: GAX and dependencies
-  href: gax-dependencies.md
 - name: Versioning
   href: versioning.md
 - name: Breaking changes (Feb 2020)
