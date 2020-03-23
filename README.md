@@ -63,6 +63,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Scheduler.V1](https://googleapis.dev/dotnet/Google.Cloud.Scheduler.V1/2.0.0) | 2.0.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1/1.0.0) | 1.0.0 | [Secret Manager](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Secret Manager](https://cloud.google.com/secret-manager) |
+| [Google.Cloud.SecurityCenter.Settings.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.Settings.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1/2.0.0) | 2.0.0 | [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1P1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1P1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.ServiceDirectory.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ServiceDirectory.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | Service Directory API |
