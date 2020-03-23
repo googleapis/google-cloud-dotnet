@@ -175,7 +175,9 @@ namespace Google.Cloud.Tools.ReleaseManager
             var apiNames = new HashSet<string>(catalog.Select(x => x.Id));
             ProjectGenerator.Program.GenerateMetadataFile(layout.SourceDirectory, api);
             ProjectGenerator.Program.GenerateProjects(layout.SourceDirectory, api, apiNames);
-            
+            ProjectGenerator.Program.RewriteReadme(catalog);
+            ProjectGenerator.Program.RewriteDocsRootIndex(catalog);
+
             // This is somewhat annoying and ugly, but never mind.
             // If we need similar code in other places, we should put it in ApiMetadata.
             JToken parsed = JToken.Parse(File.ReadAllText(ApiMetadata.CatalogPath));
