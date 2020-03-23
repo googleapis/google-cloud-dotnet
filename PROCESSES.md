@@ -168,9 +168,10 @@ check this is really what you meant to do.
     This just avoids you having to look up the current version number
     if you don't already know it.
 
-2. Run `./prepare-release.sh compare`. This will compare the
-previously released NuGet packages with the current source code,
-showing you what's changed. Check there's nothing unexpected.
+2. Run `./prepare-release.sh compare`. This will build the code
+locally, and compare the previously released NuGet packages with the
+current source code, showing you what's changed. Check there's
+nothing unexpected.
 
 3. Run `./prepare-release update-history`. This will update the
 version history files of all changed APIs, based on the commits
@@ -179,24 +180,32 @@ the files afterwards to check they contain everything you want to
 include in the history. (The filenames are displayed as the output
 of this command.)
 
-4. If this is the first release of a package, or it's been updated
-from beta to GA, update `README.md` and `docs/root/index.md`
-accordingly. There is no automation for this step currently.
-
-5. Assuming you're only releasing a single package, run
+4. Assuming you're only releasing a single package, run
 `./prepare-release commit`. This will commit all the current
 changes, with a message taken from the version history for the
 package. Use `git commit --amend` to change the commit message if
 you need to. If you're releasing more than one package, commit the
 changes manually with a suitable message.
 
-6. Create a pull request for the commit, and get it reviewed.
+5. Create a pull request for the commit, and get it reviewed.
 
 Sample session when releasing Google.Cloud.Speech.V1:
 
 ```text
 $ git checkout -b release-speech
 $ ./prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03
+$ ./prepare-release.sh compare
+$ ./prepare-release.sh update-history
+$ ./prepare-release.sh commit
+$ git push
+```
+
+Equivalent process using `increment-version`, assuming the current
+version is 2.0.0-beta02:
+
+```text
+$ git checkout -b release-speech
+$ ./prepare-release.sh increment-version Google.Cloud.Speech.V1
 $ ./prepare-release.sh compare
 $ ./prepare-release.sh update-history
 $ ./prepare-release.sh commit
