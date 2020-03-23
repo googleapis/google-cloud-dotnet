@@ -40,10 +40,7 @@ Step 2: Check the API is correct in googleapis
 The API should be present in the googleapis repo, including:
 
 - Protos describing the service (e.g. [datastore v1](https://github.com/googleapis/googleapis/tree/master/google/datastore/v1)
-- A YAML file (e.g. [datastore.yaml](https://github.com/googleapis/googleapis/blob/master/google/datastore/datastore.yaml)) containing
-  more general service metadata
-- A GAPIC YAML file (e.g. [datastore_gapic.yaml](https://github.com/googleapis/googleapis/blob/master/google/datastore/v1/datastore_gapic.yaml)
-  containing more semantic information required by the code generator, such as how resources are organized and named
+- A JSON file with gRPC configuration (e.g. [datastore v1](https://github.com/googleapis/googleapis/blob/master/google/datastore/v1/datastore_grpc_service_config.json))
 
 Check that these files all exist, and check that the C# namespace is
 appropriate. The protos should contain `csharp_namespace` options
@@ -78,22 +75,18 @@ Fix everything with "FIXME". There's no set number of tags, but these are used f
 so consider what users will search for.
 
 The `protoPath` property is the directory within the `googleapis` repo, e.g.
-`"google/firestore/v1"`. The `serviceYaml` property is the name of the
-service's YAML configuration file relative to the *parent* directory
-of the proto path, e.g. `"firestore_v1.yaml"`.
+`"google/firestore/v1"`.
 
 The above assumes you're happy to create an initial beta release for
-the generated code immediately. As of late 2017, that's usually
-fine. If you want to avoid creating a release, use a version of
-`1.0.0-alpha00` or `1.0.0-beta00` depending on whether or not you
-expect to perform alpha releases.
+the generated code immediately. If you want to avoid creating a
+release right now, use a version of `1.0.0-beta00`.
 
 If your project uses the IAM or long-running operations APIs, you'll need to add dependencies for those, e.g.
 
 ```json
 "dependencies": {
-  "Google.LongRunning": "1.1.0",
-  "Google.Cloud.Iam.V1": "1.2.0"
+  "Google.LongRunning": "2.0.0",
+  "Google.Cloud.Iam.V1": "2.0.0"
 }
 ```
 
@@ -106,38 +99,32 @@ You can either run this by specifying the IDs of the packages you
 want to generate, or run it without specifying any arguments at all,
 in which case all APIs will be generated.
 
-This will clone both the `googleapis` and `toolkit` repos as
+This will clone both the `googleapis` and `gapic-generator-csharp` repos as
 subdirectories, or pull them if they already exist.
 
-Step 5: Commit just the changes for your API
---------------------------------------------
-
-You may see changes for other APIs. Ignore those, discarding the
-changes if that's the most convenient approach. Create a commit containing:
-
-- Your `generateapis.sh` change
-- The new directory under `apis`
-
-
-Step 6: Generate project files
+Step 5: Generate project files
 ----------------------
 
-Run `generateprojects.sh`. This should create:
+Run `./generateprojects.sh`. This should create:
 
 - A solution file
 - Project files for the production project and the snippets
 - A stub documentation file
 
-Step 7: Run the smoke test
+Step 6: Build the code
 --------------------------
 
-Some APIs should come with a smoke test, just to check we can at
-least make a single request.
+Run `./build.sh Your.ApiName.Here` to check it builds and the
+generated unit tests pass.
 
-- Ensure the `TEST_PROJECT` environment variable is set to your GCP
-  project ID.
-- Ensure the API is enabled for your project
-- Run `runintegrationtests.sh --smoke Your.ApiName.Here`
+Step 7: Commit just the changes for your API
+--------------------------------------------
+
+Create a commit containing the new directory under `apis`. If you
+ran `generateapis.sh` without specifying the API ID, and other APIs
+were regenerated with changes, don't include those changes in the
+commit.
+
 
 Step 8: Create a PR
 -------------------
