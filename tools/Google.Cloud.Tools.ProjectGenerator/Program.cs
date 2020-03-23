@@ -135,7 +135,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 Console.WriteLine($"API catalog contains {apis.Count} entries");
                 // Now we know we can parse the API catalog, let's reformat it.
                 ReformatApiCatalog();
-                RewriteReadme(root, apis);
+                RewriteReadme(apis);
                 RewriteDocsRootIndex(apis);
                 HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
 
@@ -162,7 +162,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        static void ReformatApiCatalog()
+        private static void ReformatApiCatalog()
         {
             string path = ApiMetadata.CatalogPath;
             string existing = File.ReadAllText(path);
@@ -175,13 +175,14 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        static void RewriteReadme(string root, List<ApiMetadata> apis)
+        public static void RewriteReadme(List<ApiMetadata> apis)
         {
+            var root = DirectoryLayout.DetermineRootDirectory();
             var readmePath = Path.Combine(root, "README.md");
             RewriteApiTable(readmePath, apis, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
         }
 
-        static void RewriteDocsRootIndex(List<ApiMetadata> apis)
+        public static void RewriteDocsRootIndex(List<ApiMetadata> apis)
         {
             var root = DirectoryLayout.ForRootDocs().DocsSourceDirectory;
             var indexPath = Path.Combine(root, "index.md");
@@ -192,7 +193,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         /// README.md and docs/root/index.md use the same table, but with slightly different links. This
         /// method is the common code, with a URL provider to indicate how to link to an API's documentation.
         /// </summary>
-        static void RewriteApiTable(string path, List<ApiMetadata> apis, Func<ApiMetadata, string> urlProvider)
+        private static void RewriteApiTable(string path, List<ApiMetadata> apis, Func<ApiMetadata, string> urlProvider)
         {
             var existing = File.ReadAllLines(path).ToList();
 
@@ -417,6 +418,7 @@ shell.run(
         /// </summary>
         public static void GenerateMetadataFile(string apiRoot, ApiMetadata api)
         {
+            string metadataPath = Path.Combine(apiRoot, ".repo-metadata.json");
             var version = api.StructuredVersion;
             string versionBasedReleaseLevel = 
                 // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
@@ -428,6 +430,9 @@ shell.run(
             string releaseLevel = api.ReleaseLevelOverride ?? versionBasedReleaseLevel;
             if (releaseLevel == "none")
             {
+                // If we have temporarily set the version to (say) beta01 and then reset it to beta00,
+                // make sure we don't have an obsolete metadata file.
+                File.Delete(metadataPath);
                 return;
             }
             var metadata = new
@@ -437,7 +442,7 @@ shell.run(
                 client_documentation = $"https://googleapis.dev/dotnet/{api.Id}/latest",
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
-            File.WriteAllText(Path.Combine(apiRoot, ".repo-metadata.json"), json);
+            File.WriteAllText(metadataPath, json);
         }
 
         private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)
