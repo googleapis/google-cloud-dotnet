@@ -812,6 +812,19 @@
     ]
   },
   {
+    "id": "Google.Cloud.RecaptchaEnterprise.V1",
+    "generator": "micro",
+    "protoPath": "google/cloud/recaptchaenterprise/v1",
+    "productName": "Google Cloud reCAPTCHA Enterprise",
+    "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API v1.",
+    "tags": [
+      "reCAPTCHA"
+    ]
+  },
+  {
     "id": "Google.Cloud.RecaptchaEnterprise.V1Beta1",
     "generator": "micro",
     "protoPath": "google/cloud/recaptchaenterprise/v1beta1",
@@ -819,7 +832,7 @@
     "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
     "version": "1.0.0-beta02",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API.",
+    "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API v1beta1.",
     "tags": [
       "reCAPTCHA"
     ]
