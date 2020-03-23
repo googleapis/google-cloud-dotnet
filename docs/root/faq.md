@@ -2,11 +2,7 @@
 
 ## How can I use non-default credentials for gRPC-based APIs?
 
-One option - and an option that has worked for these APIs since the
-start - is to create your own channel based on gRPC channel
-credentials, and pass that to the `Create` method.
-
-However, the libraries now implement a *client builder* pattern to make
+The libraries implement a *client builder* pattern to make
 life considerably simpler when you wish to specify different
 credentials or a different API endpoint.
 
@@ -226,36 +222,11 @@ Or modify it after other initialization steps:
 ## Why is System.EntryPointNotFoundException being thrown?
 
 While there are various *potential* causes for this, the most likely
-(as of summer 2019) is that you have a dependency on Grpc.Core 2.x,
-but our libraries still depend on Grpc.Core 1.x.
+cause is that you have a dependency on Grpc.Core 2.x, but you're
+still depending on Google Cloud libraries that depend on Grpc.Core
+1.x.
 
-In August 2019, Grpc.Core 2.23.0 was released. The previous version
-of Grpc.Core was 1.22.0, which is what the Google Cloud client
-libraries depend on. As SemVer would suggest, versions 1.x and 2.x
-of Grpc.Core are not compatible with each other. The incompatibility
-is around how streaming operations are consumed, and is a side-effect
-of C# 8 gaining the ability to iterate over asynchronous sequences.
-Obviously a breaking change is never pleasant, but this was thoroughly
-discussed, and this was the result.
-
-While the Google Cloud client libraries depend on Grpc.Core 1.x, if
-your project takes a dependency on Grpc.Core 2.x, you will see this
-exception if you use streaming operations. (If you don't use any
-streaming operations you *may* not see a problem, but we still
-strongly discourage you from trying.)
-
-Our plan to mitigate this issue is:
-
-- Use version ranges for Grpc.Core so that the break is at build time
-  rather than execution time, until the next steps are ready. (Done)
-- Migrate to depend on Grpc.Core 2.x within the Google Cloud client
-  libraries.
-- Rerelease all libraries with a major version bump, as taking a major
-  dependency version bump is a transitive breaking change.
-- Update this FAQ entry to explain why the major bump occurred.
-
-We're collecting a few breaking changes to make, all at the same
-time, so that we can get away with a single major version bump.
-
-See [the major version planning document](major-version.md) for more
-details.
+We have now released client libraries (some of them still in beta,
+but most GA) which use GAX 3.x, which depends on Grpc.Core 2.x. If
+you update to the latest version of the client library, that should
+fix the issue.

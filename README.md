@@ -145,18 +145,11 @@ The Google Cloud Client Libraries for .NET follow [Semantic Versioning](http://s
 
 The version number in the package *name* (and .NET namespace)
 represents the version of the underlying API; the version number for
-the package itself indicates the status of the client library, according to
-the following quality levels:
+the package itself indicates the status of the client library.
 
-**GA**: Libraries defined at a GA (General Availability) quality level are
-expected to be stable: breaking API changes will not be made without a new major
-release.
-
-**Beta**: Libraries defined at a Beta quality level are expected to
-be stable and working, but the API surface is still under active
-development. We encourage you to experiment with these libraries, but
-expect breaking changes in future versions. There may still be
-issues, but we have a fairly high degree of confidence.
+See the [Versioning
+documentation](https://googleapis.github.io/google-cloud-dotnet/docs/guides/versioning.html)
+for more details.
 
 ## License
 
