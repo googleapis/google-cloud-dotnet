@@ -1372,6 +1372,21 @@
     }
   },
   {
+    "id": "Google.Identity.AccessContextManager.V1",
+    "generator": "proto",
+    "protoPath": "google/identity/accesscontextmanager/v1",
+    "version": "1.0.0-beta00",
+    "targetFrameworks": "netstandard2.0;net461",
+    "description": "Protocol buffer types for the Google Identity Access Context Manager API V1.",
+    "tags": [
+      "identity"
+    ],
+    "dependencies": {
+      "Google.Api.CommonProtos": "2.0.0",
+      "Google.Identity.AccessContextManager.Type": "project"
+    }
+  },
+  {
     "id": "Google.LongRunning",
     "generator": "micro",
     "protoPath": "google/longrunning",
