@@ -37,8 +37,7 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData(typeof(List<string>), null)]
         public void TryGetStringDictionaryValueType(BclType input, BclType expectedElementType)
         {
-            var actual = ConverterCache.TryGetStringDictionaryValueType(input, out var actualElementType);
-            Assert.Equal(expectedElementType != null, actual);
+            var actualElementType = ConverterCache.TryGetStringDictionaryValueType(input);
             Assert.Equal(expectedElementType, actualElementType);
         }
 
