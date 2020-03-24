@@ -37,10 +37,11 @@ namespace Google.Cloud.Firestore.Converters
         {
             _elementType = typeof(object);
 
-            // TODO: Use List<T> if we have an interface? That's what we do for dictionaries.
-            // (We could also make this type generic, like DictionaryConverter. There's a difference
-            // in that we don't need a generic interface in the conversion code here.)
+            // We could make this type generic, like DictionaryConverter. There's a difference
+            // in that we don't need a generic interface in the conversion code here.
             var interfaces = targetType.GetTypeInfo().GetInterfaces();
+            // TODO: Use IEnumerable<T> instead of IList<T>?
+            // TODO: Handle non-generic types, e.g. ArrayList.
             var genericEnumerable = interfaces.Select(t => t.GetTypeInfo()).FirstOrDefault(iface => iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IList<>));
             if (genericEnumerable != null)
             {

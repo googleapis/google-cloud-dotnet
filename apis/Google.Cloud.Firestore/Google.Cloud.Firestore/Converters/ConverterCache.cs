@@ -106,6 +106,15 @@ namespace Google.Cloud.Firestore.Converters
                 }
             }
 
+            // This will only return true if the target type can be assigned
+            // from List<T>, and the target type implements IEnumerable<T>. That's
+            // enough to make ListConverter work: when serializing, it will just use
+            // IEnumerable, and when deserializing it will construct a List<T>.
+            if (TryGetListType(targetType) is BclType listType)
+            {
+                return new ListConverter(listType);
+            }
+
             if (typeof(IList).IsAssignableFrom(targetType))
             {
                 return new ListConverter(targetType);
@@ -142,6 +151,41 @@ namespace Google.Cloud.Firestore.Converters
                 }
                 var typeArguments = ifaceInfo.GenericTypeArguments;
                 return typeArguments[0] == typeof(string) ? typeArguments[1] : null;
+            }
+        }
+
+        /// <summary>
+        /// If <paramref name="targetType"/> is a type that implements <see cref="IEnumerable{T}"/>, we check to see if <see cref="List{T}"/> is
+        /// compatible with the target type. 
+        /// </summary>
+        /// <param name="targetType"></param>
+        /// <returns>null if <paramref name="targetType"/> cannot be implemented via <see cref="List{T}"/>; the list type otherwise.</returns>
+        internal static BclType TryGetListType(BclType targetType)
+        {
+            var elementType = targetType.GetTypeInfo()
+                .GetInterfaces()
+                .Concat(new[] { targetType }) // Make this method handle IDictionary<,> as an input; GetInterfaces doesn't return the type you call it on
+                .Select(MapInterfaceToTypeArgument).FirstOrDefault(t => t != null);
+            if (elementType is null)
+            {
+                return null;
+            }
+            var candidateType = typeof(List<>).MakeGenericType(elementType);
+            return targetType.IsAssignableFrom(candidateType) ? candidateType : null;
+
+            BclType MapInterfaceToTypeArgument(BclType iface)
+            {
+                var ifaceInfo = iface.GetTypeInfo();
+                if (!ifaceInfo.IsGenericType || ifaceInfo.IsGenericTypeDefinition)
+                {
+                    return null;
+                }
+                var generic = ifaceInfo.GetGenericTypeDefinition();
+                if (generic != typeof(IEnumerable<>))
+                {
+                    return null;
+                }
+                return ifaceInfo.GenericTypeArguments[0];
             }
         }
     }
