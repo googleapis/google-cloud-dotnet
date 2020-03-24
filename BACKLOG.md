@@ -91,3 +91,8 @@ the request and want to put work into it.
 
 - Issue: [#2163](https://github.com/googleapis/google-cloud-dotnet/issues/2163)
 - Status: Waiting for demand on this. To be reconsidered if we decide to merge the existing Diagnostics libraries into one
+
+# Diagnostics: Make it easy to not use Stackdriver diagnostics in development
+
+- Issue: [#3335](https://github.com/googleapis/google-cloud-dotnet/issues/335)
+- Status: Waiting for demand on this. We have some ideas, but little *customer* input.
