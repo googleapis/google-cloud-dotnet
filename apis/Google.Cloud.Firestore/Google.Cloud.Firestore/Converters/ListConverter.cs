@@ -35,18 +35,13 @@ namespace Google.Cloud.Firestore.Converters
 
         internal ListConverter(BclType targetType) : base(targetType)
         {
-            _elementType = typeof(object);
-
             // We could make this type generic, like DictionaryConverter. There's a difference
             // in that we don't need a generic interface in the conversion code here.
             var interfaces = targetType.GetTypeInfo().GetInterfaces();
-            // TODO: Use IEnumerable<T> instead of IList<T>?
-            // TODO: Handle non-generic types, e.g. ArrayList.
-            var genericEnumerable = interfaces.Select(t => t.GetTypeInfo()).FirstOrDefault(iface => iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IList<>));
-            if (genericEnumerable != null)
-            {
-                _elementType = genericEnumerable.GenericTypeArguments[0];
-            }
+
+            var genericListInterface = interfaces.Select(t => t.GetTypeInfo()).FirstOrDefault(iface => iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IList<>));
+            // Just use object if the type isn't actually generic.
+            _elementType = genericListInterface?.GenericTypeArguments[0] ?? typeof(object);
         }
 
         protected override object DeserializeArray(DeserializationContext context, RepeatedField<Value> values)
