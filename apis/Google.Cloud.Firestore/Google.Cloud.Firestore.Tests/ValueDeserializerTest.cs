@@ -21,6 +21,7 @@ using Xunit;
 using BclType = System.Type;
 using wkt = Google.Protobuf.WellKnownTypes;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
+using System.Collections;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -223,6 +224,15 @@ namespace Google.Cloud.Firestore.Tests
             var deserialized = DeserializeDefault(value, typeof(object));
             Assert.IsType<List<object>>(deserialized);
             Assert.Equal(new List<object> { 1L, 2L }, deserialized);
+        }
+
+        [Fact]
+        public void DeserializeArrayToArrayListUsesArrayList()
+        {
+            var value = ValueSerializer.Serialize(SerializationContext.Default, new[] { 1, 2 });
+            var deserialized = DeserializeDefault(value, typeof(ArrayList));
+            Assert.IsType<ArrayList>(deserialized);
+            Assert.Equal(new ArrayList { 1L, 2L }, deserialized);
         }
 
         [Fact]
