@@ -93,7 +93,7 @@ namespace Google.Cloud.Firestore.Converters
             {
                 return new EnumConverter(targetType);
             }
-            if (TryGetStringDictionaryValueType(targetType, out var dictionaryElementType))
+            if (TryGetStringDictionaryValueType(targetType) is BclType dictionaryElementType)
             {
                 var method = s_createDictionaryConverter.MakeGenericMethod(dictionaryElementType);
                 try
@@ -126,16 +126,15 @@ namespace Google.Cloud.Firestore.Converters
         // Internal for testing
 
         /// <summary>
-        /// If <paramref name="type"/> implements (or is) <see cref="IDictionary{TKey, TValue}"/> with TKey equal to string, returns true and sets
-        /// <paramref name="elementType"/> to TValue. Otherwise, returns false and sets <paramref name="elementType"/> to null.
+        /// If <paramref name="type"/> implements (or is) <see cref="IDictionary{TKey, TValue}"/> with TKey equal to string, returns TValue.
+        /// Otherwise, returns null.
         /// </summary>
-        internal static bool TryGetStringDictionaryValueType(BclType type, out BclType elementType)
+        internal static BclType TryGetStringDictionaryValueType(BclType type)
         {
-            elementType = type.GetTypeInfo()
+            return type.GetTypeInfo()
                 .GetInterfaces()
                 .Concat(new[] { type }) // Make this method handle IDictionary<,> as an input; GetInterfaces doesn't return the type you call it on
                 .Select(MapInterfaceToDictionaryValueTypeArgument).FirstOrDefault(t => t != null);
-            return elementType != null;
 
             BclType MapInterfaceToDictionaryValueTypeArgument(BclType iface)
             {
