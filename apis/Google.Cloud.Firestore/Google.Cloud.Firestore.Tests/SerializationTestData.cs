@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
@@ -190,6 +191,13 @@ namespace Google.Cloud.Firestore.Tests
                 new Value { MapValue = new MapValue { Fields = {
                         { "PlayerName", new Value { MapValue = new MapValue { Fields = { { "first", new Value { StringValue = "F" } }, { "middle", new Value { StringValue = "M" } }, { "last", new Value { StringValue = "L" } } } } } },
                         { "HighScore", new Value { MapValue = new MapValue { Fields = { { "score", new Value { IntegerValue = 500 } }, { "level", new Value { IntegerValue = 10 } } } } } }
+            } } } },
+
+            // Interface support
+            { new InterfaceProperties { List = new List<string> { "A", "B" }, Map = new Dictionary<string, string> { { "x", "x-value" }, { "y", "y-value" } } },
+                new Value { MapValue = new MapValue { Fields = {
+                        { "List", new Value { ArrayValue = new ArrayValue { Values = { new Value { StringValue = "A" }, new Value { StringValue = "B" } } } } },
+                        { "Map", new Value { MapValue = new MapValue { Fields = { { "x", new Value { StringValue = "x-value"} }, { "y", new Value { StringValue = "y-value" } } } } } }
             } } } }
         };
 
@@ -525,5 +533,28 @@ namespace Google.Cloud.Firestore.Tests
                 HighScore == other.HighScore && PlayerName == other.PlayerName;
         }
 
+        [FirestoreData]
+        private class InterfaceProperties : IEquatable<InterfaceProperties>
+        {
+            [FirestoreProperty]
+            public IDictionary<string, string> Map { get; set; }
+
+            [FirestoreProperty]
+            public IList<string> List { get; set; }
+
+            private List<string> MapKeysInOrder => Map.Keys.OrderBy(k => k).ToList();
+            private List<string> MapValuesInKeyOrder => Map.OrderBy(pair => pair.Key).Select(pair => pair.Value).ToList();
+
+            public override bool Equals(object obj) => Equals(obj as TupleModel);
+
+            public override int GetHashCode() => GaxEqualityHelpers.GetListHashCode(List.ToList())
+                ^ GaxEqualityHelpers.GetListHashCode(MapKeysInOrder)
+                ^ GaxEqualityHelpers.GetListHashCode(MapValuesInKeyOrder);
+
+            public bool Equals(InterfaceProperties other) =>
+                GaxEqualityHelpers.ListsEqual(List.ToList(), other.List.ToList()) &&
+                GaxEqualityHelpers.ListsEqual(MapKeysInOrder, other.MapKeysInOrder) &&
+                GaxEqualityHelpers.ListsEqual(MapValuesInKeyOrder, other.MapValuesInKeyOrder);
+        }
     }
 }

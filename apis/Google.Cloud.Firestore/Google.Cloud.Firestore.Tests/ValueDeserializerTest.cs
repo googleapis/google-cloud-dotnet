@@ -225,6 +225,15 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new List<object> { 1L, 2L }, deserialized);
         }
 
+        [Fact]
+        public void DeserializeArrayToGenericIEnumerableUsesList()
+        {
+            var value = ValueSerializer.Serialize(SerializationContext.Default, new[] { 1, 2 });
+            var deserialized = DeserializeDefault(value, typeof(IEnumerable<int>));
+            Assert.IsType<List<int>>(deserialized);
+            Assert.Equal(new List<int> { 1, 2 }, deserialized);
+        }
+
         [Theory]
         [InlineData(typeof(int?))]
         [InlineData(typeof(string))]

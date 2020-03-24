@@ -41,5 +41,24 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expectedElementType != null, actual);
             Assert.Equal(expectedElementType, actualElementType);
         }
+
+        [Theory]
+        [InlineData(typeof(List<int>), typeof(List<int>))]
+        [InlineData(typeof(IEnumerable<int>), typeof(List<int>))]
+        [InlineData(typeof(IReadOnlyList<string>), typeof(List<string>))]
+        [InlineData(typeof(ExtendedList<string>), null)] // We can't assign a List<string> to an ExtendedList<string> property.
+        [InlineData(typeof(int[]), null)] // Implements IEnumerable<T>, but List<T> isn't compatible.
+        [InlineData(typeof(ConcurrentQueue<int>), null)] // Implements IEnumerable<T>, but List<T> isn't compatible.
+        [InlineData(typeof(System.Guid), null)] // Doesn't implement IEnumerable<T>
+        [InlineData(typeof(Dictionary<int, int>), null)] // Implements IEnumerable<T>, but List<T> isn't compatible.
+        public void TryGetListTypeArgument(BclType input, BclType expectedType)
+        {
+            var actualType = ConverterCache.TryGetListType(input);
+            Assert.Equal(expectedType, actualType);
+        }
+
+        private class ExtendedList<T> : List<T>
+        {
+        }
     }
 }
