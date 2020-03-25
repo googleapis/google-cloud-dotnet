@@ -386,7 +386,57 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void UpdateSessionEntityType()
+        public void UpdateSessionEntityType1()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
+            {
+                SessionEntityType = new SessionEntityType(),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType response = client.UpdateSessionEntityType(request.SessionEntityType);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateSessionEntityType1Async()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
+            {
+                SessionEntityType = new SessionEntityType(),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateSessionEntityType2()
         {
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
@@ -411,7 +461,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateSessionEntityTypeAsync()
+        public async stt::Task UpdateSessionEntityType2Async()
         {
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest

@@ -517,7 +517,34 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateSessionEntityType</summary>
-        public void UpdateSessionEntityType()
+        public void UpdateSessionEntityType1()
+        {
+            // Snippet: UpdateSessionEntityType(SessionEntityType, CallSettings)
+            // Create client
+            SessionEntityTypesClient sessionEntityTypesClient = SessionEntityTypesClient.Create();
+            // Initialize request argument(s)
+            SessionEntityType sessionEntityType = new SessionEntityType();
+            // Make the request
+            SessionEntityType response = sessionEntityTypesClient.UpdateSessionEntityType(sessionEntityType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSessionEntityTypeAsync</summary>
+        public async Task UpdateSessionEntityType1Async()
+        {
+            // Snippet: UpdateSessionEntityTypeAsync(SessionEntityType, CallSettings)
+            // Additional: UpdateSessionEntityTypeAsync(SessionEntityType, CancellationToken)
+            // Create client
+            SessionEntityTypesClient sessionEntityTypesClient = await SessionEntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            SessionEntityType sessionEntityType = new SessionEntityType();
+            // Make the request
+            SessionEntityType response = await sessionEntityTypesClient.UpdateSessionEntityTypeAsync(sessionEntityType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSessionEntityType</summary>
+        public void UpdateSessionEntityType2()
         {
             // Snippet: UpdateSessionEntityType(SessionEntityType, FieldMask, CallSettings)
             // Create client
@@ -531,7 +558,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateSessionEntityTypeAsync</summary>
-        public async Task UpdateSessionEntityTypeAsync()
+        public async Task UpdateSessionEntityType2Async()
         {
             // Snippet: UpdateSessionEntityTypeAsync(SessionEntityType, FieldMask, CallSettings)
             // Additional: UpdateSessionEntityTypeAsync(SessionEntityType, FieldMask, CancellationToken)

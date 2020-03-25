@@ -876,6 +876,57 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="sessionEntityType">
         /// Required. The session entity type to update.
         /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SessionEntityType UpdateSessionEntityType(SessionEntityType sessionEntityType, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSessionEntityType(new UpdateSessionEntityTypeRequest
+            {
+                SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> UpdateSessionEntityTypeAsync(SessionEntityType sessionEntityType, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSessionEntityTypeAsync(new UpdateSessionEntityTypeRequest
+            {
+                SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> UpdateSessionEntityTypeAsync(SessionEntityType sessionEntityType, st::CancellationToken cancellationToken) =>
+            UpdateSessionEntityTypeAsync(sessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to update.
+        /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
         /// </param>
