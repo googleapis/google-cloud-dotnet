@@ -1,5 +1,5 @@
 # Start with the .NET Core SDK
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1.100
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1.100-bionic
 
 RUN apt-get update
 RUN apt-get install -y git
