@@ -317,8 +317,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -343,8 +344,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -369,8 +371,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -395,8 +398,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -421,8 +425,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -447,8 +452,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -473,8 +479,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -499,8 +506,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -525,8 +533,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -551,8 +560,9 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -603,8 +613,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -618,8 +629,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -633,8 +645,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -645,8 +658,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -660,8 +674,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -675,8 +690,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -687,8 +703,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -702,8 +719,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -717,8 +735,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Gets a single Uptime check configuration.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to retrieve. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to retrieve. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -756,8 +775,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -775,8 +795,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -794,8 +815,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -809,8 +831,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -828,8 +851,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -847,8 +871,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -862,8 +887,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -881,8 +907,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -900,8 +927,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -915,8 +943,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -934,8 +963,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -953,8 +983,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -968,8 +999,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -987,8 +1019,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -1006,8 +1039,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format
-        /// is `projects/[PROJECT_ID]`.
+        /// Required. The project in which to create the Uptime check. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="uptimeCheckConfig">
         /// Required. The new Uptime check configuration.
@@ -1170,8 +1204,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1187,8 +1222,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1204,8 +1240,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1218,8 +1255,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1235,8 +1273,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1252,8 +1291,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1266,8 +1306,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1283,8 +1324,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1300,8 +1342,9 @@ namespace Google.Cloud.Monitoring.V3
         /// other dependent configs that would be rendered invalid by the deletion.
         /// </summary>
         /// <param name="name">
-        /// Required. The Uptime check configuration to delete. The format
-        /// is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// Required. The Uptime check configuration to delete. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

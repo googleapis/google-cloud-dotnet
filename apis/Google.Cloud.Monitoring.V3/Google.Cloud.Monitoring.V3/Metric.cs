@@ -28,26 +28,55 @@ namespace Google.Cloud.Monitoring.V3 {
             "b25pdG9yaW5nLnYzGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoW",
             "Z29vZ2xlL2FwaS9sYWJlbC5wcm90bxoXZ29vZ2xlL2FwaS9tZXRyaWMucHJv",
             "dG8aI2dvb2dsZS9hcGkvbW9uaXRvcmVkX3Jlc291cmNlLnByb3RvGiFnb29n",
-            "bGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8ibgoFUG9pbnQSNAoIaW50",
-            "ZXJ2YWwYASABKAsyIi5nb29nbGUubW9uaXRvcmluZy52My5UaW1lSW50ZXJ2",
-            "YWwSLwoFdmFsdWUYAiABKAsyIC5nb29nbGUubW9uaXRvcmluZy52My5UeXBl",
-            "ZFZhbHVlIsECCgpUaW1lU2VyaWVzEiIKBm1ldHJpYxgBIAEoCzISLmdvb2ds",
-            "ZS5hcGkuTWV0cmljEi8KCHJlc291cmNlGAIgASgLMh0uZ29vZ2xlLmFwaS5N",
-            "b25pdG9yZWRSZXNvdXJjZRI3CghtZXRhZGF0YRgHIAEoCzIlLmdvb2dsZS5h",
-            "cGkuTW9uaXRvcmVkUmVzb3VyY2VNZXRhZGF0YRI8CgttZXRyaWNfa2luZBgD",
-            "IAEoDjInLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5NZXRyaWNLaW5k",
-            "EjoKCnZhbHVlX3R5cGUYBCABKA4yJi5nb29nbGUuYXBpLk1ldHJpY0Rlc2Ny",
-            "aXB0b3IuVmFsdWVUeXBlEisKBnBvaW50cxgFIAMoCzIbLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlBvaW50QqMBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNC",
-            "C01ldHJpY1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNs",
-            "b3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xW",
-            "M2IGcHJvdG8z"));
+            "bGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8aHmdvb2dsZS9wcm90b2J1",
+            "Zi9kdXJhdGlvbi5wcm90byJuCgVQb2ludBI0CghpbnRlcnZhbBgBIAEoCzIi",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZhbBIvCgV2YWx1ZRgC",
+            "IAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlR5cGVkVmFsdWUiwQIKClRp",
+            "bWVTZXJpZXMSIgoGbWV0cmljGAEgASgLMhIuZ29vZ2xlLmFwaS5NZXRyaWMS",
+            "LwoIcmVzb3VyY2UYAiABKAsyHS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291",
+            "cmNlEjcKCG1ldGFkYXRhGAcgASgLMiUuZ29vZ2xlLmFwaS5Nb25pdG9yZWRS",
+            "ZXNvdXJjZU1ldGFkYXRhEjwKC21ldHJpY19raW5kGAMgASgOMicuZ29vZ2xl",
+            "LmFwaS5NZXRyaWNEZXNjcmlwdG9yLk1ldHJpY0tpbmQSOgoKdmFsdWVfdHlw",
+            "ZRgEIAEoDjImLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5",
+            "cGUSKwoGcG9pbnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9p",
+            "bnQiwAIKFFRpbWVTZXJpZXNEZXNjcmlwdG9yEjYKEWxhYmVsX2Rlc2NyaXB0",
+            "b3JzGAEgAygLMhsuZ29vZ2xlLmFwaS5MYWJlbERlc2NyaXB0b3ISVQoRcG9p",
+            "bnRfZGVzY3JpcHRvcnMYBSADKAsyOi5nb29nbGUubW9uaXRvcmluZy52My5U",
+            "aW1lU2VyaWVzRGVzY3JpcHRvci5WYWx1ZURlc2NyaXB0b3IamAEKD1ZhbHVl",
+            "RGVzY3JpcHRvchILCgNrZXkYASABKAkSOgoKdmFsdWVfdHlwZRgCIAEoDjIm",
+            "Lmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGUSPAoLbWV0",
+            "cmljX2tpbmQYAyABKA4yJy5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3Iu",
+            "TWV0cmljS2luZCKGAgoOVGltZVNlcmllc0RhdGESNgoMbGFiZWxfdmFsdWVz",
+            "GAEgAygLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGFiZWxWYWx1ZRJCCgpw",
+            "b2ludF9kYXRhGAIgAygLMi4uZ29vZ2xlLm1vbml0b3JpbmcudjMuVGltZVNl",
+            "cmllc0RhdGEuUG9pbnREYXRhGngKCVBvaW50RGF0YRIwCgZ2YWx1ZXMYASAD",
+            "KAsyIC5nb29nbGUubW9uaXRvcmluZy52My5UeXBlZFZhbHVlEjkKDXRpbWVf",
+            "aW50ZXJ2YWwYAiABKAsyIi5nb29nbGUubW9uaXRvcmluZy52My5UaW1lSW50",
+            "ZXJ2YWwiWgoKTGFiZWxWYWx1ZRIUCgpib29sX3ZhbHVlGAEgASgISAASFQoL",
+            "aW50NjRfdmFsdWUYAiABKANIABIWCgxzdHJpbmdfdmFsdWUYAyABKAlIAEIH",
+            "CgV2YWx1ZSJRCgpRdWVyeUVycm9yEjIKB2xvY2F0b3IYASABKAsyIS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5UZXh0TG9jYXRvchIPCgdtZXNzYWdlGAIgASgJ",
+            "IqACCgtUZXh0TG9jYXRvchIOCgZzb3VyY2UYASABKAkSQgoOc3RhcnRfcG9z",
+            "aXRpb24YAiABKAsyKi5nb29nbGUubW9uaXRvcmluZy52My5UZXh0TG9jYXRv",
+            "ci5Qb3NpdGlvbhJACgxlbmRfcG9zaXRpb24YAyABKAsyKi5nb29nbGUubW9u",
+            "aXRvcmluZy52My5UZXh0TG9jYXRvci5Qb3NpdGlvbhI5Cg5uZXN0ZWRfbG9j",
+            "YXRvchgEIAEoCzIhLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRleHRMb2NhdG9y",
+            "EhYKDm5lc3RpbmdfcmVhc29uGAUgASgJGigKCFBvc2l0aW9uEgwKBGxpbmUY",
+            "ASABKAUSDgoGY29sdW1uGAIgASgFQqMBChhjb20uZ29vZ2xlLm1vbml0b3Jp",
+            "bmcudjNCC01ldHJpY1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29v",
+            "Z2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRv",
+            "cmluZ1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Parser, new[]{ "LabelDescriptors", "PointDescriptors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor.Parser, new[]{ "Key", "ValueType", "MetricKind" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesData), global::Google.Cloud.Monitoring.V3.TimeSeriesData.Parser, new[]{ "LabelValues", "PointData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData), global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData.Parser, new[]{ "Values", "TimeInterval" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.LabelValue), global::Google.Cloud.Monitoring.V3.LabelValue.Parser, new[]{ "BoolValue", "Int64Value", "StringValue" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.QueryError), global::Google.Cloud.Monitoring.V3.QueryError.Parser, new[]{ "Locator", "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TextLocator), global::Google.Cloud.Monitoring.V3.TextLocator.Parser, new[]{ "Source", "StartPosition", "EndPosition", "NestedLocator", "NestingReason" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position), global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position.Parser, new[]{ "Line", "Column" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -564,6 +593,1575 @@ namespace Google.Cloud.Monitoring.V3 {
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// A descriptor for the labels and points in a timeseries.
+  /// </summary>
+  public sealed partial class TimeSeriesDescriptor : pb::IMessage<TimeSeriesDescriptor> {
+    private static readonly pb::MessageParser<TimeSeriesDescriptor> _parser = new pb::MessageParser<TimeSeriesDescriptor>(() => new TimeSeriesDescriptor());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TimeSeriesDescriptor> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeriesDescriptor() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeriesDescriptor(TimeSeriesDescriptor other) : this() {
+      labelDescriptors_ = other.labelDescriptors_.Clone();
+      pointDescriptors_ = other.pointDescriptors_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeriesDescriptor Clone() {
+      return new TimeSeriesDescriptor(this);
+    }
+
+    /// <summary>Field number for the "label_descriptors" field.</summary>
+    public const int LabelDescriptorsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Api.LabelDescriptor> _repeated_labelDescriptors_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Api.LabelDescriptor.Parser);
+    private readonly pbc::RepeatedField<global::Google.Api.LabelDescriptor> labelDescriptors_ = new pbc::RepeatedField<global::Google.Api.LabelDescriptor>();
+    /// <summary>
+    /// Descriptors for the labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Api.LabelDescriptor> LabelDescriptors {
+      get { return labelDescriptors_; }
+    }
+
+    /// <summary>Field number for the "point_descriptors" field.</summary>
+    public const int PointDescriptorsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor> _repeated_pointDescriptors_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor> pointDescriptors_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor>();
+    /// <summary>
+    /// Descriptors for the point data value columns.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor> PointDescriptors {
+      get { return pointDescriptors_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TimeSeriesDescriptor);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TimeSeriesDescriptor other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!labelDescriptors_.Equals(other.labelDescriptors_)) return false;
+      if(!pointDescriptors_.Equals(other.pointDescriptors_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= labelDescriptors_.GetHashCode();
+      hash ^= pointDescriptors_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      labelDescriptors_.WriteTo(output, _repeated_labelDescriptors_codec);
+      pointDescriptors_.WriteTo(output, _repeated_pointDescriptors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += labelDescriptors_.CalculateSize(_repeated_labelDescriptors_codec);
+      size += pointDescriptors_.CalculateSize(_repeated_pointDescriptors_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TimeSeriesDescriptor other) {
+      if (other == null) {
+        return;
+      }
+      labelDescriptors_.Add(other.labelDescriptors_);
+      pointDescriptors_.Add(other.pointDescriptors_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            labelDescriptors_.AddEntriesFrom(input, _repeated_labelDescriptors_codec);
+            break;
+          }
+          case 42: {
+            pointDescriptors_.AddEntriesFrom(input, _repeated_pointDescriptors_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TimeSeriesDescriptor message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A descriptor for the value columns in a data point.
+      /// </summary>
+      public sealed partial class ValueDescriptor : pb::IMessage<ValueDescriptor> {
+        private static readonly pb::MessageParser<ValueDescriptor> _parser = new pb::MessageParser<ValueDescriptor>(() => new ValueDescriptor());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ValueDescriptor> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ValueDescriptor() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ValueDescriptor(ValueDescriptor other) : this() {
+          key_ = other.key_;
+          valueType_ = other.valueType_;
+          metricKind_ = other.metricKind_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ValueDescriptor Clone() {
+          return new ValueDescriptor(this);
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 1;
+        private string key_ = "";
+        /// <summary>
+        /// The value key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Key {
+          get { return key_; }
+          set {
+            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "value_type" field.</summary>
+        public const int ValueTypeFieldNumber = 2;
+        private global::Google.Api.MetricDescriptor.Types.ValueType valueType_ = global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified;
+        /// <summary>
+        /// The value type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Api.MetricDescriptor.Types.ValueType ValueType {
+          get { return valueType_; }
+          set {
+            valueType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "metric_kind" field.</summary>
+        public const int MetricKindFieldNumber = 3;
+        private global::Google.Api.MetricDescriptor.Types.MetricKind metricKind_ = global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified;
+        /// <summary>
+        /// The value stream kind.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Api.MetricDescriptor.Types.MetricKind MetricKind {
+          get { return metricKind_; }
+          set {
+            metricKind_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ValueDescriptor);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ValueDescriptor other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Key != other.Key) return false;
+          if (ValueType != other.ValueType) return false;
+          if (MetricKind != other.MetricKind) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) hash ^= ValueType.GetHashCode();
+          if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) hash ^= MetricKind.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Key);
+          }
+          if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ValueType);
+          }
+          if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) MetricKind);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Key.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+          }
+          if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ValueType);
+          }
+          if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricKind);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ValueDescriptor other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Key.Length != 0) {
+            Key = other.Key;
+          }
+          if (other.ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) {
+            ValueType = other.ValueType;
+          }
+          if (other.MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
+            MetricKind = other.MetricKind;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Key = input.ReadString();
+                break;
+              }
+              case 16: {
+                ValueType = (global::Google.Api.MetricDescriptor.Types.ValueType) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                MetricKind = (global::Google.Api.MetricDescriptor.Types.MetricKind) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents the values of a time series associated with a
+  /// TimeSeriesDescriptor.
+  /// </summary>
+  public sealed partial class TimeSeriesData : pb::IMessage<TimeSeriesData> {
+    private static readonly pb::MessageParser<TimeSeriesData> _parser = new pb::MessageParser<TimeSeriesData>(() => new TimeSeriesData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TimeSeriesData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeriesData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeriesData(TimeSeriesData other) : this() {
+      labelValues_ = other.labelValues_.Clone();
+      pointData_ = other.pointData_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeriesData Clone() {
+      return new TimeSeriesData(this);
+    }
+
+    /// <summary>Field number for the "label_values" field.</summary>
+    public const int LabelValuesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.LabelValue> _repeated_labelValues_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Monitoring.V3.LabelValue.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.LabelValue> labelValues_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.LabelValue>();
+    /// <summary>
+    /// The values of the labels in the time series identifier, given in the same
+    /// order as the `label_descriptors` field of the TimeSeriesDescriptor
+    /// associated with this object. Each value must have a value of the type
+    /// given in the corresponding entry of `label_descriptors`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.LabelValue> LabelValues {
+      get { return labelValues_; }
+    }
+
+    /// <summary>Field number for the "point_data" field.</summary>
+    public const int PointDataFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData> _repeated_pointData_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData> pointData_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData>();
+    /// <summary>
+    /// The points in the time series.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData> PointData {
+      get { return pointData_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TimeSeriesData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TimeSeriesData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!labelValues_.Equals(other.labelValues_)) return false;
+      if(!pointData_.Equals(other.pointData_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= labelValues_.GetHashCode();
+      hash ^= pointData_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      labelValues_.WriteTo(output, _repeated_labelValues_codec);
+      pointData_.WriteTo(output, _repeated_pointData_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += labelValues_.CalculateSize(_repeated_labelValues_codec);
+      size += pointData_.CalculateSize(_repeated_pointData_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TimeSeriesData other) {
+      if (other == null) {
+        return;
+      }
+      labelValues_.Add(other.labelValues_);
+      pointData_.Add(other.pointData_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            labelValues_.AddEntriesFrom(input, _repeated_labelValues_codec);
+            break;
+          }
+          case 18: {
+            pointData_.AddEntriesFrom(input, _repeated_pointData_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TimeSeriesData message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A point's value columns and time interval. Each point has one or more
+      /// point values corresponding to the entries in `point_descriptors` field in
+      /// the TimeSeriesDescriptor associated with this object.
+      /// </summary>
+      public sealed partial class PointData : pb::IMessage<PointData> {
+        private static readonly pb::MessageParser<PointData> _parser = new pb::MessageParser<PointData>(() => new PointData());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<PointData> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.TimeSeriesData.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PointData() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PointData(PointData other) : this() {
+          values_ = other.values_.Clone();
+          timeInterval_ = other.timeInterval_ != null ? other.timeInterval_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PointData Clone() {
+          return new PointData(this);
+        }
+
+        /// <summary>Field number for the "values" field.</summary>
+        public const int ValuesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.TypedValue> _repeated_values_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Monitoring.V3.TypedValue.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TypedValue> values_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TypedValue>();
+        /// <summary>
+        /// The values that make up the point.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TypedValue> Values {
+          get { return values_; }
+        }
+
+        /// <summary>Field number for the "time_interval" field.</summary>
+        public const int TimeIntervalFieldNumber = 2;
+        private global::Google.Cloud.Monitoring.V3.TimeInterval timeInterval_;
+        /// <summary>
+        /// The time interval associated with the point.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Monitoring.V3.TimeInterval TimeInterval {
+          get { return timeInterval_; }
+          set {
+            timeInterval_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as PointData);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(PointData other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!values_.Equals(other.values_)) return false;
+          if (!object.Equals(TimeInterval, other.TimeInterval)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= values_.GetHashCode();
+          if (timeInterval_ != null) hash ^= TimeInterval.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          values_.WriteTo(output, _repeated_values_codec);
+          if (timeInterval_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(TimeInterval);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += values_.CalculateSize(_repeated_values_codec);
+          if (timeInterval_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeInterval);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(PointData other) {
+          if (other == null) {
+            return;
+          }
+          values_.Add(other.values_);
+          if (other.timeInterval_ != null) {
+            if (timeInterval_ == null) {
+              TimeInterval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+            }
+            TimeInterval.MergeFrom(other.TimeInterval);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                values_.AddEntriesFrom(input, _repeated_values_codec);
+                break;
+              }
+              case 18: {
+                if (timeInterval_ == null) {
+                  TimeInterval = new global::Google.Cloud.Monitoring.V3.TimeInterval();
+                }
+                input.ReadMessage(TimeInterval);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A label value.
+  /// </summary>
+  public sealed partial class LabelValue : pb::IMessage<LabelValue> {
+    private static readonly pb::MessageParser<LabelValue> _parser = new pb::MessageParser<LabelValue>(() => new LabelValue());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LabelValue> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LabelValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LabelValue(LabelValue other) : this() {
+      switch (other.ValueCase) {
+        case ValueOneofCase.BoolValue:
+          BoolValue = other.BoolValue;
+          break;
+        case ValueOneofCase.Int64Value:
+          Int64Value = other.Int64Value;
+          break;
+        case ValueOneofCase.StringValue:
+          StringValue = other.StringValue;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LabelValue Clone() {
+      return new LabelValue(this);
+    }
+
+    /// <summary>Field number for the "bool_value" field.</summary>
+    public const int BoolValueFieldNumber = 1;
+    /// <summary>
+    /// A bool label value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool BoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      set {
+        value_ = value;
+        valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+
+    /// <summary>Field number for the "int64_value" field.</summary>
+    public const int Int64ValueFieldNumber = 2;
+    /// <summary>
+    /// An int64 label value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Int64Value {
+      get { return valueCase_ == ValueOneofCase.Int64Value ? (long) value_ : 0L; }
+      set {
+        value_ = value;
+        valueCase_ = ValueOneofCase.Int64Value;
+      }
+    }
+
+    /// <summary>Field number for the "string_value" field.</summary>
+    public const int StringValueFieldNumber = 3;
+    /// <summary>
+    /// A string label value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string StringValue {
+      get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        valueCase_ = ValueOneofCase.StringValue;
+      }
+    }
+
+    private object value_;
+    /// <summary>Enum of possible cases for the "value" oneof.</summary>
+    public enum ValueOneofCase {
+      None = 0,
+      BoolValue = 1,
+      Int64Value = 2,
+      StringValue = 3,
+    }
+    private ValueOneofCase valueCase_ = ValueOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValueOneofCase ValueCase {
+      get { return valueCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearValue() {
+      valueCase_ = ValueOneofCase.None;
+      value_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LabelValue);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LabelValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (BoolValue != other.BoolValue) return false;
+      if (Int64Value != other.Int64Value) return false;
+      if (StringValue != other.StringValue) return false;
+      if (ValueCase != other.ValueCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (valueCase_ == ValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
+      if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+      hash ^= (int) valueCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (valueCase_ == ValueOneofCase.BoolValue) {
+        output.WriteRawTag(8);
+        output.WriteBool(BoolValue);
+      }
+      if (valueCase_ == ValueOneofCase.Int64Value) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Int64Value);
+      }
+      if (valueCase_ == ValueOneofCase.StringValue) {
+        output.WriteRawTag(26);
+        output.WriteString(StringValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (valueCase_ == ValueOneofCase.BoolValue) {
+        size += 1 + 1;
+      }
+      if (valueCase_ == ValueOneofCase.Int64Value) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
+      }
+      if (valueCase_ == ValueOneofCase.StringValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LabelValue other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ValueCase) {
+        case ValueOneofCase.BoolValue:
+          BoolValue = other.BoolValue;
+          break;
+        case ValueOneofCase.Int64Value:
+          Int64Value = other.Int64Value;
+          break;
+        case ValueOneofCase.StringValue:
+          StringValue = other.StringValue;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            BoolValue = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Int64Value = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            StringValue = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// An error associated with a query in the time series query language format.
+  /// </summary>
+  public sealed partial class QueryError : pb::IMessage<QueryError> {
+    private static readonly pb::MessageParser<QueryError> _parser = new pb::MessageParser<QueryError>(() => new QueryError());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<QueryError> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueryError() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueryError(QueryError other) : this() {
+      locator_ = other.locator_ != null ? other.locator_.Clone() : null;
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueryError Clone() {
+      return new QueryError(this);
+    }
+
+    /// <summary>Field number for the "locator" field.</summary>
+    public const int LocatorFieldNumber = 1;
+    private global::Google.Cloud.Monitoring.V3.TextLocator locator_;
+    /// <summary>
+    /// The location of the time series query language text that this error applies
+    /// to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Monitoring.V3.TextLocator Locator {
+      get { return locator_; }
+      set {
+        locator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 2;
+    private string message_ = "";
+    /// <summary>
+    /// The error message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as QueryError);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(QueryError other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Locator, other.Locator)) return false;
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (locator_ != null) hash ^= Locator.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (locator_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Locator);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (locator_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Locator);
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(QueryError other) {
+      if (other == null) {
+        return;
+      }
+      if (other.locator_ != null) {
+        if (locator_ == null) {
+          Locator = new global::Google.Cloud.Monitoring.V3.TextLocator();
+        }
+        Locator.MergeFrom(other.Locator);
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (locator_ == null) {
+              Locator = new global::Google.Cloud.Monitoring.V3.TextLocator();
+            }
+            input.ReadMessage(Locator);
+            break;
+          }
+          case 18: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A locator for text. Indicates a particular part of the text of a request or
+  /// of an object referenced in the request.
+  ///
+  /// For example, suppose the request field `text` contains:
+  ///
+  ///   text: "The quick brown fox jumps over the lazy dog."
+  ///
+  /// Then the locator:
+  ///
+  ///   source: "text"
+  ///   start_position {
+  ///     line: 1
+  ///     column: 17
+  ///   }
+  ///   end_position {
+  ///     line: 1
+  ///     column: 19
+  ///   }
+  ///
+  /// refers to the part of the text: "fox".
+  /// </summary>
+  public sealed partial class TextLocator : pb::IMessage<TextLocator> {
+    private static readonly pb::MessageParser<TextLocator> _parser = new pb::MessageParser<TextLocator>(() => new TextLocator());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TextLocator> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TextLocator() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TextLocator(TextLocator other) : this() {
+      source_ = other.source_;
+      startPosition_ = other.startPosition_ != null ? other.startPosition_.Clone() : null;
+      endPosition_ = other.endPosition_ != null ? other.endPosition_.Clone() : null;
+      nestedLocator_ = other.nestedLocator_ != null ? other.nestedLocator_.Clone() : null;
+      nestingReason_ = other.nestingReason_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TextLocator Clone() {
+      return new TextLocator(this);
+    }
+
+    /// <summary>Field number for the "source" field.</summary>
+    public const int SourceFieldNumber = 1;
+    private string source_ = "";
+    /// <summary>
+    /// The source of the text. The source may be a field in the request, in which
+    /// case its format is the format of the
+    /// google.rpc.BadRequest.FieldViolation.field field in
+    /// https://cloud.google.com/apis/design/errors#error_details. It may also be
+    /// be a source other than the request field (e.g. a macro definition
+    /// referenced in the text of the query), in which case this is the name of
+    /// the source (e.g. the macro name).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Source {
+      get { return source_; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_position" field.</summary>
+    public const int StartPositionFieldNumber = 2;
+    private global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position startPosition_;
+    /// <summary>
+    /// The position of the first byte within the text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position StartPosition {
+      get { return startPosition_; }
+      set {
+        startPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_position" field.</summary>
+    public const int EndPositionFieldNumber = 3;
+    private global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position endPosition_;
+    /// <summary>
+    /// The position of the last byte within the text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position EndPosition {
+      get { return endPosition_; }
+      set {
+        endPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nested_locator" field.</summary>
+    public const int NestedLocatorFieldNumber = 4;
+    private global::Google.Cloud.Monitoring.V3.TextLocator nestedLocator_;
+    /// <summary>
+    /// If `source`, `start_position`, and `end_position` describe a call on
+    /// some object (e.g. a macro in the time series query language text) and a
+    /// location is to be designated in that object's text, `nested_locator`
+    /// identifies the location within that object.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Monitoring.V3.TextLocator NestedLocator {
+      get { return nestedLocator_; }
+      set {
+        nestedLocator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nesting_reason" field.</summary>
+    public const int NestingReasonFieldNumber = 5;
+    private string nestingReason_ = "";
+    /// <summary>
+    /// When `nested_locator` is set, this field gives the reason for the nesting.
+    /// Usually, the reason is a macro invocation. In that case, the macro name
+    /// (including the leading '@') signals the location of the macro call
+    /// in the text and a macro argument name (including the leading '$') signals
+    /// the location of the macro argument inside the macro body that got
+    /// substituted away.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NestingReason {
+      get { return nestingReason_; }
+      set {
+        nestingReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TextLocator);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TextLocator other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Source != other.Source) return false;
+      if (!object.Equals(StartPosition, other.StartPosition)) return false;
+      if (!object.Equals(EndPosition, other.EndPosition)) return false;
+      if (!object.Equals(NestedLocator, other.NestedLocator)) return false;
+      if (NestingReason != other.NestingReason) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Source.Length != 0) hash ^= Source.GetHashCode();
+      if (startPosition_ != null) hash ^= StartPosition.GetHashCode();
+      if (endPosition_ != null) hash ^= EndPosition.GetHashCode();
+      if (nestedLocator_ != null) hash ^= NestedLocator.GetHashCode();
+      if (NestingReason.Length != 0) hash ^= NestingReason.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Source.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Source);
+      }
+      if (startPosition_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartPosition);
+      }
+      if (endPosition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndPosition);
+      }
+      if (nestedLocator_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(NestedLocator);
+      }
+      if (NestingReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(NestingReason);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Source.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
+      }
+      if (startPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartPosition);
+      }
+      if (endPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndPosition);
+      }
+      if (nestedLocator_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NestedLocator);
+      }
+      if (NestingReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NestingReason);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TextLocator other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Source.Length != 0) {
+        Source = other.Source;
+      }
+      if (other.startPosition_ != null) {
+        if (startPosition_ == null) {
+          StartPosition = new global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position();
+        }
+        StartPosition.MergeFrom(other.StartPosition);
+      }
+      if (other.endPosition_ != null) {
+        if (endPosition_ == null) {
+          EndPosition = new global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position();
+        }
+        EndPosition.MergeFrom(other.EndPosition);
+      }
+      if (other.nestedLocator_ != null) {
+        if (nestedLocator_ == null) {
+          NestedLocator = new global::Google.Cloud.Monitoring.V3.TextLocator();
+        }
+        NestedLocator.MergeFrom(other.NestedLocator);
+      }
+      if (other.NestingReason.Length != 0) {
+        NestingReason = other.NestingReason;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Source = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startPosition_ == null) {
+              StartPosition = new global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position();
+            }
+            input.ReadMessage(StartPosition);
+            break;
+          }
+          case 26: {
+            if (endPosition_ == null) {
+              EndPosition = new global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position();
+            }
+            input.ReadMessage(EndPosition);
+            break;
+          }
+          case 34: {
+            if (nestedLocator_ == null) {
+              NestedLocator = new global::Google.Cloud.Monitoring.V3.TextLocator();
+            }
+            input.ReadMessage(NestedLocator);
+            break;
+          }
+          case 42: {
+            NestingReason = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TextLocator message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The position of a byte within the text.
+      /// </summary>
+      public sealed partial class Position : pb::IMessage<Position> {
+        private static readonly pb::MessageParser<Position> _parser = new pb::MessageParser<Position>(() => new Position());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Position> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.TextLocator.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Position() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Position(Position other) : this() {
+          line_ = other.line_;
+          column_ = other.column_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Position Clone() {
+          return new Position(this);
+        }
+
+        /// <summary>Field number for the "line" field.</summary>
+        public const int LineFieldNumber = 1;
+        private int line_;
+        /// <summary>
+        /// The line, starting with 1, where the byte is positioned.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Line {
+          get { return line_; }
+          set {
+            line_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "column" field.</summary>
+        public const int ColumnFieldNumber = 2;
+        private int column_;
+        /// <summary>
+        /// The column within the line, starting with 1, where the byte is
+        /// positioned. This is a byte index even though the text is UTF-8.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Column {
+          get { return column_; }
+          set {
+            column_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Position);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Position other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Line != other.Line) return false;
+          if (Column != other.Column) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Line != 0) hash ^= Line.GetHashCode();
+          if (Column != 0) hash ^= Column.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Line != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(Line);
+          }
+          if (Column != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Column);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Line != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Line);
+          }
+          if (Column != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Column);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Position other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Line != 0) {
+            Line = other.Line;
+          }
+          if (other.Column != 0) {
+            Column = other.Column;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Line = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                Column = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
 
   }
 
