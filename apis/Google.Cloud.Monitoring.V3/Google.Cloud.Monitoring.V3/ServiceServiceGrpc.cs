@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/service_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-//
 #pragma warning disable 0414, 1591
 #region Designer generated code
 
@@ -25,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
-  /// The Stackdriver Monitoring Service-Oriented Monitoring API has endpoints for
+  /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
   /// managing and querying aspects of a workspace's services. These include the
   /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
   /// of categorized Health Metrics.

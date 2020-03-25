@@ -116,11 +116,13 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The name of this group. The format is
-    /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+    /// Output only. The name of this group. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+    ///
     /// When creating a group, this field is ignored and a new name is created
     /// consisting of the project specified in the call to `CreateGroup`
-    /// and a unique `{group_id}` that is generated automatically.
+    /// and a unique `[GROUP_ID]` that is generated automatically.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -148,9 +150,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentNameFieldNumber = 3;
     private string parentName_ = "";
     /// <summary>
-    /// The name of the group's parent, if it has one.
-    /// The format is `"projects/{project_id_or_number}/groups/{group_id}"`.
-    /// For groups with no parent, `parentName` is the empty string, `""`.
+    /// The name of the group's parent, if it has one. The format is:
+    ///
+    ///     projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+    ///
+    /// For groups with no parent, `parent_name` is the empty string, `""`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ParentName {

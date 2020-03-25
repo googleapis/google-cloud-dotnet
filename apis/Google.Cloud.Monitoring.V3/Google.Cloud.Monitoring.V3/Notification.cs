@@ -124,9 +124,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 6;
     private string name_ = "";
     /// <summary>
-    /// The full REST resource name for this descriptor. The syntax is:
+    /// The full REST resource name for this descriptor. The format is:
     ///
-    ///     projects/[PROJECT_ID]/notificationChannelDescriptors/[TYPE]
+    ///     projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[TYPE]
     ///
     /// In the above, `[TYPE]` is the value of the `type` field.
     /// </summary>
@@ -462,9 +462,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 6;
     private string name_ = "";
     /// <summary>
-    /// The full REST resource name for this channel. The syntax is:
+    /// The full REST resource name for this channel. The format is:
     ///
-    ///     projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+    ///     projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
     ///
     /// The `[CHANNEL_ID]` is automatically assigned by the server on creation.
     /// </summary>
