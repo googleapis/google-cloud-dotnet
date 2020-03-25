@@ -310,7 +310,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             // Make the request
             SessionEntityType response = sessionEntityTypesClient.GetSessionEntityType(request);
@@ -327,7 +327,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             // Make the request
             SessionEntityType response = await sessionEntityTypesClient.GetSessionEntityTypeAsync(request);
@@ -341,7 +341,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = SessionEntityTypesClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/agent/environments/[ENVIRONMENT]/users/[USER]/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
+            string name = "projects/[PROJECT]/agent/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
             // Make the request
             SessionEntityType response = sessionEntityTypesClient.GetSessionEntityType(name);
             // End snippet
@@ -355,7 +355,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = await SessionEntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/agent/environments/[ENVIRONMENT]/users/[USER]/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
+            string name = "projects/[PROJECT]/agent/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
             // Make the request
             SessionEntityType response = await sessionEntityTypesClient.GetSessionEntityTypeAsync(name);
             // End snippet
@@ -368,7 +368,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = SessionEntityTypesClient.Create();
             // Initialize request argument(s)
-            SessionEntityTypeName name = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]");
+            SessionEntityTypeName name = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
             // Make the request
             SessionEntityType response = sessionEntityTypesClient.GetSessionEntityType(name);
             // End snippet
@@ -382,7 +382,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = await SessionEntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            SessionEntityTypeName name = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]");
+            SessionEntityTypeName name = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
             // Make the request
             SessionEntityType response = await sessionEntityTypesClient.GetSessionEntityTypeAsync(name);
             // End snippet
@@ -554,7 +554,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             // Make the request
             sessionEntityTypesClient.DeleteSessionEntityType(request);
@@ -571,7 +571,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             // Make the request
             await sessionEntityTypesClient.DeleteSessionEntityTypeAsync(request);
@@ -585,7 +585,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = SessionEntityTypesClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/agent/environments/[ENVIRONMENT]/users/[USER]/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
+            string name = "projects/[PROJECT]/agent/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
             // Make the request
             sessionEntityTypesClient.DeleteSessionEntityType(name);
             // End snippet
@@ -599,7 +599,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = await SessionEntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/agent/environments/[ENVIRONMENT]/users/[USER]/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
+            string name = "projects/[PROJECT]/agent/sessions/[SESSION]/entityTypes/[ENTITY_TYPE]";
             // Make the request
             await sessionEntityTypesClient.DeleteSessionEntityTypeAsync(name);
             // End snippet
@@ -612,7 +612,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = SessionEntityTypesClient.Create();
             // Initialize request argument(s)
-            SessionEntityTypeName name = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]");
+            SessionEntityTypeName name = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
             // Make the request
             sessionEntityTypesClient.DeleteSessionEntityType(name);
             // End snippet
@@ -626,7 +626,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             SessionEntityTypesClient sessionEntityTypesClient = await SessionEntityTypesClient.CreateAsync();
             // Initialize request argument(s)
-            SessionEntityTypeName name = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]");
+            SessionEntityTypeName name = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]");
             // Make the request
             await sessionEntityTypesClient.DeleteSessionEntityTypeAsync(name);
             // End snippet
