@@ -307,4 +307,16 @@ namespace Google.Cloud.Dialogflow.V2
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetValidationResultRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

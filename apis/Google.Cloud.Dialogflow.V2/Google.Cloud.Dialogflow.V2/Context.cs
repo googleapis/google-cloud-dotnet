@@ -30,55 +30,72 @@ namespace Google.Cloud.Dialogflow.V2 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3By",
             "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1",
-            "Y3QucHJvdG8i0wEKB0NvbnRleHQSEQoEbmFtZRgBIAEoCUID4EECEhsKDmxp",
+            "Y3QucHJvdG8ivQIKB0NvbnRleHQSEQoEbmFtZRgBIAEoCUID4EECEhsKDmxp",
             "ZmVzcGFuX2NvdW50GAIgASgFQgPgQQESMAoKcGFyYW1ldGVycxgDIAEoCzIX",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBATpm6kFjCiFkaWFsb2dmbG93",
-            "Lmdvb2dsZWFwaXMuY29tL0NvbnRleHQSPnByb2plY3RzL3twcm9qZWN0fS9h",
-            "Z2VudC9zZXNzaW9ucy97c2Vzc2lvbn0vY29udGV4dHMve2NvbnRleHR9IlsK",
-            "E0xpc3RDb250ZXh0c1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISFgoJ",
-            "cGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEB",
-            "ImYKFExpc3RDb250ZXh0c1Jlc3BvbnNlEjUKCGNvbnRleHRzGAEgAygLMiMu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4dBIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkiTAoRR2V0Q29udGV4dFJlcXVlc3QSNwoEbmFtZRgB",
-            "IAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0NvbnRl",
-            "eHQiZgoUQ3JlYXRlQ29udGV4dFJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPg",
-            "QQISOQoHY29udGV4dBgCIAEoCzIjLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkNvbnRleHRCA+BBAiKHAQoUVXBkYXRlQ29udGV4dFJlcXVlc3QSOQoH",
-            "Y29udGV4dBgBIAEoCzIjLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNv",
-            "bnRleHRCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5GaWVsZE1hc2tCA+BBASJPChREZWxldGVDb250ZXh0UmVxdWVzdBI3",
-            "CgRuYW1lGAEgASgJQingQQL6QSMKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
-            "b20vQ29udGV4dCIvChhEZWxldGVBbGxDb250ZXh0c1JlcXVlc3QSEwoGcGFy",
-            "ZW50GAEgASgJQgPgQQIy8ggKCENvbnRleHRzErUBCgxMaXN0Q29udGV4dHMS",
-            "Ly5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0Q29udGV4dHNSZXF1",
-            "ZXN0GjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdENvbnRleHRz",
-            "UmVzcG9uc2UiQoLT5JMCMxIxL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2Vu",
-            "dC9zZXNzaW9ucy8qfS9jb250ZXh0c9pBBnBhcmVudBKbAQoKR2V0Q29udGV4",
-            "dBItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdldENvbnRleHRSZXF1",
-            "ZXN0GiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4dCI5gtPk",
-            "kwIzEjEvdjIve25hbWU9cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qL2Nv",
-            "bnRleHRzLyp9EqoBCg1DcmVhdGVDb250ZXh0EjAuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuQ3JlYXRlQ29udGV4dFJlcXVlc3QaIy5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5Db250ZXh0IkKC0+STAjwiMS92Mi97cGFyZW50",
-            "PXByb2plY3RzLyovYWdlbnQvc2Vzc2lvbnMvKn0vY29udGV4dHM6B2NvbnRl",
-            "eHQSsgEKDVVwZGF0ZUNvbnRleHQSMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52Mi5VcGRhdGVDb250ZXh0UmVxdWVzdBojLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLkNvbnRleHQiSoLT5JMCRDI5L3YyL3tjb250ZXh0Lm5hbWU9",
-            "cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qL2NvbnRleHRzLyp9Ogdjb250",
-            "ZXh0EpQBCg1EZWxldGVDb250ZXh0EjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuRGVsZXRlQ29udGV4dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiOYLT5JMCMyoxL3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQvc2Vz",
-            "c2lvbnMvKi9jb250ZXh0cy8qfRKcAQoRRGVsZXRlQWxsQ29udGV4dHMSNC5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5EZWxldGVBbGxDb250ZXh0c1Jl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOYLT5JMCMyoxL3YyL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qfS9jb250ZXh0cxp4",
-            "ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QpsBCh5jb20uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJCDENvbnRleHRQcm90b1ABWkRnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zs",
-            "b3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxv",
-            "Z2Zsb3cuVjJiBnByb3RvMw=="));
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBATrPAepBywEKIWRpYWxvZ2Zs",
+            "b3cuZ29vZ2xlYXBpcy5jb20vQ29udGV4dBI+cHJvamVjdHMve3Byb2plY3R9",
+            "L2FnZW50L3Nlc3Npb25zL3tzZXNzaW9ufS9jb250ZXh0cy97Y29udGV4dH0S",
+            "ZnByb2plY3RzL3twcm9qZWN0fS9hZ2VudC9lbnZpcm9ubWVudHMve2Vudmly",
+            "b25tZW50fS91c2Vycy97dXNlcn0vc2Vzc2lvbnMve3Nlc3Npb259L2NvbnRl",
+            "eHRzL3tjb250ZXh0fSKBAQoTTGlzdENvbnRleHRzUmVxdWVzdBI5CgZwYXJl",
+            "bnQYASABKAlCKeBBAvpBIxIhZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9D",
+            "b250ZXh0EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
+            "AyABKAlCA+BBASJmChRMaXN0Q29udGV4dHNSZXNwb25zZRI1Cghjb250ZXh0",
+            "cxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNvbnRleHQS",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkwKEUdldENvbnRleHRSZXF1ZXN0",
+            "EjcKBG5hbWUYASABKAlCKeBBAvpBIwohZGlhbG9nZmxvdy5nb29nbGVhcGlz",
+            "LmNvbS9Db250ZXh0IowBChRDcmVhdGVDb250ZXh0UmVxdWVzdBI5CgZwYXJl",
+            "bnQYASABKAlCKeBBAvpBIxIhZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9D",
+            "b250ZXh0EjkKB2NvbnRleHQYAiABKAsyIy5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52Mi5Db250ZXh0QgPgQQIihwEKFFVwZGF0ZUNvbnRleHRSZXF1ZXN0",
+            "EjkKB2NvbnRleHQYASABKAsyIy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5Db250ZXh0QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuRmllbGRNYXNrQgPgQQEiTwoURGVsZXRlQ29udGV4dFJlcXVl",
+            "c3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFw",
+            "aXMuY29tL0NvbnRleHQiVQoYRGVsZXRlQWxsQ29udGV4dHNSZXF1ZXN0EjkK",
+            "BnBhcmVudBgBIAEoCUIp4EEC+kEjEiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMu",
+            "Y29tL0NvbnRleHQymg0KCENvbnRleHRzEoICCgxMaXN0Q29udGV4dHMSLy5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0Q29udGV4dHNSZXF1ZXN0",
+            "GjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdENvbnRleHRzUmVz",
+            "cG9uc2UijgGC0+STAn8SMS92Mi97cGFyZW50PXByb2plY3RzLyovYWdlbnQv",
+            "c2Vzc2lvbnMvKn0vY29udGV4dHNaShJIL3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Npb25zLyp9L2Nv",
+            "bnRleHRz2kEGcGFyZW50Eu8BCgpHZXRDb250ZXh0Ei0uZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuR2V0Q29udGV4dFJlcXVlc3QaIy5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52Mi5Db250ZXh0IowBgtPkkwJ/EjEvdjIve25hbWU9",
+            "cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qL2NvbnRleHRzLyp9WkoSSC92",
+            "Mi97bmFtZT1wcm9qZWN0cy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJz",
+            "Lyovc2Vzc2lvbnMvKi9jb250ZXh0cy8qfdpBBG5hbWUSkgIKDUNyZWF0ZUNv",
+            "bnRleHQSMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5DcmVhdGVDb250",
+            "ZXh0UmVxdWVzdBojLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNvbnRl",
+            "eHQiqQGC0+STApEBIjEvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L3Nl",
+            "c3Npb25zLyp9L2NvbnRleHRzOgdjb250ZXh0WlMiSC92Mi97cGFyZW50PXBy",
+            "b2plY3RzLyovYWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9u",
+            "cy8qfS9jb250ZXh0czoHY29udGV4dNpBDnBhcmVudCxjb250ZXh0EqcCCg1V",
+            "cGRhdGVDb250ZXh0EjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVXBk",
+            "YXRlQ29udGV4dFJlcXVlc3QaIy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5Db250ZXh0Ir4BgtPkkwKhATI5L3YyL3tjb250ZXh0Lm5hbWU9cHJvamVj",
+            "dHMvKi9hZ2VudC9zZXNzaW9ucy8qL2NvbnRleHRzLyp9Ogdjb250ZXh0Wlsy",
+            "UC92Mi97Y29udGV4dC5uYW1lPXByb2plY3RzLyovYWdlbnQvZW52aXJvbm1l",
+            "bnRzLyovdXNlcnMvKi9zZXNzaW9ucy8qL2NvbnRleHRzLyp9Ogdjb250ZXh0",
+            "2kETY29udGV4dCx1cGRhdGVfbWFzaxLoAQoNRGVsZXRlQ29udGV4dBIwLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkRlbGV0ZUNvbnRleHRSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IowBgtPkkwJ/KjEvdjIve25hbWU9",
+            "cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qL2NvbnRleHRzLyp9WkoqSC92",
+            "Mi97bmFtZT1wcm9qZWN0cy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJz",
+            "Lyovc2Vzc2lvbnMvKi9jb250ZXh0cy8qfdpBBG5hbWUS8gEKEURlbGV0ZUFs",
+            "bENvbnRleHRzEjQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRGVsZXRl",
+            "QWxsQ29udGV4dHNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Io4B",
+            "gtPkkwJ/KjEvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25z",
+            "Lyp9L2NvbnRleHRzWkoqSC92Mi97cGFyZW50PXByb2plY3RzLyovYWdlbnQv",
+            "ZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9ucy8qfS9jb250ZXh0c9pB",
+            "BnBhcmVudBp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QpsBCh5j",
+            "b20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDENvbnRleHRQcm90b1AB",
+            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNs",
+            "b3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -140,10 +157,15 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The unique identifier of the context. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
+    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`,
+    /// or `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// ID>/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
     ///
     /// The `Context ID` is always converted to lowercase, may only contain
-    /// characters in [a-zA-Z0-9_-%] and may be at most 250 bytes long.
+    /// characters in a-zA-Z0-9_-% and may be at most 250 bytes long.
+    ///
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     ///
     /// The following context names are reserved for internal use by Dialogflow.
     /// You should not use these contexts or create contexts with these names:
@@ -360,7 +382,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to list all contexts from.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`.
+    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// ID>/sessions/&lt;Session ID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -717,7 +743,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the context. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
+    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`
+    /// or `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// ID>/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -854,7 +884,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to create a context for.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`.
+    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// ID>/sessions/&lt;Session ID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1204,7 +1238,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the context to delete. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
+    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`
+    /// or `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// ID>/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1340,7 +1378,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the session to delete all contexts from. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`.
+    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or `projects/&lt;Project
+    /// ID>/agent/environments/&lt;Environment ID>/users/&lt;User ID>/sessions/&lt;Session
+    /// ID>`.
+    /// If `Environment ID` is not specified we assume default 'draft' environment.
+    /// If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

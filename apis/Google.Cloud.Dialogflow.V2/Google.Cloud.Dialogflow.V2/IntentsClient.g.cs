@@ -1469,6 +1469,254 @@ namespace Google.Cloud.Dialogflow.V2
             lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchUpdateIntentsOperationsClient, callSettings);
 
         /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(string parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, string intentBatchUri, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchUri, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(AgentName parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, string intentBatchUri, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchUri, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(string parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, IntentBatch intentBatchInline, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchInline, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(AgentName parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, IntentBatch intentBatchInline, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchInline, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes intents in the specified agent.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;

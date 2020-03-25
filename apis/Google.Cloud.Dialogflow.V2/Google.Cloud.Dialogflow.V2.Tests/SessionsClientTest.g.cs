@@ -35,7 +35,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
@@ -63,7 +63,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
@@ -93,7 +93,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
@@ -117,7 +117,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
@@ -143,7 +143,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse
@@ -167,7 +167,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Sessions.SessionsClient> mockGrpcClient = new moq::Mock<Sessions.SessionsClient>(moq::MockBehavior.Strict);
             DetectIntentRequest request = new DetectIntentRequest
             {
-                SessionAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 QueryInput = new QueryInput(),
             };
             DetectIntentResponse expectedResponse = new DetectIntentResponse

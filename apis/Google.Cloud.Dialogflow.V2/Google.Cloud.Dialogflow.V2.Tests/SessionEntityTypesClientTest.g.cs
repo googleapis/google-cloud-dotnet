@@ -33,11 +33,11 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -57,11 +57,11 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -78,17 +78,117 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetSessionEntityType()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType response = client.GetSessionEntityType(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSessionEntityTypeAsync()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType responseCallSettings = await client.GetSessionEntityTypeAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.GetSessionEntityTypeAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetSessionEntityTypeResourceNames()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType response = client.GetSessionEntityType(request.SessionEntityTypeName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetSessionEntityTypeResourceNamesAsync()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            GetSessionEntityTypeRequest request = new GetSessionEntityTypeRequest
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType responseCallSettings = await client.GetSessionEntityTypeAsync(request.SessionEntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.GetSessionEntityTypeAsync(request.SessionEntityTypeName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateSessionEntityTypeRequestObject()
         {
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -108,12 +208,12 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -135,12 +235,12 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -160,12 +260,12 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 SessionEntityType = new SessionEntityType(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -182,6 +282,58 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void CreateSessionEntityTypeResourceNames()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+                SessionEntityType = new SessionEntityType(),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType response = client.CreateSessionEntityType(request.ParentAsSessionName, request.SessionEntityType);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateSessionEntityTypeResourceNamesAsync()
+        {
+            moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
+            CreateSessionEntityTypeRequest request = new CreateSessionEntityTypeRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+                SessionEntityType = new SessionEntityType(),
+            };
+            SessionEntityType expectedResponse = new SessionEntityType
+            {
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
+                EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
+                Entities =
+                {
+                    new EntityType.Types.Entity(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CreateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
+            SessionEntityType responseCallSettings = await client.CreateSessionEntityTypeAsync(request.ParentAsSessionName, request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SessionEntityType responseCancellationToken = await client.CreateSessionEntityTypeAsync(request.ParentAsSessionName, request.SessionEntityType, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateSessionEntityTypeRequestObject()
         {
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
@@ -192,7 +344,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -217,7 +369,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -240,10 +392,11 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
             {
                 SessionEntityType = new SessionEntityType(),
+                UpdateMask = new wkt::FieldMask(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -252,7 +405,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType response = client.UpdateSessionEntityType(request.SessionEntityType);
+            SessionEntityType response = client.UpdateSessionEntityType(request.SessionEntityType, request.UpdateMask);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -264,10 +417,11 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             UpdateSessionEntityTypeRequest request = new UpdateSessionEntityTypeRequest
             {
                 SessionEntityType = new SessionEntityType(),
+                UpdateMask = new wkt::FieldMask(),
             };
             SessionEntityType expectedResponse = new SessionEntityType
             {
-                SessionEntityTypeName = SessionEntityTypeName.FromProjectSessionEntityType("[PROJECT]", "[SESSION]", "[ENTITY_TYPE]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
                 EntityOverrideMode = SessionEntityType.Types.EntityOverrideMode.Supplement,
                 Entities =
                 {
@@ -276,9 +430,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             };
             mockGrpcClient.Setup(x => x.UpdateSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SessionEntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            SessionEntityType responseCallSettings = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, st::CancellationToken.None);
+            SessionEntityType responseCancellationToken = await client.UpdateSessionEntityTypeAsync(request.SessionEntityType, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -289,7 +443,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -304,7 +458,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -320,7 +474,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -335,7 +489,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -351,12 +505,12 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            client.DeleteSessionEntityType(request.ContextName);
+            client.DeleteSessionEntityType(request.SessionEntityTypeName);
             mockGrpcClient.VerifyAll();
         }
 
@@ -366,13 +520,13 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<SessionEntityTypes.SessionEntityTypesClient> mockGrpcClient = new moq::Mock<SessionEntityTypes.SessionEntityTypesClient>(moq::MockBehavior.Strict);
             DeleteSessionEntityTypeRequest request = new DeleteSessionEntityTypeRequest
             {
-                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                SessionEntityTypeName = SessionEntityTypeName.FromProjectEnvironmentUserSessionEntityType("[PROJECT]", "[ENVIRONMENT]", "[USER]", "[SESSION]", "[ENTITY_TYPE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteSessionEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionEntityTypesClient client = new SessionEntityTypesClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteSessionEntityTypeAsync(request.ContextName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteSessionEntityTypeAsync(request.ContextName, st::CancellationToken.None);
+            await client.DeleteSessionEntityTypeAsync(request.SessionEntityTypeName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteSessionEntityTypeAsync(request.SessionEntityTypeName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }

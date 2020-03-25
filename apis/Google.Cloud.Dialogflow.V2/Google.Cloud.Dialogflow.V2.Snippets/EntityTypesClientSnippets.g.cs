@@ -1113,6 +1113,128 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchDeleteEntityTypes</summary>
+        public void BatchDeleteEntityTypes()
+        {
+            // Snippet: BatchDeleteEntityTypes(string, IEnumerable<string>, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            IEnumerable<string> entityTypeNames = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntityTypes(parent, entityTypeNames);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntityTypes(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntityTypesAsync</summary>
+        public async Task BatchDeleteEntityTypesAsync()
+        {
+            // Snippet: BatchDeleteEntityTypesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeleteEntityTypesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            IEnumerable<string> entityTypeNames = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntityTypesAsync(parent, entityTypeNames);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntityTypesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntityTypes</summary>
+        public void BatchDeleteEntityTypesResourceNames()
+        {
+            // Snippet: BatchDeleteEntityTypes(AgentName, IEnumerable<string>, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            IEnumerable<string> entityTypeNames = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = entityTypesClient.BatchDeleteEntityTypes(parent, entityTypeNames);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = entityTypesClient.PollOnceBatchDeleteEntityTypes(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteEntityTypesAsync</summary>
+        public async Task BatchDeleteEntityTypesResourceNamesAsync()
+        {
+            // Snippet: BatchDeleteEntityTypesAsync(AgentName, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeleteEntityTypesAsync(AgentName, IEnumerable<string>, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            IEnumerable<string> entityTypeNames = new string[] { "", };
+            // Make the request
+            Operation<Empty, Struct> response = await entityTypesClient.BatchDeleteEntityTypesAsync(parent, entityTypeNames);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await entityTypesClient.PollOnceBatchDeleteEntityTypesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for BatchCreateEntities</summary>
         public void BatchCreateEntitiesRequestObject()
         {

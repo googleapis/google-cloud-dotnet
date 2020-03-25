@@ -30,11 +30,21 @@ namespace Google.Cloud.Dialogflow.V2
             Unparsed = 0,
 
             /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+            /// .
+            /// </summary>
+            ProjectEnvironmentUserSessionEntityType = 1,
+
+            /// <summary>
             /// A resource name with pattern <c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c>
             /// .
             /// </summary>
-            ProjectSessionEntityType = 1
+            ProjectSessionEntityType = 2
         }
+
+        private static gax::PathTemplate s_projectEnvironmentUserSessionEntityType = new gax::PathTemplate("projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}");
 
         private static gax::PathTemplate s_projectSessionEntityType = new gax::PathTemplate("projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}");
 
@@ -49,6 +59,21 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a <see cref="SessionEntityTypeName"/> with the pattern
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="environmentId">The <c>Environment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userId">The <c>User</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entityTypeId">The <c>EntityType</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SessionEntityTypeName"/> constructed from the provided ids.</returns>
+        public static SessionEntityTypeName FromProjectEnvironmentUserSessionEntityType(string projectId, string environmentId, string userId, string sessionId, string entityTypeId) =>
+            new SessionEntityTypeName(ResourceNameType.ProjectEnvironmentUserSessionEntityType, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), environmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)), userId: gax::GaxPreconditions.CheckNotNullOrEmpty(userId, nameof(userId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), entityTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)));
+
+        /// <summary>
+        /// Creates a <see cref="SessionEntityTypeName"/> with the pattern
         /// <c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
@@ -60,17 +85,43 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionEntityTypeName"/> with pattern
-        /// <c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c>.
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// .
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="environmentId">The <c>Environment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userId">The <c>User</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="entityTypeId">The <c>EntityType</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="SessionEntityTypeName"/> with pattern
-        /// <c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c>.
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// .
         /// </returns>
-        public static string Format(string projectId, string sessionId, string entityTypeId) =>
-            FormatProjectSessionEntityType(projectId, sessionId, entityTypeId);
+        public static string Format(string projectId, string environmentId, string userId, string sessionId, string entityTypeId) =>
+            FormatProjectEnvironmentUserSessionEntityType(projectId, environmentId, userId, sessionId, entityTypeId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SessionEntityTypeName"/> with pattern
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="environmentId">The <c>Environment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userId">The <c>User</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entityTypeId">The <c>EntityType</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SessionEntityTypeName"/> with pattern
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectEnvironmentUserSessionEntityType(string projectId, string environmentId, string userId, string sessionId, string entityTypeId) =>
+            s_projectEnvironmentUserSessionEntityType.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)), gax::GaxPreconditions.CheckNotNullOrEmpty(userId, nameof(userId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionEntityTypeName"/> with pattern
@@ -93,6 +144,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// </description>
+        /// </item>
+        /// <item>
         /// <description><c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c></description>
         /// </item>
         /// </list>
@@ -108,6 +165,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// </description>
+        /// </item>
         /// <item>
         /// <description><c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c></description>
         /// </item>
@@ -131,6 +194,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// </description>
+        /// </item>
+        /// <item>
         /// <description><c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c></description>
         /// </item>
         /// </list>
@@ -151,6 +220,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
+        /// </description>
+        /// </item>
+        /// <item>
         /// <description><c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c></description>
         /// </item>
         /// </list>
@@ -170,6 +245,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             gax::GaxPreconditions.CheckNotNull(sessionEntityTypeName, nameof(sessionEntityTypeName));
             gax::TemplatedResourceName resourceName;
+            if (s_projectEnvironmentUserSessionEntityType.TryParseName(sessionEntityTypeName, out resourceName))
+            {
+                result = FromProjectEnvironmentUserSessionEntityType(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
             if (s_projectSessionEntityType.TryParseName(sessionEntityTypeName, out resourceName))
             {
                 result = FromProjectSessionEntityType(resourceName[0], resourceName[1], resourceName[2]);
@@ -187,23 +267,29 @@ namespace Google.Cloud.Dialogflow.V2
             return false;
         }
 
-        private SessionEntityTypeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entityTypeId = null, string projectId = null, string sessionId = null)
+        private SessionEntityTypeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entityTypeId = null, string environmentId = null, string projectId = null, string sessionId = null, string userId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             EntityTypeId = entityTypeId;
+            EnvironmentId = environmentId;
             ProjectId = projectId;
             SessionId = sessionId;
+            UserId = userId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="SessionEntityTypeName"/> class from the component parts of pattern
-        /// <c>projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}</c>
+        /// 
+        /// <c>
+        /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="environmentId">The <c>Environment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userId">The <c>User</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="entityTypeId">The <c>EntityType</c> ID. Must not be <c>null</c> or empty.</param>
-        public SessionEntityTypeName(string projectId, string sessionId, string entityTypeId) : this(ResourceNameType.ProjectSessionEntityType, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), entityTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)))
+        public SessionEntityTypeName(string projectId, string environmentId, string userId, string sessionId, string entityTypeId) : this(ResourceNameType.ProjectEnvironmentUserSessionEntityType, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), environmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)), userId: gax::GaxPreconditions.CheckNotNullOrEmpty(userId, nameof(userId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), entityTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)))
         {
         }
 
@@ -217,19 +303,31 @@ namespace Google.Cloud.Dialogflow.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>EntityType</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>EntityType</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string EntityTypeId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Environment</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string EnvironmentId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Session</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Session</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string SessionId { get; }
+
+        /// <summary>
+        /// The <c>User</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string UserId { get; }
 
         /// <inheritdoc/>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -240,6 +338,7 @@ namespace Google.Cloud.Dialogflow.V2
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectEnvironmentUserSessionEntityType: return s_projectEnvironmentUserSessionEntityType.Expand(ProjectId, EnvironmentId, UserId, SessionId, EntityTypeId);
                 case ResourceNameType.ProjectSessionEntityType: return s_projectSessionEntityType.Expand(ProjectId, SessionId, EntityTypeId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
@@ -273,6 +372,18 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class ListSessionEntityTypesRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SessionName ParentAsSessionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SessionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetSessionEntityTypeRequest
     {
         /// <summary>
@@ -285,14 +396,26 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class CreateSessionEntityTypeRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SessionName ParentAsSessionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SessionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteSessionEntityTypeRequest
     {
         /// <summary>
-        /// <see cref="gcdv::ContextName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcdv::SessionEntityTypeName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcdv::ContextName ContextName
+        public gcdv::SessionEntityTypeName SessionEntityTypeName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::ContextName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::SessionEntityTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

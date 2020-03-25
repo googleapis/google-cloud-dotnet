@@ -1060,6 +1060,250 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchUpdateIntents</summary>
+        public void BatchUpdateIntents1()
+        {
+            // Snippet: BatchUpdateIntents(string, string, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            string intentBatchUri = "";
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = intentsClient.BatchUpdateIntents(parent, intentBatchUri);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = intentsClient.PollOnceBatchUpdateIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
+        public async Task BatchUpdateIntents1Async()
+        {
+            // Snippet: BatchUpdateIntentsAsync(string, string, CallSettings)
+            // Additional: BatchUpdateIntentsAsync(string, string, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            string intentBatchUri = "";
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = await intentsClient.BatchUpdateIntentsAsync(parent, intentBatchUri);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = await intentsClient.PollOnceBatchUpdateIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntents</summary>
+        public void BatchUpdateIntents1ResourceNames()
+        {
+            // Snippet: BatchUpdateIntents(AgentName, string, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            string intentBatchUri = "";
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = intentsClient.BatchUpdateIntents(parent, intentBatchUri);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = intentsClient.PollOnceBatchUpdateIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
+        public async Task BatchUpdateIntents1ResourceNamesAsync()
+        {
+            // Snippet: BatchUpdateIntentsAsync(AgentName, string, CallSettings)
+            // Additional: BatchUpdateIntentsAsync(AgentName, string, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            string intentBatchUri = "";
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = await intentsClient.BatchUpdateIntentsAsync(parent, intentBatchUri);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = await intentsClient.PollOnceBatchUpdateIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntents</summary>
+        public void BatchUpdateIntents2()
+        {
+            // Snippet: BatchUpdateIntents(string, IntentBatch, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            IntentBatch intentBatchInline = new IntentBatch();
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = intentsClient.BatchUpdateIntents(parent, intentBatchInline);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = intentsClient.PollOnceBatchUpdateIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
+        public async Task BatchUpdateIntents2Async()
+        {
+            // Snippet: BatchUpdateIntentsAsync(string, IntentBatch, CallSettings)
+            // Additional: BatchUpdateIntentsAsync(string, IntentBatch, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/agent";
+            IntentBatch intentBatchInline = new IntentBatch();
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = await intentsClient.BatchUpdateIntentsAsync(parent, intentBatchInline);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = await intentsClient.PollOnceBatchUpdateIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntents</summary>
+        public void BatchUpdateIntents2ResourceNames()
+        {
+            // Snippet: BatchUpdateIntents(AgentName, IntentBatch, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            IntentBatch intentBatchInline = new IntentBatch();
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = intentsClient.BatchUpdateIntents(parent, intentBatchInline);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = intentsClient.PollOnceBatchUpdateIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateIntentsAsync</summary>
+        public async Task BatchUpdateIntents2ResourceNamesAsync()
+        {
+            // Snippet: BatchUpdateIntentsAsync(AgentName, IntentBatch, CallSettings)
+            // Additional: BatchUpdateIntentsAsync(AgentName, IntentBatch, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentName parent = AgentName.FromProject("[PROJECT]");
+            IntentBatch intentBatchInline = new IntentBatch();
+            // Make the request
+            Operation<BatchUpdateIntentsResponse, Struct> response = await intentsClient.BatchUpdateIntentsAsync(parent, intentBatchInline);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchUpdateIntentsResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchUpdateIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchUpdateIntentsResponse, Struct> retrievedResponse = await intentsClient.PollOnceBatchUpdateIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchUpdateIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for BatchDeleteIntents</summary>
         public void BatchDeleteIntentsRequestObject()
         {

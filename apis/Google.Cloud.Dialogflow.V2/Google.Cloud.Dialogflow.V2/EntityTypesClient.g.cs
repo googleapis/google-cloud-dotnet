@@ -1585,6 +1585,142 @@ namespace Google.Cloud.Dialogflow.V2
             lro::Operation<wkt::Empty, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteEntityTypesOperationsClient, callSettings);
 
         /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Struct> BatchDeleteEntityTypes(string parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypes(new BatchDeleteEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(string parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypesAsync(new BatchDeleteEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(string parent, scg::IEnumerable<string> entityTypeNames, st::CancellationToken cancellationToken) =>
+            BatchDeleteEntityTypesAsync(parent, entityTypeNames, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Struct> BatchDeleteEntityTypes(AgentName parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypes(new BatchDeleteEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(AgentName parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypesAsync(new BatchDeleteEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(AgentName parent, scg::IEnumerable<string> entityTypeNames, st::CancellationToken cancellationToken) =>
+            BatchDeleteEntityTypesAsync(parent, entityTypeNames, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates multiple new entities in the specified entity type.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;

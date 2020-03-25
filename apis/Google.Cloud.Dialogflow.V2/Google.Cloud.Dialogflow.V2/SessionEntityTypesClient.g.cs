@@ -307,7 +307,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -336,7 +340,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all session entity types from.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -352,6 +360,72 @@ namespace Google.Cloud.Dialogflow.V2
             ListSessionEntityTypesAsync(new ListSessionEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all session entity types in the specified session.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to list all session entity types from.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SessionEntityType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSessionEntityTypes(new ListSessionEntityTypesRequest
+            {
+                ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all session entity types in the specified session.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to list all session entity types from.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SessionEntityType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSessionEntityTypesAsync(new ListSessionEntityTypesRequest
+            {
+                ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -394,6 +468,144 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(GetSessionEntityTypeRequest request, st::CancellationToken cancellationToken) =>
             GetSessionEntityTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SessionEntityType GetSessionEntityType(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSessionEntityType(new GetSessionEntityTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSessionEntityTypeAsync(new GetSessionEntityTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSessionEntityTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SessionEntityType GetSessionEntityType(SessionEntityTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSessionEntityType(new GetSessionEntityTypeRequest
+            {
+                SessionEntityTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(SessionEntityTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSessionEntityTypeAsync(new GetSessionEntityTypeRequest
+            {
+                SessionEntityTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(SessionEntityTypeName name, st::CancellationToken cancellationToken) =>
+            GetSessionEntityTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a session entity type.
@@ -455,7 +667,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="sessionEntityType">
         /// Required. The session entity type to create.
@@ -481,7 +697,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="sessionEntityType">
         /// Required. The session entity type to create.
@@ -507,7 +727,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="sessionEntityType">
         /// Required. The session entity type to create.
@@ -515,6 +739,92 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SessionEntityType> CreateSessionEntityTypeAsync(string parent, SessionEntityType sessionEntityType, st::CancellationToken cancellationToken) =>
+            CreateSessionEntityTypeAsync(parent, sessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a session entity type.
+        /// 
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to create a session entity type for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SessionEntityType CreateSessionEntityType(SessionName parent, SessionEntityType sessionEntityType, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSessionEntityType(new CreateSessionEntityTypeRequest
+            {
+                ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a session entity type.
+        /// 
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to create a session entity type for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> CreateSessionEntityTypeAsync(SessionName parent, SessionEntityType sessionEntityType, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSessionEntityTypeAsync(new CreateSessionEntityTypeRequest
+            {
+                ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a session entity type.
+        /// 
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
+        /// 
+        /// This method doesn't work with Google Assistant integration.
+        /// Contact Dialogflow support if you need to use session entities
+        /// with Google Assistant integration.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to create a session entity type for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;` or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/
+        /// sessions/&amp;lt;Session ID&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
+        /// </param>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SessionEntityType> CreateSessionEntityTypeAsync(SessionName parent, SessionEntityType sessionEntityType, st::CancellationToken cancellationToken) =>
             CreateSessionEntityTypeAsync(parent, sessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -564,16 +874,18 @@ namespace Google.Cloud.Dialogflow.V2
         /// with Google Assistant integration.
         /// </summary>
         /// <param name="sessionEntityType">
-        /// Required. The entity type to update. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Required. The session entity type to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields get updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual SessionEntityType UpdateSessionEntityType(SessionEntityType sessionEntityType, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual SessionEntityType UpdateSessionEntityType(SessionEntityType sessionEntityType, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateSessionEntityType(new UpdateSessionEntityTypeRequest
             {
                 SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -584,16 +896,18 @@ namespace Google.Cloud.Dialogflow.V2
         /// with Google Assistant integration.
         /// </summary>
         /// <param name="sessionEntityType">
-        /// Required. The entity type to update. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Required. The session entity type to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields get updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SessionEntityType> UpdateSessionEntityTypeAsync(SessionEntityType sessionEntityType, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<SessionEntityType> UpdateSessionEntityTypeAsync(SessionEntityType sessionEntityType, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateSessionEntityTypeAsync(new UpdateSessionEntityTypeRequest
             {
                 SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -604,14 +918,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// with Google Assistant integration.
         /// </summary>
         /// <param name="sessionEntityType">
-        /// Required. The entity type to update. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Required. The session entity type to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields get updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SessionEntityType> UpdateSessionEntityTypeAsync(SessionEntityType sessionEntityType, st::CancellationToken cancellationToken) =>
-            UpdateSessionEntityTypeAsync(sessionEntityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<SessionEntityType> UpdateSessionEntityTypeAsync(SessionEntityType sessionEntityType, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSessionEntityTypeAsync(sessionEntityType, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified session entity type.
@@ -662,7 +977,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -682,7 +1001,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -702,7 +1025,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -719,14 +1046,18 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteSessionEntityType(ContextName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual void DeleteSessionEntityType(SessionEntityTypeName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSessionEntityType(new DeleteSessionEntityTypeRequest
             {
-                ContextName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SessionEntityTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -739,14 +1070,18 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSessionEntityTypeAsync(ContextName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task DeleteSessionEntityTypeAsync(SessionEntityTypeName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSessionEntityTypeAsync(new DeleteSessionEntityTypeRequest
             {
-                ContextName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SessionEntityTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -759,11 +1094,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the entity type to delete. Format:
         /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type
-        /// Display Name&amp;gt;`.
+        /// Display Name&amp;gt;` or `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment
+        /// ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/entityTypes/&amp;lt;Entity Type Display
+        /// Name&amp;gt;`.
+        /// If `Environment ID` is not specified, we assume default 'draft'
+        /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSessionEntityTypeAsync(ContextName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task DeleteSessionEntityTypeAsync(SessionEntityTypeName name, st::CancellationToken cancellationToken) =>
             DeleteSessionEntityTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 

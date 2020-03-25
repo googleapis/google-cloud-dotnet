@@ -1055,7 +1055,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             GetValidationResultRequest request = new GetValidationResultRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 LanguageCode = "",
             };
             // Make the request
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Initialize request argument(s)
             GetValidationResultRequest request = new GetValidationResultRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 LanguageCode = "",
             };
             // Make the request
