@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.0.0-beta03, released 2020-03-26
+
+- [Commit 0490888](https://github.com/googleapis/google-cloud-dotnet/commit/0490888):
+  - Feature: Adds fields to Finding
+  - Feature: Support for hybrid jobs
+
 # Version 2.0.0-beta02, released 2020-03-18
 
 No API surface changes compared with 2.0.0-beta01, just dependency
