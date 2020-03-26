@@ -46,9 +46,9 @@ namespace Google.Cloud.Tools.TagReleases
 
         private static int Main(string[] args)
         {
-            if (args.Length != 1)
+            if (args.Length < 1 || args.Length > 2 || args.Length == 2 && args[1] != "--force")
             {
-                Console.WriteLine("Arguments: <github access token>");
+                Console.WriteLine("Arguments: <github access token> [--force]");
                 return 1;
             }
             try
@@ -69,6 +69,7 @@ namespace Google.Cloud.Tools.TagReleases
 
         private static async Task<int> MainAsync(string[] args)
         {
+            bool force = args.Length == 2 && args[1] == "--force";
             var client = new GitHubClient(new ProductHeaderValue(ApplicationName))
             {
                 Credentials = new Octokit.Credentials(args[0])
@@ -77,7 +78,10 @@ namespace Google.Cloud.Tools.TagReleases
             ValidateLocalRepository(commit);
             var apis = ApiMetadata.LoadApis();
             var newReleases = ComputeNewReleasesAsync(apis);
-            ValidateChanges(newReleases);
+            if (!force)
+            {
+                ValidateChanges(newReleases);
+            }
             if (!ConfirmReleases(newReleases))
             {
                 return 0;

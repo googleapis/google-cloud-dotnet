@@ -299,7 +299,7 @@
       "Diagnostics"
     ],
     "dependencies": {
-      "Google.Cloud.Diagnostics.Common": "4.0.0",
+      "Google.Cloud.Diagnostics.Common": "project",
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
