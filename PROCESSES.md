@@ -155,7 +155,11 @@ GitHub are the ones we want to release".
 
 **Create the release PR**
 
-1. Run `./prepare-release.sh set-version <api> <new-version>`, e.g.
+1. Make sure the `master` branch is up-to-date (as that's what
+   `prepare-release.sh` uses to determine the current versions)
+   and create a new branch from that.
+
+2. Run `./prepare-release.sh set-version <api> <new-version>`, e.g.
 `prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03`. This
 updates `apis.json` and regenerates the project and metadata files.
 The output includes the old version and the new version, so you can
@@ -166,32 +170,35 @@ check this is really what you meant to do.
     the minor version for GA libraries (e.g. 3.1.0 to 3.2.0) or the
     prerelease version of non-GA libraries (e.g. 3.0.0-beta01 to 3.0.0-beta02).
     This just avoids you having to look up the current version number
-    if you don't already know it.
+    if you don't already know it. If you want to look up the version
+    number anyway, use `./prepare-release.sh show-version <api>`.
 
-2. Run `./prepare-release.sh compare`. This will build the code
+3. Run `./prepare-release.sh compare`. This will build the code
 locally, and compare the previously released NuGet packages with the
 current source code, showing you what's changed. Check there's
 nothing unexpected.
 
-3. Run `./prepare-release update-history`. This will update the
+4. Run `./prepare-release update-history`. This will update the
 version history files of all changed APIs, based on the commits
 that touched the relevant directories. You may well wish to review
 the files afterwards to check they contain everything you want to
 include in the history. (The filenames are displayed as the output
 of this command.)
 
-4. Assuming you're only releasing a single package, run
+5. Assuming you're only releasing a single package, run
 `./prepare-release commit`. This will commit all the current
 changes, with a message taken from the version history for the
 package. Use `git commit --amend` to change the commit message if
 you need to. If you're releasing more than one package, commit the
 changes manually with a suitable message.
 
-5. Create a pull request for the commit, and get it reviewed.
+6. Create a pull request for the commit, and get it reviewed.
 
 Sample session when releasing Google.Cloud.Speech.V1:
 
 ```text
+$ git checkout master
+$ git pull upstream master
 $ git checkout -b release-speech
 $ ./prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03
 $ ./prepare-release.sh compare
@@ -204,6 +211,8 @@ Equivalent process using `increment-version`, assuming the current
 version is 2.0.0-beta02:
 
 ```text
+$ git checkout master
+$ git pull upstream master
 $ git checkout -b release-speech
 $ ./prepare-release.sh increment-version Google.Cloud.Speech.V1
 $ ./prepare-release.sh compare

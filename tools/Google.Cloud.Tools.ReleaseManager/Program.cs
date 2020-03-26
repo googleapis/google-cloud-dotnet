@@ -35,6 +35,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         // releases, but fundamentally it's "the current source of truth we're basing this release on".
         private const string MasterBranch = "master";
 
+        private const string ShowVersionCommand = "show-version";
         private const string SetVersionCommand = "set-version";
         private const string IncrementVersionCommand = "increment-version";
         private const string ShowCommand = "show";
@@ -55,6 +56,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var commandArgs = args.Skip(1).ToArray();
                 switch (command)
                 {
+                    case ShowVersionCommand:
+                        ShowVersion(commandArgs);
+                        break;
                     case SetVersionCommand:
                         SetVersion(commandArgs);
                         break;
@@ -98,6 +102,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             Console.WriteLine("");
             Console.WriteLine($"{SetVersionCommand} <id> <new-version>: Set a version in apis.json and generate project files");
             Console.WriteLine($"{IncrementVersionCommand} <id>: Increment a version in apis.json and generate project files");
+            Console.WriteLine($"{ShowVersionCommand} <id>: Show the current version of the given API on the master branch");
             Console.WriteLine($"{ShowCommand}: Show the versions changes in the current PR");
             Console.WriteLine($"{CompareCommand}: Compare each changed version with the previous release");
             Console.WriteLine($"{UpdateHistoryCommand}: Update the release history file for each changed version");
@@ -113,11 +118,27 @@ namespace Google.Cloud.Tools.ReleaseManager
             SetVersion(args[0], args[1]);
         }
 
+        private static void ShowVersion(string[] args)
+        {
+            if (args.Length != 1)
+            {
+                throw new UserErrorException($"{ShowVersionCommand} requires one argument: the package ID");
+            }
+            string id = args[0];
+            var masterCatalog = LoadMasterCatalog();
+            var api = masterCatalog.FirstOrDefault(x => x.Id == id);
+            if (api == null)
+            {
+                throw new UserErrorException($"API '{id}' not found in API catalog.");
+            }
+            Console.WriteLine($"Current version of {id} on master branch: {api.Version}");
+        }
+
         private static void IncrementVersion(string[] args)
         {
             if (args.Length != 1)
             {
-                throw new UserErrorException($"{SetVersionCommand} requires one argument: the package ID");
+                throw new UserErrorException($"{IncrementVersionCommand} requires one argument: the package ID");
             }
             string id = args[0];
 
