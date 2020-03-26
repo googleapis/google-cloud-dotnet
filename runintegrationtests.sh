@@ -90,7 +90,10 @@ log_build_action "(Start) Integration tests"
 for testdir in $testdirs
 do
   log_build_action "Testing $testdir"
-  if [[ "$testdir" =~ SmokeTests ]]
+  if [[ "$testdir" =~ AspNet\. && "$OS" != "Windows_NT" ]]
+  then
+    echo "Skipping $testdir; test not supported on non windows environment."
+  elif [[ "$testdir" =~ SmokeTests ]]
   then
     # Smoke tests aren't unit tests - we just run them as console apps,
     # passing in the project ID

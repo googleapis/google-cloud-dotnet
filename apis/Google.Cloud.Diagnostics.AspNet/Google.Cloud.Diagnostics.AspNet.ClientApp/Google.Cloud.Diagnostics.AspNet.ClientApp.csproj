@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNet\Google.Cloud.Diagnostics.AspNet.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
