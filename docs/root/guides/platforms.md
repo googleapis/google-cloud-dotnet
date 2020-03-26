@@ -4,24 +4,16 @@ We aim to make the Google Cloud Libraries for .NET run in as wide a
 set of environments as possible, where we have confidence that they
 will work correctly.
 
-## REST-based libraries
+The latest libraries (the ones with dependencies on Google.Api.Gax
+3.x) target the **netstandard2.0** and **net461** [Target
+Framework Monikers](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks).
 
-These libraries target the **netstandard1.3** and **net45** [Target
-Framework
-Monikers](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks).
-
-Unfortunately there are currently issues supporting Universal
-Windows Platform (UWP) applications, as discussed
-[here](https://github.com/google/google-api-dotnet-client/issues/787).
-When UWP is supported by the `google-api-dotnet-client` project, we
-hope a subsequent release of the REST-based Google Cloud Libraries
-for .NET will support UWP as well.
-
-## gRPC-based libraries
-
-These libraries target **netstandard1.5** and **net45**. They depend
-on the [Grpc.Core](https://www.nuget.org/packages/Grpc.Core)
-library, which has the same targets.
+Older versions of libraries (targeting Google.Api.Gax 2.x) support
+older frameworks (netstandard1.3 or netstandard1.5, and net45) but
+those are incompatible with the latest versions of Grpc.Core and
+with C# 8 asynchronous sequences. We strongly recommend updating to
+a newer framework supported by the latest libraries if you possibly
+can.
 
 ## Mobile platform support
 
