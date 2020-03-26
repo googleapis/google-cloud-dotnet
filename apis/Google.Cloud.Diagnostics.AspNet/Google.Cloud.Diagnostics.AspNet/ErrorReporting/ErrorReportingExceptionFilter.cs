@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
-        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
+        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync()"/>.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Must not be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job. May be null.</param>
@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
-        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
+        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync()"/>.
         /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
         /// The Google Cloud Platform project to report errors to will detected from the
