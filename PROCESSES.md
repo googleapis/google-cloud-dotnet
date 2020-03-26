@@ -178,7 +178,7 @@ locally, and compare the previously released NuGet packages with the
 current source code, showing you what's changed. Check there's
 nothing unexpected.
 
-4. Run `./prepare-release update-history`. This will update the
+4. Run `./prepare-release.sh update-history`. This will update the
 version history files of all changed APIs, based on the commits
 that touched the relevant directories. You may well wish to review
 the files afterwards to check they contain everything you want to
@@ -186,7 +186,7 @@ include in the history. (The filenames are displayed as the output
 of this command.)
 
 5. Assuming you're only releasing a single package, run
-`./prepare-release commit`. This will commit all the current
+`./prepare-release.sh commit`. This will commit all the current
 changes, with a message taken from the version history for the
 package. Use `git commit --amend` to change the commit message if
 you need to. If you're releasing more than one package, commit the
