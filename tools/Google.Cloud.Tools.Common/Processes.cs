@@ -34,9 +34,13 @@ namespace Google.Cloud.Tools.Common
                 RedirectStandardError = true
             };
             var process = Process.Start(psi);
+            TimeSpan timeout = TimeSpan.FromMinutes(5);
             // We assume there isn't so much output that this will block. Otherwise we'd have to read it in a different thread etc.
-            // 10s limit stops us from hanging forever...
-            process.WaitForExit(10000);
+            // 5 minute limit stops us from hanging forever...
+            if (!process.WaitForExit((int) timeout.TotalMilliseconds))
+            {
+                throw new Exception($"dotnet process didn't complete after {(int) timeout.Seconds}s. Aborting tool.");
+            }
             if (process.ExitCode != 0)
             {
                 var output = process.StandardOutput.ReadToEnd();
