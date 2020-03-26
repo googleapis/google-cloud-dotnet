@@ -285,7 +285,7 @@
   },
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "4.0.0-alpha00",
+    "version": "4.0.0-beta01",
     "type": "other",
     "targetFrameworks": "net461",
     "testTargetFrameworks": "net461",
@@ -299,7 +299,7 @@
       "Diagnostics"
     ],
     "dependencies": {
-      "Google.Cloud.Diagnostics.Common": "project",
+      "Google.Cloud.Diagnostics.Common": "4.0.0",
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
