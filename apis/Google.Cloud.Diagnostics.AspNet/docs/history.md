@@ -1,5 +1,14 @@
 # Version history
 
+# Version 4.0.0-beta01, released 2020-03-26
+
+This is a beta for 4.0.0, which is now expected to be the last version
+of this package. It targets GAX 3.0, which allows the use of other
+new client libraries also targeting GAX 3.0, but otherwise has no
+new features. We are not expecting to continue working on this
+package at all after the 4.0.0 release, other than if a patch is
+required.
+
 # Version 3.0.0, released 2019-12-16
 
 Note that this is the last version to depend on GAX 2.x and
