@@ -461,7 +461,7 @@ shell.run(
                     throw new UserErrorException($"Analyzers are expected to use {AnalyzersTargetFramework}");
                 }
 
-                dependencies = new SortedList<string, string>(CommonAnalyzerDependencies);
+                dependencies = new SortedList<string, string>(CommonAnalyzerDependencies, StringComparer.Ordinal);
 
                 // Note: If support is added here for using additional dependencies, we need to resolve
                 //       the packaging issues and make sure the onus won't be on the user to add the
@@ -470,7 +470,7 @@ shell.run(
             else
             {
 
-                dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies);
+                dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies, StringComparer.Ordinal);
 
                 switch (api.Type)
                 {
@@ -595,7 +595,7 @@ shell.run(
             {
                 return;
             }
-            var dependencies = new SortedList<string, string>(CommonSampleDependencies);
+            var dependencies = new SortedList<string, string>(CommonSampleDependencies, StringComparer.Ordinal);
             dependencies.Add(api.Id, "project");
             var propertyGroup =
                 new XElement("PropertyGroup",
@@ -617,7 +617,7 @@ shell.run(
             {
                 return;
             }
-            var dependencies = new SortedList<string, string>(CommonTestDependencies);
+            var dependencies = new SortedList<string, string>(CommonTestDependencies, StringComparer.Ordinal);
             if (isForAnalyzers)
             {
                 dependencies.Remove("Google.Cloud.ClientTesting");
