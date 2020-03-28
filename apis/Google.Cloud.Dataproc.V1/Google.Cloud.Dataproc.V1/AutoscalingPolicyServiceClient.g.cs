@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -300,6 +301,237 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoscalingPolicy CreateAutoscalingPolicy(string parent, AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoscalingPolicy(new CreateAutoscalingPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Policy = policy,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> CreateAutoscalingPolicyAsync(string parent, AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoscalingPolicyAsync(new CreateAutoscalingPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Policy = policy,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> CreateAutoscalingPolicyAsync(string parent, AutoscalingPolicy policy, st::CancellationToken cancellationToken) =>
+            CreateAutoscalingPolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoscalingPolicy CreateAutoscalingPolicy(gagr::LocationName parent, AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoscalingPolicy(new CreateAutoscalingPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Policy = policy,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> CreateAutoscalingPolicyAsync(gagr::LocationName parent, AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoscalingPolicyAsync(new CreateAutoscalingPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Policy = policy,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> CreateAutoscalingPolicyAsync(gagr::LocationName parent, AutoscalingPolicy policy, st::CancellationToken cancellationToken) =>
+            CreateAutoscalingPolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoscalingPolicy CreateAutoscalingPolicy(RegionName parent, AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoscalingPolicy(new CreateAutoscalingPolicyRequest
+            {
+                ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Policy = policy,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> CreateAutoscalingPolicyAsync(RegionName parent, AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoscalingPolicyAsync(new CreateAutoscalingPolicyRequest
+            {
+                ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Policy = policy,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new autoscaling policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.create`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.create`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="policy">
+        /// The autoscaling policy to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> CreateAutoscalingPolicyAsync(RegionName parent, AutoscalingPolicy policy, st::CancellationToken cancellationToken) =>
+            CreateAutoscalingPolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates (replaces) autoscaling policy.
         /// 
         /// Disabled check for update_mask, because all updates will be full
@@ -336,6 +568,54 @@ namespace Google.Cloud.Dataproc.V1
             UpdateAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates (replaces) autoscaling policy.
+        /// 
+        /// Disabled check for update_mask, because all updates will be full
+        /// replacements.
+        /// </summary>
+        /// <param name="policy">
+        /// Required. The updated autoscaling policy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoscalingPolicy UpdateAutoscalingPolicy(AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutoscalingPolicy(new UpdateAutoscalingPolicyRequest
+            {
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates (replaces) autoscaling policy.
+        /// 
+        /// Disabled check for update_mask, because all updates will be full
+        /// replacements.
+        /// </summary>
+        /// <param name="policy">
+        /// Required. The updated autoscaling policy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> UpdateAutoscalingPolicyAsync(AutoscalingPolicy policy, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutoscalingPolicyAsync(new UpdateAutoscalingPolicyRequest
+            {
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates (replaces) autoscaling policy.
+        /// 
+        /// Disabled check for update_mask, because all updates will be full
+        /// replacements.
+        /// </summary>
+        /// <param name="policy">
+        /// Required. The updated autoscaling policy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> UpdateAutoscalingPolicyAsync(AutoscalingPolicy policy, st::CancellationToken cancellationToken) =>
+            UpdateAutoscalingPolicyAsync(policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Retrieves autoscaling policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -363,6 +643,138 @@ namespace Google.Cloud.Dataproc.V1
             GetAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Retrieves autoscaling policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoscalingPolicy GetAutoscalingPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoscalingPolicy(new GetAutoscalingPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves autoscaling policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> GetAutoscalingPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoscalingPolicyAsync(new GetAutoscalingPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves autoscaling policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> GetAutoscalingPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutoscalingPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves autoscaling policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoscalingPolicy GetAutoscalingPolicy(AutoscalingPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoscalingPolicy(new GetAutoscalingPolicyRequest
+            {
+                AutoscalingPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves autoscaling policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> GetAutoscalingPolicyAsync(AutoscalingPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoscalingPolicyAsync(new GetAutoscalingPolicyRequest
+            {
+                AutoscalingPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves autoscaling policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.get`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoscalingPolicy> GetAutoscalingPolicyAsync(AutoscalingPolicyName name, st::CancellationToken cancellationToken) =>
+            GetAutoscalingPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists autoscaling policies in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -379,6 +791,204 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(ListAutoscalingPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists autoscaling policies in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.list`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.list`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutoscalingPolicies(new ListAutoscalingPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists autoscaling policies in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.list`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.list`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutoscalingPoliciesAsync(new ListAutoscalingPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists autoscaling policies in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.list`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.list`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutoscalingPolicies(new ListAutoscalingPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists autoscaling policies in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.list`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.list`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutoscalingPoliciesAsync(new ListAutoscalingPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists autoscaling policies in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.list`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.list`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPolicies(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutoscalingPolicies(new ListAutoscalingPoliciesRequest
+            {
+                ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists autoscaling policies in the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the region or location, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.list`, the resource name
+        /// of the region has the following format:
+        /// `projects/{project_id}/regions/{region}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.list`, the resource name
+        /// of the location has the following format:
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoscalingPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoscalingPoliciesResponse, AutoscalingPolicy> ListAutoscalingPoliciesAsync(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutoscalingPoliciesAsync(new ListAutoscalingPoliciesRequest
+            {
+                ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Deletes an autoscaling policy. It is an error to delete an autoscaling
@@ -409,6 +1019,144 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteAutoscalingPolicyAsync(DeleteAutoscalingPolicyRequest request, st::CancellationToken cancellationToken) =>
             DeleteAutoscalingPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an autoscaling policy. It is an error to delete an autoscaling
+        /// policy that is in use by one or more clusters.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAutoscalingPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoscalingPolicy(new DeleteAutoscalingPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an autoscaling policy. It is an error to delete an autoscaling
+        /// policy that is in use by one or more clusters.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAutoscalingPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoscalingPolicyAsync(new DeleteAutoscalingPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an autoscaling policy. It is an error to delete an autoscaling
+        /// policy that is in use by one or more clusters.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAutoscalingPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAutoscalingPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an autoscaling policy. It is an error to delete an autoscaling
+        /// policy that is in use by one or more clusters.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAutoscalingPolicy(AutoscalingPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoscalingPolicy(new DeleteAutoscalingPolicyRequest
+            {
+                AutoscalingPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an autoscaling policy. It is an error to delete an autoscaling
+        /// policy that is in use by one or more clusters.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAutoscalingPolicyAsync(AutoscalingPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoscalingPolicyAsync(new DeleteAutoscalingPolicyRequest
+            {
+                AutoscalingPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an autoscaling policy. It is an error to delete an autoscaling
+        /// policy that is in use by one or more clusters.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the autoscaling policy, as described
+        /// in https://cloud.google.com/apis/design/resource_names.
+        /// 
+        /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}`
+        /// 
+        /// * For `projects.locations.autoscalingPolicies.delete`, the resource name
+        /// of the policy has the following format:
+        /// `projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAutoscalingPolicyAsync(AutoscalingPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteAutoscalingPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AutoscalingPolicyService client wrapper implementation, for convenient use.</summary>
