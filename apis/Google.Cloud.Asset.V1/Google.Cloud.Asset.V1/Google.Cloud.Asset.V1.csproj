@@ -25,6 +25,9 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="3.0.0" />
     <PackageReference Include="Google.Cloud.Iam.V1" Version="2.0.0" />
+    <PackageReference Include="Google.Cloud.OrgPolicy.V1" Version="2.0.0-beta03" />
+    <ProjectReference Include="..\..\Google.Identity.AccessContextManager.Type\Google.Identity.AccessContextManager.Type\Google.Identity.AccessContextManager.Type.csproj" />
+    <ProjectReference Include="..\..\Google.Identity.AccessContextManager.V1\Google.Identity.AccessContextManager.V1\Google.Identity.AccessContextManager.V1.csproj" />
     <PackageReference Include="Google.LongRunning" Version="2.0.0" />
     <PackageReference Include="Grpc.Core" Version="2.27.0" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
