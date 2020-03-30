@@ -85,7 +85,9 @@ namespace Google.Cloud.BigQuery.V2
             DateTime start = Clock.GetCurrentDateTimeUtc();
             while (true)
             {
-                // This will throw if the query has timed out.
+                // This will throw if the query has timed out. Otherwise, the RPC will have a timeout,
+                // and the server won't return an incomplete job before that timeout. So although this
+                // looks like a tight loop without any delay, the delay is on the server side.
                 var response = GetRawQueryResults(jobReference, options, start);
                 if (response.JobComplete == true)
                 {
@@ -115,7 +117,9 @@ namespace Google.Cloud.BigQuery.V2
             DateTime start = Clock.GetCurrentDateTimeUtc();
             while (true)
             {
-                // This will throw if the query has timed out.
+                // This will throw if the query has timed out. Otherwise, the RPC will have a timeout,
+                // and the server won't return an incomplete job before that timeout. So although this
+                // looks like a tight loop without any delay, the delay is on the server side.
                 var response = await GetRawQueryResultsAsync(jobReference, options, start, cancellationToken).ConfigureAwait(false);
                 if (response.JobComplete == true)
                 {
