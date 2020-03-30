@@ -21,8 +21,6 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 OUTDIR=tmp
 if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
 then
-  echo "Contents of preconfig file:"
-  cat $SYNTHTOOL_PRECONFIG_FILE
   declare -r GOOGLEAPIS=$(python - <<END
 import json
 with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
@@ -30,9 +28,7 @@ with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
   print(data['preclonedRepos']['https://github.com/googleapis/googleapis.git'])
 END
   )
-  echo "Extracted repo location: $GOOGLEAPIS"
-fi
-if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
+elif [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
 then
   declare -r GOOGLEAPIS="$SYNTHTOOL_GOOGLEAPIS"
 elif [[ "$SYNTHTOOL_CACHE" != "" ]]
