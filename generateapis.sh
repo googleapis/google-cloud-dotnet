@@ -19,6 +19,19 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 # - unzip
 
 OUTDIR=tmp
+if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
+then
+  echo "Contents of preconfig file:"
+  cat $SYNTHTOOL_PRECONFIG_FILE
+  declare -r GOOGLEAPIS=$(python - <<END
+import json
+with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
+  data = json.load(json_file)
+  print(data['preclonedRepos']['https://github.com/googleapis/googleapis.git'])
+END
+  )
+  echo "Extracted repo location: $GOOGLEAPIS"
+fi
 if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
 then
   declare -r GOOGLEAPIS="$SYNTHTOOL_GOOGLEAPIS"
@@ -33,7 +46,7 @@ fi
 export GOOGLEAPIS
 
 fetch_github_repos() {
-  if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" ]]
+  if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" && "$SYNTHTOOL_PRECONFIG_FILE" == "" ]]
   then
     if [ -d "$GOOGLEAPIS" ]
     then
@@ -224,6 +237,21 @@ generate_api() {
       echo "$PACKAGE is a new API."
     fi
   fi
+
+  # Record the commit in synth.metadata
+  cat > $PACKAGE_DIR/synth.metadata <<END
+{
+  "sources": [
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "$(git -C $GOOGLEAPIS rev-parse HEAD)"        
+      }
+    }
+  ]
+}
+END
 }
 
 
