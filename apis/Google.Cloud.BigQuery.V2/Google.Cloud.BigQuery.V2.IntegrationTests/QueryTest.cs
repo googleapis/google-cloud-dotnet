@@ -559,7 +559,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Note that we don't specify any options. That means when we want to read a page at a time later, we'll need to perform the query again.
             var results = await client.ExecuteQueryAsync(sql, parameters: null);
             // Iterate over multiple pages automatically to get all results. The query has 13 results.
-            var rows = await results.GetRowsAsync().ToListAsync();
+            var rows = await results.GetRowsAsync().ToList();
             Assert.Equal(13, rows.Count);
 
             // Now try getting one page at a time, in the same way we would if we were in a web application.
