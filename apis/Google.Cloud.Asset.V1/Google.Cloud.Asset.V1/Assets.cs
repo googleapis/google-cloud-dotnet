@@ -25,34 +25,46 @@ namespace Google.Cloud.Asset.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXNzZXQvdjEvYXNzZXRzLnByb3RvEhVnb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aGmdv",
-            "b2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55",
-            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvIoABCg1UZW1wb3JhbEFzc2V0EjEKBndpbmRvdxgBIAEoCzIh",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5UaW1lV2luZG93Eg8KB2RlbGV0ZWQY",
-            "AiABKAgSKwoFYXNzZXQYAyABKAsyHC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "QXNzZXQiagoKVGltZVdpbmRvdxIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiwwEKBUFzc2V0EgwKBG5hbWUYASAB",
-            "KAkSEgoKYXNzZXRfdHlwZRgCIAEoCRIxCghyZXNvdXJjZRgDIAEoCzIfLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZRIpCgppYW1fcG9saWN5GAQg",
-            "ASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kSEQoJYW5jZXN0b3JzGAogAygJ",
-            "OifqQSQKH2Nsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vQXNzZXQSASoioAEK",
-            "CFJlc291cmNlEg8KB3ZlcnNpb24YASABKAkSHgoWZGlzY292ZXJ5X2RvY3Vt",
-            "ZW50X3VyaRgCIAEoCRIWCg5kaXNjb3ZlcnlfbmFtZRgDIAEoCRIUCgxyZXNv",
-            "dXJjZV91cmwYBCABKAkSDgoGcGFyZW50GAUgASgJEiUKBGRhdGEYBiABKAsy",
-            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QpgBChljb20uZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxQgpBc3NldFByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXNzZXQvdjE7YXNzZXT4AQGqAhVH",
-            "b29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFi",
-            "BnByb3RvMw=="));
+            "Y2xvdWQuYXNzZXQudjEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKWdv",
+            "b2dsZS9jbG91ZC9vcmdwb2xpY3kvdjEvb3JncG9saWN5LnByb3RvGhpnb29n",
+            "bGUvaWFtL3YxL3BvbGljeS5wcm90bxo6Z29vZ2xlL2lkZW50aXR5L2FjY2Vz",
+            "c2NvbnRleHRtYW5hZ2VyL3YxL2FjY2Vzc19sZXZlbC5wcm90bxo7Z29vZ2xl",
+            "L2lkZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxL2FjY2Vzc19wb2xp",
+            "Y3kucHJvdG8aP2dvb2dsZS9pZGVudGl0eS9hY2Nlc3Njb250ZXh0bWFuYWdl",
+            "ci92MS9zZXJ2aWNlX3BlcmltZXRlci5wcm90bxoZZ29vZ2xlL3Byb3RvYnVm",
+            "L2FueS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90byKAAQoNVGVtcG9yYWxBc3NldBIxCgZ3aW5kb3cYASAB",
+            "KAsyIS5nb29nbGUuY2xvdWQuYXNzZXQudjEuVGltZVdpbmRvdxIPCgdkZWxl",
+            "dGVkGAIgASgIEisKBWFzc2V0GAMgASgLMhwuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLkFzc2V0ImoKClRpbWVXaW5kb3cSLgoKc3RhcnRfdGltZRgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIokECgVBc3NldBIMCgRuYW1l",
+            "GAEgASgJEhIKCmFzc2V0X3R5cGUYAiABKAkSMQoIcmVzb3VyY2UYAyABKAsy",
+            "Hy5nb29nbGUuY2xvdWQuYXNzZXQudjEuUmVzb3VyY2USKQoKaWFtX3BvbGlj",
+            "eRgEIAEoCzIVLmdvb2dsZS5pYW0udjEuUG9saWN5EjUKCm9yZ19wb2xpY3kY",
+            "BiADKAsyIS5nb29nbGUuY2xvdWQub3JncG9saWN5LnYxLlBvbGljeRJOCg1h",
+            "Y2Nlc3NfcG9saWN5GAcgASgLMjUuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2Nv",
+            "bnRleHRtYW5hZ2VyLnYxLkFjY2Vzc1BvbGljeUgAEkwKDGFjY2Vzc19sZXZl",
+            "bBgIIAEoCzI0Lmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdl",
+            "ci52MS5BY2Nlc3NMZXZlbEgAElYKEXNlcnZpY2VfcGVyaW1ldGVyGAkgASgL",
+            "MjkuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNl",
+            "cnZpY2VQZXJpbWV0ZXJIABIRCglhbmNlc3RvcnMYCiADKAk6J+pBJAofY2xv",
+            "dWRhc3NldC5nb29nbGVhcGlzLmNvbS9Bc3NldBIBKkIXChVhY2Nlc3NfY29u",
+            "dGV4dF9wb2xpY3kioAEKCFJlc291cmNlEg8KB3ZlcnNpb24YASABKAkSHgoW",
+            "ZGlzY292ZXJ5X2RvY3VtZW50X3VyaRgCIAEoCRIWCg5kaXNjb3ZlcnlfbmFt",
+            "ZRgDIAEoCRIUCgxyZXNvdXJjZV91cmwYBCABKAkSDgoGcGFyZW50GAUgASgJ",
+            "EiUKBGRhdGEYBiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QpgBChlj",
+            "b20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxQgpBc3NldFByb3RvUAFaOmdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXNzZXQv",
+            "djE7YXNzZXT4AQGqAhVHb29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29nbGVc",
+            "Q2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TemporalAsset), global::Google.Cloud.Asset.V1.TemporalAsset.Parser, new[]{ "Window", "Deleted", "Asset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TimeWindow), global::Google.Cloud.Asset.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy", "Ancestors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy", "OrgPolicy", "AccessPolicy", "AccessLevel", "ServicePerimeter", "Ancestors" }, new[]{ "AccessContextPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Resource), global::Google.Cloud.Asset.V1.Resource.Parser, new[]{ "Version", "DiscoveryDocumentUri", "DiscoveryName", "ResourceUrl", "Parent", "Data" }, null, null, null, null)
           }));
     }
@@ -61,8 +73,8 @@ namespace Google.Cloud.Asset.V1 {
   }
   #region Messages
   /// <summary>
-  /// Temporal asset. In addition to the asset, the temporal asset includes the
-  /// status of the asset and valid from and to time of it.
+  /// An asset in Google Cloud and its temporal metadata, including the time window
+  /// when it was observed and its status during that window.
   /// </summary>
   public sealed partial class TemporalAsset : pb::IMessage<TemporalAsset> {
     private static readonly pb::MessageParser<TemporalAsset> _parser = new pb::MessageParser<TemporalAsset>(() => new TemporalAsset());
@@ -118,7 +130,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int DeletedFieldNumber = 2;
     private bool deleted_;
     /// <summary>
-    /// If the asset is deleted or not.
+    /// Whether the asset has been deleted or not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Deleted {
@@ -132,7 +144,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.Asset asset_;
     /// <summary>
-    /// Asset.
+    /// An asset in Google Cloud.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.Asset Asset {
@@ -271,7 +283,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A time window of (start_time, end_time].
+  /// A time window specified by its "start_time" and "end_time".
   /// </summary>
   public sealed partial class TimeWindow : pb::IMessage<TimeWindow> {
     private static readonly pb::MessageParser<TimeWindow> _parser = new pb::MessageParser<TimeWindow>(() => new TimeWindow());
@@ -326,8 +338,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// End time of the time window (inclusive).
-    /// Current timestamp if not specified.
+    /// End time of the time window (inclusive). If not specified, the current
+    /// timestamp is used instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -450,8 +462,11 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// Cloud asset. This includes all Google Cloud Platform resources,
-  /// Cloud IAM policies, and other non-GCP assets.
+  /// An asset in Google Cloud. An asset can be any resource in the Google Cloud
+  /// [resource
+  /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
+  /// a resource outside the Google Cloud resource hierarchy (such as Google
+  /// Kubernetes Engine clusters and objects), or a Cloud IAM policy.
   /// </summary>
   public sealed partial class Asset : pb::IMessage<Asset> {
     private static readonly pb::MessageParser<Asset> _parser = new pb::MessageParser<Asset>(() => new Asset());
@@ -482,7 +497,20 @@ namespace Google.Cloud.Asset.V1 {
       assetType_ = other.assetType_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       iamPolicy_ = other.iamPolicy_ != null ? other.iamPolicy_.Clone() : null;
+      orgPolicy_ = other.orgPolicy_.Clone();
       ancestors_ = other.ancestors_.Clone();
+      switch (other.AccessContextPolicyCase) {
+        case AccessContextPolicyOneofCase.AccessPolicy:
+          AccessPolicy = other.AccessPolicy.Clone();
+          break;
+        case AccessContextPolicyOneofCase.AccessLevel:
+          AccessLevel = other.AccessLevel.Clone();
+          break;
+        case AccessContextPolicyOneofCase.ServicePerimeter:
+          ServicePerimeter = other.ServicePerimeter.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -496,9 +524,10 @@ namespace Google.Cloud.Asset.V1 {
     private string name_ = "";
     /// <summary>
     /// The full name of the asset. For example:
-    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
+    /// "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+    ///
     /// See [Resource
-    /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
     /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -513,7 +542,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetTypeFieldNumber = 2;
     private string assetType_ = "";
     /// <summary>
-    /// Type of the asset. Example: "compute.googleapis.com/Disk".
+    /// The type of the asset. For example: "compute.googleapis.com/Disk"
+    ///
+    /// See [Supported asset
+    /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AssetType {
@@ -527,7 +560,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int ResourceFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.Resource resource_;
     /// <summary>
-    /// Representation of the resource.
+    /// A representation of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.Resource Resource {
@@ -541,8 +574,15 @@ namespace Google.Cloud.Asset.V1 {
     public const int IamPolicyFieldNumber = 4;
     private global::Google.Cloud.Iam.V1.Policy iamPolicy_;
     /// <summary>
-    /// Representation of the actual Cloud IAM policy set on a cloud resource. For
-    /// each resource, there must be at most one Cloud IAM policy set on it.
+    /// A representation of the Cloud IAM policy set on a Google Cloud resource.
+    /// There can be a maximum of one Cloud IAM policy set on any given resource.
+    /// In addition, Cloud IAM policies inherit their granted access scope from any
+    /// policies set on parent resources in the resource hierarchy. Therefore, the
+    /// effectively policy is the union of both the policy set on this resource
+    /// and each policy set on all of the resource's ancestry resource levels in
+    /// the hierarchy. See
+    /// [this topic](https://cloud.google.com/iam/docs/policies#inheritance) for
+    /// more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Iam.V1.Policy IamPolicy {
@@ -552,22 +592,93 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "org_policy" field.</summary>
+    public const int OrgPolicyFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.OrgPolicy.V1.Policy> _repeated_orgPolicy_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.OrgPolicy.V1.Policy.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.OrgPolicy.V1.Policy> orgPolicy_ = new pbc::RepeatedField<global::Google.Cloud.OrgPolicy.V1.Policy>();
+    /// <summary>
+    /// A representation of an [organization
+    /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview#organization_policy).
+    /// There can be more than one organization policy with different constraints
+    /// set on a given resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.OrgPolicy.V1.Policy> OrgPolicy {
+      get { return orgPolicy_; }
+    }
+
+    /// <summary>Field number for the "access_policy" field.</summary>
+    public const int AccessPolicyFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Identity.AccessContextManager.V1.AccessPolicy AccessPolicy {
+      get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy ? (global::Google.Identity.AccessContextManager.V1.AccessPolicy) accessContextPolicy_ : null; }
+      set {
+        accessContextPolicy_ = value;
+        accessContextPolicyCase_ = value == null ? AccessContextPolicyOneofCase.None : AccessContextPolicyOneofCase.AccessPolicy;
+      }
+    }
+
+    /// <summary>Field number for the "access_level" field.</summary>
+    public const int AccessLevelFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Identity.AccessContextManager.V1.AccessLevel AccessLevel {
+      get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel ? (global::Google.Identity.AccessContextManager.V1.AccessLevel) accessContextPolicy_ : null; }
+      set {
+        accessContextPolicy_ = value;
+        accessContextPolicyCase_ = value == null ? AccessContextPolicyOneofCase.None : AccessContextPolicyOneofCase.AccessLevel;
+      }
+    }
+
+    /// <summary>Field number for the "service_perimeter" field.</summary>
+    public const int ServicePerimeterFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Identity.AccessContextManager.V1.ServicePerimeter ServicePerimeter {
+      get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter ? (global::Google.Identity.AccessContextManager.V1.ServicePerimeter) accessContextPolicy_ : null; }
+      set {
+        accessContextPolicy_ = value;
+        accessContextPolicyCase_ = value == null ? AccessContextPolicyOneofCase.None : AccessContextPolicyOneofCase.ServicePerimeter;
+      }
+    }
+
     /// <summary>Field number for the "ancestors" field.</summary>
     public const int AncestorsFieldNumber = 10;
     private static readonly pb::FieldCodec<string> _repeated_ancestors_codec
         = pb::FieldCodec.ForString(82);
     private readonly pbc::RepeatedField<string> ancestors_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
-    /// represented as a list of relative resource names. Ancestry path starts with
-    /// the closest CRM ancestor and ends at root. If the asset is a CRM
-    /// project/folder/organization, this starts from the asset itself.
+    /// The ancestry path of an asset in Google Cloud [resource
+    /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
+    /// represented as a list of relative resource names. An ancestry path starts
+    /// with the closest ancestor in the hierarchy and ends at root. If the asset
+    /// is a project, folder, or organization, the ancestry path starts from the
+    /// asset itself.
     ///
-    /// Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+    /// For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Ancestors {
       get { return ancestors_; }
+    }
+
+    private object accessContextPolicy_;
+    /// <summary>Enum of possible cases for the "access_context_policy" oneof.</summary>
+    public enum AccessContextPolicyOneofCase {
+      None = 0,
+      AccessPolicy = 7,
+      AccessLevel = 8,
+      ServicePerimeter = 9,
+    }
+    private AccessContextPolicyOneofCase accessContextPolicyCase_ = AccessContextPolicyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AccessContextPolicyOneofCase AccessContextPolicyCase {
+      get { return accessContextPolicyCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAccessContextPolicy() {
+      accessContextPolicyCase_ = AccessContextPolicyOneofCase.None;
+      accessContextPolicy_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -587,7 +698,12 @@ namespace Google.Cloud.Asset.V1 {
       if (AssetType != other.AssetType) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
       if (!object.Equals(IamPolicy, other.IamPolicy)) return false;
+      if(!orgPolicy_.Equals(other.orgPolicy_)) return false;
+      if (!object.Equals(AccessPolicy, other.AccessPolicy)) return false;
+      if (!object.Equals(AccessLevel, other.AccessLevel)) return false;
+      if (!object.Equals(ServicePerimeter, other.ServicePerimeter)) return false;
       if(!ancestors_.Equals(other.ancestors_)) return false;
+      if (AccessContextPolicyCase != other.AccessContextPolicyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -598,7 +714,12 @@ namespace Google.Cloud.Asset.V1 {
       if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (iamPolicy_ != null) hash ^= IamPolicy.GetHashCode();
+      hash ^= orgPolicy_.GetHashCode();
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) hash ^= AccessPolicy.GetHashCode();
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) hash ^= AccessLevel.GetHashCode();
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) hash ^= ServicePerimeter.GetHashCode();
       hash ^= ancestors_.GetHashCode();
+      hash ^= (int) accessContextPolicyCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -628,6 +749,19 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(IamPolicy);
       }
+      orgPolicy_.WriteTo(output, _repeated_orgPolicy_codec);
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AccessPolicy);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) {
+        output.WriteRawTag(66);
+        output.WriteMessage(AccessLevel);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ServicePerimeter);
+      }
       ancestors_.WriteTo(output, _repeated_ancestors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -648,6 +782,16 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (iamPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IamPolicy);
+      }
+      size += orgPolicy_.CalculateSize(_repeated_orgPolicy_codec);
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPolicy);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessLevel);
+      }
+      if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServicePerimeter);
       }
       size += ancestors_.CalculateSize(_repeated_ancestors_codec);
       if (_unknownFields != null) {
@@ -679,7 +823,29 @@ namespace Google.Cloud.Asset.V1 {
         }
         IamPolicy.MergeFrom(other.IamPolicy);
       }
+      orgPolicy_.Add(other.orgPolicy_);
       ancestors_.Add(other.ancestors_);
+      switch (other.AccessContextPolicyCase) {
+        case AccessContextPolicyOneofCase.AccessPolicy:
+          if (AccessPolicy == null) {
+            AccessPolicy = new global::Google.Identity.AccessContextManager.V1.AccessPolicy();
+          }
+          AccessPolicy.MergeFrom(other.AccessPolicy);
+          break;
+        case AccessContextPolicyOneofCase.AccessLevel:
+          if (AccessLevel == null) {
+            AccessLevel = new global::Google.Identity.AccessContextManager.V1.AccessLevel();
+          }
+          AccessLevel.MergeFrom(other.AccessLevel);
+          break;
+        case AccessContextPolicyOneofCase.ServicePerimeter:
+          if (ServicePerimeter == null) {
+            ServicePerimeter = new global::Google.Identity.AccessContextManager.V1.ServicePerimeter();
+          }
+          ServicePerimeter.MergeFrom(other.ServicePerimeter);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -713,6 +879,37 @@ namespace Google.Cloud.Asset.V1 {
             input.ReadMessage(IamPolicy);
             break;
           }
+          case 50: {
+            orgPolicy_.AddEntriesFrom(input, _repeated_orgPolicy_codec);
+            break;
+          }
+          case 58: {
+            global::Google.Identity.AccessContextManager.V1.AccessPolicy subBuilder = new global::Google.Identity.AccessContextManager.V1.AccessPolicy();
+            if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy) {
+              subBuilder.MergeFrom(AccessPolicy);
+            }
+            input.ReadMessage(subBuilder);
+            AccessPolicy = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Identity.AccessContextManager.V1.AccessLevel subBuilder = new global::Google.Identity.AccessContextManager.V1.AccessLevel();
+            if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel) {
+              subBuilder.MergeFrom(AccessLevel);
+            }
+            input.ReadMessage(subBuilder);
+            AccessLevel = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Identity.AccessContextManager.V1.ServicePerimeter subBuilder = new global::Google.Identity.AccessContextManager.V1.ServicePerimeter();
+            if (accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter) {
+              subBuilder.MergeFrom(ServicePerimeter);
+            }
+            input.ReadMessage(subBuilder);
+            ServicePerimeter = subBuilder;
+            break;
+          }
           case 82: {
             ancestors_.AddEntriesFrom(input, _repeated_ancestors_codec);
             break;
@@ -724,7 +921,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// Representation of a cloud resource.
+  /// A representation of a Google Cloud resource.
   /// </summary>
   public sealed partial class Resource : pb::IMessage<Resource> {
     private static readonly pb::MessageParser<Resource> _parser = new pb::MessageParser<Resource>(() => new Resource());
@@ -769,7 +966,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int VersionFieldNumber = 1;
     private string version_ = "";
     /// <summary>
-    /// The API version. Example: "v1".
+    /// The API version. For example: "v1"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -785,9 +982,10 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The URL of the discovery document containing the resource's JSON schema.
     /// For example:
-    /// `"https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"`.
-    /// It will be left unspecified for resources without a discovery-based API,
-    /// such as Cloud Bigtable.
+    /// "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"
+    ///
+    /// This value is unspecified for resources that do not have an API based on a
+    /// discovery document, such as Cloud Bigtable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DiscoveryDocumentUri {
@@ -801,9 +999,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int DiscoveryNameFieldNumber = 3;
     private string discoveryName_ = "";
     /// <summary>
-    /// The JSON schema name listed in the discovery document.
-    /// Example: "Project". It will be left unspecified for resources (such as
-    /// Cloud Bigtable) without a discovery-based API.
+    /// The JSON schema name listed in the discovery document. For example:
+    /// "Project"
+    ///
+    /// This value is unspecified for resources that do not have an API based on a
+    /// discovery document, such as Cloud Bigtable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DiscoveryName {
@@ -817,11 +1017,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int ResourceUrlFieldNumber = 4;
     private string resourceUrl_ = "";
     /// <summary>
-    /// The REST URL for accessing the resource. An HTTP GET operation using this
-    /// URL returns the resource itself.
-    /// Example:
-    /// `https://cloudresourcemanager.googleapis.com/v1/projects/my-project-123`.
-    /// It will be left unspecified for resources without a REST API.
+    /// The REST URL for accessing the resource. An HTTP `GET` request using this
+    /// URL returns the resource itself. For example:
+    /// "https://cloudresourcemanager.googleapis.com/v1/projects/my-project-123"
+    ///
+    /// This value is unspecified for resources without a REST API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResourceUrl {
@@ -840,12 +1040,13 @@ namespace Google.Cloud.Asset.V1 {
     /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
     /// for more information.
     ///
-    /// For GCP assets, it is the parent resource defined in the [Cloud IAM policy
+    /// For Google Cloud assets, this value is the parent resource defined in the
+    /// [Cloud IAM policy
     /// hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy).
     /// For example:
-    /// `"//cloudresourcemanager.googleapis.com/projects/my_project_123"`.
+    /// "//cloudresourcemanager.googleapis.com/projects/my_project_123"
     ///
-    /// For third-party assets, it is up to the users to define.
+    /// For third-party assets, this field may be set differently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -859,8 +1060,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int DataFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Struct data_;
     /// <summary>
-    /// The content of the resource, in which some sensitive fields are scrubbed
-    /// away and may not be present.
+    /// The content of the resource, in which some sensitive fields are removed
+    /// and may not be present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct Data {
