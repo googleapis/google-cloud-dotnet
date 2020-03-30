@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.4.1, released 2020-03-30
+
+Patch release just to fix [issue 4678](https://github.com/googleapis/google-cloud-dotnet/issues/4678).
+
 # Version 1.4.0, released 2019-12-16
 
 New features since 1.3.0:
