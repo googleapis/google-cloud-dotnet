@@ -40,7 +40,7 @@ namespace Google.Cloud.Tools.TagReleases
     {
         private const string RepositoryOwner = "googleapis";
         private const string RepositoryName = "google-cloud-dotnet";
-        private const string TargetBranch = "master";
+        private const string TargetBranch = "Google.Cloud.BigQuery.V2-1.4.x";
         private const string ApplicationName = "google-cloud-dotnet-tagreleases";
 
         private static int Main(string[] args)
