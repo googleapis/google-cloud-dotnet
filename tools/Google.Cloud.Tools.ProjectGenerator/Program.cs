@@ -394,6 +394,8 @@ import sys
 from synthtool import shell
 from pathlib import Path
 
+AUTOSYNTH_MULTIPLE_COMMITS = True
+
 # Parent of the script is the API-specific directory
 # Parent of the API-specific directory is the apis directory
 # Parent of the apis directory is the repo root
