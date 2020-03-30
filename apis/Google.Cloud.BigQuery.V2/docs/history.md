@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta03, released 2020-03-30
+
+- [Commit 7ab60e1](https://github.com/googleapis/google-cloud-dotnet/commit/7ab60e1): Fixes ReadPage and ReadPageAsync incorrect PageToken when starting again. Fixes [issue 4678](https://github.com/googleapis/google-cloud-dotnet/issues/4678).
+
 # Version 2.0.0-beta02, released 2020-03-18
 
 - [Commit 2b4c06f](https://github.com/googleapis/google-cloud-dotnet/commit/2b4c06f):
