@@ -30,26 +30,40 @@ do
   then
     echo "Uploading docs for package $pkg version $version"
     pushd $DOCS_OUTPUT_DIR/$pkg/site > /dev/null
-    
+
+    # We need to perform a few fix-ups of the docfx generated site for googleapis.dev:
+    # - Remove the "All APIs" link, as that page isn't included on googleapis.dev
+    # - Fix up links from one API to another (e.g. from Google.Cloud.Spanner.Data to Google.Cloud.Spanner.V1)
+    # - Add an xrefmap baseUrl
+
     if grep -q "All APIs" toc.html
     then
       echo "Removing 'All APIs' link"
       sed -i '16,18d' toc.html
     else
-      echo "No 'All APIs' link to remove"    
+      echo "No 'All APIs' link to remove"
     fi
     
+    # We assume all non-reference html files are just in the root directory
+    # Regex is nasty due to all the escaping, but we're basically capturing
+    # href="../{foo}/"
+    # and replacing it with
+    # href="../{foo}/latest/
+    # It's slightly annoying to use latest, but otherwise we need
+    # to know the precise API version we're depending on.
+    sed -ie 's/href="\.\.\/\([^\//]*\)\//href="\.\.\/\1\/latest\//g' *.html
+
     if ! head xrefmap.yml | grep -q baseUrl
     then
       sed -i "1s/^/baseUrl: https:\/\/googleapis.dev\/dotnet\/$pkg\/$version\/\n/" xrefmap.yml
     fi
-    
+
     # TODO: Product page
     echo "Generating metadata"
     python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage"
-    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
+    # python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
     
     popd > /dev/null
   else
