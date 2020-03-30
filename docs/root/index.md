@@ -18,7 +18,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.0.0-beta02 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
+| [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.0.0-beta03 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.0.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html) | 2.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
 | [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html) | 2.0.0-beta02 | [Google BigQuery](https://cloud.google.com/bigquery/) |
@@ -93,5 +93,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html) | 2.0.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.WebRisk.V1](Google.Cloud.WebRisk.V1/index.html) | 1.0.0-beta01 | [Google Cloud Web Risk](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html) | 2.0.0-beta02 | [Google Cloud Web Risk](https://cloud.google.com/web-risk/) |
+| [Google.Identity.AccessContextManager.Type](Google.Identity.AccessContextManager.Type/index.html) | 1.0.0-beta01 | Version-agnostic types for the Google Identity Access Context Manager API |
+| [Google.Identity.AccessContextManager.V1](Google.Identity.AccessContextManager.V1/index.html) | 1.0.0-beta01 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](Google.LongRunning/index.html) | 2.0.0 | Support for the Long-Running Operations API pattern |
 | [Grafeas.V1](Grafeas.V1/index.html) | 2.0.0 | [Grafeas](https://grafeas.io/) |
