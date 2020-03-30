@@ -171,7 +171,7 @@ namespace Google.Cloud.BigQuery.V2
 
             // Work out whether to use the response we've already got, or create a new one.
             GetQueryResultsResponse response = _response;
-            if (_response.Rows?.Count > pageSize)
+            if (response.Rows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = pageSize;
@@ -179,7 +179,7 @@ namespace Google.Cloud.BigQuery.V2
             }
             // First add the rows from the existing response.
             rows.AddRange(ConvertResponseRows(response));
-            string pageToken = _response.PageToken;
+            string pageToken = response.PageToken;
             clonedOptions.StartIndex = null;
 
             // Now keep going until we've filled the result set or know there's no more data.
@@ -211,7 +211,7 @@ namespace Google.Cloud.BigQuery.V2
 
             // Work out whether to use the response we've already got, or create a new one.
             GetQueryResultsResponse response = _response;
-            if (_response.Rows?.Count > pageSize)
+            if (response.Rows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = pageSize;
@@ -219,7 +219,7 @@ namespace Google.Cloud.BigQuery.V2
             }
             // First add the rows from the existing response.
             rows.AddRange(ConvertResponseRows(response));
-            string pageToken = _response.PageToken;
+            string pageToken = response.PageToken;
             clonedOptions.StartIndex = null;
 
             // Now keep going until we've filled the result set or know there's no more data.
