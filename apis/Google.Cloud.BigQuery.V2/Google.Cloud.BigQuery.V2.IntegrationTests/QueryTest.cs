@@ -520,6 +520,60 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Null(page3.NextPageToken);
         }
 
+        [Fact]
+        public void MultiplePages_PageSizeNotInOptions()
+        {
+            // We create the client using our user, but then access a dataset in a public data
+            // project. We can't run a query "as" the public data project.
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 13";
+            // Note that we don't specify any options. That means when we want to read a page at a time later, we'll need to perform the query again.
+            var results = client.ExecuteQuery(sql, parameters: null);
+            // Iterate over multiple pages automatically to get all results. The query has 13 results.
+            var rows = results.ToList();
+            Assert.Equal(13, rows.Count);
+
+            // Now try getting one page at a time, in the same way we would if we were in a web application.
+            var page1 = results.ReadPage(5);
+            var page2 = client.GetQueryResults(results.JobReference, new GetQueryResultsOptions { PageToken = page1.NextPageToken }).ReadPage(5);
+            var page3 = client.GetQueryResults(results.JobReference, new GetQueryResultsOptions { PageToken = page2.NextPageToken }).ReadPage(5);
+
+            var titleComparer = new TitleComparer();
+            Assert.Equal(rows.Take(5), page1.Rows, titleComparer);
+            Assert.Equal(rows.Skip(5).Take(5), page2.Rows, titleComparer);
+            Assert.Equal(rows.Skip(10).Take(5), page3.Rows, titleComparer);
+            Assert.Null(page3.NextPageToken);
+        }
+
+        [Fact]
+        public async Task MultiplePagesAsync_PageSizeNotInOptions()
+        {
+            // We create the client using our user, but then access a dataset in a public data
+            // project. We can't run a query "as" the public data project.
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 13";
+            // Note that we don't specify any options. That means when we want to read a page at a time later, we'll need to perform the query again.
+            var results = await client.ExecuteQueryAsync(sql, parameters: null);
+            // Iterate over multiple pages automatically to get all results. The query has 13 results.
+            var rows = await results.GetRowsAsync().ToListAsync();
+            Assert.Equal(13, rows.Count);
+
+            // Now try getting one page at a time, in the same way we would if we were in a web application.
+            var page1 = await results.ReadPageAsync(5);
+            var page2 = await client.GetQueryResults(results.JobReference, new GetQueryResultsOptions { PageToken = page1.NextPageToken }).ReadPageAsync(5);
+            var page3 = await client.GetQueryResults(results.JobReference, new GetQueryResultsOptions { PageToken = page2.NextPageToken }).ReadPageAsync(5);
+
+            var titleComparer = new TitleComparer();
+            Assert.Equal(rows.Take(5), page1.Rows, titleComparer);
+            Assert.Equal(rows.Skip(5).Take(5), page2.Rows, titleComparer);
+            Assert.Equal(rows.Skip(10).Take(5), page3.Rows, titleComparer);
+            Assert.Null(page3.NextPageToken);
+        }
+
         /// <summary>
         /// Creates a table associated with a CSV file on Google Cloud Storage, which has some invalid data.
         /// A query on that table can provide the valid data but still have errors.
