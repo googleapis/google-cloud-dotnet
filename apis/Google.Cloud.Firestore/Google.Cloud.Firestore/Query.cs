@@ -41,13 +41,15 @@ namespace Google.Cloud.Firestore
         // multiple Query objects may share the same internal references.
         // Any additional fields should be included in equality/hash code checks.
         private readonly int _offset;
-        private readonly int? _limit;
+        private readonly (int count, LimitType type)? _limit;
         private readonly IReadOnlyList<InternalOrdering> _orderings; // Never null
         private readonly IReadOnlyList<InternalFilter> _filters; // May be null
         private readonly IReadOnlyList<FieldPath> _projections; // May be null
         private readonly Cursor _startAt;
         private readonly Cursor _endAt;
         private readonly QueryRoot _root;
+
+        private bool IsLimitToLast => _limit?.type == LimitType.Last;
 
         /// <summary>
         /// The database this query will search over.
@@ -73,7 +75,7 @@ namespace Google.Cloud.Firestore
         // no further cloning: it is the responsibility of each method to ensure it creates a clone for any new data.
         private Query(
             QueryRoot root,
-            int offset, int? limit,
+            int offset, (int count, LimitType type)? limit,
             IReadOnlyList<InternalOrdering> orderings, IReadOnlyList<InternalFilter> filters, IReadOnlyList<FieldPath> projections,
             Cursor startAt, Cursor endAt)
         {
@@ -90,20 +92,31 @@ namespace Google.Cloud.Firestore
         internal static Query ForCollectionGroup(FirestoreDb database, string collectionId) =>
             new Query(QueryRoot.ForCollectionGroup(database, collectionId));
 
-        internal StructuredQuery ToStructuredQuery() =>
-            new StructuredQuery
+        internal StructuredQuery ToStructuredQuery()
+        {
+            bool limitToLast = IsLimitToLast;
+            if (limitToLast && !_orderings.Any())
+            {
+                throw new InvalidOperationException($"Queries using {nameof(LimitToLast)} must specify at least one ordering.");
+            }
+
+            return new StructuredQuery
             {
                 From = { new CollectionSelector { AllDescendants = _root.AllDescendants, CollectionId = _root.CollectionId } },
-                Limit = _limit,
+                Limit = _limit?.count,
                 Offset = _offset,
-                OrderBy = { _orderings.Select(o => o.ToProto()) },
-                EndAt = _endAt,
+                OrderBy = { _orderings.Select(o => o.ToProto(invertDirection: limitToLast)) },
+                EndAt = limitToLast ? InvertCursor(_startAt) :_endAt,
                 Select = _projections == null ? null : new Projection { Fields = { _projections.Select(fp => fp.ToFieldReference()) } },
-                StartAt = _startAt,
+                StartAt = limitToLast ? InvertCursor(_endAt) : _startAt,
                 Where = _filters == null ? null
                     : _filters.Count == 1 ? _filters[0].ToProto()
                     : new Filter { CompositeFilter = new CompositeFilter { Op = CompositeFilter.Types.Operator.And, Filters = { _filters.Select(f => f.ToProto()) } } }
             };
+
+            Cursor InvertCursor(Cursor cursor) =>
+                cursor == null ? null : new Cursor { Before = !cursor.Before, Values = { cursor.Values } };
+        }
 
         /// <summary>
         /// Specifies the field paths to return in the results.
@@ -487,9 +500,30 @@ namespace Google.Cloud.Firestore
         public Query Limit(int limit)
         {
             GaxPreconditions.CheckArgumentRange(limit, nameof(limit), 0, int.MaxValue);
-            return new Query(_root, _offset, limit, _orderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, (limit, LimitType.First), _orderings, _filters, _projections, _startAt, _endAt);
         }
-        
+
+        /// <summary>
+        /// Creates and returns a new query that only returns the last <paramref name="limit"/> matching documents.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// You must specify at least one <see cref="OrderBy(string)"/> clause for limit-to-last queries. Otherwise,
+        /// an <see cref="InvalidOperationException"/> is thrown during execution.
+        /// </para>
+        /// <para>
+        /// Results for limit-to-last queries are only available once all documents are received, which means
+        /// that these queries cannot be streamed using the <see cref="StreamAsync(CancellationToken)"/> method.
+        /// </para>
+        /// </remarks>
+        /// <param name="limit">The maximum number of results to return. Must be greater than or equal to 0.</param>
+        /// <returns>A new query based on the current one, but with the specified limit applied.</returns>
+        public Query LimitToLast(int limit)
+        {
+            GaxPreconditions.CheckArgumentRange(limit, nameof(limit), 0, int.MaxValue);
+            return new Query(_root, _offset, (limit, LimitType.Last), _orderings, _filters, _projections, _startAt, _endAt);
+        }
+
         /// <summary>
         /// Specifies a number of results to skip.
         /// </summary>
@@ -601,7 +635,7 @@ namespace Google.Cloud.Firestore
 
         internal async Task<QuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var responses = StreamResponsesAsync(transactionId, cancellationToken);
+            var responses = StreamResponsesAsync(transactionId, cancellationToken, allowLimitToLast: true);
             Timestamp? readTime = null;
             List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
             await responses.ForEachAsync(response =>
@@ -617,7 +651,12 @@ namespace Google.Cloud.Firestore
             }, cancellationToken).ConfigureAwait(false);
 
             GaxPreconditions.CheckState(readTime != null, "The stream returned from RunQuery did not provide a read timestamp.");
-
+            if (IsLimitToLast)
+            {
+                // Reverse in-place. We *could* create an IReadOnlyList<T> which acted as a "reversing view"
+                // but that seems like unnecessary work for now.
+                snapshots.Reverse();
+            }
             return QuerySnapshot.ForDocuments(this, snapshots.AsReadOnly(), readTime.Value);
         }
 
@@ -641,15 +680,19 @@ namespace Google.Cloud.Firestore
         /// </param>
         /// <returns>An asynchronous sequence of document snapshots matching the query.</returns>
         public IAsyncEnumerable<DocumentSnapshot> StreamAsync(CancellationToken cancellationToken = default) =>
-            StreamAsync(transactionId: null, cancellationToken);
+            StreamAsync(transactionId: null, cancellationToken, false);
 
-        internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId, CancellationToken cancellationToken) =>
-             StreamResponsesAsync(transactionId, cancellationToken)
+        internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId, CancellationToken cancellationToken, bool allowLimitToLast) =>
+             StreamResponsesAsync(transactionId, cancellationToken, allowLimitToLast)
                 .Where(resp => resp.Document != null)
                 .Select(resp => DocumentSnapshot.ForDocument(Database, resp.Document, Timestamp.FromProto(resp.ReadTime)));
 
-        private IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, CancellationToken cancellationToken)
+        private IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, CancellationToken cancellationToken, bool allowLimitToLast)
         {
+            if (IsLimitToLast && !allowLimitToLast)
+            {
+                throw new InvalidOperationException($"Cannot stream responses for query using {nameof(LimitToLast)}");
+            }
             var request = new RunQueryRequest { StructuredQuery = ToStructuredQuery(), Parent = ParentPath };
             if (transactionId != null)
             {
@@ -838,7 +881,7 @@ namespace Google.Cloud.Firestore
         public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(
             _root.GetHashCode(),
             _offset,
-            _limit ?? -1,
+            _limit?.GetHashCode() ?? -1,
             GaxEqualityHelpers.GetListHashCode(_orderings),
             GaxEqualityHelpers.GetListHashCode(_filters),
             GaxEqualityHelpers.GetListHashCode(_projections),
@@ -905,7 +948,15 @@ namespace Google.Cloud.Firestore
         {
             internal FieldPath Field { get; }
             internal Direction Direction { get; }
-            internal Order ToProto() => new Order { Direction = Direction, Field = Field.ToFieldReference() };
+            internal Direction InverseDirection =>
+                Direction switch
+                {
+                    Direction.Ascending  => Direction.Descending,
+                    Direction.Descending => Direction.Ascending,
+                    _ => throw new InvalidOperationException($"Can't invert direction {Direction}")
+                };
+
+            internal Order ToProto(bool invertDirection) => new Order { Direction = invertDirection ? InverseDirection : Direction, Field = Field.ToFieldReference() };
 
             public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Field.GetHashCode(), (int) Direction);
 
@@ -1071,6 +1122,12 @@ namespace Google.Cloud.Firestore
 
             public override int GetHashCode() =>
                 GaxEqualityHelpers.CombineHashCodes(Database.GetHashCode(), ParentPath.GetHashCode(), CollectionId?.GetHashCode() ?? 0, AllDescendants ? 1 : 0);
+        }
+
+        private enum LimitType
+        {
+            First,
+            Last
         }
     }
 }

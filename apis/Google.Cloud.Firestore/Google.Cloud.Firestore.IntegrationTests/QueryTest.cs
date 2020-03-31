@@ -124,6 +124,22 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
+        public async Task LimitToLast_GetSnapshotAsync()
+        {
+            var query = _fixture.HighScoreCollection.OrderBy("Level").LimitToLast(3);
+            var snapshot = await query.GetSnapshotAsync();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
+            Assert.Equal(HighScore.Data.OrderByDescending(x => x.Level).Take(3).Reverse(), items);
+        }
+
+        [Fact]
+        public void LimitToLast_StreamingThrows()
+        {
+            var query = _fixture.HighScoreCollection.OrderBy("Level").LimitToLast(3);
+            Assert.Throws<InvalidOperationException>(() => query.StreamAsync());
+        }
+
+        [Fact]
         public async Task Offset()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").Offset(2);
