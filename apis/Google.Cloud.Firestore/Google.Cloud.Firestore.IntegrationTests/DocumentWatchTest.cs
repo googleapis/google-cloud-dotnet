@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -64,6 +65,28 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 // Now check the value is as expected
                 Assert.Equal(expected, latestValue);
             }
+        }
+
+        [Fact]
+        public async Task LimitToLast()
+        {
+            var collection = _fixture.FirestoreDb.Collection(_fixture.CollectionPrefix + "-WatchLimitToLast");
+            await collection.Document("doc1").CreateAsync(new { counter = 1 });
+            await collection.Document("doc2").CreateAsync(new { counter = 2 });
+            await collection.Document("doc3").CreateAsync(new { counter = 3 });
+            var query = collection.OrderBy("counter").LimitToLast(2);
+            var semaphore = new SemaphoreSlim(0);
+            QuerySnapshot receivedSnapshot = null;
+            var listener = query.Listen(snapshot =>
+            {
+                receivedSnapshot = snapshot;
+                semaphore.Release();
+            });
+            // Wait up to 5 seconds for the query to work.
+            Assert.True(await semaphore.WaitAsync(5000));
+            await listener.StopAsync();
+            var ids = receivedSnapshot.Documents.Select(doc => doc.Id).ToList();
+            Assert.Equal(new[] { "doc2", "doc3" }, ids);
         }
     }
 }

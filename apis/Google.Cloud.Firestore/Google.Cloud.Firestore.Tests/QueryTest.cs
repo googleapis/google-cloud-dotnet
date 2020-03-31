@@ -752,7 +752,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name").Offset(3);
             // Just for variety, we'll provide a transaction ID this time...
-            var documents = await query.StreamAsync(ByteString.CopyFrom(1, 2, 3, 4), CancellationToken.None).ToListAsync();
+            var documents = await query.StreamAsync(ByteString.CopyFrom(1, 2, 3, 4), CancellationToken.None, allowLimitToLast: false).ToListAsync();
             Assert.Equal(2, documents.Count);
 
             var doc1 = documents[0];
@@ -1048,6 +1048,35 @@ namespace Google.Cloud.Firestore.Tests
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
+
+        // Note: the LimitToLast tests are mostly written in terms of "Query X is equivalent to Query Y";
+        // the feature is intended to be a convenience to avoid users writing more complicated queries.
+        [Fact]
+        public void LimitToLast_ReversesOrderingConstraints()
+        {
+            var query = s_db.Collection("col").OrderBy("foo").LimitToLast(42);
+            var expectedProto = s_db.Collection("col").OrderByDescending("foo").Limit(42).ToStructuredQuery();
+            var actualProto = query.ToStructuredQuery();
+            Assert.Equal(expectedProto, actualProto);
+        }
+
+        [Fact]
+        public void LimitToLast_ReversesCursors()
+        {
+            var query = s_db.Collection("col").OrderBy("foo").StartAt("start").EndBefore("end").LimitToLast(42);
+            var expectedProto = s_db.Collection("col").OrderByDescending("foo").StartAfter("end").EndAt("start").Limit(42).ToStructuredQuery();
+            var actualProto = query.ToStructuredQuery();
+            Assert.Equal(expectedProto, actualProto);
+        }
+
+        [Fact]
+        public void LimitToLast_RequiresAtLeastOneOrderingConstraint()
+        {
+            var query = s_db.Collection("col").LimitToLast(42);
+            Assert.Throws<InvalidOperationException>(() => query.ToStructuredQuery());
+        }
+
+        // Result reversal and StreamAsync being rejected are handled in integration tests.
 
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
         private static Filter Filter(UnaryFilter filter) => new Filter { UnaryFilter = filter };
