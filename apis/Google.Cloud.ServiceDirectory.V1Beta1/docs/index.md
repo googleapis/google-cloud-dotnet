@@ -1,5 +1,7 @@
 {{title}}
 
+{{description}}
+
 {{version}}
 
 {{installation}}
