@@ -1062,8 +1062,9 @@
   {
     "id": "Google.Cloud.ServiceDirectory.V1Beta1",
     "generator": "micro",
-    "shortDescription": "Service Directory API",
     "protoPath": "google/cloud/servicedirectory/v1beta1",
+    "productName": "Service Directory",
+    "productUrl": "https://cloud.google.com/service-directory/",
     "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Service Directory API version v1beta1.",
