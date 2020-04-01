@@ -553,6 +553,10 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="secretId">
         /// Required. This must be unique within the project.
+        /// 
+        /// A secret ID is a string with a maximum length of 255 characters and can
+        /// contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+        /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
         /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
@@ -576,6 +580,10 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="secretId">
         /// Required. This must be unique within the project.
+        /// 
+        /// A secret ID is a string with a maximum length of 255 characters and can
+        /// contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+        /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
         /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
@@ -599,6 +607,10 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="secretId">
         /// Required. This must be unique within the project.
+        /// 
+        /// A secret ID is a string with a maximum length of 255 characters and can
+        /// contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+        /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
         /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
@@ -617,6 +629,10 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="secretId">
         /// Required. This must be unique within the project.
+        /// 
+        /// A secret ID is a string with a maximum length of 255 characters and can
+        /// contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+        /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
         /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
@@ -640,6 +656,10 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="secretId">
         /// Required. This must be unique within the project.
+        /// 
+        /// A secret ID is a string with a maximum length of 255 characters and can
+        /// contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+        /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
         /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
@@ -663,6 +683,10 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="secretId">
         /// Required. This must be unique within the project.
+        /// 
+        /// A secret ID is a string with a maximum length of 255 characters and can
+        /// contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+        /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
         /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
