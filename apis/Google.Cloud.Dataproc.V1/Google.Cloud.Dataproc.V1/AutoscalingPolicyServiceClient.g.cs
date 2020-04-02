@@ -324,7 +324,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicy(new CreateAutoscalingPolicyRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                Policy = policy,
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
             }, callSettings);
 
         /// <summary>
@@ -351,7 +351,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicyAsync(new CreateAutoscalingPolicyRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                Policy = policy,
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
             }, callSettings);
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicy(new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Policy = policy,
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
             }, callSettings);
 
         /// <summary>
@@ -428,7 +428,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicyAsync(new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Policy = policy,
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
             }, callSettings);
 
         /// <summary>
@@ -478,7 +478,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicy(new CreateAutoscalingPolicyRequest
             {
                 ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Policy = policy,
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
             }, callSettings);
 
         /// <summary>
@@ -505,7 +505,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateAutoscalingPolicyAsync(new CreateAutoscalingPolicyRequest
             {
                 ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Policy = policy,
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
             }, callSettings);
 
         /// <summary>
