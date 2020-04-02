@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.0.0-beta03, released 2020-04-02
+
+No API surface changes; just updated dependencies. In particular,
+this uses Google.Apis version 1.45.0, which uses a more
+memory-efficient approach to uploads.
+
 # Version 3.0.0-beta02, released 2020-03-19
 
 - [Commit cdc1f03](https://github.com/googleapis/google-cloud-dotnet/commit/cdc1f03):
