@@ -80,7 +80,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html) | 3.0.0-beta02 | [Google Cloud Spanner](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html) | 2.0.0 | [Google Cloud Speech](https://cloud.google.com/speech) |
 | [Google.Cloud.Speech.V1P1Beta1](Google.Cloud.Speech.V1P1Beta1/index.html) | 2.0.0-beta02 | [Google Cloud Speech](https://cloud.google.com/speech) |
-| [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html) | 3.0.0-beta02 | [Google Cloud Storage](https://cloud.google.com/storage/) |
+| [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html) | 3.0.0-beta03 | [Google Cloud Storage](https://cloud.google.com/storage/) |
 | [Google.Cloud.Talent.V4Beta1](Google.Cloud.Talent.V4Beta1/index.html) | 2.0.0-beta02 | [Google Cloud Talent Solution](https://cloud.google.com/talent-solution/) |
 | [Google.Cloud.Tasks.V2](Google.Cloud.Tasks.V2/index.html) | 2.0.0 | [Google Cloud Tasks](https://cloud.google.com/tasks/) |
 | [Google.Cloud.Tasks.V2Beta3](Google.Cloud.Tasks.V2Beta3/index.html) | 2.0.0-beta02 | [Google Cloud Tasks](https://cloud.google.com/tasks/) |
