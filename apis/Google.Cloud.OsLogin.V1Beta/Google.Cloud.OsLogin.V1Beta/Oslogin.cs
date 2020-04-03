@@ -87,11 +87,12 @@ namespace Google.Cloud.OsLogin.V1Beta {
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJl",
             "YWQtb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1",
             "dGUsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlLnJl",
-            "YWRvbmx5QrEBCh9jb20uZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhQgxP",
+            "YWRvbmx5QtIBCh9jb20uZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhQgxP",
             "c0xvZ2luUHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
             "Z2xlYXBpcy9jbG91ZC9vc2xvZ2luL3YxYmV0YTtvc2xvZ2luqgIbR29vZ2xl",
             "LkNsb3VkLk9zTG9naW4uVjFCZXRhygIbR29vZ2xlXENsb3VkXE9zTG9naW5c",
-            "VjFiZXRhYgZwcm90bzM="));
+            "VjFiZXRh6gIeR29vZ2xlOjpDbG91ZDo6T3NMb2dpbjo6VjFiZXRhYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
