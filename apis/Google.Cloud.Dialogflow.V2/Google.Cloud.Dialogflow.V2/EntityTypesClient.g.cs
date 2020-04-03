@@ -556,12 +556,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -590,12 +589,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -624,12 +622,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -658,12 +655,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -803,12 +799,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/entityTypes/&amp;lt;EntityType ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -827,12 +822,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/entityTypes/&amp;lt;EntityType ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -851,12 +845,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/entityTypes/&amp;lt;EntityType ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -871,12 +864,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/entityTypes/&amp;lt;EntityType ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -895,12 +887,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/entityTypes/&amp;lt;EntityType ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -919,12 +910,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/entityTypes/&amp;lt;EntityType ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve entity synonyms for. If not specified,
-        /// the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1075,12 +1065,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1103,12 +1092,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1131,12 +1119,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1154,12 +1141,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1182,12 +1168,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1210,12 +1195,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1295,12 +1279,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1318,12 +1301,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1341,12 +1323,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entity type to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entity_type`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1585,6 +1566,142 @@ namespace Google.Cloud.Dialogflow.V2
             lro::Operation<wkt::Empty, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteEntityTypesOperationsClient, callSettings);
 
         /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Struct> BatchDeleteEntityTypes(string parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypes(new BatchDeleteEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(string parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypesAsync(new BatchDeleteEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(string parent, scg::IEnumerable<string> entityTypeNames, st::CancellationToken cancellationToken) =>
+            BatchDeleteEntityTypesAsync(parent, entityTypeNames, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Struct> BatchDeleteEntityTypes(AgentName parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypes(new BatchDeleteEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(AgentName parent, scg::IEnumerable<string> entityTypeNames, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteEntityTypesAsync(new BatchDeleteEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntityTypeNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(entityTypeNames, nameof(entityTypeNames)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes entity types in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to delete all entities types for. Format:
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="entityTypeNames">
+        /// Required. The names entity types to delete. All names must point to the
+        /// same agent as `parent`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> BatchDeleteEntityTypesAsync(AgentName parent, scg::IEnumerable<string> entityTypeNames, st::CancellationToken cancellationToken) =>
+            BatchDeleteEntityTypesAsync(parent, entityTypeNames, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates multiple new entities in the specified entity type.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
@@ -1787,12 +1904,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1820,12 +1936,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1853,12 +1968,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1878,12 +1992,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1911,12 +2024,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1944,12 +2056,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2189,12 +2300,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to update or create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2225,12 +2335,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to update or create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2261,12 +2370,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to update or create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2289,12 +2397,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to update or create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2325,12 +2432,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to update or create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2361,12 +2467,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The entities to update or create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2600,12 +2705,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&amp;lt;Project ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2636,12 +2740,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&amp;lt;Project ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2672,12 +2775,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&amp;lt;Project ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2700,12 +2802,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&amp;lt;Project ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2736,12 +2837,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&amp;lt;Project ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2772,12 +2872,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/&amp;lt;Project ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of entity synonyms defined in `entities`. If not
-        /// specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

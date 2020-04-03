@@ -481,7 +481,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetValidationResultRequest request = new GetValidationResultRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 LanguageCode = "language_code2f6c7160",
             };
             ValidationResult expectedResponse = new ValidationResult
@@ -505,7 +505,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetValidationResultRequest request = new GetValidationResultRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 LanguageCode = "language_code2f6c7160",
             };
             ValidationResult expectedResponse = new ValidationResult

@@ -72,12 +72,100 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetContext()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            GetContextRequest request = new GetContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.GetContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context response = client.GetContext(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetContextAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            GetContextRequest request = new GetContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.GetContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Context>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context responseCallSettings = await client.GetContextAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Context responseCancellationToken = await client.GetContextAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetContextResourceNames()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            GetContextRequest request = new GetContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.GetContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context response = client.GetContext(request.ContextName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetContextResourceNamesAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            GetContextRequest request = new GetContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.GetContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Context>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context responseCallSettings = await client.GetContextAsync(request.ContextName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Context responseCancellationToken = await client.GetContextAsync(request.ContextName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CreateContextRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
             CreateContextRequest request = new CreateContextRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 Context = new Context(),
             };
             Context expectedResponse = new Context
@@ -99,7 +187,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
             CreateContextRequest request = new CreateContextRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
                 Context = new Context(),
             };
             Context expectedResponse = new Context
@@ -113,6 +201,98 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             Context responseCallSettings = await client.CreateContextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Context responseCancellationToken = await client.CreateContextAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateContext()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            CreateContextRequest request = new CreateContextRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+                Context = new Context(),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.CreateContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context response = client.CreateContext(request.Parent, request.Context);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateContextAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            CreateContextRequest request = new CreateContextRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+                Context = new Context(),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.CreateContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Context>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context responseCallSettings = await client.CreateContextAsync(request.Parent, request.Context, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Context responseCancellationToken = await client.CreateContextAsync(request.Parent, request.Context, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateContextResourceNames()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            CreateContextRequest request = new CreateContextRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+                Context = new Context(),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.CreateContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context response = client.CreateContext(request.ParentAsSessionName, request.Context);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateContextResourceNamesAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            CreateContextRequest request = new CreateContextRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+                Context = new Context(),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.CreateContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Context>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context responseCallSettings = await client.CreateContextAsync(request.ParentAsSessionName, request.Context, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Context responseCancellationToken = await client.CreateContextAsync(request.ParentAsSessionName, request.Context, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -164,6 +344,52 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdateContext()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            UpdateContextRequest request = new UpdateContextRequest
+            {
+                Context = new Context(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context response = client.UpdateContext(request.Context, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateContextAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            UpdateContextRequest request = new UpdateContextRequest
+            {
+                Context = new Context(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Context expectedResponse = new Context
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+                LifespanCount = -2034952532,
+                Parameters = new wkt::Struct(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Context>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            Context responseCallSettings = await client.UpdateContextAsync(request.Context, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Context responseCancellationToken = await client.UpdateContextAsync(request.Context, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteContextRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
@@ -195,12 +421,74 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void DeleteContext()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteContextRequest request = new DeleteContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteContext(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteContextAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteContextRequest request = new DeleteContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteContextAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteContextAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteContextResourceNames()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteContextRequest request = new DeleteContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteContext(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteContext(request.ContextName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteContextResourceNamesAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteContextRequest request = new DeleteContextRequest
+            {
+                ContextName = ContextName.FromProjectSessionContext("[PROJECT]", "[SESSION]", "[CONTEXT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteContextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteContextAsync(request.ContextName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteContextAsync(request.ContextName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteAllContextsRequestObject()
         {
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAllContexts(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -215,13 +503,75 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
             DeleteAllContextsRequest request = new DeleteAllContextsRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteAllContextsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
             await client.DeleteAllContextsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAllContextsAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAllContexts()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteAllContextsRequest request = new DeleteAllContextsRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAllContexts(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAllContexts(request.Parent);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAllContextsAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteAllContextsRequest request = new DeleteAllContextsRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAllContextsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAllContextsAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAllContextsAsync(request.Parent, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAllContextsResourceNames()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteAllContextsRequest request = new DeleteAllContextsRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAllContexts(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAllContexts(request.ParentAsSessionName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAllContextsResourceNamesAsync()
+        {
+            moq::Mock<Contexts.ContextsClient> mockGrpcClient = new moq::Mock<Contexts.ContextsClient>(moq::MockBehavior.Strict);
+            DeleteAllContextsRequest request = new DeleteAllContextsRequest
+            {
+                ParentAsSessionName = SessionName.FromProjectSession("[PROJECT]", "[SESSION]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAllContextsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContextsClient client = new ContextsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAllContextsAsync(request.ParentAsSessionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAllContextsAsync(request.ParentAsSessionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }

@@ -265,10 +265,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
-        /// caller to choose an appropriate session ID. It can be a random number or
-        /// some type of user identifier (preferably hashed). The length of the session
-        /// ID must not exceed 36 bytes.
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`, or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// default 'draft' environment. If `User ID` is not specified, we are using
+        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
+        /// `User Id`. They can be a random number or some type of user and session
+        /// identifiers (preferably hashed). The length of the `Session ID` and
+        /// `User ID` must not exceed 36 characters.
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -297,10 +301,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
-        /// caller to choose an appropriate session ID. It can be a random number or
-        /// some type of user identifier (preferably hashed). The length of the session
-        /// ID must not exceed 36 bytes.
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`, or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// default 'draft' environment. If `User ID` is not specified, we are using
+        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
+        /// `User Id`. They can be a random number or some type of user and session
+        /// identifiers (preferably hashed). The length of the `Session ID` and
+        /// `User ID` must not exceed 36 characters.
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -329,10 +337,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
-        /// caller to choose an appropriate session ID. It can be a random number or
-        /// some type of user identifier (preferably hashed). The length of the session
-        /// ID must not exceed 36 bytes.
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`, or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// default 'draft' environment. If `User ID` is not specified, we are using
+        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
+        /// `User Id`. They can be a random number or some type of user and session
+        /// identifiers (preferably hashed). The length of the `Session ID` and
+        /// `User ID` must not exceed 36 characters.
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -357,10 +369,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
-        /// caller to choose an appropriate session ID. It can be a random number or
-        /// some type of user identifier (preferably hashed). The length of the session
-        /// ID must not exceed 36 bytes.
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`, or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// default 'draft' environment. If `User ID` is not specified, we are using
+        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
+        /// `User Id`. They can be a random number or some type of user and session
+        /// identifiers (preferably hashed). The length of the `Session ID` and
+        /// `User ID` must not exceed 36 characters.
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -389,10 +405,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
-        /// caller to choose an appropriate session ID. It can be a random number or
-        /// some type of user identifier (preferably hashed). The length of the session
-        /// ID must not exceed 36 bytes.
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`, or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// default 'draft' environment. If `User ID` is not specified, we are using
+        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
+        /// `User Id`. They can be a random number or some type of user and session
+        /// identifiers (preferably hashed). The length of the `Session ID` and
+        /// `User ID` must not exceed 36 characters.
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -421,10 +441,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
-        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`. It's up to the API
-        /// caller to choose an appropriate session ID. It can be a random number or
-        /// some type of user identifier (preferably hashed). The length of the session
-        /// ID must not exceed 36 bytes.
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/sessions/&amp;lt;Session ID&amp;gt;`, or
+        /// `projects/&amp;lt;Project ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
+        /// default 'draft' environment. If `User ID` is not specified, we are using
+        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
+        /// `User Id`. They can be a random number or some type of user and session
+        /// identifiers (preferably hashed). The length of the `Session ID` and
+        /// `User ID` must not exceed 36 characters.
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:

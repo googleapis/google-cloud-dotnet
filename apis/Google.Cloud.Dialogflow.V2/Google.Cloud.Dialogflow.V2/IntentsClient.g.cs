@@ -457,12 +457,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -491,12 +490,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -525,12 +523,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -559,12 +556,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to list training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -704,12 +700,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/intents/&amp;lt;Intent ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -728,12 +723,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/intents/&amp;lt;Intent ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -752,12 +746,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/intents/&amp;lt;Intent ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -772,12 +765,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/intents/&amp;lt;Intent ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -796,12 +788,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/intents/&amp;lt;Intent ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -820,12 +811,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent/intents/&amp;lt;Intent ID&amp;gt;`.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language to retrieve training phrases, parameters and rich
-        /// messages for. If not specified, the agent's default language is used.
-        /// [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -976,12 +966,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1004,12 +993,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1032,12 +1020,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1055,12 +1042,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1083,12 +1069,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1111,12 +1096,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to create.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1157,12 +1141,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1180,12 +1163,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1203,12 +1185,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1222,12 +1203,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
@@ -1249,12 +1229,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
@@ -1276,12 +1255,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The intent to update.
         /// </param>
         /// <param name="languageCode">
-        /// Optional. The language of training phrases, parameters and rich messages
-        /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [Many
-        /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
-        /// are supported. Note: languages must be enabled in the agent before they can
-        /// be used.
+        /// Optional. The language used to access language-specific data.
+        /// If not specified, the agent's default language is used.
+        /// For more information, see
+        /// [Multilingual intent and entity
+        /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
@@ -1467,6 +1445,254 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> PollOnceBatchUpdateIntentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchUpdateIntentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(string parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, string intentBatchUri, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchUri, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(AgentName parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, string intentBatchUri, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchUri = intentBatchUri ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchUri">
+        /// The URI to a Google Cloud Storage file containing intents to update or
+        /// create. The file format can either be a serialized proto (of IntentBatch
+        /// type) or JSON object. Note: The URI must start with "gs://".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, string intentBatchUri, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchUri, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(string parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(string parent, IntentBatch intentBatchInline, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchInline, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchUpdateIntentsResponse, wkt::Struct> BatchUpdateIntents(AgentName parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntents(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, IntentBatch intentBatchInline, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateIntentsAsync(new BatchUpdateIntentsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IntentBatchInline = intentBatchInline,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates/Creates multiple intents in the specified agent.
+        /// 
+        /// Operation &amp;lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&amp;gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the agent to update or create intents in.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/agent`.
+        /// </param>
+        /// <param name="intentBatchInline">
+        /// The collection of intents to update or create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchUpdateIntentsResponse, wkt::Struct>> BatchUpdateIntentsAsync(AgentName parent, IntentBatch intentBatchInline, st::CancellationToken cancellationToken) =>
+            BatchUpdateIntentsAsync(parent, intentBatchInline, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes intents in the specified agent.

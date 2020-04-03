@@ -30,7 +30,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aLGdvb2dsZS9jbG91ZC9kaWFsb2dmbG93L3Yy",
             "L2VudGl0eV90eXBlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
-            "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIs8DChFTZXNz",
+            "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIsAEChFTZXNz",
             "aW9uRW50aXR5VHlwZRIRCgRuYW1lGAEgASgJQgPgQQISYwoUZW50aXR5X292",
             "ZXJyaWRlX21vZGUYAiABKA4yQC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
             "Mi5TZXNzaW9uRW50aXR5VHlwZS5FbnRpdHlPdmVycmlkZU1vZGVCA+BBAhJE",
@@ -38,57 +38,74 @@ namespace Google.Cloud.Dialogflow.V2 {
             "LkVudGl0eVR5cGUuRW50aXR5QgPgQQIiggEKEkVudGl0eU92ZXJyaWRlTW9k",
             "ZRIkCiBFTlRJVFlfT1ZFUlJJREVfTU9ERV9VTlNQRUNJRklFRBAAEiEKHUVO",
             "VElUWV9PVkVSUklERV9NT0RFX09WRVJSSURFEAESIwofRU5USVRZX09WRVJS",
-            "SURFX01PREVfU1VQUExFTUVOVBACOnfqQXQKK2RpYWxvZ2Zsb3cuZ29vZ2xl",
-            "YXBpcy5jb20vU2Vzc2lvbkVudGl0eVR5cGUSRXByb2plY3RzL3twcm9qZWN0",
-            "fS9hZ2VudC9zZXNzaW9ucy97c2Vzc2lvbn0vZW50aXR5VHlwZXMve2VudGl0",
-            "eV90eXBlfSJlCh1MaXN0U2Vzc2lvbkVudGl0eVR5cGVzUmVxdWVzdBITCgZw",
-            "YXJlbnQYASABKAlCA+BBAhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpw",
-            "YWdlX3Rva2VuGAMgASgJQgPgQQEihgEKHkxpc3RTZXNzaW9uRW50aXR5VHlw",
-            "ZXNSZXNwb25zZRJLChRzZXNzaW9uX2VudGl0eV90eXBlcxgBIAMoCzItLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNlc3Npb25FbnRpdHlUeXBlEhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJgChtHZXRTZXNzaW9uRW50aXR5VHlw",
-            "ZVJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCitkaWFsb2dmbG93Lmdv",
-            "b2dsZWFwaXMuY29tL1Nlc3Npb25FbnRpdHlUeXBlIoYBCh5DcmVhdGVTZXNz",
-            "aW9uRW50aXR5VHlwZVJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISTwoT",
-            "c2Vzc2lvbl9lbnRpdHlfdHlwZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLlNlc3Npb25FbnRpdHlUeXBlQgPgQQIipwEKHlVwZGF0ZVNl",
-            "c3Npb25FbnRpdHlUeXBlUmVxdWVzdBJPChNzZXNzaW9uX2VudGl0eV90eXBl",
-            "GAEgASgLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVu",
-            "dGl0eVR5cGVCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBASJZCh5EZWxldGVTZXNzaW9uRW50aXR5",
-            "VHlwZVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93",
-            "Lmdvb2dsZWFwaXMuY29tL0NvbnRleHQy1gkKElNlc3Npb25FbnRpdHlUeXBl",
-            "cxLWAQoWTGlzdFNlc3Npb25FbnRpdHlUeXBlcxI5Lmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkxpc3RTZXNzaW9uRW50aXR5VHlwZXNSZXF1ZXN0Gjou",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdFNlc3Npb25FbnRpdHlU",
-            "eXBlc1Jlc3BvbnNlIkWC0+STAjYSNC92Mi97cGFyZW50PXByb2plY3RzLyov",
-            "YWdlbnQvc2Vzc2lvbnMvKn0vZW50aXR5VHlwZXPaQQZwYXJlbnQSvAEKFEdl",
-            "dFNlc3Npb25FbnRpdHlUeXBlEjcuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuR2V0U2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5cGUiPILT5JMCNhI0L3Yy",
-            "L3tuYW1lPXByb2plY3RzLyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRpdHlUeXBl",
-            "cy8qfRL0AQoXQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGUSOi5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5DcmVhdGVTZXNzaW9uRW50aXR5VHlwZVJlcXVl",
-            "c3QaLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZXNzaW9uRW50aXR5",
-            "VHlwZSJugtPkkwJLIjQvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L3Nl",
-            "c3Npb25zLyp9L2VudGl0eVR5cGVzOhNzZXNzaW9uX2VudGl0eV90eXBl2kEa",
-            "cGFyZW50LHNlc3Npb25fZW50aXR5X3R5cGUSgQIKF1VwZGF0ZVNlc3Npb25F",
-            "bnRpdHlUeXBlEjouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVXBkYXRl",
-            "U2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRpYWxv",
-            "Z2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5cGUie4LT5JMCXzJIL3YyL3tzZXNz",
-            "aW9uX2VudGl0eV90eXBlLm5hbWU9cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9u",
-            "cy8qL2VudGl0eVR5cGVzLyp9OhNzZXNzaW9uX2VudGl0eV90eXBl2kETc2Vz",
-            "c2lvbl9lbnRpdHlfdHlwZRKyAQoXRGVsZXRlU2Vzc2lvbkVudGl0eVR5cGUS",
-            "Oi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5EZWxldGVTZXNzaW9uRW50",
-            "aXR5VHlwZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQ4LT5JMC",
-            "Nio0L3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRp",
-            "dHlUeXBlcy8qfdpBBG5hbWUaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
-            "b23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9n",
-            "Zmxvd0KlAQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQhZTZXNz",
-            "aW9uRW50aXR5VHlwZVByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93",
-            "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "SURFX01PREVfU1VQUExFTUVOVBACOucB6kHjAQorZGlhbG9nZmxvdy5nb29n",
+            "bGVhcGlzLmNvbS9TZXNzaW9uRW50aXR5VHlwZRJFcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2FnZW50L3Nlc3Npb25zL3tzZXNzaW9ufS9lbnRpdHlUeXBlcy97ZW50",
+            "aXR5X3R5cGV9Em1wcm9qZWN0cy97cHJvamVjdH0vYWdlbnQvZW52aXJvbm1l",
+            "bnRzL3tlbnZpcm9ubWVudH0vdXNlcnMve3VzZXJ9L3Nlc3Npb25zL3tzZXNz",
+            "aW9ufS9lbnRpdHlUeXBlcy97ZW50aXR5X3R5cGV9IpUBCh1MaXN0U2Vzc2lv",
+            "bkVudGl0eVR5cGVzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLRIr",
+            "ZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TZXNzaW9uRW50aXR5VHlwZRIW",
+            "CglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPg",
+            "QQEihgEKHkxpc3RTZXNzaW9uRW50aXR5VHlwZXNSZXNwb25zZRJLChRzZXNz",
+            "aW9uX2VudGl0eV90eXBlcxgBIAMoCzItLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyLlNlc3Npb25FbnRpdHlUeXBlEhcKD25leHRfcGFnZV90b2tlbhgC",
+            "IAEoCSJgChtHZXRTZXNzaW9uRW50aXR5VHlwZVJlcXVlc3QSQQoEbmFtZRgB",
+            "IAEoCUIz4EEC+kEtCitkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1Nlc3Np",
+            "b25FbnRpdHlUeXBlIrYBCh5DcmVhdGVTZXNzaW9uRW50aXR5VHlwZVJlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0SK2RpYWxvZ2Zsb3cuZ29vZ2xl",
+            "YXBpcy5jb20vU2Vzc2lvbkVudGl0eVR5cGUSTwoTc2Vzc2lvbl9lbnRpdHlf",
+            "dHlwZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNlc3Np",
+            "b25FbnRpdHlUeXBlQgPgQQIipwEKHlVwZGF0ZVNlc3Npb25FbnRpdHlUeXBl",
+            "UmVxdWVzdBJPChNzZXNzaW9uX2VudGl0eV90eXBlGAEgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5cGVCA+BBAhI0",
+            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2tCA+BBASJjCh5EZWxldGVTZXNzaW9uRW50aXR5VHlwZVJlcXVlc3QSQQoE",
+            "bmFtZRgBIAEoCUIz4EEC+kEtCitkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t",
+            "L1Nlc3Npb25FbnRpdHlUeXBlMtINChJTZXNzaW9uRW50aXR5VHlwZXMSpwIK",
+            "Fkxpc3RTZXNzaW9uRW50aXR5VHlwZXMSOS5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52Mi5MaXN0U2Vzc2lvbkVudGl0eVR5cGVzUmVxdWVzdBo6Lmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RTZXNzaW9uRW50aXR5VHlwZXNS",
+            "ZXNwb25zZSKVAYLT5JMChQESNC92Mi97cGFyZW50PXByb2plY3RzLyovYWdl",
+            "bnQvc2Vzc2lvbnMvKn0vZW50aXR5VHlwZXNaTRJLL3YyL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Npb25z",
+            "Lyp9L2VudGl0eVR5cGVz2kEGcGFyZW50EpQCChRHZXRTZXNzaW9uRW50aXR5",
+            "VHlwZRI3Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdldFNlc3Npb25F",
+            "bnRpdHlUeXBlUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "LlNlc3Npb25FbnRpdHlUeXBlIpMBgtPkkwKFARI0L3YyL3tuYW1lPXByb2pl",
+            "Y3RzLyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfVpNEksvdjIv",
+            "e25hbWU9cHJvamVjdHMvKi9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8q",
+            "L3Nlc3Npb25zLyovZW50aXR5VHlwZXMvKn3aQQRuYW1lEtoCChdDcmVhdGVT",
+            "ZXNzaW9uRW50aXR5VHlwZRI6Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "LkNyZWF0ZVNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBotLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlNlc3Npb25FbnRpdHlUeXBlItMBgtPkkwKvASI0",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qfS9lbnRp",
+            "dHlUeXBlczoTc2Vzc2lvbl9lbnRpdHlfdHlwZVpiIksvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJzLyovc2Vzc2lv",
+            "bnMvKn0vZW50aXR5VHlwZXM6E3Nlc3Npb25fZW50aXR5X3R5cGXaQRpwYXJl",
+            "bnQsc2Vzc2lvbl9lbnRpdHlfdHlwZRKdAwoXVXBkYXRlU2Vzc2lvbkVudGl0",
+            "eVR5cGUSOi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5VcGRhdGVTZXNz",
+            "aW9uRW50aXR5VHlwZVJlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TZXNzaW9uRW50aXR5VHlwZSKWAoLT5JMC1wEySC92Mi97c2Vzc2lv",
+            "bl9lbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovYWdlbnQvc2Vzc2lvbnMv",
+            "Ki9lbnRpdHlUeXBlcy8qfToTc2Vzc2lvbl9lbnRpdHlfdHlwZVp2Ml8vdjIv",
+            "e3Nlc3Npb25fZW50aXR5X3R5cGUubmFtZT1wcm9qZWN0cy8qL2FnZW50L2Vu",
+            "dmlyb25tZW50cy8qL3VzZXJzLyovc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8q",
+            "fToTc2Vzc2lvbl9lbnRpdHlfdHlwZdpBE3Nlc3Npb25fZW50aXR5X3R5cGXa",
+            "QR9zZXNzaW9uX2VudGl0eV90eXBlLHVwZGF0ZV9tYXNrEoMCChdEZWxldGVT",
+            "ZXNzaW9uRW50aXR5VHlwZRI6Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "LkRlbGV0ZVNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSKTAYLT5JMChQEqNC92Mi97bmFtZT1wcm9qZWN0cy8qL2Fn",
+            "ZW50L3Nlc3Npb25zLyovZW50aXR5VHlwZXMvKn1aTSpLL3YyL3tuYW1lPXBy",
+            "b2plY3RzLyovYWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9u",
+            "cy8qL2VudGl0eVR5cGVzLyp92kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5nb29n",
+            "bGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9kaWFsb2dmbG93QqUBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djJCFlNlc3Npb25FbnRpdHlUeXBlUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L3YyO2Rp",
+            "YWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.EntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -156,7 +173,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The unique identifier of this session entity type. Format:
     /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
-    /// Display Name>`.
+    /// Display Name>`, or `projects/&lt;Project ID>/agent/environments/&lt;Environment
+    /// ID>/users/&lt;User ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type Display
+    /// Name>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     ///
     /// `&lt;Entity Type Display Name>` must be the display name of an existing entity
     /// type in the same agent that will be overridden or supplemented.
@@ -385,7 +406,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to list all session entity types from.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`.
+    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User ID>/
+    /// sessions/&lt;Session ID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -743,7 +768,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The name of the session entity type. Format:
     /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
-    /// Display Name>`.
+    /// Display Name>` or `projects/&lt;Project ID>/agent/environments/&lt;Environment
+    /// ID>/users/&lt;User ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type Display
+    /// Name>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -880,7 +909,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to create a session entity type for.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`.
+    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or
+    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User ID>/
+    /// sessions/&lt;Session ID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1052,9 +1085,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SessionEntityTypeFieldNumber = 1;
     private global::Google.Cloud.Dialogflow.V2.SessionEntityType sessionEntityType_;
     /// <summary>
-    /// Required. The entity type to update. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
-    /// Display Name>`.
+    /// Required. The session entity type to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.SessionEntityType SessionEntityType {
@@ -1233,7 +1264,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The name of the entity type to delete. Format:
     /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
-    /// Display Name>`.
+    /// Display Name>` or `projects/&lt;Project ID>/agent/environments/&lt;Environment
+    /// ID>/users/&lt;User ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type Display
+    /// Name>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
+    /// environment. If `User ID` is not specified, we assume default '-' user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
