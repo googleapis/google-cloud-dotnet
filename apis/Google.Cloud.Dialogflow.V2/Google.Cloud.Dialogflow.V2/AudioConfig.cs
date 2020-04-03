@@ -32,46 +32,46 @@ namespace Google.Cloud.Dialogflow.V2 {
             "GAEgAygJEg0KBWJvb3N0GAIgASgCIpIBCg5TcGVlY2hXb3JkSW5mbxIMCgR3",
             "b3JkGAMgASgJEi8KDHN0YXJ0X29mZnNldBgBIAEoCzIZLmdvb2dsZS5wcm90",
             "b2J1Zi5EdXJhdGlvbhItCgplbmRfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uEhIKCmNvbmZpZGVuY2UYBCABKAIigQMKEElucHV0",
+            "b3RvYnVmLkR1cmF0aW9uEhIKCmNvbmZpZGVuY2UYBCABKAIi7wIKEElucHV0",
             "QXVkaW9Db25maWcSQQoOYXVkaW9fZW5jb2RpbmcYASABKA4yKS5nb29nbGUu",
             "Y2xvdWQuZGlhbG9nZmxvdy52Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9y",
-            "YXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkSHQoQZW5h",
-            "YmxlX3dvcmRfaW5mbxgNIAEoCEID4EEBEhsKDHBocmFzZV9oaW50cxgEIAMo",
-            "CUIFGAHgQQESRwoPc3BlZWNoX2NvbnRleHRzGAsgAygLMikuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuU3BlZWNoQ29udGV4dEID4EEBEhIKBW1vZGVs",
-            "GAcgASgJQgPgQQESRQoNbW9kZWxfdmFyaWFudBgKIAEoDjIuLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyLlNwZWVjaE1vZGVsVmFyaWFudBIYChBzaW5n",
-            "bGVfdXR0ZXJhbmNlGAggASgIImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEgwK",
-            "BG5hbWUYASABKAkSQAoLc3NtbF9nZW5kZXIYAiABKA4yKy5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5Tc21sVm9pY2VHZW5kZXIiswEKFlN5bnRoZXNp",
-            "emVTcGVlY2hDb25maWcSFQoNc3BlYWtpbmdfcmF0ZRgBIAEoARINCgVwaXRj",
-            "aBgCIAEoARIWCg52b2x1bWVfZ2Fpbl9kYhgDIAEoARIaChJlZmZlY3RzX3By",
-            "b2ZpbGVfaWQYBSADKAkSPwoFdm9pY2UYBCABKAsyMC5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLSAQoRT3V0cHV0",
-            "QXVkaW9Db25maWcSTAoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nQgPgQQIS",
-            "GQoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAUSVAoYc3ludGhlc2l6ZV9zcGVl",
-            "Y2hfY29uZmlnGAMgASgLMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "U3ludGhlc2l6ZVNwZWVjaENvbmZpZyr7AQoNQXVkaW9FbmNvZGluZxIeChpB",
-            "VURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5H",
-            "X0xJTkVBUl8xNhABEhcKE0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJ",
-            "T19FTkNPRElOR19NVUxBVxADEhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkK",
-            "FUFVRElPX0VOQ09ESU5HX0FNUl9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09H",
-            "R19PUFVTEAYSKQolQVVESU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJf",
-            "QllURRAHKnYKElNwZWVjaE1vZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxf",
-            "VkFSSUFOVF9VTlNQRUNJRklFRBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRAB",
-            "EhAKDFVTRV9TVEFOREFSRBACEhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21s",
-            "Vm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQ",
-            "ABIaChZTU01MX1ZPSUNFX0dFTkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9H",
-            "RU5ERVJfRkVNQUxFEAISHQoZU1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBAD",
-            "KqQBChNPdXRwdXRBdWRpb0VuY29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNP",
-            "RElOR19VTlNQRUNJRklFRBAAEiMKH09VVFBVVF9BVURJT19FTkNPRElOR19M",
-            "SU5FQVJfMTYQARIdChlPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzEAISIgoe",
-            "T1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEANCnwEKHmNvbS5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVkaW9Db25maWdQcm90b1ABWkRn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rp",
-            "YWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3Vk",
-            "LkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "YXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkSGAoQZW5h",
+            "YmxlX3dvcmRfaW5mbxgNIAEoCBIYCgxwaHJhc2VfaGludHMYBCADKAlCAhgB",
+            "EkIKD3NwZWVjaF9jb250ZXh0cxgLIAMoCzIpLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLlNwZWVjaENvbnRleHQSDQoFbW9kZWwYByABKAkSRQoNbW9k",
+            "ZWxfdmFyaWFudBgKIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "LlNwZWVjaE1vZGVsVmFyaWFudBIYChBzaW5nbGVfdXR0ZXJhbmNlGAggASgI",
+            "ImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEgwKBG5hbWUYASABKAkSQAoLc3Nt",
+            "bF9nZW5kZXIYAiABKA4yKy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5T",
+            "c21sVm9pY2VHZW5kZXIiswEKFlN5bnRoZXNpemVTcGVlY2hDb25maWcSFQoN",
+            "c3BlYWtpbmdfcmF0ZRgBIAEoARINCgVwaXRjaBgCIAEoARIWCg52b2x1bWVf",
+            "Z2Fpbl9kYhgDIAEoARIaChJlZmZlY3RzX3Byb2ZpbGVfaWQYBSADKAkSPwoF",
+            "dm9pY2UYBCABKAsyMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Wb2lj",
+            "ZVNlbGVjdGlvblBhcmFtcyLSAQoRT3V0cHV0QXVkaW9Db25maWcSTAoOYXVk",
+            "aW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5PdXRwdXRBdWRpb0VuY29kaW5nQgPgQQISGQoRc2FtcGxlX3JhdGVfaGVy",
+            "dHoYAiABKAUSVAoYc3ludGhlc2l6ZV9zcGVlY2hfY29uZmlnGAMgASgLMjIu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3ludGhlc2l6ZVNwZWVjaENv",
+            "bmZpZyr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQ",
+            "RUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FV",
+            "RElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxAD",
+            "EhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FN",
+            "Ul9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9f",
+            "RU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVjaE1v",
+            "ZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJRklF",
+            "RBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFSRBAC",
+            "EhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQodU1NN",
+            "TF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNFX0dF",
+            "TkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZ",
+            "U1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBADKqQBChNPdXRwdXRBdWRpb0Vu",
+            "Y29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAA",
+            "EiMKH09VVFBVVF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlPVVRQ",
+            "VVRfQVVESU9fRU5DT0RJTkdfTVAzEAISIgoeT1VUUFVUX0FVRElPX0VOQ09E",
+            "SU5HX09HR19PUFVTEANCnwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52MkIQQXVkaW9Db25maWdQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9n",
+            "Zmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -776,7 +776,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int EnableWordInfoFieldNumber = 13;
     private bool enableWordInfo_;
     /// <summary>
-    /// Optional. If `true`, Dialogflow returns [SpeechWordInfo][google.cloud.dialogflow.v2.SpeechWordInfo] in
+    /// If `true`, Dialogflow returns [SpeechWordInfo][google.cloud.dialogflow.v2.SpeechWordInfo] in
     /// [StreamingRecognitionResult][google.cloud.dialogflow.v2.StreamingRecognitionResult] with information about the recognized speech
     /// words, e.g. start and end time offsets. If false or unspecified, Speech
     /// doesn't return any word-level information.
@@ -795,7 +795,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> phraseHints_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of strings containing words and phrases that the speech
+    /// A list of strings containing words and phrases that the speech
     /// recognizer should recognize with higher likelihood.
     ///
     /// See [the Cloud Speech
@@ -818,7 +818,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SpeechContext> speechContexts_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SpeechContext>();
     /// <summary>
-    /// Optional. Context information to assist speech recognition.
+    /// Context information to assist speech recognition.
     ///
     /// See [the Cloud Speech
     /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
@@ -833,7 +833,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ModelFieldNumber = 7;
     private string model_ = "";
     /// <summary>
-    /// Optional. Which Speech model to select for the given request. Select the
+    /// Which Speech model to select for the given request. Select the
     /// model best suited to your domain to get best results. If a model is not
     /// explicitly specified, then we auto-select a model based on the parameters
     /// in the InputAudioConfig.
@@ -857,7 +857,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ModelVariantFieldNumber = 10;
     private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant modelVariant_ = global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified;
     /// <summary>
-    /// Optional. Which variant of the [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
+    /// Which variant of the [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.SpeechModelVariant ModelVariant {
@@ -871,7 +871,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SingleUtteranceFieldNumber = 8;
     private bool singleUtterance_;
     /// <summary>
-    /// Optional. If `false` (default), recognition does not cease until the
+    /// If `false` (default), recognition does not cease until the
     /// client closes the stream.
     /// If `true`, the recognizer will detect a single spoken utterance in input
     /// audio. Recognition ceases when it detects the audio's voice has
