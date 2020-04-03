@@ -2929,7 +2929,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int QueryFieldNumber = 7;
     private string query_ = "";
     /// <summary>
-    /// Required. The query in the time series query language format. The default
+    /// Required. The query in the monitoring query language format. The default
     /// time zone is in UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

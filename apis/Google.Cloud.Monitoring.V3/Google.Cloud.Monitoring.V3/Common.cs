@@ -676,8 +676,8 @@ namespace Google.Cloud.Monitoring.V3 {
   /// 95% latency across the average of all tasks in a cluster". This
   /// representative data can be more easily graphed and comprehended, and the
   /// individual time series data is still available for later drilldown. For more
-  /// details, see [Aggregating Time
-  /// Series](https://cloud.google.com/monitoring/api/v3/metrics#aggregating_time_series).
+  /// details, see [Filtering and
+  /// aggregation](https://cloud.google.com/monitoring/api/v3/aggregation).
   /// </summary>
   public sealed partial class Aggregation : pb::IMessage<Aggregation> {
     private static readonly pb::MessageParser<Aggregation> _parser = new pb::MessageParser<Aggregation>(() => new Aggregation());

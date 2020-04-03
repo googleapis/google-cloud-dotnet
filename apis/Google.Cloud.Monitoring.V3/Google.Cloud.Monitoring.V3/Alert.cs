@@ -941,7 +941,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// <summary>Field number for the "condition_time_series_query_language" field.</summary>
         public const int ConditionTimeSeriesQueryLanguageFieldNumber = 14;
         /// <summary>
-        /// A condition that uses the time series query language format to define
+        /// A condition that uses the Monitoring Query Language to define
         /// alerts.
         /// If set, no other conditions can be present.
         /// </summary>
@@ -2021,8 +2021,8 @@ namespace Google.Cloud.Monitoring.V3 {
           }
 
           /// <summary>
-          /// A condition type that allows alert policies to be defined using the
-          /// time series query language.
+          /// A condition type that allows alert policies to be defined using
+          /// Monitoring Query Language.
           /// </summary>
           public sealed partial class TimeSeriesQueryLanguageCondition : pb::IMessage<TimeSeriesQueryLanguageCondition> {
             private static readonly pb::MessageParser<TimeSeriesQueryLanguageCondition> _parser = new pb::MessageParser<TimeSeriesQueryLanguageCondition>(() => new TimeSeriesQueryLanguageCondition());
@@ -2063,9 +2063,8 @@ namespace Google.Cloud.Monitoring.V3 {
             public const int QueryFieldNumber = 1;
             private string query_ = "";
             /// <summary>
-            /// A query in the time series query language format that generates time
-            /// series indicating points in time that the condition should be
-            /// considered active.
+            /// Monitoring Query Language query that generates time series data and
+            /// describes a condition for alerting on that data.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Query {
