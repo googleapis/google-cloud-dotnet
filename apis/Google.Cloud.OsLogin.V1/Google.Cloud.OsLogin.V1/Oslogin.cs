@@ -83,11 +83,11 @@ namespace Google.Cloud.OsLogin.V1 {
             "ZXnaQR9uYW1lLHNzaF9wdWJsaWNfa2V5LHVwZGF0ZV9tYXNrGnLKQRZvc2xv",
             "Z2luLmdvb2dsZWFwaXMuY29t0kFWaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
             "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2NvbXB1dGVCoQEKG2NvbS5nb29nbGUuY2xvdWQub3Nsb2dp",
+            "LmNvbS9hdXRoL2NvbXB1dGVCvgEKG2NvbS5nb29nbGUuY2xvdWQub3Nsb2dp",
             "bi52MUIMT3NMb2dpblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
             "b3RvL2dvb2dsZWFwaXMvY2xvdWQvb3Nsb2dpbi92MTtvc2xvZ2luqgIXR29v",
             "Z2xlLkNsb3VkLk9zTG9naW4uVjHKAhdHb29nbGVcQ2xvdWRcT3NMb2dpblxW",
-            "MWIGcHJvdG8z"));
+            "MeoCGkdvb2dsZTo6Q2xvdWQ6Ok9zTG9naW46OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
