@@ -3682,7 +3682,7 @@ namespace Google.Cloud.Logging.V2
         /// the GCP organization.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3698,7 +3698,7 @@ namespace Google.Cloud.Logging.V2
         /// the GCP organization.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3714,7 +3714,7 @@ namespace Google.Cloud.Logging.V2
         /// the GCP organization.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3736,7 +3736,7 @@ namespace Google.Cloud.Logging.V2
         /// 3) access to the key is disabled.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3758,7 +3758,7 @@ namespace Google.Cloud.Logging.V2
         /// 3) access to the key is disabled.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3780,7 +3780,7 @@ namespace Google.Cloud.Logging.V2
         /// 3) access to the key is disabled.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4307,7 +4307,7 @@ namespace Google.Cloud.Logging.V2
         /// the GCP organization.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4326,7 +4326,7 @@ namespace Google.Cloud.Logging.V2
         /// the GCP organization.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4351,7 +4351,7 @@ namespace Google.Cloud.Logging.V2
         /// 3) access to the key is disabled.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4376,7 +4376,7 @@ namespace Google.Cloud.Logging.V2
         /// 3) access to the key is disabled.
         /// 
         /// See [Enabling CMEK for Logs
-        /// Router](/logging/docs/routing/managed-encryption) for more information.
+        /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

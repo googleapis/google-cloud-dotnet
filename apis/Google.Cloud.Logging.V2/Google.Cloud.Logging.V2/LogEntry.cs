@@ -249,10 +249,10 @@ namespace Google.Cloud.Logging.V2 {
     /// the fractional seconds might be omitted when the timestamp is displayed.
     ///
     /// Incoming log entries should have timestamps that are no more than the [logs
-    /// retention period](/logging/quotas) in the past, and no more than 24 hours
+    /// retention period](https://cloud.google.com/logging/quotas) in the past, and no more than 24 hours
     /// in the future. Log entries outside those time boundaries will not be
     /// available when calling `entries.list`, but those log entries can still be
-    /// [exported with LogSinks](/logging/docs/api/tasks/exporting-logs).
+    /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
