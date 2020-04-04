@@ -378,11 +378,11 @@ namespace Google.Cloud.Language.V1 {
     /// The language of the document (if not specified, the language is
     /// automatically detected). Both ISO and BCP-47 language codes are
     /// accepted.&lt;br>
-    /// [Language Support](/natural-language/docs/languages)
-    /// lists currently supported languages for each API method.
-    /// If the language (either specified by the caller or automatically detected)
-    /// is not supported by the called API method, an `INVALID_ARGUMENT` error
-    /// is returned.
+    /// [Language
+    /// Support](https://cloud.google.com/natural-language/docs/languages) lists
+    /// currently supported languages for each API method. If the language (either
+    /// specified by the caller or automatically detected) is not supported by the
+    /// called API method, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -3414,7 +3414,7 @@ namespace Google.Cloud.Language.V1 {
     private string name_ = "";
     /// <summary>
     /// The name of the category representing the document, from the [predefined
-    /// taxonomy](/natural-language/docs/categories).
+    /// taxonomy](https://cloud.google.com/natural-language/docs/categories).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
