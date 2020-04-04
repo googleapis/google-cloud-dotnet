@@ -970,13 +970,13 @@ namespace Google.Cloud.Dlp.V2 {
             "YlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiPYLT5JMCNyIyL3Yy",
             "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGxwSm9icy8qfTpmaW5p",
             "c2g6ASoaRspBEmRscC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C7AEKGWNvbS5nb29n",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ChQIKGWNvbS5nb29n",
             "bGUucHJpdmFjeS5kbHAudjJCCERscFByb3RvUAFaOGdvb2dsZS5nb2xhbmcu",
             "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAvdjI7ZGxwqgIT",
-            "R29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxEbHBcVjLqQVwK",
-            "J2RscC5nb29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb25Mb2NhdGlvbhIxb3Jn",
-            "YW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fWIGcHJvdG8z"));
+            "R29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxEbHBcVjLqAhZH",
+            "b29nbGU6OkNsb3VkOjpEbHA6OlYy6kFcCidkbHAuZ29vZ2xlYXBpcy5jb20v",
+            "T3JnYW5pemF0aW9uTG9jYXRpb24SMW9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
+            "dGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.RelationalOperator), typeof(global::Google.Cloud.Dlp.V2.MatchingType), typeof(global::Google.Cloud.Dlp.V2.ContentOption), typeof(global::Google.Cloud.Dlp.V2.InfoTypeSupportedBy), typeof(global::Google.Cloud.Dlp.V2.DlpJobType), typeof(global::Google.Cloud.Dlp.V2.StoredInfoTypeState), }, null, new pbr::GeneratedClrTypeInfo[] {
