@@ -3920,7 +3920,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string pushEndpoint_ = "";
     /// <summary>
     /// A URL locating the endpoint to which messages should be pushed.
-    /// For example, a Webhook endpoint might use "https://example.com/push".
+    /// For example, a Webhook endpoint might use `https://example.com/push`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PushEndpoint {
