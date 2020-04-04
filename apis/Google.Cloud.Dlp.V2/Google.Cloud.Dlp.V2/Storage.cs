@@ -281,7 +281,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// creating a CustomInfoType, or one of the names listed
     /// at https://cloud.google.com/dlp/docs/infotypes-reference when specifying
     /// a built-in type. InfoType names should conform to the pattern
-    /// [a-zA-Z0-9_]{1,64}.
+    /// `[a-zA-Z0-9_]{1,64}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5030,7 +5030,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// these will be rejected.
     ///
     /// Label keys must be between 1 and 63 characters long and must conform
-    /// to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+    /// to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
     ///
     /// No more than 10 keys can be required.
     /// </summary>
@@ -5048,15 +5048,16 @@ namespace Google.Cloud.Dlp.V2 {
     /// To organize findings, these labels will be added to each finding.
     ///
     /// Label keys must be between 1 and 63 characters long and must conform
-    /// to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+    /// to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
     ///
     /// Label values must be between 0 and 63 characters long and must conform
-    /// to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+    /// to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
     ///
     /// No more than 10 labels can be associated with a given finding.
     ///
-    /// Example: &lt;code>"environment" : "production"&lt;/code>
-    /// Example: &lt;code>"pipeline" : "etl"&lt;/code>
+    /// Examples:
+    /// * `"environment" : "production"`
+    /// * `"pipeline" : "etl"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
