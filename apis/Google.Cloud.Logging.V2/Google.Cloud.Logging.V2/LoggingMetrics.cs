@@ -203,7 +203,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// Required. An [advanced logs filter](/logging/docs/view/advanced_filters) which is
+    /// Required. An [advanced logs filter](https://cloud.google.com/logging/docs/view/advanced_filters) which is
     /// used to match log entries.
     /// Example:
     ///
