@@ -1,5 +1,19 @@
 # Version history
 
+# Version 3.0.0-beta01, released 2020-04-06
+
+- [Commit 5a41fb5](https://github.com/googleapis/google-cloud-dotnet/commit/5a41fb5):
+  - Change `parent` field's resource_reference to specify child_type instead of type per client library generation requirement;
+  - Change Session with its child resource pattern to support both projects/{project}/agent/sessions/{session} and projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session};
+    - Additionally, the location-based pattern has been removed
+  - Fix `method_signature`
+  - Regular documentation update
+
+This is a breaking change in terms of resource names, which weren't
+correctly defined in the API before. We will release a new GA
+version once we're satisfied that no further breaking changes will
+be required.
+
 # Version 2.0.0, released 2020-03-18
 
 - [Commit a19ee13](https://github.com/googleapis/google-cloud-dotnet/commit/a19ee13):
