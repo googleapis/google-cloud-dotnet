@@ -109,7 +109,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private static readonly Uri PublishedServiceBaseAddress = new Uri("http://localhost:58755");
 
         [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
-        public async Task Trace_Iss()
+        public async Task Trace_WebServerHosted()
         {
             var service = $"/api/Trace/Trace/{_testId}";
             var childSpanName = EntryData.GetMessage("Trace", _testId);
@@ -131,7 +131,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
-        public async Task Trace_Iss_Label()
+        public async Task Trace_WebServerHosted_Label()
         {
             var service = $"/api/Trace/TraceLabels/{_testId}";
             var childSpanName = EntryData.GetMessage("TraceLabels", _testId);
@@ -145,15 +145,16 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             var trace = _polling.GetTrace(service, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, service, childSpanName);
-            TraceEntryVerifiers.AssertSpanLabelsContains(trace.Spans.First(s => s.Name == childSpanName),
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == childSpanName),
                 new Dictionary<string, string>
                 {
-                        {TraceEntryData.TraceLabel, TraceEntryData.TraceLabelValue }
+                    { TraceEntryData.TraceLabel, TraceEntryData.TraceLabelValue }
                 });
         }
 
         [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
-        public async Task Trace_Iss_StackTrace()
+        public async Task Trace_WebServerHosted_StackTrace()
         {
             var service = $"/api/Trace/TraceStackTrace/{_testId}";
             var childSpanName = EntryData.GetMessage("TraceStackTrace", _testId);
@@ -173,7 +174,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
-        public async Task Trace_Iss_Outgoing()
+        public async Task Trace_WebServerHosted_Outgoing()
         {
             var service = $"/api/Trace/TraceOutgoing/{_testId}";
             var childSpanName = EntryData.GetMessage("TraceOutgoing", _testId);
@@ -191,7 +192,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
-        public async Task Trace_Iss_CurrentTracer_AsyncLocal()
+        public async Task Trace_WebServerHosted_CurrentTracer_AsyncLocal()
         {
             string service = "/api/Trace/ParentChild/";
             string uri = $"{PublishedServiceBaseAddress}{service}";

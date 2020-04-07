@@ -65,6 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNet.ClientApp.Controllers
             return message;
         }
 
+        /// <summary>Traces an outgoing request.</summary>
         [HttpGet]
         public async Task<string> TraceOutgoing(string id)
         {
@@ -77,6 +78,15 @@ namespace Google.Cloud.Diagnostics.AspNet.ClientApp.Controllers
             return message;
         }
 
+        /// <summary>
+        /// Sleeps 100ms, creates a parent trace, sleeps another 100ms,
+        /// creates a child trace and traces the return of a value.
+        /// This is used to check that the trace manager is the correct
+        /// one for each concurrent call. Tests using this method will
+        /// probably send several concurrent requests and then check
+        /// that parent and child spans are correct for each request, i.e.
+        /// no overlapping from one request to the other.
+        /// </summary>
         [HttpGet]
         public string ParentChild(string id)
         {
