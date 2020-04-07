@@ -173,8 +173,18 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Throws<InvalidOperationException>(() => row["struct"]);
         }
 
-        [Fact]
-        public void TimestampRounding()
+        public static IEnumerable<object[]> TimestampRoundingData
+        {
+            get
+            {
+                yield return new object[] { "1.090855528173333E9", new DateTime(2004, 7, 26, 15, 25, 28, DateTimeKind.Utc).AddTicks(1733330) };
+                yield return new object[] { "-2.2089924E9", new DateTime(1899, 12, 31, 23, 0, 0, 0, DateTimeKind.Utc) };
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(TimestampRoundingData))]
+        public void TimestampRounding(string rawValue, DateTime expected)
         {
             var schema = new TableSchemaBuilder
             {
@@ -184,11 +194,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 F = new[]
                 {
-                    new TableCell { V = "1.090855528173333E9" },
+                    new TableCell { V = rawValue },
                 }
             };
             var row = new BigQueryRow(rawRow, schema);
-            var expected = new DateTime(2004, 7, 26, 15, 25, 28, DateTimeKind.Utc).AddTicks(1733330);
             Assert.Equal(expected, (DateTime) row["timestamp"]);
         }
 

@@ -151,10 +151,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         // Parameterized test to make it easy to add more test cases.
-        // It looks like we didn't have a problem with pre-1970 dates anyway.
-        // See https://github.com/googleapis/google-cloud-dotnet/issues/4031 for background.
+        // See https://github.com/googleapis/google-cloud-dotnet/issues/4031 and
+        // https://github.com/googleapis/google-cloud-dotnet/issues/4821 for background.
         [Theory]
         [InlineData("2004-07-26T15:25:28.173333Z")] // Value is "1.090855528173333E9"
+        [InlineData("1899-12-31T23:00:00.000000Z")] // Vaue is "-2.2089924E9"
         public void TimestampRounding(string timestamp)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
