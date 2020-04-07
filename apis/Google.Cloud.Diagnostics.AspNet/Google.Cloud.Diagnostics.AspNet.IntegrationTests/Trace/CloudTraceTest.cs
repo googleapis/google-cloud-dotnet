@@ -19,6 +19,7 @@ using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -98,14 +99,106 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Equal(2, trace.Spans.Count);
         }
 
-        [Fact(Skip = "Until we have CI infrastructure to deploy Google.Cloud.Diagnostics.AspNet.ClientApp")]
-        public async Task Trace_CurrentTracer_AsyncLocal()
+        // All the following tests would need an AspNet application to be deployed to work,
+        // and we currently don't have such a setup.
+        // The application we are using is Google.Cloud.Diagnostics.AspNet.ClientApp and we deploy
+        // on local and test on local.
+        // But for CI all these tests should be skipped. See this comment as to why:
+        // https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030
+
+        private static readonly Uri PublishedServiceBaseAddress = new Uri("http://localhost:58755");
+
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
+        public async Task Trace_Iss()
         {
-            string clientAppUri = "http://localhost:58755/api/Home/";
+            var service = $"/api/Trace/Trace/{_testId}";
+            var childSpanName = EntryData.GetMessage("Trace", _testId);
+
+            HttpResponseMessage response;
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = PublishedServiceBaseAddress;
+                response = await httpClient.GetAsync(service);
+            }
+
+            var trace = _polling.GetTrace(service, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, service, childSpanName);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == service), TraceEntryData.HttpGetSuccessLabels);
+
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+        }
+
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
+        public async Task Trace_Iss_Label()
+        {
+            var service = $"/api/Trace/TraceLabels/{_testId}";
+            var childSpanName = EntryData.GetMessage("TraceLabels", _testId);
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = PublishedServiceBaseAddress;
+                await httpClient.GetAsync(service);
+            }
+
+            var trace = _polling.GetTrace(service, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, service, childSpanName);
+            TraceEntryVerifiers.AssertSpanLabelsContains(trace.Spans.First(s => s.Name == childSpanName),
+                new Dictionary<string, string>
+                {
+                        {TraceEntryData.TraceLabel, TraceEntryData.TraceLabelValue }
+                });
+        }
+
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
+        public async Task Trace_Iss_StackTrace()
+        {
+            var service = $"/api/Trace/TraceStackTrace/{_testId}";
+            var childSpanName = EntryData.GetMessage("TraceStackTrace", _testId);
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = PublishedServiceBaseAddress;
+                await httpClient.GetAsync(service);
+            }
+
+            var trace = _polling.GetTrace(service, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, service, childSpanName);
+            TraceEntryVerifiers.AssertContainsStackTrace(trace.Spans.First(s => s.Name == childSpanName),
+                "TraceController", "TraceStackTrace",
+                nameof(TraceEntryData), nameof(TraceEntryData.CreateStackTrace));
+        }
+
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
+        public async Task Trace_Iss_Outgoing()
+        {
+            var service = $"/api/Trace/TraceOutgoing/{_testId}";
+            var childSpanName = EntryData.GetMessage("TraceOutgoing", _testId);
+            var outgoingSpanName = "https://google.com/";
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = PublishedServiceBaseAddress;
+                await httpClient.GetAsync(service);
+            }
+
+            var trace = _polling.GetTrace(service, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, service, childSpanName, outgoingSpanName);
+        }
+
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2167#issuecomment-409605030")]
+        public async Task Trace_Iss_CurrentTracer_AsyncLocal()
+        {
+            string service = "/api/Trace/ParentChild/";
+            string uri = $"{PublishedServiceBaseAddress}{service}";
             IList<string> spanIds = new List<string>();
             using (HttpClient httpClient = new HttpClient())
             {
-                httpClient.BaseAddress = new Uri(clientAppUri);
+                httpClient.BaseAddress = new Uri(uri);
 
                 IList<Task> tasks = new List<Task>();
                 for(int i = 0; i < 10; i++)
@@ -130,8 +223,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             // This cannot be tested on CI yet, but passed in local.
             foreach (string spanId in spanIds)
             {
-                var trace = _polling.GetTrace($"/api/Home/{spanId}", _startTime);
-                TraceEntryVerifiers.AssertParentChildSpan(trace, $"/api/Home/{spanId}", $"parent-{spanId}", $"child-{spanId}");
+                var trace = _polling.GetTrace($"{service}{spanId}", _startTime);
+                TraceEntryVerifiers.AssertParentChildSpan(trace, $"{service}{spanId}", $"parent-{spanId}", $"child-{spanId}");
             }
         }
     }
