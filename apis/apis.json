@@ -307,7 +307,7 @@
   },
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "4.0.0-beta01",
+    "version": "4.0.0",
     "type": "other",
     "targetFrameworks": "net461",
     "testTargetFrameworks": "net461",
