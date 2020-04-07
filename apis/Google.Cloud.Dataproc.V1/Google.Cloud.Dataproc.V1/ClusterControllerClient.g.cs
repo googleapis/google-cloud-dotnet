@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Dataproc.V1
             GetClusterAsync(projectId, region, clusterName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1021,7 +1021,7 @@ namespace Google.Cloud.Dataproc.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1030,7 +1030,7 @@ namespace Google.Cloud.Dataproc.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1088,7 +1088,7 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="projectId">
         /// Required. The ID of the Google Cloud Platform project that the cluster
@@ -1542,7 +1542,7 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1554,7 +1554,7 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Lists all regions/{region}/clusters in a project.
+        /// Lists all regions/{region}/clusters in a project alphabetically.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

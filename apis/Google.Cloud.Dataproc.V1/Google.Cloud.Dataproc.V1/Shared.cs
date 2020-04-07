@@ -26,11 +26,12 @@ namespace Google.Cloud.Dataproc.V1 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvZGF0YXByb2MvdjEvc2hhcmVkLnByb3RvEhhnb29n",
             "bGUuY2xvdWQuZGF0YXByb2MudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8qYQoJQ29tcG9uZW50EhkKFUNPTVBPTkVOVF9VTlNQRUNJRklFRBAA",
+            "cHJvdG8qfAoJQ29tcG9uZW50EhkKFUNPTVBPTkVOVF9VTlNQRUNJRklFRBAA",
             "EgwKCEFOQUNPTkRBEAUSEAoMSElWRV9XRUJIQ0FUEAMSCwoHSlVQWVRFUhAB",
-            "EgwKCFpFUFBFTElOEARCbwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
-            "MUILU2hhcmVkUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC9kYXRhcHJvYy92MTtkYXRhcHJvY2IGcHJvdG8z"));
+            "EgoKBlBSRVNUTxAGEgwKCFpFUFBFTElOEAQSDQoJWk9PS0VFUEVSEAhCbwoc",
+            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUILU2hhcmVkUHJvdG9QAVpA",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9k",
+            "YXRhcHJvYy92MTtkYXRhcHJvY2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), }, null, null));
@@ -60,9 +61,17 @@ namespace Google.Cloud.Dataproc.V1 {
     /// </summary>
     [pbr::OriginalName("JUPYTER")] Jupyter = 1,
     /// <summary>
+    /// The Presto query engine.
+    /// </summary>
+    [pbr::OriginalName("PRESTO")] Presto = 6,
+    /// <summary>
     /// The Zeppelin notebook.
     /// </summary>
     [pbr::OriginalName("ZEPPELIN")] Zeppelin = 4,
+    /// <summary>
+    /// The Zookeeper service.
+    /// </summary>
+    [pbr::OriginalName("ZOOKEEPER")] Zookeeper = 8,
   }
 
   #endregion

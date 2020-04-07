@@ -17,6 +17,7 @@
 namespace Google.Cloud.Dataproc.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -92,6 +93,140 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             Job job = new Job();
             // Make the request
             Job response = await jobControllerClient.SubmitJobAsync(projectId, region, job);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitJobAsOperation</summary>
+        public void SubmitJobAsOperationRequestObject()
+        {
+            // Snippet: SubmitJobAsOperation(SubmitJobRequest, CallSettings)
+            // Create client
+            JobControllerClient jobControllerClient = JobControllerClient.Create();
+            // Initialize request argument(s)
+            SubmitJobRequest request = new SubmitJobRequest
+            {
+                ProjectId = "",
+                Job = new Job(),
+                Region = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Job, JobMetadata> response = jobControllerClient.SubmitJobAsOperation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Job, JobMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Job result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Job, JobMetadata> retrievedResponse = jobControllerClient.PollOnceSubmitJobAsOperation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Job retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitJobAsOperationAsync</summary>
+        public async Task SubmitJobAsOperationRequestObjectAsync()
+        {
+            // Snippet: SubmitJobAsOperationAsync(SubmitJobRequest, CallSettings)
+            // Additional: SubmitJobAsOperationAsync(SubmitJobRequest, CancellationToken)
+            // Create client
+            JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitJobRequest request = new SubmitJobRequest
+            {
+                ProjectId = "",
+                Job = new Job(),
+                Region = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Job, JobMetadata> response = await jobControllerClient.SubmitJobAsOperationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Job, JobMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Job result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Job, JobMetadata> retrievedResponse = await jobControllerClient.PollOnceSubmitJobAsOperationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Job retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitJobAsOperation</summary>
+        public void SubmitJobAsOperation()
+        {
+            // Snippet: SubmitJobAsOperation(string, string, Job, CallSettings)
+            // Create client
+            JobControllerClient jobControllerClient = JobControllerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            Job job = new Job();
+            // Make the request
+            Operation<Job, JobMetadata> response = jobControllerClient.SubmitJobAsOperation(projectId, region, job);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Job, JobMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Job result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Job, JobMetadata> retrievedResponse = jobControllerClient.PollOnceSubmitJobAsOperation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Job retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitJobAsOperationAsync</summary>
+        public async Task SubmitJobAsOperationAsync()
+        {
+            // Snippet: SubmitJobAsOperationAsync(string, string, Job, CallSettings)
+            // Additional: SubmitJobAsOperationAsync(string, string, Job, CancellationToken)
+            // Create client
+            JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            Job job = new Job();
+            // Make the request
+            Operation<Job, JobMetadata> response = await jobControllerClient.SubmitJobAsOperationAsync(projectId, region, job);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Job, JobMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Job result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Job, JobMetadata> retrievedResponse = await jobControllerClient.PollOnceSubmitJobAsOperationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Job retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

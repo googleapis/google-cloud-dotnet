@@ -1207,7 +1207,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int PolicyFieldNumber = 2;
     private global::Google.Cloud.Dataproc.V1.AutoscalingPolicy policy_;
     /// <summary>
-    /// The autoscaling policy to create.
+    /// Required. The autoscaling policy to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.AutoscalingPolicy Policy {
