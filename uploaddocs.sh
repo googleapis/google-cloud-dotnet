@@ -63,7 +63,7 @@ do
     python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage"
-    # python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
+    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
     
     popd > /dev/null
   else
