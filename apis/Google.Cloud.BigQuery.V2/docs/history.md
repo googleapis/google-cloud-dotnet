@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta04, released 2020-04-07
+
+- [Commit f58fa79](https://github.com/googleapis/google-cloud-dotnet/commit/f58fa79): Makes BigQueryRow.TimestampConverter accept pre 1970 dates. Fixes [issue 4821](https://github.com/googleapis/google-cloud-dotnet/issues/4821).
+
 # Version 2.0.0-beta03, released 2020-03-30
 
 - [Commit 7ab60e1](https://github.com/googleapis/google-cloud-dotnet/commit/7ab60e1): Fixes ReadPage and ReadPageAsync incorrect PageToken when starting again. Fixes [issue 4678](https://github.com/googleapis/google-cloud-dotnet/issues/4678).
