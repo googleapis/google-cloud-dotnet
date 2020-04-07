@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Diagnostics.Common;
+using System;
 using System.Web.Http;
 
 namespace Google.Cloud.Diagnostics.AspNet.ClientApp
@@ -26,8 +27,12 @@ namespace Google.Cloud.Diagnostics.AspNet.ClientApp
 
         public override void Init()
         {
+
             base.Init();
-            CloudTrace.Initialize(this, "cloudsharptest", TraceOptions.Create(1_000_000, BufferOptions.NoBuffer()));
+            CloudTrace.Initialize(
+                this, 
+                Environment.GetEnvironmentVariable("GOOGLE_PROJECT_ID"), 
+                TraceOptions.Create(1_000_000, BufferOptions.NoBuffer()));
         }
     }
 }

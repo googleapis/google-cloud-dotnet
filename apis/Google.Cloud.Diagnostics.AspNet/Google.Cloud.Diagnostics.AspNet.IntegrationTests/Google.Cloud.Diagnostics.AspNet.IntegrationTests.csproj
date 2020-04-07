@@ -28,11 +28,11 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.2.3" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.3" />
-    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="3.0.1" />
-    <PackageReference Include="Microsoft.Owin.Hosting" Version="3.0.1" />
-    <PackageReference Include="Microsoft.Owin.Testing" Version="3.0.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.7" />
+    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Owin.Hosting" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Owin.Testing" Version="4.1.0" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNet.Tests\Google.Cloud.Diagnostics.AspNet.Tests.csproj" />
   </ItemGroup>
   <PropertyGroup>
