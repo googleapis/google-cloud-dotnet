@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -31,6 +32,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void SubmitJobRequestObject()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -67,6 +69,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -79,6 +82,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task SubmitJobRequestObjectAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -115,6 +119,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -129,6 +134,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void SubmitJob()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -164,6 +170,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -176,6 +183,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task SubmitJobAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -211,6 +219,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -225,6 +234,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void GetJobRequestObject()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -260,6 +270,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -272,6 +283,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task GetJobRequestObjectAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -307,6 +319,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -321,6 +334,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void GetJob()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -356,6 +370,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -368,6 +383,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task GetJobAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -403,6 +419,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -417,6 +434,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void UpdateJobRequestObject()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -454,6 +472,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -466,6 +485,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task UpdateJobRequestObjectAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -503,6 +523,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -517,6 +538,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void CancelJobRequestObject()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -552,6 +574,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -564,6 +587,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task CancelJobRequestObjectAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -599,6 +623,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -613,6 +638,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void CancelJob()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -648,6 +674,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -660,6 +687,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task CancelJobAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CancelJobRequest request = new CancelJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -695,6 +723,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 SparkRJob = new SparkRJob(),
                 JobUuid = "job_uuid7530ffdd",
                 PrestoJob = new PrestoJob(),
+                Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
@@ -709,6 +738,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void DeleteJobRequestObject()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -726,6 +756,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task DeleteJobRequestObjectAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -744,6 +775,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public void DeleteJob()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 ProjectId = "project_id43ad98b0",
@@ -761,6 +793,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
         public async stt::Task DeleteJobAsync()
         {
             moq::Mock<JobController.JobControllerClient> mockGrpcClient = new moq::Mock<JobController.JobControllerClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 ProjectId = "project_id43ad98b0",

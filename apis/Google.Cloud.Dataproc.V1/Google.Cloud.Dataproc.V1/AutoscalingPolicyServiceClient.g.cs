@@ -316,7 +316,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -343,7 +343,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -370,7 +370,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -393,7 +393,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -420,7 +420,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -447,7 +447,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -470,7 +470,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -497,7 +497,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -524,7 +524,7 @@ namespace Google.Cloud.Dataproc.V1
         /// `projects/{project_id}/locations/{location}`
         /// </param>
         /// <param name="policy">
-        /// The autoscaling policy to create.
+        /// Required. The autoscaling policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

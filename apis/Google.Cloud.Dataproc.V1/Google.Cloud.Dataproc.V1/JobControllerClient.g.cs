@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -46,6 +47,8 @@ namespace Google.Cloud.Dataproc.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             SubmitJobSettings = existing.SubmitJobSettings;
+            SubmitJobAsOperationSettings = existing.SubmitJobAsOperationSettings;
+            SubmitJobAsOperationOperationsSettings = existing.SubmitJobAsOperationOperationsSettings.Clone();
             GetJobSettings = existing.GetJobSettings;
             ListJobsSettings = existing.ListJobsSettings;
             UpdateJobSettings = existing.UpdateJobSettings;
@@ -70,6 +73,39 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SubmitJobSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(900000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobControllerClient.SubmitJobAsOperation</c> and <c>JobControllerClient.SubmitJobAsOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 900 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SubmitJobAsOperationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(900000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobControllerClient.SubmitJobAsOperation</c> and
+        /// <c>JobControllerClient.SubmitJobAsOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SubmitJobAsOperationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>JobControllerClient.GetJob</c>
@@ -374,6 +410,124 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Job> SubmitJobAsync(string projectId, string region, Job job, st::CancellationToken cancellationToken) =>
             SubmitJobAsync(projectId, region, job, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Job, JobMetadata> SubmitJobAsOperation(SubmitJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Job, JobMetadata>> SubmitJobAsOperationAsync(SubmitJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Job, JobMetadata>> SubmitJobAsOperationAsync(SubmitJobRequest request, st::CancellationToken cancellationToken) =>
+            SubmitJobAsOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SubmitJobAsOperation</c>.</summary>
+        public virtual lro::OperationsClient SubmitJobAsOperationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SubmitJobAsOperation</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Job, JobMetadata> PollOnceSubmitJobAsOperation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Job, JobMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubmitJobAsOperationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SubmitJobAsOperation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Job, JobMetadata>> PollOnceSubmitJobAsOperationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Job, JobMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubmitJobAsOperationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud Platform project that the job
+        /// belongs to.
+        /// </param>
+        /// <param name="region">
+        /// Required. The Dataproc region in which to handle the request.
+        /// </param>
+        /// <param name="job">
+        /// Required. The job resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Job, JobMetadata> SubmitJobAsOperation(string projectId, string region, Job job, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitJobAsOperation(new SubmitJobRequest
+            {
+                ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud Platform project that the job
+        /// belongs to.
+        /// </param>
+        /// <param name="region">
+        /// Required. The Dataproc region in which to handle the request.
+        /// </param>
+        /// <param name="job">
+        /// Required. The job resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Job, JobMetadata>> SubmitJobAsOperationAsync(string projectId, string region, Job job, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitJobAsOperationAsync(new SubmitJobRequest
+            {
+                ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud Platform project that the job
+        /// belongs to.
+        /// </param>
+        /// <param name="region">
+        /// Required. The Dataproc region in which to handle the request.
+        /// </param>
+        /// <param name="job">
+        /// Required. The job resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Job, JobMetadata>> SubmitJobAsOperationAsync(string projectId, string region, Job job, st::CancellationToken cancellationToken) =>
+            SubmitJobAsOperationAsync(projectId, region, job, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the resource representation for a job in a project.
@@ -879,6 +1033,8 @@ namespace Google.Cloud.Dataproc.V1
     {
         private readonly gaxgrpc::ApiCall<SubmitJobRequest, Job> _callSubmitJob;
 
+        private readonly gaxgrpc::ApiCall<SubmitJobRequest, lro::Operation> _callSubmitJobAsOperation;
+
         private readonly gaxgrpc::ApiCall<GetJobRequest, Job> _callGetJob;
 
         private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
@@ -899,9 +1055,13 @@ namespace Google.Cloud.Dataproc.V1
             GrpcClient = grpcClient;
             JobControllerSettings effectiveSettings = settings ?? JobControllerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            SubmitJobAsOperationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitJobAsOperationOperationsSettings);
             _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>(grpcClient.SubmitJobAsync, grpcClient.SubmitJob, effectiveSettings.SubmitJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callSubmitJob);
             Modify_SubmitJobApiCall(ref _callSubmitJob);
+            _callSubmitJobAsOperation = clientHelper.BuildApiCall<SubmitJobRequest, lro::Operation>(grpcClient.SubmitJobAsOperationAsync, grpcClient.SubmitJobAsOperation, effectiveSettings.SubmitJobAsOperationSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
+            Modify_ApiCall(ref _callSubmitJobAsOperation);
+            Modify_SubmitJobAsOperationApiCall(ref _callSubmitJobAsOperation);
             _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJob);
             Modify_GetJobApiCall(ref _callGetJob);
@@ -923,6 +1083,8 @@ namespace Google.Cloud.Dataproc.V1
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_SubmitJobApiCall(ref gaxgrpc::ApiCall<SubmitJobRequest, Job> call);
+
+        partial void Modify_SubmitJobAsOperationApiCall(ref gaxgrpc::ApiCall<SubmitJobRequest, lro::Operation> call);
 
         partial void Modify_GetJobApiCall(ref gaxgrpc::ApiCall<GetJobRequest, Job> call);
 
@@ -973,6 +1135,33 @@ namespace Google.Cloud.Dataproc.V1
         {
             Modify_SubmitJobRequest(ref request, ref callSettings);
             return _callSubmitJob.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>SubmitJobAsOperation</c>.</summary>
+        public override lro::OperationsClient SubmitJobAsOperationOperationsClient { get; }
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Job, JobMetadata> SubmitJobAsOperation(SubmitJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitJobRequest(ref request, ref callSettings);
+            return new lro::Operation<Job, JobMetadata>(_callSubmitJobAsOperation.Sync(request, callSettings), SubmitJobAsOperationOperationsClient);
+        }
+
+        /// <summary>
+        /// Submits job to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Job, JobMetadata>> SubmitJobAsOperationAsync(SubmitJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitJobRequest(ref request, ref callSettings);
+            return new lro::Operation<Job, JobMetadata>(await _callSubmitJobAsOperation.Async(request, callSettings).ConfigureAwait(false), SubmitJobAsOperationOperationsClient);
         }
 
         /// <summary>
@@ -1116,5 +1305,19 @@ namespace Google.Cloud.Dataproc.V1
         public scg::IEnumerator<Job> GetEnumerator() => Jobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class JobController
+    {
+        public partial class JobControllerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 }

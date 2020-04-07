@@ -144,7 +144,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
 
       /// <summary>
-      /// Lists all regions/{region}/clusters in a project.
+      /// Lists all regions/{region}/clusters in a project alphabetically.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -397,7 +397,7 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCluster, null, options, request);
       }
       /// <summary>
-      /// Lists all regions/{region}/clusters in a project.
+      /// Lists all regions/{region}/clusters in a project alphabetically.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -409,7 +409,7 @@ namespace Google.Cloud.Dataproc.V1 {
         return ListClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all regions/{region}/clusters in a project.
+      /// Lists all regions/{region}/clusters in a project alphabetically.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -419,7 +419,7 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListClusters, null, options, request);
       }
       /// <summary>
-      /// Lists all regions/{region}/clusters in a project.
+      /// Lists all regions/{region}/clusters in a project alphabetically.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -431,7 +431,7 @@ namespace Google.Cloud.Dataproc.V1 {
         return ListClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all regions/{region}/clusters in a project.
+      /// Lists all regions/{region}/clusters in a project alphabetically.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
