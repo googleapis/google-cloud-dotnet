@@ -114,27 +114,27 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             "YW5jZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.TestFile), global::Google.Cloud.Firestore.Tests.Proto.TestFile.Parser, new[]{ "Tests" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Comment", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete", "Query", "Listen" }, new[]{ "Test" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.GetTest), global::Google.Cloud.Firestore.Tests.Proto.GetTest.Parser, new[]{ "DocRefPath", "Request" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.CreateTest), global::Google.Cloud.Firestore.Tests.Proto.CreateTest.Parser, new[]{ "DocRefPath", "JsonData", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetTest), global::Google.Cloud.Firestore.Tests.Proto.SetTest.Parser, new[]{ "DocRefPath", "Option", "JsonData", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdateTest), global::Google.Cloud.Firestore.Tests.Proto.UpdateTest.Parser, new[]{ "DocRefPath", "Precondition", "JsonData", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest), global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest.Parser, new[]{ "DocRefPath", "Precondition", "FieldPaths", "JsonValues", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DeleteTest), global::Google.Cloud.Firestore.Tests.Proto.DeleteTest.Parser, new[]{ "DocRefPath", "Precondition", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetOption), global::Google.Cloud.Firestore.Tests.Proto.SetOption.Parser, new[]{ "All", "Fields" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.QueryTest), global::Google.Cloud.Firestore.Tests.Proto.QueryTest.Parser, new[]{ "CollPath", "Clauses", "Query", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Clause), global::Google.Cloud.Firestore.Tests.Proto.Clause.Parser, new[]{ "Select", "Where", "OrderBy", "Offset", "Limit", "StartAt", "StartAfter", "EndAt", "EndBefore" }, new[]{ "Clause" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Select), global::Google.Cloud.Firestore.Tests.Proto.Select.Parser, new[]{ "Fields" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Where), global::Google.Cloud.Firestore.Tests.Proto.Where.Parser, new[]{ "Path", "Op", "JsonValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.OrderBy), global::Google.Cloud.Firestore.Tests.Proto.OrderBy.Parser, new[]{ "Path", "Direction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Cursor), global::Google.Cloud.Firestore.Tests.Proto.Cursor.Parser, new[]{ "DocSnapshot", "JsonValues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot), global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot.Parser, new[]{ "Path", "JsonData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.FieldPath), global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser, new[]{ "Field" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.ListenTest), global::Google.Cloud.Firestore.Tests.Proto.ListenTest.Parser, new[]{ "Responses", "Snapshots", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Snapshot), global::Google.Cloud.Firestore.Tests.Proto.Snapshot.Parser, new[]{ "Docs", "Changes", "ReadTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DocChange), global::Google.Cloud.Firestore.Tests.Proto.DocChange.Parser, new[]{ "Kind", "Doc", "OldIndex", "NewIndex" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.TestFile), global::Google.Cloud.Firestore.Tests.Proto.TestFile.Parser, new[]{ "Tests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Comment", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete", "Query", "Listen" }, new[]{ "Test" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.GetTest), global::Google.Cloud.Firestore.Tests.Proto.GetTest.Parser, new[]{ "DocRefPath", "Request" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.CreateTest), global::Google.Cloud.Firestore.Tests.Proto.CreateTest.Parser, new[]{ "DocRefPath", "JsonData", "Request", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetTest), global::Google.Cloud.Firestore.Tests.Proto.SetTest.Parser, new[]{ "DocRefPath", "Option", "JsonData", "Request", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdateTest), global::Google.Cloud.Firestore.Tests.Proto.UpdateTest.Parser, new[]{ "DocRefPath", "Precondition", "JsonData", "Request", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest), global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest.Parser, new[]{ "DocRefPath", "Precondition", "FieldPaths", "JsonValues", "Request", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DeleteTest), global::Google.Cloud.Firestore.Tests.Proto.DeleteTest.Parser, new[]{ "DocRefPath", "Precondition", "Request", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetOption), global::Google.Cloud.Firestore.Tests.Proto.SetOption.Parser, new[]{ "All", "Fields" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.QueryTest), global::Google.Cloud.Firestore.Tests.Proto.QueryTest.Parser, new[]{ "CollPath", "Clauses", "Query", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Clause), global::Google.Cloud.Firestore.Tests.Proto.Clause.Parser, new[]{ "Select", "Where", "OrderBy", "Offset", "Limit", "StartAt", "StartAfter", "EndAt", "EndBefore" }, new[]{ "Clause" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Select), global::Google.Cloud.Firestore.Tests.Proto.Select.Parser, new[]{ "Fields" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Where), global::Google.Cloud.Firestore.Tests.Proto.Where.Parser, new[]{ "Path", "Op", "JsonValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.OrderBy), global::Google.Cloud.Firestore.Tests.Proto.OrderBy.Parser, new[]{ "Path", "Direction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Cursor), global::Google.Cloud.Firestore.Tests.Proto.Cursor.Parser, new[]{ "DocSnapshot", "JsonValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot), global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot.Parser, new[]{ "Path", "JsonData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.FieldPath), global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser, new[]{ "Field" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.ListenTest), global::Google.Cloud.Firestore.Tests.Proto.ListenTest.Parser, new[]{ "Responses", "Snapshots", "IsError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Snapshot), global::Google.Cloud.Firestore.Tests.Proto.Snapshot.Parser, new[]{ "Docs", "Changes", "ReadTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DocChange), global::Google.Cloud.Firestore.Tests.Proto.DocChange.Parser, new[]{ "Kind", "Doc", "OldIndex", "NewIndex" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind) }, null, null)
           }));
     }
     #endregion
@@ -4387,7 +4387,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 1;
-    private global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind kind_ = 0;
+    private global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind kind_ = global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind Kind {
       get { return kind_; }
@@ -4452,7 +4452,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Kind != 0) hash ^= Kind.GetHashCode();
+      if (Kind != global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified) hash ^= Kind.GetHashCode();
       if (doc_ != null) hash ^= Doc.GetHashCode();
       if (OldIndex != 0) hash ^= OldIndex.GetHashCode();
       if (NewIndex != 0) hash ^= NewIndex.GetHashCode();
@@ -4469,7 +4469,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Kind);
       }
@@ -4493,7 +4493,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Kind != 0) {
+      if (Kind != global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
       }
       if (doc_ != null) {
@@ -4516,7 +4516,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (other == null) {
         return;
       }
-      if (other.Kind != 0) {
+      if (other.Kind != global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified) {
         Kind = other.Kind;
       }
       if (other.doc_ != null) {
