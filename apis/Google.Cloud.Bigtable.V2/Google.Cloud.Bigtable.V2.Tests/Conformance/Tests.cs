@@ -41,9 +41,9 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance {
             "ZS5WMi5UZXN0cy5Db25mb3JtYW5jZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Bigtable.V2.BigtableReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Tests.Conformance.TestFile), global::Google.Cloud.Bigtable.V2.Tests.Conformance.TestFile.Parser, new[]{ "ReadRowsTests" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest), global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest.Parser, new[]{ "Description", "Chunks", "Results" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest.Types.Result), global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest.Types.Result.Parser, new[]{ "RowKey", "FamilyName", "Qualifier", "TimestampMicros", "Value", "Label", "Error" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Tests.Conformance.TestFile), global::Google.Cloud.Bigtable.V2.Tests.Conformance.TestFile.Parser, new[]{ "ReadRowsTests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest), global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest.Parser, new[]{ "Description", "Chunks", "Results" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest.Types.Result), global::Google.Cloud.Bigtable.V2.Tests.Conformance.ReadRowsTest.Types.Result.Parser, new[]{ "RowKey", "FamilyName", "Qualifier", "TimestampMicros", "Value", "Label", "Error" }, null, null, null, null)})
           }));
     }
     #endregion
