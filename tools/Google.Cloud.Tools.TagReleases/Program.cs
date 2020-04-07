@@ -184,7 +184,7 @@ namespace Google.Cloud.Tools.TagReleases
                 var gitRelease = new NewRelease(tag)
                 {
                     Prerelease = !api.IsReleaseVersion,
-                    Name = $"{api.Version} release of {api.Id}",
+                    Name = $"{api.Id} version {api.Version}",
                     TargetCommitish = commit.Sha,
                     Body = unwrappedMessage
                 };
